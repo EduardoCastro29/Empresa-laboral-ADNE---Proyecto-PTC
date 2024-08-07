@@ -286,22 +286,6 @@
         JtQYY8x2TTjIT0P0P955xw9AroriLyyX/Ox3ja3wAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="txtFecha.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAYAAAAAsCAYAAABsbm+eAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJbSURBVHhe7dqxalNRHAfgO3Z0dHT0EXwEX0JwERwddfMB
-        HMTBvXNnV9Pk3qQlQx1KSyEkICWEGjXCNcYSyvWc9CiUSvfc833wn85Jxt/v3HtuAQD/dDqdnTBPy7J8
-        3+/3P+3v7zfGGGO2Z2J2V1W1G7L8eZh7Kd7vFjY+Cj/8fHp6Wp+fnzeLxaIBYLvE7J5Op83Z2dkyZPqX
-        kO2PU8z/XzjxvxoOh4vlcpn+AoBtd3l52RwdHS0Gg8HbFPc3xZN/DP+0H4CWOT4+/t7r9Z6k2L8Wwn+n
-        qqrZarVK2wBom/V6He8GvobMv5/if1MAL0aj0e+0B4CWine78QOfFP9FEU7/e7PZLC0D0Fbxcjh+IZTi
-        f1MAk7qu0zIAbRVfA3W73V8p/osifjMKQB5i5qf4VwAAOVEAAJlSAACZUgAAmVIAAJlSAACZUgAAmVIA
-        AJlSAACZUgAAmVIAAJlSAACZUgAAmVIAAJlSAACZUgAAmVIAAJlSAACZUgAAmVIAAJlSAACZUgAAmVIA
-        AJlSAACZUgAAmbpRAGVZzlerVVoCoK2urq6abre7TvFfFP1+/+N8Pk/LALRVXddNVVWTFP9F0el0Xo7H
-        43VaB6ClptNpLIDdFP+bAngwGAwW8dEAgPYaDoeLkPmPUvxf6/V6z05OTn6kPQC0zHg8rsPp/02K/Zvi
-        XcBoNPrpSQCgXSaTyerg4GAQTv87KfJvK8vy9eHh4bfZbLa5LABgOy2Xy+bi4mLz2icc8N/dGf5/hU0P
-        w2PCXrwpjt+LGmOM2b4JB/ppCP4Pt975A5CzovgDgfmi2dO64OgAAAAASUVORK5CYII=
-</value>
-  </data>
   <data name="bunifuGradientPanel3.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAANQAAAAvCAYAAACbi+TCAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -416,6 +400,19 @@
         nU5j/PdS+jfxfzQYDBbxkQCAdhoOh4vQ+92U/hu9Xu/56enpz7QHgBYZj8d1OPW/Tcm/Lb77H41GvzwB
         ALTHZDJZHR4eDsKpfyfl/q6yLN8cHR19n81mm8sBALbPcrlsLi8vN696wsH+/b3h/ydsehweD/bjrXD8
         JtQYY8x2TTjIT0P0P955xw9AroriLyyX/Ox3ja3wAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="bunifuDatePicker1.Icon" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAF/SURBVFhH7ZZdTsMwEISDuEEbIXGBPvLIMwfgMNyAnADR
+        5hYcCIlUPUvIWDtms7ZTJ06QkPiklbLjWe+2dn8qS9M0PULS2ZTW/w/w+wO8310edFHsOTdS9eiBPApN
+        iNPu6zH2nBtT9dIuRJsQKFzSnJGql3Yh1rhVSLuQmHmLkHYhMfMWIe1CrhoK+XsDMC/VSUr3WAPzUp2k
+        dI81MC/Vs7GFerMSPZvFhQna+nI47s/DluPBoGFNbD/QIOli+qq/Odbdi24aC3jglbJwAG3O0QE2tOtt
+        3T2/1Z/3CDzbdT8EBZcMaFOODvQrb/fnJ5EDsEYfapxIwSUDzHN1nCs13dz6iB7C3QlrZJ6r6wsnkiOm
+        Ea6d6u510pgD63HOIjmm9tV3whs/qv5W1mfBelw2kRzUJR0Br1/nw9yQva4OYANrowH0n9I54boMME8d
+        gQ2sjY6glNQlnIJ+dwlLSX0MUwQfwzUo+iJag6Kv4rXAhvqdSAU8qzfX4Fzzf46r6huINmMzAcfiYwAA
+        AABJRU5ErkJggg==
 </value>
   </data>
 </root>

@@ -16,5 +16,10 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Vista
         {
             InitializeComponent();
         }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
