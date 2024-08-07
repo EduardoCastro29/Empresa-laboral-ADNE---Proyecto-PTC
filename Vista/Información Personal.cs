@@ -16,10 +16,5 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Vista
         {
             InitializeComponent();
         }
-
-        private void InfoPersonalForm_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }
