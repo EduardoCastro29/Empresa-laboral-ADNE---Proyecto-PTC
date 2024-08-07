@@ -387,7 +387,7 @@
 </value>
   </data>
   <data name="lblOpciones.BaseStylesheet" xml:space="preserve">
-    <value>#bunifu-label { padding: 0px; font-family: 'Century Gothic'; font-size: 14,25pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(42, 86, 100); text-align: left; }</value>
+    <value>#bunifu-label { padding: 0px; font-family: 'Century Gothic'; font-size: 14.25pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(42, 86, 100); text-align: left; }</value>
   </data>
   <data name="btnSoporteAdmin.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

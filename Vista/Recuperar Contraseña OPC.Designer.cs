@@ -98,7 +98,7 @@
             this.lblOpciones.Location = new System.Drawing.Point(45, 113);
             this.lblOpciones.Name = "lblOpciones";
             this.lblOpciones.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblOpciones.Size = new System.Drawing.Size(684, 40);
+            this.lblOpciones.Size = new System.Drawing.Size(386, 22);
             this.lblOpciones.TabIndex = 5;
             this.lblOpciones.Text = "Selecciona una de las siguientes opciones:";
             this.lblOpciones.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -387,7 +387,6 @@
             this.Controls.Add(this.bunifuGradientPanel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.MaximumSize = new System.Drawing.Size(979, 422);
             this.MinimumSize = new System.Drawing.Size(979, 422);
             this.Name = "RecuperarContraseñaOPCForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
