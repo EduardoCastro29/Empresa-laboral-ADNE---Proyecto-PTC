@@ -1132,7 +1132,6 @@
             this.picProfesional.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.picProfesional.AutoSizeHeight = true;
             this.picProfesional.BorderRadius = 134;
-            this.picProfesional.Image = global::Empresa_laboral_ADNE___Proyecto_PTC.Properties.Resources.ProfesionalPic;
             this.picProfesional.IsCircle = false;
             this.picProfesional.Location = new System.Drawing.Point(865, 151);
             this.picProfesional.Name = "picProfesional";
