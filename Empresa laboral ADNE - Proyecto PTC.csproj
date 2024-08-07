@@ -34,13 +34,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Bunifu.Licensing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=f89b4760ba7dcb6b, processorArchitecture=MSIL">
-      <HintPath>packages\Bunifu.Licensing.6.0.2\lib\net48\Bunifu.Licensing.dll</HintPath>
+      <HintPath>packages\Bunifu.Licensing.6.0.4\lib\net48\Bunifu.Licensing.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu.UI.WinForms, Version=0.0.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
-      <HintPath>packages\Bunifu.UI.WinForms.7.0.0\lib\net48\Bunifu.UI.WinForms.dll</HintPath>
-    </Reference>
-    <Reference Include="Bunifu_UI_v1.5.3">
-      <HintPath>..\Bunifu_UI_v1.5.3.dll</HintPath>
+      <HintPath>packages\Bunifu.UI.WinForms.7.2.0\lib\net48\Bunifu.UI.WinForms.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.Bcl.AsyncInterfaces.7.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
