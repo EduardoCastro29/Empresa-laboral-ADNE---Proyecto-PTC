@@ -177,6 +177,30 @@
     <Compile Include="Vista\Configuración.Designer.cs">
       <DependentUpon>Configuración.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\Control Historial.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Vista\Control Historial.Designer.cs">
+      <DependentUpon>Control Historial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Control Paciente Planilla.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Vista\Control Paciente Planilla.Designer.cs">
+      <DependentUpon>Control Paciente Planilla.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Control Profesional.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Vista\Control Profesional.Designer.cs">
+      <DependentUpon>Control Profesional.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Control Ver Pacientes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Vista\Control Ver Pacientes.Designer.cs">
+      <DependentUpon>Control Ver Pacientes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\Dirección Gmail.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -288,6 +312,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\Configuración.resx">
       <DependentUpon>Configuración.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Control Historial.resx">
+      <DependentUpon>Control Historial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Control Paciente Planilla.resx">
+      <DependentUpon>Control Paciente Planilla.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Control Profesional.resx">
+      <DependentUpon>Control Profesional.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Control Ver Pacientes.resx">
+      <DependentUpon>Control Ver Pacientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\Dirección Gmail.resx">
       <DependentUpon>Dirección Gmail.cs</DependentUpon>
@@ -422,6 +458,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Lupa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Foto Ver Paciente.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

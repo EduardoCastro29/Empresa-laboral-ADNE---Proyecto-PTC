@@ -16,5 +16,10 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Vista
         {
             InitializeComponent();
         }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

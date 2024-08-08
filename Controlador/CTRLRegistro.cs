@@ -77,9 +77,9 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             try
             {
                 //Dado el objeto del DAORegistro, evaluamos si los datos fueron ingresados correctamente dados sus métodos
-                if (string.IsNullOrWhiteSpace(ObjRegistro.txtUser.Text.Trim()) ||
+                if (string.IsNullOrWhiteSpace(ObjRegistro.txtUsuario.Text.Trim()) ||
                     string.IsNullOrWhiteSpace(ObjRegistro.txtNombre.Text.Trim()) ||
-                    string.IsNullOrWhiteSpace(ObjRegistro.txtPassword.Text.Trim()) ||
+                    string.IsNullOrWhiteSpace(ObjRegistro.txtContrasena.Text.Trim()) ||
                     string.IsNullOrWhiteSpace(ObjRegistro.txtCorreo.Text.Trim()) ||
                     string.IsNullOrWhiteSpace(ObjRegistro.txtApellido.Text.Trim()) ||
                     string.IsNullOrWhiteSpace(ObjRegistro.txtDui.Text.Trim()) ||
@@ -100,9 +100,9 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                     CommonMethods ObjMetodosComunes = new CommonMethods();
 
                     //Obtenemos datos del objeto ObjDAORegistro
-                    ObjDAORegistro.Usuario = ObjRegistro.txtUser.Text.Trim();
+                    ObjDAORegistro.Usuario = ObjRegistro.txtUsuario.Text.Trim();
                     //Mandamos a llamar el método MetodoEncriptacionAES para encriptarla y enviarla a la base de datos
-                    ObjDAORegistro.Contraseña = ObjMetodosComunes.MetodoEncriptacionAES(ObjRegistro.txtPassword.Text.Trim());
+                    ObjDAORegistro.Contraseña = ObjMetodosComunes.MetodoEncriptacionAES(ObjRegistro.txtContrasena.Text.Trim());
                     //Mandamos a llamar al método pinAcceso para que nos genere un ping aleatorio
                     //Que posteriormente nos servirá para la recuperación de contraseña
                     ObjDAORegistro.PinAcceso = int.Parse(ObjMetodosComunes.PinAcceso());

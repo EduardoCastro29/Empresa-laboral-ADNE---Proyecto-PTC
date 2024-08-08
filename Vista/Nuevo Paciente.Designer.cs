@@ -38,6 +38,7 @@
             this.btnDatosIdentificacionGradient = new Bunifu.UI.WinForms.BunifuGradientPanel();
             this.btnDatosIdentificacion = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.bunifuGradientPanel1 = new Bunifu.UI.WinForms.BunifuGradientPanel();
+            this.btnSalir = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.bunifuPictureBox1 = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
@@ -48,6 +49,7 @@
             this.btnExpedienteGradient.SuspendLayout();
             this.btnDatosIdentificacionGradient.SuspendLayout();
             this.bunifuGradientPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).BeginInit();
             this.bunifuShadowPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -115,7 +117,7 @@
             this.btnExpediente.ButtonTextMarginLeft = 0;
             this.btnExpediente.ColorContrastOnClick = 45;
             this.btnExpediente.ColorContrastOnHover = 45;
-            this.btnExpediente.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnExpediente.Cursor = System.Windows.Forms.Cursors.Hand;
             borderEdges1.BottomLeft = true;
             borderEdges1.BottomRight = true;
             borderEdges1.TopLeft = true;
@@ -225,7 +227,7 @@
             this.btnDatosIdentificacion.ButtonTextMarginLeft = 0;
             this.btnDatosIdentificacion.ColorContrastOnClick = 45;
             this.btnDatosIdentificacion.ColorContrastOnHover = 45;
-            this.btnDatosIdentificacion.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnDatosIdentificacion.Cursor = System.Windows.Forms.Cursors.Hand;
             borderEdges2.BottomLeft = true;
             borderEdges2.BottomRight = true;
             borderEdges2.TopLeft = true;
@@ -305,6 +307,7 @@
             this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
             this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuGradientPanel1.BorderRadius = 5;
+            this.bunifuGradientPanel1.Controls.Add(this.btnSalir);
             this.bunifuGradientPanel1.Controls.Add(this.label1);
             this.bunifuGradientPanel1.Controls.Add(this.bunifuPictureBox1);
             this.bunifuGradientPanel1.Controls.Add(this.flowLayoutPanel2);
@@ -319,6 +322,23 @@
             this.bunifuGradientPanel1.Quality = 10;
             this.bunifuGradientPanel1.Size = new System.Drawing.Size(991, 85);
             this.bunifuGradientPanel1.TabIndex = 8;
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.AllowFocused = false;
+            this.btnSalir.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnSalir.AutoSizeHeight = true;
+            this.btnSalir.BorderRadius = 0;
+            this.btnSalir.Image = global::Empresa_laboral_ADNE___Proyecto_PTC.Properties.Resources.Cerrar_Login;
+            this.btnSalir.IsCircle = true;
+            this.btnSalir.Location = new System.Drawing.Point(959, 22);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(20, 20);
+            this.btnSalir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnSalir.TabIndex = 3;
+            this.btnSalir.TabStop = false;
+            this.btnSalir.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Square;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // label1
             // 
@@ -436,6 +456,7 @@
             this.btnDatosIdentificacionGradient.ResumeLayout(false);
             this.bunifuGradientPanel1.ResumeLayout(false);
             this.bunifuGradientPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).EndInit();
             this.bunifuShadowPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -443,11 +464,8 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panelElement;
         private Bunifu.UI.WinForms.BunifuGradientPanel BarraSeparadora;
         private Bunifu.UI.WinForms.BunifuGradientPanel btnExpedienteGradient;
-        private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnExpediente;
         private Bunifu.UI.WinForms.BunifuGradientPanel btnDatosIdentificacionGradient;
         private Bunifu.UI.WinForms.BunifuGradientPanel bunifuGradientPanel1;
         private System.Windows.Forms.Label label1;
@@ -458,5 +476,8 @@
         private Bunifu.UI.WinForms.BunifuPanel bunifuPanel1;
         private Bunifu.UI.WinForms.BunifuPanel bunifuPanel2;
         public Bunifu.UI.WinForms.BunifuButton.BunifuButton btnDatosIdentificacion;
+        public Bunifu.UI.WinForms.BunifuButton.BunifuButton btnExpediente;
+        public System.Windows.Forms.Panel panelElement;
+        public Bunifu.UI.WinForms.BunifuPictureBox btnSalir;
     }
 }

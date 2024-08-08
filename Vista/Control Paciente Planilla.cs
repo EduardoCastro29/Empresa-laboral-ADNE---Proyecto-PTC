@@ -1,5 +1,4 @@
-﻿using Empresa_laboral_ADNE___Proyecto_PTC.Controlador;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,12 +10,11 @@ using System.Windows.Forms;
 
 namespace Empresa_laboral_ADNE___Proyecto_PTC.Vista
 {
-    public partial class PacientesForm : Form
+    public partial class ControlPacientePlanillaUC : UserControl
     {
-        public PacientesForm()
+        public ControlPacientePlanillaUC()
         {
             InitializeComponent();
-            CTRLPacientes ObjPacientesControlador = new CTRLPacientes(this);
         }
     }
 }

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConfiguraciónForm));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
@@ -74,22 +74,24 @@
             this.bunifuPanel7 = new Bunifu.UI.WinForms.BunifuPanel();
             this.bunifuButton21 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblDUI = new System.Windows.Forms.Label();
             this.bunifuPanel6 = new Bunifu.UI.WinForms.BunifuPanel();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblDUIIdentificacion = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblCorreoUsuario = new System.Windows.Forms.Label();
             this.bunifuPanel5 = new Bunifu.UI.WinForms.BunifuPanel();
-            this.lblUsername = new System.Windows.Forms.Label();
+            this.lblUsuario = new System.Windows.Forms.Label();
             this.bunifuPanel3 = new Bunifu.UI.WinForms.BunifuPanel();
             this.bunifuPanel4 = new Bunifu.UI.WinForms.BunifuPanel();
-            this.lblRolUser = new System.Windows.Forms.Label();
+            this.lblRolUsuario = new System.Windows.Forms.Label();
             this.flowLayoutPanel5 = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel6 = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel8 = new System.Windows.Forms.FlowLayoutPanel();
             this.bunifuLabel2 = new Bunifu.UI.WinForms.BunifuLabel();
             this.flowLayoutPanel7 = new System.Windows.Forms.FlowLayoutPanel();
-            this.bunifuPictureBox1 = new Bunifu.UI.WinForms.BunifuPictureBox();
+            this.picUsuario = new Bunifu.UI.WinForms.BunifuPictureBox();
+            this.flowLayoutPanel13 = new System.Windows.Forms.FlowLayoutPanel();
+            this.lblNomprePersona = new System.Windows.Forms.Label();
             this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel3.SuspendLayout();
             this.bunifuPanel2.SuspendLayout();
@@ -121,7 +123,7 @@
             this.bunifuPanel4.SuspendLayout();
             this.flowLayoutPanel5.SuspendLayout();
             this.flowLayoutPanel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picUsuario)).BeginInit();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
@@ -376,7 +378,7 @@
             this.bunifuLabel4.Margin = new System.Windows.Forms.Padding(3, 10, 3, 3);
             this.bunifuLabel4.Name = "bunifuLabel4";
             this.bunifuLabel4.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel4.Size = new System.Drawing.Size(181, 41);
+            this.bunifuLabel4.Size = new System.Drawing.Size(172, 39);
             this.bunifuLabel4.TabIndex = 2;
             this.bunifuLabel4.Text = "Acerca de";
             this.bunifuLabel4.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -602,7 +604,7 @@
             this.bunifuLabel3.Name = "bunifuLabel3";
             this.bunifuLabel3.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
             this.bunifuLabel3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel3.Size = new System.Drawing.Size(239, 51);
+            this.bunifuLabel3.Size = new System.Drawing.Size(229, 49);
             this.bunifuLabel3.TabIndex = 2;
             this.bunifuLabel3.Text = "Notificaciones";
             this.bunifuLabel3.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -610,7 +612,7 @@
             // 
             // flowLayoutPanel11
             // 
-            this.flowLayoutPanel11.Location = new System.Drawing.Point(295, 3);
+            this.flowLayoutPanel11.Location = new System.Drawing.Point(285, 3);
             this.flowLayoutPanel11.Name = "flowLayoutPanel11";
             this.flowLayoutPanel11.Size = new System.Drawing.Size(105, 24);
             this.flowLayoutPanel11.TabIndex = 0;
@@ -704,11 +706,11 @@
             this.bunifuButton21.ColorContrastOnClick = 45;
             this.bunifuButton21.ColorContrastOnHover = 45;
             this.bunifuButton21.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges2.BottomLeft = true;
-            borderEdges2.BottomRight = true;
-            borderEdges2.TopLeft = true;
-            borderEdges2.TopRight = true;
-            this.bunifuButton21.CustomizableEdges = borderEdges2;
+            borderEdges1.BottomLeft = true;
+            borderEdges1.BottomRight = true;
+            borderEdges1.TopLeft = true;
+            borderEdges1.TopRight = true;
+            this.bunifuButton21.CustomizableEdges = borderEdges1;
             this.bunifuButton21.DialogResult = System.Windows.Forms.DialogResult.None;
             this.bunifuButton21.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.bunifuButton21.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -777,24 +779,24 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.lblDUI);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(322, 235);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(667, 49);
             this.panel2.TabIndex = 5;
             // 
-            // label3
+            // lblDUI
             // 
-            this.label3.AutoSize = true;
-            this.label3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(179)))), ((int)(((byte)(182)))));
-            this.label3.Location = new System.Drawing.Point(0, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(154, 33);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "#12345678";
+            this.lblDUI.AutoSize = true;
+            this.lblDUI.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lblDUI.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDUI.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(179)))), ((int)(((byte)(182)))));
+            this.lblDUI.Location = new System.Drawing.Point(0, 0);
+            this.lblDUI.Name = "lblDUI";
+            this.lblDUI.Size = new System.Drawing.Size(154, 33);
+            this.lblDUI.TabIndex = 1;
+            this.lblDUI.Text = "#12345678";
             // 
             // bunifuPanel6
             // 
@@ -804,7 +806,7 @@
             this.bunifuPanel6.BorderColor = System.Drawing.Color.Transparent;
             this.bunifuPanel6.BorderRadius = 3;
             this.bunifuPanel6.BorderThickness = 1;
-            this.bunifuPanel6.Controls.Add(this.label2);
+            this.bunifuPanel6.Controls.Add(this.lblDUIIdentificacion);
             this.bunifuPanel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.bunifuPanel6.Location = new System.Drawing.Point(322, 192);
             this.bunifuPanel6.Name = "bunifuPanel6";
@@ -812,37 +814,37 @@
             this.bunifuPanel6.Size = new System.Drawing.Size(667, 43);
             this.bunifuPanel6.TabIndex = 4;
             // 
-            // label2
+            // lblDUIIdentificacion
             // 
-            this.label2.AutoSize = true;
-            this.label2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(0, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(194, 32);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "ID del Usuario";
+            this.lblDUIIdentificacion.AutoSize = true;
+            this.lblDUIIdentificacion.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lblDUIIdentificacion.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDUIIdentificacion.Location = new System.Drawing.Point(0, 0);
+            this.lblDUIIdentificacion.Name = "lblDUIIdentificacion";
+            this.lblDUIIdentificacion.Size = new System.Drawing.Size(288, 32);
+            this.lblDUIIdentificacion.TabIndex = 0;
+            this.lblDUIIdentificacion.Text = "DUI de Identificación";
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.lblCorreoUsuario);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(322, 143);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(667, 49);
             this.panel1.TabIndex = 3;
             // 
-            // label1
+            // lblCorreoUsuario
             // 
-            this.label1.AutoSize = true;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(179)))), ((int)(((byte)(182)))));
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(374, 30);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "ejemplodecorreo@gmail.com";
+            this.lblCorreoUsuario.AutoSize = true;
+            this.lblCorreoUsuario.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lblCorreoUsuario.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCorreoUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(179)))), ((int)(((byte)(182)))));
+            this.lblCorreoUsuario.Location = new System.Drawing.Point(0, 0);
+            this.lblCorreoUsuario.Name = "lblCorreoUsuario";
+            this.lblCorreoUsuario.Size = new System.Drawing.Size(374, 30);
+            this.lblCorreoUsuario.TabIndex = 1;
+            this.lblCorreoUsuario.Text = "ejemplodecorreo@gmail.com";
             // 
             // bunifuPanel5
             // 
@@ -852,7 +854,7 @@
             this.bunifuPanel5.BorderColor = System.Drawing.Color.Transparent;
             this.bunifuPanel5.BorderRadius = 3;
             this.bunifuPanel5.BorderThickness = 1;
-            this.bunifuPanel5.Controls.Add(this.lblUsername);
+            this.bunifuPanel5.Controls.Add(this.lblUsuario);
             this.bunifuPanel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.bunifuPanel5.Location = new System.Drawing.Point(322, 100);
             this.bunifuPanel5.Name = "bunifuPanel5";
@@ -860,16 +862,16 @@
             this.bunifuPanel5.Size = new System.Drawing.Size(667, 43);
             this.bunifuPanel5.TabIndex = 2;
             // 
-            // lblUsername
+            // lblUsuario
             // 
-            this.lblUsername.AutoSize = true;
-            this.lblUsername.Dock = System.Windows.Forms.DockStyle.Left;
-            this.lblUsername.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsername.Location = new System.Drawing.Point(0, 0);
-            this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(267, 33);
-            this.lblUsername.TabIndex = 0;
-            this.lblUsername.Text = "Nombre de Usuario";
+            this.lblUsuario.AutoSize = true;
+            this.lblUsuario.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lblUsuario.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuario.Location = new System.Drawing.Point(0, 0);
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Size = new System.Drawing.Size(267, 33);
+            this.lblUsuario.TabIndex = 0;
+            this.lblUsuario.Text = "Nombre de Usuario";
             // 
             // bunifuPanel3
             // 
@@ -879,6 +881,8 @@
             this.bunifuPanel3.BorderColor = System.Drawing.Color.Transparent;
             this.bunifuPanel3.BorderRadius = 3;
             this.bunifuPanel3.BorderThickness = 1;
+            this.bunifuPanel3.Controls.Add(this.lblNomprePersona);
+            this.bunifuPanel3.Controls.Add(this.flowLayoutPanel13);
             this.bunifuPanel3.Controls.Add(this.bunifuPanel4);
             this.bunifuPanel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.bunifuPanel3.Location = new System.Drawing.Point(322, 0);
@@ -895,7 +899,7 @@
             this.bunifuPanel4.BorderColor = System.Drawing.Color.Transparent;
             this.bunifuPanel4.BorderRadius = 3;
             this.bunifuPanel4.BorderThickness = 1;
-            this.bunifuPanel4.Controls.Add(this.lblRolUser);
+            this.bunifuPanel4.Controls.Add(this.lblRolUsuario);
             this.bunifuPanel4.Dock = System.Windows.Forms.DockStyle.Right;
             this.bunifuPanel4.Location = new System.Drawing.Point(452, 0);
             this.bunifuPanel4.Name = "bunifuPanel4";
@@ -903,24 +907,24 @@
             this.bunifuPanel4.Size = new System.Drawing.Size(215, 100);
             this.bunifuPanel4.TabIndex = 0;
             // 
-            // lblRolUser
+            // lblRolUsuario
             // 
-            this.lblRolUser.AutoSize = true;
-            this.lblRolUser.Dock = System.Windows.Forms.DockStyle.Right;
-            this.lblRolUser.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRolUser.Location = new System.Drawing.Point(3, 0);
-            this.lblRolUser.Margin = new System.Windows.Forms.Padding(3, 10, 3, 0);
-            this.lblRolUser.Name = "lblRolUser";
-            this.lblRolUser.Padding = new System.Windows.Forms.Padding(0, 20, 10, 0);
-            this.lblRolUser.Size = new System.Drawing.Size(212, 53);
-            this.lblRolUser.TabIndex = 0;
-            this.lblRolUser.Text = "Rol de Usuario";
-            this.lblRolUser.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblRolUsuario.AutoSize = true;
+            this.lblRolUsuario.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lblRolUsuario.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRolUsuario.Location = new System.Drawing.Point(3, 0);
+            this.lblRolUsuario.Margin = new System.Windows.Forms.Padding(3, 10, 3, 0);
+            this.lblRolUsuario.Name = "lblRolUsuario";
+            this.lblRolUsuario.Padding = new System.Windows.Forms.Padding(0, 20, 10, 0);
+            this.lblRolUsuario.Size = new System.Drawing.Size(212, 53);
+            this.lblRolUsuario.TabIndex = 0;
+            this.lblRolUsuario.Text = "Rol de Usuario";
+            this.lblRolUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // flowLayoutPanel5
             // 
             this.flowLayoutPanel5.Controls.Add(this.flowLayoutPanel6);
-            this.flowLayoutPanel5.Controls.Add(this.bunifuPictureBox1);
+            this.flowLayoutPanel5.Controls.Add(this.picUsuario);
             this.flowLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Left;
             this.flowLayoutPanel5.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel5.Name = "flowLayoutPanel5";
@@ -958,7 +962,7 @@
             this.bunifuLabel2.Name = "bunifuLabel2";
             this.bunifuLabel2.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
             this.bunifuLabel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel2.Size = new System.Drawing.Size(168, 51);
+            this.bunifuLabel2.Size = new System.Drawing.Size(161, 49);
             this.bunifuLabel2.TabIndex = 2;
             this.bunifuLabel2.Text = "Mi cuenta";
             this.bunifuLabel2.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -966,27 +970,46 @@
             // 
             // flowLayoutPanel7
             // 
-            this.flowLayoutPanel7.Location = new System.Drawing.Point(3, 67);
+            this.flowLayoutPanel7.Location = new System.Drawing.Point(3, 65);
             this.flowLayoutPanel7.Name = "flowLayoutPanel7";
             this.flowLayoutPanel7.Size = new System.Drawing.Size(105, 24);
             this.flowLayoutPanel7.TabIndex = 0;
             // 
-            // bunifuPictureBox1
+            // picUsuario
             // 
-            this.bunifuPictureBox1.AllowFocused = false;
-            this.bunifuPictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.bunifuPictureBox1.AutoSizeHeight = false;
-            this.bunifuPictureBox1.BorderRadius = 124;
-            this.bunifuPictureBox1.Image = global::Empresa_laboral_ADNE___Proyecto_PTC.Properties.Resources.Foto_configuración;
-            this.bunifuPictureBox1.IsCircle = true;
-            this.bunifuPictureBox1.Location = new System.Drawing.Point(30, 83);
-            this.bunifuPictureBox1.Margin = new System.Windows.Forms.Padding(30, 3, 3, 3);
-            this.bunifuPictureBox1.Name = "bunifuPictureBox1";
-            this.bunifuPictureBox1.Size = new System.Drawing.Size(268, 249);
-            this.bunifuPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bunifuPictureBox1.TabIndex = 1;
-            this.bunifuPictureBox1.TabStop = false;
-            this.bunifuPictureBox1.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle;
+            this.picUsuario.AllowFocused = false;
+            this.picUsuario.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.picUsuario.AutoSizeHeight = false;
+            this.picUsuario.BorderRadius = 124;
+            this.picUsuario.Image = global::Empresa_laboral_ADNE___Proyecto_PTC.Properties.Resources.Foto_configuración;
+            this.picUsuario.IsCircle = true;
+            this.picUsuario.Location = new System.Drawing.Point(30, 83);
+            this.picUsuario.Margin = new System.Windows.Forms.Padding(30, 3, 3, 3);
+            this.picUsuario.Name = "picUsuario";
+            this.picUsuario.Size = new System.Drawing.Size(268, 232);
+            this.picUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picUsuario.TabIndex = 1;
+            this.picUsuario.TabStop = false;
+            this.picUsuario.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle;
+            // 
+            // flowLayoutPanel13
+            // 
+            this.flowLayoutPanel13.Dock = System.Windows.Forms.DockStyle.Top;
+            this.flowLayoutPanel13.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel13.Name = "flowLayoutPanel13";
+            this.flowLayoutPanel13.Size = new System.Drawing.Size(452, 39);
+            this.flowLayoutPanel13.TabIndex = 2;
+            // 
+            // lblNomprePersona
+            // 
+            this.lblNomprePersona.AutoSize = true;
+            this.lblNomprePersona.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lblNomprePersona.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNomprePersona.Location = new System.Drawing.Point(0, 39);
+            this.lblNomprePersona.Name = "lblNomprePersona";
+            this.lblNomprePersona.Size = new System.Drawing.Size(309, 33);
+            this.lblNomprePersona.TabIndex = 3;
+            this.lblNomprePersona.Text = "Nombre de la Persona";
             // 
             // ConfiguraciónForm
             // 
@@ -1039,12 +1062,13 @@
             this.bunifuPanel5.ResumeLayout(false);
             this.bunifuPanel5.PerformLayout();
             this.bunifuPanel3.ResumeLayout(false);
+            this.bunifuPanel3.PerformLayout();
             this.bunifuPanel4.ResumeLayout(false);
             this.bunifuPanel4.PerformLayout();
             this.flowLayoutPanel5.ResumeLayout(false);
             this.flowLayoutPanel6.ResumeLayout(false);
             this.flowLayoutPanel6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picUsuario)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1095,21 +1119,23 @@
         private Bunifu.UI.WinForms.BunifuPanel bunifuPanel7;
         public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 bunifuButton21;
         public System.Windows.Forms.Panel panel2;
-        public System.Windows.Forms.Label label3;
+        public System.Windows.Forms.Label lblDUI;
         public Bunifu.UI.WinForms.BunifuPanel bunifuPanel6;
-        public System.Windows.Forms.Label label2;
+        public System.Windows.Forms.Label lblDUIIdentificacion;
         private System.Windows.Forms.Panel panel1;
-        public System.Windows.Forms.Label label1;
+        public System.Windows.Forms.Label lblCorreoUsuario;
         private Bunifu.UI.WinForms.BunifuPanel bunifuPanel5;
-        public System.Windows.Forms.Label lblUsername;
+        public System.Windows.Forms.Label lblUsuario;
         private Bunifu.UI.WinForms.BunifuPanel bunifuPanel3;
         private Bunifu.UI.WinForms.BunifuPanel bunifuPanel4;
-        public System.Windows.Forms.Label lblRolUser;
+        public System.Windows.Forms.Label lblRolUsuario;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel5;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel6;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel8;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel2;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel7;
-        public Bunifu.UI.WinForms.BunifuPictureBox bunifuPictureBox1;
+        public Bunifu.UI.WinForms.BunifuPictureBox picUsuario;
+        public System.Windows.Forms.Label lblNomprePersona;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel13;
     }
 }

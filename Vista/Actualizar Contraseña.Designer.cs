@@ -29,17 +29,16 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ActualizarContraseñaForm));
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties5 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties6 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties7 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties8 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties5 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties6 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties7 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties8 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             this.bunifuGradientPanel1 = new Bunifu.UI.WinForms.BunifuGradientPanel();
-            this.txtNuevaContrasena = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bunifuGradientPanel3 = new Bunifu.UI.WinForms.BunifuGradientPanel();
             this.btnActualizarContrasena = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -50,16 +49,17 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.txtId = new System.Windows.Forms.ToolStripTextBox();
             this.lblRestablecer = new Bunifu.UI.WinForms.BunifuLabel();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.bunifuShadowPanel1 = new Bunifu.UI.WinForms.BunifuShadowPanel();
             this.bunifuShadowPanel2 = new Bunifu.UI.WinForms.BunifuShadowPanel();
+            this.txtNuevaContrasena = new Bunifu.UI.WinForms.BunifuTextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.bunifuGradientPanel1.SuspendLayout();
             this.bunifuGradientPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.bunifuGradientPanel2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.bunifuShadowPanel2.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // bunifuGradientPanel1
@@ -86,82 +86,6 @@
             this.bunifuGradientPanel1.Quality = 10;
             this.bunifuGradientPanel1.Size = new System.Drawing.Size(995, 461);
             this.bunifuGradientPanel1.TabIndex = 0;
-            // 
-            // txtNuevaContrasena
-            // 
-            this.txtNuevaContrasena.AcceptsReturn = false;
-            this.txtNuevaContrasena.AcceptsTab = false;
-            this.txtNuevaContrasena.AnimationSpeed = 200;
-            this.txtNuevaContrasena.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.txtNuevaContrasena.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.txtNuevaContrasena.AutoSizeHeight = true;
-            this.txtNuevaContrasena.BackColor = System.Drawing.Color.White;
-            this.txtNuevaContrasena.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txtNuevaContrasena.BackgroundImage")));
-            this.txtNuevaContrasena.BorderColorActive = System.Drawing.Color.CadetBlue;
-            this.txtNuevaContrasena.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.txtNuevaContrasena.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.txtNuevaContrasena.BorderColorIdle = System.Drawing.Color.Silver;
-            this.txtNuevaContrasena.BorderRadius = 12;
-            this.txtNuevaContrasena.BorderThickness = 2;
-            this.txtNuevaContrasena.CharacterCase = Bunifu.UI.WinForms.BunifuTextBox.CharacterCases.Normal;
-            this.txtNuevaContrasena.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.txtNuevaContrasena.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtNuevaContrasena.DefaultFont = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNuevaContrasena.DefaultText = "";
-            this.txtNuevaContrasena.FillColor = System.Drawing.Color.White;
-            this.txtNuevaContrasena.HideSelection = true;
-            this.txtNuevaContrasena.IconLeft = null;
-            this.txtNuevaContrasena.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtNuevaContrasena.IconPadding = 10;
-            this.txtNuevaContrasena.IconRight = null;
-            this.txtNuevaContrasena.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtNuevaContrasena.Lines = new string[0];
-            this.txtNuevaContrasena.Location = new System.Drawing.Point(0, 0);
-            this.txtNuevaContrasena.MaxLength = 32767;
-            this.txtNuevaContrasena.MinimumSize = new System.Drawing.Size(1, 1);
-            this.txtNuevaContrasena.Modified = false;
-            this.txtNuevaContrasena.Multiline = false;
-            this.txtNuevaContrasena.Name = "txtNuevaContrasena";
-            stateProperties5.BorderColor = System.Drawing.Color.CadetBlue;
-            stateProperties5.FillColor = System.Drawing.Color.Empty;
-            stateProperties5.ForeColor = System.Drawing.Color.Empty;
-            stateProperties5.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtNuevaContrasena.OnActiveState = stateProperties5;
-            stateProperties6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            stateProperties6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties6.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.txtNuevaContrasena.OnDisabledState = stateProperties6;
-            stateProperties7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties7.FillColor = System.Drawing.Color.Empty;
-            stateProperties7.ForeColor = System.Drawing.Color.Empty;
-            stateProperties7.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtNuevaContrasena.OnHoverState = stateProperties7;
-            stateProperties8.BorderColor = System.Drawing.Color.Silver;
-            stateProperties8.FillColor = System.Drawing.Color.White;
-            stateProperties8.ForeColor = System.Drawing.Color.Empty;
-            stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtNuevaContrasena.OnIdleState = stateProperties8;
-            this.txtNuevaContrasena.Padding = new System.Windows.Forms.Padding(3);
-            this.txtNuevaContrasena.PasswordChar = '\0';
-            this.txtNuevaContrasena.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.txtNuevaContrasena.PlaceholderText = "Nueva Contraseña";
-            this.txtNuevaContrasena.ReadOnly = false;
-            this.txtNuevaContrasena.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtNuevaContrasena.SelectedText = "";
-            this.txtNuevaContrasena.SelectionLength = 0;
-            this.txtNuevaContrasena.SelectionStart = 0;
-            this.txtNuevaContrasena.ShortcutsEnabled = true;
-            this.txtNuevaContrasena.Size = new System.Drawing.Size(514, 54);
-            this.txtNuevaContrasena.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.txtNuevaContrasena.TabIndex = 11;
-            this.txtNuevaContrasena.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtNuevaContrasena.TextMarginBottom = 0;
-            this.txtNuevaContrasena.TextMarginLeft = 3;
-            this.txtNuevaContrasena.TextMarginTop = 1;
-            this.txtNuevaContrasena.TextPlaceholder = "Nueva Contraseña";
-            this.txtNuevaContrasena.UseSystemPasswordChar = false;
-            this.txtNuevaContrasena.WordWrap = true;
             // 
             // bunifuGradientPanel3
             // 
@@ -285,11 +209,11 @@
             this.lblConfirmarContrasena.AllowParentOverrides = false;
             this.lblConfirmarContrasena.AutoEllipsis = false;
             this.lblConfirmarContrasena.CursorType = null;
-            this.lblConfirmarContrasena.Font = new System.Drawing.Font("Century Gothic", 15.75F);
+            this.lblConfirmarContrasena.Font = new System.Drawing.Font("Century Gothic", 14.25F);
             this.lblConfirmarContrasena.Location = new System.Drawing.Point(51, 255);
             this.lblConfirmarContrasena.Name = "lblConfirmarContrasena";
             this.lblConfirmarContrasena.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblConfirmarContrasena.Size = new System.Drawing.Size(250, 24);
+            this.lblConfirmarContrasena.Size = new System.Drawing.Size(390, 40);
             this.lblConfirmarContrasena.TabIndex = 7;
             this.lblConfirmarContrasena.Text = "Confirme su contraseña:";
             this.lblConfirmarContrasena.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -301,11 +225,11 @@
             this.lblNuevaContrasena.AutoEllipsis = false;
             this.lblNuevaContrasena.Cursor = System.Windows.Forms.Cursors.Default;
             this.lblNuevaContrasena.CursorType = System.Windows.Forms.Cursors.Default;
-            this.lblNuevaContrasena.Font = new System.Drawing.Font("Century Gothic", 15.75F);
+            this.lblNuevaContrasena.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNuevaContrasena.Location = new System.Drawing.Point(51, 130);
             this.lblNuevaContrasena.Name = "lblNuevaContrasena";
             this.lblNuevaContrasena.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblNuevaContrasena.Size = new System.Drawing.Size(302, 24);
+            this.lblNuevaContrasena.Size = new System.Drawing.Size(470, 40);
             this.lblNuevaContrasena.TabIndex = 6;
             this.lblNuevaContrasena.Text = "Ingrese su nueva contraseña:";
             this.lblNuevaContrasena.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -436,20 +360,11 @@
             this.lblRestablecer.Location = new System.Drawing.Point(31, 28);
             this.lblRestablecer.Name = "lblRestablecer";
             this.lblRestablecer.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblRestablecer.Size = new System.Drawing.Size(313, 33);
+            this.lblRestablecer.Size = new System.Drawing.Size(381, 40);
             this.lblRestablecer.TabIndex = 1;
             this.lblRestablecer.Text = "Restablecer contraseña";
             this.lblRestablecer.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lblRestablecer.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.bunifuGradientPanel1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(995, 461);
-            this.panel1.TabIndex = 3;
             // 
             // bunifuShadowPanel1
             // 
@@ -494,6 +409,91 @@
             this.bunifuShadowPanel2.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
             this.bunifuShadowPanel2.TabIndex = 13;
             // 
+            // txtNuevaContrasena
+            // 
+            this.txtNuevaContrasena.AcceptsReturn = false;
+            this.txtNuevaContrasena.AcceptsTab = false;
+            this.txtNuevaContrasena.AnimationSpeed = 200;
+            this.txtNuevaContrasena.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.txtNuevaContrasena.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.txtNuevaContrasena.AutoSizeHeight = true;
+            this.txtNuevaContrasena.BackColor = System.Drawing.Color.White;
+            this.txtNuevaContrasena.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txtNuevaContrasena.BackgroundImage")));
+            this.txtNuevaContrasena.BorderColorActive = System.Drawing.Color.CadetBlue;
+            this.txtNuevaContrasena.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.txtNuevaContrasena.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.txtNuevaContrasena.BorderColorIdle = System.Drawing.Color.Silver;
+            this.txtNuevaContrasena.BorderRadius = 12;
+            this.txtNuevaContrasena.BorderThickness = 2;
+            this.txtNuevaContrasena.CharacterCase = Bunifu.UI.WinForms.BunifuTextBox.CharacterCases.Normal;
+            this.txtNuevaContrasena.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.txtNuevaContrasena.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtNuevaContrasena.DefaultFont = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNuevaContrasena.DefaultText = "";
+            this.txtNuevaContrasena.FillColor = System.Drawing.Color.White;
+            this.txtNuevaContrasena.HideSelection = true;
+            this.txtNuevaContrasena.IconLeft = null;
+            this.txtNuevaContrasena.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtNuevaContrasena.IconPadding = 10;
+            this.txtNuevaContrasena.IconRight = null;
+            this.txtNuevaContrasena.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtNuevaContrasena.Lines = new string[0];
+            this.txtNuevaContrasena.Location = new System.Drawing.Point(0, 0);
+            this.txtNuevaContrasena.MaxLength = 32767;
+            this.txtNuevaContrasena.MinimumSize = new System.Drawing.Size(1, 1);
+            this.txtNuevaContrasena.Modified = false;
+            this.txtNuevaContrasena.Multiline = false;
+            this.txtNuevaContrasena.Name = "txtNuevaContrasena";
+            stateProperties5.BorderColor = System.Drawing.Color.CadetBlue;
+            stateProperties5.FillColor = System.Drawing.Color.Empty;
+            stateProperties5.ForeColor = System.Drawing.Color.Empty;
+            stateProperties5.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtNuevaContrasena.OnActiveState = stateProperties5;
+            stateProperties6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties6.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.txtNuevaContrasena.OnDisabledState = stateProperties6;
+            stateProperties7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties7.FillColor = System.Drawing.Color.Empty;
+            stateProperties7.ForeColor = System.Drawing.Color.Empty;
+            stateProperties7.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtNuevaContrasena.OnHoverState = stateProperties7;
+            stateProperties8.BorderColor = System.Drawing.Color.Silver;
+            stateProperties8.FillColor = System.Drawing.Color.White;
+            stateProperties8.ForeColor = System.Drawing.Color.Empty;
+            stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtNuevaContrasena.OnIdleState = stateProperties8;
+            this.txtNuevaContrasena.Padding = new System.Windows.Forms.Padding(3);
+            this.txtNuevaContrasena.PasswordChar = '\0';
+            this.txtNuevaContrasena.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.txtNuevaContrasena.PlaceholderText = "Nueva Contraseña";
+            this.txtNuevaContrasena.ReadOnly = false;
+            this.txtNuevaContrasena.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtNuevaContrasena.SelectedText = "";
+            this.txtNuevaContrasena.SelectionLength = 0;
+            this.txtNuevaContrasena.SelectionStart = 0;
+            this.txtNuevaContrasena.ShortcutsEnabled = true;
+            this.txtNuevaContrasena.Size = new System.Drawing.Size(514, 54);
+            this.txtNuevaContrasena.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
+            this.txtNuevaContrasena.TabIndex = 11;
+            this.txtNuevaContrasena.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtNuevaContrasena.TextMarginBottom = 0;
+            this.txtNuevaContrasena.TextMarginLeft = 3;
+            this.txtNuevaContrasena.TextMarginTop = 1;
+            this.txtNuevaContrasena.TextPlaceholder = "Nueva Contraseña";
+            this.txtNuevaContrasena.UseSystemPasswordChar = false;
+            this.txtNuevaContrasena.WordWrap = true;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.bunifuGradientPanel1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(995, 461);
+            this.panel1.TabIndex = 3;
+            // 
             // ActualizarContraseñaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -504,6 +504,7 @@
             this.MaximumSize = new System.Drawing.Size(995, 461);
             this.MinimumSize = new System.Drawing.Size(995, 461);
             this.Name = "ActualizarContraseñaForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Actualizar Contraseña";
             this.bunifuGradientPanel1.ResumeLayout(false);
             this.bunifuGradientPanel1.PerformLayout();
@@ -513,8 +514,8 @@
             this.bunifuGradientPanel2.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            this.panel1.ResumeLayout(false);
             this.bunifuShadowPanel2.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

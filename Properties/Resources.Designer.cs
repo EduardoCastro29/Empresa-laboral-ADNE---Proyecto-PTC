@@ -223,6 +223,16 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Foto_Ver_Paciente {
+            get {
+                object obj = ResourceManager.GetObject("Foto Ver Paciente", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Imagen_contraseña {
             get {
                 object obj = ResourceManager.GetObject("Imagen contraseña", resourceCulture);

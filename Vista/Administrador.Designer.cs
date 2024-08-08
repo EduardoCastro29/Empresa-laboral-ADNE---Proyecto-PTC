@@ -43,8 +43,10 @@
             this.bunifuDataGridView1 = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.btnAñadirProfesional = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.bunifuTextBox1 = new Bunifu.UI.WinForms.BunifuTextBox();
+            this.btnSalir = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.bunifuGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuGradientPanel1
@@ -53,6 +55,7 @@
             this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
             this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuGradientPanel1.BorderRadius = 1;
+            this.bunifuGradientPanel1.Controls.Add(this.btnSalir);
             this.bunifuGradientPanel1.Controls.Add(this.btnEliminarProfesional);
             this.bunifuGradientPanel1.Controls.Add(this.bunifuDataGridView1);
             this.bunifuGradientPanel1.Controls.Add(this.btnAñadirProfesional);
@@ -385,6 +388,23 @@
             this.bunifuTextBox1.UseSystemPasswordChar = false;
             this.bunifuTextBox1.WordWrap = true;
             // 
+            // btnSalir
+            // 
+            this.btnSalir.AllowFocused = false;
+            this.btnSalir.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnSalir.AutoSizeHeight = true;
+            this.btnSalir.BorderRadius = 0;
+            this.btnSalir.Image = global::Empresa_laboral_ADNE___Proyecto_PTC.Properties.Resources.Cerrar_Login;
+            this.btnSalir.IsCircle = true;
+            this.btnSalir.Location = new System.Drawing.Point(959, 12);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(20, 20);
+            this.btnSalir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnSalir.TabIndex = 5;
+            this.btnSalir.TabStop = false;
+            this.btnSalir.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Square;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
             // AdministradorForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -397,6 +417,7 @@
             this.Text = "Administrador";
             this.bunifuGradientPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -408,5 +429,6 @@
         public Bunifu.UI.WinForms.BunifuDataGridView bunifuDataGridView1;
         public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnAñadirProfesional;
         public Bunifu.UI.WinForms.BunifuTextBox bunifuTextBox1;
+        public Bunifu.UI.WinForms.BunifuPictureBox btnSalir;
     }
 }

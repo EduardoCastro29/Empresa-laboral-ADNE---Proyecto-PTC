@@ -37,13 +37,11 @@
             this.btnSalir = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.bunifuVScrollBar1 = new Bunifu.UI.WinForms.BunifuVScrollBar();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.SpaceLayout = new System.Windows.Forms.FlowLayoutPanel();
             this.flpHistorial = new System.Windows.Forms.FlowLayoutPanel();
             this.bunifuGradientPanel1.SuspendLayout();
             this.flowLayoutPanel3.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // bunifuGradientPanel1
@@ -194,52 +192,11 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.bunifuVScrollBar1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel1.Location = new System.Drawing.Point(606, 126);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(31, 554);
             this.panel1.TabIndex = 12;
-            // 
-            // bunifuVScrollBar1
-            // 
-            this.bunifuVScrollBar1.AllowCursorChanges = true;
-            this.bunifuVScrollBar1.AllowHomeEndKeysDetection = false;
-            this.bunifuVScrollBar1.AllowIncrementalClickMoves = true;
-            this.bunifuVScrollBar1.AllowMouseDownEffects = true;
-            this.bunifuVScrollBar1.AllowMouseHoverEffects = true;
-            this.bunifuVScrollBar1.AllowScrollingAnimations = true;
-            this.bunifuVScrollBar1.AllowScrollKeysDetection = true;
-            this.bunifuVScrollBar1.AllowScrollOptionsMenu = true;
-            this.bunifuVScrollBar1.AllowShrinkingOnFocusLost = false;
-            this.bunifuVScrollBar1.BackgroundColor = System.Drawing.Color.Transparent;
-            this.bunifuVScrollBar1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuVScrollBar1.BackgroundImage")));
-            this.bunifuVScrollBar1.BindingContainer = null;
-            this.bunifuVScrollBar1.BorderColor = System.Drawing.Color.Transparent;
-            this.bunifuVScrollBar1.BorderRadius = 14;
-            this.bunifuVScrollBar1.BorderThickness = 1;
-            this.bunifuVScrollBar1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.bunifuVScrollBar1.DurationBeforeShrink = 2000;
-            this.bunifuVScrollBar1.LargeChange = 10;
-            this.bunifuVScrollBar1.Location = new System.Drawing.Point(14, 0);
-            this.bunifuVScrollBar1.Maximum = 100;
-            this.bunifuVScrollBar1.Minimum = 0;
-            this.bunifuVScrollBar1.MinimumThumbLength = 18;
-            this.bunifuVScrollBar1.Name = "bunifuVScrollBar1";
-            this.bunifuVScrollBar1.OnDisable.ScrollBarBorderColor = System.Drawing.Color.Silver;
-            this.bunifuVScrollBar1.OnDisable.ScrollBarColor = System.Drawing.Color.Transparent;
-            this.bunifuVScrollBar1.OnDisable.ThumbColor = System.Drawing.Color.Silver;
-            this.bunifuVScrollBar1.ScrollBarBorderColor = System.Drawing.Color.Transparent;
-            this.bunifuVScrollBar1.ScrollBarColor = System.Drawing.Color.Transparent;
-            this.bunifuVScrollBar1.ShrinkSizeLimit = 3;
-            this.bunifuVScrollBar1.Size = new System.Drawing.Size(17, 554);
-            this.bunifuVScrollBar1.SmallChange = 1;
-            this.bunifuVScrollBar1.TabIndex = 0;
-            this.bunifuVScrollBar1.ThumbColor = System.Drawing.Color.DarkGray;
-            this.bunifuVScrollBar1.ThumbLength = 54;
-            this.bunifuVScrollBar1.ThumbMargin = 1;
-            this.bunifuVScrollBar1.ThumbStyle = Bunifu.UI.WinForms.BunifuVScrollBar.ThumbStyles.Inset;
-            this.bunifuVScrollBar1.Value = 0;
             // 
             // flowLayoutPanel1
             // 
@@ -260,6 +217,7 @@
             // 
             // flpHistorial
             // 
+            this.flpHistorial.AutoScroll = true;
             this.flpHistorial.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flpHistorial.Location = new System.Drawing.Point(31, 138);
             this.flpHistorial.Name = "flpHistorial";
@@ -286,7 +244,6 @@
             this.bunifuGradientPanel1.ResumeLayout(false);
             this.bunifuGradientPanel1.PerformLayout();
             this.flowLayoutPanel3.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -300,7 +257,6 @@
         public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnSalir;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private System.Windows.Forms.Panel panel1;
-        private Bunifu.UI.WinForms.BunifuVScrollBar bunifuVScrollBar1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.FlowLayoutPanel SpaceLayout;
         private System.Windows.Forms.FlowLayoutPanel flpHistorial;

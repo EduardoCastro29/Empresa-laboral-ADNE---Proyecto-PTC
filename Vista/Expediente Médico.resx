@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="bunifuTextBox2.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="txtPautas.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAxsAAABfCAYAAACA/9ouAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAPCSURBVHhe7dyxaiNXAIXhKV2mTJkyj7CPkJcIpAmkTJl0
@@ -140,7 +140,7 @@
         5N03cs3MzMzMzN5eXdfzNjJ+eueOBgAAQE5VvQLQJEuJp5hzhgAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="bunifuTextBox1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="txtRedesSociales.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAxsAAABfCAYAAACA/9ouAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAPCSURBVHhe7dyxaiNXAIXhKV2mTJkyj7CPkJcIpAmkTJl0
@@ -162,7 +162,7 @@
         5N03cs3MzMzMzN5eXdfzNjJ+eueOBgAAQE5VvQLQJEuJp5hzhgAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="bunifuTextBox11.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="txtCogniciones.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAxsAAABfCAYAAACA/9ouAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAPCSURBVHhe7dyxaiNXAIXhKV2mTJkyj7CPkJcIpAmkTJl0
@@ -184,7 +184,7 @@
         5N03cs3MzMzMzN5eXdfzNjJ+eueOBgAAQE5VvQLQJEuJp5hzhgAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="bunifuTextBox12.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="txtSomatizaciones.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAxsAAABfCAYAAACA/9ouAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAPCSURBVHhe7dyxaiNXAIXhKV2mTJkyj7CPkJcIpAmkTJl0
@@ -206,7 +206,7 @@
         5N03cs3MzMzMzN5eXdfzNjJ+eueOBgAAQE5VvQLQJEuJp5hzhgAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="bunifuTextBox9.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="txtEstadoConductual.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAxsAAABfCAYAAACA/9ouAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAPCSURBVHhe7dyxaiNXAIXhKV2mTJkyj7CPkJcIpAmkTJl0
@@ -228,7 +228,7 @@
         5N03cs3MzMzMzN5eXdfzNjJ+eueOBgAAQE5VvQLQJEuJp5hzhgAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="bunifuTextBox8.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="txtAfectividad.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAxsAAABfCAYAAACA/9ouAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAPCSURBVHhe7dyxaiNXAIXhKV2mTJkyj7CPkJcIpAmkTJl0
@@ -250,7 +250,7 @@
         5N03cs3MzMzMzN5eXdfzNjJ+eueOBgAAQE5VvQLQJEuJp5hzhgAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="bunifuTextBox3.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="txtValoracionRiesgo.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAxsAAACACAYAAABjl3TUAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAARzSURBVHhe7dyxaiNXAIXhKV2mTJkyj7CPkJcIpAmkTJl0

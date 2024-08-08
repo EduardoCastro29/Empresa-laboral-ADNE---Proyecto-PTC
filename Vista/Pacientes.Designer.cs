@@ -474,7 +474,6 @@
             this.Name = "PacientesForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pacientes";
-            this.Load += new System.EventHandler(this.Dashboard_Load);
             this.bunifuPanel1.ResumeLayout(false);
             this.bunifuShadowPanel4.ResumeLayout(false);
             this.bunifuPanel3.ResumeLayout(false);

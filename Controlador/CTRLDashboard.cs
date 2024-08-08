@@ -35,12 +35,8 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             //Dentro del panel a la hora de ejecutarse
             ObjDashboard.btnMainPage.Click += new EventHandler(FormularioPaginaPrincipal);
             ObjDashboard.btnPacientes.Click += new EventHandler(FormularioPacientes);
-            //View.Load += new EventHandler(FormularioVerPacientes);
-            //View.Load += new EventHandler(FormularioNuevoPaciente);
-            //View.Load += new EventHandler(FormularioInformacionPersonal);
-            //View.Load += new EventHandler(FormularioExpedienteMedico);
             ObjDashboard.btnEquipo.Click += new EventHandler(FormularioEquipoTrabajo);
-            //View.Load += new EventHandler(FormularioCalendario);
+            ObjDashboard.btnCalendario.Click += new EventHandler(FormularioCalendario);
             ObjDashboard.btnConfig.Click += new EventHandler(FormularioConfiguracion);
         }
         private void DatosUsuarioLogin(object sender, EventArgs e)
@@ -65,26 +61,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
         {
             //En caso de seleccionarse el formulario Pacientes, se abrirá declarandolo como un nuevo formulario después del método
             AbrirFormulario<PacientesForm>();
-        }
-        private void FormularioVerPacientes(object sender, EventArgs e)
-        {
-            //En caso de seleccionarse el formulario Ver Pacientes, se abrirá declarandolo como un nuevo formulario después del método
-            AbrirFormulario<VerPacientesForm>();
-        }
-        private void FormularioNuevoPaciente(object sender, EventArgs e)
-        {
-            //En caso de seleccionarse el formulario Nuevo Paciente, se abrirá declarandolo como un nuevo formulario después del método
-            AbrirFormulario<NuevoPacienteForm>();
-        }
-        private void FormularioInformacionPersonal(object sender, EventArgs e)
-        {
-            //En caso de seleccionarse el formulario Información Personal, se abrirá declarandolo como un nuevo formulario después del método
-            AbrirFormulario<InformaciónPersonalForm>();
-        }
-        private void FormularioExpedienteMedico(object sender, EventArgs e)
-        {
-            //En caso de seleccionarse el formulario Expediente Médico, se abrirá declarandolo como un nuevo formulario después del método
-            AbrirFormulario<ExpedienteMédicoForm>();
         }
         private void FormularioEquipoTrabajo(object sender, EventArgs e)
         {

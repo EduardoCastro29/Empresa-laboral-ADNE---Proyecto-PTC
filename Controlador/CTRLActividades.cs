@@ -22,6 +22,10 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
 
             ObjActividadesForm.btnPacientes.Click += new EventHandler(VerPacientes);
         }
+        //Aca su crudo
+
+
+
         private void VerPacientes(object sender, EventArgs e)
         {
             if (ObjVerHistorial == null || ObjVerHistorial.IsDisposed)
