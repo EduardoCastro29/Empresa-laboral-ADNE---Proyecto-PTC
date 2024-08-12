@@ -18,5 +18,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Vista
             InitializeComponent();
             CTRLCalendario ObjCalendarioControlador = new CTRLCalendario(this);
         }
+
     }
 }

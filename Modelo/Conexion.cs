@@ -9,6 +9,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
 {
     internal class Conexion
     {
+        //jor
         //Creando el método llamado Conectar como método de encapsulación público
         //De esta forma, puede acceder a otras clases externas para poderse utilizar como herencia de SqlConnection para la conexión de la DB
         public static SqlConnection Conectar()
@@ -16,7 +17,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             try
             {
                 //Definiendo las variables de conexión
-                string servidor = "DESKTOP-FSK1K0V\\SQLEXPRESS"; //Pongan su dirección de SQL Server, en mi caso es esa bv
+                string servidor = "JOR\\SQLEXPRESS01"; //Pongan su dirección de SQL Server, en mi caso es esa bv
                 string DBnombre = "ADNE2024"; //Queda igual, ya que es el nombre de la DB
 
                 //Creando objeto ObjConexion de tipo SqlConnection con los datos de la conexión hacia la base de datos

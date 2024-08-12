@@ -149,7 +149,7 @@
             this.daycontainer.BackColor = System.Drawing.Color.Transparent;
             this.daycontainer.Location = new System.Drawing.Point(38, 108);
             this.daycontainer.Name = "daycontainer";
-            this.daycontainer.Size = new System.Drawing.Size(982, 585);
+            this.daycontainer.Size = new System.Drawing.Size(946, 552);
             this.daycontainer.TabIndex = 11;
             // 
             // btnSiguiente
@@ -164,10 +164,10 @@
             this.btnSiguiente.AutoSizeLeftIcon = true;
             this.btnSiguiente.AutoSizeRightIcon = true;
             this.btnSiguiente.BackColor = System.Drawing.Color.Transparent;
-            this.btnSiguiente.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(168)))), ((int)(((byte)(161)))));
+            this.btnSiguiente.BackColor1 = System.Drawing.Color.Transparent;
             this.btnSiguiente.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSiguiente.BackgroundImage")));
             this.btnSiguiente.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.btnSiguiente.ButtonText = "Siguiente";
+            this.btnSiguiente.ButtonText = ">";
             this.btnSiguiente.ButtonTextMarginLeft = 0;
             this.btnSiguiente.ColorContrastOnClick = 45;
             this.btnSiguiente.ColorContrastOnHover = 45;
@@ -182,7 +182,7 @@
             this.btnSiguiente.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.btnSiguiente.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
             this.btnSiguiente.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
-            this.btnSiguiente.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSiguiente.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSiguiente.ForeColor = System.Drawing.Color.White;
             this.btnSiguiente.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSiguiente.IconLeftCursor = System.Windows.Forms.Cursors.Default;
@@ -196,11 +196,11 @@
             this.btnSiguiente.IdleBorderColor = System.Drawing.Color.Transparent;
             this.btnSiguiente.IdleBorderRadius = 5;
             this.btnSiguiente.IdleBorderThickness = 1;
-            this.btnSiguiente.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(168)))), ((int)(((byte)(161)))));
+            this.btnSiguiente.IdleFillColor = System.Drawing.Color.Transparent;
             this.btnSiguiente.IdleIconLeftImage = null;
             this.btnSiguiente.IdleIconRightImage = null;
             this.btnSiguiente.IndicateFocus = false;
-            this.btnSiguiente.Location = new System.Drawing.Point(703, 38);
+            this.btnSiguiente.Location = new System.Drawing.Point(612, 18);
             this.btnSiguiente.Name = "btnSiguiente";
             this.btnSiguiente.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnSiguiente.OnDisabledState.BorderRadius = 5;
@@ -222,7 +222,7 @@
             this.btnSiguiente.OnIdleState.BorderRadius = 5;
             this.btnSiguiente.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.btnSiguiente.OnIdleState.BorderThickness = 1;
-            this.btnSiguiente.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(168)))), ((int)(((byte)(161)))));
+            this.btnSiguiente.OnIdleState.FillColor = System.Drawing.Color.Transparent;
             this.btnSiguiente.OnIdleState.ForeColor = System.Drawing.Color.White;
             this.btnSiguiente.OnIdleState.IconLeftImage = null;
             this.btnSiguiente.OnIdleState.IconRightImage = null;
@@ -254,10 +254,10 @@
             this.btnAnterior.AutoSizeLeftIcon = true;
             this.btnAnterior.AutoSizeRightIcon = true;
             this.btnAnterior.BackColor = System.Drawing.Color.Transparent;
-            this.btnAnterior.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(168)))), ((int)(((byte)(161)))));
+            this.btnAnterior.BackColor1 = System.Drawing.Color.Transparent;
             this.btnAnterior.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAnterior.BackgroundImage")));
             this.btnAnterior.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.btnAnterior.ButtonText = "Atras";
+            this.btnAnterior.ButtonText = "<";
             this.btnAnterior.ButtonTextMarginLeft = 0;
             this.btnAnterior.ColorContrastOnClick = 45;
             this.btnAnterior.ColorContrastOnHover = 45;
@@ -272,7 +272,7 @@
             this.btnAnterior.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.btnAnterior.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
             this.btnAnterior.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
-            this.btnAnterior.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAnterior.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAnterior.ForeColor = System.Drawing.Color.White;
             this.btnAnterior.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAnterior.IconLeftCursor = System.Windows.Forms.Cursors.Default;
@@ -286,11 +286,11 @@
             this.btnAnterior.IdleBorderColor = System.Drawing.Color.Transparent;
             this.btnAnterior.IdleBorderRadius = 5;
             this.btnAnterior.IdleBorderThickness = 1;
-            this.btnAnterior.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(168)))), ((int)(((byte)(161)))));
+            this.btnAnterior.IdleFillColor = System.Drawing.Color.Transparent;
             this.btnAnterior.IdleIconLeftImage = null;
             this.btnAnterior.IdleIconRightImage = null;
             this.btnAnterior.IndicateFocus = false;
-            this.btnAnterior.Location = new System.Drawing.Point(225, 38);
+            this.btnAnterior.Location = new System.Drawing.Point(324, 18);
             this.btnAnterior.Name = "btnAnterior";
             this.btnAnterior.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnAnterior.OnDisabledState.BorderRadius = 5;
@@ -312,7 +312,7 @@
             this.btnAnterior.OnIdleState.BorderRadius = 5;
             this.btnAnterior.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.btnAnterior.OnIdleState.BorderThickness = 1;
-            this.btnAnterior.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(168)))), ((int)(((byte)(161)))));
+            this.btnAnterior.OnIdleState.FillColor = System.Drawing.Color.Transparent;
             this.btnAnterior.OnIdleState.ForeColor = System.Drawing.Color.White;
             this.btnAnterior.OnIdleState.IconLeftImage = null;
             this.btnAnterior.OnIdleState.IconRightImage = null;
@@ -380,7 +380,7 @@
             this.btnVerCitas.IdleIconLeftImage = null;
             this.btnVerCitas.IdleIconRightImage = null;
             this.btnVerCitas.IndicateFocus = false;
-            this.btnVerCitas.Location = new System.Drawing.Point(824, 28);
+            this.btnVerCitas.Location = new System.Drawing.Point(824, 666);
             this.btnVerCitas.Name = "btnVerCitas";
             this.btnVerCitas.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnVerCitas.OnDisabledState.BorderRadius = 5;
