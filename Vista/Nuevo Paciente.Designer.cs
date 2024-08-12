@@ -59,9 +59,9 @@
             this.panelElement.AutoScroll = true;
             this.panelElement.BackColor = System.Drawing.Color.Transparent;
             this.panelElement.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelElement.Location = new System.Drawing.Point(0, 214);
+            this.panelElement.Location = new System.Drawing.Point(0, 188);
             this.panelElement.Name = "panelElement";
-            this.panelElement.Size = new System.Drawing.Size(991, 599);
+            this.panelElement.Size = new System.Drawing.Size(991, 564);
             this.panelElement.TabIndex = 4;
             // 
             // BarraSeparadora
@@ -75,7 +75,7 @@
             this.BarraSeparadora.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(187)))), ((int)(((byte)(171)))));
             this.BarraSeparadora.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(187)))), ((int)(((byte)(171)))));
             this.BarraSeparadora.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(187)))), ((int)(((byte)(171)))));
-            this.BarraSeparadora.Location = new System.Drawing.Point(0, 211);
+            this.BarraSeparadora.Location = new System.Drawing.Point(0, 185);
             this.BarraSeparadora.Name = "BarraSeparadora";
             this.BarraSeparadora.Quality = 10;
             this.BarraSeparadora.Size = new System.Drawing.Size(991, 3);
@@ -93,7 +93,7 @@
             this.btnExpedienteGradient.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(179)))), ((int)(((byte)(166)))));
             this.btnExpedienteGradient.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(199)))), ((int)(((byte)(187)))));
             this.btnExpedienteGradient.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(179)))), ((int)(((byte)(166)))));
-            this.btnExpedienteGradient.Location = new System.Drawing.Point(218, 128);
+            this.btnExpedienteGradient.Location = new System.Drawing.Point(218, 104);
             this.btnExpedienteGradient.Name = "btnExpedienteGradient";
             this.btnExpedienteGradient.Quality = 10;
             this.btnExpedienteGradient.Size = new System.Drawing.Size(270, 63);
@@ -104,6 +104,7 @@
             this.btnExpediente.AllowAnimations = true;
             this.btnExpediente.AllowMouseEffects = true;
             this.btnExpediente.AllowToggling = false;
+            this.btnExpediente.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnExpediente.AnimationSpeed = 200;
             this.btnExpediente.AutoGenerateColors = false;
             this.btnExpediente.AutoRoundBorders = false;
@@ -127,7 +128,6 @@
             this.btnExpediente.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnExpediente.DisabledFillColor = System.Drawing.Color.Empty;
             this.btnExpediente.DisabledForecolor = System.Drawing.Color.Empty;
-            this.btnExpediente.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnExpediente.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
             this.btnExpediente.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExpediente.ForeColor = System.Drawing.Color.White;
@@ -203,7 +203,7 @@
             this.btnDatosIdentificacionGradient.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(179)))), ((int)(((byte)(166)))));
             this.btnDatosIdentificacionGradient.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(199)))), ((int)(((byte)(187)))));
             this.btnDatosIdentificacionGradient.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(179)))), ((int)(((byte)(166)))));
-            this.btnDatosIdentificacionGradient.Location = new System.Drawing.Point(505, 128);
+            this.btnDatosIdentificacionGradient.Location = new System.Drawing.Point(505, 104);
             this.btnDatosIdentificacionGradient.Name = "btnDatosIdentificacionGradient";
             this.btnDatosIdentificacionGradient.Quality = 10;
             this.btnDatosIdentificacionGradient.Size = new System.Drawing.Size(270, 63);
@@ -214,6 +214,7 @@
             this.btnDatosIdentificacion.AllowAnimations = true;
             this.btnDatosIdentificacion.AllowMouseEffects = true;
             this.btnDatosIdentificacion.AllowToggling = false;
+            this.btnDatosIdentificacion.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnDatosIdentificacion.AnimationSpeed = 200;
             this.btnDatosIdentificacion.AutoGenerateColors = false;
             this.btnDatosIdentificacion.AutoRoundBorders = false;
@@ -237,7 +238,6 @@
             this.btnDatosIdentificacion.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnDatosIdentificacion.DisabledFillColor = System.Drawing.Color.Empty;
             this.btnDatosIdentificacion.DisabledForecolor = System.Drawing.Color.Empty;
-            this.btnDatosIdentificacion.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnDatosIdentificacion.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
             this.btnDatosIdentificacion.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDatosIdentificacion.ForeColor = System.Drawing.Color.White;
@@ -409,13 +409,14 @@
             // 
             // bunifuPanel1
             // 
+            this.bunifuPanel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.bunifuPanel1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.bunifuPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuPanel1.BackgroundImage")));
             this.bunifuPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuPanel1.BorderColor = System.Drawing.Color.Transparent;
             this.bunifuPanel1.BorderRadius = 15;
             this.bunifuPanel1.BorderThickness = 0;
-            this.bunifuPanel1.Location = new System.Drawing.Point(221, 136);
+            this.bunifuPanel1.Location = new System.Drawing.Point(221, 112);
             this.bunifuPanel1.Name = "bunifuPanel1";
             this.bunifuPanel1.ShowBorders = true;
             this.bunifuPanel1.Size = new System.Drawing.Size(264, 58);
@@ -423,13 +424,14 @@
             // 
             // bunifuPanel2
             // 
+            this.bunifuPanel2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.bunifuPanel2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.bunifuPanel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuPanel2.BackgroundImage")));
             this.bunifuPanel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuPanel2.BorderColor = System.Drawing.Color.Transparent;
             this.bunifuPanel2.BorderRadius = 15;
             this.bunifuPanel2.BorderThickness = 0;
-            this.bunifuPanel2.Location = new System.Drawing.Point(509, 136);
+            this.bunifuPanel2.Location = new System.Drawing.Point(509, 112);
             this.bunifuPanel2.Name = "bunifuPanel2";
             this.bunifuPanel2.ShowBorders = true;
             this.bunifuPanel2.Size = new System.Drawing.Size(262, 58);
@@ -439,7 +441,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(991, 813);
+            this.ClientSize = new System.Drawing.Size(991, 752);
             this.Controls.Add(this.btnExpedienteGradient);
             this.Controls.Add(this.btnDatosIdentificacionGradient);
             this.Controls.Add(this.BarraSeparadora);
@@ -448,7 +450,6 @@
             this.Controls.Add(this.bunifuPanel1);
             this.Controls.Add(this.bunifuPanel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.MinimumSize = new System.Drawing.Size(991, 813);
             this.Name = "NuevoPacienteForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nuevo Paciente";
