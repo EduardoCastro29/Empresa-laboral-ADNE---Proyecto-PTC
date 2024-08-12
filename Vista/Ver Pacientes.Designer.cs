@@ -33,11 +33,13 @@
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             this.bunifuGradientPanel1 = new Bunifu.UI.WinForms.BunifuGradientPanel();
             this.btnSalir = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
             this.txtBuscarPaciente = new Bunifu.UI.WinForms.BunifuTextBox();
             this.flpVerPacientes = new System.Windows.Forms.FlowLayoutPanel();
+            this.btnAbrirDocumentos = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.bunifuGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).BeginInit();
             this.bunifuPanel1.SuspendLayout();
@@ -49,6 +51,7 @@
             this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
             this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuGradientPanel1.BorderRadius = 1;
+            this.bunifuGradientPanel1.Controls.Add(this.btnAbrirDocumentos);
             this.bunifuGradientPanel1.Controls.Add(this.btnSalir);
             this.bunifuGradientPanel1.Controls.Add(this.bunifuPanel1);
             this.bunifuGradientPanel1.Controls.Add(this.flpVerPacientes);
@@ -181,6 +184,96 @@
             this.flpVerPacientes.Size = new System.Drawing.Size(914, 500);
             this.flpVerPacientes.TabIndex = 1;
             // 
+            // btnAbrirDocumentos
+            // 
+            this.btnAbrirDocumentos.AllowAnimations = true;
+            this.btnAbrirDocumentos.AllowMouseEffects = true;
+            this.btnAbrirDocumentos.AllowToggling = false;
+            this.btnAbrirDocumentos.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnAbrirDocumentos.AnimationSpeed = 200;
+            this.btnAbrirDocumentos.AutoGenerateColors = false;
+            this.btnAbrirDocumentos.AutoRoundBorders = false;
+            this.btnAbrirDocumentos.AutoSizeLeftIcon = true;
+            this.btnAbrirDocumentos.AutoSizeRightIcon = true;
+            this.btnAbrirDocumentos.BackColor = System.Drawing.Color.Transparent;
+            this.btnAbrirDocumentos.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(2)))), ((int)(((byte)(161)))), ((int)(((byte)(104)))));
+            this.btnAbrirDocumentos.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAbrirDocumentos.BackgroundImage")));
+            this.btnAbrirDocumentos.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btnAbrirDocumentos.ButtonText = "Abrir Documento Paciente";
+            this.btnAbrirDocumentos.ButtonTextMarginLeft = 0;
+            this.btnAbrirDocumentos.ColorContrastOnClick = 45;
+            this.btnAbrirDocumentos.ColorContrastOnHover = 45;
+            this.btnAbrirDocumentos.Cursor = System.Windows.Forms.Cursors.Default;
+            borderEdges1.BottomLeft = true;
+            borderEdges1.BottomRight = true;
+            borderEdges1.TopLeft = true;
+            borderEdges1.TopRight = true;
+            this.btnAbrirDocumentos.CustomizableEdges = borderEdges1;
+            this.btnAbrirDocumentos.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnAbrirDocumentos.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btnAbrirDocumentos.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btnAbrirDocumentos.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btnAbrirDocumentos.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
+            this.btnAbrirDocumentos.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAbrirDocumentos.ForeColor = System.Drawing.Color.White;
+            this.btnAbrirDocumentos.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAbrirDocumentos.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.btnAbrirDocumentos.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
+            this.btnAbrirDocumentos.IconMarginLeft = 11;
+            this.btnAbrirDocumentos.IconPadding = 10;
+            this.btnAbrirDocumentos.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAbrirDocumentos.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.btnAbrirDocumentos.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
+            this.btnAbrirDocumentos.IconSize = 25;
+            this.btnAbrirDocumentos.IdleBorderColor = System.Drawing.Color.Transparent;
+            this.btnAbrirDocumentos.IdleBorderRadius = 12;
+            this.btnAbrirDocumentos.IdleBorderThickness = 1;
+            this.btnAbrirDocumentos.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(2)))), ((int)(((byte)(161)))), ((int)(((byte)(104)))));
+            this.btnAbrirDocumentos.IdleIconLeftImage = null;
+            this.btnAbrirDocumentos.IdleIconRightImage = null;
+            this.btnAbrirDocumentos.IndicateFocus = false;
+            this.btnAbrirDocumentos.Location = new System.Drawing.Point(375, 9);
+            this.btnAbrirDocumentos.Name = "btnAbrirDocumentos";
+            this.btnAbrirDocumentos.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btnAbrirDocumentos.OnDisabledState.BorderRadius = 12;
+            this.btnAbrirDocumentos.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btnAbrirDocumentos.OnDisabledState.BorderThickness = 1;
+            this.btnAbrirDocumentos.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btnAbrirDocumentos.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btnAbrirDocumentos.OnDisabledState.IconLeftImage = null;
+            this.btnAbrirDocumentos.OnDisabledState.IconRightImage = null;
+            this.btnAbrirDocumentos.onHoverState.BorderColor = System.Drawing.Color.Transparent;
+            this.btnAbrirDocumentos.onHoverState.BorderRadius = 12;
+            this.btnAbrirDocumentos.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btnAbrirDocumentos.onHoverState.BorderThickness = 1;
+            this.btnAbrirDocumentos.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(2)))), ((int)(((byte)(161)))), ((int)(((byte)(104)))));
+            this.btnAbrirDocumentos.onHoverState.ForeColor = System.Drawing.Color.White;
+            this.btnAbrirDocumentos.onHoverState.IconLeftImage = null;
+            this.btnAbrirDocumentos.onHoverState.IconRightImage = null;
+            this.btnAbrirDocumentos.OnIdleState.BorderColor = System.Drawing.Color.Transparent;
+            this.btnAbrirDocumentos.OnIdleState.BorderRadius = 12;
+            this.btnAbrirDocumentos.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btnAbrirDocumentos.OnIdleState.BorderThickness = 1;
+            this.btnAbrirDocumentos.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(2)))), ((int)(((byte)(161)))), ((int)(((byte)(104)))));
+            this.btnAbrirDocumentos.OnIdleState.ForeColor = System.Drawing.Color.White;
+            this.btnAbrirDocumentos.OnIdleState.IconLeftImage = null;
+            this.btnAbrirDocumentos.OnIdleState.IconRightImage = null;
+            this.btnAbrirDocumentos.OnPressedState.BorderColor = System.Drawing.Color.Transparent;
+            this.btnAbrirDocumentos.OnPressedState.BorderRadius = 12;
+            this.btnAbrirDocumentos.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btnAbrirDocumentos.OnPressedState.BorderThickness = 1;
+            this.btnAbrirDocumentos.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(2)))), ((int)(((byte)(161)))), ((int)(((byte)(104)))));
+            this.btnAbrirDocumentos.OnPressedState.ForeColor = System.Drawing.Color.White;
+            this.btnAbrirDocumentos.OnPressedState.IconLeftImage = null;
+            this.btnAbrirDocumentos.OnPressedState.IconRightImage = null;
+            this.btnAbrirDocumentos.Size = new System.Drawing.Size(216, 39);
+            this.btnAbrirDocumentos.TabIndex = 21;
+            this.btnAbrirDocumentos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnAbrirDocumentos.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnAbrirDocumentos.TextMarginLeft = 0;
+            this.btnAbrirDocumentos.TextPadding = new System.Windows.Forms.Padding(0);
+            this.btnAbrirDocumentos.UseDefaultRadiusAndThickness = true;
+            // 
             // VerPacientesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -205,5 +298,6 @@
         public Bunifu.UI.WinForms.BunifuTextBox txtBuscarPaciente;
         public System.Windows.Forms.FlowLayoutPanel flpVerPacientes;
         public Bunifu.UI.WinForms.BunifuPictureBox btnSalir;
+        public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnAbrirDocumentos;
     }
 }

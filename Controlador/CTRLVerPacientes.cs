@@ -22,6 +22,14 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             ObjVerPaciente = vista;
             ObjVerPaciente.Load += new EventHandler(CargarPacientes);
             ObjVerPaciente.txtBuscarPaciente.KeyPress += new KeyPressEventHandler(BuscarNombrePaciente);
+            ObjVerPaciente.btnAbrirDocumentos.Click += new EventHandler(AbrirDocumento);
+        }
+
+        private void AbrirDocumento(object sender, EventArgs e)
+        {
+            frmCitas ObjMostrarCitas = new frmCitas();
+            ObjVerPaciente.Hide();
+            ObjMostrarCitas.Show();
         }
 
         private void CargarPacientes(object sender, EventArgs e)

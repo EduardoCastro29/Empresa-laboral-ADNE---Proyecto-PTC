@@ -31,14 +31,14 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ControlPacientePlanillaUC));
             Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             this.bunifuGradientPanel4 = new Bunifu.UI.WinForms.BunifuGradientPanel();
+            this.lblPacienteId = new System.Windows.Forms.Label();
+            this.lblExpedienteId = new System.Windows.Forms.Label();
+            this.lblCitaId = new Bunifu.UI.WinForms.BunifuLabel();
             this.btnDescargar = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.lblEstado = new Bunifu.UI.WinForms.BunifuLabel();
             this.lblHora = new Bunifu.UI.WinForms.BunifuLabel();
             this.lblFecha = new Bunifu.UI.WinForms.BunifuLabel();
             this.lblNombrePaciente = new Bunifu.UI.WinForms.BunifuLabel();
-            this.lblCitaId = new Bunifu.UI.WinForms.BunifuLabel();
-            this.lblExpedienteId = new System.Windows.Forms.Label();
-            this.lblPacienteId = new System.Windows.Forms.Label();
             this.bunifuGradientPanel4.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -66,6 +66,42 @@
             this.bunifuGradientPanel4.Quality = 10;
             this.bunifuGradientPanel4.Size = new System.Drawing.Size(955, 51);
             this.bunifuGradientPanel4.TabIndex = 22;
+            // 
+            // lblPacienteId
+            // 
+            this.lblPacienteId.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblPacienteId.AutoSize = true;
+            this.lblPacienteId.Location = new System.Drawing.Point(314, 32);
+            this.lblPacienteId.Name = "lblPacienteId";
+            this.lblPacienteId.Size = new System.Drawing.Size(0, 13);
+            this.lblPacienteId.TabIndex = 25;
+            this.lblPacienteId.Visible = false;
+            // 
+            // lblExpedienteId
+            // 
+            this.lblExpedienteId.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblExpedienteId.AutoSize = true;
+            this.lblExpedienteId.Location = new System.Drawing.Point(479, 6);
+            this.lblExpedienteId.Name = "lblExpedienteId";
+            this.lblExpedienteId.Size = new System.Drawing.Size(0, 13);
+            this.lblExpedienteId.TabIndex = 24;
+            this.lblExpedienteId.Visible = false;
+            // 
+            // lblCitaId
+            // 
+            this.lblCitaId.AllowParentOverrides = false;
+            this.lblCitaId.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblCitaId.AutoEllipsis = false;
+            this.lblCitaId.CursorType = null;
+            this.lblCitaId.Font = new System.Drawing.Font("Century Gothic", 11.25F);
+            this.lblCitaId.Location = new System.Drawing.Point(3, 6);
+            this.lblCitaId.Name = "lblCitaId";
+            this.lblCitaId.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblCitaId.Size = new System.Drawing.Size(0, 0);
+            this.lblCitaId.TabIndex = 22;
+            this.lblCitaId.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lblCitaId.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.lblCitaId.Visible = false;
             // 
             // btnDescargar
             // 
@@ -167,7 +203,7 @@
             this.lblEstado.Location = new System.Drawing.Point(628, 18);
             this.lblEstado.Name = "lblEstado";
             this.lblEstado.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblEstado.Size = new System.Drawing.Size(107, 39);
+            this.lblEstado.Size = new System.Drawing.Size(48, 18);
             this.lblEstado.TabIndex = 4;
             this.lblEstado.Text = "Estado ";
             this.lblEstado.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -183,7 +219,7 @@
             this.lblHora.Location = new System.Drawing.Point(486, 16);
             this.lblHora.Name = "lblHora";
             this.lblHora.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblHora.Size = new System.Drawing.Size(78, 40);
+            this.lblHora.Size = new System.Drawing.Size(35, 20);
             this.lblHora.TabIndex = 3;
             this.lblHora.Text = "Hora";
             this.lblHora.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -199,7 +235,7 @@
             this.lblFecha.Location = new System.Drawing.Point(378, 16);
             this.lblFecha.Name = "lblFecha";
             this.lblFecha.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblFecha.Size = new System.Drawing.Size(101, 40);
+            this.lblFecha.Size = new System.Drawing.Size(46, 20);
             this.lblFecha.TabIndex = 2;
             this.lblFecha.Text = "Fecha";
             this.lblFecha.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -214,46 +250,11 @@
             this.lblNombrePaciente.Location = new System.Drawing.Point(16, 16);
             this.lblNombrePaciente.Name = "lblNombrePaciente";
             this.lblNombrePaciente.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblNombrePaciente.Size = new System.Drawing.Size(170, 40);
+            this.lblNombrePaciente.Size = new System.Drawing.Size(78, 20);
             this.lblNombrePaciente.TabIndex = 0;
             this.lblNombrePaciente.Text = "Paciente...";
             this.lblNombrePaciente.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lblNombrePaciente.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // lblCitaId
-            // 
-            this.lblCitaId.AllowParentOverrides = false;
-            this.lblCitaId.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblCitaId.AutoEllipsis = false;
-            this.lblCitaId.CursorType = null;
-            this.lblCitaId.Font = new System.Drawing.Font("Century Gothic", 11.25F);
-            this.lblCitaId.Location = new System.Drawing.Point(3, 6);
-            this.lblCitaId.Name = "lblCitaId";
-            this.lblCitaId.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblCitaId.Size = new System.Drawing.Size(0, 0);
-            this.lblCitaId.TabIndex = 22;
-            this.lblCitaId.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.lblCitaId.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // lblExpedienteId
-            // 
-            this.lblExpedienteId.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblExpedienteId.AutoSize = true;
-            this.lblExpedienteId.Location = new System.Drawing.Point(479, 6);
-            this.lblExpedienteId.Name = "lblExpedienteId";
-            this.lblExpedienteId.Size = new System.Drawing.Size(0, 13);
-            this.lblExpedienteId.TabIndex = 24;
-            this.lblExpedienteId.Visible = false;
-            // 
-            // lblPacienteId
-            // 
-            this.lblPacienteId.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblPacienteId.AutoSize = true;
-            this.lblPacienteId.Location = new System.Drawing.Point(314, 32);
-            this.lblPacienteId.Name = "lblPacienteId";
-            this.lblPacienteId.Size = new System.Drawing.Size(0, 13);
-            this.lblPacienteId.TabIndex = 25;
-            this.lblPacienteId.Visible = false;
             // 
             // ControlPacientePlanillaUC
             // 
