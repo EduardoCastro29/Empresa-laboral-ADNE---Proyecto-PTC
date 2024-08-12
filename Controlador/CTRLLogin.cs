@@ -39,7 +39,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             //Coincide con la encriptada en la base de datos
             ObjDAOUsuario.Contrasena = ObjMetodosComunes.MetodoEncriptacionAES(ObjLogin.txtContraseña.Text.Trim());
 
-            //Declaramos una variable de tipo string el cual nos dirá si la contraseña por defecto es el nombre de usuario MAS la credencial PU123
+            //Declaramos una variable de tipo string el cual nos dirá si la contraseña por defecto es el nombre de usuario MAS la credencial ADNE2024
             //De esta forma, podrá actualizar su contraseña de manera segura
             string contrasenaPredeterminada = ObjLogin.txtUsuario.Text + "ADNE2024";
 
@@ -50,7 +50,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
 
             try
             {
-                //Si el campo del DTOContasena coincide con la variable estática + PU123 (Credenciales predeterminadas)
+                //Si el campo del DTOContasena coincide con la variable estática + ADNE2024 (Credenciales predeterminadas)
                 //Se le redireccionará directamente al actualizado de la contraseña
                 if (ObjMetodosComunes.MetodoEncriptacionAES(contrasenaPredeterminada) == ObjDAOUsuario.Contrasena)
                 {

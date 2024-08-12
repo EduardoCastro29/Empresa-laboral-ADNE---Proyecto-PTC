@@ -1748,7 +1748,7 @@
             this.txtTelefono.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtTelefono.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTelefono.Location = new System.Drawing.Point(50, 233);
+            this.txtTelefono.Location = new System.Drawing.Point(50, 232);
             this.txtTelefono.Mask = "0000-0000";
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(345, 23);
@@ -1759,7 +1759,7 @@
             this.txtEdad.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtEdad.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtEdad.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEdad.Location = new System.Drawing.Point(469, 161);
+            this.txtEdad.Location = new System.Drawing.Point(466, 161);
             this.txtEdad.Mask = "00";
             this.txtEdad.Name = "txtEdad";
             this.txtEdad.Size = new System.Drawing.Size(345, 23);
@@ -1770,7 +1770,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(904, 788);
+            this.ClientSize = new System.Drawing.Size(921, 788);
             this.Controls.Add(this.txtEdad);
             this.Controls.Add(this.txtTelefono);
             this.Controls.Add(this.txtCorreoElectronico);

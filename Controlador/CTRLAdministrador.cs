@@ -201,7 +201,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                     //Obtenemos datos del objeto ObjDAORegistrarProfesional
                     ObjDAORegistrarProfesional.Usuario = ObjRegistroForm.txtUsuario.Text.Trim();
                     //Mandamos a llamar el método MetodoEncriptacionAES para encriptarla y enviarla a la base de datos
-                    ObjDAORegistrarProfesional.Contraseña = ObjMetodosComunes.MetodoEncriptacionAES(ObjRegistroForm.txtUsuario.Text.Trim() + "PU123");
+                    ObjDAORegistrarProfesional.Contraseña = ObjMetodosComunes.MetodoEncriptacionAES(ObjRegistroForm.txtUsuario.Text.Trim() + "ADNE2024");
                     //Mandamos a llamar al método pinAcceso para que nos genere un ping aleatorio
                     //Que posteriormente nos servirá para la recuperación de contraseña
                     ObjDAORegistrarProfesional.PinAcceso = int.Parse(ObjMetodosComunes.PinAcceso());
@@ -289,7 +289,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                     //Mandamos a llamar el método MetodoEncriptacionAES para encriptarla y enviarla a la base de datos
                     //De igual forma, al actualizar el Usuario del Profesional, se actualizará la contraseña del mismo
                     //De esta forma, el reseteo de contraseña vía administrador se hace presente
-                    ObjDAOActualizarProfesional.Contraseña = ObjMetodosComunes.MetodoEncriptacionAES(ObjRegistroForm.txtUsuario.Text.Trim() + "PU123");
+                    ObjDAOActualizarProfesional.Contraseña = ObjMetodosComunes.MetodoEncriptacionAES(ObjRegistroForm.txtUsuario.Text.Trim() + "ADNE2024");
                     ObjDAOActualizarProfesional.Correo = ObjRegistroForm.txtCorreo.Text.Trim();
                     ObjDAOActualizarProfesional.Dui = ObjRegistroForm.txtDui.Text;
                     ObjDAOActualizarProfesional.Nombres = ObjRegistroForm.txtNombre.Text.Trim();

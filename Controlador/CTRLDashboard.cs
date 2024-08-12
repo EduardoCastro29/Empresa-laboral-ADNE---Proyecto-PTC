@@ -9,6 +9,7 @@ using Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO;
 using System.Drawing;
 using Empresa_laboral_ADNE___Proyecto_PTC.Vista;
 using Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DTO;
+using System.Security.Cryptography;
 
 namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
 {
@@ -30,6 +31,8 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             //Se generara un formulario en específico dentro del panel
             ObjDashboard.Load += new EventHandler(FormularioPredeterminado);
             ObjDashboard.Load += new EventHandler(DatosUsuarioLogin);
+            ObjDashboard.FormClosing += new FormClosingEventHandler(CerrarPrograma);
+            ObjDashboard.btnCerrarS.Click += new EventHandler(CerrarSesion);
 
             //Creamos los eventos click de los formularios, como referencia a qué formulario se tomara en cuenta
             //Dentro del panel a la hora de ejecutarse
@@ -45,6 +48,37 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             ObjDashboard.lblUsuario.Text = InicioSesion.Usuario;
             ObjDashboard.lblIdUsuario.Text = InicioSesion.DesempenoId;
             ObjDashboard.picUsuario.Image = Image.FromFile(InicioSesion.Imagen);
+        }
+        private void CerrarPrograma(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("Desea cerrar el programa de forma autmática? Al cerrarse, cerrará la sesión de forma automática", "Cerrar el Programa", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Environment.Exit(0);
+            }
+        }
+        private void CerrarSesion(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("¿Desea cerrar sesión?", "Cerrar Sesión", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                LimpiarVariablesInicioSesion();
+                LoginForm ObjVolverInicioLogin = new LoginForm();
+                ObjVolverInicioLogin.Show();
+                ObjDashboard.Dispose();
+            }
+        }
+        void LimpiarVariablesInicioSesion()
+        {
+            InicioSesion.UsuarioId = 0;
+            InicioSesion.Usuario = string.Empty;
+            InicioSesion.Contraseña = string.Empty;
+            InicioSesion.Correo = string.Empty;
+            InicioSesion.Dui = string.Empty;
+            InicioSesion.NombresApellidos = string.Empty;
+            InicioSesion.Telefono = string.Empty;
+            InicioSesion.Imagen = string.Empty;
+            InicioSesion.Especialidad = string.Empty;
+            InicioSesion.EspecialidadAlt = string.Empty;
+            InicioSesion.DesempenoId = string.Empty;
         }
         //Creamos la cadena de Eventos haciendo referencia a los menus que se tiene al entrar en la aplicación
         private void FormularioPredeterminado(object sender, EventArgs e)

@@ -8,6 +8,7 @@ using System.Data.SqlClient;
 using Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO;
 using Empresa_laboral_ADNE___Proyecto_PTC.Vista;
 using System.Data;
+using Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DTO;
 
 namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
 {
@@ -20,11 +21,23 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
         {
             ObjEquipoTrabajoForm = Vista;
 
-            ObjEquipoTrabajoForm.Load += new EventHandler(CargarControlUsuario);
+            ObjEquipoTrabajoForm.Load += new EventHandler(CargarUCYNivelUsuario);
             ObjEquipoTrabajoForm.btnAdministrarEmpleado.Click += new EventHandler(AdministrarUsuarios);
         }
-        private void CargarControlUsuario(object sender, EventArgs e)
+        private void CargarUCYNivelUsuario(object sender, EventArgs e)
         {
+            //Indicamos dado la variable de Inicio de Sesión qué botones son los que se accionarán dado el nivel de Usuario
+            switch (InicioSesion.DesempenoId)
+            {
+                case "Administrador":
+                    break;
+                case "Empleado":
+                    ObjEquipoTrabajoForm.btnAdministrarEmpleado.Enabled = false;
+                    break;
+                default:
+                    break;
+            }
+
             //Creamos una instancia de la clase DAO
             DAOEquipoTrabajo ObjDAOEquipo = new DAOEquipoTrabajo();
             //Creamos una instancia de un DataTable
