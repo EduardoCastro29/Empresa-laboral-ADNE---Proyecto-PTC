@@ -39,6 +39,10 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             //Coincide con la encriptada en la base de datos
             ObjDAOUsuario.Contrasena = ObjMetodosComunes.MetodoEncriptacionAES(ObjLogin.txtContraseña.Text.Trim());
 
+            //Declaramos una variable de tipo string el cual nos dirá si la contraseña por defecto es el nombre de usuario MAS la credencial PU123
+            //De esta forma, podrá actualizar su contraseña de manera segura
+            string contrasenaPredeterminada = ObjLogin.txtUsuario.Text + "PU123";
+
             //Creamos dos variables de tipo booleano que nos devolverá si el inicio de sesión del profesional y el usuario
             //Son correctos dados los métodos y la clase
             bool ValidarLoginUsuario = ObjDAOUsuario.Login();
@@ -46,19 +50,31 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
 
             try
             {
-                //Dado las variables del Login del usuario y el empleado
-                //Evaluamos si coinciden con los métodos creados en el DAO
-                if (ValidarLoginUsuario == true && ValidarLoginEmpleado == true)
+                //Si el campo del DTOContasena coincide con la variable estática + PU123 (Credenciales predeterminadas)
+                //Se le redireccionará directamente al actualizado de la contraseña
+                if (ObjMetodosComunes.MetodoEncriptacionAES(contrasenaPredeterminada) == ObjDAOUsuario.Contrasena)
                 {
-                    MessageBox.Show($"Bienvenido {InicioSesion.Usuario} Que pedales", "Bienvenido!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    DashboardForm ObjMostrarDashboard = new DashboardForm();
+                    MessageBox.Show($"Bienvenido {InicioSesion.Usuario}, por motivos de seguridad, se le redireccionará automáticamente a un nuevo formulario para que pueda actualizar su contraseña", "Ventana Emergente", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    ActualizarContraseñaForm ObjAbrirActualizarContrasena = new ActualizarContraseñaForm();
                     ObjLogin.Hide();
-                    ObjMostrarDashboard.Show();
+                    ObjAbrirActualizarContrasena.Show();
                 }
                 else
                 {
-                    //Si el usuario no existe, mostramos un mensaje de error
-                    MessageBox.Show("El usuario o contraseña son incorrectos", "Inicio de sesión", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    //Dado las variables del Login del usuario y el empleado
+                    //Evaluamos si coinciden con los métodos creados en el DAO
+                    if (ValidarLoginUsuario == true && ValidarLoginEmpleado == true)
+                    {
+                        MessageBox.Show($"Bienvenido {InicioSesion.Usuario} Que pedales", "Bienvenido!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        DashboardForm ObjMostrarDashboard = new DashboardForm();
+                        ObjLogin.Hide();
+                        ObjMostrarDashboard.Show();
+                    }
+                    else
+                    {
+                        //Si el usuario no existe, mostramos un mensaje de error
+                        MessageBox.Show("El usuario o contraseña son incorrectos", "Inicio de sesión", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
             }
             catch (Exception ex)

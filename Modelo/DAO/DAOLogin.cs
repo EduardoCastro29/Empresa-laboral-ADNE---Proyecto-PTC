@@ -103,7 +103,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                 //SqlDataReader leera los datos encontrados
                 SqlDataReader ObjFilasEncontradas = ObjComandoSQLServer.ExecuteReader();
 
-                //Procedemos a guardar las variables de inicio de sesión del usuario
+                //Procedemos a guardar las variables de inicio de sesión del profesional
                 while (ObjFilasEncontradas.Read())
                 {
                     //El DUI se encuentra en la posición 0
@@ -144,7 +144,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                 //Creamos el comando SQL
                 SqlCommand ObjComandoSQLServer = new SqlCommand(consultaSQLUsuario, Conexion.Connection);
 
-                ObjComandoSQLServer.CommandType = CommandType.Text;
                 //Creamos el lector de SQL
                 SqlDataReader ObjFilasEncontradas = ObjComandoSQLServer.ExecuteReader();
 

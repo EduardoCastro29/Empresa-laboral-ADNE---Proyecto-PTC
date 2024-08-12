@@ -51,27 +51,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             ObjRegistro.cmbEspecialidad2.ValueMember = "especialidadAltId";
             ObjRegistro.cmbEspecialidad2.DisplayMember = "nombreEspecialidadAlt";
         }
-        void CargarImagen(object sender, EventArgs e)
-        {
-            ObjRegistro.ofdImagen.Filter = "Archivos De Imagen | *.jpg; *.png; *.jpeg;";
-
-            try
-            {
-                if (ObjRegistro.ofdImagen.ShowDialog() == DialogResult.OK)
-                {
-                    string ruta = ObjRegistro.ofdImagen.FileName;
-                    ObjRegistro.picProfesional.Image = Image.FromFile(ruta);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-        private void EliminarFoto(object sender, EventArgs e)
-        {
-            ObjRegistro.picProfesional.Image = null;
-        }
         private void AccederLoginPrimerUso(object sender, EventArgs e)
         {
             try
@@ -143,18 +122,44 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                     }
 
                     //Llamamos a los métodos para verificar si la inserción se hizo correctamente 
-                    ObjDAORegistro.RegistroInsertarUsuarioProfesional();
-
-                    //Ocultamos el formulario de registro y le daremos la bienvenida al Login
-                    LoginForm ObjMostrarLogin = new LoginForm();
-                    ObjRegistro.Hide();
-                    ObjMostrarLogin.Show();
+                    if (ObjDAORegistro.RegistroInsertarUsuarioProfesional() == false)
+                    {
+                        MessageBox.Show("Oops!, Algo salió mal, verifique si todas las credenciales han sido ingresadas correctamente", "Primer Usuario", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
+                    else
+                    {
+                        //Ocultamos el formulario de registro y le daremos la bienvenida al Login
+                        LoginForm ObjMostrarLogin = new LoginForm();
+                        ObjRegistro.Hide();
+                        ObjMostrarLogin.Show();
+                    }
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+        private void CargarImagen(object sender, EventArgs e)
+        {
+            ObjRegistro.ofdImagen.Filter = "Archivos De Imagen | *.jpg; *.png; *.jpeg;";
+
+            try
+            {
+                if (ObjRegistro.ofdImagen.ShowDialog() == DialogResult.OK)
+                {
+                    string ruta = ObjRegistro.ofdImagen.FileName;
+                    ObjRegistro.picProfesional.Image = Image.FromFile(ruta);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        private void EliminarFoto(object sender, EventArgs e)
+        {
+            ObjRegistro.picProfesional.Image = null;
         }
     }
 }

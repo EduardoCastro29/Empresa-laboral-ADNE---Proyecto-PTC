@@ -13,9 +13,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DTO
     {
         //Getters y setters
         private string contrasena;
-        private int usuarioID;
 
         public string Contrasena { get => contrasena; set => contrasena = value; }
-        public int UsuarioID { get => usuarioID; set => usuarioID = value; }
     }
 }

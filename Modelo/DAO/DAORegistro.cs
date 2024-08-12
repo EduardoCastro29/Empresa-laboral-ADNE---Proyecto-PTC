@@ -35,38 +35,47 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                 ObjConsultaSQL.Parameters.AddWithValue("@pinAcceso", PinAcceso);
                 ObjConsultaSQL.Parameters.AddWithValue("@correoElectronico", Correo);
 
-                try
+                //Creamos una variable que nos capturará el ID del usuario creado, que posteriormente se insertará dentro del profesional
+                //La variable usada (int) es para indicarle que es de tipo entero, y que nos retornará el ID creado
+                int UsuarioID = (int)ObjConsultaSQL.ExecuteScalar();
+
+                if (UsuarioID > 0)
                 {
-                    //Creamos una variable que nos capturará el ID del usuario creado, que posteriormente se insertará dentro del profesional
-                    //La variable usada (int) es para indicarle que es de tipo entero, y que nos retornará el ID creado
-                    int UsuarioID = (int)ObjConsultaSQL.ExecuteScalar();
+                    //Si todo salio bien, insertamos lo datos del empleado
+                    try
+                    {
+                        //Creamos el query
+                        string consultaSQLProfesional = "INSERT INTO Profesional(DUI, telefono, nombre, apellido, correoElectronico, foto, desempenoId, usuarioId, especialidadId, especialidadAltId)\r\nVALUES \r\n(@DUI, @telefono, @nombre, @apellido, @correoElectronico, @foto, @desempenoId, @usuarioId, @especialidadId, @especialidadAltId)";
+                        //Le mandamos la consulta a SQL por medio de un comando
+                        SqlCommand ObjComandoSQLServer = new SqlCommand(consultaSQLProfesional, Conexion.Connection);
 
-                    //Creamos el query
-                    string consultaSQLProfesional = "INSERT INTO Profesional(DUI, telefono, nombre, apellido, foto, desempenoId, usuarioId, especialidadId, especialidadAltId)\r\nVALUES \r\n(@DUI, @telefono, @nombre, @apellido, @foto, @desempenoId, @usuarioId, @especialidadId, @especialidadAltId)";
-                    //Le mandamos la consulta a SQL por medio de un comando
-                    SqlCommand ObjComandoSQLServer = new SqlCommand(consultaSQLProfesional, Conexion.Connection);
+                        //Añadimos los valores
+                        ObjComandoSQLServer.Parameters.AddWithValue("@DUI", Dui);
+                        ObjComandoSQLServer.Parameters.AddWithValue("@telefono", Telefono);
+                        ObjComandoSQLServer.Parameters.AddWithValue("@nombre", Nombres);
+                        ObjComandoSQLServer.Parameters.AddWithValue("@apellido", Apellidos);
+                        ObjComandoSQLServer.Parameters.AddWithValue("@correoElectronico", Correo);
+                        ObjComandoSQLServer.Parameters.AddWithValue("@foto", Imagen);
+                        ObjComandoSQLServer.Parameters.AddWithValue("@desempenoId", DesempenoId);
+                        //Insertamos el ID del usuario antes creado
+                        ObjComandoSQLServer.Parameters.AddWithValue("@usuarioId", UsuarioID);
+                        ObjComandoSQLServer.Parameters.AddWithValue("@especialidadId", Especialidad);
+                        ObjComandoSQLServer.Parameters.AddWithValue("@especialidadAltId", EspecialidadAlt);
 
-                    //Añadimos los valores
-                    ObjComandoSQLServer.Parameters.AddWithValue("@DUI", Dui);
-                    ObjComandoSQLServer.Parameters.AddWithValue("@telefono", Telefono);
-                    ObjComandoSQLServer.Parameters.AddWithValue("@nombre", Nombres);
-                    ObjComandoSQLServer.Parameters.AddWithValue("@apellido", Apellidos);
-                    ObjComandoSQLServer.Parameters.AddWithValue("@foto", Imagen);
-                    ObjComandoSQLServer.Parameters.AddWithValue("@desempenoId", DesempenoId);
-                    //Insertamos el ID del usuario antes creado
-                    ObjComandoSQLServer.Parameters.AddWithValue("@usuarioId", UsuarioID);
-                    ObjComandoSQLServer.Parameters.AddWithValue("@especialidadId", Especialidad);
-                    ObjComandoSQLServer.Parameters.AddWithValue("@especialidadAltId", EspecialidadAlt);
-
-                    //Si el número de filas afectadas fueron existosas, retornamos verdadero
-                    if (ObjComandoSQLServer.ExecuteNonQuery() > 0)
-                        return true;
-                    //En caso contrario, retornamos falso
-                    else return false;
+                        //Si el número de filas afectadas fueron existosas, retornamos verdadero
+                        if (ObjComandoSQLServer.ExecuteNonQuery() > 0)
+                            return true;
+                        //En caso contrario, retornamos falso
+                        else return false;
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                        return false;
+                    }
                 }
-                catch (Exception ex)
+                else
                 {
-                    MessageBox.Show(ex.Message);
                     return false;
                 }
             }

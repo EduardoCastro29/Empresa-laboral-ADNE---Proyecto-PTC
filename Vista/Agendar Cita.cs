@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Empresa_laboral_ADNE___Proyecto_PTC.Controlador;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -29,7 +30,12 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Vista
             this.FormBorderStyle = FormBorderStyle.None;
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
 
+            CTRLAgendarCita ObjAgendarCitaControlador = new CTRLAgendarCita(this);
+        }
 
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

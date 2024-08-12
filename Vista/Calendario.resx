@@ -117,4 +117,34 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnSiguiente.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAEEAAAAqCAYAAADsxDbcAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADISURBVGhD7dqhDQIxGEDhSiSSLUBwh4QRGIERkEg2aWq4
+        BsMIjMEIjICE1wZcJ6CvyZc0+c/8L5UXfmczxd0wpXMvyr7bGGd1+XIZcrqPOb079Fje4jyMOe4bw47E
+        YyhPoz3sQ9nfCEYwQmUEGAFGgBFgBBgBRoARYAQYAUaAEWAEGAFGgBFgBBgBRoARYAQYAUaAEWAEGAFG
+        gBFgBBgBRoAR8I0QD61hL9j/FIZrXIyX9Gx98O/WOb3Yf1X/ZSwhyrPoTg0Qwgc8PR0riAYTYwAAAABJ
+        RU5ErkJggg==
+</value>
+  </data>
+  <data name="btnAnterior.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAEAAAAAqCAYAAAADBl3iAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAC5SURBVGhD7dqxDcIwEIXhKykp2QIK7JQwAiMwAiUlm5yu
+        SSwaRmAMRmAESshZorsJcr+lJ1l6ad4nl5H/GSY9lsluGeJbD6qrPtwvpdmzNvsmy2v70LXUpqegTBK9
+        iD+JuFx+fDsAAAAAAABRmSEAAAAAAAAAAAAAAERlhgAAAAAAAAAAAAAAEJUZAgAAAAAAAAAAAJAdQM9R
+        mSHz9quUu27qaO/ogyVn3+wzb9/1fwUdwZ9DqvTxIj/MHbVy05XFFgAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="btnVerCitas.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAIwAAAAqCAYAAABhhbPNAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADuSURBVHhe7dyxTUMxFIZRl5SUbAEF71GGERiBESgp2cRy
+        Q57SZISMwQiMQAnxEymIDOLvj6UjWbouP93S5XTutvV+2rYXONfb2NR6sYbSL9PSDvPSPuEPb9f7elnm
+        pT4MhjBQn0pfOeMh/NRbEQz/JhgigiEiGCKCISIYIoIhIhgigiEiGCKCISIYIoIhIhgigiEiGCKCISIY
+        IoIhIhgigiEiGCKCISIYIoIhIhgigiEiGCKCISIYIoIhIhgigiEiGCKCIfIdTH0cDeHcsZXnMu3q1fza
+        3kcP4OR2aR/HVm7Wv3p7NH3dwK/WWEr5Aqc/fbsNeMwtAAAAAElFTkSuQmCC
+</value>
+  </data>
 </root>
