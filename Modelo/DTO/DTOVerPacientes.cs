@@ -11,6 +11,10 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DTO
 {
     internal class DTOVerPacientes : Conexion
     {
+        private string nombreApellido;
+        private int pacienteId;
 
+        public string NombreApellido { get => nombreApellido; set => nombreApellido = value; }
+        public int PacienteId { get => pacienteId; set => pacienteId = value; }
     }
 }

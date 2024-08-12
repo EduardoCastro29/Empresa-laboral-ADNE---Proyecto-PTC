@@ -15,6 +15,10 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
         //Creamos un objeto del formulario DireccionGmail, para poder acceder a todos los controles correspondientes del formulario
         readonly DirecciónGmailForm ObjDireccionGmailForm;
 
+        //Creamos una variable de tipo estática, que nos capturará el Usuario o Correo solicitante
+        //Cuando el usuario ingrese las credenciales correspondientes al recuperar la contraseña
+        public static string CorreoUsuarioSLC;
+
         //Creamos el constructor del controlador
         public CTRLDireccionGmail(DirecciónGmailForm Vista)
         {
@@ -25,7 +29,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             //Este botón sera el que nos indique si el envío de Gmail fue existoso o erroneo
             //Que posteriormente, ejecutará un método
             ObjDireccionGmailForm.btnAceptarGmail.Click += new EventHandler(SolicitudRecuperarContrasena);
-            ObjDireccionGmailForm.btnSiguiente.Click += new EventHandler(VerificacionPingForm);
+            ObjDireccionGmailForm.btnSiguiente.Click += new EventHandler(VerificacionCorreoUsuario);
             ObjDireccionGmailForm.btnCancelar.Click += new EventHandler(RegresarLoginForm);
 
         }
@@ -36,22 +40,26 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
 
             //Declaramos una variable de tipo string que tomará todos los datos del método UsuarioSolicitante de la clase DAOLogin
             //Y como parámetros el textbox donde el usuario ingresará el correo electrónico o usuario para el método de recuperarción
-            string respuestaUsuarioSolicitante = ObjMensajeRecuperarContrasena.UsuarioSolicitante(ObjDireccionGmailForm.txtIngresarEmail.Text);
+            //De la misma manera, envíamos la variable estática y la igualamos hacia el textbox el cuál envía el Ping de Acceso
+            string respuestaUsuarioSolicitante = ObjMensajeRecuperarContrasena.UsuarioSolicitante(CorreoUsuarioSLC = ObjDireccionGmailForm.txtIngresarEmail.Text.Trim());
             //Evaluamos la respuesta del correo solicitante en un texto label, el cuál proporcionara una respuesta directa al usuario
             //Dentro del formulario, de esta forma se podrá saber con mayor certeza si realmente se ha enviado el correo o no
             ObjDireccionGmailForm.lblConfirmacion.Text = respuestaUsuarioSolicitante;
         }
-        private void VerificacionPingForm(object sender, EventArgs e)
+        private void VerificacionCorreoUsuario(object sender, EventArgs e)
         {
-            DAODireccionGmail ObjVerificarPing = new DAODireccionGmail();
+            DAODireccionGmail ObjVerificarCorreoUsuario = new DAODireccionGmail();
 
-            if (string.IsNullOrWhiteSpace(ObjDireccionGmailForm.txtIngresarEmail.Text) ||
-                ObjVerificarPing.VerificarCorreoUsuario(ObjDireccionGmailForm.txtIngresarEmail.Text) == null)
+            if (string.IsNullOrWhiteSpace(ObjDireccionGmailForm.txtIngresarEmail.Text.Trim()) ||
+                ObjVerificarCorreoUsuario.VerificarCorreoUsuario(ObjDireccionGmailForm.txtIngresarEmail.Text.Trim()) == null)
             {
                 MessageBox.Show("Por favor, ingrese un nombre de usuario/dirección de correo válida antes de seguir.", "Recuperación de Contraseña", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
+                //Si no se desea enviar otro correo al usuario
+                //Igualamos la variable estática hacia el textbox para establecer 
+                CorreoUsuarioSLC = ObjDireccionGmailForm.txtIngresarEmail.Text;
                 PindeAccesoForm ObjFormularioPinAcceso = new PindeAccesoForm();
                 ObjDireccionGmailForm.Hide();
                 ObjFormularioPinAcceso.Show();

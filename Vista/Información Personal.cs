@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Empresa_laboral_ADNE___Proyecto_PTC.Controlador;
+using Empresa_laboral_ADNE___Proyecto_PTC.Controlador.ControladorUserControlPaciente;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,11 +17,10 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Vista
         public InformaciónPersonalForm()
         {
             InitializeComponent();
-        }
 
-        private void label6_Click(object sender, EventArgs e)
-        {
-
+            // Aca hacemos referencia al controlador de paciente de user control con los parametros de InformaciónPersonalForm vista
+            CTRLPacienteUC ObjControladorInformacionPersonalUC = new CTRLPacienteUC(this);
+            CTRLInformacionPersonal ObjControladorInformacionPersonal = new CTRLInformacionPersonal(this);
         }
     }
 }

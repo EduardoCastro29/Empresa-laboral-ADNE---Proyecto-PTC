@@ -60,7 +60,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
             }
             finally
             {
-                //Finalmente, enviamos el correo con los datos antes ingresadose
+                //Finalmente, liberamos todos los campos del envío de correo (Dispose), liberando sobrecargas
                 ObjMensajeMail.Dispose();
                 ObjSMTPClient.Dispose();
             }

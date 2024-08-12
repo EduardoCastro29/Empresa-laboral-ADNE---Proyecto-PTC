@@ -29,8 +29,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                 ObjComandoSQLServer.Parameters.AddWithValue("@nombreUsuario", solicitudUsuario);
                 ObjComandoSQLServer.Parameters.AddWithValue("@correoElectronico", solicitudUsuario);
 
-                ObjComandoSQLServer.CommandType = CommandType.Text;
-
                 SqlDataReader ObjFilasEncontradas = ObjComandoSQLServer.ExecuteReader();
 
                 if (ObjFilasEncontradas.Read() == true)

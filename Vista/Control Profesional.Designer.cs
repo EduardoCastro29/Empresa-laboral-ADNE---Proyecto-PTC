@@ -172,12 +172,12 @@
             this.lblIdProfesional.AutoEllipsis = false;
             this.lblIdProfesional.CursorType = null;
             this.lblIdProfesional.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Italic);
-            this.lblIdProfesional.Location = new System.Drawing.Point(448, 31);
+            this.lblIdProfesional.Location = new System.Drawing.Point(575, 21);
             this.lblIdProfesional.Name = "lblIdProfesional";
             this.lblIdProfesional.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblIdProfesional.Size = new System.Drawing.Size(136, 19);
+            this.lblIdProfesional.Size = new System.Drawing.Size(16, 19);
             this.lblIdProfesional.TabIndex = 1;
-            this.lblIdProfesional.Text = "ID del profesional";
+            this.lblIdProfesional.Text = "ID";
             this.lblIdProfesional.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lblIdProfesional.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
@@ -246,7 +246,7 @@
             this.bunifuPictureBox1.IsCircle = false;
             this.bunifuPictureBox1.Location = new System.Drawing.Point(0, 0);
             this.bunifuPictureBox1.Name = "bunifuPictureBox1";
-            this.bunifuPictureBox1.Size = new System.Drawing.Size(204, 204);
+            this.bunifuPictureBox1.Size = new System.Drawing.Size(204, 173);
             this.bunifuPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.bunifuPictureBox1.TabIndex = 0;
             this.bunifuPictureBox1.TabStop = false;
@@ -259,7 +259,7 @@
             this.Controls.Add(this.bunifuShadowPanel1);
             this.Controls.Add(this.bunifuShadowPanel2);
             this.Name = "Control_Profesional";
-            this.Size = new System.Drawing.Size(857, 200);
+            this.Size = new System.Drawing.Size(856, 200);
             this.bunifuShadowPanel1.ResumeLayout(false);
             this.bunifuShadowPanel1.PerformLayout();
             this.bunifuShadowPanel2.ResumeLayout(false);

@@ -37,9 +37,8 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                 else
                 {
                     ObjDAOActualizarContrasena.Contrasena = ObjMetodosComunes.MetodoEncriptacionAES(ObjActualizarForm.txtConfirmarContrasena.Text.Trim());
-                    ObjDAOActualizarContrasena.UsuarioID = int.Parse(ObjActualizarForm.txtId.Text.Trim());
 
-                    if (ObjDAOActualizarContrasena.ActualizarContrasena() == false)
+                    if (ObjDAOActualizarContrasena.ActualizarContrasenaCorreo() == false)
                     {
                         MessageBox.Show("Las contraseña no pudo ser actualizada, contacte con el soporte técnico o comuniquese con su administrador", "Actualización de contraseña", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }

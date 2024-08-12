@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,21 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Vista
 {
     public partial class Control_Profesional : UserControl
     {
-        public Control_Profesional()
+        internal Control_Profesional(DAOEquipoTrabajo DAOProfesional)
         {
             InitializeComponent();
+            try
+            {
+                lblIdProfesional.Text = DAOProfesional.ProfesionalId.ToString();
+                lblNombreProfesional.Text = DAOProfesional.NombresApellidos;
+                lblEmail.Text = DAOProfesional.Correo;
+                lblEspecialidad.Text = DAOProfesional.Especialidad;
+                lblEspecialidadAlt.Text = DAOProfesional.EspecialidadAlt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Empresa_laboral_ADNE___Proyecto_PTC.Controlador;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Vista
         public VerPacientesForm()
         {
             InitializeComponent();
+            CTRLVerPacientes ObjControladorUserControlCargar = new CTRLVerPacientes(this);
         }
 
         private void btnSalir_Click(object sender, EventArgs e)

@@ -23,10 +23,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             ObjPacientesForm.btnNuevoPaciente.Click += new EventHandler(AbrirFormularioNuevoPaciente);
             ObjPacientesForm.btnVerPaciente.Click += new EventHandler(AbrirFormularioVerPaciente);
         }
-        //Aca su crudo
-
-
-
         private void AbrirFormularioNuevoPaciente(object sender, EventArgs e)
         {
             if (ObjNuevoPacienteForm == null || ObjNuevoPacienteForm.IsDisposed)

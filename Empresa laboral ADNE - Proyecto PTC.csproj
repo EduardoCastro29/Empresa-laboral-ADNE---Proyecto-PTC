@@ -94,8 +94,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controlador\CommonMethods.cs" />
+    <Compile Include="Controlador\Controlador UC Calendario\CTRLUCDias.cs" />
+    <Compile Include="Controlador\Controlador UC Pacientes\CTRLPacienteUC.cs" />
     <Compile Include="Controlador\CTRLActividades.cs" />
     <Compile Include="Controlador\CTRLActualizarContrasena.cs" />
+    <Compile Include="Controlador\CTRLAdministrador.cs" />
     <Compile Include="Controlador\CTRLAgendarCita.cs" />
     <Compile Include="Controlador\CTRLCalendario.cs" />
     <Compile Include="Controlador\CTRLConexion.cs" />
@@ -112,10 +115,12 @@
     <Compile Include="Controlador\CTRLPinAcceso.cs" />
     <Compile Include="Controlador\CTRLRecuperarContrasenaOPC.cs" />
     <Compile Include="Controlador\CTRLRegistro.cs" />
+    <Compile Include="Controlador\CTRLVerCitas.cs" />
     <Compile Include="Controlador\CTRLVerPacientes.cs" />
     <Compile Include="Modelo\Conexion.cs" />
     <Compile Include="Modelo\DAO\DAOActividades.cs" />
     <Compile Include="Modelo\DAO\DAOActualizarContrasena.cs" />
+    <Compile Include="Modelo\DAO\DAOAdministrador.cs" />
     <Compile Include="Modelo\DAO\DAOAgendarCita.cs" />
     <Compile Include="Modelo\DAO\DAOCalendario.cs" />
     <Compile Include="Modelo\DAO\DAOConfiguracion.cs" />
@@ -132,9 +137,11 @@
     <Compile Include="Modelo\DAO\DAOPinAcceso.cs" />
     <Compile Include="Modelo\DAO\DAORegistro.cs" />
     <Compile Include="Modelo\DAO\DAOSistemaSoporte.cs" />
+    <Compile Include="Modelo\DAO\DAOVerCitas.cs" />
     <Compile Include="Modelo\DAO\DAOVerPacientes.cs" />
     <Compile Include="Modelo\DTO\DTOActividades.cs" />
     <Compile Include="Modelo\DTO\DTOActualizarContrasena.cs" />
+    <Compile Include="Modelo\DTO\DTOAdministrador.cs" />
     <Compile Include="Modelo\DTO\DTOAgendarCita.cs" />
     <Compile Include="Modelo\DTO\DTOCalendario.cs" />
     <Compile Include="Modelo\DTO\DTOConfiguracion.cs" />
@@ -149,6 +156,7 @@
     <Compile Include="Modelo\DTO\DTOPacientes.cs" />
     <Compile Include="Modelo\DTO\DTOPinAcceso.cs" />
     <Compile Include="Modelo\DTO\DTORegistro.cs" />
+    <Compile Include="Modelo\DTO\DTOVerCitas.cs" />
     <Compile Include="Modelo\DTO\DTOVerPacientes.cs" />
     <Compile Include="Modelo\DTO\InicioSesion.cs" />
     <Compile Include="Program.cs" />
@@ -176,6 +184,18 @@
     </Compile>
     <Compile Include="Vista\Configuración.Designer.cs">
       <DependentUpon>Configuración.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Control Dias.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Vista\Control Dias.Designer.cs">
+      <DependentUpon>Control Dias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Control Espacio.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Vista\Control Espacio.Designer.cs">
+      <DependentUpon>Control Espacio.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\Control Historial.cs">
       <SubType>UserControl</SubType>
@@ -236,6 +256,12 @@
     </Compile>
     <Compile Include="Vista\Recuperar Contraseña OPC.Designer.cs">
       <DependentUpon>Recuperar Contraseña OPC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Ver Citas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Ver Citas.Designer.cs">
+      <DependentUpon>Ver Citas.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\Ver Pacientes.cs">
       <SubType>Form</SubType>
@@ -313,6 +339,12 @@
     <EmbeddedResource Include="Vista\Configuración.resx">
       <DependentUpon>Configuración.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Control Dias.resx">
+      <DependentUpon>Control Dias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Control Espacio.resx">
+      <DependentUpon>Control Espacio.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vista\Control Historial.resx">
       <DependentUpon>Control Historial.cs</DependentUpon>
     </EmbeddedResource>
@@ -342,6 +374,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\Recuperar Contraseña OPC.resx">
       <DependentUpon>Recuperar Contraseña OPC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Ver Citas.resx">
+      <DependentUpon>Ver Citas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\Ver Pacientes.resx">
       <DependentUpon>Ver Pacientes.cs</DependentUpon>
