@@ -55,9 +55,9 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                 if (ObjMetodosComunes.MetodoEncriptacionAES(contrasenaPredeterminada) == ObjDAOUsuario.Contrasena)
                 {
                     MessageBox.Show($"Bienvenido {InicioSesion.Usuario}, por motivos de seguridad, se le redireccionará automáticamente a un nuevo formulario para que pueda actualizar su contraseña", "Ventana Emergente", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    ActualizarContraseñaForm ObjAbrirActualizarContrasena = new ActualizarContraseñaForm();
+                    DirecciónGmailForm ObjRedireccionarUsuarioSolicitante = new DirecciónGmailForm();
                     ObjLogin.Hide();
-                    ObjAbrirActualizarContrasena.Show();
+                    ObjRedireccionarUsuarioSolicitante.Show();
                 }
                 else
                 {

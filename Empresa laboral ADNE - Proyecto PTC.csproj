@@ -39,6 +39,12 @@
     <Reference Include="Bunifu.UI.WinForms, Version=0.0.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
       <HintPath>packages\Bunifu.UI.WinForms.7.2.0\lib\net48\Bunifu.UI.WinForms.dll</HintPath>
     </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>packages\iTextSharp.5.5.13\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp.xmlworker, Version=5.5.13.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>packages\itextsharp.xmlworker.5.5.13\lib\itextsharp.xmlworker.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.Bcl.AsyncInterfaces.7.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
     </Reference>
@@ -101,6 +107,7 @@
     <Compile Include="Controlador\CTRLAdministrador.cs" />
     <Compile Include="Controlador\CTRLAgendarCita.cs" />
     <Compile Include="Controlador\CTRLCalendario.cs" />
+    <Compile Include="Controlador\CTRLCitas.cs" />
     <Compile Include="Controlador\CTRLConexion.cs" />
     <Compile Include="Controlador\CTRLConfiguracion.cs" />
     <Compile Include="Controlador\CTRLDashboard.cs" />
@@ -123,6 +130,7 @@
     <Compile Include="Modelo\DAO\DAOAdministrador.cs" />
     <Compile Include="Modelo\DAO\DAOAgendarCita.cs" />
     <Compile Include="Modelo\DAO\DAOCalendario.cs" />
+    <Compile Include="Modelo\DAO\DAOCitas.cs" />
     <Compile Include="Modelo\DAO\DAOConfiguracion.cs" />
     <Compile Include="Modelo\DAO\DAODashboard.cs" />
     <Compile Include="Modelo\DAO\DAODireccionGmail.cs" />
@@ -144,6 +152,7 @@
     <Compile Include="Modelo\DTO\DTOAdministrador.cs" />
     <Compile Include="Modelo\DTO\DTOAgendarCita.cs" />
     <Compile Include="Modelo\DTO\DTOCalendario.cs" />
+    <Compile Include="Modelo\DTO\DTOCitas.cs" />
     <Compile Include="Modelo\DTO\DTOConfiguracion.cs" />
     <Compile Include="Modelo\DTO\DTODashboard.cs" />
     <Compile Include="Modelo\DTO\DTOEnviarMails.cs" />
@@ -178,6 +187,12 @@
     </Compile>
     <Compile Include="Vista\Administrador.Designer.cs">
       <DependentUpon>Administrador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Citas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Citas.Designer.cs">
+      <DependentUpon>Citas.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\Configuración.cs">
       <SubType>Form</SubType>
@@ -335,6 +350,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\Administrador.resx">
       <DependentUpon>Administrador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Citas.resx">
+      <DependentUpon>Citas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\Configuración.resx">
       <DependentUpon>Configuración.cs</DependentUpon>

@@ -21,6 +21,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             ObjConfiguracionForm = Vista;
 
             ObjConfiguracionForm.Load += new EventHandler(CargarDatosUsuario);
+            ObjConfiguracionForm.btnCerrarSesion.Click += new EventHandler(CerrarSesionConfig);
         }
         private void CargarDatosUsuario(object sender, EventArgs e)
         {
@@ -30,6 +31,30 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             ObjConfiguracionForm.lblUsuario.Text = InicioSesion.Usuario;
             ObjConfiguracionForm.lblDUI.Text = InicioSesion.Dui;
             ObjConfiguracionForm.picUsuario.Image = Image.FromFile(InicioSesion.Imagen);
+        }
+        private void CerrarSesionConfig(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("¿Desea cerrar sesión?", "Cerrar Sesión", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                LimpiarVariablesInicioSesion();
+                LoginForm ObjVolverInicioLogin = new LoginForm();
+                ObjVolverInicioLogin.Show();
+                ObjConfiguracionForm.Dispose();
+            }
+        }
+        void LimpiarVariablesInicioSesion()
+        {
+            InicioSesion.UsuarioId = 0;
+            InicioSesion.Usuario = string.Empty;
+            InicioSesion.Contraseña = string.Empty;
+            InicioSesion.Correo = string.Empty;
+            InicioSesion.Dui = string.Empty;
+            InicioSesion.NombresApellidos = string.Empty;
+            InicioSesion.Telefono = string.Empty;
+            InicioSesion.Imagen = string.Empty;
+            InicioSesion.Especialidad = string.Empty;
+            InicioSesion.EspecialidadAlt = string.Empty;
+            InicioSesion.DesempenoId = string.Empty;
         }
     }
 }
