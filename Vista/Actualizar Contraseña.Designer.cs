@@ -47,7 +47,7 @@
             this.txtConfirmarContrasena = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bunifuGradientPanel2 = new Bunifu.UI.WinForms.BunifuGradientPanel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.txtId = new System.Windows.Forms.ToolStripTextBox();
+            this.txtUsuarioID = new System.Windows.Forms.ToolStripTextBox();
             this.lblRestablecer = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuShadowPanel1 = new Bunifu.UI.WinForms.BunifuShadowPanel();
             this.bunifuShadowPanel2 = new Bunifu.UI.WinForms.BunifuShadowPanel();
@@ -333,7 +333,7 @@
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.txtId});
+            this.txtUsuarioID});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
@@ -342,11 +342,11 @@
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.Visible = false;
             // 
-            // txtId
+            // txtUsuarioID
             // 
-            this.txtId.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(116, 23);
+            this.txtUsuarioID.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtUsuarioID.Name = "txtUsuarioID";
+            this.txtUsuarioID.Size = new System.Drawing.Size(116, 23);
             // 
             // lblRestablecer
             // 
@@ -532,7 +532,7 @@
         public Bunifu.UI.WinForms.BunifuTextBox txtConfirmarContrasena;
         private Bunifu.UI.WinForms.BunifuGradientPanel bunifuGradientPanel2;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        public System.Windows.Forms.ToolStripTextBox txtId;
+        public System.Windows.Forms.ToolStripTextBox txtUsuarioID;
         private Bunifu.UI.WinForms.BunifuLabel lblRestablecer;
         private System.Windows.Forms.Panel panel1;
         public Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel1;

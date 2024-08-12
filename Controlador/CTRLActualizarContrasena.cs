@@ -1,4 +1,5 @@
 ﻿using Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO;
+using Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DTO;
 using Empresa_laboral_ADNE___Proyecto_PTC.Vista;
 using System;
 using System.Collections.Generic;
@@ -38,16 +39,34 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                 {
                     ObjDAOActualizarContrasena.Contrasena = ObjMetodosComunes.MetodoEncriptacionAES(ObjActualizarForm.txtConfirmarContrasena.Text.Trim());
 
+                    //Si el usuario accedio tras un nivel de Usuario, es decir, ventana Emergente
+                    //Se accionará el siguiente comando para actualizar la contraseña
+                    InicioSesion.UsuarioId = int.Parse(ObjActualizarForm.txtUsuarioID.Text);
+                    if (ObjDAOActualizarContrasena.ActualizarContrasenaVentanaEMR() == false)
+                    {
+                        MessageBox.Show("Las contraseña no pudo ser actualizada, contacte con el soporte técnico o comuniquese con su administrador", "Actualización de contraseña", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        MessageBox.Show("La aplicación se reiniciará confirmando la actualización de contraseña", "Actualización de contraseña", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        LoginForm ObjMostrarLogin = new LoginForm();
+                        ObjActualizarForm.Hide();
+                        ObjMostrarLogin.Show();
+                    }
+
                     if (ObjDAOActualizarContrasena.ActualizarContrasenaCorreo() == false)
                     {
                         MessageBox.Show("Las contraseña no pudo ser actualizada, contacte con el soporte técnico o comuniquese con su administrador", "Actualización de contraseña", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
+                    else
+                    {
+                        MessageBox.Show("La aplicación se reiniciará confirmando la actualización de contraseña", "Actualización de contraseña", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    MessageBox.Show("La aplicación se reiniciará confirmando la actualización de contraseña", "Actualización de contraseña", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                    LoginForm ObjMostrarLogin = new LoginForm();
-                    ObjActualizarForm.Hide();
-                    ObjMostrarLogin.Show();
+                        LoginForm ObjMostrarLogin = new LoginForm();
+                        ObjActualizarForm.Hide();
+                        ObjMostrarLogin.Show();
+                    }
                 }
             }
             catch (Exception ex)

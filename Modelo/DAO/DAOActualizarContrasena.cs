@@ -47,5 +47,33 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                 Conexion.Connection.Close();
             }
         }
+        public bool ActualizarContrasenaVentanaEMR()
+        {
+            try
+            {
+                Conexion.Connection = Conectar();
+
+                string comandoSQL = "UPDATE Usuario SET contraseña = @contraseña WHERE usuarioId = '"+InicioSesion.UsuarioId+"' ";
+
+                SqlCommand ObjComandoSQLServer = new SqlCommand(comandoSQL, Conexion.Connection);
+
+                ObjComandoSQLServer.Parameters.AddWithValue("@contraseña", Contrasena);
+
+                ObjComandoSQLServer.ExecuteNonQuery();
+
+                if (ObjComandoSQLServer.ExecuteNonQuery() > 0)
+                    return true;
+                else return false;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return false;
+            }
+            finally
+            {
+                Conexion.Connection.Close();
+            }
+        }
     }
 }
