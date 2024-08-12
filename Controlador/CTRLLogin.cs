@@ -65,7 +65,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                     //Evaluamos si coinciden con los métodos creados en el DAO
                     if (ValidarLoginUsuario == true && ValidarLoginEmpleado == true)
                     {
-                        MessageBox.Show($"Bienvenido {InicioSesion.Usuario} Que pedales", "Bienvenido!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show($"Bienvenido, {InicioSesion.Usuario}", "Bienvenido!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         DashboardForm ObjMostrarDashboard = new DashboardForm();
                         ObjLogin.Hide();
                         ObjMostrarDashboard.Show();

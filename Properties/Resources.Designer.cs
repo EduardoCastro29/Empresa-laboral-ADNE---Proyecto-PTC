@@ -211,6 +211,34 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Properties {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a &lt;!DOCTYPE html&gt;
+        ///&lt;html lang=&quot;es&quot;&gt;
+        ///&lt;head&gt;
+        ///    &lt;meta charset=&quot;UTF-8&quot;&gt;
+        ///    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+        ///    &lt;title&gt;Expediente Psicosocial&lt;/title&gt;
+        ///    &lt;style&gt;
+        ///        table, th, td { 
+        ///            border: 1px solid black;
+        ///            border-collapse: collapse;
+        ///        }
+        ///        body {
+        ///            margin: 50px;
+        ///            font-family:Calibri, &apos;Trebuchet MS&apos;, sans-serif;
+        ///        }
+        ///        table {
+        ///            width: 100%;
+        ///        }
+        ///        .seguimiento{
+        ///  [resto de la cadena truncado]&quot;;.
+        /// </summary>
+        internal static string Expediente__Psicosocial {
+            get {
+                return ResourceManager.GetString("Expediente__Psicosocial", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap Foto_configuración {

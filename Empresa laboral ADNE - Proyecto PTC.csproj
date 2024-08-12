@@ -515,5 +515,8 @@
   <ItemGroup>
     <None Include="Resources\Foto Ver Paciente.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Expediente__Psicosocial.html" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

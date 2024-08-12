@@ -14,14 +14,14 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
 {
     internal class DAOVerPacientes : DTOVerPacientes
     {
-        readonly SqlCommand conexion = new SqlCommand();
+        readonly SqlCommand Conexion = new SqlCommand();
         public DataTable VerPacientes()
         {
             try
             {
-                conexion.Connection = Conectar();
+                Conexion.Connection = Conectar();
                 string ConsultaSqlVerPaciente = "SELECT*FROM vistaPaciente";
-                SqlCommand ObjConsultaSql = new SqlCommand(ConsultaSqlVerPaciente, conexion.Connection);
+                SqlCommand ObjConsultaSql = new SqlCommand(ConsultaSqlVerPaciente, Conexion.Connection);
 
                 SqlDataAdapter ad = new SqlDataAdapter(ObjConsultaSql);
                 DataTable dt = new DataTable();
@@ -36,7 +36,35 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
             }
             finally
             {
-                conexion.Connection.Close();
+                Conexion.Connection.Close();
+            }
+        }
+
+        public DataSet BuscarPaciente(string valor)
+        {
+            try
+            {
+                Conexion.Connection = Conectar();
+
+                string consulta = $"SELECT * FROM VistaPaciente WHERE [Nombre de Paciente] LIKE '%{valor}%'";
+
+                SqlCommand objComando = new SqlCommand(consulta, Conexion.Connection);
+
+                objComando.ExecuteNonQuery();
+
+                SqlDataAdapter adapter = new SqlDataAdapter(objComando);
+                DataSet dt = new DataSet();
+
+                adapter.Fill(dt, "VistaPaciente");
+                return dt;
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+            finally
+            {
+                Conexion.Connection.Close();
             }
         }
     }

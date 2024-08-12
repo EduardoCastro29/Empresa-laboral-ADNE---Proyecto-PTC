@@ -35,8 +35,8 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                 if (string.IsNullOrWhiteSpace(ObjInformacionPersonal.txtPacienteId.Text.Trim()) ||
                     string.IsNullOrWhiteSpace(ObjInformacionPersonal.txtNacionalidad.Text.Trim()) ||
                     string.IsNullOrWhiteSpace(ObjInformacionPersonal.txtDocumentoPresentado.Text.Trim()) ||
-                    string.IsNullOrWhiteSpace(ObjInformacionPersonal.txtEdad1.Text.Trim()) ||
-                    string.IsNullOrWhiteSpace(ObjInformacionPersonal.txtTelefono1.Text.Trim()) ||
+                    string.IsNullOrWhiteSpace(ObjInformacionPersonal.txtEdad.Text.Trim()) ||
+                    string.IsNullOrWhiteSpace(ObjInformacionPersonal.txtTelefono.Text.Trim()) ||
                     string.IsNullOrWhiteSpace(ObjInformacionPersonal.txtProfesion.Text.Trim()) ||
                     string.IsNullOrWhiteSpace(ObjInformacionPersonal.txtNombrePaciente.Text.Trim()) ||
                     string.IsNullOrWhiteSpace(ObjInformacionPersonal.txtApellidoPaciente.Text.Trim()) ||
@@ -63,8 +63,8 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                     ObjDAOInformacionPersonal.Nacionalidad = ObjInformacionPersonal.txtNacionalidad.Text.Trim();
                     ObjDAOInformacionPersonal.DocumentoPresentado = ObjInformacionPersonal.txtDocumentoPresentado.Text.Trim();
                     ObjDAOInformacionPersonal.GeneroId1 = int.Parse(ObjInformacionPersonal.cmbGeneroId.SelectedValue.ToString());
-                    ObjDAOInformacionPersonal.Edad = int.Parse(ObjInformacionPersonal.txtEdad1.Text.Trim());
-                    ObjDAOInformacionPersonal.Telefono = (ObjInformacionPersonal.txtTelefono1.Text.Trim());
+                    ObjDAOInformacionPersonal.Edad = int.Parse(ObjInformacionPersonal.txtEdad.Text.Trim());
+                    ObjDAOInformacionPersonal.Telefono = (ObjInformacionPersonal.txtTelefono.Text.Trim());
                     ObjDAOInformacionPersonal.Profesion = ObjInformacionPersonal.txtProfesion.Text.Trim();
                     ObjDAOInformacionPersonal.Nombre = ObjInformacionPersonal.txtNombrePaciente.Text.Trim();
                     ObjDAOInformacionPersonal.Apellido = ObjInformacionPersonal.txtApellidoPaciente.Text.Trim();
@@ -108,8 +108,8 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             ObjInformacionPersonal.txtNacionalidad.Clear();
             ObjInformacionPersonal.txtDocumentoPresentado.Clear();
             ObjInformacionPersonal.cmbGeneroId.SelectedIndex = -1;
-            ObjInformacionPersonal.txtEdad1.Clear();
-            ObjInformacionPersonal.txtTelefono1.Clear();
+            ObjInformacionPersonal.txtEdad.Clear();
+            ObjInformacionPersonal.txtTelefono.Clear();
             ObjInformacionPersonal.txtProfesion.Clear();
             ObjInformacionPersonal.txtNombrePaciente.Clear();
             ObjInformacionPersonal.txtApellidoPaciente.Clear();

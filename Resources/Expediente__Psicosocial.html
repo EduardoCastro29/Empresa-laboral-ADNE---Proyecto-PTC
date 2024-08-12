@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expediente Psicosocial</title>
+    <style>
+        table, th, td { 
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        body {
+            margin: 50px;
+            font-family:Calibri, 'Trebuchet MS', sans-serif;
+        }
+        table {
+            width: 100%;
+        }
+        .seguimiento{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+        h1{
+            font-size: 25px;
+            font-family: sans-serif;
+            text-align: center;
+            margin-bottom: 45px;
+        }
+        h2{
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>FICHA PARA EXPEDIENTE PSICOSOCIAL</h1>
+    </header>
+    <main>
+        <div>
+            <h2>I. DATOS DE IDENTIFICACIÓN</h2>
+            <table style="border: 0px solid black; margin-top: 25px; margin-bottom: 10px;">
+                <tr>
+                    <td style="width: 50%; border: 0px solid black;">Fecha: @FECHA</td>
+                    <td style="width: 50%; border: 0px solid black;">N° de expediente: @EXPEDIENTEID</td>
+                </tr>
+            </table>
+            <table>
+
+
+                <tr>
+                    <td colspan="3" style="height: 24px;">Nombre del familiar: @NOMBRECOMPLETO</td>
+                </tr>
+
+                <tr>
+                    <td style="height: 24px; width: 30%;">Nacionalidad: </td>
+                    <td style="height: 24px; width: 30%;">Documento presentado: </td>
+                    <td style="height: 24px; width: 30%;">Profesión: </td>
+                </tr>
+                <tr>
+                    <td style="height: 24px; width: 30%;">@NACIONALIDAD</td>
+                    <td style="height: 24px; width: 30%;">@DOCUMENTOPRESENTADO</td>
+                    <td style="height: 24px; width: 30%;">@PROFESION</td>
+                </tr>
+            
+                <tr>
+                    <td style="height: 24px;">Edad: @EDAD</td>
+                    <td style="height: 24px;">Género: @GENERO</td>
+                    <td style="height: 24px;">Teléfono: @TELEFONO</td>
+                </tr>
+
+                <tr>
+                    <td colspan="3" style="height: 24px;">Composición familiar: @COMPOSICIONFAMILIAR</td>
+                </tr>
+                <tr>
+                    <td colspan="3" style="height: 24px;">Motivo de la intervención psicológica: @MOTIVO</td>
+                </tr>
+                <tr>
+                    <td colspan="3" style="height: 24px;">Antecedentes relevantes: @ANTECEDENTE</td>
+                </tr>
+                <tr>
+                    <td colspan="3" style="height: 24px;">Descripción de la situación presentada: @DESCRIPCIONSITUACION</td>
+                </tr>
+                <tr>
+                    <td colspan="3" style="height: 24px;">Aspectos que más preocupan a la persona: @ASPECTOSPREOCUPANTES</td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <h2>II. IMPACTO PSICOSOCIAL</h2>
+            <table>
+                <tr>
+                    <td style="height: 24px; width: 20%;">Afectividad sintomatología del estado de ánimo</td>
+                    <td style="height: 24px;">@ESTADOANIMO</td>
+                </tr>
+                <tr>
+                    <td style="height: 24px; width: 20%;">Estado Conductual</td>
+                    <td style="height: 24px;">@ESTADOCONDUCTUAL</td>
+                </tr>
+                <tr>
+                    <td style="height: 24px; width: 20%;">Somatizaciones, Salud</td>
+                    <td style="height: 24px;">@SOMATIZACION</td>
+                </tr>
+                <tr>
+                    <td style="height: 24px; width: 20%;">Interpersonal, Cambios y manejo en la vida familiar y social.</td>
+                    <td style="height: 24px;">@VIDAINTERPERSONAL</td>
+                </tr>
+                <tr>
+                    <td style="height: 24px; width: 20%;">Cogniciones, pensamientos y creencias</td>
+                    <td style="height: 24px;">@COGNICION</td>
+                </tr>
+                <tr>
+                    <td style="height: 24px; width: 20%;">Redes sociales de apoyo</td>
+                    <td style="height: 24px;">@REDSOCIAL</td>
+                </tr>
+                <tr>
+                    <td style="height: 24px; width: 20%;">Pautas de afrontamiento, Recursos personales</td>
+                    <td style="height: 24px;">@PAUTA</td>
+                </tr>
+                <tr>
+                    <td style="height: 24px; width: 20%;">Valoración del riesgo</td>
+                    <td style="height: 24px;">@RIESGOVALORADO</td>
+                </tr>
+            </table>
+        </div>
+
+        <div>
+            <h2>III. OBSERVACIONES GENERALES</h2>
+            <table>
+                <tr>
+                    <td style="height: 24px;">@OBSERVACION</td>
+                </tr>
+            </table>
+        </div>
+        
+        <div>
+            <h2>IV. APROXIMACIONES DIAGNÓSTICAS</h2>
+            <table>
+                <tr>
+                    <td style="height: 24px;">@APROXIMACIONDIAG</td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <h2>V. ATENCIÓN BRINDADA</h2>
+            <table>
+                <tr>
+                    <td style="height: 24px;">@ATENCIONBRINDADA</td>
+                </tr>
+            </table>
+        </div>
+        
+        <div>
+            <div class="seguimiento">
+                <h2 style="margin-top: 30px;">SESIONES DE SEGUIMIENTO</h2>
+                <h3>Fecha: @FECHA</h3>
+                <h3>Hora: @HORAINICIO</h3>
+                <h3>Lugar: @LUGAR</h3>
+            </div>
+            <table>
+                <tr>
+                    <td style="background-color: #EAF1DD;">Descripción de la situación presentada</td>
+                </tr>
+                <tr>
+                    <td style="height: 24px;">@DESCRIPCION</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #EAF1DD;">Estrategias utilizadas</td>
+                </tr>
+                <tr>
+                    <td style="height: 48px;">@ESTRATEGIAS</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #EAF1DD;">Resultados/Observaciones/tareas</td>
+                </tr>
+                <tr>
+                    <td style="height: 24px;">@RESULTADO</td>
+                </tr>
+            </table>
+        </div>
+    </main>
+</body>
+</html>

@@ -21,6 +21,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
         {
             ObjVerPaciente = vista;
             ObjVerPaciente.Load += new EventHandler(CargarPacientes);
+            ObjVerPaciente.txtBuscarPaciente.KeyPress += new KeyPressEventHandler(BuscarNombrePaciente);
         }
 
         private void CargarPacientes(object sender, EventArgs e)
@@ -36,6 +37,21 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                 ControlVerPacientesUC ObjControlPaciente = new ControlVerPacientesUC(ObjDaoPacientes);
                 ObjVerPaciente.flpVerPacientes.Controls.Add(ObjControlPaciente);
             }
+        }
+
+        private void BuscarNombrePaciente(object sender, KeyPressEventArgs e)
+        {
+            DAOVerPacientes ObjDaoPacientes = new DAOVerPacientes();
+            DataSet ds = ObjDaoPacientes.BuscarPaciente(ObjVerPaciente.txtBuscarPaciente.Text.Trim());
+            ObjVerPaciente.flpVerPacientes.Controls.Clear();
+            foreach (DataRow dr in ds.Tables[0].Rows)
+            {
+                ObjDaoPacientes.NombreApellido = (string)dr[0];
+                ObjDaoPacientes.PacienteId = (int)dr[1];
+                ControlVerPacientesUC panelPaciente = new ControlVerPacientesUC(ObjDaoPacientes);
+                ObjVerPaciente.flpVerPacientes.Controls.Add(panelPaciente);
+            }
+
         }
     }
 }
