@@ -41,7 +41,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
 
             //Declaramos una variable de tipo string el cual nos dirá si la contraseña por defecto es el nombre de usuario MAS la credencial PU123
             //De esta forma, podrá actualizar su contraseña de manera segura
-            string contrasenaPredeterminada = ObjLogin.txtUsuario.Text + "PU123";
+            string contrasenaPredeterminada = ObjLogin.txtUsuario.Text + "ADNE2024";
 
             //Creamos dos variables de tipo booleano que nos devolverá si el inicio de sesión del profesional y el usuario
             //Son correctos dados los métodos y la clase

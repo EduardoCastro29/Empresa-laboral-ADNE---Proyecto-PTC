@@ -2172,19 +2172,6 @@
         6QfGXeTx9orxqAUAALwmxy96ZMIYY4wxxpj9nYODfwAKqTjimbfXnwAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="lblRecuerdame.BaseStylesheet" xml:space="preserve">
-    <value>#bunifu-label { padding: 0px; font-family: 'Century Gothic'; font-size: 14.25pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(0, 0, 0); text-align: left; }</value>
-  </data>
-  <data name="cbRecuerdame.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADFSURBVEhL7ZY9DsIwDEZzDEbGjkikZWVkZGRk7BEYe5J+
-        LZfgSHADmAA7CQlhIzVisaUn5cfxk9shMX+JGpgtgXU9opsMsFkB81A6BW0s7NifKekhBdW7Ut19UPhO
-        7NBfYtIxP/A1b+ep7o2bcKIG2GaJUryEwMGJaMLfdXonnwxx3OWi36GiYlRUjIqKUVExKiomiIDWLUhf
-        fAkvopdPFRelZP52vbsxvYiciIPv9SxRCHoJnYIiBZtpk/+XCBbY+crGPAE1irCGthBJZAAAAABJRU5E
-        rkJggg==
-</value>
-  </data>
   <data name="btnOlvidarContrasena.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAPYAAAAfCAYAAADUWTCCAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
