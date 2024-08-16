@@ -12,6 +12,7 @@ using System.Globalization;
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
+using System.Drawing.Text;
 
 namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
 {
@@ -29,8 +30,90 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             ObjRegistro.btnRegistrar.Click += new EventHandler(AccederLoginPrimerUso);
             ObjRegistro.btnCargarImagen.Click += new EventHandler(CargarImagen);
             ObjRegistro.btnEliminar.Click += new EventHandler(EliminarFoto);
+            // Validaciones en los textbox 
+            ObjRegistro.txtNombre.KeyPress += new KeyPressEventHandler(ValidarCampoLetra);
+            ObjRegistro.txtApellido.KeyPress += new KeyPressEventHandler(ValidarCampoLetra);
+
+            ObjRegistro.txtDui.KeyPress += new KeyPressEventHandler(ValidarCampoNumero);
+            ObjRegistro.txtTelefono.KeyPress += new KeyPressEventHandler(ValidarCampoNumero);
+            ObjRegistro.txtUsuario.KeyPress += new KeyPressEventHandler(ValidarCampoUsuario);
+            ObjRegistro.txtCorreo.KeyPress += new KeyPressEventHandler(ValidarCampoCorreo);
 
             ObjRegistro.Load += new EventHandler(CargarCMB);
+        }
+
+        private void ValidarCampoCorreo(object sender, KeyPressEventArgs e )
+        {
+            // Permite caracteres de control como el retroceso(Backspace) 
+            if (char.IsControl(e.KeyChar))
+            {
+                return;
+            }
+            // Se declara la variable ch de tipo char que se igualara = e.keyChar(Referencia al evento de ingreso de caracteres) 
+            char ch = e.KeyChar;   
+
+            // Solo estos caracteres permitira el text box
+            if ((ch >= '0' && ch <= '9') ||
+                 (ch >= 'A' && ch <= 'Z') ||
+                (ch >= 'a' && ch <= 'z') ||
+                 ch == '.' ||
+                 ch == '@'||
+                 ch == '_')
+            {
+                return;
+            }
+                // e.Handled en true, indicas que has manejado el evento y que el sistema no debe hacer nada más con él. 
+                e.Handled = true;
+        }
+
+
+        private void ValidarCampoUsuario(object sender, KeyPressEventArgs e )
+        {
+            // Permite caracteres de control como el retroceso(Backspace) 
+            if (char.IsControl(e.KeyChar))
+            {
+                return;
+            }
+            char ch = e.KeyChar;
+
+            if ((ch >= '0' && ch <= '9') ||
+                (ch >= 'A' && ch <= 'Z') ||
+                (ch >= 'a' && ch <= 'z'))
+            {
+                return;
+            }
+            // e.Handled en true, indicas que has manejado el evento y que el sistema no debe hacer nada más con él. 
+            e.Handled = true;
+
+        }
+        private void ValidarCampoLetra(object sender, KeyPressEventArgs e)
+        {
+            // e.KeyChar El evento que detecta el ingreso de cualquier caracter.
+            // Permite caracteres de control como el retroceso(Backspace) 
+            if (char.IsControl(e.KeyChar))
+            {
+                return  ;
+            }
+
+            // Permitir letras (incluyendo letras acentuadas) y espacios
+            if (char.IsLetter(e.KeyChar) || e.KeyChar == ' ')
+            {
+                return;
+            }
+                // e.Handled en true, indicas que has manejado el evento y que el sistema no debe hacer nada más con él. 
+                 e.Handled = true;
+        }
+
+        private void ValidarCampoNumero(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsDigit (e.KeyChar))
+            {
+                return;
+            }
+
+
+            e.Handled = true;
+
         }
         private void CargarCMB(object sender, EventArgs e)
         {
@@ -84,7 +167,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                     ObjDAORegistro.Contraseña = ObjMetodosComunes.MetodoEncriptacionAES(ObjRegistro.txtContrasena.Text.Trim());
                     //Mandamos a llamar al método pinAcceso para que nos genere un ping aleatorio
                     //Que posteriormente nos servirá para la recuperación de contraseña
-                    ObjDAORegistro.PinAcceso = int.Parse(ObjMetodosComunes.PinAcceso());
                     ObjDAORegistro.Correo = ObjRegistro.txtCorreo.Text.Trim();
 
                     //Obtenemos los datos del Profesional
@@ -160,6 +242,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
         private void EliminarFoto(object sender, EventArgs e)
         {
             ObjRegistro.picProfesional.Image = null;
+            ObjRegistro.picProfesional.Image = Properties.Resources.ProfesionalPic;
         }
     }
 }

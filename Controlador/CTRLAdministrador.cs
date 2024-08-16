@@ -22,7 +22,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
         readonly AdministradorForm ObjAdministradorForm;
         readonly RegistroForm ObjRegistroForm;
 
-        /**********                     CONSTRUCTOR DEL FORMULARIO ADMINISTRADOR                     **********/
+        /****                     CONSTRUCTOR DEL FORMULARIO ADMINISTRADOR                     ****/
         //Este es el constructor del DataGridView
         public CTRLAdministrador(AdministradorForm Vista)
         {
@@ -137,7 +137,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                 }
             }
         }
-        /**********                     CONSTRUCTOR DEL FORMULARIO DE REGISTRO                     **********/
+        /****                     CONSTRUCTOR DEL FORMULARIO DE REGISTRO                     ****/
         //Este es el constructor del Controlador Administrador, el cuál tendrá las acciones dentro del InitialComponent
         public CTRLAdministrador(RegistroForm Vista)
         {
@@ -204,7 +204,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                     ObjDAORegistrarProfesional.Contraseña = ObjMetodosComunes.MetodoEncriptacionAES(ObjRegistroForm.txtUsuario.Text.Trim() + "ADNE2024");
                     //Mandamos a llamar al método pinAcceso para que nos genere un ping aleatorio
                     //Que posteriormente nos servirá para la recuperación de contraseña
-                    ObjDAORegistrarProfesional.PinAcceso = int.Parse(ObjMetodosComunes.PinAcceso());
                     ObjDAORegistrarProfesional.Correo = ObjRegistroForm.txtCorreo.Text.Trim();
 
                     //Obtenemos los datos del Profesional

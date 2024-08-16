@@ -24,14 +24,12 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
         //Creación de eventos
         private void AbrirActualizarContrasena(object sender, EventArgs e)
         {
-            DAOPinAcceso ObjVerificarPinAcceso = new DAOPinAcceso();
-
-            ObjVerificarPinAcceso.PinAcceso = ObjPinAccesoForm.txtIngresarPin.Text.Trim();
+            //Mandamos la variable estática GuardarCódigoRandom que posteriormente se insertará en el textbox
+            ObjPinAccesoForm.txtIngresarPin.Text = DAODireccionGmail.GuardarCodigoRandom;
 
             try
             {
-                if (string.IsNullOrWhiteSpace(ObjPinAccesoForm.txtIngresarPin.Text.Trim()) ||
-                    ObjVerificarPinAcceso.VerificarPinAcceso() == null)
+                if (string.IsNullOrWhiteSpace(ObjPinAccesoForm.txtIngresarPin.Text.Trim()) || DAODireccionGmail.GuardarCodigoRandom != ObjPinAccesoForm.txtIngresarPin.Text)
                 {
                     MessageBox.Show("Por favor, ingrese un pin de acceso válido antes de seguir", "Pin de Acceso", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }

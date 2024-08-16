@@ -15,6 +15,9 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
     {
         readonly SqlCommand Conexion = new SqlCommand();
 
+        //Creamos una variable que nos capturará el pin creado por la libreria Random
+      public  static string GuardarCodigoRandom;
+
         //Este método se utilizará para la recuperación de contraseñas dentro de la empresa
         public string RecuperaContraseña(string solicitudUsuario)
         {
@@ -33,11 +36,16 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
 
                 if (ObjFilasEncontradas.Read() == true)
                 {
+                    //Creamos una variable de tipo random que nos generará un código aleatorio
+                    //Al ser enviado por vía correo, mas nó siendo enviado a la base de datos, este código es único y no puede ser descifrado
+                    Random ObjNumeroAleatorioPin = new Random();
+                    GuardarCodigoRandom = (ObjNumeroAleatorioPin.Next(99999999).ToString());
+
                     string nombreUsuario = ObjFilasEncontradas.GetString(1);
 
-                    int pinAcceso = ObjFilasEncontradas.GetInt32(3);
+                    int pinAcceso = int.Parse(GuardarCodigoRandom);
 
-                    string correoUsuario = ObjFilasEncontradas.GetString(4);
+                    string correoUsuario = ObjFilasEncontradas.GetString(3);
 
                     DAOSistemaSoporte ObjSistemaSoporte = new DAOSistemaSoporte();
 
@@ -54,7 +62,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                     );
                     return ("Hola, " + nombreUsuario +
                            "\n" + "Haz solicitado recuperar tu contraseña" +
-                           "\n" + "Revisa tu dirección Gmail: " + correoUsuario +
+                           "\n" + "Revisa tu dirección Gmail correspondiente " +
                            "\n" + "Una vez ingresado el pin de acceso" +
                            "\n" + "Podrás actualizar tu contraseña de forma segura");
                 }

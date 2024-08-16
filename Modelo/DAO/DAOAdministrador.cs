@@ -23,13 +23,12 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                 //Inicializamos la conexión
                 Conexion.Connection = Conectar();
 
-                string consultaSQLUsuario = "INSERT INTO Usuario (nombreUsuario, contraseña, pinAcceso, correoElectronico)\r\nOUTPUT INSERTED.usuarioId VALUES \r\n(@nombreUsuario, @contraseña, @pinAcceso, @correoElectronico)";
+                string consultaSQLUsuario = "INSERT INTO Usuario (nombreUsuario, contraseña, correoElectronico)\r\nOUTPUT INSERTED.usuarioId VALUES \r\n(@nombreUsuario, @contraseña, @correoElectronico)";
 
                 SqlCommand ObjComandoSQLServerUsuario = new SqlCommand(consultaSQLUsuario, Conexion.Connection);
 
                 ObjComandoSQLServerUsuario.Parameters.AddWithValue("@nombreUsuario", Usuario);
                 ObjComandoSQLServerUsuario.Parameters.AddWithValue("@contraseña", Contraseña);
-                ObjComandoSQLServerUsuario.Parameters.AddWithValue("@pinAcceso", PinAcceso);
                 ObjComandoSQLServerUsuario.Parameters.AddWithValue("@correoElectronico", Correo);
 
                 int UsuarioId = (int)ObjComandoSQLServerUsuario.ExecuteScalar();

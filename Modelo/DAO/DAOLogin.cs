@@ -61,9 +61,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                     //El nombre de USUARIO se encuentra en la posición 1
                     InicioSesion.Usuario = ObjFilasEncontradas.GetString(1);
                     InicioSesion.Contraseña = ObjFilasEncontradas.GetString(2);
-                    InicioSesion.Correo = ObjFilasEncontradas.GetString(4);
-
-                    //El Pin de Acceso no es necesario especificarlo, ya que no es relevante mostrarlo en estos casos
+                    InicioSesion.Correo = ObjFilasEncontradas.GetString(3);
                 }
 
                 //Retornamos si la sentencia SQLServer encontró filas, caso contrario retornará false

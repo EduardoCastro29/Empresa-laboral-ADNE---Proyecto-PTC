@@ -25,14 +25,13 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                 //Abrimos la conexión
                 Conexion.Connection = Conectar();
                 //Creamos el query
-                string consultaSQLUsuario = "INSERT INTO Usuario (nombreUsuario, contraseña, pinAcceso, correoElectronico)\r\nOUTPUT INSERTED.usuarioId VALUES\r\n(@nombreUsuario, @contraseña, @pinAcceso, @correoElectronico)";
+                string consultaSQLUsuario = "INSERT INTO Usuario (nombreUsuario, contraseña, correoElectronico)\r\nOUTPUT INSERTED.usuarioId VALUES\r\n(@nombreUsuario, @contraseña, @correoElectronico)";
                 //Le mandamos la consulta a SQL por medio de un comando
                 SqlCommand ObjConsultaSQL = new SqlCommand(consultaSQLUsuario, Conexion.Connection);
 
                 //Añadimos los valores
                 ObjConsultaSQL.Parameters.AddWithValue("@nombreUsuario", Usuario);
                 ObjConsultaSQL.Parameters.AddWithValue("@contraseña", Contraseña);
-                ObjConsultaSQL.Parameters.AddWithValue("@pinAcceso", PinAcceso);
                 ObjConsultaSQL.Parameters.AddWithValue("@correoElectronico", Correo);
 
                 //Creamos una variable que nos capturará el ID del usuario creado, que posteriormente se insertará dentro del profesional

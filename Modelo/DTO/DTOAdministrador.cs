@@ -23,7 +23,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DTO
         private int especialidadAlt;
         private int desempenoId;
         private int profesionalId;
-        private int pinAcceso;
         private string imagen;
 
         public string Nombres { get => nombres; set => nombres = value; }
@@ -38,7 +37,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DTO
         public int EspecialidadAlt { get => especialidadAlt; set => especialidadAlt = value; }
         public int DesempenoId { get => desempenoId; set => desempenoId = value; }
         public int ProfesionalId { get => profesionalId; set => profesionalId = value; }
-        public int PinAcceso { get => pinAcceso; set => pinAcceso = value; }
         public string Imagen { get => imagen; set => imagen = value; }
     }
 }

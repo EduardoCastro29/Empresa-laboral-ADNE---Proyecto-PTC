@@ -38,8 +38,9 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             {
                 LimpiarVariablesInicioSesion();
                 LoginForm ObjVolverInicioLogin = new LoginForm();
-                ObjVolverInicioLogin.Show();
-                ObjConfiguracionForm.Dispose();
+                DashboardForm ObjDash = new DashboardForm();
+                ObjVolverInicioLogin.Show(); // nos quedamos aqui
+                ObjDash.Dispose();
             }
         }
         void LimpiarVariablesInicioSesion()
