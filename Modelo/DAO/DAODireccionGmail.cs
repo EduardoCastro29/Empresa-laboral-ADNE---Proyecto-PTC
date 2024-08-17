@@ -16,7 +16,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
         readonly SqlCommand Conexion = new SqlCommand();
 
         //Creamos una variable que nos capturará el pin creado por la libreria Random
-      public  static string GuardarCodigoRandom;
+        public static string GuardarCodigoRandom;
 
         //Este método se utilizará para la recuperación de contraseñas dentro de la empresa
         public string RecuperaContraseña(string solicitudUsuario)
