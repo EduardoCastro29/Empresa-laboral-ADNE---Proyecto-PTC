@@ -28,7 +28,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                 //Abrimos la conexión
                 Conexion.Connection = Conectar();
                 //Creamos el query
-                string consultaSQLExpediente = "INSERT INTO Expediente (expedienteId, estadoAnimo, estadoConductual, somatizacion, vidaInterpersonal, cognicion, redSocial, pauta, riesgoValorado, observacion, aproximacionDiag, atencionBrindada, pacienteId) VALUES (@expedienteId, @estadoAnimo, @estadoConductual, @somatizacion, @vidaInterpersonal, @cognicion, @redSocial, @pauta, @riesgoValorado, @observacion, @aproximacionDiag, @atencionBrindada, @pacienteId)";
+                string consultaSQLExpediente = "INSERT INTO Expediente (expedienteId, estadoAnimo, estadoConductual, somatizacion, vidaInterpersonal, cognicion, redSocial, pauta, riesgoValorado, observacion, aproximacionDiag, atencionBrindada) VALUES (@expedienteId, @estadoAnimo, @estadoConductual, @somatizacion, @vidaInterpersonal, @cognicion, @redSocial, @pauta, @riesgoValorado, @observacion, @aproximacionDiag, @atencionBrindada)";
 
                 //Le mandamos la consulta a SQL por medio de un comando. Como parametros: Consulta, Conexión
                 SqlCommand ObjQuerySQL = new SqlCommand(consultaSQLExpediente, Conexion.Connection);
@@ -47,7 +47,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                 ObjQuerySQL.Parameters.AddWithValue("@aproximacionDiag", AproximacionDiag);
                 ObjQuerySQL.Parameters.AddWithValue("@atencionBrindada", AtencionBrindada);
                 //Aquí se usa expedienteId para ser insertado y guardado en foránea pacienteId
-                ObjQuerySQL.Parameters.AddWithValue("@pacienteId", PacienteId);
+                //ObjQuerySQL.Parameters.AddWithValue("@pacienteId", PacienteId);
 
                 //Si el número de filas afectadas fueron existosas, retornamos verdadero
                 if (ObjQuerySQL.ExecuteNonQuery() > 0)
@@ -74,7 +74,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                 Conexion.Connection = Conectar();
                 //Creamos el query
                 string consultaSQLExpediente = "UPDATE Expediente SET" +
-                    "                           pacienteId          =    @pacienteId," +
                     "                           estadoAnimo        =     @estadoAnimo," +
                     "                           estadoConductual    =    @estadoConductual," +
                     "                           somatizacion        =    @somatizacion," +
@@ -92,7 +91,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                 SqlCommand ObjQuerySQL = new SqlCommand(consultaSQLExpediente, Conexion.Connection);
 
                 //Añadimos los valores
-                ObjQuerySQL.Parameters.AddWithValue("@pacienteId", PacienteId);
+                //ObjQuerySQL.Parameters.AddWithValue("@pacienteId", PacienteId);
                 ObjQuerySQL.Parameters.AddWithValue("@expedienteId", ExpedienteId);
                 ObjQuerySQL.Parameters.AddWithValue("@estadoAnimo", EstadoAnimo);
                 ObjQuerySQL.Parameters.AddWithValue("@estadoConductual", EstadoConductual);
