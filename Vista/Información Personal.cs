@@ -22,5 +22,20 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Vista
             CTRLPacienteUC ObjControladorInformacionPersonalUC = new CTRLPacienteUC(this);
             CTRLInformacionPersonal ObjControladorInformacionPersonal = new CTRLInformacionPersonal(this);
         }
+
+        private void txtDui_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void btnGuardarPaciente_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnModificarPaciente_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

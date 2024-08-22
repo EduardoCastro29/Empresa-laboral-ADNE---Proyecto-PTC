@@ -84,7 +84,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador.ControladorUserControl
                     ObjVerInformacion.txtApellidoPaciente.Text = ObjDaoInformacionPersonal.Apellido;
                     ObjVerInformacion.txtDomicilio.Text = ObjDaoInformacionPersonal.Domicilio;
                     ObjVerInformacion.txtNacionalidad.Text = ObjDaoInformacionPersonal.Nacionalidad;
-                    ObjVerInformacion.txtDocumentoPresentado1.Text = ObjDaoInformacionPersonal.DocumentoPresentado;
+                    ObjVerInformacion.txtDocumentoPresentado.Text = ObjDaoInformacionPersonal.DocumentoPresentado;
                     ObjVerInformacion.txtCorreoElectronico.Text = ObjDaoInformacionPersonal.CorreoElectronico;
                     ObjVerInformacion.txtTelefono1.Text = ObjDaoInformacionPersonal.Telefono;
                     ObjVerInformacion.txtProfesion.Text = ObjDaoInformacionPersonal.Profesion;
@@ -145,7 +145,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador.ControladorUserControl
             {
                 if (string.IsNullOrWhiteSpace(ObjInformacionPersonal.txtPacienteId.Text.Trim()) ||
                    string.IsNullOrWhiteSpace(ObjInformacionPersonal.txtNacionalidad.Text.Trim()) ||
-                   string.IsNullOrWhiteSpace(ObjInformacionPersonal.txtDocumentoPresentado1.Text.Trim()) ||
+                   string.IsNullOrWhiteSpace(ObjInformacionPersonal.txtDocumentoPresentado.Text.Trim()) ||
                    string.IsNullOrWhiteSpace(ObjInformacionPersonal.txtEdad.Text.Trim()) ||
                    string.IsNullOrWhiteSpace(ObjInformacionPersonal.txtTelefono1.Text.Trim()) ||
                    string.IsNullOrWhiteSpace(ObjInformacionPersonal.txtProfesion.Text.Trim()) ||
@@ -171,7 +171,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador.ControladorUserControl
                     ObjDAOActualizarInformacionPersonal.FechaNacimiento = ObjInformacionPersonal.dtFechaNacimiento.Value.Date;
                     ObjDAOActualizarInformacionPersonal.PacienteId = int.Parse(ObjInformacionPersonal.txtPacienteId.Text.Trim());
                     ObjDAOActualizarInformacionPersonal.Nacionalidad = ObjInformacionPersonal.txtNacionalidad.Text.Trim();
-                    ObjDAOActualizarInformacionPersonal.DocumentoPresentado = ObjInformacionPersonal.txtDocumentoPresentado1.Text.Trim();
+                    ObjDAOActualizarInformacionPersonal.DocumentoPresentado = ObjInformacionPersonal.txtDocumentoPresentado.Text.Trim();
                     ObjDAOActualizarInformacionPersonal.Edad = int.Parse(ObjInformacionPersonal.txtEdad.Text.Trim());
                     ObjDAOActualizarInformacionPersonal.Telefono = (ObjInformacionPersonal.txtTelefono1.Text.Trim());
                     ObjDAOActualizarInformacionPersonal.Profesion = ObjInformacionPersonal.txtProfesion.Text.Trim();

@@ -632,6 +632,8 @@ GO
 DELETE FROM Paciente
 GO
 
+SELECT*FROM Paciente
+
 DELETE FROM Expediente
 GO
 
