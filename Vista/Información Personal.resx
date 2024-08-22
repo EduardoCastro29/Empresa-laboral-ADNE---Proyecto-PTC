@@ -218,7 +218,7 @@
         TkSuQmCC
 </value>
   </data>
-  <data name="txtTelefono.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="txtTelefono1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAXEAAAAsCAYAAACT4Ig5AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJTSURBVHhe7dqxalNRGMDxO3Z0dHT0EXwEX0JwERwddfMB
@@ -395,7 +395,7 @@
         AABJRU5ErkJggg==
 </value>
   </data>
-  <data name="txtDocumentoPresentado.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="txtDocumentoPresentado1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAMMAAAAsCAYAAADYbQz9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIUSURBVHhe7d0xi9NgHMfxjB0dHR19CfcSfBPCLQeOjrr5
