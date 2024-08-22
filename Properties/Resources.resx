@@ -118,23 +118,68 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Imagen contraseña" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Imagen contraseña.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Pacientes" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Pacientes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Imagen usuario" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Imagen usuario.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="mail" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mail.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Expediente__Psicosocial" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Expediente__Psicosocial.html;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="ADNE logo sin fondo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ADNE logo sin fondo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Menu" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Menu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Calendario" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Calendario.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ProfesionalPic" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ProfesionalPic.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Pagina principal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Pagina principal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ADNE EDIT1 4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ADNE EDIT1 4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Adne cortado" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Adne cortado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Notificaciones" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Notificaciones.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Cerrar sesion" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cerrar sesion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Cerrar Login" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cerrar Login.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Equipo de Trabajo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Equipo de Trabajo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Lupa" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Lupa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="authorization" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\authorization.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="email" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\email.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Equipo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Equipo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Foto configuración" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Foto configuración.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Cerrar Login" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Cerrar Login.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Foto Ver Paciente" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Foto Ver Paciente.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Imagen contraseña" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Imagen contraseña.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Agregar pacientes" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Agregar pacientes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -145,11 +190,11 @@
   <data name="Acerca de" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Acerca de.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Cerrar sesion" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Cerrar sesion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Ver pacientes" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Ver pacientes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ProfesionalPic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ProfesionalPic.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Configuracion" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Configuracion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -157,49 +202,7 @@
   <data name="Equipo Profesional" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Equipo Profesional.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Lupa" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Lupa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="mail" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\mail.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Equipo de Trabajo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Equipo de Trabajo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Notificaciones" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Notificaciones.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ADNE logo sin fondo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ADNE logo sin fondo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="authorization" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\authorization.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Equipo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Equipo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Adne cortado" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Adne cortado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Pagina principal" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Pagina principal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="email" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\email.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Pacientes" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Pacientes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Menu" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Menu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ADNE EDIT1 4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ADNE EDIT1 4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Foto Ver Paciente" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Foto Ver Paciente.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Expediente__Psicosocial" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Expediente__Psicosocial.html;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  <data name="picture_12236752" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\picture_12236752.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

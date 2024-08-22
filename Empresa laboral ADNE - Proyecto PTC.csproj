@@ -102,6 +102,7 @@
     <Compile Include="Controlador\CommonMethods.cs" />
     <Compile Include="Controlador\Controlador UC Calendario\CTRLUCDias.cs" />
     <Compile Include="Controlador\Controlador UC Pacientes\CTRLPacienteUC.cs" />
+    <Compile Include="Controlador\ControladorPrimerUsoSistema.cs" />
     <Compile Include="Controlador\CTRLActividades.cs" />
     <Compile Include="Controlador\CTRLActualizarContrasena.cs" />
     <Compile Include="Controlador\CTRLAdministrador.cs" />
@@ -143,6 +144,7 @@
     <Compile Include="Modelo\DAO\DAONuevoPaciente.cs" />
     <Compile Include="Modelo\DAO\DAOPacientes.cs" />
     <Compile Include="Modelo\DAO\DAOPinAcceso.cs" />
+    <Compile Include="Modelo\DAO\DAOPrimerUsoSistema.cs" />
     <Compile Include="Modelo\DAO\DAORegistro.cs" />
     <Compile Include="Modelo\DAO\DAOSistemaSoporte.cs" />
     <Compile Include="Modelo\DAO\DAOVerCitas.cs" />
@@ -164,6 +166,7 @@
     <Compile Include="Modelo\DTO\DTONuevoPaciente.cs" />
     <Compile Include="Modelo\DTO\DTOPacientes.cs" />
     <Compile Include="Modelo\DTO\DTOPinAcceso.cs" />
+    <Compile Include="Modelo\DTO\DTOPrimerUsoSistema.cs" />
     <Compile Include="Modelo\DTO\DTORegistro.cs" />
     <Compile Include="Modelo\DTO\DTOVerCitas.cs" />
     <Compile Include="Modelo\DTO\DTOVerPacientes.cs" />
@@ -265,6 +268,12 @@
     </Compile>
     <Compile Include="Vista\Pin de Acceso.Designer.cs">
       <DependentUpon>Pin de Acceso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\PrimerUsoSistema.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\PrimerUsoSistema.Designer.cs">
+      <DependentUpon>PrimerUsoSistema.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\Recuperar Contraseña OPC.cs">
       <SubType>Form</SubType>
@@ -389,6 +398,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\Pin de Acceso.resx">
       <DependentUpon>Pin de Acceso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\PrimerUsoSistema.resx">
+      <DependentUpon>PrimerUsoSistema.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\Recuperar Contraseña OPC.resx">
       <DependentUpon>Recuperar Contraseña OPC.cs</DependentUpon>
@@ -517,6 +529,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Expediente__Psicosocial.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\picture_12236752.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
