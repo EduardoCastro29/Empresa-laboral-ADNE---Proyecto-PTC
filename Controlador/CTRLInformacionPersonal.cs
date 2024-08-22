@@ -23,10 +23,11 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
         {
             //Enlazando el objeto con la Vista dentro del constructor
             ObjInformacionPersonal = vista;
-            ObjInformacionPersonal.Load += new EventHandler(DesactivarModificarPaciente);
+            ObjInformacionPersonal.Load += new EventHandler(Modificar);
+            ObjInformacionPersonal.dtFechaNacimiento.ValueChanged += new EventHandler (DtFechaNacimiento_ValueChanged);
             ObjInformacionPersonal.btnGuardarPaciente.Click += new EventHandler(GuardarInformacionPersonal);
         }
-        private void GuardarInformacionPersonal(Object sender, EventArgs e)
+        private void GuardarInformacionPersonal(object sender, EventArgs e)
         {
             try
             {
@@ -46,6 +47,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                     string.IsNullOrWhiteSpace(ObjInformacionPersonal.txtMotivoIntervencion.Text.Trim()) ||
                     string.IsNullOrWhiteSpace(ObjInformacionPersonal.txtAntecedentes.Text.Trim()) ||
                     string.IsNullOrWhiteSpace(ObjInformacionPersonal.txtDescripcion.Text.Trim()) ||
+                    ObjInformacionPersonal.dtFechaNacimiento.Value.Date>DateTime.Today ||
                     string.IsNullOrWhiteSpace(ObjInformacionPersonal.txtAspectosPreocupantes.Text.Trim()))
                 {
                     //Si los datos no fueron ingresados correctamente, mostramos un mensaje de error
@@ -121,10 +123,43 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             ObjInformacionPersonal.txtDescripcion.Clear();
             ObjInformacionPersonal.txtAspectosPreocupantes.Clear();
         }
-        private void DesactivarModificarPaciente(object sender, EventArgs e)
+        private void Modificar(object sender, EventArgs e )
         {
+
+            ObjInformacionPersonal.txtEdad.Enabled = false;
             ObjInformacionPersonal.btnGuardarPaciente.Enabled = true;
+            
 
         }
+
+        private void DtFechaNacimiento_ValueChanged(object sender, EventArgs e)
+        {
+
+            // Verificar si la fecha seleccionada es mayor que la fecha de hoy
+            if (ObjInformacionPersonal.dtFechaNacimiento.Value.Date > DateTime.Today)
+            {
+                // Mostrar un mensaje de advertencia
+                MessageBox.Show("La fecha de nacimiento no puede ser una fecha futura.", "Fecha no válida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                // Restablecer la fecha al valor anterior o a la fecha actual
+                ObjInformacionPersonal.dtFechaNacimiento.Value = DateTime.Today;
+            }
+            else
+            {
+                // Calcular la edad
+                int edad = DateTime.Today.Year - ObjInformacionPersonal.dtFechaNacimiento.Value.Year;
+
+                // Ajustar la edad si la fecha de nacimiento aún no ha ocurrido este año
+                if (DateTime.Today.DayOfYear < ObjInformacionPersonal.dtFechaNacimiento.Value.DayOfYear)
+                {
+                    edad--;
+                }
+
+                // Actualizar el campo de texto con la edad calculada
+                ObjInformacionPersonal.txtEdad.Text = edad.ToString();
+            }
+
+        }
+
     }
 }

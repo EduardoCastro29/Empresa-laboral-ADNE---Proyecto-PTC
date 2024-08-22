@@ -428,7 +428,7 @@
             this.txtUsuario.SelectedText = "";
             this.txtUsuario.SelectionLength = 0;
             this.txtUsuario.SelectionStart = 0;
-            this.txtUsuario.ShortcutsEnabled = true;
+            this.txtUsuario.ShortcutsEnabled = false;
             this.txtUsuario.Size = new System.Drawing.Size(498, 72);
             this.txtUsuario.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtUsuario.TabIndex = 3;
@@ -546,7 +546,7 @@
             this.txtContraseña.SelectedText = "";
             this.txtContraseña.SelectionLength = 0;
             this.txtContraseña.SelectionStart = 0;
-            this.txtContraseña.ShortcutsEnabled = true;
+            this.txtContraseña.ShortcutsEnabled = false;
             this.txtContraseña.Size = new System.Drawing.Size(498, 72);
             this.txtContraseña.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtContraseña.TabIndex = 3;
