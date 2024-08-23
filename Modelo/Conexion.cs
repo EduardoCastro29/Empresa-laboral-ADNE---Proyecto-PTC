@@ -22,7 +22,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo
 
                 //Creando objeto ObjConexion de tipo SqlConnection con los datos de la conexión hacia la base de datos
                 SqlConnection ObjConexion = new SqlConnection($"Server = {servidor}; Database = {DBnombre}; Integrated Security = True");
-                //Abrimos la conexiónssq
+                //Abrimos la conexión
                 ObjConexion.Open();
 
                 //Retornamos la conexión
