@@ -126,7 +126,7 @@
             this.label18.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(688, 9);
+            this.label18.Location = new System.Drawing.Point(702, 9);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(122, 23);
             this.label18.TabIndex = 192;
@@ -162,7 +162,7 @@
             this.txtPacienteId.IconRight = null;
             this.txtPacienteId.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtPacienteId.Lines = new string[0];
-            this.txtPacienteId.Location = new System.Drawing.Point(723, 35);
+            this.txtPacienteId.Location = new System.Drawing.Point(737, 35);
             this.txtPacienteId.MaxLength = 5000;
             this.txtPacienteId.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtPacienteId.Modified = false;
@@ -214,7 +214,6 @@
             this.btnGuardar.AllowAnimations = true;
             this.btnGuardar.AllowMouseEffects = true;
             this.btnGuardar.AllowToggling = false;
-            this.btnGuardar.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnGuardar.AnimationSpeed = 200;
             this.btnGuardar.AutoGenerateColors = false;
             this.btnGuardar.AutoRoundBorders = false;
@@ -238,6 +237,7 @@
             this.btnGuardar.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnGuardar.DisabledFillColor = System.Drawing.Color.Empty;
             this.btnGuardar.DisabledForecolor = System.Drawing.Color.Empty;
+            this.btnGuardar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnGuardar.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
             this.btnGuardar.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
@@ -259,7 +259,7 @@
             this.btnGuardar.IdleIconLeftImage = null;
             this.btnGuardar.IdleIconRightImage = null;
             this.btnGuardar.IndicateFocus = false;
-            this.btnGuardar.Location = new System.Drawing.Point(0, -1);
+            this.btnGuardar.Location = new System.Drawing.Point(0, 0);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.OnDisabledState.BorderColor = System.Drawing.Color.Transparent;
             this.btnGuardar.OnDisabledState.BorderRadius = 1;
@@ -293,8 +293,8 @@
             this.btnGuardar.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btnGuardar.OnPressedState.IconLeftImage = null;
             this.btnGuardar.OnPressedState.IconRightImage = null;
-            this.btnGuardar.Size = new System.Drawing.Size(212, 47);
-            this.btnGuardar.TabIndex = 0;
+            this.btnGuardar.Size = new System.Drawing.Size(213, 48);
+            this.btnGuardar.TabIndex = 11;
             this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnGuardar.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnGuardar.TextMarginLeft = 0;
@@ -306,7 +306,6 @@
             this.btnModificar.AllowAnimations = true;
             this.btnModificar.AllowMouseEffects = true;
             this.btnModificar.AllowToggling = false;
-            this.btnModificar.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnModificar.AnimationSpeed = 200;
             this.btnModificar.AutoGenerateColors = false;
             this.btnModificar.AutoRoundBorders = false;
@@ -330,6 +329,7 @@
             this.btnModificar.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnModificar.DisabledFillColor = System.Drawing.Color.Empty;
             this.btnModificar.DisabledForecolor = System.Drawing.Color.Empty;
+            this.btnModificar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnModificar.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
             this.btnModificar.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModificar.ForeColor = System.Drawing.Color.White;
@@ -351,7 +351,7 @@
             this.btnModificar.IdleIconLeftImage = null;
             this.btnModificar.IdleIconRightImage = null;
             this.btnModificar.IndicateFocus = false;
-            this.btnModificar.Location = new System.Drawing.Point(0, -1);
+            this.btnModificar.Location = new System.Drawing.Point(0, 0);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.OnDisabledState.BorderColor = System.Drawing.Color.Transparent;
             this.btnModificar.OnDisabledState.BorderRadius = 1;
@@ -385,8 +385,8 @@
             this.btnModificar.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btnModificar.OnPressedState.IconLeftImage = null;
             this.btnModificar.OnPressedState.IconRightImage = null;
-            this.btnModificar.Size = new System.Drawing.Size(212, 47);
-            this.btnModificar.TabIndex = 0;
+            this.btnModificar.Size = new System.Drawing.Size(213, 48);
+            this.btnModificar.TabIndex = 12;
             this.btnModificar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnModificar.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnModificar.TextMarginLeft = 0;
@@ -423,7 +423,7 @@
             this.txtObservacion.IconRight = null;
             this.txtObservacion.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtObservacion.Lines = new string[0];
-            this.txtObservacion.Location = new System.Drawing.Point(26, 845);
+            this.txtObservacion.Location = new System.Drawing.Point(40, 845);
             this.txtObservacion.MaxLength = 32767;
             this.txtObservacion.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtObservacion.Modified = false;
@@ -461,7 +461,7 @@
             this.txtObservacion.ShortcutsEnabled = true;
             this.txtObservacion.Size = new System.Drawing.Size(795, 44);
             this.txtObservacion.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.txtObservacion.TabIndex = 190;
+            this.txtObservacion.TabIndex = 8;
             this.txtObservacion.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtObservacion.TextMarginBottom = 0;
             this.txtObservacion.TextMarginLeft = 3;
@@ -475,7 +475,7 @@
             this.label11.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(165, 339);
+            this.label11.Location = new System.Drawing.Point(179, 339);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(452, 23);
             this.label11.TabIndex = 189;
@@ -511,7 +511,7 @@
             this.txtVidaInterpersonal.IconRight = null;
             this.txtVidaInterpersonal.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtVidaInterpersonal.Lines = new string[0];
-            this.txtVidaInterpersonal.Location = new System.Drawing.Point(26, 365);
+            this.txtVidaInterpersonal.Location = new System.Drawing.Point(40, 365);
             this.txtVidaInterpersonal.MaxLength = 32767;
             this.txtVidaInterpersonal.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtVidaInterpersonal.Modified = false;
@@ -549,7 +549,7 @@
             this.txtVidaInterpersonal.ShortcutsEnabled = true;
             this.txtVidaInterpersonal.Size = new System.Drawing.Size(795, 69);
             this.txtVidaInterpersonal.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.txtVidaInterpersonal.TabIndex = 188;
+            this.txtVidaInterpersonal.TabIndex = 3;
             this.txtVidaInterpersonal.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtVidaInterpersonal.TextMarginBottom = 0;
             this.txtVidaInterpersonal.TextMarginLeft = 3;
@@ -588,7 +588,7 @@
             this.txtAtencionBrindada.IconRight = null;
             this.txtAtencionBrindada.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtAtencionBrindada.Lines = new string[0];
-            this.txtAtencionBrindada.Location = new System.Drawing.Point(26, 991);
+            this.txtAtencionBrindada.Location = new System.Drawing.Point(40, 991);
             this.txtAtencionBrindada.MaxLength = 32767;
             this.txtAtencionBrindada.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtAtencionBrindada.Modified = false;
@@ -626,7 +626,7 @@
             this.txtAtencionBrindada.ShortcutsEnabled = true;
             this.txtAtencionBrindada.Size = new System.Drawing.Size(795, 44);
             this.txtAtencionBrindada.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.txtAtencionBrindada.TabIndex = 186;
+            this.txtAtencionBrindada.TabIndex = 10;
             this.txtAtencionBrindada.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtAtencionBrindada.TextMarginBottom = 0;
             this.txtAtencionBrindada.TextMarginLeft = 3;
@@ -665,7 +665,7 @@
             this.txtAproximacionDiag.IconRight = null;
             this.txtAproximacionDiag.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtAproximacionDiag.Lines = new string[0];
-            this.txtAproximacionDiag.Location = new System.Drawing.Point(26, 916);
+            this.txtAproximacionDiag.Location = new System.Drawing.Point(40, 916);
             this.txtAproximacionDiag.MaxLength = 32767;
             this.txtAproximacionDiag.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtAproximacionDiag.Modified = false;
@@ -703,7 +703,7 @@
             this.txtAproximacionDiag.ShortcutsEnabled = true;
             this.txtAproximacionDiag.Size = new System.Drawing.Size(795, 44);
             this.txtAproximacionDiag.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.txtAproximacionDiag.TabIndex = 185;
+            this.txtAproximacionDiag.TabIndex = 9;
             this.txtAproximacionDiag.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtAproximacionDiag.TextMarginBottom = 0;
             this.txtAproximacionDiag.TextMarginLeft = 3;
@@ -717,7 +717,7 @@
             this.label10.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(22, 965);
+            this.label10.Location = new System.Drawing.Point(36, 965);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(195, 23);
             this.label10.TabIndex = 184;
@@ -728,7 +728,7 @@
             this.label9.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(22, 891);
+            this.label9.Location = new System.Drawing.Point(36, 891);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(294, 23);
             this.label9.TabIndex = 183;
@@ -739,7 +739,7 @@
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(22, 819);
+            this.label8.Location = new System.Drawing.Point(36, 819);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(260, 23);
             this.label8.TabIndex = 182;
@@ -750,7 +750,7 @@
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(521, 9);
+            this.label7.Location = new System.Drawing.Point(535, 9);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(145, 23);
             this.label7.TabIndex = 181;
@@ -786,7 +786,7 @@
             this.txtExpedienteId.IconRight = null;
             this.txtExpedienteId.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtExpedienteId.Lines = new string[0];
-            this.txtExpedienteId.Location = new System.Drawing.Point(562, 35);
+            this.txtExpedienteId.Location = new System.Drawing.Point(576, 35);
             this.txtExpedienteId.MaxLength = 5000;
             this.txtExpedienteId.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtExpedienteId.Modified = false;
@@ -838,7 +838,7 @@
             this.label14.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(25, 339);
+            this.label14.Location = new System.Drawing.Point(39, 339);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(143, 23);
             this.label14.TabIndex = 187;
@@ -849,7 +849,7 @@
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(22, 731);
+            this.label6.Location = new System.Drawing.Point(36, 731);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(213, 23);
             this.label6.TabIndex = 179;
@@ -885,7 +885,7 @@
             this.txtRiesgoValorado.IconRight = null;
             this.txtRiesgoValorado.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtRiesgoValorado.Lines = new string[0];
-            this.txtRiesgoValorado.Location = new System.Drawing.Point(26, 758);
+            this.txtRiesgoValorado.Location = new System.Drawing.Point(40, 758);
             this.txtRiesgoValorado.MaxLength = 32767;
             this.txtRiesgoValorado.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtRiesgoValorado.Modified = false;
@@ -923,7 +923,7 @@
             this.txtRiesgoValorado.ShortcutsEnabled = true;
             this.txtRiesgoValorado.Size = new System.Drawing.Size(795, 60);
             this.txtRiesgoValorado.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.txtRiesgoValorado.TabIndex = 178;
+            this.txtRiesgoValorado.TabIndex = 7;
             this.txtRiesgoValorado.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtRiesgoValorado.TextMarginBottom = 0;
             this.txtRiesgoValorado.TextMarginLeft = 3;
@@ -944,7 +944,7 @@
             this.bunifuGradientPanel3.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(179)))), ((int)(((byte)(166)))));
             this.bunifuGradientPanel3.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(199)))), ((int)(((byte)(187)))));
             this.bunifuGradientPanel3.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(179)))), ((int)(((byte)(166)))));
-            this.bunifuGradientPanel3.Location = new System.Drawing.Point(608, 1041);
+            this.bunifuGradientPanel3.Location = new System.Drawing.Point(622, 1041);
             this.bunifuGradientPanel3.Name = "bunifuGradientPanel3";
             this.bunifuGradientPanel3.Quality = 10;
             this.bunifuGradientPanel3.Size = new System.Drawing.Size(213, 48);
@@ -962,7 +962,7 @@
             this.bunifuGradientPanel2.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(179)))), ((int)(((byte)(166)))));
             this.bunifuGradientPanel2.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(199)))), ((int)(((byte)(187)))));
             this.bunifuGradientPanel2.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(179)))), ((int)(((byte)(166)))));
-            this.bunifuGradientPanel2.Location = new System.Drawing.Point(381, 1041);
+            this.bunifuGradientPanel2.Location = new System.Drawing.Point(395, 1041);
             this.bunifuGradientPanel2.Name = "bunifuGradientPanel2";
             this.bunifuGradientPanel2.Quality = 10;
             this.bunifuGradientPanel2.Size = new System.Drawing.Size(213, 48);
@@ -973,7 +973,7 @@
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(18, 634);
+            this.label5.Location = new System.Drawing.Point(32, 634);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(457, 23);
             this.label5.TabIndex = 175;
@@ -1009,7 +1009,7 @@
             this.txtPauta.IconRight = null;
             this.txtPauta.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtPauta.Lines = new string[0];
-            this.txtPauta.Location = new System.Drawing.Point(26, 660);
+            this.txtPauta.Location = new System.Drawing.Point(40, 660);
             this.txtPauta.MaxLength = 32767;
             this.txtPauta.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtPauta.Modified = false;
@@ -1047,7 +1047,7 @@
             this.txtPauta.ShortcutsEnabled = true;
             this.txtPauta.Size = new System.Drawing.Size(795, 71);
             this.txtPauta.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.txtPauta.TabIndex = 174;
+            this.txtPauta.TabIndex = 6;
             this.txtPauta.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtPauta.TextMarginBottom = 0;
             this.txtPauta.TextMarginLeft = 3;
@@ -1061,7 +1061,7 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(18, 559);
+            this.label4.Location = new System.Drawing.Point(32, 559);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(257, 23);
             this.label4.TabIndex = 173;
@@ -1097,7 +1097,7 @@
             this.txtRedSocial.IconRight = null;
             this.txtRedSocial.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtRedSocial.Lines = new string[0];
-            this.txtRedSocial.Location = new System.Drawing.Point(26, 585);
+            this.txtRedSocial.Location = new System.Drawing.Point(40, 585);
             this.txtRedSocial.MaxLength = 32767;
             this.txtRedSocial.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtRedSocial.Modified = false;
@@ -1135,7 +1135,7 @@
             this.txtRedSocial.ShortcutsEnabled = true;
             this.txtRedSocial.Size = new System.Drawing.Size(795, 44);
             this.txtRedSocial.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.txtRedSocial.TabIndex = 172;
+            this.txtRedSocial.TabIndex = 5;
             this.txtRedSocial.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtRedSocial.TextMarginBottom = 0;
             this.txtRedSocial.TextMarginLeft = 3;
@@ -1149,7 +1149,7 @@
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(156, 444);
+            this.label3.Location = new System.Drawing.Point(170, 444);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(264, 23);
             this.label3.TabIndex = 171;
@@ -1160,7 +1160,7 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(187, 238);
+            this.label2.Location = new System.Drawing.Point(201, 238);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(63, 23);
             this.label2.TabIndex = 170;
@@ -1171,7 +1171,7 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(147, 50);
+            this.label1.Location = new System.Drawing.Point(161, 50);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(369, 23);
             this.label1.TabIndex = 169;
@@ -1207,7 +1207,7 @@
             this.txtCognicion.IconRight = null;
             this.txtCognicion.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtCognicion.Lines = new string[0];
-            this.txtCognicion.Location = new System.Drawing.Point(26, 470);
+            this.txtCognicion.Location = new System.Drawing.Point(40, 470);
             this.txtCognicion.MaxLength = 32767;
             this.txtCognicion.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtCognicion.Modified = false;
@@ -1245,7 +1245,7 @@
             this.txtCognicion.ShortcutsEnabled = true;
             this.txtCognicion.Size = new System.Drawing.Size(795, 78);
             this.txtCognicion.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.txtCognicion.TabIndex = 168;
+            this.txtCognicion.TabIndex = 4;
             this.txtCognicion.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtCognicion.TextMarginBottom = 0;
             this.txtCognicion.TextMarginLeft = 3;
@@ -1259,7 +1259,7 @@
             this.label15.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(22, 444);
+            this.label15.Location = new System.Drawing.Point(36, 444);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(140, 23);
             this.label15.TabIndex = 167;
@@ -1295,7 +1295,7 @@
             this.txtSomatizacion.IconRight = null;
             this.txtSomatizacion.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtSomatizacion.Lines = new string[0];
-            this.txtSomatizacion.Location = new System.Drawing.Point(26, 264);
+            this.txtSomatizacion.Location = new System.Drawing.Point(40, 264);
             this.txtSomatizacion.MaxLength = 32767;
             this.txtSomatizacion.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtSomatizacion.Modified = false;
@@ -1333,7 +1333,7 @@
             this.txtSomatizacion.ShortcutsEnabled = true;
             this.txtSomatizacion.Size = new System.Drawing.Size(795, 69);
             this.txtSomatizacion.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.txtSomatizacion.TabIndex = 166;
+            this.txtSomatizacion.TabIndex = 2;
             this.txtSomatizacion.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtSomatizacion.TextMarginBottom = 0;
             this.txtSomatizacion.TextMarginLeft = 3;
@@ -1347,7 +1347,7 @@
             this.label16.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(22, 238);
+            this.label16.Location = new System.Drawing.Point(36, 238);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(169, 23);
             this.label16.TabIndex = 165;
@@ -1383,7 +1383,7 @@
             this.txtEstadoConductual.IconRight = null;
             this.txtEstadoConductual.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtEstadoConductual.Lines = new string[0];
-            this.txtEstadoConductual.Location = new System.Drawing.Point(26, 168);
+            this.txtEstadoConductual.Location = new System.Drawing.Point(40, 168);
             this.txtEstadoConductual.MaxLength = 32767;
             this.txtEstadoConductual.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtEstadoConductual.Modified = false;
@@ -1421,7 +1421,7 @@
             this.txtEstadoConductual.ShortcutsEnabled = true;
             this.txtEstadoConductual.Size = new System.Drawing.Size(795, 65);
             this.txtEstadoConductual.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.txtEstadoConductual.TabIndex = 164;
+            this.txtEstadoConductual.TabIndex = 1;
             this.txtEstadoConductual.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtEstadoConductual.TextMarginBottom = 0;
             this.txtEstadoConductual.TextMarginLeft = 3;
@@ -1435,7 +1435,7 @@
             this.label13.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(22, 141);
+            this.label13.Location = new System.Drawing.Point(36, 141);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(198, 23);
             this.label13.TabIndex = 163;
@@ -1471,7 +1471,7 @@
             this.txtEstadoAnimo.IconRight = null;
             this.txtEstadoAnimo.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtEstadoAnimo.Lines = new string[0];
-            this.txtEstadoAnimo.Location = new System.Drawing.Point(26, 76);
+            this.txtEstadoAnimo.Location = new System.Drawing.Point(40, 76);
             this.txtEstadoAnimo.MaxLength = 5000;
             this.txtEstadoAnimo.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtEstadoAnimo.Modified = false;
@@ -1509,7 +1509,7 @@
             this.txtEstadoAnimo.ShortcutsEnabled = true;
             this.txtEstadoAnimo.Size = new System.Drawing.Size(795, 60);
             this.txtEstadoAnimo.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.txtEstadoAnimo.TabIndex = 162;
+            this.txtEstadoAnimo.TabIndex = 0;
             this.txtEstadoAnimo.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtEstadoAnimo.TextMarginBottom = 0;
             this.txtEstadoAnimo.TextMarginLeft = 3;
@@ -1523,7 +1523,7 @@
             this.label12.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(23, 50);
+            this.label12.Location = new System.Drawing.Point(37, 50);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(129, 23);
             this.label12.TabIndex = 161;

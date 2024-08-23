@@ -203,7 +203,7 @@
             this.btnOlvidarContrasena.OnPressedState.IconLeftImage = null;
             this.btnOlvidarContrasena.OnPressedState.IconRightImage = null;
             this.btnOlvidarContrasena.Size = new System.Drawing.Size(246, 31);
-            this.btnOlvidarContrasena.TabIndex = 21;
+            this.btnOlvidarContrasena.TabIndex = 182;
             this.btnOlvidarContrasena.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnOlvidarContrasena.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnOlvidarContrasena.TextMarginLeft = 0;
@@ -333,7 +333,7 @@
             this.btnIniciarSesion.OnPressedState.IconLeftImage = null;
             this.btnIniciarSesion.OnPressedState.IconRightImage = null;
             this.btnIniciarSesion.Size = new System.Drawing.Size(214, 60);
-            this.btnIniciarSesion.TabIndex = 9;
+            this.btnIniciarSesion.TabIndex = 2;
             this.btnIniciarSesion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnIniciarSesion.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnIniciarSesion.TextMarginLeft = 0;
@@ -431,7 +431,7 @@
             this.txtUsuario.ShortcutsEnabled = false;
             this.txtUsuario.Size = new System.Drawing.Size(498, 72);
             this.txtUsuario.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.txtUsuario.TabIndex = 3;
+            this.txtUsuario.TabIndex = 0;
             this.txtUsuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtUsuario.TextMarginBottom = 0;
             this.txtUsuario.TextMarginLeft = 12;
@@ -549,7 +549,7 @@
             this.txtContraseña.ShortcutsEnabled = false;
             this.txtContraseña.Size = new System.Drawing.Size(498, 72);
             this.txtContraseña.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.txtContraseña.TabIndex = 3;
+            this.txtContraseña.TabIndex = 1;
             this.txtContraseña.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtContraseña.TextMarginBottom = 0;
             this.txtContraseña.TextMarginLeft = 12;
