@@ -42,6 +42,8 @@
             this.bunifuPictureBox1 = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.bunifuGradientPanel1 = new Bunifu.UI.WinForms.BunifuGradientPanel();
             this.bunifuPanel2 = new Bunifu.UI.WinForms.BunifuPanel();
+            this.lblRecuerdame = new Bunifu.UI.WinForms.BunifuLabel();
+            this.cbRecuerdame = new Bunifu.UI.WinForms.BunifuCheckBox();
             this.btnOlvidarContrasena = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.bunifuShadowPanel2 = new Bunifu.UI.WinForms.BunifuShadowPanel();
             this.bunifuGradientPanel3 = new Bunifu.UI.WinForms.BunifuGradientPanel();
@@ -107,6 +109,8 @@
             this.bunifuPanel2.BorderColor = System.Drawing.Color.Transparent;
             this.bunifuPanel2.BorderRadius = 30;
             this.bunifuPanel2.BorderThickness = 1;
+            this.bunifuPanel2.Controls.Add(this.lblRecuerdame);
+            this.bunifuPanel2.Controls.Add(this.cbRecuerdame);
             this.bunifuPanel2.Controls.Add(this.btnOlvidarContrasena);
             this.bunifuPanel2.Controls.Add(this.bunifuShadowPanel2);
             this.bunifuPanel2.Controls.Add(this.bunifuShadowPanel3);
@@ -119,6 +123,77 @@
             this.bunifuPanel2.ShowBorders = true;
             this.bunifuPanel2.Size = new System.Drawing.Size(710, 729);
             this.bunifuPanel2.TabIndex = 0;
+            // 
+            // lblRecuerdame
+            // 
+            this.lblRecuerdame.AllowParentOverrides = false;
+            this.lblRecuerdame.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblRecuerdame.AutoEllipsis = false;
+            this.lblRecuerdame.Cursor = System.Windows.Forms.Cursors.Default;
+            this.lblRecuerdame.CursorType = System.Windows.Forms.Cursors.Default;
+            this.lblRecuerdame.Font = new System.Drawing.Font("Century Gothic", 14.25F);
+            this.lblRecuerdame.Location = new System.Drawing.Point(169, 444);
+            this.lblRecuerdame.Name = "lblRecuerdame";
+            this.lblRecuerdame.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblRecuerdame.Size = new System.Drawing.Size(121, 22);
+            this.lblRecuerdame.TabIndex = 184;
+            this.lblRecuerdame.Text = "Recuerdame";
+            this.lblRecuerdame.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lblRecuerdame.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // cbRecuerdame
+            // 
+            this.cbRecuerdame.AllowBindingControlAnimation = true;
+            this.cbRecuerdame.AllowBindingControlColorChanges = false;
+            this.cbRecuerdame.AllowBindingControlLocation = true;
+            this.cbRecuerdame.AllowCheckBoxAnimation = false;
+            this.cbRecuerdame.AllowCheckmarkAnimation = true;
+            this.cbRecuerdame.AllowOnHoverStates = true;
+            this.cbRecuerdame.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cbRecuerdame.AutoCheck = true;
+            this.cbRecuerdame.BackColor = System.Drawing.Color.Transparent;
+            this.cbRecuerdame.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cbRecuerdame.BackgroundImage")));
+            this.cbRecuerdame.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.cbRecuerdame.BindingControlPosition = Bunifu.UI.WinForms.BunifuCheckBox.BindingControlPositions.Right;
+            this.cbRecuerdame.BorderRadius = 5;
+            this.cbRecuerdame.Checked = true;
+            this.cbRecuerdame.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Checked;
+            this.cbRecuerdame.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbRecuerdame.CustomCheckmarkImage = null;
+            this.cbRecuerdame.Location = new System.Drawing.Point(137, 442);
+            this.cbRecuerdame.MinimumSize = new System.Drawing.Size(17, 17);
+            this.cbRecuerdame.Name = "cbRecuerdame";
+            this.cbRecuerdame.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(161)))), ((int)(((byte)(159)))));
+            this.cbRecuerdame.OnCheck.BorderRadius = 5;
+            this.cbRecuerdame.OnCheck.BorderThickness = 2;
+            this.cbRecuerdame.OnCheck.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(161)))), ((int)(((byte)(159)))));
+            this.cbRecuerdame.OnCheck.CheckmarkColor = System.Drawing.Color.White;
+            this.cbRecuerdame.OnCheck.CheckmarkThickness = 2;
+            this.cbRecuerdame.OnDisable.BorderColor = System.Drawing.Color.LightGray;
+            this.cbRecuerdame.OnDisable.BorderRadius = 5;
+            this.cbRecuerdame.OnDisable.BorderThickness = 2;
+            this.cbRecuerdame.OnDisable.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.cbRecuerdame.OnDisable.CheckmarkColor = System.Drawing.Color.LightGray;
+            this.cbRecuerdame.OnDisable.CheckmarkThickness = 2;
+            this.cbRecuerdame.OnHoverChecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(161)))), ((int)(((byte)(159)))));
+            this.cbRecuerdame.OnHoverChecked.BorderRadius = 5;
+            this.cbRecuerdame.OnHoverChecked.BorderThickness = 2;
+            this.cbRecuerdame.OnHoverChecked.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(161)))), ((int)(((byte)(159)))));
+            this.cbRecuerdame.OnHoverChecked.CheckmarkColor = System.Drawing.Color.White;
+            this.cbRecuerdame.OnHoverChecked.CheckmarkThickness = 2;
+            this.cbRecuerdame.OnHoverUnchecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(161)))), ((int)(((byte)(159)))));
+            this.cbRecuerdame.OnHoverUnchecked.BorderRadius = 5;
+            this.cbRecuerdame.OnHoverUnchecked.BorderThickness = 1;
+            this.cbRecuerdame.OnHoverUnchecked.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.cbRecuerdame.OnUncheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(161)))), ((int)(((byte)(159)))));
+            this.cbRecuerdame.OnUncheck.BorderRadius = 5;
+            this.cbRecuerdame.OnUncheck.BorderThickness = 1;
+            this.cbRecuerdame.OnUncheck.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.cbRecuerdame.Size = new System.Drawing.Size(26, 26);
+            this.cbRecuerdame.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
+            this.cbRecuerdame.TabIndex = 183;
+            this.cbRecuerdame.ThreeState = false;
+            this.cbRecuerdame.ToolTipText = null;
             // 
             // btnOlvidarContrasena
             // 
@@ -220,7 +295,7 @@
             this.bunifuShadowPanel2.Controls.Add(this.bunifuGradientPanel3);
             this.bunifuShadowPanel2.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
             this.bunifuShadowPanel2.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
-            this.bunifuShadowPanel2.Location = new System.Drawing.Point(401, 543);
+            this.bunifuShadowPanel2.Location = new System.Drawing.Point(391, 543);
             this.bunifuShadowPanel2.Name = "bunifuShadowPanel2";
             this.bunifuShadowPanel2.PanelColor = System.Drawing.Color.Transparent;
             this.bunifuShadowPanel2.PanelColor2 = System.Drawing.Color.Transparent;
@@ -229,7 +304,7 @@
             this.bunifuShadowPanel2.ShadowDepth = 5;
             this.bunifuShadowPanel2.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Surrounded;
             this.bunifuShadowPanel2.ShadowTopLeftVisible = false;
-            this.bunifuShadowPanel2.Size = new System.Drawing.Size(217, 64);
+            this.bunifuShadowPanel2.Size = new System.Drawing.Size(227, 64);
             this.bunifuShadowPanel2.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
             this.bunifuShadowPanel2.TabIndex = 14;
             // 
@@ -244,10 +319,10 @@
             this.bunifuGradientPanel3.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(173)))), ((int)(((byte)(220)))));
             this.bunifuGradientPanel3.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(93)))), ((int)(((byte)(254)))));
             this.bunifuGradientPanel3.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(173)))), ((int)(((byte)(220)))));
-            this.bunifuGradientPanel3.Location = new System.Drawing.Point(2, 2);
+            this.bunifuGradientPanel3.Location = new System.Drawing.Point(2, 1);
             this.bunifuGradientPanel3.Name = "bunifuGradientPanel3";
             this.bunifuGradientPanel3.Quality = 10;
-            this.bunifuGradientPanel3.Size = new System.Drawing.Size(214, 60);
+            this.bunifuGradientPanel3.Size = new System.Drawing.Size(223, 60);
             this.bunifuGradientPanel3.TabIndex = 12;
             // 
             // btnIniciarSesion
@@ -255,6 +330,7 @@
             this.btnIniciarSesion.AllowAnimations = true;
             this.btnIniciarSesion.AllowMouseEffects = true;
             this.btnIniciarSesion.AllowToggling = false;
+            this.btnIniciarSesion.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnIniciarSesion.AnimationSpeed = 200;
             this.btnIniciarSesion.AutoGenerateColors = false;
             this.btnIniciarSesion.AutoRoundBorders = false;
@@ -278,7 +354,6 @@
             this.btnIniciarSesion.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnIniciarSesion.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.btnIniciarSesion.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.btnIniciarSesion.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnIniciarSesion.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
             this.btnIniciarSesion.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIniciarSesion.ForeColor = System.Drawing.Color.White;
@@ -332,7 +407,7 @@
             this.btnIniciarSesion.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btnIniciarSesion.OnPressedState.IconLeftImage = null;
             this.btnIniciarSesion.OnPressedState.IconRightImage = null;
-            this.btnIniciarSesion.Size = new System.Drawing.Size(214, 60);
+            this.btnIniciarSesion.Size = new System.Drawing.Size(223, 60);
             this.btnIniciarSesion.TabIndex = 2;
             this.btnIniciarSesion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnIniciarSesion.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -623,14 +698,16 @@
         private Bunifu.UI.WinForms.BunifuPanel bunifuPanel2;
         public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnOlvidarContrasena;
         public Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel2;
-        private Bunifu.UI.WinForms.BunifuGradientPanel bunifuGradientPanel3;
         public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnIniciarSesion;
-        private Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel3;
         public Bunifu.UI.WinForms.BunifuTextBox txtUsuario;
         public Bunifu.UI.WinForms.BunifuPictureBox btnSalir;
         public Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel1;
         public Bunifu.UI.WinForms.BunifuTextBox txtContraseña;
-        private Bunifu.UI.WinForms.BunifuLabel lblBienvenido;
         private Bunifu.UI.WinForms.BunifuPanel bunifuPanel1;
+        public Bunifu.UI.WinForms.BunifuLabel lblRecuerdame;
+        public Bunifu.UI.WinForms.BunifuCheckBox cbRecuerdame;
+        public Bunifu.UI.WinForms.BunifuGradientPanel bunifuGradientPanel3;
+        public Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel3;
+        public Bunifu.UI.WinForms.BunifuLabel lblBienvenido;
     }
 }

@@ -4,8 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
+using System.Windows.Forms;
 
-namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
+namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo
 {
     internal class Conexion
     {
@@ -17,19 +18,20 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             try
             {
                 //Definiendo las variables de conexión
-                string servidor = "JOR\\SQLEXPRESS01"; //Pongan su dirección de SQL Server, en mi caso es esa bv
+                string servidor = "Edwin\\SQLEXPRESS"; //Pongan su dirección de SQL Server, en mi caso es esa bv
                 string DBnombre = "ADNE2024"; //Queda igual, ya que es el nombre de la DB
 
                 //Creando objeto ObjConexion de tipo SqlConnection con los datos de la conexión hacia la base de datos
                 SqlConnection ObjConexion = new SqlConnection($"Server = {servidor}; Database = {DBnombre}; Integrated Security = true");
-                //Abrimos la conexión
+                //Abrimos la conexiónssq
                 ObjConexion.Open();
 
                 //Retornamos la conexión
                 return ObjConexion;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                MessageBox.Show(ex.Message);
                 //En caso de que exista el error se retorna una conexión nula
                 return null;
             }

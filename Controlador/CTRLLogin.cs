@@ -25,10 +25,15 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             ObjLogin = Vista;
 
             // Creando el evento EventHandler con el botón Ingresar, y los eventos KeyDown y Click
+            ObjLogin.Load += new EventHandler(CargarLogIn);
             ObjLogin.btnIniciarSesion.Click += new EventHandler(AccederLogin);
             ObjLogin.btnOlvidarContrasena.Click += new EventHandler(OlvidarContrasena);
         }
-
+        private void CargarLogIn(object sender, EventArgs e)
+        {
+            ObjLogin.txtUsuario.Text = Properties.Settings.Default.Usuario;
+            ObjLogin.txtContraseña.Text = Properties.Settings.Default.Contrasena;
+        }
         // Creando un método llamado AccederLogin que tomará como proceso los valores dentro de la clase DAO y del DTO
         private void AccederLogin(object sender, EventArgs e)
         {
@@ -65,6 +70,20 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                     {
                         MessageBox.Show("El usuario o contraseña son incorrectos", "Inicio de sesión", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
+                    if (ObjLogin.cbRecuerdame.Checked == true)
+                    {
+                        string usuario = ObjDAOUsuario.Usuario;
+                        Properties.Settings.Default.Usuario = ObjLogin.txtUsuario.Text;
+                        Properties.Settings.Default.Contrasena = ObjLogin.txtContraseña.Text;
+                        Properties.Settings.Default.Save();
+                    }
+                    else
+                    {
+                        string usuario = ObjDAOUsuario.Usuario;
+                        Properties.Settings.Default.Usuario = "";
+                        Properties.Settings.Default.Contrasena = "";
+                        Properties.Settings.Default.Save();
+                    }
                 }
             }
             catch (Exception ex)
@@ -72,7 +91,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                 MessageBox.Show(ex.Message);
             }
         }
-
         private void OlvidarContrasena(object sender, EventArgs e)
         {
             RecuperarContraseñaOPCForm ObjRecuperarContrasenaOPC = new RecuperarContraseñaOPCForm();
