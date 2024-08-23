@@ -29,18 +29,19 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ActividadesForm));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges25 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges26 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges27 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges28 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             this.bunifuShadowPanel4 = new Bunifu.UI.WinForms.BunifuShadowPanel();
-            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
             this.pnlSemanaHolder = new Bunifu.UI.WinForms.BunifuGradientPanel();
             this.pnlSemana = new Bunifu.UI.WinForms.BunifuShadowPanel();
             this.bunifuGradientPanel5 = new Bunifu.UI.WinForms.BunifuGradientPanel();
             this.btnCalendario = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.bunifuGradientPanel4 = new Bunifu.UI.WinForms.BunifuGradientPanel();
             this.lblSemana = new Bunifu.UI.WinForms.BunifuLabel();
+            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.btnExpediente = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.btnInfo = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.lblSigCita = new Bunifu.UI.WinForms.BunifuLabel();
@@ -65,12 +66,12 @@
             this.bunifuShadowPanel3 = new Bunifu.UI.WinForms.BunifuShadowPanel();
             this.bunifuGradientPanel1 = new Bunifu.UI.WinForms.BunifuGradientPanel();
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
-            this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
             this.bunifuShadowPanel4.SuspendLayout();
-            this.flowLayoutPanel3.SuspendLayout();
+            this.flowLayoutPanel4.SuspendLayout();
             this.pnlSemanaHolder.SuspendLayout();
             this.pnlSemana.SuspendLayout();
             this.bunifuGradientPanel5.SuspendLayout();
+            this.flowLayoutPanel3.SuspendLayout();
             this.bunifuShadowPanel2.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             this.pnlBienvenida.SuspendLayout();
@@ -82,7 +83,6 @@
             this.bunifuShadowPanel3.SuspendLayout();
             this.bunifuGradientPanel1.SuspendLayout();
             this.bunifuPanel1.SuspendLayout();
-            this.flowLayoutPanel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // bunifuShadowPanel4
@@ -109,15 +109,15 @@
             this.bunifuShadowPanel4.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
             this.bunifuShadowPanel4.TabIndex = 22;
             // 
-            // flowLayoutPanel3
+            // flowLayoutPanel4
             // 
-            this.flowLayoutPanel3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.flowLayoutPanel3.Controls.Add(this.bunifuShadowPanel4);
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(26, 393);
-            this.flowLayoutPanel3.Margin = new System.Windows.Forms.Padding(2);
-            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(626, 316);
-            this.flowLayoutPanel3.TabIndex = 0;
+            this.flowLayoutPanel4.Controls.Add(this.pnlSemanaHolder);
+            this.flowLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel4.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel4.Margin = new System.Windows.Forms.Padding(2);
+            this.flowLayoutPanel4.Name = "flowLayoutPanel4";
+            this.flowLayoutPanel4.Size = new System.Drawing.Size(626, 316);
+            this.flowLayoutPanel4.TabIndex = 1;
             // 
             // pnlSemanaHolder
             // 
@@ -200,11 +200,11 @@
             this.btnCalendario.ColorContrastOnClick = 45;
             this.btnCalendario.ColorContrastOnHover = 45;
             this.btnCalendario.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges25.BottomLeft = true;
-            borderEdges25.BottomRight = true;
-            borderEdges25.TopLeft = true;
-            borderEdges25.TopRight = true;
-            this.btnCalendario.CustomizableEdges = borderEdges25;
+            borderEdges1.BottomLeft = true;
+            borderEdges1.BottomRight = true;
+            borderEdges1.TopLeft = true;
+            borderEdges1.TopRight = true;
+            this.btnCalendario.CustomizableEdges = borderEdges1;
             this.btnCalendario.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnCalendario.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnCalendario.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -307,6 +307,16 @@
             this.lblSemana.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lblSemana.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
+            // flowLayoutPanel3
+            // 
+            this.flowLayoutPanel3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.flowLayoutPanel3.Controls.Add(this.bunifuShadowPanel4);
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(26, 393);
+            this.flowLayoutPanel3.Margin = new System.Windows.Forms.Padding(2);
+            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(626, 316);
+            this.flowLayoutPanel3.TabIndex = 0;
+            // 
             // btnExpediente
             // 
             this.btnExpediente.AllowAnimations = true;
@@ -327,11 +337,11 @@
             this.btnExpediente.ColorContrastOnClick = 45;
             this.btnExpediente.ColorContrastOnHover = 45;
             this.btnExpediente.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges26.BottomLeft = true;
-            borderEdges26.BottomRight = true;
-            borderEdges26.TopLeft = true;
-            borderEdges26.TopRight = true;
-            this.btnExpediente.CustomizableEdges = borderEdges26;
+            borderEdges2.BottomLeft = true;
+            borderEdges2.BottomRight = true;
+            borderEdges2.TopLeft = true;
+            borderEdges2.TopRight = true;
+            this.btnExpediente.CustomizableEdges = borderEdges2;
             this.btnExpediente.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnExpediente.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnExpediente.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -417,11 +427,11 @@
             this.btnInfo.ColorContrastOnClick = 45;
             this.btnInfo.ColorContrastOnHover = 45;
             this.btnInfo.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges27.BottomLeft = true;
-            borderEdges27.BottomRight = true;
-            borderEdges27.TopLeft = true;
-            borderEdges27.TopRight = true;
-            this.btnInfo.CustomizableEdges = borderEdges27;
+            borderEdges3.BottomLeft = true;
+            borderEdges3.BottomRight = true;
+            borderEdges3.TopLeft = true;
+            borderEdges3.TopRight = true;
+            this.btnInfo.CustomizableEdges = borderEdges3;
             this.btnInfo.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnInfo.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnInfo.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -499,7 +509,7 @@
             this.lblSigCita.Location = new System.Drawing.Point(27, 23);
             this.lblSigCita.Name = "lblSigCita";
             this.lblSigCita.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblSigCita.Size = new System.Drawing.Size(211, 40);
+            this.lblSigCita.Size = new System.Drawing.Size(226, 41);
             this.lblSigCita.TabIndex = 12;
             this.lblSigCita.Text = "Siguiente cita";
             this.lblSigCita.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -633,10 +643,10 @@
             // 
             this.picADNE.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.picADNE.Image = global::Empresa_laboral_ADNE___Proyecto_PTC.Properties.Resources.Adne_cortado;
-            this.picADNE.Location = new System.Drawing.Point(679, 325);
+            this.picADNE.Location = new System.Drawing.Point(673, 326);
             this.picADNE.Margin = new System.Windows.Forms.Padding(2);
             this.picADNE.Name = "picADNE";
-            this.picADNE.Size = new System.Drawing.Size(364, 428);
+            this.picADNE.Size = new System.Drawing.Size(338, 394);
             this.picADNE.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picADNE.TabIndex = 23;
             this.picADNE.TabStop = false;
@@ -671,7 +681,7 @@
             this.lblPaciente.Location = new System.Drawing.Point(321, 92);
             this.lblPaciente.Name = "lblPaciente";
             this.lblPaciente.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblPaciente.Size = new System.Drawing.Size(51, 15);
+            this.lblPaciente.Size = new System.Drawing.Size(120, 30);
             this.lblPaciente.TabIndex = 15;
             this.lblPaciente.Text = "Paciente:";
             this.lblPaciente.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -689,7 +699,7 @@
             this.lblDia.Location = new System.Drawing.Point(45, 96);
             this.lblDia.Name = "lblDia";
             this.lblDia.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblDia.Size = new System.Drawing.Size(21, 15);
+            this.lblDia.Size = new System.Drawing.Size(48, 30);
             this.lblDia.TabIndex = 13;
             this.lblDia.Text = "Día:";
             this.lblDia.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -733,7 +743,7 @@
             this.lblHora.Location = new System.Drawing.Point(45, 143);
             this.lblHora.Name = "lblHora";
             this.lblHora.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblHora.Size = new System.Drawing.Size(29, 15);
+            this.lblHora.Size = new System.Drawing.Size(67, 30);
             this.lblHora.TabIndex = 14;
             this.lblHora.Text = "Hora:";
             this.lblHora.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -782,11 +792,11 @@
             this.btnPacientes.ColorContrastOnClick = 45;
             this.btnPacientes.ColorContrastOnHover = 45;
             this.btnPacientes.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges28.BottomLeft = true;
-            borderEdges28.BottomRight = true;
-            borderEdges28.TopLeft = true;
-            borderEdges28.TopRight = true;
-            this.btnPacientes.CustomizableEdges = borderEdges28;
+            borderEdges4.BottomLeft = true;
+            borderEdges4.BottomRight = true;
+            borderEdges4.TopLeft = true;
+            borderEdges4.TopRight = true;
+            this.btnPacientes.CustomizableEdges = borderEdges4;
             this.btnPacientes.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnPacientes.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnPacientes.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -864,7 +874,7 @@
             this.lblHistorial.Location = new System.Drawing.Point(15, 60);
             this.lblHistorial.Name = "lblHistorial";
             this.lblHistorial.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblHistorial.Size = new System.Drawing.Size(245, 40);
+            this.lblHistorial.Size = new System.Drawing.Size(262, 41);
             this.lblHistorial.TabIndex = 11;
             this.lblHistorial.Text = "Historial de hoy";
             this.lblHistorial.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -959,16 +969,6 @@
             this.bunifuPanel1.Size = new System.Drawing.Size(1011, 720);
             this.bunifuPanel1.TabIndex = 2;
             // 
-            // flowLayoutPanel4
-            // 
-            this.flowLayoutPanel4.Controls.Add(this.pnlSemanaHolder);
-            this.flowLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel4.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutPanel4.Margin = new System.Windows.Forms.Padding(2);
-            this.flowLayoutPanel4.Name = "flowLayoutPanel4";
-            this.flowLayoutPanel4.Size = new System.Drawing.Size(626, 316);
-            this.flowLayoutPanel4.TabIndex = 1;
-            // 
             // ActividadesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -980,11 +980,12 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Actividades";
             this.bunifuShadowPanel4.ResumeLayout(false);
-            this.flowLayoutPanel3.ResumeLayout(false);
+            this.flowLayoutPanel4.ResumeLayout(false);
             this.pnlSemanaHolder.ResumeLayout(false);
             this.pnlSemanaHolder.PerformLayout();
             this.pnlSemana.ResumeLayout(false);
             this.bunifuGradientPanel5.ResumeLayout(false);
+            this.flowLayoutPanel3.ResumeLayout(false);
             this.bunifuShadowPanel2.ResumeLayout(false);
             this.flowLayoutPanel2.ResumeLayout(false);
             this.pnlBienvenida.ResumeLayout(false);
@@ -999,7 +1000,6 @@
             this.bunifuShadowPanel3.ResumeLayout(false);
             this.bunifuGradientPanel1.ResumeLayout(false);
             this.bunifuPanel1.ResumeLayout(false);
-            this.flowLayoutPanel4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
