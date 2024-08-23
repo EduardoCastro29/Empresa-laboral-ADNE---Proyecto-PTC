@@ -10,7 +10,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo
 {
     internal class Conexion
     {
-        //jor
         //Creando el método llamado Conectar como método de encapsulación público
         //De esta forma, puede acceder a otras clases externas para poderse utilizar como herencia de SqlConnection para la conexión de la DB
         public static SqlConnection Conectar()
@@ -22,7 +21,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo
                 string DBnombre = "ADNE2024"; //Queda igual, ya que es el nombre de la DB
 
                 //Creando objeto ObjConexion de tipo SqlConnection con los datos de la conexión hacia la base de datos
-                SqlConnection ObjConexion = new SqlConnection($"Server = {servidor}; Database = {DBnombre}; Integrated Security = true");
+                SqlConnection ObjConexion = new SqlConnection($"Server = {servidor}; Database = {DBnombre}; Integrated Security = True");
                 //Abrimos la conexiónssq
                 ObjConexion.Open();
 
@@ -31,8 +30,8 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
                 //En caso de que exista el error se retorna una conexión nula
+                MessageBox.Show(ex.Message);
                 return null;
             }
         }
