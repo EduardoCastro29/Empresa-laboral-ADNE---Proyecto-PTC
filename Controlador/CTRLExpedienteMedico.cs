@@ -30,27 +30,11 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
         }
 
         //ABRIR EXPEDIENTE
-
         private void CargarExpediente(object sender, EventArgs e)
         {
             ObjExpediente.btnModificar.Enabled = false;
+            ObjExpediente.btnGuardar.Enabled = true;
         }
-
-        //private bool VerificarTextBox()
-        //{
-        //    foreach (Control control in ObjExpediente.Controls)
-        //    {
-        //        if (control is TextBox)
-        //        {
-        //            TextBox textBox = control as TextBox;
-        //            if (string.IsNullOrWhiteSpace(textBox.Text))
-        //            {
-        //                return false; // Si algún TextBox está vacío, retorna falso
-        //            }
-        //        }
-        //    }
-        //    return true; // Todos los TextBox están llenos
-        //}
 
         //INSERT
         private void ExpedienteDataInsert(object sender, EventArgs e)
@@ -58,7 +42,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             try
             {
                 //Dado el objeto del DAOExpedienteMédico, evaluamos si los datos fueron ingresados correctamente dados sus métodos
-                if (/*string.IsNullOrWhiteSpace(ObjExpediente.txtPacienteId.Text.Trim()) ||*/
+                if (string.IsNullOrWhiteSpace(ObjExpediente.txtPacienteId.Text.Trim()) || //////////
                      string.IsNullOrWhiteSpace(ObjExpediente.txtExpedienteId.Text.Trim()) ||
                      string.IsNullOrWhiteSpace(ObjExpediente.txtEstadoAnimo.Text.Trim()) ||
                      string.IsNullOrWhiteSpace(ObjExpediente.txtEstadoConductual.Text.Trim()) ||
@@ -82,7 +66,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                     DAOExpedienteMedico ObjDAOExpediente = new DAOExpedienteMedico();
 
                     //Obtenemos datos del objeto ObjDAOExpediente
-                    //ObjDAOExpediente.PacienteId = int.Parse(ObjExpediente.txtPacienteId.Text.Trim());
+                    ObjDAOExpediente.PacienteId = int.Parse(ObjExpediente.txtPacienteId.Text.Trim()); ///////////////
                     ObjDAOExpediente.ExpedienteId = int.Parse(ObjExpediente.txtExpedienteId.Text);
                     ObjDAOExpediente.EstadoAnimo = ObjExpediente.txtEstadoAnimo.Text.Trim();
                     ObjDAOExpediente.EstadoConductual = ObjExpediente.txtEstadoConductual.Text.Trim();
@@ -96,8 +80,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                     ObjDAOExpediente.AproximacionDiag = ObjExpediente.txtAproximacionDiag.Text.Trim();
                     ObjDAOExpediente.AtencionBrindada = ObjExpediente.txtAtencionBrindada.Text.Trim();
 
-
-
                     //Se ejecuta el proceso para insertar datos mediante la invocación del método del DAOExpediente
                     bool comprobar = ObjDAOExpediente.ExpedienteInsertarDatos();
 
@@ -108,13 +90,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                                    MessageBoxButtons.OK,
                                    MessageBoxIcon.Information);
                         LimpiarCampos();
-                        //XDDDDDDD dormite maje :v lol ez
-
-                        //JUANKKKK XDDDD
-                        //mira, le modifique q en el update osea el boton de modificar en el expediente medico no este habilitado 
-                        //cuando no se haya ingresado / insertado el paciente mjjjj
-                        //btw, para que esto funque le quite lo de la foreign key de la tabla info personal vea
-                        //ademas q al final le vamos a cambiar eso por el documento presentado (DUI) tons XD
                     }
                     else
                     {
@@ -123,7 +98,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                                     MessageBoxButtons.OK,
                                     MessageBoxIcon.Error);
                     }
-
                 }
             }
             catch (Exception ex)
@@ -138,7 +112,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             try
             {
                 //Dado el objeto del DAOExpedienteMédico, evaluamos si los datos fueron ingresados correctamente dados sus métodos
-                if (/*string.IsNullOrWhiteSpace(ObjExpediente.txtPacienteId.Text.Trim()) ||*/
+                if (string.IsNullOrWhiteSpace(ObjExpediente.txtPacienteId.Text.Trim()) || ////////////////////
                      string.IsNullOrWhiteSpace(ObjExpediente.txtExpedienteId.Text.Trim()) ||
                      string.IsNullOrWhiteSpace(ObjExpediente.txtEstadoAnimo.Text.Trim()) ||
                      string.IsNullOrWhiteSpace(ObjExpediente.txtEstadoConductual.Text.Trim()) ||
@@ -157,13 +131,12 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                 }
                 else
                 {
-                    ObjExpediente.btnModificar.Enabled = true;
                     //En caso contrario, realizamos el proceso de inserción de los datos a la DB
                     //Realizamos el proceso para capturar los datos ingresados por el usuario dado el DAORegistro
                     DAOExpedienteMedico ObjDAOExpediente = new DAOExpedienteMedico();
 
                     //Obtenemos datos del objeto ObjDAOExpediente
-                    //ObjDAOExpediente.PacienteId = int.Parse(ObjExpediente.txtPacienteId.Text.Trim());
+                    ObjDAOExpediente.PacienteId = int.Parse(ObjExpediente.txtPacienteId.Text.Trim()); /////////////////
                     ObjDAOExpediente.ExpedienteId = int.Parse(ObjExpediente.txtExpedienteId.Text);
                     ObjDAOExpediente.EstadoAnimo = ObjExpediente.txtEstadoAnimo.Text.Trim();
                     ObjDAOExpediente.EstadoConductual = ObjExpediente.txtEstadoConductual.Text.Trim();
@@ -185,7 +158,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                                    "Proceso completado",
                                    MessageBoxButtons.OK,
                                    MessageBoxIcon.Information);
-                        ObjExpediente.btnModificar.Enabled = true;
+                        LimpiarCampos();
                     }
                     else
                     {
@@ -193,7 +166,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                                    "Proceso interrumpido",
                                    MessageBoxButtons.OK,
                                    MessageBoxIcon.Error);
-                        ObjExpediente.btnModificar.Enabled = false;
                     }
                 }
             }

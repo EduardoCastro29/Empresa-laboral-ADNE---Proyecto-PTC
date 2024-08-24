@@ -19,7 +19,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador.ControladorUserControl
             // Metodo para cargar la Informacion del Paciente
             ObjVerPacienteUS.btnVerInformacion.Click += new EventHandler(CargarInformacionPersonal);
             ObjVerPacienteUS.btnVerExpediente.Click += new EventHandler(CargarExpediente);
-
         }
 
         //Método para cargar los datos de expediente
@@ -48,6 +47,9 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador.ControladorUserControl
                     objExpedienteMedico.txtAproximacionDiag.Text = objDAOExpedienteMedico.AproximacionDiag;
                     objExpedienteMedico.txtAtencionBrindada.Text = objDAOExpedienteMedico.AtencionBrindada;
                     objExpedienteMedico.txtPacienteId.Text = objDAOExpedienteMedico.PacienteId.ToString();
+
+                    objExpedienteMedico.btnGuardar.Enabled = false;
+                    objExpedienteMedico.btnModificar.Enabled = true;
 
                     objExpedienteMedico.Show();
                 }

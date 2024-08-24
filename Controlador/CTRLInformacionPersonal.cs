@@ -41,16 +41,12 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             ObjInformacionPersonal.txtTelefono1.KeyPress += new KeyPressEventHandler(ValidarCampoNumero);
 
             ObjInformacionPersonal.txtCorreoElectronico.KeyPress += new KeyPressEventHandler(ValidarCampoCorreo);
-
-
-
         }
         private void GuardarInformacionPersonal(object sender, EventArgs e)
         {
             try
             {
                 //Dado el objeto del DaoInformacionPersonal, evaluamos si los datos fueron ingresados correctamente dados sus métodos
-
                 if (string.IsNullOrWhiteSpace(ObjInformacionPersonal.txtPacienteId.Text.Trim()) ||
                     string.IsNullOrWhiteSpace(ObjInformacionPersonal.txtNacionalidad.Text.Trim()) ||
                     string.IsNullOrWhiteSpace(ObjInformacionPersonal.txtDocumentoPresentado.Text.Trim()) ||
@@ -65,7 +61,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                     string.IsNullOrWhiteSpace(ObjInformacionPersonal.txtMotivoIntervencion.Text.Trim()) ||
                     string.IsNullOrWhiteSpace(ObjInformacionPersonal.txtAntecedentes.Text.Trim()) ||
                     string.IsNullOrWhiteSpace(ObjInformacionPersonal.txtDescripcion.Text.Trim()) ||
-                    ObjInformacionPersonal.dtFechaNacimiento.Value.Date>DateTime.Today ||
+                    ObjInformacionPersonal.dtFechaNacimiento.Value.Date > DateTime.Today ||
                     string.IsNullOrWhiteSpace(ObjInformacionPersonal.txtAspectosPreocupantes.Text.Trim()))
                 {
                     //Si los datos no fueron ingresados correctamente, mostramos un mensaje de error
@@ -143,12 +139,9 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
         }
         private void Modificar(object sender, EventArgs e )
         {
-
             ObjInformacionPersonal.txtEdad.Enabled = false;
             ObjInformacionPersonal.btnGuardarPaciente.Enabled = true;
-            ObjInformacionPersonal.btnModificarPaciente.Enabled = false;
-            
-
+            ObjInformacionPersonal.btnModificarPaciente.Enabled = false;           
         }
 
         private void DtFechaNacimiento_ValueChanged(object sender, EventArgs e)
