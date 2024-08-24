@@ -191,12 +191,12 @@
             this.lblPinAcceso.AutoEllipsis = false;
             this.lblPinAcceso.Cursor = System.Windows.Forms.Cursors.Default;
             this.lblPinAcceso.CursorType = System.Windows.Forms.Cursors.Default;
-            this.lblPinAcceso.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPinAcceso.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPinAcceso.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(86)))), ((int)(((byte)(100)))));
             this.lblPinAcceso.Location = new System.Drawing.Point(52, 130);
             this.lblPinAcceso.Name = "lblPinAcceso";
             this.lblPinAcceso.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblPinAcceso.Size = new System.Drawing.Size(258, 24);
+            this.lblPinAcceso.Size = new System.Drawing.Size(248, 23);
             this.lblPinAcceso.TabIndex = 999;
             this.lblPinAcceso.Text = "Ingresa el pin de acceso:";
             this.lblPinAcceso.TextAlignment = System.Drawing.ContentAlignment.TopLeft;

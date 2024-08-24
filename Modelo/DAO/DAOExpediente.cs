@@ -18,7 +18,7 @@ using System.Web.UI.WebControls.WebParts;
 
 namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
 {
-    internal class DAOExpedienteMedico : DTOExpedienteMedico
+    internal class DAOExpediente : DTOExpedienteMedico
     {
         readonly SqlCommand Conexion = new SqlCommand();
         public bool ExpedienteInsertarDatos()

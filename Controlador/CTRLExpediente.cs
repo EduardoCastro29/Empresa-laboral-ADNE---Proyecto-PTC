@@ -11,14 +11,14 @@ using Empresa_laboral_ADNE___Proyecto_PTC.Controlador;
 
 namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
 {
-    internal class CTRLExpedienteMedico
+    internal class CTRLExpediente
     {
         readonly ExpedienteMédicoForm ObjExpediente;
         //Empezamos la encapsulación de la clase Controlador Expediente
         //Esta tendrá como parámetros el formulario Expediente Médico haciendo referencia a la carpeta Vista
 
         //Primer controlador de la Vista de ExpedienteMedicoForms
-        public CTRLExpedienteMedico(ExpedienteMédicoForm Vista)
+        public CTRLExpediente(ExpedienteMédicoForm Vista)
         {
             //Enlazando el objeto con la Vista dentro del constructor
             ObjExpediente = Vista;
@@ -32,8 +32,12 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
         //ABRIR EXPEDIENTE
         private void CargarExpediente(object sender, EventArgs e)
         {
-            ObjExpediente.btnModificar.Enabled = false;
-            ObjExpediente.btnGuardar.Enabled = true;
+            if (ObjExpediente.txtPacienteId.Text == "")
+            {
+                ObjExpediente.btnModificar.Enabled = false;
+            }
+            //ObjExpediente.btnModificar.Enabled = false;
+            //ObjExpediente.btnGuardar.Enabled = true;
         }
 
         //INSERT
@@ -63,7 +67,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                 {
                     //En caso contrario, realizamos el proceso de inserción de los datos a la DB
                     //Realizamos el proceso para capturar los datos ingresados por el usuario dado el DAORegistro
-                    DAOExpedienteMedico ObjDAOExpediente = new DAOExpedienteMedico();
+                    DAOExpediente ObjDAOExpediente = new DAOExpediente();
 
                     //Obtenemos datos del objeto ObjDAOExpediente
                     ObjDAOExpediente.PacienteId = int.Parse(ObjExpediente.txtPacienteId.Text.Trim()); ///////////////
@@ -133,7 +137,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                 {
                     //En caso contrario, realizamos el proceso de inserción de los datos a la DB
                     //Realizamos el proceso para capturar los datos ingresados por el usuario dado el DAORegistro
-                    DAOExpedienteMedico ObjDAOExpediente = new DAOExpedienteMedico();
+                    DAOExpediente ObjDAOExpediente = new DAOExpediente();
 
                     //Obtenemos datos del objeto ObjDAOExpediente
                     ObjDAOExpediente.PacienteId = int.Parse(ObjExpediente.txtPacienteId.Text.Trim()); /////////////////
@@ -187,6 +191,8 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             ObjExpediente.txtObservacion.Clear();
             ObjExpediente.txtAproximacionDiag.Clear();
             ObjExpediente.txtAtencionBrindada.Clear();
+            ObjExpediente.txtExpedienteId.Clear();
+            ObjExpediente.txtPacienteId.Clear();
         }
     }
 }

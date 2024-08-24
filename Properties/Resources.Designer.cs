@@ -73,6 +73,16 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ActualizarCMS {
+            get {
+                object obj = ResourceManager.GetObject("ActualizarCMS", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Adne_cortado {
             get {
                 object obj = ResourceManager.GetObject("Adne cortado", resourceCulture);
@@ -166,6 +176,16 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Properties {
         internal static System.Drawing.Bitmap Configuracion {
             get {
                 object obj = ResourceManager.GetObject("Configuracion", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap EliminarCMS {
+            get {
+                object obj = ResourceManager.GetObject("EliminarCMS", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

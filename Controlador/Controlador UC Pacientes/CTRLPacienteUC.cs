@@ -26,7 +26,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador.ControladorUserControl
         {
             try
             {
-                DAOExpedienteMedico objDAOExpedienteMedico = new DAOExpedienteMedico();
+                DAOExpediente objDAOExpedienteMedico = new DAOExpediente();
                 objDAOExpedienteMedico.PacienteId = int.Parse(ObjVerPacienteUS.lblPacienteId.Text);
 
                 //Se asigna el ID del expediente que se desea cargar

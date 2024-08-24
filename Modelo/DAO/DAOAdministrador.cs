@@ -96,6 +96,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                                                 "telefono			= @telefono, " +
                                                 "nombre				= @nombre, " +
                                                 "apellido			= @apellido, " +
+                                                "correoElectronico	= @correoElectronico, " +
                                                 "foto				= @foto, " +
                                                 "desempenoId		= @desempenoId, " +
                                                 "especialidadId		= @especialidadId, " +
@@ -111,6 +112,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                 ObjComandoSQLServerProfesional.Parameters.AddWithValue("@telefono", Telefono);
                 ObjComandoSQLServerProfesional.Parameters.AddWithValue("@nombre", Nombres);
                 ObjComandoSQLServerProfesional.Parameters.AddWithValue("@apellido", Apellidos);
+                ObjComandoSQLServerProfesional.Parameters.AddWithValue("@correoElectronico", Correo);
                 ObjComandoSQLServerProfesional.Parameters.AddWithValue("@foto", Imagen);
                 ObjComandoSQLServerProfesional.Parameters.AddWithValue("@desempenoId", DesempenoId);
                 ObjComandoSQLServerProfesional.Parameters.AddWithValue("@especialidadId", Especialidad);

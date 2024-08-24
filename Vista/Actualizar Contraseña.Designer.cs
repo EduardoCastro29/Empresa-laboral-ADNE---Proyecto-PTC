@@ -171,7 +171,7 @@
             this.txtConfirmarContrasena.Padding = new System.Windows.Forms.Padding(3);
             this.txtConfirmarContrasena.PasswordChar = '\0';
             this.txtConfirmarContrasena.PlaceholderForeColor = System.Drawing.Color.Gray;
-            this.txtConfirmarContrasena.PlaceholderText = "";
+            this.txtConfirmarContrasena.PlaceholderText = "Confirmar contraseña";
             this.txtConfirmarContrasena.ReadOnly = false;
             this.txtConfirmarContrasena.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtConfirmarContrasena.SelectedText = "";
@@ -186,7 +186,7 @@
             this.txtConfirmarContrasena.TextMarginBottom = 0;
             this.txtConfirmarContrasena.TextMarginLeft = 3;
             this.txtConfirmarContrasena.TextMarginTop = 1;
-            this.txtConfirmarContrasena.TextPlaceholder = "";
+            this.txtConfirmarContrasena.TextPlaceholder = "Confirmar contraseña";
             this.txtConfirmarContrasena.UseSystemPasswordChar = false;
             this.txtConfirmarContrasena.WordWrap = true;
             // 
@@ -272,7 +272,7 @@
             this.txtNuevaContrasena.Padding = new System.Windows.Forms.Padding(3);
             this.txtNuevaContrasena.PasswordChar = '\0';
             this.txtNuevaContrasena.PlaceholderForeColor = System.Drawing.Color.Gray;
-            this.txtNuevaContrasena.PlaceholderText = "";
+            this.txtNuevaContrasena.PlaceholderText = "Nueva contraseña";
             this.txtNuevaContrasena.ReadOnly = false;
             this.txtNuevaContrasena.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtNuevaContrasena.SelectedText = "";
@@ -287,7 +287,7 @@
             this.txtNuevaContrasena.TextMarginBottom = 0;
             this.txtNuevaContrasena.TextMarginLeft = 3;
             this.txtNuevaContrasena.TextMarginTop = 1;
-            this.txtNuevaContrasena.TextPlaceholder = "";
+            this.txtNuevaContrasena.TextPlaceholder = "Nueva contraseña";
             this.txtNuevaContrasena.UseSystemPasswordChar = false;
             this.txtNuevaContrasena.WordWrap = true;
             // 

@@ -16,7 +16,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Vista
         public ExpedienteMédicoForm()
         {
             InitializeComponent();
-            CTRLExpedienteMedico ObjControladorExpediente = new CTRLExpedienteMedico(this);
+            CTRLExpediente ObjControladorExpediente = new CTRLExpediente(this);
         }
     }
 }

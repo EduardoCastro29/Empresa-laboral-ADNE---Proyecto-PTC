@@ -347,12 +347,12 @@
             this.lblOpciones.AutoEllipsis = false;
             this.lblOpciones.Cursor = System.Windows.Forms.Cursors.Default;
             this.lblOpciones.CursorType = System.Windows.Forms.Cursors.Default;
-            this.lblOpciones.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOpciones.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblOpciones.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(86)))), ((int)(((byte)(100)))));
             this.lblOpciones.Location = new System.Drawing.Point(46, 126);
             this.lblOpciones.Name = "lblOpciones";
             this.lblOpciones.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblOpciones.Size = new System.Drawing.Size(436, 24);
+            this.lblOpciones.Size = new System.Drawing.Size(417, 23);
             this.lblOpciones.TabIndex = 5;
             this.lblOpciones.Text = "Selecciona una de las siguientes opciones:";
             this.lblOpciones.TextAlignment = System.Drawing.ContentAlignment.TopLeft;

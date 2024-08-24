@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing;
+using System.Data;
 using System.Runtime.InteropServices.ComTypes;
 using Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DTO;
 
@@ -28,22 +29,24 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
         {
             ObjAdministradorForm = Vista;
 
-            ObjAdministradorForm.Load += new EventHandler(CargarEmpleados);
+            RecargarDGVEmpleados();
             //Creamos el evento que nos redireccionará al formulario de Agregar nuevo Profesional
             ObjAdministradorForm.btnAñadirProfesional.Click += new EventHandler(AbrirAgregarProfesional);
-            ObjAdministradorForm.btnActualizar.Click += new EventHandler(AbrirActualizarProfesional);
-            ObjAdministradorForm.btnEliminarProfesional.Click += new EventHandler(EliminarProfesional);
+            ObjAdministradorForm.cmsActualizar.Click += new EventHandler(AbrirActualizarProfesional);
+            ObjAdministradorForm.cmsEliminarProfesional.Click += new EventHandler(EliminarProfesional);
         }
-        private void CargarEmpleados(object sender, EventArgs e)
+        #region Llenado de DataGridView (Empleados)
+        private void RecargarDGVEmpleados()
         {
             DAOAdministrador ObjDAOLlenarDGV = new DAOAdministrador();
+            DataTable ObjDTLlenarDGV = ObjDAOLlenarDGV.CargarDataGrid();
             try
             {
                 //Indicamos que el DGV no posee datos
                 ObjAdministradorForm.dgvAdministrarProfesional.DataSource = null;
 
                 //Cargamos los datos
-                ObjAdministradorForm.dgvAdministrarProfesional.DataSource = ObjDAOLlenarDGV.CargarDataGrid();
+                ObjAdministradorForm.dgvAdministrarProfesional.DataSource = ObjDTLlenarDGV;
 
                 //Indicamos que columnas no queremos que se muestren a simple vista
                 ObjAdministradorForm.dgvAdministrarProfesional.Columns[0].Visible = false;
@@ -55,11 +58,15 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                 MessageBox.Show(ex.Message);
             }
         }
+        #endregion
         private void AbrirAgregarProfesional(object sender, EventArgs e)
         {
             //Procedemos a abrir el formulario de agregar nuevo profesional
             RegistroForm ObjAgregarRegistroProfesional = new RegistroForm();
-            ObjAgregarRegistroProfesional.Show();
+            ObjAgregarRegistroProfesional.ShowDialog();
+
+            //Refrescamos el DataGridView cuando el formulario se cierre por completo
+            RecargarDGVEmpleados();
         }
         private void AbrirActualizarProfesional(object sender, EventArgs e)
         {
@@ -104,7 +111,10 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             ObjActualizarProfesional.btnRegistrar.Visible = false;
             ObjActualizarProfesional.bpRegistrar.Visible = false;
             //Mostramos el Formulario
-            ObjActualizarProfesional.Show();
+            ObjActualizarProfesional.ShowDialog();
+
+            //Refrescamos el DataGridView cuando el formulario se cierre por completo
+            RecargarDGVEmpleados();
         }
         private void EliminarProfesional(object sender, EventArgs e)
         {
@@ -114,7 +124,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             //Capturamos el valor del ID que queremos eliminar
             int IDUsuario = int.Parse(ObjAdministradorForm.dgvAdministrarProfesional[1, PosicionFila].Value.ToString());
 
-            //Si el usuario coincide con el estado activo dentro del programa, significa que no podrá ser registrado
+            //Si el usuario coincide con el estado activo dentro del programa, significa que no podrá ser eliminado
             if (IDUsuario == InicioSesion.UsuarioId)
             {
                 MessageBox.Show("El profesional seleccionado corresponde al usuario conectado, no puede ser eliminado", "Eliminar Profesional", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -151,6 +161,15 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             ObjRegistroForm.btnGuardar.Click += new EventHandler(ActualizarRegistroProfesional);
             ObjRegistroForm.btnCargarImagen.Click += new EventHandler(CargarImagenProfesional);
             ObjRegistroForm.btnEliminar.Click += new EventHandler(EliminarFotoProfesional);
+
+            //Validar los diferentes TextBox que se encuentran dentro del formulario
+            ObjRegistroForm.txtNombre.KeyPress += new KeyPressEventHandler(ValidarCampoLetra);
+            ObjRegistroForm.txtApellido.KeyPress += new KeyPressEventHandler(ValidarCampoLetra);
+
+            ObjRegistroForm.txtDui.KeyPress += new KeyPressEventHandler(ValidarCampoNumero);
+            ObjRegistroForm.txtTelefono.KeyPress += new KeyPressEventHandler(ValidarCampoNumero);
+            ObjRegistroForm.txtUsuario.KeyPress += new KeyPressEventHandler(ValidarCampoUsuario);
+            ObjRegistroForm.txtCorreo.KeyPress += new KeyPressEventHandler(ValidarCampoCorreo);
         }
         private void AccionesIniciales(object sender, EventArgs e)
         {
@@ -246,11 +265,8 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                     }
                     else
                     {
-                        //Creamos un nuevo objeto del Administrador Formulario, para cargar los valores del formulario
-                        AdministradorForm ObjMostrarAdministradorForm = new AdministradorForm();
                         //Ocultamos el formulario de Registro
                         ObjRegistroForm.Hide();
-                        ObjMostrarAdministradorForm.Show();
                     }
                 }
             }
@@ -330,11 +346,8 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                     }
                     else
                     {
-                        //Creamos un nuevo objeto del Administrador Formulario, para cargar los valores del formulario
-                        AdministradorForm ObjMostrarAdministradorForm = new AdministradorForm();
                         //Ocultamos el formulario de Registro
                         ObjRegistroForm.Hide();
-                        ObjMostrarAdministradorForm.Show();
                     }
                 }
             }
@@ -364,5 +377,80 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
         {
             ObjRegistroForm.picProfesional.Image = null;
         }
+        #region Validaciones de Campos
+        //Validaciones de campos
+        private void ValidarCampoCorreo(object sender, KeyPressEventArgs e)
+        {
+            //La propiedad char.IsControl permite controles como BackSpace, Inicio, Fin, etc.
+            if (char.IsControl(e.KeyChar))
+            {
+                //Retornamos los valores e.KeyChar
+                return;
+            }
+            //Declaramos la variable de tipo char que recibirá los parámetros de las letras registradas por las variables e.KeyChar creadas anteriormente
+            char ch = e.KeyChar;
+
+            //Declaramos lo valores que únicamente permitirá el textbox
+            if ((ch >= '0' && ch <= '9') ||
+                 (ch >= 'A' && ch <= 'Z') ||
+                (ch >= 'a' && ch <= 'z') ||
+                 ch == '.' ||
+                 ch == '@' ||
+                 ch == '_')
+            {
+                //Retornamos los valores e.KeyChar
+                return;
+            }
+            //Indicamos que se creará el evento e.Char con todos los valores antes proporcionados, como un EventHandler
+            e.Handled = true;
+        }
+        private void ValidarCampoUsuario(object sender, KeyPressEventArgs e)
+        {
+            //La propiedad char.IsControl permite controles como BackSpace, Inicio, Fin, etc.
+            if (char.IsControl(e.KeyChar))
+            {
+                //Retornamos los valores e.KeyChar//Declaramos la variable de tipo char que recibirá los parámetros de las letras registradas por las variables e.KeyChar creadas anteriormente
+                return;
+            }
+            //Declaramos la variable de tipo char que recibirá los parámetros de las letras registradas por las variables e.KeyChar creadas anteriormente
+            char ch = e.KeyChar;
+
+            //Declaramos lo valores que únicamente permitirá el textbox
+            if ((ch >= '0' && ch <= '9') ||
+                (ch >= 'A' && ch <= 'Z') ||
+                (ch >= 'a' && ch <= 'z'))
+            {
+                //Retornamos los valores e.KeyChar
+                return;
+            }
+            //Indicamos que se creará el evento e.Char con todos los valores antes proporcionados, como un EventHandler
+            e.Handled = true;
+        }
+        private void ValidarCampoLetra(object sender, KeyPressEventArgs e)
+        {
+            //La propiedad char.IsControl permite controles como BackSpace, Inicio, Fin, etc.
+            if (char.IsControl(e.KeyChar))
+            {
+                //Retornamos los valores e.KeyChar
+                return;
+            }
+            //Declaramos la variable de tipo char que recibirá los parámetros de las letras registradas por las variables e.KeyChar creadas anteriormente
+            if (char.IsLetter(e.KeyChar) || e.KeyChar == ' ')
+            {
+                //Retornamos los valores e.KeyChar
+                return;
+            }
+            //Indicamos que se creará el evento e.Char con todos los valores antes proporcionados, como un EventHandler
+            e.Handled = true;
+        }
+        private void ValidarCampoNumero(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsDigit(e.KeyChar))
+            {
+                return;
+            }
+            e.Handled = true;
+        }
+        #endregion
     }
 }

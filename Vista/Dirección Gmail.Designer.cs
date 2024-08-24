@@ -404,12 +404,12 @@
             this.lblIngresarCorreo.AutoEllipsis = false;
             this.lblIngresarCorreo.Cursor = System.Windows.Forms.Cursors.Default;
             this.lblIngresarCorreo.CursorType = System.Windows.Forms.Cursors.Default;
-            this.lblIngresarCorreo.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIngresarCorreo.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIngresarCorreo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(86)))), ((int)(((byte)(100)))));
             this.lblIngresarCorreo.Location = new System.Drawing.Point(45, 132);
             this.lblIngresarCorreo.Name = "lblIngresarCorreo";
             this.lblIngresarCorreo.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblIngresarCorreo.Size = new System.Drawing.Size(260, 24);
+            this.lblIngresarCorreo.Size = new System.Drawing.Size(249, 23);
             this.lblIngresarCorreo.TabIndex = 5;
             this.lblIngresarCorreo.Text = "Ingresa tu email o usuario";
             this.lblIngresarCorreo.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
