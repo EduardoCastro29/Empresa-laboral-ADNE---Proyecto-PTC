@@ -274,6 +274,7 @@
             // dgvAdministrarProfesional
             // 
             this.dgvAdministrarProfesional.AllowCustomTheming = false;
+            this.dgvAdministrarProfesional.AllowUserToAddRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(223)))), ((int)(((byte)(223)))));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
             this.dgvAdministrarProfesional.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
@@ -433,9 +434,9 @@
             this.bunifuTextBox1.AutoSizeHeight = true;
             this.bunifuTextBox1.BackColor = System.Drawing.Color.White;
             this.bunifuTextBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuTextBox1.BackgroundImage")));
-            this.bunifuTextBox1.BorderColorActive = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(234)))), ((int)(((byte)(176)))));
+            this.bunifuTextBox1.BorderColorActive = System.Drawing.Color.Teal;
             this.bunifuTextBox1.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.bunifuTextBox1.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(234)))), ((int)(((byte)(176)))));
+            this.bunifuTextBox1.BorderColorHover = System.Drawing.Color.LightSeaGreen;
             this.bunifuTextBox1.BorderColorIdle = System.Drawing.Color.DarkGray;
             this.bunifuTextBox1.BorderRadius = 20;
             this.bunifuTextBox1.BorderThickness = 2;
@@ -458,7 +459,7 @@
             this.bunifuTextBox1.Modified = false;
             this.bunifuTextBox1.Multiline = false;
             this.bunifuTextBox1.Name = "bunifuTextBox1";
-            stateProperties1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(234)))), ((int)(((byte)(176)))));
+            stateProperties1.BorderColor = System.Drawing.Color.Teal;
             stateProperties1.FillColor = System.Drawing.Color.Empty;
             stateProperties1.ForeColor = System.Drawing.Color.Empty;
             stateProperties1.PlaceholderForeColor = System.Drawing.Color.Empty;
@@ -468,7 +469,7 @@
             stateProperties2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             stateProperties2.PlaceholderForeColor = System.Drawing.Color.DarkGray;
             this.bunifuTextBox1.OnDisabledState = stateProperties2;
-            stateProperties3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(234)))), ((int)(((byte)(176)))));
+            stateProperties3.BorderColor = System.Drawing.Color.LightSeaGreen;
             stateProperties3.FillColor = System.Drawing.Color.Empty;
             stateProperties3.ForeColor = System.Drawing.Color.Empty;
             stateProperties3.PlaceholderForeColor = System.Drawing.Color.Empty;

@@ -71,7 +71,7 @@
             this.bunifuGradientPanel2.Location = new System.Drawing.Point(0, 0);
             this.bunifuGradientPanel2.Name = "bunifuGradientPanel2";
             this.bunifuGradientPanel2.Quality = 10;
-            this.bunifuGradientPanel2.Size = new System.Drawing.Size(1015, 510);
+            this.bunifuGradientPanel2.Size = new System.Drawing.Size(1080, 500);
             this.bunifuGradientPanel2.TabIndex = 2;
             // 
             // bunifuGradientPanel1
@@ -92,10 +92,10 @@
             this.bunifuGradientPanel1.GradientBottomRight = System.Drawing.Color.Gainsboro;
             this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.White;
             this.bunifuGradientPanel1.GradientTopRight = System.Drawing.Color.White;
-            this.bunifuGradientPanel1.Location = new System.Drawing.Point(150, 38);
+            this.bunifuGradientPanel1.Location = new System.Drawing.Point(160, 27);
             this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
             this.bunifuGradientPanel1.Quality = 10;
-            this.bunifuGradientPanel1.Size = new System.Drawing.Size(739, 424);
+            this.bunifuGradientPanel1.Size = new System.Drawing.Size(759, 436);
             this.bunifuGradientPanel1.TabIndex = 3;
             // 
             // lblConfirmacion
@@ -157,7 +157,7 @@
             this.btnAceptarGmail.IdleIconLeftImage = null;
             this.btnAceptarGmail.IdleIconRightImage = null;
             this.btnAceptarGmail.IndicateFocus = false;
-            this.btnAceptarGmail.Location = new System.Drawing.Point(543, 237);
+            this.btnAceptarGmail.Location = new System.Drawing.Point(553, 243);
             this.btnAceptarGmail.Name = "btnAceptarGmail";
             this.btnAceptarGmail.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnAceptarGmail.OnDisabledState.BorderRadius = 5;
@@ -206,12 +206,12 @@
             this.lblOlvidasteContraseña.AutoEllipsis = false;
             this.lblOlvidasteContraseña.Cursor = System.Windows.Forms.Cursors.Default;
             this.lblOlvidasteContraseña.CursorType = System.Windows.Forms.Cursors.Default;
-            this.lblOlvidasteContraseña.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOlvidasteContraseña.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblOlvidasteContraseña.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(86)))), ((int)(((byte)(100)))));
-            this.lblOlvidasteContraseña.Location = new System.Drawing.Point(36, 28);
+            this.lblOlvidasteContraseña.Location = new System.Drawing.Point(38, 44);
             this.lblOlvidasteContraseña.Name = "lblOlvidasteContraseña";
             this.lblOlvidasteContraseña.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblOlvidasteContraseña.Size = new System.Drawing.Size(422, 40);
+            this.lblOlvidasteContraseña.Size = new System.Drawing.Size(411, 39);
             this.lblOlvidasteContraseña.TabIndex = 14;
             this.lblOlvidasteContraseña.Text = "¿Olvidaste tu contraseña?";
             this.lblOlvidasteContraseña.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -265,7 +265,7 @@
             this.btnSiguiente.IdleIconLeftImage = null;
             this.btnSiguiente.IdleIconRightImage = null;
             this.btnSiguiente.IndicateFocus = false;
-            this.btnSiguiente.Location = new System.Drawing.Point(543, 359);
+            this.btnSiguiente.Location = new System.Drawing.Point(554, 360);
             this.btnSiguiente.Name = "btnSiguiente";
             this.btnSiguiente.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnSiguiente.OnDisabledState.BorderRadius = 5;
@@ -355,7 +355,7 @@
             this.btnCancelar.IdleIconLeftImage = null;
             this.btnCancelar.IdleIconRightImage = null;
             this.btnCancelar.IndicateFocus = false;
-            this.btnCancelar.Location = new System.Drawing.Point(368, 359);
+            this.btnCancelar.Location = new System.Drawing.Point(387, 360);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnCancelar.OnDisabledState.BorderRadius = 5;
@@ -404,14 +404,14 @@
             this.lblIngresarCorreo.AutoEllipsis = false;
             this.lblIngresarCorreo.Cursor = System.Windows.Forms.Cursors.Default;
             this.lblIngresarCorreo.CursorType = System.Windows.Forms.Cursors.Default;
-            this.lblIngresarCorreo.Font = new System.Drawing.Font("Century Gothic", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIngresarCorreo.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIngresarCorreo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(86)))), ((int)(((byte)(100)))));
-            this.lblIngresarCorreo.Location = new System.Drawing.Point(36, 123);
+            this.lblIngresarCorreo.Location = new System.Drawing.Point(45, 132);
             this.lblIngresarCorreo.Name = "lblIngresarCorreo";
             this.lblIngresarCorreo.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblIngresarCorreo.Size = new System.Drawing.Size(830, 40);
+            this.lblIngresarCorreo.Size = new System.Drawing.Size(260, 24);
             this.lblIngresarCorreo.TabIndex = 5;
-            this.lblIngresarCorreo.Text = "Ingresa tu dirección de correo electrónico o usuario";
+            this.lblIngresarCorreo.Text = "Ingresa tu email o usuario";
             this.lblIngresarCorreo.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lblIngresarCorreo.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
@@ -425,7 +425,7 @@
             this.bunifuShadowPanel2.Controls.Add(this.txtIngresarEmail);
             this.bunifuShadowPanel2.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
             this.bunifuShadowPanel2.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
-            this.bunifuShadowPanel2.Location = new System.Drawing.Point(36, 169);
+            this.bunifuShadowPanel2.Location = new System.Drawing.Point(37, 170);
             this.bunifuShadowPanel2.Name = "bunifuShadowPanel2";
             this.bunifuShadowPanel2.PanelColor = System.Drawing.Color.White;
             this.bunifuShadowPanel2.PanelColor2 = System.Drawing.Color.White;
@@ -434,7 +434,7 @@
             this.bunifuShadowPanel2.ShadowDepth = 5;
             this.bunifuShadowPanel2.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Surrounded;
             this.bunifuShadowPanel2.ShadowTopLeftVisible = false;
-            this.bunifuShadowPanel2.Size = new System.Drawing.Size(672, 62);
+            this.bunifuShadowPanel2.Size = new System.Drawing.Size(684, 62);
             this.bunifuShadowPanel2.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
             this.bunifuShadowPanel2.TabIndex = 3;
             // 
@@ -449,9 +449,9 @@
             this.txtIngresarEmail.AutoSizeHeight = true;
             this.txtIngresarEmail.BackColor = System.Drawing.Color.Transparent;
             this.txtIngresarEmail.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txtIngresarEmail.BackgroundImage")));
-            this.txtIngresarEmail.BorderColorActive = System.Drawing.Color.DodgerBlue;
+            this.txtIngresarEmail.BorderColorActive = System.Drawing.Color.Teal;
             this.txtIngresarEmail.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.txtIngresarEmail.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.txtIngresarEmail.BorderColorHover = System.Drawing.Color.LightSeaGreen;
             this.txtIngresarEmail.BorderColorIdle = System.Drawing.Color.Silver;
             this.txtIngresarEmail.BorderRadius = 12;
             this.txtIngresarEmail.BorderThickness = 0;
@@ -468,13 +468,13 @@
             this.txtIngresarEmail.IconRight = null;
             this.txtIngresarEmail.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtIngresarEmail.Lines = new string[0];
-            this.txtIngresarEmail.Location = new System.Drawing.Point(2, 3);
+            this.txtIngresarEmail.Location = new System.Drawing.Point(3, 2);
             this.txtIngresarEmail.MaxLength = 124;
             this.txtIngresarEmail.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtIngresarEmail.Modified = false;
             this.txtIngresarEmail.Multiline = false;
             this.txtIngresarEmail.Name = "txtIngresarEmail";
-            stateProperties1.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties1.BorderColor = System.Drawing.Color.Teal;
             stateProperties1.FillColor = System.Drawing.Color.Empty;
             stateProperties1.ForeColor = System.Drawing.Color.Empty;
             stateProperties1.PlaceholderForeColor = System.Drawing.Color.Empty;
@@ -484,7 +484,7 @@
             stateProperties2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             stateProperties2.PlaceholderForeColor = System.Drawing.Color.DarkGray;
             this.txtIngresarEmail.OnDisabledState = stateProperties2;
-            stateProperties3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties3.BorderColor = System.Drawing.Color.LightSeaGreen;
             stateProperties3.FillColor = System.Drawing.Color.Empty;
             stateProperties3.ForeColor = System.Drawing.Color.Empty;
             stateProperties3.PlaceholderForeColor = System.Drawing.Color.Empty;
@@ -503,8 +503,8 @@
             this.txtIngresarEmail.SelectedText = "";
             this.txtIngresarEmail.SelectionLength = 0;
             this.txtIngresarEmail.SelectionStart = 0;
-            this.txtIngresarEmail.ShortcutsEnabled = true;
-            this.txtIngresarEmail.Size = new System.Drawing.Size(666, 56);
+            this.txtIngresarEmail.ShortcutsEnabled = false;
+            this.txtIngresarEmail.Size = new System.Drawing.Size(677, 56);
             this.txtIngresarEmail.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtIngresarEmail.TabIndex = 6;
             this.txtIngresarEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -524,7 +524,7 @@
             this.Titulo_Registrar.CursorType = System.Windows.Forms.Cursors.Default;
             this.Titulo_Registrar.Font = new System.Drawing.Font("Century Gothic", 21.75F);
             this.Titulo_Registrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(86)))), ((int)(((byte)(100)))));
-            this.Titulo_Registrar.Location = new System.Drawing.Point(58, 68);
+            this.Titulo_Registrar.Location = new System.Drawing.Point(68, 74);
             this.Titulo_Registrar.Name = "Titulo_Registrar";
             this.Titulo_Registrar.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Titulo_Registrar.Size = new System.Drawing.Size(0, 0);
@@ -540,7 +540,7 @@
             this.bunifuShadowPanel1.BorderThickness = 1;
             this.bunifuShadowPanel1.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
             this.bunifuShadowPanel1.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
-            this.bunifuShadowPanel1.Location = new System.Drawing.Point(150, 30);
+            this.bunifuShadowPanel1.Location = new System.Drawing.Point(160, 19);
             this.bunifuShadowPanel1.Name = "bunifuShadowPanel1";
             this.bunifuShadowPanel1.PanelColor = System.Drawing.Color.Transparent;
             this.bunifuShadowPanel1.PanelColor2 = System.Drawing.Color.Transparent;
@@ -549,7 +549,7 @@
             this.bunifuShadowPanel1.ShadowDepth = 3;
             this.bunifuShadowPanel1.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Surrounded;
             this.bunifuShadowPanel1.ShadowTopLeftVisible = false;
-            this.bunifuShadowPanel1.Size = new System.Drawing.Size(739, 442);
+            this.bunifuShadowPanel1.Size = new System.Drawing.Size(759, 458);
             this.bunifuShadowPanel1.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
             this.bunifuShadowPanel1.TabIndex = 4;
             // 
@@ -559,18 +559,19 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1015, 510);
+            this.panel1.Size = new System.Drawing.Size(1080, 500);
             this.panel1.TabIndex = 4;
             // 
             // DirecciónGmailForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1015, 510);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(168)))), ((int)(((byte)(161)))));
+            this.ClientSize = new System.Drawing.Size(1080, 500);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.MaximumSize = new System.Drawing.Size(1015, 510);
-            this.MinimumSize = new System.Drawing.Size(1015, 510);
+            this.MaximumSize = new System.Drawing.Size(1080, 500);
+            this.MinimumSize = new System.Drawing.Size(1080, 500);
             this.Name = "DirecciónGmailForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dirección Gmail";
@@ -584,8 +585,6 @@
         }
 
         #endregion
-
-        private Bunifu.UI.WinForms.BunifuGradientPanel bunifuGradientPanel2;
         private Bunifu.UI.WinForms.BunifuGradientPanel bunifuGradientPanel1;
         public System.Windows.Forms.Label lblConfirmacion;
         public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnAceptarGmail;
@@ -598,5 +597,6 @@
         private Bunifu.UI.WinForms.BunifuLabel Titulo_Registrar;
         private Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel1;
         private System.Windows.Forms.Panel panel1;
+        public Bunifu.UI.WinForms.BunifuGradientPanel bunifuGradientPanel2;
     }
 }

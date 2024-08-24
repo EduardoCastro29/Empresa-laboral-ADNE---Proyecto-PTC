@@ -232,9 +232,9 @@
             this.txtBuscarCita.AutoSizeHeight = true;
             this.txtBuscarCita.BackColor = System.Drawing.Color.Transparent;
             this.txtBuscarCita.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txtBuscarCita.BackgroundImage")));
-            this.txtBuscarCita.BorderColorActive = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(234)))), ((int)(((byte)(176)))));
+            this.txtBuscarCita.BorderColorActive = System.Drawing.Color.Teal;
             this.txtBuscarCita.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.txtBuscarCita.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(234)))), ((int)(((byte)(176)))));
+            this.txtBuscarCita.BorderColorHover = System.Drawing.Color.LightSeaGreen;
             this.txtBuscarCita.BorderColorIdle = System.Drawing.Color.White;
             this.txtBuscarCita.BorderRadius = 60;
             this.txtBuscarCita.BorderThickness = 0;
@@ -257,7 +257,7 @@
             this.txtBuscarCita.Modified = false;
             this.txtBuscarCita.Multiline = false;
             this.txtBuscarCita.Name = "txtBuscarCita";
-            stateProperties1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(234)))), ((int)(((byte)(176)))));
+            stateProperties1.BorderColor = System.Drawing.Color.Teal;
             stateProperties1.FillColor = System.Drawing.Color.Empty;
             stateProperties1.ForeColor = System.Drawing.Color.Empty;
             stateProperties1.PlaceholderForeColor = System.Drawing.Color.Empty;
@@ -267,7 +267,7 @@
             stateProperties2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             stateProperties2.PlaceholderForeColor = System.Drawing.Color.DarkGray;
             this.txtBuscarCita.OnDisabledState = stateProperties2;
-            stateProperties3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(234)))), ((int)(((byte)(176)))));
+            stateProperties3.BorderColor = System.Drawing.Color.LightSeaGreen;
             stateProperties3.FillColor = System.Drawing.Color.Empty;
             stateProperties3.ForeColor = System.Drawing.Color.Empty;
             stateProperties3.PlaceholderForeColor = System.Drawing.Color.Empty;
