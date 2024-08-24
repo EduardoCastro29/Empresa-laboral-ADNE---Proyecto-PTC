@@ -1618,18 +1618,9 @@
         }
 
         #endregion
-
-        private Bunifu.UI.WinForms.BunifuLabel lblTelefono;
         public System.Windows.Forms.MaskedTextBox txtDui;
-        private Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel4;
         public Bunifu.UI.WinForms.BunifuTextBox txtUsuario;
-        private Bunifu.UI.WinForms.BunifuLabel lblUsuario;
-        private Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel5;
-        private Bunifu.UI.WinForms.BunifuLabel lblDui;
-        private Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel3;
         public Bunifu.UI.WinForms.BunifuTextBox txtApellido;
-        private Bunifu.UI.WinForms.BunifuPanel bunifuPanel1;
-        private Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel1;
         public Bunifu.UI.WinForms.BunifuTextBox txtNombre;
         public Bunifu.UI.WinForms.BunifuLabel lblApellidos;
         public Bunifu.UI.WinForms.BunifuLabel lblNombres;
@@ -1641,24 +1632,14 @@
         public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnEliminar;
         public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnRegistrar;
         public System.Windows.Forms.MaskedTextBox txtTelefono;
-        private Bunifu.UI.WinForms.BunifuGradientPanel bunifuGradientPanel1;
         public Bunifu.UI.WinForms.BunifuPanel bunifuPanel4;
         public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnCargarImagen;
         public System.Windows.Forms.ComboBox cmbDesempeno;
-        private Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel11;
-        private Bunifu.UI.WinForms.BunifuLabel lblDesempeno1;
         public System.Windows.Forms.ComboBox cmbEspecialidad1;
-        private Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel9;
-        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
         public System.Windows.Forms.ComboBox cmbEspecialidad2;
-        private Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel10;
-        private Bunifu.UI.WinForms.BunifuLabel lblDesempeno2;
         public Bunifu.UI.WinForms.BunifuPictureBox picProfesional;
-        private Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel8;
         public Bunifu.UI.WinForms.BunifuTextBox txtCorreo;
-        private Bunifu.UI.WinForms.BunifuLabel lblCorreo;
         public Bunifu.UI.WinForms.BunifuTextBox txtContrasena;
-        private Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel7;
         public Bunifu.UI.WinForms.BunifuPanel bpRegistrar;
         public System.Windows.Forms.OpenFileDialog ofdImagen;
         public Bunifu.UI.WinForms.BunifuShadowPanel bsContrasena;
@@ -1669,5 +1650,23 @@
         public System.Windows.Forms.ToolStripTextBox txtIDProfesional;
         public System.Windows.Forms.ToolStripTextBox txtIDUsuario;
         public Bunifu.UI.WinForms.BunifuPanel bunifuPanel2;
+        public Bunifu.UI.WinForms.BunifuLabel lblTelefono;
+        public Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel4;
+        public Bunifu.UI.WinForms.BunifuLabel lblUsuario;
+        public Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel5;
+        public Bunifu.UI.WinForms.BunifuLabel lblDui;
+        public Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel3;
+        public Bunifu.UI.WinForms.BunifuPanel bunifuPanel1;
+        public Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel1;
+        public Bunifu.UI.WinForms.BunifuGradientPanel bunifuGradientPanel1;
+        public Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel11;
+        public Bunifu.UI.WinForms.BunifuLabel lblDesempeno1;
+        public Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel9;
+        public Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
+        public Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel10;
+        public Bunifu.UI.WinForms.BunifuLabel lblDesempeno2;
+        public Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel8;
+        public Bunifu.UI.WinForms.BunifuLabel lblCorreo;
+        public Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel7;
     }
 }

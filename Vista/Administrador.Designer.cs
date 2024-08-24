@@ -41,11 +41,11 @@
             this.bunifuGradientPanel1 = new Bunifu.UI.WinForms.BunifuGradientPanel();
             this.btnSalir = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.dgvAdministrarProfesional = new Bunifu.UI.WinForms.BunifuDataGridView();
-            this.btnAñadirProfesional = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
-            this.bunifuTextBox1 = new Bunifu.UI.WinForms.BunifuTextBox();
             this.cmsOpciones = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.cmsActualizar = new System.Windows.Forms.ToolStripMenuItem();
             this.cmsEliminarProfesional = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnAñadirProfesional = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
+            this.bunifuTextBox1 = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bunifuGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAdministrarProfesional)).BeginInit();
@@ -97,6 +97,7 @@
             this.dgvAdministrarProfesional.AllowUserToResizeColumns = false;
             this.dgvAdministrarProfesional.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(223)))), ((int)(((byte)(223)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
             this.dgvAdministrarProfesional.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvAdministrarProfesional.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -155,6 +156,28 @@
             this.dgvAdministrarProfesional.Size = new System.Drawing.Size(931, 499);
             this.dgvAdministrarProfesional.TabIndex = 99;
             this.dgvAdministrarProfesional.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Teal;
+            // 
+            // cmsOpciones
+            // 
+            this.cmsOpciones.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cmsActualizar,
+            this.cmsEliminarProfesional});
+            this.cmsOpciones.Name = "cmsOpciones";
+            this.cmsOpciones.Size = new System.Drawing.Size(189, 48);
+            // 
+            // cmsActualizar
+            // 
+            this.cmsActualizar.Image = global::Empresa_laboral_ADNE___Proyecto_PTC.Properties.Resources.ActualizarCMS;
+            this.cmsActualizar.Name = "cmsActualizar";
+            this.cmsActualizar.Size = new System.Drawing.Size(188, 22);
+            this.cmsActualizar.Text = "Actualizar profesional";
+            // 
+            // cmsEliminarProfesional
+            // 
+            this.cmsEliminarProfesional.Image = global::Empresa_laboral_ADNE___Proyecto_PTC.Properties.Resources.EliminarCMS;
+            this.cmsEliminarProfesional.Name = "cmsEliminarProfesional";
+            this.cmsEliminarProfesional.Size = new System.Drawing.Size(188, 22);
+            this.cmsEliminarProfesional.Text = "Eliminar profesional";
             // 
             // btnAñadirProfesional
             // 
@@ -321,28 +344,6 @@
             this.bunifuTextBox1.TextPlaceholder = "Buscar...";
             this.bunifuTextBox1.UseSystemPasswordChar = false;
             this.bunifuTextBox1.WordWrap = true;
-            // 
-            // cmsOpciones
-            // 
-            this.cmsOpciones.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cmsActualizar,
-            this.cmsEliminarProfesional});
-            this.cmsOpciones.Name = "cmsOpciones";
-            this.cmsOpciones.Size = new System.Drawing.Size(189, 48);
-            // 
-            // cmsActualizar
-            // 
-            this.cmsActualizar.Image = global::Empresa_laboral_ADNE___Proyecto_PTC.Properties.Resources.ActualizarCMS;
-            this.cmsActualizar.Name = "cmsActualizar";
-            this.cmsActualizar.Size = new System.Drawing.Size(188, 22);
-            this.cmsActualizar.Text = "Actualizar profesional";
-            // 
-            // cmsEliminarProfesional
-            // 
-            this.cmsEliminarProfesional.Image = global::Empresa_laboral_ADNE___Proyecto_PTC.Properties.Resources.EliminarCMS;
-            this.cmsEliminarProfesional.Name = "cmsEliminarProfesional";
-            this.cmsEliminarProfesional.Size = new System.Drawing.Size(188, 22);
-            this.cmsEliminarProfesional.Text = "Eliminar profesional";
             // 
             // AdministradorForm
             // 

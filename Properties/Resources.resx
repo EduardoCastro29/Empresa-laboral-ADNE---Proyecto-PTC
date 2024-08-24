@@ -163,6 +163,9 @@
   <data name="Equipo de Trabajo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Equipo de Trabajo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="EliminarCMS" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EliminarCMS.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Lupa" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Lupa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -193,6 +196,9 @@
   <data name="Acerca de" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Acerca de.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="bote-de-basura" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bote-de-basura.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="picture_12236752" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\picture_12236752.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -211,7 +217,7 @@
   <data name="Equipo Profesional" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Equipo Profesional.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="EliminarCMS" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\EliminarCMS.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="agregar-tarea" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\agregar-tarea.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

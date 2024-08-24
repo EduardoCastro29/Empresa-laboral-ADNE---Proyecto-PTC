@@ -123,9 +123,29 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap agregar_tarea {
+            get {
+                object obj = ResourceManager.GetObject("agregar-tarea", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap authorization {
             get {
                 object obj = ResourceManager.GetObject("authorization", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap bote_de_basura {
+            get {
+                object obj = ResourceManager.GetObject("bote-de-basura", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
