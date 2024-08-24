@@ -180,6 +180,13 @@
         AElFTkSuQmCC
 </value>
   </data>
+  <data name="bunifuPanel2.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAQ4AAAABCAYAAAAvkEDEAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAYSURBVDhPYwCB/6NgFIyCUUAkYGBgYAAACQIsDeFqsesA
+        AAAASUVORK5CYII=
+</value>
+  </data>
   <data name="btnCerrarS.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAARoAAAAxCAYAAAAFr2b7AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -193,13 +200,6 @@
         iVBORw0KGgoAAAANSUhEUgAAAP0AAAABCAYAAAAVZaieAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAWSURBVDhPYwCB/6NgFIyCEQEYGBgYACN86EJIKVy8AAAA
         AElFTkSuQmCC
-</value>
-  </data>
-  <data name="bunifuPanel2.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAQ4AAAABCAYAAAAvkEDEAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAYSURBVDhPYwCB/6NgFIyCUUAkYGBgYAAACQIsDeFqsesA
-        AAAASUVORK5CYII=
 </value>
   </data>
   <data name="bunifuPanel4.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

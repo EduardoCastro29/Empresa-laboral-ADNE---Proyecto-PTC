@@ -364,6 +364,7 @@
             // dgvCitasAgendadas
             // 
             this.dgvCitasAgendadas.AllowCustomTheming = false;
+            this.dgvCitasAgendadas.AllowUserToAddRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(223)))), ((int)(((byte)(223)))));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
             this.dgvCitasAgendadas.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;

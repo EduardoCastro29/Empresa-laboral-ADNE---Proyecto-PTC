@@ -96,7 +96,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                     ObjDAOExpediente.AproximacionDiag = ObjExpediente.txtAproximacionDiag.Text.Trim();
                     ObjDAOExpediente.AtencionBrindada = ObjExpediente.txtAtencionBrindada.Text.Trim();
 
-                    
+
 
                     //Se ejecuta el proceso para insertar datos mediante la invocación del método del DAOExpediente
                     bool comprobar = ObjDAOExpediente.ExpedienteInsertarDatos();
@@ -107,7 +107,9 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                                    "Proceso completado",
                                    MessageBoxButtons.OK,
                                    MessageBoxIcon.Information);
-                        ObjExpediente.btnModificar.Enabled = true;
+                        LimpiarCampos();
+                        //XDDDDDDD dormite maje :v lol ez
+
                         //JUANKKKK XDDDD
                         //mira, le modifique q en el update osea el boton de modificar en el expediente medico no este habilitado 
                         //cuando no se haya ingresado / insertado el paciente mjjjj
@@ -199,6 +201,20 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+        private void LimpiarCampos()
+        {
+            ObjExpediente.txtEstadoAnimo.Clear();
+            ObjExpediente.txtEstadoConductual.Clear();
+            ObjExpediente.txtSomatizacion.Clear();
+            ObjExpediente.txtVidaInterpersonal.Clear();
+            ObjExpediente.txtCognicion.Clear();
+            ObjExpediente.txtRedSocial.Clear();
+            ObjExpediente.txtPauta.Clear();
+            ObjExpediente.txtRiesgoValorado.Clear();
+            ObjExpediente.txtObservacion.Clear();
+            ObjExpediente.txtAproximacionDiag.Clear();
+            ObjExpediente.txtAtencionBrindada.Clear();
         }
     }
 }

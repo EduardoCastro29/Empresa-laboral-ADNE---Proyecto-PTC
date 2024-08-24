@@ -26,18 +26,18 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                 DAOActualizarContrasena ObjDAOActualizarContrasena = new DAOActualizarContrasena();
                 CommonMethods ObjMetodosComunes = new CommonMethods();
 
-                if (string.IsNullOrWhiteSpace(ObjActualizarForm.txtNuevaContrasena.Text.Trim()) ||
-                    string.IsNullOrWhiteSpace(ObjActualizarForm.txtConfirmarContrasena.Text.Trim()))
+                if (string.IsNullOrWhiteSpace(ObjActualizarForm.txtNuevaContrasen.Text.Trim()) ||
+                    string.IsNullOrWhiteSpace(ObjActualizarForm.txtConfirmarContrase.Text.Trim()))
                 {
                     MessageBox.Show("Uno o varios de los campos están vacios, debe de ingresar una contraseña válida", "Actualización de contraseña", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
-                else if (ObjActualizarForm.txtNuevaContrasena.Text != ObjActualizarForm.txtConfirmarContrasena.Text)
+                else if (ObjActualizarForm.txtNuevaContrasen.Text != ObjActualizarForm.txtConfirmarContrase.Text)
                 {
                     MessageBox.Show("Las credenciales no coinciden", "Actualización de contraseña", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 else
                 {
-                    ObjDAOActualizarContrasena.Contrasena = ObjMetodosComunes.MetodoEncriptacionAES(ObjActualizarForm.txtConfirmarContrasena.Text.Trim());
+                    ObjDAOActualizarContrasena.Contrasena = ObjMetodosComunes.MetodoEncriptacionAES(ObjActualizarForm.txtConfirmarContrase.Text.Trim());
 
                     if (ObjDAOActualizarContrasena.ActualizarContrasenaCorreo() == false)
                     {

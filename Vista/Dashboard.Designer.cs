@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DashboardForm));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges22 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges23 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges24 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges25 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges26 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges27 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges28 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges5 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges6 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges7 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             this.LeftMenuLayout = new System.Windows.Forms.FlowLayoutPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
@@ -86,7 +86,7 @@
             this.LeftMenuLayout.Dock = System.Windows.Forms.DockStyle.Left;
             this.LeftMenuLayout.Location = new System.Drawing.Point(0, 0);
             this.LeftMenuLayout.Name = "LeftMenuLayout";
-            this.LeftMenuLayout.Size = new System.Drawing.Size(286, 720);
+            this.LeftMenuLayout.Size = new System.Drawing.Size(286, 690);
             this.LeftMenuLayout.TabIndex = 4;
             // 
             // pictureBox1
@@ -134,11 +134,11 @@
             this.btnMenu.ColorContrastOnClick = 45;
             this.btnMenu.ColorContrastOnHover = 45;
             this.btnMenu.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges22.BottomLeft = true;
-            borderEdges22.BottomRight = true;
-            borderEdges22.TopLeft = true;
-            borderEdges22.TopRight = true;
-            this.btnMenu.CustomizableEdges = borderEdges22;
+            borderEdges1.BottomLeft = true;
+            borderEdges1.BottomRight = true;
+            borderEdges1.TopLeft = true;
+            borderEdges1.TopRight = true;
+            this.btnMenu.CustomizableEdges = borderEdges1;
             this.btnMenu.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnMenu.DisabledBorderColor = System.Drawing.Color.Transparent;
             this.btnMenu.DisabledFillColor = System.Drawing.Color.Transparent;
@@ -223,11 +223,11 @@
             this.btnMainPage.ColorContrastOnClick = 45;
             this.btnMainPage.ColorContrastOnHover = 45;
             this.btnMainPage.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges23.BottomLeft = true;
-            borderEdges23.BottomRight = true;
-            borderEdges23.TopLeft = true;
-            borderEdges23.TopRight = true;
-            this.btnMainPage.CustomizableEdges = borderEdges23;
+            borderEdges2.BottomLeft = true;
+            borderEdges2.BottomRight = true;
+            borderEdges2.TopLeft = true;
+            borderEdges2.TopRight = true;
+            this.btnMainPage.CustomizableEdges = borderEdges2;
             this.btnMainPage.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnMainPage.DisabledBorderColor = System.Drawing.Color.Transparent;
             this.btnMainPage.DisabledFillColor = System.Drawing.Color.Transparent;
@@ -312,11 +312,11 @@
             this.btnPacientes.ColorContrastOnClick = 45;
             this.btnPacientes.ColorContrastOnHover = 45;
             this.btnPacientes.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges24.BottomLeft = true;
-            borderEdges24.BottomRight = true;
-            borderEdges24.TopLeft = true;
-            borderEdges24.TopRight = true;
-            this.btnPacientes.CustomizableEdges = borderEdges24;
+            borderEdges3.BottomLeft = true;
+            borderEdges3.BottomRight = true;
+            borderEdges3.TopLeft = true;
+            borderEdges3.TopRight = true;
+            this.btnPacientes.CustomizableEdges = borderEdges3;
             this.btnPacientes.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnPacientes.DisabledBorderColor = System.Drawing.Color.Transparent;
             this.btnPacientes.DisabledFillColor = System.Drawing.Color.Transparent;
@@ -401,11 +401,11 @@
             this.btnCalendario.ColorContrastOnClick = 45;
             this.btnCalendario.ColorContrastOnHover = 45;
             this.btnCalendario.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges25.BottomLeft = true;
-            borderEdges25.BottomRight = true;
-            borderEdges25.TopLeft = true;
-            borderEdges25.TopRight = true;
-            this.btnCalendario.CustomizableEdges = borderEdges25;
+            borderEdges4.BottomLeft = true;
+            borderEdges4.BottomRight = true;
+            borderEdges4.TopLeft = true;
+            borderEdges4.TopRight = true;
+            this.btnCalendario.CustomizableEdges = borderEdges4;
             this.btnCalendario.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnCalendario.DisabledBorderColor = System.Drawing.Color.Transparent;
             this.btnCalendario.DisabledFillColor = System.Drawing.Color.Transparent;
@@ -490,11 +490,11 @@
             this.btnEquipo.ColorContrastOnClick = 45;
             this.btnEquipo.ColorContrastOnHover = 45;
             this.btnEquipo.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges26.BottomLeft = true;
-            borderEdges26.BottomRight = true;
-            borderEdges26.TopLeft = true;
-            borderEdges26.TopRight = true;
-            this.btnEquipo.CustomizableEdges = borderEdges26;
+            borderEdges5.BottomLeft = true;
+            borderEdges5.BottomRight = true;
+            borderEdges5.TopLeft = true;
+            borderEdges5.TopRight = true;
+            this.btnEquipo.CustomizableEdges = borderEdges5;
             this.btnEquipo.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnEquipo.DisabledBorderColor = System.Drawing.Color.Transparent;
             this.btnEquipo.DisabledFillColor = System.Drawing.Color.Transparent;
@@ -579,11 +579,11 @@
             this.btnConfig.ColorContrastOnClick = 45;
             this.btnConfig.ColorContrastOnHover = 45;
             this.btnConfig.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges27.BottomLeft = true;
-            borderEdges27.BottomRight = true;
-            borderEdges27.TopLeft = true;
-            borderEdges27.TopRight = true;
-            this.btnConfig.CustomizableEdges = borderEdges27;
+            borderEdges6.BottomLeft = true;
+            borderEdges6.BottomRight = true;
+            borderEdges6.TopLeft = true;
+            borderEdges6.TopRight = true;
+            this.btnConfig.CustomizableEdges = borderEdges6;
             this.btnConfig.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnConfig.DisabledBorderColor = System.Drawing.Color.Transparent;
             this.btnConfig.DisabledFillColor = System.Drawing.Color.Transparent;
@@ -699,11 +699,11 @@
             this.btnCerrarS.ColorContrastOnClick = 45;
             this.btnCerrarS.ColorContrastOnHover = 45;
             this.btnCerrarS.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges28.BottomLeft = true;
-            borderEdges28.BottomRight = true;
-            borderEdges28.TopLeft = true;
-            borderEdges28.TopRight = true;
-            this.btnCerrarS.CustomizableEdges = borderEdges28;
+            borderEdges7.BottomLeft = true;
+            borderEdges7.BottomRight = true;
+            borderEdges7.TopLeft = true;
+            borderEdges7.TopRight = true;
+            this.btnCerrarS.CustomizableEdges = borderEdges7;
             this.btnCerrarS.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnCerrarS.DisabledBorderColor = System.Drawing.Color.Transparent;
             this.btnCerrarS.DisabledFillColor = System.Drawing.Color.Transparent;
@@ -887,14 +887,14 @@
             // 
             // panelGeneralVistas
             // 
-            this.panelGeneralVistas.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panelGeneralVistas.BackColor = System.Drawing.Color.Transparent;
             this.panelGeneralVistas.BorderColor = System.Drawing.Color.Transparent;
             this.panelGeneralVistas.BorderRadius = 12;
             this.panelGeneralVistas.BorderThickness = 1;
+            this.panelGeneralVistas.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelGeneralVistas.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
             this.panelGeneralVistas.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.ForwardDiagonal;
-            this.panelGeneralVistas.Location = new System.Drawing.Point(288, 3);
+            this.panelGeneralVistas.Location = new System.Drawing.Point(286, 0);
             this.panelGeneralVistas.Margin = new System.Windows.Forms.Padding(8);
             this.panelGeneralVistas.Name = "panelGeneralVistas";
             this.panelGeneralVistas.PanelColor = System.Drawing.Color.White;
@@ -904,7 +904,7 @@
             this.panelGeneralVistas.ShadowDepth = 10;
             this.panelGeneralVistas.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.ForwardDiagonal;
             this.panelGeneralVistas.ShadowTopLeftVisible = false;
-            this.panelGeneralVistas.Size = new System.Drawing.Size(978, 681);
+            this.panelGeneralVistas.Size = new System.Drawing.Size(994, 690);
             this.panelGeneralVistas.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
             this.panelGeneralVistas.TabIndex = 5;
             // 
@@ -913,7 +913,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(140)))), ((int)(((byte)(149)))));
-            this.ClientSize = new System.Drawing.Size(1280, 720);
+            this.ClientSize = new System.Drawing.Size(1280, 690);
             this.Controls.Add(this.panelGeneralVistas);
             this.Controls.Add(this.LeftMenuLayout);
             this.MaximumSize = new System.Drawing.Size(1920, 1080);
