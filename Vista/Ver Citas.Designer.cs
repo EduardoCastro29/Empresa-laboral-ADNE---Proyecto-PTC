@@ -110,6 +110,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvCitasAgendadas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvCitasAgendadas.ColumnHeadersHeight = 40;
+            this.dgvCitasAgendadas.ContextMenuStrip = this.cmsOpciones;
             this.dgvCitasAgendadas.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(223)))), ((int)(((byte)(223)))));
             this.dgvCitasAgendadas.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
             this.dgvCitasAgendadas.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;

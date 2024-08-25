@@ -16,8 +16,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
     internal class CTRLVerCitas
     {
         readonly VerCitasForm ObjVerCitasForm;
-        AgendarCitaForm ObjVerCitasDetalladas = null;
-
         public CTRLVerCitas(VerCitasForm Vista)
         {
             ObjVerCitasForm = Vista;
@@ -66,40 +64,33 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             string NombreProfesional = ObjVerCitasForm.dgvCitasAgendadas[11, PosicionFila].Value.ToString();
             string LugarCita = ObjVerCitasForm.dgvCitasAgendadas[11, PosicionFila].Value.ToString();
 
-            if (ObjVerCitasDetalladas == null || ObjVerCitasDetalladas.IsDisposed)
-            {
-                ObjVerCitasDetalladas = new AgendarCitaForm();
+            AgendarCitaForm ObjVerCitasDetalladas = new AgendarCitaForm();
 
-                ObjVerCitasDetalladas.txtIDCita.Text = CitaID.ToString();
-                ObjVerCitasDetalladas.txtIDConsulta.Text = ConsultaID.ToString();
-                ObjVerCitasDetalladas.txtfecha.Text = FechaCita.ToString();
-                ObjVerCitasDetalladas.txtHoraInicio.Text = HoraInicioCita.ToString();
-                ObjVerCitasDetalladas.txtHoraFinal.Text = FechaFinalCita.ToString();
-                ObjVerCitasDetalladas.cmbEstado.SelectedValue = EstadoCita;
-                ObjVerCitasDetalladas.txtMotivoConsulta.Text = DescripcionCita;
-                ObjVerCitasDetalladas.txtPacienteID.Text = NombrePaciente;
-                ObjVerCitasDetalladas.txtProfesionalID.Text = NombreProfesional;
-                ObjVerCitasDetalladas.cmbLugar.SelectedValue = LugarCita;
+            ObjVerCitasDetalladas.txtIDCita.Text = CitaID.ToString();
+            ObjVerCitasDetalladas.txtIDConsulta.Text = ConsultaID.ToString();
+            ObjVerCitasDetalladas.txtfecha.Text = FechaCita.ToString();
+            ObjVerCitasDetalladas.txtHoraInicio.Text = HoraInicioCita.ToString();
+            ObjVerCitasDetalladas.txtHoraFinal.Text = FechaFinalCita.ToString();
+            ObjVerCitasDetalladas.cmbEstado.SelectedValue = EstadoCita;
+            ObjVerCitasDetalladas.txtMotivoConsulta.Text = DescripcionCita;
+            ObjVerCitasDetalladas.txtPacienteID.Text = NombrePaciente;
+            ObjVerCitasDetalladas.txtProfesionalID.Text = NombreProfesional;
+            ObjVerCitasDetalladas.cmbLugar.SelectedValue = LugarCita;
 
-                //Especificamos qué apartados no deben de mostrarse a la hora de la vista
-                ObjVerCitasDetalladas.txtfecha.Enabled = false;
-                ObjVerCitasDetalladas.txtHoraInicio.Enabled = false;
-                ObjVerCitasDetalladas.txtHoraFinal.Enabled = false;
-                ObjVerCitasDetalladas.cmbEstado.Enabled = false;
-                ObjVerCitasDetalladas.txtMotivoConsulta.Enabled = false;
-                ObjVerCitasDetalladas.txtPacienteID.Enabled = false;
-                ObjVerCitasDetalladas.txtProfesionalID.Enabled = false;
-                ObjVerCitasDetalladas.cmbLugar.Enabled = false;
-                ObjVerCitasDetalladas.btnModificar.Enabled = false;
-                ObjVerCitasDetalladas.btnGuardar.Enabled = false;
+            //Especificamos qué apartados no deben de mostrarse a la hora de la vista
+            ObjVerCitasDetalladas.txtfecha.Enabled = false;
+            ObjVerCitasDetalladas.txtHoraInicio.Enabled = false;
+            ObjVerCitasDetalladas.txtHoraFinal.Enabled = false;
+            ObjVerCitasDetalladas.cmbEstado.Enabled = false;
+            ObjVerCitasDetalladas.txtMotivoConsulta.Enabled = false;
+            ObjVerCitasDetalladas.txtPacienteID.Enabled = false;
+            ObjVerCitasDetalladas.txtProfesionalID.Enabled = false;
+            ObjVerCitasDetalladas.cmbLugar.Enabled = false;
+            ObjVerCitasDetalladas.btnModificar.Enabled = false;
+            ObjVerCitasDetalladas.btnGuardar.Enabled = false;
 
-                ObjVerCitasDetalladas.ShowDialog();
-                CargarDGVCitas();
-            }
-            else
-            {
-                ObjVerCitasDetalladas.BringToFront();
-            }
+            ObjVerCitasDetalladas.ShowDialog();
+            CargarDGVCitas();
         }
         private void ActualizarCita(object sender, EventArgs e)
         {
@@ -116,31 +107,24 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             string DescripcionCita = ObjVerCitasForm.dgvCitasAgendadas[8, PosicionFila].Value.ToString();
             string LugarCita = ObjVerCitasForm.dgvCitasAgendadas[12, PosicionFila].Value.ToString();
 
-            if (ObjVerCitasDetalladas == null || ObjVerCitasDetalladas.IsDisposed)
-            {
-                ObjVerCitasDetalladas = new AgendarCitaForm();
+            AgendarCitaForm ObjVerCitasDetalladas = new AgendarCitaForm();
 
-                ObjVerCitasDetalladas.txtIDCita.Text = CitaID.ToString();
-                ObjVerCitasDetalladas.txtIDConsulta.Text = ConsultaID.ToString();
-                ObjVerCitasDetalladas.txtPacienteID.Text = PacienteID.ToString();
-                ObjVerCitasDetalladas.txtProfesionalID.Text = ProfesionalID.ToString();
-                ObjVerCitasDetalladas.txtfecha.Text = FechaCita.ToString();
-                ObjVerCitasDetalladas.txtHoraInicio.Text = HoraInicioCita.ToString();
-                ObjVerCitasDetalladas.txtHoraFinal.Text = FechaFinalCita.ToString();
-                ObjVerCitasDetalladas.cmbEstado.SelectedValue = EstadoCita;
-                ObjVerCitasDetalladas.txtMotivoConsulta.Text = DescripcionCita;
-                ObjVerCitasDetalladas.cmbLugar.SelectedValue = LugarCita;
+            ObjVerCitasDetalladas.txtIDCita.Text = CitaID.ToString();
+            ObjVerCitasDetalladas.txtIDConsulta.Text = ConsultaID.ToString();
+            ObjVerCitasDetalladas.txtfecha.Text = FechaCita.ToString();
+            ObjVerCitasDetalladas.txtHoraInicio.Text = HoraInicioCita.ToString();
+            ObjVerCitasDetalladas.txtHoraFinal.Text = FechaFinalCita.ToString();
+            ObjVerCitasDetalladas.cmbEstado.DisplayMember = EstadoCita.ToString();
+            ObjVerCitasDetalladas.txtMotivoConsulta.Text = DescripcionCita;
+            ObjVerCitasDetalladas.txtPacienteID.Text = PacienteID.ToString();
+            ObjVerCitasDetalladas.txtProfesionalID.Text = ProfesionalID.ToString();
+            ObjVerCitasDetalladas.cmbLugar.DisplayMember = LugarCita.ToString();
 
-                //Especificamos qué apartados no deben de mostrarse a la hora de la vista
-                ObjVerCitasDetalladas.btnGuardar.Enabled = false;
+            //Especificamos qué apartados no deben de mostrarse a la hora de la vista
+            ObjVerCitasDetalladas.btnGuardar.Enabled = false;
 
-                ObjVerCitasDetalladas.ShowDialog();
-                CargarDGVCitas();
-            }
-            else
-            {
-                ObjVerCitasDetalladas.BringToFront();
-            }
+            ObjVerCitasDetalladas.ShowDialog();
+            CargarDGVCitas();
         }
         private void EliminarCita(object sender, EventArgs e)
         {

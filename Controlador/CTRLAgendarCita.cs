@@ -70,7 +70,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                     else
                     {
                         MessageBox.Show("Los datos han sido ingresados correctamente", "Agendar Cita", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        ObjAgendarCitaForm.Hide();
+                        ObjAgendarCitaForm.Close();
                     }
                 }
             }
@@ -115,7 +115,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                     else
                     {
                         MessageBox.Show("Los datos fueron actualizados correctamente", "Actualizar Cita", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        ObjAgendarCitaForm.Hide();
+                        ObjAgendarCitaForm.Close();
                     }
                 }
             }
