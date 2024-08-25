@@ -1,6 +1,6 @@
 ﻿namespace Empresa_laboral_ADNE___Proyecto_PTC.Vista
 {
-    partial class frmCitas
+    partial class CitasForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCitas));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CitasForm));
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
@@ -104,7 +104,7 @@
             this.bunifuGradientPanel2.GradientBottomRight = System.Drawing.Color.DarkCyan;
             this.bunifuGradientPanel2.GradientTopLeft = System.Drawing.Color.Teal;
             this.bunifuGradientPanel2.GradientTopRight = System.Drawing.Color.Teal;
-            this.bunifuGradientPanel2.Location = new System.Drawing.Point(19, 184);
+            this.bunifuGradientPanel2.Location = new System.Drawing.Point(19, 149);
             this.bunifuGradientPanel2.Name = "bunifuGradientPanel2";
             this.bunifuGradientPanel2.Quality = 10;
             this.bunifuGradientPanel2.Size = new System.Drawing.Size(955, 61);
@@ -200,9 +200,9 @@
             // 
             this.flpCitas.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.flpCitas.AutoScroll = true;
-            this.flpCitas.Location = new System.Drawing.Point(19, 245);
+            this.flpCitas.Location = new System.Drawing.Point(19, 210);
             this.flpCitas.Name = "flpCitas";
-            this.flpCitas.Size = new System.Drawing.Size(955, 435);
+            this.flpCitas.Size = new System.Drawing.Size(955, 463);
             this.flpCitas.TabIndex = 16;
             // 
             // bunifuPanel1
@@ -298,14 +298,15 @@
             this.txtBuscarCita.UseSystemPasswordChar = false;
             this.txtBuscarCita.WordWrap = true;
             // 
-            // frmCitas
+            // CitasForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(991, 700);
             this.Controls.Add(this.GradientPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frmCitas";
+            this.Name = "CitasForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Citas";
             this.GradientPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).EndInit();

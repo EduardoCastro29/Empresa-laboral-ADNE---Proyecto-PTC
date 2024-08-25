@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.lblDias = new System.Windows.Forms.Label();
-            this.lblCita = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblDias
@@ -44,25 +43,16 @@
             this.lblDias.TabIndex = 1;
             this.lblDias.Text = "Dias";
             // 
-            // lblCita
-            // 
-            this.lblCita.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCita.Location = new System.Drawing.Point(13, 61);
-            this.lblCita.Name = "lblCita";
-            this.lblCita.Size = new System.Drawing.Size(100, 23);
-            this.lblCita.TabIndex = 2;
-            this.lblCita.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // UCDias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.lblCita);
             this.Controls.Add(this.lblDias);
             this.Margin = new System.Windows.Forms.Padding(1);
             this.Name = "UCDias";
-            this.Size = new System.Drawing.Size(131, 98);
+            this.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.Size = new System.Drawing.Size(133, 85);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -71,6 +61,5 @@
         #endregion
 
         public System.Windows.Forms.Label lblDias;
-        private System.Windows.Forms.Label lblCita;
     }
 }

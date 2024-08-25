@@ -19,9 +19,9 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
 {
     internal class CTRLCitas
     {
-        readonly frmCitas objCitasForm;
+        readonly CitasForm objCitasForm;
         readonly ControlPacientePlanillaUC objUC;
-        public CTRLCitas(frmCitas Vista)
+        public CTRLCitas(CitasForm Vista)
         {
             objCitasForm = Vista;
 

@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Data;
 using Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO;
 using Empresa_laboral_ADNE___Proyecto_PTC.Vista;
 using Empresa_laboral_ADNE___Proyecto_PTC.Controlador.Controlador_UC_Calendario;
@@ -20,22 +21,23 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
         public CTRLVerCitas(VerCitasForm Vista)
         {
             ObjVerCitasForm = Vista;
-
-            ObjVerCitasForm.Load += new EventHandler(CargarDGVCitas);
-            ObjVerCitasForm.btnVerCitas.Click += new EventHandler(VerCitaDetallada);
-            ObjVerCitasForm.btnActualizar.Click += new EventHandler(ActualizarCita);
-            ObjVerCitasForm.btnEliminarCita.Click += new EventHandler(EliminarCita);
+            
+            CargarDGVCitas();
+            ObjVerCitasForm.cmsVerCita.Click += new EventHandler(VerCitaDetallada);
+            ObjVerCitasForm.cmsActualizar.Click += new EventHandler(ActualizarCita);
+            ObjVerCitasForm.cmsEliminarCita.Click += new EventHandler(EliminarCita);
         }
-        private void CargarDGVCitas(object sender, EventArgs e)
+        private void CargarDGVCitas()
         {
             DAOVerCitas ObjDAOLlenarDGVCitas = new DAOVerCitas();
+            DataTable ObjVerDGVCits = ObjDAOLlenarDGVCitas.CargarDataGridVerCitas();
             try
             {
                 //Indicamos que el DGV no posee datos
                 ObjVerCitasForm.dgvCitasAgendadas.DataSource = null;
 
                 //Cargamos los datos
-                ObjVerCitasForm.dgvCitasAgendadas.DataSource = ObjDAOLlenarDGVCitas.CargarDataGridVerCitas();
+                ObjVerCitasForm.dgvCitasAgendadas.DataSource = ObjVerDGVCits;
 
                 //Indicamos que columnas no queremos que se muestren a simple vista
                 ObjVerCitasForm.dgvCitasAgendadas.Columns[0].Visible = false;
@@ -91,7 +93,8 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                 ObjVerCitasDetalladas.btnModificar.Enabled = false;
                 ObjVerCitasDetalladas.btnGuardar.Enabled = false;
 
-                ObjVerCitasDetalladas.Show();
+                ObjVerCitasDetalladas.ShowDialog();
+                CargarDGVCitas();
             }
             else
             {
@@ -131,8 +134,8 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                 //Especificamos qué apartados no deben de mostrarse a la hora de la vista
                 ObjVerCitasDetalladas.btnGuardar.Enabled = false;
 
-                ObjVerCitasForm.Hide();
-                ObjVerCitasDetalladas.Show();
+                ObjVerCitasDetalladas.ShowDialog();
+                CargarDGVCitas();
             }
             else
             {
@@ -146,7 +149,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
 
             //Enviamos un mensaje de pregunta si realmente deseamos eliminar la Cita que, en caso de ser verdad, procedemos a eliminarla
             if (MessageBox.Show("Seguro de que desea eliminar la Cita seleccionada?" +
-                                "Al ser eliminada, también se borrará el registro de la consulta Ingresada", "Eliminar Cita", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                                "Al ser eliminada, también se borrará el registro de la consulta ingresada", "Eliminar Cita", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 //Instanciamos a la clase DAOVerCitas para obtener los valores
                 DAOVerCitas ObjDAOEliminarCita = new DAOVerCitas();
@@ -157,6 +160,10 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                 if (ObjDAOEliminarCita.EliminarCitaYConsulta() == true)
                 {
                     MessageBox.Show("La Cita ha sido eliminada correctamente", "Eliminar Cita", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("La Cita no pudo ser eliminada, verifique si la cita ha sido seleccionada", "Eliminar Cita", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }

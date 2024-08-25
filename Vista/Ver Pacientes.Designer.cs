@@ -81,7 +81,7 @@
             this.btnAbrirDocumentos.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(2)))), ((int)(((byte)(161)))), ((int)(((byte)(104)))));
             this.btnAbrirDocumentos.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAbrirDocumentos.BackgroundImage")));
             this.btnAbrirDocumentos.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.btnAbrirDocumentos.ButtonText = "Abrir Documento Paciente";
+            this.btnAbrirDocumentos.ButtonText = "Documentos de Pacientes";
             this.btnAbrirDocumentos.ButtonTextMarginLeft = 0;
             this.btnAbrirDocumentos.ColorContrastOnClick = 45;
             this.btnAbrirDocumentos.ColorContrastOnHover = 45;
@@ -114,7 +114,7 @@
             this.btnAbrirDocumentos.IdleIconLeftImage = null;
             this.btnAbrirDocumentos.IdleIconRightImage = null;
             this.btnAbrirDocumentos.IndicateFocus = false;
-            this.btnAbrirDocumentos.Location = new System.Drawing.Point(375, 9);
+            this.btnAbrirDocumentos.Location = new System.Drawing.Point(384, 12);
             this.btnAbrirDocumentos.Name = "btnAbrirDocumentos";
             this.btnAbrirDocumentos.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnAbrirDocumentos.OnDisabledState.BorderRadius = 12;
@@ -183,7 +183,7 @@
             this.bunifuPanel1.BorderRadius = 60;
             this.bunifuPanel1.BorderThickness = 1;
             this.bunifuPanel1.Controls.Add(this.txtBuscarPaciente);
-            this.bunifuPanel1.Location = new System.Drawing.Point(96, 54);
+            this.bunifuPanel1.Location = new System.Drawing.Point(98, 70);
             this.bunifuPanel1.Name = "bunifuPanel1";
             this.bunifuPanel1.ShowBorders = true;
             this.bunifuPanel1.Size = new System.Drawing.Size(801, 73);
@@ -271,7 +271,7 @@
             this.flpVerPacientes.AutoScroll = true;
             this.flpVerPacientes.Location = new System.Drawing.Point(36, 164);
             this.flpVerPacientes.Name = "flpVerPacientes";
-            this.flpVerPacientes.Size = new System.Drawing.Size(914, 500);
+            this.flpVerPacientes.Size = new System.Drawing.Size(927, 518);
             this.flpVerPacientes.TabIndex = 1;
             // 
             // VerPacientesForm

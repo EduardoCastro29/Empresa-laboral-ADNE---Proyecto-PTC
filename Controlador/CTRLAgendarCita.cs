@@ -115,9 +115,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                     else
                     {
                         MessageBox.Show("Los datos fueron actualizados correctamente", "Actualizar Cita", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        VerCitasForm ObjVerCitasDetalladas = new VerCitasForm();
                         ObjAgendarCitaForm.Hide();
-                        ObjVerCitasDetalladas.Show();
                     }
                 }
             }

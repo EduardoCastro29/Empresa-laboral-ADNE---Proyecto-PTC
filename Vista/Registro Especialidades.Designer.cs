@@ -1,6 +1,6 @@
 ﻿namespace Empresa_laboral_ADNE___Proyecto_PTC.Vista
 {
-    partial class Registro_Especialidades
+    partial class RegistroEspecialidadesForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Registro_Especialidades));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistroEspecialidadesForm));
             Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
@@ -336,7 +336,7 @@
             this.lblNombreProfesional.Location = new System.Drawing.Point(75, 448);
             this.lblNombreProfesional.Name = "lblNombreProfesional";
             this.lblNombreProfesional.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblNombreProfesional.Size = new System.Drawing.Size(180, 23);
+            this.lblNombreProfesional.Size = new System.Drawing.Size(313, 39);
             this.lblNombreProfesional.TabIndex = 60;
             this.lblNombreProfesional.Text = "Nombre Profesional";
             this.lblNombreProfesional.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -454,7 +454,7 @@
             this.lblAnadirEspecialidad.Location = new System.Drawing.Point(401, 186);
             this.lblAnadirEspecialidad.Name = "lblAnadirEspecialidad";
             this.lblAnadirEspecialidad.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblAnadirEspecialidad.Size = new System.Drawing.Size(196, 23);
+            this.lblAnadirEspecialidad.Size = new System.Drawing.Size(337, 39);
             this.lblAnadirEspecialidad.TabIndex = 56;
             this.lblAnadirEspecialidad.Text = "Añadir especialidad:";
             this.lblAnadirEspecialidad.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -549,7 +549,7 @@
             this.Titulo_Registrar.Location = new System.Drawing.Point(52, 32);
             this.Titulo_Registrar.Name = "Titulo_Registrar";
             this.Titulo_Registrar.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.Titulo_Registrar.Size = new System.Drawing.Size(215, 36);
+            this.Titulo_Registrar.Size = new System.Drawing.Size(731, 119);
             this.Titulo_Registrar.TabIndex = 0;
             this.Titulo_Registrar.Text = "Especialidades";
             this.Titulo_Registrar.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -576,7 +576,7 @@
             this.bunifuShadowPanel2.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
             this.bunifuShadowPanel2.TabIndex = 54;
             // 
-            // Registro_Especialidades
+            // RegistroEspecialidadesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -596,8 +596,9 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximumSize = new System.Drawing.Size(1080, 600);
             this.MinimumSize = new System.Drawing.Size(1080, 600);
-            this.Name = "Registro_Especialidades";
-            this.Text = "Registro_Especialidades";
+            this.Name = "RegistroEspecialidadesForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Registro Especialidades";
             ((System.ComponentModel.ISupportInitialize)(this.dgvEspecialidades)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picProfesional)).EndInit();
             this.bunifuGradientPanel3.ResumeLayout(false);

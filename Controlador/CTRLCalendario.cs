@@ -42,7 +42,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             Año = FechaActual.Year;
 
             string mesNombre = DateTimeFormatInfo.CurrentInfo.GetMonthName(Mes);
-            ObjCalendario.lblFecha.Text = mesNombre + "  " + Año;
+            ObjCalendario.lblFecha.Text = mesNombre + " " + Año;
 
             static_month = Mes;
             static_year = Año;
@@ -54,7 +54,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             int dias = DateTime.DaysInMonth(Año, Mes);
 
             //Convertir los días en tipo entero
-            int diadelasemana = Convert.ToInt32(startofthemonth.DayOfWeek.ToString("d")) + 1;
+            int diadelasemana = Convert.ToInt32(startofthemonth.DayOfWeek.ToString("D")) + 1;
 
             //blank usercontrol
             for (int i = 1; i < diadelasemana; i++)
@@ -99,7 +99,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             int dias = DateTime.DaysInMonth(Año, Mes);
 
             //Convertir los días en tipo entero
-            int diadelasemana = Convert.ToInt32(startofthemonth.DayOfWeek.ToString("d")) + 1;
+            int diadelasemana = Convert.ToInt32(startofthemonth.DayOfWeek.ToString("D")) + 1;
 
             //blank usercontrol
             for (int i = 1; i < diadelasemana; i++)
@@ -144,7 +144,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             int dias = DateTime.DaysInMonth(Año, Mes);
 
             //Convertir los días en tipo entero
-            int diadelasemana = Convert.ToInt32(startofthemonth.DayOfWeek.ToString("d")) + 1;
+            int diadelasemana = Convert.ToInt32(startofthemonth.DayOfWeek.ToString("D")) + 1;
 
             //blank usercontrol
             for (int i = 1; i < diadelasemana; i++)

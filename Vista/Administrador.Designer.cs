@@ -147,13 +147,13 @@
             this.dgvAdministrarProfesional.HeaderBackColor = System.Drawing.Color.Teal;
             this.dgvAdministrarProfesional.HeaderBgColor = System.Drawing.Color.Empty;
             this.dgvAdministrarProfesional.HeaderForeColor = System.Drawing.Color.White;
-            this.dgvAdministrarProfesional.Location = new System.Drawing.Point(27, 158);
+            this.dgvAdministrarProfesional.Location = new System.Drawing.Point(27, 145);
             this.dgvAdministrarProfesional.Name = "dgvAdministrarProfesional";
             this.dgvAdministrarProfesional.ReadOnly = true;
             this.dgvAdministrarProfesional.RowHeadersVisible = false;
             this.dgvAdministrarProfesional.RowTemplate.Height = 40;
             this.dgvAdministrarProfesional.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvAdministrarProfesional.Size = new System.Drawing.Size(931, 499);
+            this.dgvAdministrarProfesional.Size = new System.Drawing.Size(931, 526);
             this.dgvAdministrarProfesional.TabIndex = 99;
             this.dgvAdministrarProfesional.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Teal;
             // 
@@ -163,21 +163,21 @@
             this.cmsActualizar,
             this.cmsEliminarProfesional});
             this.cmsOpciones.Name = "cmsOpciones";
-            this.cmsOpciones.Size = new System.Drawing.Size(189, 48);
+            this.cmsOpciones.Size = new System.Drawing.Size(189, 70);
             // 
             // cmsActualizar
             // 
             this.cmsActualizar.Image = global::Empresa_laboral_ADNE___Proyecto_PTC.Properties.Resources.ActualizarCMS;
             this.cmsActualizar.Name = "cmsActualizar";
             this.cmsActualizar.Size = new System.Drawing.Size(188, 22);
-            this.cmsActualizar.Text = "Actualizar profesional";
+            this.cmsActualizar.Text = "Actualizar Profesional";
             // 
             // cmsEliminarProfesional
             // 
             this.cmsEliminarProfesional.Image = global::Empresa_laboral_ADNE___Proyecto_PTC.Properties.Resources.EliminarCMS;
             this.cmsEliminarProfesional.Name = "cmsEliminarProfesional";
             this.cmsEliminarProfesional.Size = new System.Drawing.Size(188, 22);
-            this.cmsEliminarProfesional.Text = "Eliminar profesional";
+            this.cmsEliminarProfesional.Text = "Eliminar Profesional";
             // 
             // btnAñadirProfesional
             // 

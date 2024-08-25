@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace Empresa_laboral_ADNE___Proyecto_PTC.Vista
 {
-    public partial class frmCitas : Form
+    public partial class CitasForm : Form
     {
-        public frmCitas()
+        public CitasForm()
         {
             InitializeComponent();
             CTRLCitas objCitas = new CTRLCitas(this);

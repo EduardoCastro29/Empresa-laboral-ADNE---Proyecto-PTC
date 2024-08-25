@@ -53,7 +53,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
         {
             if (MessageBox.Show("Desea cerrar el programa de forma autmática? Al cerrarse, cerrará la sesión de forma automática", "Cerrar el Programa", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                Environment.Exit(0);
+                Application.Exit();
             }
         }
         private void CerrarSesion(object sender, EventArgs e)

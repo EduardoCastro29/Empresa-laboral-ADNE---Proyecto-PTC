@@ -37,7 +37,7 @@
             this.BackColor = System.Drawing.Color.MintCream;
             this.Margin = new System.Windows.Forms.Padding(1);
             this.Name = "UCEspacio";
-            this.Size = new System.Drawing.Size(131, 98);
+            this.Size = new System.Drawing.Size(133, 85);
             this.ResumeLayout(false);
 
         }

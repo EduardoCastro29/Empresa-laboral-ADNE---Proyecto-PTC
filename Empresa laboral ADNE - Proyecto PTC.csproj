@@ -102,7 +102,7 @@
     <Compile Include="Controlador\CommonMethods.cs" />
     <Compile Include="Controlador\Controlador UC Calendario\CTRLUCDias.cs" />
     <Compile Include="Controlador\Controlador UC Pacientes\CTRLPacienteUC.cs" />
-    <Compile Include="Controlador\ControladorPrimerUsoSistema.cs" />
+    <Compile Include="Controlador\CTRLPrimerUsoSistema.cs" />
     <Compile Include="Controlador\CTRLActividades.cs" />
     <Compile Include="Controlador\CTRLActualizarContrasena.cs" />
     <Compile Include="Controlador\CTRLAdministrador.cs" />
@@ -123,6 +123,7 @@
     <Compile Include="Controlador\CTRLPinAcceso.cs" />
     <Compile Include="Controlador\CTRLRecuperarContrasenaOPC.cs" />
     <Compile Include="Controlador\CTRLRegistro.cs" />
+    <Compile Include="Controlador\CTRLRegistroEspecialidad.cs" />
     <Compile Include="Controlador\CTRLVerCitas.cs" />
     <Compile Include="Controlador\CTRLVerPacientes.cs" />
     <Compile Include="Modelo\Conexion.cs" />
@@ -146,6 +147,7 @@
     <Compile Include="Modelo\DAO\DAOPinAcceso.cs" />
     <Compile Include="Modelo\DAO\DAOPrimerUsoSistema.cs" />
     <Compile Include="Modelo\DAO\DAORegistro.cs" />
+    <Compile Include="Modelo\DAO\DAORegistroEspecialidad.cs" />
     <Compile Include="Modelo\DAO\DAOSistemaSoporte.cs" />
     <Compile Include="Modelo\DAO\DAOVerCitas.cs" />
     <Compile Include="Modelo\DAO\DAOVerPacientes.cs" />
@@ -168,6 +170,7 @@
     <Compile Include="Modelo\DTO\DTOPinAcceso.cs" />
     <Compile Include="Modelo\DTO\DTOPrimerUsoSistema.cs" />
     <Compile Include="Modelo\DTO\DTORegistro.cs" />
+    <Compile Include="Modelo\DTO\DTORegistroEspecialidad.cs" />
     <Compile Include="Modelo\DTO\DTOVerCitas.cs" />
     <Compile Include="Modelo\DTO\DTOVerPacientes.cs" />
     <Compile Include="Modelo\DTO\InicioSesion.cs" />
@@ -269,11 +272,11 @@
     <Compile Include="Vista\Pin de Acceso.Designer.cs">
       <DependentUpon>Pin de Acceso.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vista\PrimerUsoSistema.cs">
+    <Compile Include="Vista\Primer uso del Sistema.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vista\PrimerUsoSistema.Designer.cs">
-      <DependentUpon>PrimerUsoSistema.cs</DependentUpon>
+    <Compile Include="Vista\Primer uso del Sistema.Designer.cs">
+      <DependentUpon>Primer uso del Sistema.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\Recuperar Contraseña OPC.cs">
       <SubType>Form</SubType>
@@ -281,11 +284,11 @@
     <Compile Include="Vista\Recuperar Contraseña OPC.Designer.cs">
       <DependentUpon>Recuperar Contraseña OPC.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vista\Registro_Especialidades.cs">
+    <Compile Include="Vista\Registro Especialidades.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vista\Registro_Especialidades.Designer.cs">
-      <DependentUpon>Registro_Especialidades.cs</DependentUpon>
+    <Compile Include="Vista\Registro Especialidades.Designer.cs">
+      <DependentUpon>Registro Especialidades.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\Ver Citas.cs">
       <SubType>Form</SubType>
@@ -405,14 +408,14 @@
     <EmbeddedResource Include="Vista\Pin de Acceso.resx">
       <DependentUpon>Pin de Acceso.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vista\PrimerUsoSistema.resx">
-      <DependentUpon>PrimerUsoSistema.cs</DependentUpon>
+    <EmbeddedResource Include="Vista\Primer uso del Sistema.resx">
+      <DependentUpon>Primer uso del Sistema.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\Recuperar Contraseña OPC.resx">
       <DependentUpon>Recuperar Contraseña OPC.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vista\Registro_Especialidades.resx">
-      <DependentUpon>Registro_Especialidades.cs</DependentUpon>
+    <EmbeddedResource Include="Vista\Registro Especialidades.resx">
+      <DependentUpon>Registro Especialidades.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\Ver Citas.resx">
       <DependentUpon>Ver Citas.cs</DependentUpon>
@@ -550,6 +553,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\agregar-tarea.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VerCitaCMS.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

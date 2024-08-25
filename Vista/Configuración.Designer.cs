@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConfiguraciónForm));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
@@ -90,7 +90,6 @@
             this.flowLayoutPanel6 = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel8 = new System.Windows.Forms.FlowLayoutPanel();
             this.bunifuLabel2 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.flowLayoutPanel7 = new System.Windows.Forms.FlowLayoutPanel();
             this.picUsuario = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel3.SuspendLayout();
@@ -134,7 +133,7 @@
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1066, 117);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1011, 117);
             this.flowLayoutPanel1.TabIndex = 2;
             // 
             // flowLayoutPanel2
@@ -198,7 +197,7 @@
             this.bunifuVScrollBar1.Dock = System.Windows.Forms.DockStyle.Right;
             this.bunifuVScrollBar1.DurationBeforeShrink = 2000;
             this.bunifuVScrollBar1.LargeChange = 10;
-            this.bunifuVScrollBar1.Location = new System.Drawing.Point(1049, 117);
+            this.bunifuVScrollBar1.Location = new System.Drawing.Point(994, 117);
             this.bunifuVScrollBar1.Maximum = 100;
             this.bunifuVScrollBar1.Minimum = 0;
             this.bunifuVScrollBar1.MinimumThumbLength = 18;
@@ -233,7 +232,7 @@
             this.bunifuPanel2.Location = new System.Drawing.Point(0, 117);
             this.bunifuPanel2.Name = "bunifuPanel2";
             this.bunifuPanel2.ShowBorders = true;
-            this.bunifuPanel2.Size = new System.Drawing.Size(1049, 983);
+            this.bunifuPanel2.Size = new System.Drawing.Size(994, 983);
             this.bunifuPanel2.TabIndex = 5;
             // 
             // bunifuGradientPanel7
@@ -254,7 +253,7 @@
             this.bunifuGradientPanel7.Name = "bunifuGradientPanel7";
             this.bunifuGradientPanel7.Padding = new System.Windows.Forms.Padding(30);
             this.bunifuGradientPanel7.Quality = 10;
-            this.bunifuGradientPanel7.Size = new System.Drawing.Size(1049, 311);
+            this.bunifuGradientPanel7.Size = new System.Drawing.Size(994, 311);
             this.bunifuGradientPanel7.TabIndex = 3;
             // 
             // bunifuGradientPanel8
@@ -275,7 +274,7 @@
             this.bunifuGradientPanel8.Location = new System.Drawing.Point(30, 30);
             this.bunifuGradientPanel8.Name = "bunifuGradientPanel8";
             this.bunifuGradientPanel8.Quality = 10;
-            this.bunifuGradientPanel8.Size = new System.Drawing.Size(989, 251);
+            this.bunifuGradientPanel8.Size = new System.Drawing.Size(934, 251);
             this.bunifuGradientPanel8.TabIndex = 0;
             // 
             // bunifuPanel9
@@ -292,7 +291,7 @@
             this.bunifuPanel9.Name = "bunifuPanel9";
             this.bunifuPanel9.Padding = new System.Windows.Forms.Padding(400, 0, 0, 0);
             this.bunifuPanel9.ShowBorders = true;
-            this.bunifuPanel9.Size = new System.Drawing.Size(866, 27);
+            this.bunifuPanel9.Size = new System.Drawing.Size(811, 27);
             this.bunifuPanel9.TabIndex = 4;
             // 
             // label6
@@ -321,7 +320,7 @@
             this.bunifuPanel8.Location = new System.Drawing.Point(123, 84);
             this.bunifuPanel8.Name = "bunifuPanel8";
             this.bunifuPanel8.ShowBorders = true;
-            this.bunifuPanel8.Size = new System.Drawing.Size(866, 43);
+            this.bunifuPanel8.Size = new System.Drawing.Size(811, 43);
             this.bunifuPanel8.TabIndex = 3;
             // 
             // label5
@@ -353,7 +352,7 @@
             this.panel11.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel11.Location = new System.Drawing.Point(0, 0);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(989, 84);
+            this.panel11.Size = new System.Drawing.Size(934, 84);
             this.panel11.TabIndex = 1;
             // 
             // flowLayoutPanel12
@@ -362,7 +361,7 @@
             this.flowLayoutPanel12.Dock = System.Windows.Forms.DockStyle.Top;
             this.flowLayoutPanel12.Location = new System.Drawing.Point(123, 26);
             this.flowLayoutPanel12.Name = "flowLayoutPanel12";
-            this.flowLayoutPanel12.Size = new System.Drawing.Size(866, 52);
+            this.flowLayoutPanel12.Size = new System.Drawing.Size(811, 52);
             this.flowLayoutPanel12.TabIndex = 3;
             // 
             // bunifuLabel4
@@ -400,7 +399,7 @@
             this.panel15.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel15.Location = new System.Drawing.Point(23, 0);
             this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(966, 26);
+            this.panel15.Size = new System.Drawing.Size(911, 26);
             this.panel15.TabIndex = 1;
             // 
             // panel14
@@ -429,7 +428,7 @@
             this.bunifuGradientPanel3.Name = "bunifuGradientPanel3";
             this.bunifuGradientPanel3.Padding = new System.Windows.Forms.Padding(30);
             this.bunifuGradientPanel3.Quality = 10;
-            this.bunifuGradientPanel3.Size = new System.Drawing.Size(1049, 261);
+            this.bunifuGradientPanel3.Size = new System.Drawing.Size(994, 261);
             this.bunifuGradientPanel3.TabIndex = 2;
             // 
             // bunifuGradientPanel4
@@ -449,7 +448,7 @@
             this.bunifuGradientPanel4.Location = new System.Drawing.Point(30, 30);
             this.bunifuGradientPanel4.Name = "bunifuGradientPanel4";
             this.bunifuGradientPanel4.Quality = 10;
-            this.bunifuGradientPanel4.Size = new System.Drawing.Size(989, 201);
+            this.bunifuGradientPanel4.Size = new System.Drawing.Size(934, 201);
             this.bunifuGradientPanel4.TabIndex = 0;
             // 
             // panel8
@@ -459,7 +458,7 @@
             this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel8.Location = new System.Drawing.Point(499, 120);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(490, 81);
+            this.panel8.Size = new System.Drawing.Size(435, 81);
             this.panel8.TabIndex = 2;
             // 
             // panel10
@@ -469,7 +468,7 @@
             this.panel10.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel10.Location = new System.Drawing.Point(0, 0);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(450, 71);
+            this.panel10.Size = new System.Drawing.Size(395, 71);
             this.panel10.TabIndex = 1;
             // 
             // bunifuToggleSwitch21
@@ -480,7 +479,7 @@
             this.bunifuToggleSwitch21.CheckedSwitchColor = System.Drawing.Color.White;
             this.bunifuToggleSwitch21.CheckedSwitchStyle = Bunifu.UI.WinForms.BunifuToggleSwitch2.SwitchStyles.Fill;
             this.bunifuToggleSwitch21.Dock = System.Windows.Forms.DockStyle.Right;
-            this.bunifuToggleSwitch21.Location = new System.Drawing.Point(340, 0);
+            this.bunifuToggleSwitch21.Location = new System.Drawing.Point(285, 0);
             this.bunifuToggleSwitch21.Name = "bunifuToggleSwitch21";
             this.bunifuToggleSwitch21.OutlineThickness = 2;
             this.bunifuToggleSwitch21.Size = new System.Drawing.Size(110, 50);
@@ -494,13 +493,13 @@
             this.panel12.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel12.Location = new System.Drawing.Point(0, 50);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(450, 21);
+            this.panel12.Size = new System.Drawing.Size(395, 21);
             this.panel12.TabIndex = 1;
             // 
             // panel9
             // 
             this.panel9.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel9.Location = new System.Drawing.Point(450, 0);
+            this.panel9.Location = new System.Drawing.Point(395, 0);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(40, 81);
             this.panel9.TabIndex = 0;
@@ -512,14 +511,14 @@
             this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel7.Location = new System.Drawing.Point(499, 0);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(490, 120);
+            this.panel7.Size = new System.Drawing.Size(435, 120);
             this.panel7.TabIndex = 1;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Right;
             this.pictureBox1.Image = global::Empresa_laboral_ADNE___Proyecto_PTC.Properties.Resources.Notificaciones;
-            this.pictureBox1.Location = new System.Drawing.Point(411, 21);
+            this.pictureBox1.Location = new System.Drawing.Point(356, 21);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(79, 99);
             this.pictureBox1.TabIndex = 1;
@@ -530,7 +529,7 @@
             this.panel13.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel13.Location = new System.Drawing.Point(0, 0);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(490, 21);
+            this.panel13.Size = new System.Drawing.Size(435, 21);
             this.panel13.TabIndex = 0;
             // 
             // panel4
@@ -635,7 +634,7 @@
             this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
             this.bunifuGradientPanel1.Padding = new System.Windows.Forms.Padding(30);
             this.bunifuGradientPanel1.Quality = 10;
-            this.bunifuGradientPanel1.Size = new System.Drawing.Size(1049, 407);
+            this.bunifuGradientPanel1.Size = new System.Drawing.Size(994, 407);
             this.bunifuGradientPanel1.TabIndex = 1;
             // 
             // bunifuGradientPanel2
@@ -659,7 +658,7 @@
             this.bunifuGradientPanel2.Location = new System.Drawing.Point(30, 30);
             this.bunifuGradientPanel2.Name = "bunifuGradientPanel2";
             this.bunifuGradientPanel2.Quality = 10;
-            this.bunifuGradientPanel2.Size = new System.Drawing.Size(989, 347);
+            this.bunifuGradientPanel2.Size = new System.Drawing.Size(934, 347);
             this.bunifuGradientPanel2.TabIndex = 0;
             // 
             // panel3
@@ -668,7 +667,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(322, 284);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(667, 48);
+            this.panel3.Size = new System.Drawing.Size(612, 48);
             this.panel3.TabIndex = 6;
             // 
             // bunifuPanel7
@@ -681,7 +680,7 @@
             this.bunifuPanel7.BorderThickness = 1;
             this.bunifuPanel7.Controls.Add(this.btnCerrarSesion);
             this.bunifuPanel7.Dock = System.Windows.Forms.DockStyle.Right;
-            this.bunifuPanel7.Location = new System.Drawing.Point(435, 0);
+            this.bunifuPanel7.Location = new System.Drawing.Point(380, 0);
             this.bunifuPanel7.Name = "bunifuPanel7";
             this.bunifuPanel7.ShowBorders = true;
             this.bunifuPanel7.Size = new System.Drawing.Size(232, 48);
@@ -706,11 +705,11 @@
             this.btnCerrarSesion.ColorContrastOnClick = 45;
             this.btnCerrarSesion.ColorContrastOnHover = 45;
             this.btnCerrarSesion.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges1.BottomLeft = true;
-            borderEdges1.BottomRight = true;
-            borderEdges1.TopLeft = true;
-            borderEdges1.TopRight = true;
-            this.btnCerrarSesion.CustomizableEdges = borderEdges1;
+            borderEdges2.BottomLeft = true;
+            borderEdges2.BottomRight = true;
+            borderEdges2.TopLeft = true;
+            borderEdges2.TopRight = true;
+            this.btnCerrarSesion.CustomizableEdges = borderEdges2;
             this.btnCerrarSesion.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnCerrarSesion.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnCerrarSesion.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -783,7 +782,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(322, 235);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(667, 49);
+            this.panel2.Size = new System.Drawing.Size(612, 49);
             this.panel2.TabIndex = 5;
             // 
             // lblDUI
@@ -811,7 +810,7 @@
             this.bunifuPanel6.Location = new System.Drawing.Point(322, 192);
             this.bunifuPanel6.Name = "bunifuPanel6";
             this.bunifuPanel6.ShowBorders = true;
-            this.bunifuPanel6.Size = new System.Drawing.Size(667, 43);
+            this.bunifuPanel6.Size = new System.Drawing.Size(612, 43);
             this.bunifuPanel6.TabIndex = 4;
             // 
             // lblDUIIdentificacion
@@ -831,7 +830,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(322, 143);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(667, 49);
+            this.panel1.Size = new System.Drawing.Size(612, 49);
             this.panel1.TabIndex = 3;
             // 
             // lblCorreoUsuario
@@ -859,7 +858,7 @@
             this.bunifuPanel5.Location = new System.Drawing.Point(322, 100);
             this.bunifuPanel5.Name = "bunifuPanel5";
             this.bunifuPanel5.ShowBorders = true;
-            this.bunifuPanel5.Size = new System.Drawing.Size(667, 43);
+            this.bunifuPanel5.Size = new System.Drawing.Size(612, 43);
             this.bunifuPanel5.TabIndex = 2;
             // 
             // lblUsuario
@@ -888,7 +887,7 @@
             this.bunifuPanel3.Location = new System.Drawing.Point(322, 0);
             this.bunifuPanel3.Name = "bunifuPanel3";
             this.bunifuPanel3.ShowBorders = true;
-            this.bunifuPanel3.Size = new System.Drawing.Size(667, 100);
+            this.bunifuPanel3.Size = new System.Drawing.Size(612, 100);
             this.bunifuPanel3.TabIndex = 1;
             // 
             // lblNomprePersona
@@ -896,7 +895,7 @@
             this.lblNomprePersona.AutoSize = true;
             this.lblNomprePersona.Dock = System.Windows.Forms.DockStyle.Left;
             this.lblNomprePersona.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNomprePersona.Location = new System.Drawing.Point(0, 39);
+            this.lblNomprePersona.Location = new System.Drawing.Point(0, 59);
             this.lblNomprePersona.Name = "lblNomprePersona";
             this.lblNomprePersona.Size = new System.Drawing.Size(309, 33);
             this.lblNomprePersona.TabIndex = 3;
@@ -907,7 +906,7 @@
             this.flowLayoutPanel13.Dock = System.Windows.Forms.DockStyle.Top;
             this.flowLayoutPanel13.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel13.Name = "flowLayoutPanel13";
-            this.flowLayoutPanel13.Size = new System.Drawing.Size(452, 39);
+            this.flowLayoutPanel13.Size = new System.Drawing.Size(397, 59);
             this.flowLayoutPanel13.TabIndex = 2;
             // 
             // bunifuPanel4
@@ -920,7 +919,7 @@
             this.bunifuPanel4.BorderThickness = 1;
             this.bunifuPanel4.Controls.Add(this.lblRolUsuario);
             this.bunifuPanel4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.bunifuPanel4.Location = new System.Drawing.Point(452, 0);
+            this.bunifuPanel4.Location = new System.Drawing.Point(397, 0);
             this.bunifuPanel4.Name = "bunifuPanel4";
             this.bunifuPanel4.ShowBorders = true;
             this.bunifuPanel4.Size = new System.Drawing.Size(215, 100);
@@ -954,7 +953,6 @@
             // 
             this.flowLayoutPanel6.Controls.Add(this.flowLayoutPanel8);
             this.flowLayoutPanel6.Controls.Add(this.bunifuLabel2);
-            this.flowLayoutPanel6.Controls.Add(this.flowLayoutPanel7);
             this.flowLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.flowLayoutPanel6.Location = new System.Drawing.Point(3, 3);
             this.flowLayoutPanel6.Name = "flowLayoutPanel6";
@@ -987,25 +985,18 @@
             this.bunifuLabel2.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuLabel2.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
-            // flowLayoutPanel7
-            // 
-            this.flowLayoutPanel7.Location = new System.Drawing.Point(3, 65);
-            this.flowLayoutPanel7.Name = "flowLayoutPanel7";
-            this.flowLayoutPanel7.Size = new System.Drawing.Size(105, 24);
-            this.flowLayoutPanel7.TabIndex = 0;
-            // 
             // picUsuario
             // 
             this.picUsuario.AllowFocused = false;
-            this.picUsuario.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.picUsuario.AutoSizeHeight = false;
             this.picUsuario.BorderRadius = 134;
+            this.picUsuario.Dock = System.Windows.Forms.DockStyle.Top;
             this.picUsuario.Image = global::Empresa_laboral_ADNE___Proyecto_PTC.Properties.Resources.Foto_configuración;
             this.picUsuario.IsCircle = true;
             this.picUsuario.Location = new System.Drawing.Point(30, 83);
             this.picUsuario.Margin = new System.Windows.Forms.Padding(30, 3, 3, 3);
             this.picUsuario.Name = "picUsuario";
-            this.picUsuario.Size = new System.Drawing.Size(268, 268);
+            this.picUsuario.Size = new System.Drawing.Size(268, 249);
             this.picUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picUsuario.TabIndex = 1;
             this.picUsuario.TabStop = false;
@@ -1016,7 +1007,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(94)))), ((int)(((byte)(100)))));
-            this.ClientSize = new System.Drawing.Size(1066, 1100);
+            this.ClientSize = new System.Drawing.Size(1011, 1100);
             this.Controls.Add(this.bunifuPanel2);
             this.Controls.Add(this.bunifuVScrollBar1);
             this.Controls.Add(this.flowLayoutPanel1);
@@ -1133,7 +1124,6 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel6;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel8;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel2;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel7;
         public Bunifu.UI.WinForms.BunifuPictureBox picUsuario;
         public System.Windows.Forms.Label lblNomprePersona;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel13;

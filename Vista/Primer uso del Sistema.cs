@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Empresa_laboral_ADNE___Proyecto_PTC.Controlador;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,7 +12,7 @@ using System.Windows.Forms;
 
 namespace Empresa_laboral_ADNE___Proyecto_PTC.Vista
 {
-    public partial class PrimerUsoSistema : Form
+    public partial class PrimerUsoSistemaForm : Form
     {
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
@@ -23,11 +24,13 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Vista
             int nWidthEllipse, // height of ellipse
             int nHeightEllipse // width of ellipse
         );
-        public PrimerUsoSistema()
+        public PrimerUsoSistemaForm()
         {
             InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.None;
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
+
+            CTRLPrimerUsoSistema ObjControladorPUSistema = new CTRLPrimerUsoSistema(this);
         }
     }
 }

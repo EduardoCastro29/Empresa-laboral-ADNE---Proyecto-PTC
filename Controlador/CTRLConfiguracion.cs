@@ -34,13 +34,10 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
         }
         private void CerrarSesionConfig(object sender, EventArgs e)
         {
-            if (MessageBox.Show("¿Desea cerrar sesión?", "Cerrar Sesión", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("¿Desea cerrar sesión automáticamente? Considere que al accionase, el programa cerrará consecuentemente", "Cerrar Sesión", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 LimpiarVariablesInicioSesion();
-                LoginForm ObjVolverInicioLogin = new LoginForm();
-                DashboardForm ObjDash = new DashboardForm();
-                ObjVolverInicioLogin.Show(); // nos quedamos aqui
-                ObjDash.Dispose();
+                Application.Exit();
             }
         }
         void LimpiarVariablesInicioSesion()

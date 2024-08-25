@@ -27,7 +27,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
 
         private void AbrirDocumento(object sender, EventArgs e)
         {
-            frmCitas ObjMostrarCitas = new frmCitas();
+            CitasForm ObjMostrarCitas = new CitasForm();
             ObjVerPaciente.Hide();
             ObjMostrarCitas.Show();
         }

@@ -91,7 +91,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.DarkCyan;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.panel1.Controls.Add(this.menuStrip1);
             this.panel1.Controls.Add(this.btnSalir);
             this.panel1.Controls.Add(this.lblCitas);
@@ -708,7 +708,7 @@
             this.cmbLugar.ItemHighLightColor = System.Drawing.Color.LightSeaGreen;
             this.cmbLugar.ItemHighLightForeColor = System.Drawing.Color.White;
             this.cmbLugar.ItemTopMargin = 3;
-            this.cmbLugar.Location = new System.Drawing.Point(333, 319);
+            this.cmbLugar.Location = new System.Drawing.Point(333, 325);
             this.cmbLugar.Name = "cmbLugar";
             this.cmbLugar.Size = new System.Drawing.Size(275, 32);
             this.cmbLugar.TabIndex = 92;
