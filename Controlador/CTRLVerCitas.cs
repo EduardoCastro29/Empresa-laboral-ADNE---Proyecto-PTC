@@ -68,17 +68,17 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
 
             ObjVerCitasDetalladas.txtIDCita.Text = CitaID.ToString();
             ObjVerCitasDetalladas.txtIDConsulta.Text = ConsultaID.ToString();
-            ObjVerCitasDetalladas.txtfecha.Text = FechaCita.ToString();
+            ObjVerCitasDetalladas.dtFecha.Value = FechaCita.Date;
             ObjVerCitasDetalladas.txtHoraInicio.Text = HoraInicioCita.ToString();
             ObjVerCitasDetalladas.txtHoraFinal.Text = FechaFinalCita.ToString();
             ObjVerCitasDetalladas.cmbEstado.SelectedValue = EstadoCita;
             ObjVerCitasDetalladas.txtMotivoConsulta.Text = DescripcionCita;
             ObjVerCitasDetalladas.txtPacienteID.Text = NombrePaciente;
             ObjVerCitasDetalladas.txtProfesionalID.Text = NombreProfesional;
-            ObjVerCitasDetalladas.cmbLugar.SelectedValue = LugarCita;
+            ObjVerCitasDetalladas.cmbLugar.ValueMember = LugarCita;
 
             //Especificamos qué apartados no deben de mostrarse a la hora de la vista
-            ObjVerCitasDetalladas.txtfecha.Enabled = false;
+            ObjVerCitasDetalladas.dtFecha.Enabled = false;
             ObjVerCitasDetalladas.txtHoraInicio.Enabled = false;
             ObjVerCitasDetalladas.txtHoraFinal.Enabled = false;
             ObjVerCitasDetalladas.cmbEstado.Enabled = false;
@@ -90,6 +90,8 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             ObjVerCitasDetalladas.btnGuardar.Enabled = false;
 
             ObjVerCitasDetalladas.ShowDialog();
+
+            //Una vez cerrado el formulario de citas, se procede a recargar el DataGridView
             CargarDGVCitas();
         }
         private void ActualizarCita(object sender, EventArgs e)
@@ -111,19 +113,21 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
 
             ObjVerCitasDetalladas.txtIDCita.Text = CitaID.ToString();
             ObjVerCitasDetalladas.txtIDConsulta.Text = ConsultaID.ToString();
-            ObjVerCitasDetalladas.txtfecha.Text = FechaCita.ToString();
+            ObjVerCitasDetalladas.dtFecha.Value = FechaCita.Date;
             ObjVerCitasDetalladas.txtHoraInicio.Text = HoraInicioCita.ToString();
             ObjVerCitasDetalladas.txtHoraFinal.Text = FechaFinalCita.ToString();
-            ObjVerCitasDetalladas.cmbEstado.DisplayMember = EstadoCita.ToString();
+            ObjVerCitasDetalladas.cmbEstado.ValueMember = EstadoCita;
             ObjVerCitasDetalladas.txtMotivoConsulta.Text = DescripcionCita;
             ObjVerCitasDetalladas.txtPacienteID.Text = PacienteID.ToString();
             ObjVerCitasDetalladas.txtProfesionalID.Text = ProfesionalID.ToString();
-            ObjVerCitasDetalladas.cmbLugar.DisplayMember = LugarCita.ToString();
+            ObjVerCitasDetalladas.cmbLugar.ValueMember = LugarCita;
 
             //Especificamos qué apartados no deben de mostrarse a la hora de la vista
             ObjVerCitasDetalladas.btnGuardar.Enabled = false;
 
             ObjVerCitasDetalladas.ShowDialog();
+
+            //Una vez cerrado el formulario de citas, se procede a recargar el DataGridView
             CargarDGVCitas();
         }
         private void EliminarCita(object sender, EventArgs e)

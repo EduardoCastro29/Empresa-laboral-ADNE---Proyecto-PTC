@@ -35,7 +35,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             ObjAgendarCitaForm.cmbEstado.ValueMember = "estadoId";
             ObjAgendarCitaForm.cmbEstado.DisplayMember = "estado";
 
-            ObjAgendarCitaForm.txtfecha.Text = CTRLCalendario.static_year + "-" + CTRLCalendario.static_month + "-" + CTRLUCDias.static_day; 
+            ObjAgendarCitaForm.dtFecha.Value = DateTime.Parse(CTRLCalendario.static_year + "-" + CTRLCalendario.static_month + "-" + CTRLUCDias.static_day); 
         }
         private void AgregarNuevaCita(object sender, EventArgs e)
         {
@@ -58,7 +58,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                     ObjDAOAgendarCita.ProfesionalId = int.Parse(ObjAgendarCitaForm.txtProfesionalID.Text.Trim());
                     ObjDAOAgendarCita.HoraInicio = TimeSpan.Parse(ObjAgendarCitaForm.txtHoraInicio.Text.Trim());
                     ObjDAOAgendarCita.HoraFinal = TimeSpan.Parse(ObjAgendarCitaForm.txtHoraFinal.Text.Trim());
-                    ObjDAOAgendarCita.Fecha = DateTime.Parse(ObjAgendarCitaForm.txtfecha.Text.Trim());
+                    ObjDAOAgendarCita.Fecha = DateTime.Parse(ObjAgendarCitaForm.dtFecha.Text.Trim());
                     ObjDAOAgendarCita.LugarId = int.Parse(ObjAgendarCitaForm.cmbLugar.SelectedValue.ToString());
                     ObjDAOAgendarCita.EstadoId = int.Parse(ObjAgendarCitaForm.cmbEstado.SelectedValue.ToString());
                     ObjDAOAgendarCita.Descripcion = ObjAgendarCitaForm.txtMotivoConsulta.Text.Trim();
@@ -103,7 +103,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                     ObjDAOActualizarCita.ProfesionalId = int.Parse(ObjAgendarCitaForm.txtProfesionalID.Text.Trim());
                     ObjDAOActualizarCita.HoraInicio = TimeSpan.Parse(ObjAgendarCitaForm.txtHoraInicio.Text.Trim());
                     ObjDAOActualizarCita.HoraFinal = TimeSpan.Parse(ObjAgendarCitaForm.txtHoraFinal.Text.Trim());
-                    ObjDAOActualizarCita.Fecha = DateTime.Parse(ObjAgendarCitaForm.txtfecha.Text.Trim());
+                    ObjDAOActualizarCita.Fecha = DateTime.Parse(ObjAgendarCitaForm.dtFecha.Text.Trim());
                     ObjDAOActualizarCita.LugarId = int.Parse(ObjAgendarCitaForm.cmbLugar.SelectedValue.ToString());
                     ObjDAOActualizarCita.EstadoId = int.Parse(ObjAgendarCitaForm.cmbEstado.SelectedValue.ToString());
                     ObjDAOActualizarCita.Descripcion = ObjAgendarCitaForm.txtMotivoConsulta.Text.Trim();

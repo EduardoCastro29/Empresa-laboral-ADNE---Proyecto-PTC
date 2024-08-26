@@ -23,7 +23,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador.Controlador_UC_Calenda
             static_day = ObjUCDIAS.lblDias.Text;
             AgendarCitaForm ObjAgendarCita = new AgendarCitaForm();
             ObjAgendarCita.btnModificar.Enabled = false;
-            ObjAgendarCita.txtfecha.Enabled = false;
+            ObjAgendarCita.dtFecha.Enabled = false;
             ObjAgendarCita.Show();
         }
         public void days(int numDia)
