@@ -31,7 +31,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             //Se generara un formulario en específico dentro del panel
             ObjDashboard.Load += new EventHandler(FormularioPredeterminado);
             ObjDashboard.Load += new EventHandler(DatosUsuarioLogin);
-            ObjDashboard.btnCerrarPrograma.Click += new EventHandler(CerrarPrograma);
+            //ObjDashboard.btnCerrarPrograma.Click += new EventHandler(CerrarPrograma);
             ObjDashboard.btnCerrarS.Click += new EventHandler(CerrarSesion);
 
             //Creamos los eventos click de los formularios, como referencia a qué formulario se tomara en cuenta

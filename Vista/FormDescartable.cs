@@ -1,24 +1,20 @@
-﻿using Empresa_laboral_ADNE___Proyecto_PTC.Controlador;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Empresa_laboral_ADNE___Proyecto_PTC.Vista
 {
-    public partial class DashboardForm : Form
+    public partial class FormDescartable : Form
     {
-        public DashboardForm()
+        public FormDescartable()
         {
             InitializeComponent();
-            CTRLDashboard ObjDashboardControlador = new CTRLDashboard(this);
         }
     }
 }
- 

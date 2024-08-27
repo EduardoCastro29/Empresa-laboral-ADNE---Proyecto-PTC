@@ -20,7 +20,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
         {
             ObjActividadesForm = Vista;
 
-            ObjActividadesForm.btnPacientes.Click += new EventHandler(VerPacientes);
+            //ObjActividadesForm.btnPacientes.Click += new EventHandler(VerPacientes);
         }
         //Aca su crudo
 

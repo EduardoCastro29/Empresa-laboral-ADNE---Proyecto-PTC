@@ -266,11 +266,23 @@
     <Compile Include="Vista\Calendario.Designer.cs">
       <DependentUpon>Calendario.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\FormDescartable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\FormDescartable.Designer.cs">
+      <DependentUpon>FormDescartable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\Pin de Acceso.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Vista\Pin de Acceso.Designer.cs">
       <DependentUpon>Pin de Acceso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Plantilla_DiseñosResponsive.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Plantilla_DiseñosResponsive.Designer.cs">
+      <DependentUpon>Plantilla_DiseñosResponsive.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\Primer uso del Sistema.cs">
       <SubType>Form</SubType>
@@ -405,8 +417,14 @@
     <EmbeddedResource Include="Vista\Calendario.resx">
       <DependentUpon>Calendario.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vista\FormDescartable.resx">
+      <DependentUpon>FormDescartable.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vista\Pin de Acceso.resx">
       <DependentUpon>Pin de Acceso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Plantilla_DiseñosResponsive.resx">
+      <DependentUpon>Plantilla_DiseñosResponsive.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\Primer uso del Sistema.resx">
       <DependentUpon>Primer uso del Sistema.cs</DependentUpon>
@@ -568,6 +586,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\fluent_minimize-12-filled1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mdi_dock-window2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

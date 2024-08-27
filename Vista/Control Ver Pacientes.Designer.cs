@@ -28,64 +28,46 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ControlVerPacientesUC));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
-            this.bunifuShadowPanel1 = new Bunifu.UI.WinForms.BunifuShadowPanel();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.desabilitarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            this.pnlFondoPacienteUC = new Bunifu.UI.WinForms.BunifuShadowPanel();
             this.btnVerExpediente = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.btnVerInformacion = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.lblPacienteId = new Bunifu.UI.WinForms.BunifuLabel();
             this.lblNombrePaciente = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuPictureBox1 = new Bunifu.UI.WinForms.BunifuPictureBox();
-            this.bunifuShadowPanel1.SuspendLayout();
-            this.contextMenuStrip1.SuspendLayout();
+            this.pnlFondoPacienteUC.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // bunifuShadowPanel1
+            // pnlFondoPacienteUC
             // 
-            this.bunifuShadowPanel1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuShadowPanel1.BorderColor = System.Drawing.Color.White;
-            this.bunifuShadowPanel1.BorderRadius = 5;
-            this.bunifuShadowPanel1.BorderThickness = 0;
-            this.bunifuShadowPanel1.ContextMenuStrip = this.contextMenuStrip1;
-            this.bunifuShadowPanel1.Controls.Add(this.btnVerExpediente);
-            this.bunifuShadowPanel1.Controls.Add(this.btnVerInformacion);
-            this.bunifuShadowPanel1.Controls.Add(this.lblPacienteId);
-            this.bunifuShadowPanel1.Controls.Add(this.lblNombrePaciente);
-            this.bunifuShadowPanel1.Controls.Add(this.bunifuPictureBox1);
-            this.bunifuShadowPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bunifuShadowPanel1.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
-            this.bunifuShadowPanel1.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.BackwardDiagonal;
-            this.bunifuShadowPanel1.Location = new System.Drawing.Point(0, 0);
-            this.bunifuShadowPanel1.Margin = new System.Windows.Forms.Padding(0);
-            this.bunifuShadowPanel1.Name = "bunifuShadowPanel1";
-            this.bunifuShadowPanel1.PanelColor = System.Drawing.Color.White;
-            this.bunifuShadowPanel1.PanelColor2 = System.Drawing.Color.White;
-            this.bunifuShadowPanel1.ShadowColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(217)))), ((int)(((byte)(198)))), ((int)(((byte)(198)))));
-            this.bunifuShadowPanel1.ShadowDept = 2;
-            this.bunifuShadowPanel1.ShadowDepth = 1;
-            this.bunifuShadowPanel1.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Surrounded;
-            this.bunifuShadowPanel1.ShadowTopLeftVisible = false;
-            this.bunifuShadowPanel1.Size = new System.Drawing.Size(914, 100);
-            this.bunifuShadowPanel1.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Raised;
-            this.bunifuShadowPanel1.TabIndex = 2;
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.desabilitarToolStripMenuItem});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(178, 26);
-            // 
-            // desabilitarToolStripMenuItem
-            // 
-            this.desabilitarToolStripMenuItem.Name = "desabilitarToolStripMenuItem";
-            this.desabilitarToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
-            this.desabilitarToolStripMenuItem.Text = "Desabilitar paciente";
+            this.pnlFondoPacienteUC.BackColor = System.Drawing.Color.Transparent;
+            this.pnlFondoPacienteUC.BorderColor = System.Drawing.Color.White;
+            this.pnlFondoPacienteUC.BorderRadius = 5;
+            this.pnlFondoPacienteUC.BorderThickness = 0;
+            this.pnlFondoPacienteUC.Controls.Add(this.btnVerExpediente);
+            this.pnlFondoPacienteUC.Controls.Add(this.btnVerInformacion);
+            this.pnlFondoPacienteUC.Controls.Add(this.lblPacienteId);
+            this.pnlFondoPacienteUC.Controls.Add(this.lblNombrePaciente);
+            this.pnlFondoPacienteUC.Controls.Add(this.bunifuPictureBox1);
+            this.pnlFondoPacienteUC.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlFondoPacienteUC.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
+            this.pnlFondoPacienteUC.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.BackwardDiagonal;
+            this.pnlFondoPacienteUC.Location = new System.Drawing.Point(0, 0);
+            this.pnlFondoPacienteUC.Margin = new System.Windows.Forms.Padding(0);
+            this.pnlFondoPacienteUC.Name = "pnlFondoPacienteUC";
+            this.pnlFondoPacienteUC.PanelColor = System.Drawing.Color.White;
+            this.pnlFondoPacienteUC.PanelColor2 = System.Drawing.Color.White;
+            this.pnlFondoPacienteUC.ShadowColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(217)))), ((int)(((byte)(198)))), ((int)(((byte)(198)))));
+            this.pnlFondoPacienteUC.ShadowDept = 2;
+            this.pnlFondoPacienteUC.ShadowDepth = 1;
+            this.pnlFondoPacienteUC.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Surrounded;
+            this.pnlFondoPacienteUC.ShadowTopLeftVisible = false;
+            this.pnlFondoPacienteUC.Size = new System.Drawing.Size(914, 100);
+            this.pnlFondoPacienteUC.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Raised;
+            this.pnlFondoPacienteUC.TabIndex = 2;
             // 
             // btnVerExpediente
             // 
@@ -106,11 +88,11 @@
             this.btnVerExpediente.ColorContrastOnClick = 45;
             this.btnVerExpediente.ColorContrastOnHover = 45;
             this.btnVerExpediente.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges1.BottomLeft = true;
-            borderEdges1.BottomRight = true;
-            borderEdges1.TopLeft = true;
-            borderEdges1.TopRight = true;
-            this.btnVerExpediente.CustomizableEdges = borderEdges1;
+            borderEdges3.BottomLeft = true;
+            borderEdges3.BottomRight = true;
+            borderEdges3.TopLeft = true;
+            borderEdges3.TopRight = true;
+            this.btnVerExpediente.CustomizableEdges = borderEdges3;
             this.btnVerExpediente.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnVerExpediente.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnVerExpediente.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -195,11 +177,11 @@
             this.btnVerInformacion.ColorContrastOnClick = 45;
             this.btnVerInformacion.ColorContrastOnHover = 45;
             this.btnVerInformacion.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges2.BottomLeft = true;
-            borderEdges2.BottomRight = true;
-            borderEdges2.TopLeft = true;
-            borderEdges2.TopRight = true;
-            this.btnVerInformacion.CustomizableEdges = borderEdges2;
+            borderEdges4.BottomLeft = true;
+            borderEdges4.BottomRight = true;
+            borderEdges4.TopLeft = true;
+            borderEdges4.TopRight = true;
+            this.btnVerInformacion.CustomizableEdges = borderEdges4;
             this.btnVerInformacion.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnVerInformacion.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnVerInformacion.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -275,7 +257,7 @@
             this.lblPacienteId.Location = new System.Drawing.Point(282, 19);
             this.lblPacienteId.Name = "lblPacienteId";
             this.lblPacienteId.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblPacienteId.Size = new System.Drawing.Size(39, 9);
+            this.lblPacienteId.Size = new System.Drawing.Size(8, 2);
             this.lblPacienteId.TabIndex = 1;
             this.lblPacienteId.Text = "pacienteId";
             this.lblPacienteId.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -318,12 +300,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
-            this.Controls.Add(this.bunifuShadowPanel1);
+            this.Controls.Add(this.pnlFondoPacienteUC);
             this.Name = "ControlVerPacientesUC";
             this.Size = new System.Drawing.Size(914, 100);
-            this.bunifuShadowPanel1.ResumeLayout(false);
-            this.bunifuShadowPanel1.PerformLayout();
-            this.contextMenuStrip1.ResumeLayout(false);
+            this.pnlFondoPacienteUC.ResumeLayout(false);
+            this.pnlFondoPacienteUC.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -331,9 +312,7 @@
 
         #endregion
 
-        public Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel1;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem desabilitarToolStripMenuItem;
+        public Bunifu.UI.WinForms.BunifuShadowPanel pnlFondoPacienteUC;
         public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnVerExpediente;
         public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnVerInformacion;
         public Bunifu.UI.WinForms.BunifuLabel lblPacienteId;
