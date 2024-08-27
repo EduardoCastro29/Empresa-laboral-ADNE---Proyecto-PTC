@@ -14,28 +14,27 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Vista
 {
     public partial class DashboardForm : Form
     {
-        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
-        private static extern IntPtr CreateRoundRectRgn
-        (
-            int nLeftRect,     // x-coordinate of upper-left corner
-            int nTopRect,      // y-coordinate of upper-left corner
-            int nRightRect,    // x-coordinate of lower-right corner
-            int nBottomRect,   // y-coordinate of lower-right corner
-            int nWidthEllipse, // height of ellipse
-            int nHeightEllipse // width of ellipse
-        );
+        //[DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
+        //private static extern IntPtr CreateRoundRectRgn
+        //(
+        //    int nLeftRect,     // x-coordinate of upper-left corner
+        //    int nTopRect,      // y-coordinate of upper-left corner
+        //    int nRightRect,    // x-coordinate of lower-right corner
+        //    int nBottomRect,   // y-coordinate of lower-right corner
+        //    int nWidthEllipse, // height of ellipse
+        //    int nHeightEllipse // width of ellipse
+        //);
         public DashboardForm()
         {
             InitializeComponent();
-            this.FormBorderStyle = FormBorderStyle.None;
-            Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
+            //this.FormBorderStyle = FormBorderStyle.Sizable;
+            //Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
 
             CTRLDashboard ObjDashboardControlador = new CTRLDashboard(this);
         }
-
-        private void btnMaximizar_Click(object sender, EventArgs e)
+        private void btnMaximizar_Click_1(object sender, EventArgs e)
         {
-            if (this.WindowState == FormWindowState.Normal) 
+            if (this.WindowState == FormWindowState.Normal)
             {
                 this.WindowState = FormWindowState.Maximized;
             }
@@ -45,7 +44,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Vista
             }
         }
 
-        private void btnMinimizar_Click(object sender, EventArgs e)
+        private void btnMinimizar_Click_1(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
         }

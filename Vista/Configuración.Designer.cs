@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConfiguraciónForm));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
@@ -377,7 +377,7 @@
             this.bunifuLabel4.Margin = new System.Windows.Forms.Padding(3, 10, 3, 3);
             this.bunifuLabel4.Name = "bunifuLabel4";
             this.bunifuLabel4.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel4.Size = new System.Drawing.Size(172, 39);
+            this.bunifuLabel4.Size = new System.Drawing.Size(181, 41);
             this.bunifuLabel4.TabIndex = 2;
             this.bunifuLabel4.Text = "Acerca de";
             this.bunifuLabel4.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -603,7 +603,7 @@
             this.bunifuLabel3.Name = "bunifuLabel3";
             this.bunifuLabel3.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
             this.bunifuLabel3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel3.Size = new System.Drawing.Size(229, 49);
+            this.bunifuLabel3.Size = new System.Drawing.Size(239, 51);
             this.bunifuLabel3.TabIndex = 2;
             this.bunifuLabel3.Text = "Notificaciones";
             this.bunifuLabel3.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -611,7 +611,7 @@
             // 
             // flowLayoutPanel11
             // 
-            this.flowLayoutPanel11.Location = new System.Drawing.Point(285, 3);
+            this.flowLayoutPanel11.Location = new System.Drawing.Point(295, 3);
             this.flowLayoutPanel11.Name = "flowLayoutPanel11";
             this.flowLayoutPanel11.Size = new System.Drawing.Size(105, 24);
             this.flowLayoutPanel11.TabIndex = 0;
@@ -705,11 +705,11 @@
             this.btnCerrarSesion.ColorContrastOnClick = 45;
             this.btnCerrarSesion.ColorContrastOnHover = 45;
             this.btnCerrarSesion.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges2.BottomLeft = true;
-            borderEdges2.BottomRight = true;
-            borderEdges2.TopLeft = true;
-            borderEdges2.TopRight = true;
-            this.btnCerrarSesion.CustomizableEdges = borderEdges2;
+            borderEdges1.BottomLeft = true;
+            borderEdges1.BottomRight = true;
+            borderEdges1.TopLeft = true;
+            borderEdges1.TopRight = true;
+            this.btnCerrarSesion.CustomizableEdges = borderEdges1;
             this.btnCerrarSesion.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnCerrarSesion.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnCerrarSesion.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -979,7 +979,7 @@
             this.bunifuLabel2.Name = "bunifuLabel2";
             this.bunifuLabel2.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
             this.bunifuLabel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel2.Size = new System.Drawing.Size(161, 49);
+            this.bunifuLabel2.Size = new System.Drawing.Size(168, 51);
             this.bunifuLabel2.TabIndex = 2;
             this.bunifuLabel2.Text = "Mi cuenta";
             this.bunifuLabel2.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -989,14 +989,14 @@
             // 
             this.picUsuario.AllowFocused = false;
             this.picUsuario.AutoSizeHeight = false;
-            this.picUsuario.BorderRadius = 134;
+            this.picUsuario.BorderRadius = 124;
             this.picUsuario.Dock = System.Windows.Forms.DockStyle.Top;
             this.picUsuario.Image = global::Empresa_laboral_ADNE___Proyecto_PTC.Properties.Resources.Foto_configuración;
             this.picUsuario.IsCircle = true;
             this.picUsuario.Location = new System.Drawing.Point(30, 83);
             this.picUsuario.Margin = new System.Windows.Forms.Padding(30, 3, 3, 3);
             this.picUsuario.Name = "picUsuario";
-            this.picUsuario.Size = new System.Drawing.Size(268, 249);
+            this.picUsuario.Size = new System.Drawing.Size(268, 268);
             this.picUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picUsuario.TabIndex = 1;
             this.picUsuario.TabStop = false;

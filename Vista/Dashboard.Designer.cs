@@ -36,99 +36,177 @@
             Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges5 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges6 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges7 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
-            this.LeftMenuLayout = new System.Windows.Forms.FlowLayoutPanel();
-            this.FlowLayoutTop = new System.Windows.Forms.FlowLayoutPanel();
+            this.bunifuGradientPanel1 = new Bunifu.UI.WinForms.BunifuGradientPanel();
+            this.btnCerrarPrograma = new Bunifu.UI.WinForms.BunifuPictureBox();
+            this.btnMinimizar = new Bunifu.UI.WinForms.BunifuPictureBox();
+            this.btnMaximizar = new Bunifu.UI.WinForms.BunifuPictureBox();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
+            this.pnlMenu1 = new Bunifu.UI.WinForms.BunifuPanel();
             this.btnMainPage = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.btnPacientes = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.btnCitas = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.btnCalendario = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.btnEquipo = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.btnConfig = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
-            this.flowLayoutPanel6 = new System.Windows.Forms.FlowLayoutPanel();
-            this.bunifuPanel2 = new Bunifu.UI.WinForms.BunifuPanel();
-            this.btnCerrarS = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.bunifuPanel3 = new Bunifu.UI.WinForms.BunifuPanel();
-            this.picUsuario = new Bunifu.UI.WinForms.BunifuPictureBox();
-            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
-            this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
-            this.lblUsuario = new Bunifu.UI.WinForms.BunifuLabel();
-            this.flowLayoutPanel5 = new System.Windows.Forms.FlowLayoutPanel();
-            this.lblIdUsuario = new Bunifu.UI.WinForms.BunifuLabel();
             this.panelGeneralVistas = new Bunifu.UI.WinForms.BunifuPanel();
-            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.btnMinimizar = new Bunifu.UI.WinForms.BunifuPictureBox();
-            this.btnMaximizar = new Bunifu.UI.WinForms.BunifuPictureBox();
-            this.btnCerrarPrograma = new Bunifu.UI.WinForms.BunifuPictureBox();
-            this.LeftMenuLayout.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.flowLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picUsuario)).BeginInit();
-            this.flowLayoutPanel3.SuspendLayout();
-            this.flowLayoutPanel4.SuspendLayout();
-            this.flowLayoutPanel5.SuspendLayout();
-            this.flowLayoutPanel2.SuspendLayout();
+            this.pnlMenu2 = new Bunifu.UI.WinForms.BunifuPanel();
+            this.btnCerrarS = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
+            this.pnlMenu3 = new Bunifu.UI.WinForms.BunifuPanel();
+            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
+            this.picUsuario = new Bunifu.UI.WinForms.BunifuPictureBox();
+            this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel5 = new System.Windows.Forms.FlowLayoutPanel();
+            this.lblUsuario = new Bunifu.UI.WinForms.BunifuLabel();
+            this.flowLayoutPanel7 = new System.Windows.Forms.FlowLayoutPanel();
+            this.lblIdUsuario = new Bunifu.UI.WinForms.BunifuLabel();
+            this.flowLayoutPanel6 = new System.Windows.Forms.FlowLayoutPanel();
+            this.bunifuGradientPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCerrarPrograma)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnCerrarPrograma)).BeginInit();
+            this.flowLayoutPanel1.SuspendLayout();
+            this.flowLayoutPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.flowLayoutPanel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picUsuario)).BeginInit();
+            this.flowLayoutPanel4.SuspendLayout();
+            this.flowLayoutPanel5.SuspendLayout();
+            this.flowLayoutPanel7.SuspendLayout();
             this.SuspendLayout();
             // 
-            // LeftMenuLayout
+            // bunifuGradientPanel1
             // 
-            this.LeftMenuLayout.Controls.Add(this.FlowLayoutTop);
-            this.LeftMenuLayout.Controls.Add(this.pictureBox1);
-            this.LeftMenuLayout.Controls.Add(this.bunifuPanel1);
-            this.LeftMenuLayout.Controls.Add(this.btnMainPage);
-            this.LeftMenuLayout.Controls.Add(this.btnPacientes);
-            this.LeftMenuLayout.Controls.Add(this.btnCitas);
-            this.LeftMenuLayout.Controls.Add(this.btnCalendario);
-            this.LeftMenuLayout.Controls.Add(this.btnEquipo);
-            this.LeftMenuLayout.Controls.Add(this.btnConfig);
-            this.LeftMenuLayout.Controls.Add(this.flowLayoutPanel6);
-            this.LeftMenuLayout.Controls.Add(this.bunifuPanel2);
-            this.LeftMenuLayout.Controls.Add(this.btnCerrarS);
-            this.LeftMenuLayout.Controls.Add(this.flowLayoutPanel1);
-            this.LeftMenuLayout.Dock = System.Windows.Forms.DockStyle.Left;
-            this.LeftMenuLayout.Location = new System.Drawing.Point(0, 0);
-            this.LeftMenuLayout.Name = "LeftMenuLayout";
-            this.LeftMenuLayout.Size = new System.Drawing.Size(286, 759);
-            this.LeftMenuLayout.TabIndex = 4;
+            this.bunifuGradientPanel1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
+            this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuGradientPanel1.BorderRadius = 1;
+            this.bunifuGradientPanel1.Controls.Add(this.flowLayoutPanel2);
+            this.bunifuGradientPanel1.Controls.Add(this.flowLayoutPanel1);
+            this.bunifuGradientPanel1.Controls.Add(this.panelGeneralVistas);
+            this.bunifuGradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.bunifuGradientPanel1.GradientBottomLeft = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(135)))), ((int)(((byte)(143)))));
+            this.bunifuGradientPanel1.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(136)))), ((int)(((byte)(148)))));
+            this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(143)))), ((int)(((byte)(156)))));
+            this.bunifuGradientPanel1.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(134)))), ((int)(((byte)(137)))));
+            this.bunifuGradientPanel1.Location = new System.Drawing.Point(0, 0);
+            this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
+            this.bunifuGradientPanel1.Quality = 10;
+            this.bunifuGradientPanel1.Size = new System.Drawing.Size(1297, 784);
+            this.bunifuGradientPanel1.TabIndex = 0;
             // 
-            // FlowLayoutTop
+            // btnCerrarPrograma
             // 
-            this.FlowLayoutTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(110)))), ((int)(((byte)(119)))));
-            this.FlowLayoutTop.Location = new System.Drawing.Point(0, 0);
-            this.FlowLayoutTop.Margin = new System.Windows.Forms.Padding(0);
-            this.FlowLayoutTop.Name = "FlowLayoutTop";
-            this.FlowLayoutTop.Size = new System.Drawing.Size(287, 41);
-            this.FlowLayoutTop.TabIndex = 12;
+            this.btnCerrarPrograma.AllowFocused = false;
+            this.btnCerrarPrograma.AutoSizeHeight = true;
+            this.btnCerrarPrograma.BorderRadius = 0;
+            this.btnCerrarPrograma.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCerrarPrograma.Image = global::Empresa_laboral_ADNE___Proyecto_PTC.Properties.Resources.Vector;
+            this.btnCerrarPrograma.IsCircle = true;
+            this.btnCerrarPrograma.Location = new System.Drawing.Point(1259, 3);
+            this.btnCerrarPrograma.Margin = new System.Windows.Forms.Padding(13, 3, 3, 3);
+            this.btnCerrarPrograma.Name = "btnCerrarPrograma";
+            this.btnCerrarPrograma.Size = new System.Drawing.Size(35, 35);
+            this.btnCerrarPrograma.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.btnCerrarPrograma.TabIndex = 5;
+            this.btnCerrarPrograma.TabStop = false;
+            this.btnCerrarPrograma.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Square;
+            // 
+            // btnMinimizar
+            // 
+            this.btnMinimizar.AllowFocused = false;
+            this.btnMinimizar.AutoSizeHeight = true;
+            this.btnMinimizar.BorderRadius = 0;
+            this.btnMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMinimizar.Image = global::Empresa_laboral_ADNE___Proyecto_PTC.Properties.Resources.fluent_minimize_12_filled;
+            this.btnMinimizar.IsCircle = true;
+            this.btnMinimizar.Location = new System.Drawing.Point(1172, 12);
+            this.btnMinimizar.Margin = new System.Windows.Forms.Padding(3, 12, 3, 3);
+            this.btnMinimizar.Name = "btnMinimizar";
+            this.btnMinimizar.Size = new System.Drawing.Size(30, 30);
+            this.btnMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.btnMinimizar.TabIndex = 4;
+            this.btnMinimizar.TabStop = false;
+            this.btnMinimizar.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Square;
+            this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click_1);
+            // 
+            // btnMaximizar
+            // 
+            this.btnMaximizar.AllowFocused = false;
+            this.btnMaximizar.AutoSizeHeight = true;
+            this.btnMaximizar.BorderRadius = 0;
+            this.btnMaximizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMaximizar.Image = global::Empresa_laboral_ADNE___Proyecto_PTC.Properties.Resources.mdi_dock_window;
+            this.btnMaximizar.IsCircle = true;
+            this.btnMaximizar.Location = new System.Drawing.Point(1218, 10);
+            this.btnMaximizar.Margin = new System.Windows.Forms.Padding(13, 10, 3, 3);
+            this.btnMaximizar.Name = "btnMaximizar";
+            this.btnMaximizar.Size = new System.Drawing.Size(25, 25);
+            this.btnMaximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnMaximizar.TabIndex = 3;
+            this.btnMaximizar.TabStop = false;
+            this.btnMaximizar.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Square;
+            this.btnMaximizar.Click += new System.EventHandler(this.btnMaximizar_Click_1);
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(110)))), ((int)(((byte)(119)))));
+            this.flowLayoutPanel1.Controls.Add(this.btnCerrarPrograma);
+            this.flowLayoutPanel1.Controls.Add(this.btnMaximizar);
+            this.flowLayoutPanel1.Controls.Add(this.btnMinimizar);
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1297, 44);
+            this.flowLayoutPanel1.TabIndex = 0;
+            // 
+            // flowLayoutPanel2
+            // 
+            this.flowLayoutPanel2.Controls.Add(this.pictureBox1);
+            this.flowLayoutPanel2.Controls.Add(this.pnlMenu1);
+            this.flowLayoutPanel2.Controls.Add(this.btnMainPage);
+            this.flowLayoutPanel2.Controls.Add(this.btnPacientes);
+            this.flowLayoutPanel2.Controls.Add(this.btnCitas);
+            this.flowLayoutPanel2.Controls.Add(this.btnCalendario);
+            this.flowLayoutPanel2.Controls.Add(this.btnEquipo);
+            this.flowLayoutPanel2.Controls.Add(this.btnConfig);
+            this.flowLayoutPanel2.Controls.Add(this.flowLayoutPanel6);
+            this.flowLayoutPanel2.Controls.Add(this.pnlMenu2);
+            this.flowLayoutPanel2.Controls.Add(this.btnCerrarS);
+            this.flowLayoutPanel2.Controls.Add(this.pnlMenu3);
+            this.flowLayoutPanel2.Controls.Add(this.flowLayoutPanel3);
+            this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 44);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(313, 740);
+            this.flowLayoutPanel2.TabIndex = 1;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Empresa_laboral_ADNE___Proyecto_PTC.Properties.Resources.ADNE_EDIT1_4;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 44);
+            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(282, 168);
+            this.pictureBox1.Size = new System.Drawing.Size(321, 179);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // bunifuPanel1
+            // pnlMenu1
             // 
-            this.bunifuPanel1.BackgroundColor = System.Drawing.Color.White;
-            this.bunifuPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuPanel1.BackgroundImage")));
-            this.bunifuPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuPanel1.BorderColor = System.Drawing.Color.White;
-            this.bunifuPanel1.BorderRadius = 3;
-            this.bunifuPanel1.BorderThickness = 1;
-            this.bunifuPanel1.Location = new System.Drawing.Point(20, 218);
-            this.bunifuPanel1.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);
-            this.bunifuPanel1.Name = "bunifuPanel1";
-            this.bunifuPanel1.ShowBorders = true;
-            this.bunifuPanel1.Size = new System.Drawing.Size(253, 1);
-            this.bunifuPanel1.TabIndex = 8;
+            this.pnlMenu1.BackgroundColor = System.Drawing.Color.White;
+            this.pnlMenu1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlMenu1.BackgroundImage")));
+            this.pnlMenu1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnlMenu1.BorderColor = System.Drawing.Color.White;
+            this.pnlMenu1.BorderRadius = 3;
+            this.pnlMenu1.BorderThickness = 1;
+            this.pnlMenu1.Location = new System.Drawing.Point(20, 188);
+            this.pnlMenu1.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);
+            this.pnlMenu1.Name = "pnlMenu1";
+            this.pnlMenu1.ShowBorders = true;
+            this.pnlMenu1.Size = new System.Drawing.Size(265, 1);
+            this.pnlMenu1.TabIndex = 9;
             // 
             // btnMainPage
             // 
@@ -177,8 +255,8 @@
             this.btnMainPage.IdleIconLeftImage = global::Empresa_laboral_ADNE___Proyecto_PTC.Properties.Resources.Pagina_principal;
             this.btnMainPage.IdleIconRightImage = null;
             this.btnMainPage.IndicateFocus = false;
-            this.btnMainPage.Location = new System.Drawing.Point(9, 225);
-            this.btnMainPage.Margin = new System.Windows.Forms.Padding(9, 3, 3, 3);
+            this.btnMainPage.Location = new System.Drawing.Point(15, 195);
+            this.btnMainPage.Margin = new System.Windows.Forms.Padding(15, 3, 3, 3);
             this.btnMainPage.Name = "btnMainPage";
             this.btnMainPage.OnDisabledState.BorderColor = System.Drawing.Color.Transparent;
             this.btnMainPage.OnDisabledState.BorderRadius = 50;
@@ -213,7 +291,7 @@
             this.btnMainPage.OnPressedState.IconLeftImage = null;
             this.btnMainPage.OnPressedState.IconRightImage = null;
             this.btnMainPage.Size = new System.Drawing.Size(266, 50);
-            this.btnMainPage.TabIndex = 2;
+            this.btnMainPage.TabIndex = 10;
             this.btnMainPage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnMainPage.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnMainPage.TextMarginLeft = 0;
@@ -267,8 +345,8 @@
             this.btnPacientes.IdleIconLeftImage = global::Empresa_laboral_ADNE___Proyecto_PTC.Properties.Resources.Pacientes;
             this.btnPacientes.IdleIconRightImage = null;
             this.btnPacientes.IndicateFocus = false;
-            this.btnPacientes.Location = new System.Drawing.Point(9, 281);
-            this.btnPacientes.Margin = new System.Windows.Forms.Padding(9, 3, 3, 3);
+            this.btnPacientes.Location = new System.Drawing.Point(15, 251);
+            this.btnPacientes.Margin = new System.Windows.Forms.Padding(15, 3, 3, 3);
             this.btnPacientes.Name = "btnPacientes";
             this.btnPacientes.OnDisabledState.BorderColor = System.Drawing.Color.Transparent;
             this.btnPacientes.OnDisabledState.BorderRadius = 50;
@@ -303,7 +381,7 @@
             this.btnPacientes.OnPressedState.IconLeftImage = null;
             this.btnPacientes.OnPressedState.IconRightImage = null;
             this.btnPacientes.Size = new System.Drawing.Size(266, 50);
-            this.btnPacientes.TabIndex = 3;
+            this.btnPacientes.TabIndex = 11;
             this.btnPacientes.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnPacientes.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnPacientes.TextMarginLeft = 0;
@@ -357,8 +435,8 @@
             this.btnCitas.IdleIconLeftImage = global::Empresa_laboral_ADNE___Proyecto_PTC.Properties.Resources.Group_19;
             this.btnCitas.IdleIconRightImage = null;
             this.btnCitas.IndicateFocus = false;
-            this.btnCitas.Location = new System.Drawing.Point(9, 337);
-            this.btnCitas.Margin = new System.Windows.Forms.Padding(9, 3, 3, 3);
+            this.btnCitas.Location = new System.Drawing.Point(15, 307);
+            this.btnCitas.Margin = new System.Windows.Forms.Padding(15, 3, 3, 3);
             this.btnCitas.Name = "btnCitas";
             this.btnCitas.OnDisabledState.BorderColor = System.Drawing.Color.Transparent;
             this.btnCitas.OnDisabledState.BorderRadius = 50;
@@ -393,7 +471,7 @@
             this.btnCitas.OnPressedState.IconLeftImage = null;
             this.btnCitas.OnPressedState.IconRightImage = null;
             this.btnCitas.Size = new System.Drawing.Size(266, 50);
-            this.btnCitas.TabIndex = 6;
+            this.btnCitas.TabIndex = 12;
             this.btnCitas.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnCitas.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnCitas.TextMarginLeft = 0;
@@ -447,8 +525,8 @@
             this.btnCalendario.IdleIconLeftImage = global::Empresa_laboral_ADNE___Proyecto_PTC.Properties.Resources.Calendario;
             this.btnCalendario.IdleIconRightImage = null;
             this.btnCalendario.IndicateFocus = false;
-            this.btnCalendario.Location = new System.Drawing.Point(9, 393);
-            this.btnCalendario.Margin = new System.Windows.Forms.Padding(9, 3, 3, 3);
+            this.btnCalendario.Location = new System.Drawing.Point(15, 363);
+            this.btnCalendario.Margin = new System.Windows.Forms.Padding(15, 3, 3, 3);
             this.btnCalendario.Name = "btnCalendario";
             this.btnCalendario.OnDisabledState.BorderColor = System.Drawing.Color.Transparent;
             this.btnCalendario.OnDisabledState.BorderRadius = 50;
@@ -483,7 +561,7 @@
             this.btnCalendario.OnPressedState.IconLeftImage = null;
             this.btnCalendario.OnPressedState.IconRightImage = null;
             this.btnCalendario.Size = new System.Drawing.Size(266, 50);
-            this.btnCalendario.TabIndex = 4;
+            this.btnCalendario.TabIndex = 13;
             this.btnCalendario.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnCalendario.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnCalendario.TextMarginLeft = 0;
@@ -537,8 +615,8 @@
             this.btnEquipo.IdleIconLeftImage = global::Empresa_laboral_ADNE___Proyecto_PTC.Properties.Resources.Equipo;
             this.btnEquipo.IdleIconRightImage = null;
             this.btnEquipo.IndicateFocus = false;
-            this.btnEquipo.Location = new System.Drawing.Point(9, 449);
-            this.btnEquipo.Margin = new System.Windows.Forms.Padding(9, 3, 3, 3);
+            this.btnEquipo.Location = new System.Drawing.Point(15, 419);
+            this.btnEquipo.Margin = new System.Windows.Forms.Padding(15, 3, 3, 3);
             this.btnEquipo.Name = "btnEquipo";
             this.btnEquipo.OnDisabledState.BorderColor = System.Drawing.Color.Transparent;
             this.btnEquipo.OnDisabledState.BorderRadius = 50;
@@ -573,7 +651,7 @@
             this.btnEquipo.OnPressedState.IconLeftImage = null;
             this.btnEquipo.OnPressedState.IconRightImage = null;
             this.btnEquipo.Size = new System.Drawing.Size(266, 50);
-            this.btnEquipo.TabIndex = 5;
+            this.btnEquipo.TabIndex = 14;
             this.btnEquipo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnEquipo.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnEquipo.TextMarginLeft = 0;
@@ -627,8 +705,8 @@
             this.btnConfig.IdleIconLeftImage = global::Empresa_laboral_ADNE___Proyecto_PTC.Properties.Resources.Configuracion;
             this.btnConfig.IdleIconRightImage = null;
             this.btnConfig.IndicateFocus = false;
-            this.btnConfig.Location = new System.Drawing.Point(9, 505);
-            this.btnConfig.Margin = new System.Windows.Forms.Padding(9, 3, 3, 3);
+            this.btnConfig.Location = new System.Drawing.Point(15, 475);
+            this.btnConfig.Margin = new System.Windows.Forms.Padding(15, 3, 3, 3);
             this.btnConfig.Name = "btnConfig";
             this.btnConfig.OnDisabledState.BorderColor = System.Drawing.Color.Transparent;
             this.btnConfig.OnDisabledState.BorderRadius = 50;
@@ -663,34 +741,44 @@
             this.btnConfig.OnPressedState.IconLeftImage = null;
             this.btnConfig.OnPressedState.IconRightImage = null;
             this.btnConfig.Size = new System.Drawing.Size(266, 50);
-            this.btnConfig.TabIndex = 14;
+            this.btnConfig.TabIndex = 15;
             this.btnConfig.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnConfig.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnConfig.TextMarginLeft = 0;
             this.btnConfig.TextPadding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btnConfig.UseDefaultRadiusAndThickness = true;
             // 
-            // flowLayoutPanel6
+            // panelGeneralVistas
             // 
-            this.flowLayoutPanel6.Location = new System.Drawing.Point(3, 561);
-            this.flowLayoutPanel6.Name = "flowLayoutPanel6";
-            this.flowLayoutPanel6.Size = new System.Drawing.Size(277, 23);
-            this.flowLayoutPanel6.TabIndex = 13;
+            this.panelGeneralVistas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelGeneralVistas.BackgroundColor = System.Drawing.Color.White;
+            this.panelGeneralVistas.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelGeneralVistas.BackgroundImage")));
+            this.panelGeneralVistas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelGeneralVistas.BorderColor = System.Drawing.Color.Transparent;
+            this.panelGeneralVistas.BorderRadius = 40;
+            this.panelGeneralVistas.BorderThickness = 1;
+            this.panelGeneralVistas.Location = new System.Drawing.Point(330, 48);
+            this.panelGeneralVistas.Name = "panelGeneralVistas";
+            this.panelGeneralVistas.ShowBorders = true;
+            this.panelGeneralVistas.Size = new System.Drawing.Size(964, 726);
+            this.panelGeneralVistas.TabIndex = 11;
             // 
-            // bunifuPanel2
+            // pnlMenu2
             // 
-            this.bunifuPanel2.BackgroundColor = System.Drawing.Color.White;
-            this.bunifuPanel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuPanel2.BackgroundImage")));
-            this.bunifuPanel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuPanel2.BorderColor = System.Drawing.Color.White;
-            this.bunifuPanel2.BorderRadius = 3;
-            this.bunifuPanel2.BorderThickness = 1;
-            this.bunifuPanel2.Location = new System.Drawing.Point(20, 590);
-            this.bunifuPanel2.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);
-            this.bunifuPanel2.Name = "bunifuPanel2";
-            this.bunifuPanel2.ShowBorders = true;
-            this.bunifuPanel2.Size = new System.Drawing.Size(253, 1);
-            this.bunifuPanel2.TabIndex = 9;
+            this.pnlMenu2.BackgroundColor = System.Drawing.Color.White;
+            this.pnlMenu2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlMenu2.BackgroundImage")));
+            this.pnlMenu2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnlMenu2.BorderColor = System.Drawing.Color.White;
+            this.pnlMenu2.BorderRadius = 3;
+            this.pnlMenu2.BorderThickness = 1;
+            this.pnlMenu2.Location = new System.Drawing.Point(20, 567);
+            this.pnlMenu2.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);
+            this.pnlMenu2.Name = "pnlMenu2";
+            this.pnlMenu2.ShowBorders = true;
+            this.pnlMenu2.Size = new System.Drawing.Size(265, 1);
+            this.pnlMenu2.TabIndex = 17;
             // 
             // btnCerrarS
             // 
@@ -739,8 +827,8 @@
             this.btnCerrarS.IdleIconLeftImage = global::Empresa_laboral_ADNE___Proyecto_PTC.Properties.Resources.Cerrar_sesion;
             this.btnCerrarS.IdleIconRightImage = null;
             this.btnCerrarS.IndicateFocus = false;
-            this.btnCerrarS.Location = new System.Drawing.Point(9, 597);
-            this.btnCerrarS.Margin = new System.Windows.Forms.Padding(9, 3, 3, 3);
+            this.btnCerrarS.Location = new System.Drawing.Point(15, 574);
+            this.btnCerrarS.Margin = new System.Windows.Forms.Padding(15, 3, 3, 3);
             this.btnCerrarS.Name = "btnCerrarS";
             this.btnCerrarS.OnDisabledState.BorderColor = System.Drawing.Color.Transparent;
             this.btnCerrarS.OnDisabledState.BorderRadius = 50;
@@ -775,37 +863,37 @@
             this.btnCerrarS.OnPressedState.IconLeftImage = null;
             this.btnCerrarS.OnPressedState.IconRightImage = null;
             this.btnCerrarS.Size = new System.Drawing.Size(266, 50);
-            this.btnCerrarS.TabIndex = 7;
+            this.btnCerrarS.TabIndex = 18;
             this.btnCerrarS.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnCerrarS.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnCerrarS.TextMarginLeft = 0;
             this.btnCerrarS.TextPadding = new System.Windows.Forms.Padding(-5, 0, 0, 0);
             this.btnCerrarS.UseDefaultRadiusAndThickness = true;
             // 
-            // flowLayoutPanel1
+            // pnlMenu3
             // 
-            this.flowLayoutPanel1.Controls.Add(this.bunifuPanel3);
-            this.flowLayoutPanel1.Controls.Add(this.picUsuario);
-            this.flowLayoutPanel1.Controls.Add(this.flowLayoutPanel3);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 653);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(282, 95);
-            this.flowLayoutPanel1.TabIndex = 11;
+            this.pnlMenu3.BackgroundColor = System.Drawing.Color.White;
+            this.pnlMenu3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlMenu3.BackgroundImage")));
+            this.pnlMenu3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnlMenu3.BorderColor = System.Drawing.Color.White;
+            this.pnlMenu3.BorderRadius = 3;
+            this.pnlMenu3.BorderThickness = 1;
+            this.pnlMenu3.Location = new System.Drawing.Point(20, 630);
+            this.pnlMenu3.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);
+            this.pnlMenu3.Name = "pnlMenu3";
+            this.pnlMenu3.ShowBorders = true;
+            this.pnlMenu3.Size = new System.Drawing.Size(265, 1);
+            this.pnlMenu3.TabIndex = 19;
             // 
-            // bunifuPanel3
+            // flowLayoutPanel3
             // 
-            this.bunifuPanel3.BackgroundColor = System.Drawing.Color.White;
-            this.bunifuPanel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuPanel3.BackgroundImage")));
-            this.bunifuPanel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuPanel3.BorderColor = System.Drawing.Color.White;
-            this.bunifuPanel3.BorderRadius = 3;
-            this.bunifuPanel3.BorderThickness = 1;
-            this.bunifuPanel3.Location = new System.Drawing.Point(20, 3);
-            this.bunifuPanel3.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);
-            this.bunifuPanel3.Name = "bunifuPanel3";
-            this.bunifuPanel3.ShowBorders = true;
-            this.bunifuPanel3.Size = new System.Drawing.Size(253, 1);
-            this.bunifuPanel3.TabIndex = 10;
+            this.flowLayoutPanel3.Controls.Add(this.picUsuario);
+            this.flowLayoutPanel3.Controls.Add(this.flowLayoutPanel4);
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(15, 637);
+            this.flowLayoutPanel3.Margin = new System.Windows.Forms.Padding(15, 3, 3, 3);
+            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(282, 95);
+            this.flowLayoutPanel3.TabIndex = 20;
             // 
             // picUsuario
             // 
@@ -815,7 +903,7 @@
             this.picUsuario.BorderRadius = 35;
             this.picUsuario.Image = ((System.Drawing.Image)(resources.GetObject("picUsuario.Image")));
             this.picUsuario.IsCircle = true;
-            this.picUsuario.Location = new System.Drawing.Point(10, 17);
+            this.picUsuario.Location = new System.Drawing.Point(10, 10);
             this.picUsuario.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
             this.picUsuario.Name = "picUsuario";
             this.picUsuario.Size = new System.Drawing.Size(71, 71);
@@ -824,22 +912,22 @@
             this.picUsuario.TabStop = false;
             this.picUsuario.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle;
             // 
-            // flowLayoutPanel3
-            // 
-            this.flowLayoutPanel3.Controls.Add(this.flowLayoutPanel4);
-            this.flowLayoutPanel3.Controls.Add(this.flowLayoutPanel5);
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(87, 10);
-            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(171, 86);
-            this.flowLayoutPanel3.TabIndex = 1;
-            // 
             // flowLayoutPanel4
             // 
-            this.flowLayoutPanel4.Controls.Add(this.lblUsuario);
-            this.flowLayoutPanel4.Location = new System.Drawing.Point(3, 3);
+            this.flowLayoutPanel4.Controls.Add(this.flowLayoutPanel5);
+            this.flowLayoutPanel4.Controls.Add(this.flowLayoutPanel7);
+            this.flowLayoutPanel4.Location = new System.Drawing.Point(87, 3);
             this.flowLayoutPanel4.Name = "flowLayoutPanel4";
-            this.flowLayoutPanel4.Size = new System.Drawing.Size(178, 30);
-            this.flowLayoutPanel4.TabIndex = 0;
+            this.flowLayoutPanel4.Size = new System.Drawing.Size(171, 86);
+            this.flowLayoutPanel4.TabIndex = 1;
+            // 
+            // flowLayoutPanel5
+            // 
+            this.flowLayoutPanel5.Controls.Add(this.lblUsuario);
+            this.flowLayoutPanel5.Location = new System.Drawing.Point(3, 3);
+            this.flowLayoutPanel5.Name = "flowLayoutPanel5";
+            this.flowLayoutPanel5.Size = new System.Drawing.Size(178, 30);
+            this.flowLayoutPanel5.TabIndex = 0;
             // 
             // lblUsuario
             // 
@@ -859,13 +947,13 @@
             this.lblUsuario.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lblUsuario.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
-            // flowLayoutPanel5
+            // flowLayoutPanel7
             // 
-            this.flowLayoutPanel5.Controls.Add(this.lblIdUsuario);
-            this.flowLayoutPanel5.Location = new System.Drawing.Point(3, 39);
-            this.flowLayoutPanel5.Name = "flowLayoutPanel5";
-            this.flowLayoutPanel5.Size = new System.Drawing.Size(178, 37);
-            this.flowLayoutPanel5.TabIndex = 1;
+            this.flowLayoutPanel7.Controls.Add(this.lblIdUsuario);
+            this.flowLayoutPanel7.Location = new System.Drawing.Point(3, 39);
+            this.flowLayoutPanel7.Name = "flowLayoutPanel7";
+            this.flowLayoutPanel7.Size = new System.Drawing.Size(178, 37);
+            this.flowLayoutPanel7.TabIndex = 1;
             // 
             // lblIdUsuario
             // 
@@ -884,149 +972,70 @@
             this.lblIdUsuario.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lblIdUsuario.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
-            // panelGeneralVistas
+            // flowLayoutPanel6
             // 
-            this.panelGeneralVistas.BackgroundColor = System.Drawing.Color.White;
-            this.panelGeneralVistas.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelGeneralVistas.BackgroundImage")));
-            this.panelGeneralVistas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panelGeneralVistas.BorderColor = System.Drawing.Color.Transparent;
-            this.panelGeneralVistas.BorderRadius = 40;
-            this.panelGeneralVistas.BorderThickness = 1;
-            this.panelGeneralVistas.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelGeneralVistas.Location = new System.Drawing.Point(286, 41);
-            this.panelGeneralVistas.Name = "panelGeneralVistas";
-            this.panelGeneralVistas.ShowBorders = true;
-            this.panelGeneralVistas.Size = new System.Drawing.Size(1011, 718);
-            this.panelGeneralVistas.TabIndex = 7;
-            // 
-            // flowLayoutPanel2
-            // 
-            this.flowLayoutPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(110)))), ((int)(((byte)(119)))));
-            this.flowLayoutPanel2.Controls.Add(this.btnMinimizar);
-            this.flowLayoutPanel2.Controls.Add(this.btnMaximizar);
-            this.flowLayoutPanel2.Controls.Add(this.btnCerrarPrograma);
-            this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(286, 0);
-            this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
-            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(1011, 41);
-            this.flowLayoutPanel2.TabIndex = 6;
-            // 
-            // btnMinimizar
-            // 
-            this.btnMinimizar.AllowFocused = false;
-            this.btnMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMinimizar.AutoSizeHeight = true;
-            this.btnMinimizar.BorderRadius = 0;
-            this.btnMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMinimizar.Image = global::Empresa_laboral_ADNE___Proyecto_PTC.Properties.Resources.fluent_minimize_12_filled;
-            this.btnMinimizar.IsCircle = true;
-            this.btnMinimizar.Location = new System.Drawing.Point(880, 12);
-            this.btnMinimizar.Margin = new System.Windows.Forms.Padding(880, 12, 3, 3);
-            this.btnMinimizar.Name = "btnMinimizar";
-            this.btnMinimizar.Size = new System.Drawing.Size(30, 30);
-            this.btnMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.btnMinimizar.TabIndex = 2;
-            this.btnMinimizar.TabStop = false;
-            this.btnMinimizar.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Square;
-            this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
-            // 
-            // btnMaximizar
-            // 
-            this.btnMaximizar.AllowFocused = false;
-            this.btnMaximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMaximizar.AutoSizeHeight = true;
-            this.btnMaximizar.BorderRadius = 0;
-            this.btnMaximizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMaximizar.Image = global::Empresa_laboral_ADNE___Proyecto_PTC.Properties.Resources.mdi_dock_window;
-            this.btnMaximizar.IsCircle = true;
-            this.btnMaximizar.Location = new System.Drawing.Point(926, 10);
-            this.btnMaximizar.Margin = new System.Windows.Forms.Padding(13, 10, 3, 3);
-            this.btnMaximizar.Name = "btnMaximizar";
-            this.btnMaximizar.Size = new System.Drawing.Size(25, 25);
-            this.btnMaximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnMaximizar.TabIndex = 1;
-            this.btnMaximizar.TabStop = false;
-            this.btnMaximizar.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Square;
-            this.btnMaximizar.Click += new System.EventHandler(this.btnMaximizar_Click);
-            // 
-            // btnCerrarPrograma
-            // 
-            this.btnCerrarPrograma.AllowFocused = false;
-            this.btnCerrarPrograma.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCerrarPrograma.AutoSizeHeight = true;
-            this.btnCerrarPrograma.BorderRadius = 0;
-            this.btnCerrarPrograma.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCerrarPrograma.Image = global::Empresa_laboral_ADNE___Proyecto_PTC.Properties.Resources.Vector;
-            this.btnCerrarPrograma.IsCircle = true;
-            this.btnCerrarPrograma.Location = new System.Drawing.Point(967, 3);
-            this.btnCerrarPrograma.Margin = new System.Windows.Forms.Padding(13, 3, 3, 3);
-            this.btnCerrarPrograma.Name = "btnCerrarPrograma";
-            this.btnCerrarPrograma.Size = new System.Drawing.Size(35, 35);
-            this.btnCerrarPrograma.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.btnCerrarPrograma.TabIndex = 0;
-            this.btnCerrarPrograma.TabStop = false;
-            this.btnCerrarPrograma.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Square;
+            this.flowLayoutPanel6.Location = new System.Drawing.Point(3, 531);
+            this.flowLayoutPanel6.Name = "flowLayoutPanel6";
+            this.flowLayoutPanel6.Size = new System.Drawing.Size(277, 30);
+            this.flowLayoutPanel6.TabIndex = 16;
             // 
             // DashboardForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.ClientSize = new System.Drawing.Size(1297, 759);
-            this.Controls.Add(this.panelGeneralVistas);
-            this.Controls.Add(this.flowLayoutPanel2);
-            this.Controls.Add(this.LeftMenuLayout);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.ClientSize = new System.Drawing.Size(1297, 784);
+            this.Controls.Add(this.bunifuGradientPanel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximumSize = new System.Drawing.Size(1920, 1080);
+            this.MaximumSize = new System.Drawing.Size(1999, 1080);
             this.MinimumSize = new System.Drawing.Size(1297, 759);
             this.Name = "DashboardForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dashboard";
-            this.LeftMenuLayout.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.flowLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.picUsuario)).EndInit();
-            this.flowLayoutPanel3.ResumeLayout(false);
-            this.flowLayoutPanel4.ResumeLayout(false);
-            this.flowLayoutPanel4.PerformLayout();
-            this.flowLayoutPanel5.ResumeLayout(false);
-            this.flowLayoutPanel5.PerformLayout();
-            this.flowLayoutPanel2.ResumeLayout(false);
+            this.bunifuGradientPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnCerrarPrograma)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnCerrarPrograma)).EndInit();
+            this.flowLayoutPanel1.ResumeLayout(false);
+            this.flowLayoutPanel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.flowLayoutPanel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picUsuario)).EndInit();
+            this.flowLayoutPanel4.ResumeLayout(false);
+            this.flowLayoutPanel5.ResumeLayout(false);
+            this.flowLayoutPanel5.PerformLayout();
+            this.flowLayoutPanel7.ResumeLayout(false);
+            this.flowLayoutPanel7.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.PictureBox pictureBox1;
-        public Bunifu.UI.WinForms.BunifuPanel bunifuPanel1;
-        public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnMainPage;
-        public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnPacientes;
-        public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnCalendario;
-        public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnEquipo;
-        public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnCitas;
-        public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnCerrarS;
-        public Bunifu.UI.WinForms.BunifuPanel bunifuPanel3;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel5;
-        public Bunifu.UI.WinForms.BunifuPictureBox picUsuario;
-        public Bunifu.UI.WinForms.BunifuLabel lblUsuario;
-        public Bunifu.UI.WinForms.BunifuLabel lblIdUsuario;
-        public Bunifu.UI.WinForms.BunifuPanel panelGeneralVistas;
-        public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnConfig;
-        public Bunifu.UI.WinForms.BunifuPanel bunifuPanel2;
         public Bunifu.UI.WinForms.BunifuPictureBox btnMinimizar;
         public Bunifu.UI.WinForms.BunifuPictureBox btnMaximizar;
         public Bunifu.UI.WinForms.BunifuPictureBox btnCerrarPrograma;
-        public System.Windows.Forms.FlowLayoutPanel LeftMenuLayout;
-        public System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
+        public Bunifu.UI.WinForms.BunifuGradientPanel bunifuGradientPanel1;
+        public System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        public Bunifu.UI.WinForms.BunifuPanel pnlMenu1;
+        public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnMainPage;
+        public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnPacientes;
+        public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnCitas;
+        public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnCalendario;
+        public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnEquipo;
+        public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnConfig;
+        public Bunifu.UI.WinForms.BunifuPanel panelGeneralVistas;
+        public Bunifu.UI.WinForms.BunifuPanel pnlMenu2;
+        public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnCerrarS;
+        public Bunifu.UI.WinForms.BunifuPanel pnlMenu3;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
+        public Bunifu.UI.WinForms.BunifuPictureBox picUsuario;
         public System.Windows.Forms.FlowLayoutPanel flowLayoutPanel4;
-        public System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
-        public System.Windows.Forms.FlowLayoutPanel FlowLayoutTop;
+        public System.Windows.Forms.FlowLayoutPanel flowLayoutPanel5;
+        public Bunifu.UI.WinForms.BunifuLabel lblUsuario;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel7;
+        public Bunifu.UI.WinForms.BunifuLabel lblIdUsuario;
         public System.Windows.Forms.FlowLayoutPanel flowLayoutPanel6;
     }
 }
