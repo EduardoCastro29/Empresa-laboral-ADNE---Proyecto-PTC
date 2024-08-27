@@ -560,5 +560,14 @@
   <ItemGroup>
     <None Include="Resources\Group 19.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vector1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mdi_dock-window1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fluent_minimize-12-filled1.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

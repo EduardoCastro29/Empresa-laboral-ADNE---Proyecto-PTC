@@ -35,7 +35,10 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             ObjAgendarCitaForm.cmbEstado.ValueMember = "estadoId";
             ObjAgendarCitaForm.cmbEstado.DisplayMember = "estado";
 
-            ObjAgendarCitaForm.dtFecha.Value = DateTime.Parse(CTRLCalendario.static_year + "-" + CTRLCalendario.static_month + "-" + CTRLUCDias.static_day); 
+            if (string.IsNullOrEmpty(ObjAgendarCitaForm.txtMotivoConsulta.Text))
+            {
+                ObjAgendarCitaForm.dtFecha.Value = DateTime.Parse(CTRLCalendario.static_year + "-" + CTRLCalendario.static_month + "-" + CTRLUCDias.static_day);
+            }
         }
         private void AgregarNuevaCita(object sender, EventArgs e)
         {
