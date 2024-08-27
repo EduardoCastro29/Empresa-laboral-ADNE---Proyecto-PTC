@@ -40,7 +40,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             ObjDashboard.btnPacientes.Click += new EventHandler(FormularioPacientes);
             ObjDashboard.btnEquipo.Click += new EventHandler(FormularioEquipoTrabajo);
             ObjDashboard.btnCalendario.Click += new EventHandler(FormularioCalendario);
-            ObjDashboard.btnCitas.Click += new EventHandler(FormularioConfiguracion);
+            ObjDashboard.btnConfig.Click += new EventHandler(FormularioConfiguracion);
         }
         private void DatosUsuarioLogin(object sender, EventArgs e)
         {
