@@ -557,5 +557,8 @@
   <ItemGroup>
     <None Include="Resources\VerCitaCMS.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Group 19.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

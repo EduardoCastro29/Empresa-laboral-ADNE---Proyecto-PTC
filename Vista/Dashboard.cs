@@ -32,5 +32,8 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Vista
 
             CTRLDashboard ObjDashboardControlador = new CTRLDashboard(this);
         }
+
+
     }
 }
+ 

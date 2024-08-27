@@ -130,6 +130,12 @@
   <data name="Expediente__Psicosocial" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Expediente__Psicosocial.html;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
+  <data name="ProfesionalPic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ProfesionalPic.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="VerCitaCMS" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\VerCitaCMS.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="ADNE logo sin fondo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ADNE logo sin fondo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -187,9 +193,6 @@
   <data name="Foto Ver Paciente" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Foto Ver Paciente.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Imagen contraseña" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Imagen contraseña.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Agregar pacientes" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Agregar pacientes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -205,8 +208,8 @@
   <data name="picture_12236752" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\picture_12236752.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ProfesionalPic" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ProfesionalPic.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Imagen contraseña" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Imagen contraseña.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Configuracion" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Configuracion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -220,7 +223,7 @@
   <data name="Equipo Profesional" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Equipo Profesional.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="VerCitaCMS" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\VerCitaCMS.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Group 19" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Group 19.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
