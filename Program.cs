@@ -13,7 +13,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC
         [STAThread]
         static void Main()
         {
-            Application.Run(new CitasForm()); //Borrar
+            //Application.Run(new CitasForm()); //Borrar
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 

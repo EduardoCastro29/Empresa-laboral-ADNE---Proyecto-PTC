@@ -36,6 +36,8 @@
             this.pnlFondo = new Bunifu.UI.WinForms.BunifuPanel();
             this.pnlSombraFondo = new Bunifu.UI.WinForms.BunifuShadowPanel();
             this.pnlForms = new Bunifu.UI.WinForms.BunifuGradientPanel();
+            this.pnlSombraBuscar = new Bunifu.UI.WinForms.BunifuPanel();
+            this.txtBuscarCita = new Bunifu.UI.WinForms.BunifuTextBox();
             this.pnlEncabezadoPlanillasUC = new Bunifu.UI.WinForms.BunifuGradientPanel();
             this.lblEstadoDeLaCitaPlanilla = new Bunifu.UI.WinForms.BunifuLabel();
             this.lblHoraPlanilla = new Bunifu.UI.WinForms.BunifuLabel();
@@ -43,13 +45,11 @@
             this.lblExpedientesPlanillas = new Bunifu.UI.WinForms.BunifuLabel();
             this.lblPacientesPlanilla = new Bunifu.UI.WinForms.BunifuLabel();
             this.flpCitas = new System.Windows.Forms.FlowLayoutPanel();
-            this.pnlSombraBuscar = new Bunifu.UI.WinForms.BunifuPanel();
-            this.txtBuscarCita = new Bunifu.UI.WinForms.BunifuTextBox();
             this.pnlFondo.SuspendLayout();
             this.pnlSombraFondo.SuspendLayout();
             this.pnlForms.SuspendLayout();
-            this.pnlEncabezadoPlanillasUC.SuspendLayout();
             this.pnlSombraBuscar.SuspendLayout();
+            this.pnlEncabezadoPlanillasUC.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlFondo
@@ -112,6 +112,101 @@
             this.pnlForms.Quality = 10;
             this.pnlForms.Size = new System.Drawing.Size(970, 658);
             this.pnlForms.TabIndex = 1;
+            // 
+            // pnlSombraBuscar
+            // 
+            this.pnlSombraBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlSombraBuscar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(197)))), ((int)(((byte)(197)))), ((int)(((byte)(197)))));
+            this.pnlSombraBuscar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlSombraBuscar.BackgroundImage")));
+            this.pnlSombraBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnlSombraBuscar.BorderColor = System.Drawing.Color.Transparent;
+            this.pnlSombraBuscar.BorderRadius = 60;
+            this.pnlSombraBuscar.BorderThickness = 1;
+            this.pnlSombraBuscar.Controls.Add(this.txtBuscarCita);
+            this.pnlSombraBuscar.Location = new System.Drawing.Point(146, 35);
+            this.pnlSombraBuscar.Name = "pnlSombraBuscar";
+            this.pnlSombraBuscar.Padding = new System.Windows.Forms.Padding(5, 2, 1, 6);
+            this.pnlSombraBuscar.ShowBorders = true;
+            this.pnlSombraBuscar.Size = new System.Drawing.Size(684, 72);
+            this.pnlSombraBuscar.TabIndex = 20;
+            // 
+            // txtBuscarCita
+            // 
+            this.txtBuscarCita.AcceptsReturn = false;
+            this.txtBuscarCita.AcceptsTab = false;
+            this.txtBuscarCita.AnimationSpeed = 200;
+            this.txtBuscarCita.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.txtBuscarCita.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.txtBuscarCita.AutoSizeHeight = true;
+            this.txtBuscarCita.BackColor = System.Drawing.Color.Transparent;
+            this.txtBuscarCita.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txtBuscarCita.BackgroundImage")));
+            this.txtBuscarCita.BorderColorActive = System.Drawing.Color.Teal;
+            this.txtBuscarCita.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.txtBuscarCita.BorderColorHover = System.Drawing.Color.LightSeaGreen;
+            this.txtBuscarCita.BorderColorIdle = System.Drawing.Color.White;
+            this.txtBuscarCita.BorderRadius = 60;
+            this.txtBuscarCita.BorderThickness = 0;
+            this.txtBuscarCita.CharacterCase = Bunifu.UI.WinForms.BunifuTextBox.CharacterCases.Normal;
+            this.txtBuscarCita.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.txtBuscarCita.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtBuscarCita.DefaultFont = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBuscarCita.DefaultText = "";
+            this.txtBuscarCita.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtBuscarCita.FillColor = System.Drawing.Color.White;
+            this.txtBuscarCita.HideSelection = true;
+            this.txtBuscarCita.IconLeft = null;
+            this.txtBuscarCita.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtBuscarCita.IconPadding = 15;
+            this.txtBuscarCita.IconRight = null;
+            this.txtBuscarCita.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtBuscarCita.Lines = new string[0];
+            this.txtBuscarCita.Location = new System.Drawing.Point(5, 2);
+            this.txtBuscarCita.MaxLength = 32767;
+            this.txtBuscarCita.MinimumSize = new System.Drawing.Size(1, 1);
+            this.txtBuscarCita.Modified = false;
+            this.txtBuscarCita.Multiline = false;
+            this.txtBuscarCita.Name = "txtBuscarCita";
+            stateProperties1.BorderColor = System.Drawing.Color.Teal;
+            stateProperties1.FillColor = System.Drawing.Color.Empty;
+            stateProperties1.ForeColor = System.Drawing.Color.Empty;
+            stateProperties1.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtBuscarCita.OnActiveState = stateProperties1;
+            stateProperties2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties2.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.txtBuscarCita.OnDisabledState = stateProperties2;
+            stateProperties3.BorderColor = System.Drawing.Color.LightSeaGreen;
+            stateProperties3.FillColor = System.Drawing.Color.Empty;
+            stateProperties3.ForeColor = System.Drawing.Color.Empty;
+            stateProperties3.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtBuscarCita.OnHoverState = stateProperties3;
+            stateProperties4.BorderColor = System.Drawing.Color.White;
+            stateProperties4.FillColor = System.Drawing.Color.White;
+            stateProperties4.ForeColor = System.Drawing.Color.Empty;
+            stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtBuscarCita.OnIdleState = stateProperties4;
+            this.txtBuscarCita.Padding = new System.Windows.Forms.Padding(3);
+            this.txtBuscarCita.PasswordChar = '\0';
+            this.txtBuscarCita.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.txtBuscarCita.PlaceholderText = "Buscar...";
+            this.txtBuscarCita.ReadOnly = false;
+            this.txtBuscarCita.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtBuscarCita.SelectedText = "";
+            this.txtBuscarCita.SelectionLength = 0;
+            this.txtBuscarCita.SelectionStart = 0;
+            this.txtBuscarCita.ShortcutsEnabled = false;
+            this.txtBuscarCita.Size = new System.Drawing.Size(678, 64);
+            this.txtBuscarCita.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
+            this.txtBuscarCita.TabIndex = 7;
+            this.txtBuscarCita.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtBuscarCita.TextMarginBottom = 0;
+            this.txtBuscarCita.TextMarginLeft = 10;
+            this.txtBuscarCita.TextMarginTop = 0;
+            this.txtBuscarCita.TextPlaceholder = "Buscar...";
+            this.txtBuscarCita.UseSystemPasswordChar = false;
+            this.txtBuscarCita.WordWrap = true;
             // 
             // pnlEncabezadoPlanillasUC
             // 
@@ -230,103 +325,8 @@
             this.flpCitas.BackColor = System.Drawing.Color.Transparent;
             this.flpCitas.Location = new System.Drawing.Point(7, 202);
             this.flpCitas.Name = "flpCitas";
-            this.flpCitas.Size = new System.Drawing.Size(955, 429);
+            this.flpCitas.Size = new System.Drawing.Size(956, 429);
             this.flpCitas.TabIndex = 18;
-            // 
-            // pnlSombraBuscar
-            // 
-            this.pnlSombraBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlSombraBuscar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(197)))), ((int)(((byte)(197)))), ((int)(((byte)(197)))));
-            this.pnlSombraBuscar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlSombraBuscar.BackgroundImage")));
-            this.pnlSombraBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pnlSombraBuscar.BorderColor = System.Drawing.Color.Transparent;
-            this.pnlSombraBuscar.BorderRadius = 60;
-            this.pnlSombraBuscar.BorderThickness = 1;
-            this.pnlSombraBuscar.Controls.Add(this.txtBuscarCita);
-            this.pnlSombraBuscar.Location = new System.Drawing.Point(146, 35);
-            this.pnlSombraBuscar.Name = "pnlSombraBuscar";
-            this.pnlSombraBuscar.Padding = new System.Windows.Forms.Padding(5, 2, 1, 6);
-            this.pnlSombraBuscar.ShowBorders = true;
-            this.pnlSombraBuscar.Size = new System.Drawing.Size(684, 72);
-            this.pnlSombraBuscar.TabIndex = 20;
-            // 
-            // txtBuscarCita
-            // 
-            this.txtBuscarCita.AcceptsReturn = false;
-            this.txtBuscarCita.AcceptsTab = false;
-            this.txtBuscarCita.AnimationSpeed = 200;
-            this.txtBuscarCita.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.txtBuscarCita.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.txtBuscarCita.AutoSizeHeight = true;
-            this.txtBuscarCita.BackColor = System.Drawing.Color.Transparent;
-            this.txtBuscarCita.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txtBuscarCita.BackgroundImage")));
-            this.txtBuscarCita.BorderColorActive = System.Drawing.Color.Teal;
-            this.txtBuscarCita.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.txtBuscarCita.BorderColorHover = System.Drawing.Color.LightSeaGreen;
-            this.txtBuscarCita.BorderColorIdle = System.Drawing.Color.White;
-            this.txtBuscarCita.BorderRadius = 60;
-            this.txtBuscarCita.BorderThickness = 0;
-            this.txtBuscarCita.CharacterCase = Bunifu.UI.WinForms.BunifuTextBox.CharacterCases.Normal;
-            this.txtBuscarCita.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.txtBuscarCita.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtBuscarCita.DefaultFont = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscarCita.DefaultText = "";
-            this.txtBuscarCita.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtBuscarCita.FillColor = System.Drawing.Color.White;
-            this.txtBuscarCita.HideSelection = true;
-            this.txtBuscarCita.IconLeft = null;
-            this.txtBuscarCita.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtBuscarCita.IconPadding = 15;
-            this.txtBuscarCita.IconRight = null;
-            this.txtBuscarCita.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtBuscarCita.Lines = new string[0];
-            this.txtBuscarCita.Location = new System.Drawing.Point(5, 2);
-            this.txtBuscarCita.MaxLength = 32767;
-            this.txtBuscarCita.MinimumSize = new System.Drawing.Size(1, 1);
-            this.txtBuscarCita.Modified = false;
-            this.txtBuscarCita.Multiline = false;
-            this.txtBuscarCita.Name = "txtBuscarCita";
-            stateProperties1.BorderColor = System.Drawing.Color.Teal;
-            stateProperties1.FillColor = System.Drawing.Color.Empty;
-            stateProperties1.ForeColor = System.Drawing.Color.Empty;
-            stateProperties1.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtBuscarCita.OnActiveState = stateProperties1;
-            stateProperties2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            stateProperties2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties2.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.txtBuscarCita.OnDisabledState = stateProperties2;
-            stateProperties3.BorderColor = System.Drawing.Color.LightSeaGreen;
-            stateProperties3.FillColor = System.Drawing.Color.Empty;
-            stateProperties3.ForeColor = System.Drawing.Color.Empty;
-            stateProperties3.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtBuscarCita.OnHoverState = stateProperties3;
-            stateProperties4.BorderColor = System.Drawing.Color.White;
-            stateProperties4.FillColor = System.Drawing.Color.White;
-            stateProperties4.ForeColor = System.Drawing.Color.Empty;
-            stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtBuscarCita.OnIdleState = stateProperties4;
-            this.txtBuscarCita.Padding = new System.Windows.Forms.Padding(3);
-            this.txtBuscarCita.PasswordChar = '\0';
-            this.txtBuscarCita.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.txtBuscarCita.PlaceholderText = "Buscar...";
-            this.txtBuscarCita.ReadOnly = false;
-            this.txtBuscarCita.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtBuscarCita.SelectedText = "";
-            this.txtBuscarCita.SelectionLength = 0;
-            this.txtBuscarCita.SelectionStart = 0;
-            this.txtBuscarCita.ShortcutsEnabled = false;
-            this.txtBuscarCita.Size = new System.Drawing.Size(678, 64);
-            this.txtBuscarCita.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.txtBuscarCita.TabIndex = 7;
-            this.txtBuscarCita.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtBuscarCita.TextMarginBottom = 0;
-            this.txtBuscarCita.TextMarginLeft = 10;
-            this.txtBuscarCita.TextMarginTop = 0;
-            this.txtBuscarCita.TextPlaceholder = "Buscar...";
-            this.txtBuscarCita.UseSystemPasswordChar = false;
-            this.txtBuscarCita.WordWrap = true;
             // 
             // CitasForm
             // 
@@ -342,9 +342,9 @@
             this.pnlFondo.ResumeLayout(false);
             this.pnlSombraFondo.ResumeLayout(false);
             this.pnlForms.ResumeLayout(false);
+            this.pnlSombraBuscar.ResumeLayout(false);
             this.pnlEncabezadoPlanillasUC.ResumeLayout(false);
             this.pnlEncabezadoPlanillasUC.PerformLayout();
-            this.pnlSombraBuscar.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

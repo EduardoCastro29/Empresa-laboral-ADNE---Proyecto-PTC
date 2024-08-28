@@ -38,6 +38,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             //Dentro del panel a la hora de ejecutarse
             ObjDashboard.btnMainPage.Click += new EventHandler(FormularioPaginaPrincipal);
             ObjDashboard.btnPacientes.Click += new EventHandler(FormularioPacientes);
+            ObjDashboard.btnCitas.Click += new EventHandler(FormularioCitas);
             ObjDashboard.btnEquipo.Click += new EventHandler(FormularioEquipoTrabajo);
             ObjDashboard.btnCalendario.Click += new EventHandler(FormularioCalendario);
             ObjDashboard.btnConfig.Click += new EventHandler(FormularioConfiguracion);
@@ -95,6 +96,11 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
         {
             //En caso de seleccionarse el formulario Pacientes, se abrirá declarandolo como un nuevo formulario después del método
             AbrirFormulario<PacientesForm>();
+        }
+        private void FormularioCitas(object sender, EventArgs e)
+        {
+            //En caso de seleccionarse el formulario Pacientes, se abrirá declarandolo como un nuevo formulario después del método
+            AbrirFormulario<CitasForm>();
         }
         private void FormularioEquipoTrabajo(object sender, EventArgs e)
         {
