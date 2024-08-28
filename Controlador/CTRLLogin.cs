@@ -33,6 +33,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
         {
             ObjLogin.txtUsuario.Text = Properties.Settings.Default.Usuario;
             ObjLogin.txtContraseña.Text = Properties.Settings.Default.Contrasena;
+            ObjLogin.cbRecuerdame.Checked = false;
         }
         // Creando un método llamado AccederLogin que tomará como proceso los valores dentro de la clase DAO y del DTO
         private void AccederLogin(object sender, EventArgs e)

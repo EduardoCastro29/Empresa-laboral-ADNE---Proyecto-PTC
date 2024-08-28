@@ -135,7 +135,7 @@
             this.lblRecuerdame.Location = new System.Drawing.Point(169, 444);
             this.lblRecuerdame.Name = "lblRecuerdame";
             this.lblRecuerdame.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblRecuerdame.Size = new System.Drawing.Size(210, 40);
+            this.lblRecuerdame.Size = new System.Drawing.Size(121, 22);
             this.lblRecuerdame.TabIndex = 184;
             this.lblRecuerdame.Text = "Recuerdame";
             this.lblRecuerdame.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -644,7 +644,7 @@
             this.lblBienvenido.Location = new System.Drawing.Point(269, 123);
             this.lblBienvenido.Name = "lblBienvenido";
             this.lblBienvenido.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblBienvenido.Size = new System.Drawing.Size(179, 40);
+            this.lblBienvenido.Size = new System.Drawing.Size(234, 52);
             this.lblBienvenido.TabIndex = 13;
             this.lblBienvenido.Text = "Bienvenido";
             this.lblBienvenido.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -674,6 +674,7 @@
             this.ClientSize = new System.Drawing.Size(1230, 729);
             this.Controls.Add(this.bunifuGradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(1220, 650);
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
