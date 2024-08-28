@@ -118,20 +118,20 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="bunifuGradientPanel4.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="pnlFondoUC.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         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
-        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
+        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
 </value>
   </data>
   <data name="lblCitaId.BaseStylesheet" xml:space="preserve">

@@ -30,10 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Plantilla_DiseñosResponsive));
             this.pnlForms = new Bunifu.UI.WinForms.BunifuGradientPanel();
-            this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
-            this.bunifuShadowPanel1 = new Bunifu.UI.WinForms.BunifuShadowPanel();
-            this.bunifuPanel1.SuspendLayout();
-            this.bunifuShadowPanel1.SuspendLayout();
+            this.pnlFondo = new Bunifu.UI.WinForms.BunifuPanel();
+            this.pnlSombraFondo = new Bunifu.UI.WinForms.BunifuShadowPanel();
+            this.pnlFondo.SuspendLayout();
+            this.pnlSombraFondo.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlForms
@@ -54,45 +54,45 @@
             this.pnlForms.Size = new System.Drawing.Size(986, 697);
             this.pnlForms.TabIndex = 1;
             // 
-            // bunifuPanel1
+            // pnlFondo
             // 
-            this.bunifuPanel1.BackgroundColor = System.Drawing.Color.Transparent;
-            this.bunifuPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuPanel1.BackgroundImage")));
-            this.bunifuPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuPanel1.BorderColor = System.Drawing.Color.Transparent;
-            this.bunifuPanel1.BorderRadius = 3;
-            this.bunifuPanel1.BorderThickness = 1;
-            this.bunifuPanel1.Controls.Add(this.bunifuShadowPanel1);
-            this.bunifuPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bunifuPanel1.Location = new System.Drawing.Point(15, 10);
-            this.bunifuPanel1.Name = "bunifuPanel1";
-            this.bunifuPanel1.ShowBorders = true;
-            this.bunifuPanel1.Size = new System.Drawing.Size(991, 707);
-            this.bunifuPanel1.TabIndex = 3;
+            this.pnlFondo.BackgroundColor = System.Drawing.Color.Transparent;
+            this.pnlFondo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlFondo.BackgroundImage")));
+            this.pnlFondo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnlFondo.BorderColor = System.Drawing.Color.Transparent;
+            this.pnlFondo.BorderRadius = 3;
+            this.pnlFondo.BorderThickness = 1;
+            this.pnlFondo.Controls.Add(this.pnlSombraFondo);
+            this.pnlFondo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlFondo.Location = new System.Drawing.Point(15, 10);
+            this.pnlFondo.Name = "pnlFondo";
+            this.pnlFondo.ShowBorders = true;
+            this.pnlFondo.Size = new System.Drawing.Size(991, 707);
+            this.pnlFondo.TabIndex = 3;
             // 
-            // bunifuShadowPanel1
+            // pnlSombraFondo
             // 
-            this.bunifuShadowPanel1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuShadowPanel1.BorderColor = System.Drawing.Color.Transparent;
-            this.bunifuShadowPanel1.BorderRadius = 30;
-            this.bunifuShadowPanel1.BorderThickness = 10;
-            this.bunifuShadowPanel1.Controls.Add(this.pnlForms);
-            this.bunifuShadowPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bunifuShadowPanel1.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
-            this.bunifuShadowPanel1.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Horizontal;
-            this.bunifuShadowPanel1.Location = new System.Drawing.Point(0, 0);
-            this.bunifuShadowPanel1.Name = "bunifuShadowPanel1";
-            this.bunifuShadowPanel1.Padding = new System.Windows.Forms.Padding(0, 3, 5, 7);
-            this.bunifuShadowPanel1.PanelColor = System.Drawing.Color.Transparent;
-            this.bunifuShadowPanel1.PanelColor2 = System.Drawing.Color.Transparent;
-            this.bunifuShadowPanel1.ShadowColor = System.Drawing.Color.Black;
-            this.bunifuShadowPanel1.ShadowDept = 2;
-            this.bunifuShadowPanel1.ShadowDepth = 250;
-            this.bunifuShadowPanel1.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Surrounded;
-            this.bunifuShadowPanel1.ShadowTopLeftVisible = false;
-            this.bunifuShadowPanel1.Size = new System.Drawing.Size(991, 707);
-            this.bunifuShadowPanel1.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Lowered;
-            this.bunifuShadowPanel1.TabIndex = 2;
+            this.pnlSombraFondo.BackColor = System.Drawing.Color.Transparent;
+            this.pnlSombraFondo.BorderColor = System.Drawing.Color.Transparent;
+            this.pnlSombraFondo.BorderRadius = 30;
+            this.pnlSombraFondo.BorderThickness = 10;
+            this.pnlSombraFondo.Controls.Add(this.pnlForms);
+            this.pnlSombraFondo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlSombraFondo.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
+            this.pnlSombraFondo.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Horizontal;
+            this.pnlSombraFondo.Location = new System.Drawing.Point(0, 0);
+            this.pnlSombraFondo.Name = "pnlSombraFondo";
+            this.pnlSombraFondo.Padding = new System.Windows.Forms.Padding(0, 3, 5, 7);
+            this.pnlSombraFondo.PanelColor = System.Drawing.Color.Transparent;
+            this.pnlSombraFondo.PanelColor2 = System.Drawing.Color.Transparent;
+            this.pnlSombraFondo.ShadowColor = System.Drawing.Color.Black;
+            this.pnlSombraFondo.ShadowDept = 2;
+            this.pnlSombraFondo.ShadowDepth = 250;
+            this.pnlSombraFondo.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Surrounded;
+            this.pnlSombraFondo.ShadowTopLeftVisible = false;
+            this.pnlSombraFondo.Size = new System.Drawing.Size(991, 707);
+            this.pnlSombraFondo.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Lowered;
+            this.pnlSombraFondo.TabIndex = 2;
             // 
             // Plantilla_DiseñosResponsive
             // 
@@ -100,20 +100,20 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(143)))), ((int)(((byte)(156)))));
             this.ClientSize = new System.Drawing.Size(1011, 720);
-            this.Controls.Add(this.bunifuPanel1);
+            this.Controls.Add(this.pnlFondo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Plantilla_DiseñosResponsive";
             this.Padding = new System.Windows.Forms.Padding(15, 10, 5, 3);
             this.Text = "Plantilla_DiseñosResponsive";
-            this.bunifuPanel1.ResumeLayout(false);
-            this.bunifuShadowPanel1.ResumeLayout(false);
+            this.pnlFondo.ResumeLayout(false);
+            this.pnlSombraFondo.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
         public Bunifu.UI.WinForms.BunifuGradientPanel pnlForms;
-        public Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel1;
-        public Bunifu.UI.WinForms.BunifuPanel bunifuPanel1;
+        public Bunifu.UI.WinForms.BunifuShadowPanel pnlSombraFondo;
+        public Bunifu.UI.WinForms.BunifuPanel pnlFondo;
     }
 }

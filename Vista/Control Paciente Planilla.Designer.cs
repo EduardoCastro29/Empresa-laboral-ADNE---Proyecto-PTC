@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ControlPacientePlanillaUC));
             Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
-            this.bunifuGradientPanel4 = new Bunifu.UI.WinForms.BunifuGradientPanel();
+            this.pnlFondoUC = new Bunifu.UI.WinForms.BunifuGradientPanel();
             this.lblPacienteId = new System.Windows.Forms.Label();
             this.lblExpedienteId = new System.Windows.Forms.Label();
             this.lblCitaId = new Bunifu.UI.WinForms.BunifuLabel();
@@ -39,37 +39,38 @@
             this.lblHora = new Bunifu.UI.WinForms.BunifuLabel();
             this.lblFecha = new Bunifu.UI.WinForms.BunifuLabel();
             this.lblNombrePaciente = new Bunifu.UI.WinForms.BunifuLabel();
-            this.bunifuGradientPanel4.SuspendLayout();
+            this.pnlFondoUC.SuspendLayout();
             this.SuspendLayout();
             // 
-            // bunifuGradientPanel4
+            // pnlFondoUC
             // 
-            this.bunifuGradientPanel4.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuGradientPanel4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel4.BackgroundImage")));
-            this.bunifuGradientPanel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuGradientPanel4.BorderRadius = 12;
-            this.bunifuGradientPanel4.Controls.Add(this.lblPacienteId);
-            this.bunifuGradientPanel4.Controls.Add(this.lblExpedienteId);
-            this.bunifuGradientPanel4.Controls.Add(this.lblCitaId);
-            this.bunifuGradientPanel4.Controls.Add(this.btnDescargar);
-            this.bunifuGradientPanel4.Controls.Add(this.lblEstado);
-            this.bunifuGradientPanel4.Controls.Add(this.lblHora);
-            this.bunifuGradientPanel4.Controls.Add(this.lblFecha);
-            this.bunifuGradientPanel4.Controls.Add(this.lblNombrePaciente);
-            this.bunifuGradientPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bunifuGradientPanel4.GradientBottomLeft = System.Drawing.Color.WhiteSmoke;
-            this.bunifuGradientPanel4.GradientBottomRight = System.Drawing.Color.WhiteSmoke;
-            this.bunifuGradientPanel4.GradientTopLeft = System.Drawing.Color.White;
-            this.bunifuGradientPanel4.GradientTopRight = System.Drawing.Color.White;
-            this.bunifuGradientPanel4.Location = new System.Drawing.Point(0, 0);
-            this.bunifuGradientPanel4.Name = "bunifuGradientPanel4";
-            this.bunifuGradientPanel4.Quality = 10;
-            this.bunifuGradientPanel4.Size = new System.Drawing.Size(955, 51);
-            this.bunifuGradientPanel4.TabIndex = 22;
+            this.pnlFondoUC.BackColor = System.Drawing.Color.Transparent;
+            this.pnlFondoUC.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlFondoUC.BackgroundImage")));
+            this.pnlFondoUC.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnlFondoUC.BorderRadius = 10;
+            this.pnlFondoUC.Controls.Add(this.lblPacienteId);
+            this.pnlFondoUC.Controls.Add(this.lblExpedienteId);
+            this.pnlFondoUC.Controls.Add(this.lblCitaId);
+            this.pnlFondoUC.Controls.Add(this.btnDescargar);
+            this.pnlFondoUC.Controls.Add(this.lblEstado);
+            this.pnlFondoUC.Controls.Add(this.lblHora);
+            this.pnlFondoUC.Controls.Add(this.lblFecha);
+            this.pnlFondoUC.Controls.Add(this.lblNombrePaciente);
+            this.pnlFondoUC.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlFondoUC.GradientBottomLeft = System.Drawing.Color.WhiteSmoke;
+            this.pnlFondoUC.GradientBottomRight = System.Drawing.Color.WhiteSmoke;
+            this.pnlFondoUC.GradientTopLeft = System.Drawing.Color.White;
+            this.pnlFondoUC.GradientTopRight = System.Drawing.Color.White;
+            this.pnlFondoUC.Location = new System.Drawing.Point(0, 0);
+            this.pnlFondoUC.Name = "pnlFondoUC";
+            this.pnlFondoUC.Quality = 10;
+            this.pnlFondoUC.Size = new System.Drawing.Size(955, 51);
+            this.pnlFondoUC.TabIndex = 22;
             // 
             // lblPacienteId
             // 
-            this.lblPacienteId.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblPacienteId.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblPacienteId.AutoSize = true;
             this.lblPacienteId.Location = new System.Drawing.Point(314, 32);
             this.lblPacienteId.Name = "lblPacienteId";
@@ -79,7 +80,8 @@
             // 
             // lblExpedienteId
             // 
-            this.lblExpedienteId.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblExpedienteId.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblExpedienteId.AutoSize = true;
             this.lblExpedienteId.Location = new System.Drawing.Point(479, 6);
             this.lblExpedienteId.Name = "lblExpedienteId";
@@ -90,7 +92,9 @@
             // lblCitaId
             // 
             this.lblCitaId.AllowParentOverrides = false;
-            this.lblCitaId.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblCitaId.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblCitaId.AutoEllipsis = false;
             this.lblCitaId.CursorType = null;
             this.lblCitaId.Font = new System.Drawing.Font("Century Gothic", 11.25F);
@@ -108,7 +112,8 @@
             this.btnDescargar.AllowAnimations = true;
             this.btnDescargar.AllowMouseEffects = true;
             this.btnDescargar.AllowToggling = false;
-            this.btnDescargar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnDescargar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDescargar.AnimationSpeed = 200;
             this.btnDescargar.AutoGenerateColors = false;
             this.btnDescargar.AutoRoundBorders = false;
@@ -122,7 +127,7 @@
             this.btnDescargar.ButtonTextMarginLeft = 0;
             this.btnDescargar.ColorContrastOnClick = 45;
             this.btnDescargar.ColorContrastOnHover = 45;
-            this.btnDescargar.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnDescargar.Cursor = System.Windows.Forms.Cursors.Hand;
             borderEdges1.BottomLeft = true;
             borderEdges1.BottomRight = true;
             borderEdges1.TopLeft = true;
@@ -196,7 +201,8 @@
             // lblEstado
             // 
             this.lblEstado.AllowParentOverrides = false;
-            this.lblEstado.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblEstado.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblEstado.AutoEllipsis = false;
             this.lblEstado.CursorType = null;
             this.lblEstado.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
@@ -212,7 +218,8 @@
             // lblHora
             // 
             this.lblHora.AllowParentOverrides = false;
-            this.lblHora.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblHora.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblHora.AutoEllipsis = false;
             this.lblHora.CursorType = null;
             this.lblHora.Font = new System.Drawing.Font("Century Gothic", 11.25F);
@@ -228,7 +235,8 @@
             // lblFecha
             // 
             this.lblFecha.AllowParentOverrides = false;
-            this.lblFecha.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblFecha.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblFecha.AutoEllipsis = false;
             this.lblFecha.CursorType = null;
             this.lblFecha.Font = new System.Drawing.Font("Century Gothic", 11.25F);
@@ -244,6 +252,8 @@
             // lblNombrePaciente
             // 
             this.lblNombrePaciente.AllowParentOverrides = false;
+            this.lblNombrePaciente.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblNombrePaciente.AutoEllipsis = false;
             this.lblNombrePaciente.CursorType = null;
             this.lblNombrePaciente.Font = new System.Drawing.Font("Century Gothic", 11.25F);
@@ -260,18 +270,19 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.bunifuGradientPanel4);
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Controls.Add(this.pnlFondoUC);
             this.Name = "ControlPacientePlanillaUC";
             this.Size = new System.Drawing.Size(955, 51);
-            this.bunifuGradientPanel4.ResumeLayout(false);
-            this.bunifuGradientPanel4.PerformLayout();
+            this.pnlFondoUC.ResumeLayout(false);
+            this.pnlFondoUC.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        public Bunifu.UI.WinForms.BunifuGradientPanel bunifuGradientPanel4;
+        public Bunifu.UI.WinForms.BunifuGradientPanel pnlFondoUC;
         public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnDescargar;
         public Bunifu.UI.WinForms.BunifuLabel lblEstado;
         public Bunifu.UI.WinForms.BunifuLabel lblHora;

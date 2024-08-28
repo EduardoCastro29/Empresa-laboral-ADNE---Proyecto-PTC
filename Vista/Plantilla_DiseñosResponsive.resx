@@ -240,7 +240,7 @@
         rnr0IGH94MH/A2aCX0NXrCRmAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="bunifuPanel1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="pnlFondo.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAA98AAALDCAYAAAAMkLPkAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAA+rSURBVHhe7dnBacRQFARB5R+P8lujgxYW+yb3wkAVCPR+

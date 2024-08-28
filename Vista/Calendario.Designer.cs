@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CalendarioForm));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges5 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges6 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             this.lblFecha = new System.Windows.Forms.Label();
             this.lblSabado = new System.Windows.Forms.Label();
             this.lblViernes = new System.Windows.Forms.Label();
@@ -44,6 +44,8 @@
             this.btnSiguiente = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.btnAnterior = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.btnVerCitas = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
+            this.pnlSombraBoton = new Bunifu.UI.WinForms.BunifuShadowPanel();
+            this.pnlSombraBoton.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblFecha
@@ -173,11 +175,11 @@
             this.btnSiguiente.ColorContrastOnClick = 45;
             this.btnSiguiente.ColorContrastOnHover = 45;
             this.btnSiguiente.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges4.BottomLeft = true;
-            borderEdges4.BottomRight = true;
-            borderEdges4.TopLeft = true;
-            borderEdges4.TopRight = true;
-            this.btnSiguiente.CustomizableEdges = borderEdges4;
+            borderEdges1.BottomLeft = true;
+            borderEdges1.BottomRight = true;
+            borderEdges1.TopLeft = true;
+            borderEdges1.TopRight = true;
+            this.btnSiguiente.CustomizableEdges = borderEdges1;
             this.btnSiguiente.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnSiguiente.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnSiguiente.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -263,11 +265,11 @@
             this.btnAnterior.ColorContrastOnClick = 45;
             this.btnAnterior.ColorContrastOnHover = 45;
             this.btnAnterior.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges5.BottomLeft = true;
-            borderEdges5.BottomRight = true;
-            borderEdges5.TopLeft = true;
-            borderEdges5.TopRight = true;
-            this.btnAnterior.CustomizableEdges = borderEdges5;
+            borderEdges2.BottomLeft = true;
+            borderEdges2.BottomRight = true;
+            borderEdges2.TopLeft = true;
+            borderEdges2.TopRight = true;
+            this.btnAnterior.CustomizableEdges = borderEdges2;
             this.btnAnterior.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnAnterior.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnAnterior.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -305,8 +307,8 @@
             this.btnAnterior.onHoverState.BorderRadius = 5;
             this.btnAnterior.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.btnAnterior.onHoverState.BorderThickness = 1;
-            this.btnAnterior.onHoverState.FillColor = System.Drawing.Color.LightSeaGreen;
-            this.btnAnterior.onHoverState.ForeColor = System.Drawing.Color.White;
+            this.btnAnterior.onHoverState.FillColor = System.Drawing.Color.Transparent;
+            this.btnAnterior.onHoverState.ForeColor = System.Drawing.Color.LightSeaGreen;
             this.btnAnterior.onHoverState.IconLeftImage = null;
             this.btnAnterior.onHoverState.IconRightImage = null;
             this.btnAnterior.OnIdleState.BorderColor = System.Drawing.Color.Transparent;
@@ -321,8 +323,8 @@
             this.btnAnterior.OnPressedState.BorderRadius = 5;
             this.btnAnterior.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.btnAnterior.OnPressedState.BorderThickness = 1;
-            this.btnAnterior.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(151)))), ((int)(((byte)(166)))));
-            this.btnAnterior.OnPressedState.ForeColor = System.Drawing.Color.White;
+            this.btnAnterior.OnPressedState.FillColor = System.Drawing.Color.Transparent;
+            this.btnAnterior.OnPressedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(151)))), ((int)(((byte)(166)))));
             this.btnAnterior.OnPressedState.IconLeftImage = null;
             this.btnAnterior.OnPressedState.IconRightImage = null;
             this.btnAnterior.Size = new System.Drawing.Size(64, 42);
@@ -338,7 +340,6 @@
             this.btnVerCitas.AllowAnimations = true;
             this.btnVerCitas.AllowMouseEffects = true;
             this.btnVerCitas.AllowToggling = false;
-            this.btnVerCitas.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnVerCitas.AnimationSpeed = 200;
             this.btnVerCitas.AutoGenerateColors = false;
             this.btnVerCitas.AutoRoundBorders = false;
@@ -353,15 +354,16 @@
             this.btnVerCitas.ColorContrastOnClick = 45;
             this.btnVerCitas.ColorContrastOnHover = 45;
             this.btnVerCitas.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges6.BottomLeft = true;
-            borderEdges6.BottomRight = true;
-            borderEdges6.TopLeft = true;
-            borderEdges6.TopRight = true;
-            this.btnVerCitas.CustomizableEdges = borderEdges6;
+            borderEdges3.BottomLeft = true;
+            borderEdges3.BottomRight = true;
+            borderEdges3.TopLeft = true;
+            borderEdges3.TopRight = true;
+            this.btnVerCitas.CustomizableEdges = borderEdges3;
             this.btnVerCitas.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnVerCitas.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnVerCitas.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.btnVerCitas.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btnVerCitas.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnVerCitas.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
             this.btnVerCitas.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVerCitas.ForeColor = System.Drawing.Color.White;
@@ -381,7 +383,7 @@
             this.btnVerCitas.IdleIconLeftImage = null;
             this.btnVerCitas.IdleIconRightImage = null;
             this.btnVerCitas.IndicateFocus = false;
-            this.btnVerCitas.Location = new System.Drawing.Point(805, 654);
+            this.btnVerCitas.Location = new System.Drawing.Point(1, 1);
             this.btnVerCitas.Name = "btnVerCitas";
             this.btnVerCitas.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnVerCitas.OnDisabledState.BorderRadius = 5;
@@ -415,7 +417,7 @@
             this.btnVerCitas.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btnVerCitas.OnPressedState.IconLeftImage = null;
             this.btnVerCitas.OnPressedState.IconRightImage = null;
-            this.btnVerCitas.Size = new System.Drawing.Size(170, 42);
+            this.btnVerCitas.Size = new System.Drawing.Size(221, 49);
             this.btnVerCitas.TabIndex = 23;
             this.btnVerCitas.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnVerCitas.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -423,13 +425,37 @@
             this.btnVerCitas.TextPadding = new System.Windows.Forms.Padding(0);
             this.btnVerCitas.UseDefaultRadiusAndThickness = true;
             // 
+            // pnlSombraBoton
+            // 
+            this.pnlSombraBoton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlSombraBoton.BackColor = System.Drawing.Color.Transparent;
+            this.pnlSombraBoton.BorderColor = System.Drawing.Color.Transparent;
+            this.pnlSombraBoton.BorderRadius = 10;
+            this.pnlSombraBoton.BorderThickness = 1;
+            this.pnlSombraBoton.Controls.Add(this.btnVerCitas);
+            this.pnlSombraBoton.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
+            this.pnlSombraBoton.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
+            this.pnlSombraBoton.Location = new System.Drawing.Point(751, 654);
+            this.pnlSombraBoton.Name = "pnlSombraBoton";
+            this.pnlSombraBoton.Padding = new System.Windows.Forms.Padding(1, 1, 2, 4);
+            this.pnlSombraBoton.PanelColor = System.Drawing.Color.Transparent;
+            this.pnlSombraBoton.PanelColor2 = System.Drawing.Color.Transparent;
+            this.pnlSombraBoton.ShadowColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.pnlSombraBoton.ShadowDept = 2;
+            this.pnlSombraBoton.ShadowDepth = 5;
+            this.pnlSombraBoton.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Surrounded;
+            this.pnlSombraBoton.ShadowTopLeftVisible = false;
+            this.pnlSombraBoton.Size = new System.Drawing.Size(224, 54);
+            this.pnlSombraBoton.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
+            this.pnlSombraBoton.TabIndex = 24;
+            // 
             // CalendarioForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.ClientSize = new System.Drawing.Size(1011, 720);
-            this.Controls.Add(this.btnVerCitas);
+            this.Controls.Add(this.pnlSombraBoton);
             this.Controls.Add(this.btnAnterior);
             this.Controls.Add(this.btnSiguiente);
             this.Controls.Add(this.lblFecha);
@@ -445,6 +471,7 @@
             this.Name = "CalendarioForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Calendario";
+            this.pnlSombraBoton.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -463,5 +490,6 @@
         public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnSiguiente;
         public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnAnterior;
         public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnVerCitas;
+        public Bunifu.UI.WinForms.BunifuShadowPanel pnlSombraBoton;
     }
 }

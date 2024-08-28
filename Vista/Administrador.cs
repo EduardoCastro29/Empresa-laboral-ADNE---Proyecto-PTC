@@ -19,9 +19,9 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Vista
             CTRLAdministrador ObjAdministradorControlador = new CTRLAdministrador(this);
         }
 
-        private void btnSalir_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+        //private void btnSalir_Click(object sender, EventArgs e)
+        //{
+        //    this.Close();
+        //}
     }
 }
