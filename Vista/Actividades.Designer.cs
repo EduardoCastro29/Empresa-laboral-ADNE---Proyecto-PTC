@@ -97,7 +97,7 @@
             this.pnlSombraSiguientePaciente.ShadowDepth = 10;
             this.pnlSombraSiguientePaciente.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Surrounded;
             this.pnlSombraSiguientePaciente.ShadowTopLeftVisible = false;
-            this.pnlSombraSiguientePaciente.Size = new System.Drawing.Size(943, 267);
+            this.pnlSombraSiguientePaciente.Size = new System.Drawing.Size(943, 206);
             this.pnlSombraSiguientePaciente.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
             this.pnlSombraSiguientePaciente.TabIndex = 8;
             // 
@@ -115,7 +115,7 @@
             this.pnlSiguientePaciente.MinimumSize = new System.Drawing.Size(914, 100);
             this.pnlSiguientePaciente.Name = "pnlSiguientePaciente";
             this.pnlSiguientePaciente.ShowBorders = true;
-            this.pnlSiguientePaciente.Size = new System.Drawing.Size(937, 261);
+            this.pnlSiguientePaciente.Size = new System.Drawing.Size(937, 200);
             this.pnlSiguientePaciente.TabIndex = 0;
             // 
             // lblSiguiente

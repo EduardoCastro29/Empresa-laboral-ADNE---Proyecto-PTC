@@ -248,6 +248,12 @@
     <Compile Include="Vista\Dirección Gmail.Designer.cs">
       <DependentUpon>Dirección Gmail.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\DisposableForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\DisposableForm.Designer.cs">
+      <DependentUpon>DisposableForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\Equipo de Trabajo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -407,6 +413,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\Dirección Gmail.resx">
       <DependentUpon>Dirección Gmail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\DisposableForm.resx">
+      <DependentUpon>DisposableForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\Equipo de Trabajo.resx">
       <DependentUpon>Equipo de Trabajo.cs</DependentUpon>
