@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ControlVerPacientesUC));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             this.pnlFondoPacienteUC = new Bunifu.UI.WinForms.BunifuShadowPanel();
             this.btnVerExpediente = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.btnVerInformacion = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
@@ -74,6 +74,7 @@
             this.btnVerExpediente.AllowAnimations = true;
             this.btnVerExpediente.AllowMouseEffects = true;
             this.btnVerExpediente.AllowToggling = false;
+            this.btnVerExpediente.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnVerExpediente.AnimationSpeed = 200;
             this.btnVerExpediente.AutoGenerateColors = false;
             this.btnVerExpediente.AutoRoundBorders = false;
@@ -88,11 +89,11 @@
             this.btnVerExpediente.ColorContrastOnClick = 45;
             this.btnVerExpediente.ColorContrastOnHover = 45;
             this.btnVerExpediente.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges3.BottomLeft = true;
-            borderEdges3.BottomRight = true;
-            borderEdges3.TopLeft = true;
-            borderEdges3.TopRight = true;
-            this.btnVerExpediente.CustomizableEdges = borderEdges3;
+            borderEdges1.BottomLeft = true;
+            borderEdges1.BottomRight = true;
+            borderEdges1.TopLeft = true;
+            borderEdges1.TopRight = true;
+            this.btnVerExpediente.CustomizableEdges = borderEdges1;
             this.btnVerExpediente.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnVerExpediente.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnVerExpediente.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -163,6 +164,7 @@
             this.btnVerInformacion.AllowAnimations = true;
             this.btnVerInformacion.AllowMouseEffects = true;
             this.btnVerInformacion.AllowToggling = false;
+            this.btnVerInformacion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnVerInformacion.AnimationSpeed = 200;
             this.btnVerInformacion.AutoGenerateColors = false;
             this.btnVerInformacion.AutoRoundBorders = false;
@@ -177,11 +179,11 @@
             this.btnVerInformacion.ColorContrastOnClick = 45;
             this.btnVerInformacion.ColorContrastOnHover = 45;
             this.btnVerInformacion.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges4.BottomLeft = true;
-            borderEdges4.BottomRight = true;
-            borderEdges4.TopLeft = true;
-            borderEdges4.TopRight = true;
-            this.btnVerInformacion.CustomizableEdges = borderEdges4;
+            borderEdges2.BottomLeft = true;
+            borderEdges2.BottomRight = true;
+            borderEdges2.TopLeft = true;
+            borderEdges2.TopRight = true;
+            this.btnVerInformacion.CustomizableEdges = borderEdges2;
             this.btnVerInformacion.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnVerInformacion.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnVerInformacion.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -267,6 +269,7 @@
             // lblNombrePaciente
             // 
             this.lblNombrePaciente.AllowParentOverrides = false;
+            this.lblNombrePaciente.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblNombrePaciente.AutoEllipsis = false;
             this.lblNombrePaciente.CursorType = null;
             this.lblNombrePaciente.Font = new System.Drawing.Font("Century Gothic", 18F);
@@ -282,7 +285,7 @@
             // bunifuPictureBox1
             // 
             this.bunifuPictureBox1.AllowFocused = false;
-            this.bunifuPictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bunifuPictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.bunifuPictureBox1.AutoSizeHeight = true;
             this.bunifuPictureBox1.BorderRadius = 33;
             this.bunifuPictureBox1.Image = global::Empresa_laboral_ADNE___Proyecto_PTC.Properties.Resources.Foto_Ver_Paciente;

@@ -62,7 +62,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                 {
                     if (ValidarLoginUsuario == true && ValidarLoginEmpleado == true)
                     {
-                        MessageBox.Show($"Bienvenido, {InicioSesion.Usuario}", "Bienvenido!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        //MessageBox.Show($"Bienvenido, {InicioSesion.Usuario}", "Bienvenido!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         DashboardForm ObjMostrarDashboard = new DashboardForm();
                         ObjLogin.Hide();
                         ObjMostrarDashboard.Show();
