@@ -217,8 +217,8 @@
             this.btnSiguiente.onHoverState.BorderRadius = 5;
             this.btnSiguiente.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.btnSiguiente.onHoverState.BorderThickness = 1;
-            this.btnSiguiente.onHoverState.FillColor = System.Drawing.Color.LightSeaGreen;
-            this.btnSiguiente.onHoverState.ForeColor = System.Drawing.Color.White;
+            this.btnSiguiente.onHoverState.FillColor = System.Drawing.Color.Transparent;
+            this.btnSiguiente.onHoverState.ForeColor = System.Drawing.Color.LightSeaGreen;
             this.btnSiguiente.onHoverState.IconLeftImage = null;
             this.btnSiguiente.onHoverState.IconRightImage = null;
             this.btnSiguiente.OnIdleState.BorderColor = System.Drawing.Color.Transparent;
@@ -233,8 +233,8 @@
             this.btnSiguiente.OnPressedState.BorderRadius = 5;
             this.btnSiguiente.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.btnSiguiente.OnPressedState.BorderThickness = 1;
-            this.btnSiguiente.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(151)))), ((int)(((byte)(166)))));
-            this.btnSiguiente.OnPressedState.ForeColor = System.Drawing.Color.White;
+            this.btnSiguiente.OnPressedState.FillColor = System.Drawing.Color.Transparent;
+            this.btnSiguiente.OnPressedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(151)))), ((int)(((byte)(166)))));
             this.btnSiguiente.OnPressedState.IconLeftImage = null;
             this.btnSiguiente.OnPressedState.IconRightImage = null;
             this.btnSiguiente.Size = new System.Drawing.Size(65, 42);
@@ -435,7 +435,7 @@
             this.pnlSombraBoton.Controls.Add(this.btnVerCitas);
             this.pnlSombraBoton.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
             this.pnlSombraBoton.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
-            this.pnlSombraBoton.Location = new System.Drawing.Point(751, 654);
+            this.pnlSombraBoton.Location = new System.Drawing.Point(751, 649);
             this.pnlSombraBoton.Name = "pnlSombraBoton";
             this.pnlSombraBoton.Padding = new System.Windows.Forms.Padding(1, 1, 2, 4);
             this.pnlSombraBoton.PanelColor = System.Drawing.Color.Transparent;

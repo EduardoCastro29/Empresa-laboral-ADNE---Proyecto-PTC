@@ -47,7 +47,7 @@
             this.pnlSombreBoton = new Bunifu.UI.WinForms.BunifuShadowPanel();
             this.btnAñadirProfesional = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.dgvAdministrarProfesional = new Bunifu.UI.WinForms.BunifuDataGridView();
-            this.pnlSombraBuscarEmpleado = new Bunifu.UI.WinForms.BunifuShadowPanel();
+            this.pnlSombraBuscar = new Bunifu.UI.WinForms.BunifuPanel();
             this.txtBuscarEmpleado = new Bunifu.UI.WinForms.BunifuTextBox();
             this.cmsOpciones.SuspendLayout();
             this.pnlFondo.SuspendLayout();
@@ -55,7 +55,7 @@
             this.pnlForms.SuspendLayout();
             this.pnlSombreBoton.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAdministrarProfesional)).BeginInit();
-            this.pnlSombraBuscarEmpleado.SuspendLayout();
+            this.pnlSombraBuscar.SuspendLayout();
             this.SuspendLayout();
             // 
             // cmsOpciones
@@ -126,9 +126,9 @@
             this.pnlForms.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlForms.BackgroundImage")));
             this.pnlForms.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pnlForms.BorderRadius = 60;
+            this.pnlForms.Controls.Add(this.pnlSombraBuscar);
             this.pnlForms.Controls.Add(this.pnlSombreBoton);
             this.pnlForms.Controls.Add(this.dgvAdministrarProfesional);
-            this.pnlForms.Controls.Add(this.pnlSombraBuscarEmpleado);
             this.pnlForms.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlForms.GradientBottomLeft = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(225)))), ((int)(((byte)(226)))));
             this.pnlForms.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(226)))), ((int)(((byte)(227)))));
@@ -146,7 +146,7 @@
             this.pnlSombreBoton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlSombreBoton.BackColor = System.Drawing.Color.Transparent;
             this.pnlSombreBoton.BorderColor = System.Drawing.Color.Transparent;
-            this.pnlSombreBoton.BorderRadius = 10;
+            this.pnlSombreBoton.BorderRadius = 15;
             this.pnlSombreBoton.BorderThickness = 1;
             this.pnlSombreBoton.Controls.Add(this.btnAñadirProfesional);
             this.pnlSombreBoton.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
@@ -156,12 +156,12 @@
             this.pnlSombreBoton.Padding = new System.Windows.Forms.Padding(0, 0, 3, 4);
             this.pnlSombreBoton.PanelColor = System.Drawing.Color.Transparent;
             this.pnlSombreBoton.PanelColor2 = System.Drawing.Color.Transparent;
-            this.pnlSombreBoton.ShadowColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.pnlSombreBoton.ShadowColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.pnlSombreBoton.ShadowDept = 2;
             this.pnlSombreBoton.ShadowDepth = 10;
             this.pnlSombreBoton.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Surrounded;
             this.pnlSombreBoton.ShadowTopLeftVisible = false;
-            this.pnlSombreBoton.Size = new System.Drawing.Size(217, 65);
+            this.pnlSombreBoton.Size = new System.Drawing.Size(200, 65);
             this.pnlSombreBoton.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
             this.pnlSombreBoton.TabIndex = 101;
             // 
@@ -195,7 +195,7 @@
             this.btnAñadirProfesional.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
             this.btnAñadirProfesional.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnAñadirProfesional.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
-            this.btnAñadirProfesional.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAñadirProfesional.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAñadirProfesional.ForeColor = System.Drawing.Color.White;
             this.btnAñadirProfesional.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAñadirProfesional.IconLeftCursor = System.Windows.Forms.Cursors.Default;
@@ -207,7 +207,7 @@
             this.btnAñadirProfesional.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
             this.btnAñadirProfesional.IconSize = 25;
             this.btnAñadirProfesional.IdleBorderColor = System.Drawing.Color.Transparent;
-            this.btnAñadirProfesional.IdleBorderRadius = 12;
+            this.btnAñadirProfesional.IdleBorderRadius = 25;
             this.btnAñadirProfesional.IdleBorderThickness = 1;
             this.btnAñadirProfesional.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(189)))), ((int)(((byte)(152)))));
             this.btnAñadirProfesional.IdleIconLeftImage = null;
@@ -216,7 +216,7 @@
             this.btnAñadirProfesional.Location = new System.Drawing.Point(0, 0);
             this.btnAñadirProfesional.Name = "btnAñadirProfesional";
             this.btnAñadirProfesional.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.btnAñadirProfesional.OnDisabledState.BorderRadius = 12;
+            this.btnAñadirProfesional.OnDisabledState.BorderRadius = 25;
             this.btnAñadirProfesional.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.btnAñadirProfesional.OnDisabledState.BorderThickness = 1;
             this.btnAñadirProfesional.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -224,7 +224,7 @@
             this.btnAñadirProfesional.OnDisabledState.IconLeftImage = null;
             this.btnAñadirProfesional.OnDisabledState.IconRightImage = null;
             this.btnAñadirProfesional.onHoverState.BorderColor = System.Drawing.Color.Transparent;
-            this.btnAñadirProfesional.onHoverState.BorderRadius = 12;
+            this.btnAñadirProfesional.onHoverState.BorderRadius = 25;
             this.btnAñadirProfesional.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.btnAñadirProfesional.onHoverState.BorderThickness = 1;
             this.btnAñadirProfesional.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(2)))), ((int)(((byte)(161)))), ((int)(((byte)(104)))));
@@ -232,7 +232,7 @@
             this.btnAñadirProfesional.onHoverState.IconLeftImage = null;
             this.btnAñadirProfesional.onHoverState.IconRightImage = null;
             this.btnAñadirProfesional.OnIdleState.BorderColor = System.Drawing.Color.Transparent;
-            this.btnAñadirProfesional.OnIdleState.BorderRadius = 12;
+            this.btnAñadirProfesional.OnIdleState.BorderRadius = 25;
             this.btnAñadirProfesional.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.btnAñadirProfesional.OnIdleState.BorderThickness = 1;
             this.btnAñadirProfesional.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(189)))), ((int)(((byte)(152)))));
@@ -240,14 +240,14 @@
             this.btnAñadirProfesional.OnIdleState.IconLeftImage = null;
             this.btnAñadirProfesional.OnIdleState.IconRightImage = null;
             this.btnAñadirProfesional.OnPressedState.BorderColor = System.Drawing.Color.Transparent;
-            this.btnAñadirProfesional.OnPressedState.BorderRadius = 12;
+            this.btnAñadirProfesional.OnPressedState.BorderRadius = 25;
             this.btnAñadirProfesional.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.btnAñadirProfesional.OnPressedState.BorderThickness = 1;
             this.btnAñadirProfesional.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(2)))), ((int)(((byte)(161)))), ((int)(((byte)(104)))));
             this.btnAñadirProfesional.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btnAñadirProfesional.OnPressedState.IconLeftImage = null;
             this.btnAñadirProfesional.OnPressedState.IconRightImage = null;
-            this.btnAñadirProfesional.Size = new System.Drawing.Size(214, 61);
+            this.btnAñadirProfesional.Size = new System.Drawing.Size(197, 61);
             this.btnAñadirProfesional.TabIndex = 3;
             this.btnAñadirProfesional.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnAñadirProfesional.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -323,69 +323,61 @@
             this.dgvAdministrarProfesional.TabIndex = 100;
             this.dgvAdministrarProfesional.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Teal;
             // 
-            // pnlSombraBuscarEmpleado
+            // pnlSombraBuscar
             // 
-            this.pnlSombraBuscarEmpleado.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.pnlSombraBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlSombraBuscarEmpleado.BackColor = System.Drawing.Color.Transparent;
-            this.pnlSombraBuscarEmpleado.BorderColor = System.Drawing.Color.Transparent;
-            this.pnlSombraBuscarEmpleado.BorderRadius = 15;
-            this.pnlSombraBuscarEmpleado.BorderThickness = 1;
-            this.pnlSombraBuscarEmpleado.Controls.Add(this.txtBuscarEmpleado);
-            this.pnlSombraBuscarEmpleado.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
-            this.pnlSombraBuscarEmpleado.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
-            this.pnlSombraBuscarEmpleado.Location = new System.Drawing.Point(56, 52);
-            this.pnlSombraBuscarEmpleado.Name = "pnlSombraBuscarEmpleado";
-            this.pnlSombraBuscarEmpleado.Padding = new System.Windows.Forms.Padding(4, 1, 0, 5);
-            this.pnlSombraBuscarEmpleado.PanelColor = System.Drawing.Color.Transparent;
-            this.pnlSombraBuscarEmpleado.PanelColor2 = System.Drawing.Color.Transparent;
-            this.pnlSombraBuscarEmpleado.ShadowColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.pnlSombraBuscarEmpleado.ShadowDept = 2;
-            this.pnlSombraBuscarEmpleado.ShadowDepth = 10;
-            this.pnlSombraBuscarEmpleado.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Surrounded;
-            this.pnlSombraBuscarEmpleado.ShadowTopLeftVisible = false;
-            this.pnlSombraBuscarEmpleado.Size = new System.Drawing.Size(645, 66);
-            this.pnlSombraBuscarEmpleado.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
-            this.pnlSombraBuscarEmpleado.TabIndex = 5;
+            this.pnlSombraBuscar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(197)))), ((int)(((byte)(197)))), ((int)(((byte)(197)))));
+            this.pnlSombraBuscar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlSombraBuscar.BackgroundImage")));
+            this.pnlSombraBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnlSombraBuscar.BorderColor = System.Drawing.Color.Transparent;
+            this.pnlSombraBuscar.BorderRadius = 60;
+            this.pnlSombraBuscar.BorderThickness = 1;
+            this.pnlSombraBuscar.Controls.Add(this.txtBuscarEmpleado);
+            this.pnlSombraBuscar.Location = new System.Drawing.Point(126, 50);
+            this.pnlSombraBuscar.Name = "pnlSombraBuscar";
+            this.pnlSombraBuscar.Padding = new System.Windows.Forms.Padding(5, 2, 1, 6);
+            this.pnlSombraBuscar.ShowBorders = true;
+            this.pnlSombraBuscar.Size = new System.Drawing.Size(551, 73);
+            this.pnlSombraBuscar.TabIndex = 102;
             // 
             // txtBuscarEmpleado
             // 
             this.txtBuscarEmpleado.AcceptsReturn = false;
             this.txtBuscarEmpleado.AcceptsTab = false;
-            this.txtBuscarEmpleado.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtBuscarEmpleado.AnimationSpeed = 200;
             this.txtBuscarEmpleado.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
             this.txtBuscarEmpleado.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
             this.txtBuscarEmpleado.AutoSizeHeight = true;
-            this.txtBuscarEmpleado.BackColor = System.Drawing.Color.White;
+            this.txtBuscarEmpleado.BackColor = System.Drawing.Color.Transparent;
             this.txtBuscarEmpleado.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txtBuscarEmpleado.BackgroundImage")));
-            this.txtBuscarEmpleado.BorderColorActive = System.Drawing.Color.Teal;
+            this.txtBuscarEmpleado.BorderColorActive = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(234)))), ((int)(((byte)(176)))));
             this.txtBuscarEmpleado.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.txtBuscarEmpleado.BorderColorHover = System.Drawing.Color.LightSeaGreen;
-            this.txtBuscarEmpleado.BorderColorIdle = System.Drawing.Color.DarkGray;
-            this.txtBuscarEmpleado.BorderRadius = 15;
+            this.txtBuscarEmpleado.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(234)))), ((int)(((byte)(176)))));
+            this.txtBuscarEmpleado.BorderColorIdle = System.Drawing.Color.White;
+            this.txtBuscarEmpleado.BorderRadius = 60;
             this.txtBuscarEmpleado.BorderThickness = 0;
             this.txtBuscarEmpleado.CharacterCase = Bunifu.UI.WinForms.BunifuTextBox.CharacterCases.Normal;
             this.txtBuscarEmpleado.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtBuscarEmpleado.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtBuscarEmpleado.DefaultFont = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBuscarEmpleado.DefaultFont = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBuscarEmpleado.DefaultText = "";
+            this.txtBuscarEmpleado.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtBuscarEmpleado.FillColor = System.Drawing.Color.White;
             this.txtBuscarEmpleado.HideSelection = true;
-            this.txtBuscarEmpleado.IconLeft = global::Empresa_laboral_ADNE___Proyecto_PTC.Properties.Resources.Lupa;
+            this.txtBuscarEmpleado.IconLeft = null;
             this.txtBuscarEmpleado.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtBuscarEmpleado.IconPadding = 22;
+            this.txtBuscarEmpleado.IconPadding = 15;
             this.txtBuscarEmpleado.IconRight = null;
             this.txtBuscarEmpleado.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtBuscarEmpleado.Lines = new string[0];
-            this.txtBuscarEmpleado.Location = new System.Drawing.Point(0, 1);
+            this.txtBuscarEmpleado.Location = new System.Drawing.Point(5, 2);
             this.txtBuscarEmpleado.MaxLength = 32767;
             this.txtBuscarEmpleado.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtBuscarEmpleado.Modified = false;
             this.txtBuscarEmpleado.Multiline = false;
             this.txtBuscarEmpleado.Name = "txtBuscarEmpleado";
-            stateProperties1.BorderColor = System.Drawing.Color.Teal;
+            stateProperties1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(234)))), ((int)(((byte)(176)))));
             stateProperties1.FillColor = System.Drawing.Color.Empty;
             stateProperties1.ForeColor = System.Drawing.Color.Empty;
             stateProperties1.PlaceholderForeColor = System.Drawing.Color.Empty;
@@ -395,19 +387,19 @@
             stateProperties2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             stateProperties2.PlaceholderForeColor = System.Drawing.Color.DarkGray;
             this.txtBuscarEmpleado.OnDisabledState = stateProperties2;
-            stateProperties3.BorderColor = System.Drawing.Color.LightSeaGreen;
+            stateProperties3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(234)))), ((int)(((byte)(176)))));
             stateProperties3.FillColor = System.Drawing.Color.Empty;
             stateProperties3.ForeColor = System.Drawing.Color.Empty;
             stateProperties3.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txtBuscarEmpleado.OnHoverState = stateProperties3;
-            stateProperties4.BorderColor = System.Drawing.Color.DarkGray;
+            stateProperties4.BorderColor = System.Drawing.Color.White;
             stateProperties4.FillColor = System.Drawing.Color.White;
             stateProperties4.ForeColor = System.Drawing.Color.Empty;
             stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txtBuscarEmpleado.OnIdleState = stateProperties4;
             this.txtBuscarEmpleado.Padding = new System.Windows.Forms.Padding(3);
             this.txtBuscarEmpleado.PasswordChar = '\0';
-            this.txtBuscarEmpleado.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.txtBuscarEmpleado.PlaceholderForeColor = System.Drawing.Color.DarkGray;
             this.txtBuscarEmpleado.PlaceholderText = "Buscar...";
             this.txtBuscarEmpleado.ReadOnly = false;
             this.txtBuscarEmpleado.ScrollBars = System.Windows.Forms.ScrollBars.None;
@@ -415,13 +407,13 @@
             this.txtBuscarEmpleado.SelectionLength = 0;
             this.txtBuscarEmpleado.SelectionStart = 0;
             this.txtBuscarEmpleado.ShortcutsEnabled = false;
-            this.txtBuscarEmpleado.Size = new System.Drawing.Size(645, 60);
-            this.txtBuscarEmpleado.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Material;
-            this.txtBuscarEmpleado.TabIndex = 4;
+            this.txtBuscarEmpleado.Size = new System.Drawing.Size(545, 65);
+            this.txtBuscarEmpleado.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
+            this.txtBuscarEmpleado.TabIndex = 7;
             this.txtBuscarEmpleado.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtBuscarEmpleado.TextMarginBottom = 0;
-            this.txtBuscarEmpleado.TextMarginLeft = 15;
-            this.txtBuscarEmpleado.TextMarginTop = 1;
+            this.txtBuscarEmpleado.TextMarginLeft = 10;
+            this.txtBuscarEmpleado.TextMarginTop = 0;
             this.txtBuscarEmpleado.TextPlaceholder = "Buscar...";
             this.txtBuscarEmpleado.UseSystemPasswordChar = false;
             this.txtBuscarEmpleado.WordWrap = true;
@@ -444,7 +436,7 @@
             this.pnlForms.ResumeLayout(false);
             this.pnlSombreBoton.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAdministrarProfesional)).EndInit();
-            this.pnlSombraBuscarEmpleado.ResumeLayout(false);
+            this.pnlSombraBuscar.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -457,9 +449,9 @@
         public Bunifu.UI.WinForms.BunifuShadowPanel pnlSombraFondo;
         public Bunifu.UI.WinForms.BunifuGradientPanel pnlForms;
         public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnAñadirProfesional;
-        public Bunifu.UI.WinForms.BunifuTextBox txtBuscarEmpleado;
-        public Bunifu.UI.WinForms.BunifuShadowPanel pnlSombraBuscarEmpleado;
         public Bunifu.UI.WinForms.BunifuDataGridView dgvAdministrarProfesional;
         public Bunifu.UI.WinForms.BunifuShadowPanel pnlSombreBoton;
+        public Bunifu.UI.WinForms.BunifuPanel pnlSombraBuscar;
+        public Bunifu.UI.WinForms.BunifuTextBox txtBuscarEmpleado;
     }
 }

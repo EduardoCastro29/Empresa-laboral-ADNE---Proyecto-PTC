@@ -107,7 +107,7 @@
             this.bunifuPanel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuPanel2.BackgroundImage")));
             this.bunifuPanel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuPanel2.BorderColor = System.Drawing.Color.Transparent;
-            this.bunifuPanel2.BorderRadius = 30;
+            this.bunifuPanel2.BorderRadius = 55;
             this.bunifuPanel2.BorderThickness = 1;
             this.bunifuPanel2.Controls.Add(this.lblRecuerdame);
             this.bunifuPanel2.Controls.Add(this.cbRecuerdame);

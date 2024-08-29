@@ -28,7 +28,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Vista
         {
             InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.None;
-            Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 30, 30));
+            Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 55, 55));
 
             //Creamos un objeto de la clase CTRLLogin llamandolo ObjCTRLLogin
             //El propio objeto se instancia con su propia clase y como parámetro this, de esta forma hace referencia al mismo formulario

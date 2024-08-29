@@ -71,7 +71,7 @@
             this.bunifuGradientPanel2.Location = new System.Drawing.Point(0, 0);
             this.bunifuGradientPanel2.Name = "bunifuGradientPanel2";
             this.bunifuGradientPanel2.Quality = 10;
-            this.bunifuGradientPanel2.Size = new System.Drawing.Size(1080, 500);
+            this.bunifuGradientPanel2.Size = new System.Drawing.Size(1064, 496);
             this.bunifuGradientPanel2.TabIndex = 2;
             // 
             // bunifuGradientPanel1
@@ -534,6 +534,9 @@
             // 
             // bunifuShadowPanel1
             // 
+            this.bunifuShadowPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.bunifuShadowPanel1.BackColor = System.Drawing.Color.Transparent;
             this.bunifuShadowPanel1.BorderColor = System.Drawing.Color.Transparent;
             this.bunifuShadowPanel1.BorderRadius = 15;
@@ -559,7 +562,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1080, 500);
+            this.panel1.Size = new System.Drawing.Size(1064, 496);
             this.panel1.TabIndex = 4;
             // 
             // DirecciónGmailForm
@@ -567,11 +570,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(168)))), ((int)(((byte)(161)))));
-            this.ClientSize = new System.Drawing.Size(1080, 500);
+            this.ClientSize = new System.Drawing.Size(1064, 496);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.MaximumSize = new System.Drawing.Size(1080, 500);
-            this.MinimumSize = new System.Drawing.Size(1080, 500);
             this.Name = "DirecciónGmailForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dirección Gmail";

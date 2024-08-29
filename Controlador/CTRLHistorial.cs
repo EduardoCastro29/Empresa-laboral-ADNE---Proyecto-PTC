@@ -18,11 +18,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
         {
             ObjHistorial = Vista;
 
-            ObjHistorial.btnSalir.Click += new EventHandler(SalirHistorial);
-        }
-        private void SalirHistorial(object sender, EventArgs e)
-        {
-            ObjHistorial.Close();
         }
     }
 }

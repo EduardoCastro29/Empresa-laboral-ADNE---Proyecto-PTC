@@ -248,18 +248,6 @@
     <Compile Include="Vista\Dirección Gmail.Designer.cs">
       <DependentUpon>Dirección Gmail.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vista\Diseños desechables.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vista\Diseños desechables.Designer.cs">
-      <DependentUpon>Diseños desechables.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Vista\DisposableForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vista\DisposableForm.Designer.cs">
-      <DependentUpon>DisposableForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Vista\Equipo de Trabajo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -277,12 +265,6 @@
     </Compile>
     <Compile Include="Vista\Calendario.Designer.cs">
       <DependentUpon>Calendario.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Vista\FormDescartable.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vista\FormDescartable.Designer.cs">
-      <DependentUpon>FormDescartable.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\Pin de Acceso.cs">
       <SubType>Form</SubType>
@@ -420,12 +402,6 @@
     <EmbeddedResource Include="Vista\Dirección Gmail.resx">
       <DependentUpon>Dirección Gmail.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vista\Diseños desechables.resx">
-      <DependentUpon>Diseños desechables.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Vista\DisposableForm.resx">
-      <DependentUpon>DisposableForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Vista\Equipo de Trabajo.resx">
       <DependentUpon>Equipo de Trabajo.cs</DependentUpon>
     </EmbeddedResource>
@@ -434,9 +410,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\Calendario.resx">
       <DependentUpon>Calendario.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Vista\FormDescartable.resx">
-      <DependentUpon>FormDescartable.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\Pin de Acceso.resx">
       <DependentUpon>Pin de Acceso.cs</DependentUpon>

@@ -34,37 +34,90 @@
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            this.bunifuGradientPanel1 = new Bunifu.UI.WinForms.BunifuGradientPanel();
-            this.btnAbrirDocumentos = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
-            this.btnSalir = new Bunifu.UI.WinForms.BunifuPictureBox();
-            this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
-            this.txtBuscarPaciente = new Bunifu.UI.WinForms.BunifuTextBox();
+            this.pnlFondo = new Bunifu.UI.WinForms.BunifuPanel();
+            this.pnlSombraFondo = new Bunifu.UI.WinForms.BunifuShadowPanel();
+            this.pnlForms = new Bunifu.UI.WinForms.BunifuGradientPanel();
             this.flpVerPacientes = new System.Windows.Forms.FlowLayoutPanel();
-            this.bunifuGradientPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).BeginInit();
-            this.bunifuPanel1.SuspendLayout();
+            this.btnAbrirDocumentos = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
+            this.pnlSombraBuscar = new Bunifu.UI.WinForms.BunifuPanel();
+            this.txtBuscarPaciente = new Bunifu.UI.WinForms.BunifuTextBox();
+            this.pnlFondo.SuspendLayout();
+            this.pnlSombraFondo.SuspendLayout();
+            this.pnlForms.SuspendLayout();
+            this.pnlSombraBuscar.SuspendLayout();
             this.SuspendLayout();
             // 
-            // bunifuGradientPanel1
+            // pnlFondo
             // 
-            this.bunifuGradientPanel1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
-            this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuGradientPanel1.BorderRadius = 1;
-            this.bunifuGradientPanel1.Controls.Add(this.btnAbrirDocumentos);
-            this.bunifuGradientPanel1.Controls.Add(this.btnSalir);
-            this.bunifuGradientPanel1.Controls.Add(this.bunifuPanel1);
-            this.bunifuGradientPanel1.Controls.Add(this.flpVerPacientes);
-            this.bunifuGradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bunifuGradientPanel1.GradientBottomLeft = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(225)))), ((int)(((byte)(226)))));
-            this.bunifuGradientPanel1.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(227)))), ((int)(((byte)(226)))));
-            this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.bunifuGradientPanel1.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.bunifuGradientPanel1.Location = new System.Drawing.Point(0, 0);
-            this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
-            this.bunifuGradientPanel1.Quality = 10;
-            this.bunifuGradientPanel1.Size = new System.Drawing.Size(1011, 720);
-            this.bunifuGradientPanel1.TabIndex = 1;
+            this.pnlFondo.BackgroundColor = System.Drawing.Color.Transparent;
+            this.pnlFondo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlFondo.BackgroundImage")));
+            this.pnlFondo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnlFondo.BorderColor = System.Drawing.Color.Transparent;
+            this.pnlFondo.BorderRadius = 3;
+            this.pnlFondo.BorderThickness = 1;
+            this.pnlFondo.Controls.Add(this.pnlSombraFondo);
+            this.pnlFondo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlFondo.Location = new System.Drawing.Point(15, 10);
+            this.pnlFondo.Name = "pnlFondo";
+            this.pnlFondo.ShowBorders = true;
+            this.pnlFondo.Size = new System.Drawing.Size(991, 707);
+            this.pnlFondo.TabIndex = 4;
+            // 
+            // pnlSombraFondo
+            // 
+            this.pnlSombraFondo.BackColor = System.Drawing.Color.Transparent;
+            this.pnlSombraFondo.BorderColor = System.Drawing.Color.Transparent;
+            this.pnlSombraFondo.BorderRadius = 30;
+            this.pnlSombraFondo.BorderThickness = 10;
+            this.pnlSombraFondo.Controls.Add(this.pnlForms);
+            this.pnlSombraFondo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlSombraFondo.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
+            this.pnlSombraFondo.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Horizontal;
+            this.pnlSombraFondo.Location = new System.Drawing.Point(0, 0);
+            this.pnlSombraFondo.Name = "pnlSombraFondo";
+            this.pnlSombraFondo.Padding = new System.Windows.Forms.Padding(0, 3, 5, 7);
+            this.pnlSombraFondo.PanelColor = System.Drawing.Color.Transparent;
+            this.pnlSombraFondo.PanelColor2 = System.Drawing.Color.Transparent;
+            this.pnlSombraFondo.ShadowColor = System.Drawing.Color.Black;
+            this.pnlSombraFondo.ShadowDept = 2;
+            this.pnlSombraFondo.ShadowDepth = 250;
+            this.pnlSombraFondo.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Surrounded;
+            this.pnlSombraFondo.ShadowTopLeftVisible = false;
+            this.pnlSombraFondo.Size = new System.Drawing.Size(991, 707);
+            this.pnlSombraFondo.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Lowered;
+            this.pnlSombraFondo.TabIndex = 2;
+            // 
+            // pnlForms
+            // 
+            this.pnlForms.BackColor = System.Drawing.Color.Transparent;
+            this.pnlForms.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlForms.BackgroundImage")));
+            this.pnlForms.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnlForms.BorderRadius = 60;
+            this.pnlForms.Controls.Add(this.pnlSombraBuscar);
+            this.pnlForms.Controls.Add(this.btnAbrirDocumentos);
+            this.pnlForms.Controls.Add(this.flpVerPacientes);
+            this.pnlForms.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlForms.GradientBottomLeft = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.pnlForms.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.pnlForms.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
+            this.pnlForms.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
+            this.pnlForms.Location = new System.Drawing.Point(0, 3);
+            this.pnlForms.Margin = new System.Windows.Forms.Padding(0);
+            this.pnlForms.Name = "pnlForms";
+            this.pnlForms.Quality = 10;
+            this.pnlForms.Size = new System.Drawing.Size(986, 697);
+            this.pnlForms.TabIndex = 1;
+            // 
+            // flpVerPacientes
+            // 
+            this.flpVerPacientes.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.flpVerPacientes.AutoScroll = true;
+            this.flpVerPacientes.Location = new System.Drawing.Point(25, 169);
+            this.flpVerPacientes.Name = "flpVerPacientes";
+            this.flpVerPacientes.Size = new System.Drawing.Size(937, 500);
+            this.flpVerPacientes.TabIndex = 23;
             // 
             // btnAbrirDocumentos
             // 
@@ -114,7 +167,7 @@
             this.btnAbrirDocumentos.IdleIconLeftImage = null;
             this.btnAbrirDocumentos.IdleIconRightImage = null;
             this.btnAbrirDocumentos.IndicateFocus = false;
-            this.btnAbrirDocumentos.Location = new System.Drawing.Point(384, 12);
+            this.btnAbrirDocumentos.Location = new System.Drawing.Point(389, 17);
             this.btnAbrirDocumentos.Name = "btnAbrirDocumentos";
             this.btnAbrirDocumentos.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnAbrirDocumentos.OnDisabledState.BorderRadius = 12;
@@ -149,51 +202,35 @@
             this.btnAbrirDocumentos.OnPressedState.IconLeftImage = null;
             this.btnAbrirDocumentos.OnPressedState.IconRightImage = null;
             this.btnAbrirDocumentos.Size = new System.Drawing.Size(216, 39);
-            this.btnAbrirDocumentos.TabIndex = 21;
+            this.btnAbrirDocumentos.TabIndex = 25;
             this.btnAbrirDocumentos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnAbrirDocumentos.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnAbrirDocumentos.TextMarginLeft = 0;
             this.btnAbrirDocumentos.TextPadding = new System.Windows.Forms.Padding(0);
             this.btnAbrirDocumentos.UseDefaultRadiusAndThickness = true;
             // 
-            // btnSalir
+            // pnlSombraBuscar
             // 
-            this.btnSalir.AllowFocused = false;
-            this.btnSalir.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnSalir.AutoSizeHeight = true;
-            this.btnSalir.BorderRadius = 0;
-            this.btnSalir.Image = global::Empresa_laboral_ADNE___Proyecto_PTC.Properties.Resources.Cerrar_Login;
-            this.btnSalir.IsCircle = true;
-            this.btnSalir.Location = new System.Drawing.Point(979, 12);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(20, 20);
-            this.btnSalir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnSalir.TabIndex = 14;
-            this.btnSalir.TabStop = false;
-            this.btnSalir.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Square;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
-            // 
-            // bunifuPanel1
-            // 
-            this.bunifuPanel1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.bunifuPanel1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(197)))), ((int)(((byte)(197)))), ((int)(((byte)(197)))));
-            this.bunifuPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuPanel1.BackgroundImage")));
-            this.bunifuPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuPanel1.BorderColor = System.Drawing.Color.Transparent;
-            this.bunifuPanel1.BorderRadius = 60;
-            this.bunifuPanel1.BorderThickness = 1;
-            this.bunifuPanel1.Controls.Add(this.txtBuscarPaciente);
-            this.bunifuPanel1.Location = new System.Drawing.Point(98, 70);
-            this.bunifuPanel1.Name = "bunifuPanel1";
-            this.bunifuPanel1.ShowBorders = true;
-            this.bunifuPanel1.Size = new System.Drawing.Size(801, 73);
-            this.bunifuPanel1.TabIndex = 13;
+            this.pnlSombraBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlSombraBuscar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(197)))), ((int)(((byte)(197)))), ((int)(((byte)(197)))));
+            this.pnlSombraBuscar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlSombraBuscar.BackgroundImage")));
+            this.pnlSombraBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnlSombraBuscar.BorderColor = System.Drawing.Color.Transparent;
+            this.pnlSombraBuscar.BorderRadius = 60;
+            this.pnlSombraBuscar.BorderThickness = 1;
+            this.pnlSombraBuscar.Controls.Add(this.txtBuscarPaciente);
+            this.pnlSombraBuscar.Location = new System.Drawing.Point(155, 67);
+            this.pnlSombraBuscar.Name = "pnlSombraBuscar";
+            this.pnlSombraBuscar.Padding = new System.Windows.Forms.Padding(5, 2, 1, 6);
+            this.pnlSombraBuscar.ShowBorders = true;
+            this.pnlSombraBuscar.Size = new System.Drawing.Size(684, 72);
+            this.pnlSombraBuscar.TabIndex = 26;
             // 
             // txtBuscarPaciente
             // 
             this.txtBuscarPaciente.AcceptsReturn = false;
             this.txtBuscarPaciente.AcceptsTab = false;
-            this.txtBuscarPaciente.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtBuscarPaciente.AnimationSpeed = 200;
             this.txtBuscarPaciente.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
             this.txtBuscarPaciente.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
@@ -209,8 +246,9 @@
             this.txtBuscarPaciente.CharacterCase = Bunifu.UI.WinForms.BunifuTextBox.CharacterCases.Normal;
             this.txtBuscarPaciente.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtBuscarPaciente.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtBuscarPaciente.DefaultFont = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBuscarPaciente.DefaultFont = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBuscarPaciente.DefaultText = "";
+            this.txtBuscarPaciente.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtBuscarPaciente.FillColor = System.Drawing.Color.White;
             this.txtBuscarPaciente.HideSelection = true;
             this.txtBuscarPaciente.IconLeft = null;
@@ -219,7 +257,7 @@
             this.txtBuscarPaciente.IconRight = null;
             this.txtBuscarPaciente.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtBuscarPaciente.Lines = new string[0];
-            this.txtBuscarPaciente.Location = new System.Drawing.Point(0, 2);
+            this.txtBuscarPaciente.Location = new System.Drawing.Point(5, 2);
             this.txtBuscarPaciente.MaxLength = 32767;
             this.txtBuscarPaciente.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtBuscarPaciente.Modified = false;
@@ -247,15 +285,15 @@
             this.txtBuscarPaciente.OnIdleState = stateProperties4;
             this.txtBuscarPaciente.Padding = new System.Windows.Forms.Padding(3);
             this.txtBuscarPaciente.PasswordChar = '\0';
-            this.txtBuscarPaciente.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.txtBuscarPaciente.PlaceholderForeColor = System.Drawing.Color.DarkGray;
             this.txtBuscarPaciente.PlaceholderText = "Buscar...";
             this.txtBuscarPaciente.ReadOnly = false;
             this.txtBuscarPaciente.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtBuscarPaciente.SelectedText = "";
             this.txtBuscarPaciente.SelectionLength = 0;
             this.txtBuscarPaciente.SelectionStart = 0;
-            this.txtBuscarPaciente.ShortcutsEnabled = true;
-            this.txtBuscarPaciente.Size = new System.Drawing.Size(801, 64);
+            this.txtBuscarPaciente.ShortcutsEnabled = false;
+            this.txtBuscarPaciente.Size = new System.Drawing.Size(678, 64);
             this.txtBuscarPaciente.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtBuscarPaciente.TabIndex = 7;
             this.txtBuscarPaciente.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -266,38 +304,34 @@
             this.txtBuscarPaciente.UseSystemPasswordChar = false;
             this.txtBuscarPaciente.WordWrap = true;
             // 
-            // flpVerPacientes
-            // 
-            this.flpVerPacientes.AutoScroll = true;
-            this.flpVerPacientes.Location = new System.Drawing.Point(36, 164);
-            this.flpVerPacientes.Name = "flpVerPacientes";
-            this.flpVerPacientes.Size = new System.Drawing.Size(927, 518);
-            this.flpVerPacientes.TabIndex = 1;
-            // 
             // VerPacientesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(143)))), ((int)(((byte)(156)))));
             this.ClientSize = new System.Drawing.Size(1011, 720);
-            this.Controls.Add(this.bunifuGradientPanel1);
+            this.Controls.Add(this.pnlFondo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "VerPacientesForm";
+            this.Padding = new System.Windows.Forms.Padding(15, 10, 5, 3);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ver Pacientes";
-            this.bunifuGradientPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).EndInit();
-            this.bunifuPanel1.ResumeLayout(false);
+            this.pnlFondo.ResumeLayout(false);
+            this.pnlSombraFondo.ResumeLayout(false);
+            this.pnlForms.ResumeLayout(false);
+            this.pnlSombraBuscar.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private Bunifu.UI.WinForms.BunifuGradientPanel bunifuGradientPanel1;
-        private Bunifu.UI.WinForms.BunifuPanel bunifuPanel1;
-        public Bunifu.UI.WinForms.BunifuTextBox txtBuscarPaciente;
+        public Bunifu.UI.WinForms.BunifuPanel pnlFondo;
+        public Bunifu.UI.WinForms.BunifuShadowPanel pnlSombraFondo;
+        public Bunifu.UI.WinForms.BunifuGradientPanel pnlForms;
         public System.Windows.Forms.FlowLayoutPanel flpVerPacientes;
-        public Bunifu.UI.WinForms.BunifuPictureBox btnSalir;
         public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnAbrirDocumentos;
+        public Bunifu.UI.WinForms.BunifuPanel pnlSombraBuscar;
+        public Bunifu.UI.WinForms.BunifuTextBox txtBuscarPaciente;
     }
 }

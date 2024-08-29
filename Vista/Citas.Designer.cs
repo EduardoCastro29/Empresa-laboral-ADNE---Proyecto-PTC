@@ -135,15 +135,17 @@
             // 
             this.txtBuscarCita.AcceptsReturn = false;
             this.txtBuscarCita.AcceptsTab = false;
+            this.txtBuscarCita.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtBuscarCita.AnimationSpeed = 200;
             this.txtBuscarCita.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
             this.txtBuscarCita.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
             this.txtBuscarCita.AutoSizeHeight = true;
             this.txtBuscarCita.BackColor = System.Drawing.Color.Transparent;
             this.txtBuscarCita.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txtBuscarCita.BackgroundImage")));
-            this.txtBuscarCita.BorderColorActive = System.Drawing.Color.Teal;
+            this.txtBuscarCita.BorderColorActive = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(234)))), ((int)(((byte)(176)))));
             this.txtBuscarCita.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.txtBuscarCita.BorderColorHover = System.Drawing.Color.LightSeaGreen;
+            this.txtBuscarCita.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(234)))), ((int)(((byte)(176)))));
             this.txtBuscarCita.BorderColorIdle = System.Drawing.Color.White;
             this.txtBuscarCita.BorderRadius = 60;
             this.txtBuscarCita.BorderThickness = 0;
@@ -152,7 +154,6 @@
             this.txtBuscarCita.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtBuscarCita.DefaultFont = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBuscarCita.DefaultText = "";
-            this.txtBuscarCita.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtBuscarCita.FillColor = System.Drawing.Color.White;
             this.txtBuscarCita.HideSelection = true;
             this.txtBuscarCita.IconLeft = null;
@@ -167,7 +168,7 @@
             this.txtBuscarCita.Modified = false;
             this.txtBuscarCita.Multiline = false;
             this.txtBuscarCita.Name = "txtBuscarCita";
-            stateProperties1.BorderColor = System.Drawing.Color.Teal;
+            stateProperties1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(234)))), ((int)(((byte)(176)))));
             stateProperties1.FillColor = System.Drawing.Color.Empty;
             stateProperties1.ForeColor = System.Drawing.Color.Empty;
             stateProperties1.PlaceholderForeColor = System.Drawing.Color.Empty;
@@ -177,7 +178,7 @@
             stateProperties2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             stateProperties2.PlaceholderForeColor = System.Drawing.Color.DarkGray;
             this.txtBuscarCita.OnDisabledState = stateProperties2;
-            stateProperties3.BorderColor = System.Drawing.Color.LightSeaGreen;
+            stateProperties3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(234)))), ((int)(((byte)(176)))));
             stateProperties3.FillColor = System.Drawing.Color.Empty;
             stateProperties3.ForeColor = System.Drawing.Color.Empty;
             stateProperties3.PlaceholderForeColor = System.Drawing.Color.Empty;
@@ -335,6 +336,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(143)))), ((int)(((byte)(156)))));
             this.ClientSize = new System.Drawing.Size(995, 681);
             this.Controls.Add(this.pnlFondo);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CitasForm";
             this.Padding = new System.Windows.Forms.Padding(15, 10, 5, 3);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

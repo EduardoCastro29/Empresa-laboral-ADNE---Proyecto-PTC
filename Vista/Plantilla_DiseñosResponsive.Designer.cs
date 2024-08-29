@@ -43,10 +43,10 @@
             this.pnlForms.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pnlForms.BorderRadius = 60;
             this.pnlForms.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlForms.GradientBottomLeft = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.pnlForms.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.pnlForms.GradientBottomLeft = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(225)))), ((int)(((byte)(226)))));
+            this.pnlForms.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(225)))), ((int)(((byte)(226)))));
             this.pnlForms.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
-            this.pnlForms.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
+            this.pnlForms.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
             this.pnlForms.Location = new System.Drawing.Point(0, 3);
             this.pnlForms.Margin = new System.Windows.Forms.Padding(0);
             this.pnlForms.Name = "pnlForms";

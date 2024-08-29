@@ -19,9 +19,9 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Vista
             CTRLVerCitas ObjControladorVerCitas = new CTRLVerCitas(this);
         }
 
-        private void btnSalir_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+        //private void btnSalir_Click(object sender, EventArgs e)
+        //{
+        //    this.Close();
+        //}
     }
 }
