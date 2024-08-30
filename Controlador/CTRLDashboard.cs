@@ -100,7 +100,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
         private void FormularioCitas(object sender, EventArgs e)
         {
             //En caso de seleccionarse el formulario Pacientes, se abrirá declarandolo como un nuevo formulario después del método
-            AbrirFormulario<CitasForm>();
+            AbrirFormulario<VerCitasForm>();
         }
         private void FormularioEquipoTrabajo(object sender, EventArgs e)
         {

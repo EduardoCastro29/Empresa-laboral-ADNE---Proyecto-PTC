@@ -37,6 +37,14 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
         }
         private void AbrirFormularioVerPaciente(object sender, EventArgs e)
         {
+            //DashboardForm objDashboard = new DashboardForm();
+            //VerPacientesForm objVerPacientesForm = new VerPacientesForm();
+
+            //objDashboard.panelGeneralVistas.Controls.Remove(ObjPacientesForm);
+            //objDashboard.panelGeneralVistas.Controls.Add(objVerPacientesForm);
+
+            //objVerPacientesForm.Show();
+
             if (ObjVerPacientesForm == null || ObjVerPacientesForm.IsDisposed)
             {
                 ObjVerPacientesForm = new VerPacientesForm();

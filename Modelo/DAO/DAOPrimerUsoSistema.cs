@@ -21,17 +21,17 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
             {
                 Conexion.Connection = Conectar();
 
-                string queryInsertarEmpresa = "";
+                string queryInsertarEmpresa = "INSERT INTO DatosDelSistema (nombreEmpresa, direccionEmpresa, correoElectronicoE, numeroTelefono, numeroPBX, fechaCreacionE, fotoEmpresa)\r\nVALUES\r\n(@nombreEmpresa, @direccionEmpresa, @correoElectronicoE, @numeroTelefono, @numeroPBX, @fechaCreacionE, @fotoEmpresa)";
 
                 SqlCommand ObjComandoInsertarEmpresa = new SqlCommand(queryInsertarEmpresa, Conexion.Connection);
 
-                //ObjComandoInsertarEmpresa.Parameters.AddWithValue("", );
-                //ObjComandoInsertarEmpresa.Parameters.AddWithValue("", );
-                //ObjComandoInsertarEmpresa.Parameters.AddWithValue("", );
-                //ObjComandoInsertarEmpresa.Parameters.AddWithValue("", );
-                //ObjComandoInsertarEmpresa.Parameters.AddWithValue("", );
-                //ObjComandoInsertarEmpresa.Parameters.AddWithValue("", );
-                //ObjComandoInsertarEmpresa.Parameters.AddWithValue("", );
+                ObjComandoInsertarEmpresa.Parameters.AddWithValue("@nombreEmpresa", NombreEmpresa);
+                ObjComandoInsertarEmpresa.Parameters.AddWithValue("@direccionEmpresa", DireccionEmpresa);
+                ObjComandoInsertarEmpresa.Parameters.AddWithValue("@correoElectronicoE", CorreoElectronicoE);
+                ObjComandoInsertarEmpresa.Parameters.AddWithValue("@numeroTelefono", NumeroTelefono);
+                ObjComandoInsertarEmpresa.Parameters.AddWithValue("@numeroPBX", NumeroPBX);
+                ObjComandoInsertarEmpresa.Parameters.AddWithValue("@fechaCreacionE", FeghaCreacionE);
+                ObjComandoInsertarEmpresa.Parameters.AddWithValue("@fotoEmpresa", FotoEmpresa);
 
                 if (ObjComandoInsertarEmpresa.ExecuteNonQuery() > 0)
                     return true;
@@ -47,17 +47,20 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                 Conexion.Connection.Close();
             }
         }
+        //Este método es común para verificar si ya existe una empresa ingresada dentro del Sistema
         public bool VerificarEmpresa()
         {
             try
             {
                 Conexion.Connection = Conectar();
 
-                string queryVerificarEmpresa = "";
+                string queryVerificarEmpresa = "SELECT * FROM DatosDelSistema";
 
                 SqlCommand ObjComandoVerificarEmpresa = new SqlCommand(queryVerificarEmpresa, Conexion.Connection);
 
-                if (ObjComandoVerificarEmpresa.ExecuteNonQuery() > 0)
+                SqlDataReader ObjFilasEncontradas = ObjComandoVerificarEmpresa.ExecuteReader();
+
+                if (ObjFilasEncontradas.Read() == true)
                     return true;
                 else return false;
             }

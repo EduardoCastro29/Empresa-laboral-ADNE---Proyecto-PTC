@@ -600,7 +600,7 @@
             this.btnHistorial.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(189)))), ((int)(((byte)(152)))));
             this.btnHistorial.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnHistorial.BackgroundImage")));
             this.btnHistorial.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.btnHistorial.ButtonText = "Historial";
+            this.btnHistorial.ButtonText = "Ver";
             this.btnHistorial.ButtonTextMarginLeft = 0;
             this.btnHistorial.ColorContrastOnClick = 45;
             this.btnHistorial.ColorContrastOnHover = 45;
@@ -615,7 +615,7 @@
             this.btnHistorial.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.btnHistorial.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
             this.btnHistorial.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
-            this.btnHistorial.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHistorial.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHistorial.ForeColor = System.Drawing.Color.White;
             this.btnHistorial.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnHistorial.IconLeftCursor = System.Windows.Forms.Cursors.Hand;
@@ -633,7 +633,7 @@
             this.btnHistorial.IdleIconLeftImage = null;
             this.btnHistorial.IdleIconRightImage = null;
             this.btnHistorial.IndicateFocus = false;
-            this.btnHistorial.Location = new System.Drawing.Point(327, 36);
+            this.btnHistorial.Location = new System.Drawing.Point(392, 39);
             this.btnHistorial.Name = "btnHistorial";
             this.btnHistorial.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnHistorial.OnDisabledState.BorderRadius = 20;
@@ -667,7 +667,7 @@
             this.btnHistorial.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btnHistorial.OnPressedState.IconLeftImage = null;
             this.btnHistorial.OnPressedState.IconRightImage = null;
-            this.btnHistorial.Size = new System.Drawing.Size(220, 56);
+            this.btnHistorial.Size = new System.Drawing.Size(168, 53);
             this.btnHistorial.TabIndex = 0;
             this.btnHistorial.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnHistorial.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -680,13 +680,13 @@
             this.lblPlanillas.AllowParentOverrides = false;
             this.lblPlanillas.AutoEllipsis = false;
             this.lblPlanillas.CursorType = null;
-            this.lblPlanillas.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPlanillas.Location = new System.Drawing.Point(37, 45);
+            this.lblPlanillas.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPlanillas.Location = new System.Drawing.Point(19, 48);
             this.lblPlanillas.Name = "lblPlanillas";
             this.lblPlanillas.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblPlanillas.Size = new System.Drawing.Size(112, 36);
+            this.lblPlanillas.Size = new System.Drawing.Size(346, 32);
             this.lblPlanillas.TabIndex = 11;
-            this.lblPlanillas.Text = "Planillas";
+            this.lblPlanillas.Text = "Diagnósticos Psicosociales";
             this.lblPlanillas.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lblPlanillas.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 

@@ -20,23 +20,16 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
         {
             ObjActividadesForm = Vista;
 
-            //ObjActividadesForm.btnPacientes.Click += new EventHandler(VerPacientes);
+            ObjActividadesForm.Load += new EventHandler(CargarInfo);
         }
-        //Aca su crudo
-
-
-
-        private void VerPacientes(object sender, EventArgs e)
+        private void CargarInfo(object sender, EventArgs e)
         {
-            if (ObjVerHistorial == null || ObjVerHistorial.IsDisposed)
-            {
-                ObjVerHistorial = new HistorialForm();
-                ObjVerHistorial.Show();
-            }
-            else
-            {
-                ObjVerHistorial.BringToFront();
-            }
+            // Obtener la fecha actual
+            DateTime fechaActual = DateTime.Now;
+
+            // Formatear el nombre del día y el día del mes
+            string diaYFecha = fechaActual.ToString("dd/MM/yyyy");
+            ObjActividadesForm.lblFecha.Text = diaYFecha;
         }
     }
 }
