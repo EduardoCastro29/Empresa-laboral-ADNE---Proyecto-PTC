@@ -23,7 +23,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Vista
             try
             {
                 lblNombrePaciente.Text = DaoVerPaciente.NombreApellido;
-                lblPacienteId.Text = DaoVerPaciente.PacienteId.ToString();
+                lblPacienteId.Text = DaoVerPaciente.DocumentoPresentado;
             }
             catch (Exception ex)
             {

@@ -13,7 +13,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DTO
     {
         // Atributos para expediente 
         private int expedienteId;
-        private int pacienteId;
+        private string documentoPresentado;
         private string estadoAnimo;
         private string estadoConductual;
         private string somatizacion;
@@ -39,6 +39,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DTO
         public string Observacion { get => observacion; set => observacion = value; }
         public string AproximacionDiag { get => aproximacionDiag; set => aproximacionDiag = value; }
         public string AtencionBrindada { get => atencionBrindada; set => atencionBrindada = value; }
-        public int PacienteId { get => pacienteId; set => pacienteId = value; }
+        public string DocumentoPresentado { get => documentoPresentado; set => documentoPresentado = value; }
     }
 }

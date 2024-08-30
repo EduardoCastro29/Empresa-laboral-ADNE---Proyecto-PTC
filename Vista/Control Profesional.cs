@@ -18,7 +18,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Vista
             InitializeComponent();
             try
             {
-                lblIdProfesional.Text = DAOProfesional.ProfesionalId.ToString();
+                lblIdProfesional.Text = DAOProfesional.DUI;
                 lblNombreProfesional.Text = DAOProfesional.NombresApellidos;
                 lblEmail.Text = DAOProfesional.Correo;
                 lblEspecialidad.Text = DAOProfesional.Especialidad;

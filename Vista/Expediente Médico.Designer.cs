@@ -79,10 +79,6 @@
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties46 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties47 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties48 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties49 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties50 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties51 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties52 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             this.label18 = new System.Windows.Forms.Label();
             this.txtPacienteId = new Bunifu.UI.WinForms.BunifuTextBox();
             this.btnGuardar = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
@@ -95,8 +91,6 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txtExpedienteId = new Bunifu.UI.WinForms.BunifuTextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.txtRiesgoValorado = new Bunifu.UI.WinForms.BunifuTextBox();
@@ -124,10 +118,10 @@
             // 
             // label18
             // 
-            this.label18.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label18.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(687, -22);
+            this.label18.Location = new System.Drawing.Point(618, 11);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(122, 23);
             this.label18.TabIndex = 192;
@@ -137,7 +131,7 @@
             // 
             this.txtPacienteId.AcceptsReturn = false;
             this.txtPacienteId.AcceptsTab = false;
-            this.txtPacienteId.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtPacienteId.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtPacienteId.AnimationSpeed = 200;
             this.txtPacienteId.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
             this.txtPacienteId.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
@@ -163,7 +157,7 @@
             this.txtPacienteId.IconRight = null;
             this.txtPacienteId.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtPacienteId.Lines = new string[0];
-            this.txtPacienteId.Location = new System.Drawing.Point(722, 4);
+            this.txtPacienteId.Location = new System.Drawing.Point(746, 4);
             this.txtPacienteId.MaxLength = 5000;
             this.txtPacienteId.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtPacienteId.Modified = false;
@@ -266,8 +260,8 @@
             this.btnGuardar.OnDisabledState.BorderRadius = 1;
             this.btnGuardar.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.btnGuardar.OnDisabledState.BorderThickness = 1;
-            this.btnGuardar.OnDisabledState.FillColor = System.Drawing.Color.Transparent;
-            this.btnGuardar.OnDisabledState.ForeColor = System.Drawing.Color.White;
+            this.btnGuardar.OnDisabledState.FillColor = System.Drawing.Color.LightSlateGray;
+            this.btnGuardar.OnDisabledState.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnGuardar.OnDisabledState.IconLeftImage = null;
             this.btnGuardar.OnDisabledState.IconRightImage = null;
             this.btnGuardar.onHoverState.BorderColor = System.Drawing.Color.Transparent;
@@ -358,8 +352,8 @@
             this.btnModificar.OnDisabledState.BorderRadius = 1;
             this.btnModificar.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.btnModificar.OnDisabledState.BorderThickness = 1;
-            this.btnModificar.OnDisabledState.FillColor = System.Drawing.Color.Transparent;
-            this.btnModificar.OnDisabledState.ForeColor = System.Drawing.Color.White;
+            this.btnModificar.OnDisabledState.FillColor = System.Drawing.Color.LightSlateGray;
+            this.btnModificar.OnDisabledState.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnModificar.OnDisabledState.IconLeftImage = null;
             this.btnModificar.OnDisabledState.IconRightImage = null;
             this.btnModificar.onHoverState.BorderColor = System.Drawing.Color.Transparent;
@@ -398,7 +392,8 @@
             // 
             this.txtObservacion.AcceptsReturn = false;
             this.txtObservacion.AcceptsTab = false;
-            this.txtObservacion.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtObservacion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtObservacion.AnimationSpeed = 200;
             this.txtObservacion.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
             this.txtObservacion.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
@@ -424,7 +419,7 @@
             this.txtObservacion.IconRight = null;
             this.txtObservacion.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtObservacion.Lines = new string[0];
-            this.txtObservacion.Location = new System.Drawing.Point(25, 794);
+            this.txtObservacion.Location = new System.Drawing.Point(49, 794);
             this.txtObservacion.MaxLength = 500;
             this.txtObservacion.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtObservacion.Modified = false;
@@ -473,10 +468,9 @@
             // 
             // label11
             // 
-            this.label11.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(162, 303);
+            this.label11.Location = new System.Drawing.Point(186, 303);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(452, 23);
             this.label11.TabIndex = 189;
@@ -486,7 +480,8 @@
             // 
             this.txtVidaInterpersonal.AcceptsReturn = false;
             this.txtVidaInterpersonal.AcceptsTab = false;
-            this.txtVidaInterpersonal.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtVidaInterpersonal.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtVidaInterpersonal.AnimationSpeed = 200;
             this.txtVidaInterpersonal.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
             this.txtVidaInterpersonal.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
@@ -512,7 +507,7 @@
             this.txtVidaInterpersonal.IconRight = null;
             this.txtVidaInterpersonal.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtVidaInterpersonal.Lines = new string[0];
-            this.txtVidaInterpersonal.Location = new System.Drawing.Point(25, 329);
+            this.txtVidaInterpersonal.Location = new System.Drawing.Point(49, 329);
             this.txtVidaInterpersonal.MaxLength = 500;
             this.txtVidaInterpersonal.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtVidaInterpersonal.Modified = false;
@@ -563,7 +558,8 @@
             // 
             this.txtAtencionBrindada.AcceptsReturn = false;
             this.txtAtencionBrindada.AcceptsTab = false;
-            this.txtAtencionBrindada.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtAtencionBrindada.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtAtencionBrindada.AnimationSpeed = 200;
             this.txtAtencionBrindada.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
             this.txtAtencionBrindada.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
@@ -589,7 +585,7 @@
             this.txtAtencionBrindada.IconRight = null;
             this.txtAtencionBrindada.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtAtencionBrindada.Lines = new string[0];
-            this.txtAtencionBrindada.Location = new System.Drawing.Point(25, 973);
+            this.txtAtencionBrindada.Location = new System.Drawing.Point(49, 973);
             this.txtAtencionBrindada.MaxLength = 500;
             this.txtAtencionBrindada.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtAtencionBrindada.Modified = false;
@@ -640,7 +636,8 @@
             // 
             this.txtAproximacionDiag.AcceptsReturn = false;
             this.txtAproximacionDiag.AcceptsTab = false;
-            this.txtAproximacionDiag.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtAproximacionDiag.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtAproximacionDiag.AnimationSpeed = 200;
             this.txtAproximacionDiag.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
             this.txtAproximacionDiag.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
@@ -666,7 +663,7 @@
             this.txtAproximacionDiag.IconRight = null;
             this.txtAproximacionDiag.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtAproximacionDiag.Lines = new string[0];
-            this.txtAproximacionDiag.Location = new System.Drawing.Point(25, 885);
+            this.txtAproximacionDiag.Location = new System.Drawing.Point(49, 885);
             this.txtAproximacionDiag.MaxLength = 500;
             this.txtAproximacionDiag.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtAproximacionDiag.Modified = false;
@@ -715,10 +712,9 @@
             // 
             // label10
             // 
-            this.label10.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(21, 948);
+            this.label10.Location = new System.Drawing.Point(45, 948);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(195, 23);
             this.label10.TabIndex = 184;
@@ -726,10 +722,9 @@
             // 
             // label9
             // 
-            this.label9.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(21, 860);
+            this.label9.Location = new System.Drawing.Point(45, 860);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(294, 23);
             this.label9.TabIndex = 183;
@@ -737,109 +732,19 @@
             // 
             // label8
             // 
-            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(21, 768);
+            this.label8.Location = new System.Drawing.Point(45, 768);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(260, 23);
             this.label8.TabIndex = 182;
             this.label8.Text = "Observaciones generales";
             // 
-            // label7
-            // 
-            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(520, -22);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(145, 23);
-            this.label7.TabIndex = 181;
-            this.label7.Text = "Expediente ID";
-            // 
-            // txtExpedienteId
-            // 
-            this.txtExpedienteId.AcceptsReturn = false;
-            this.txtExpedienteId.AcceptsTab = false;
-            this.txtExpedienteId.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtExpedienteId.AnimationSpeed = 200;
-            this.txtExpedienteId.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.txtExpedienteId.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.txtExpedienteId.AutoSizeHeight = true;
-            this.txtExpedienteId.BackColor = System.Drawing.Color.Transparent;
-            this.txtExpedienteId.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txtExpedienteId.BackgroundImage")));
-            this.txtExpedienteId.BorderColorActive = System.Drawing.Color.DodgerBlue;
-            this.txtExpedienteId.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.txtExpedienteId.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.txtExpedienteId.BorderColorIdle = System.Drawing.Color.Silver;
-            this.txtExpedienteId.BorderRadius = 15;
-            this.txtExpedienteId.BorderThickness = 1;
-            this.txtExpedienteId.CharacterCase = Bunifu.UI.WinForms.BunifuTextBox.CharacterCases.Normal;
-            this.txtExpedienteId.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.txtExpedienteId.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtExpedienteId.DefaultFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtExpedienteId.DefaultText = "";
-            this.txtExpedienteId.FillColor = System.Drawing.Color.White;
-            this.txtExpedienteId.HideSelection = true;
-            this.txtExpedienteId.IconLeft = null;
-            this.txtExpedienteId.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtExpedienteId.IconPadding = 10;
-            this.txtExpedienteId.IconRight = null;
-            this.txtExpedienteId.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtExpedienteId.Lines = new string[0];
-            this.txtExpedienteId.Location = new System.Drawing.Point(561, 4);
-            this.txtExpedienteId.MaxLength = 5000;
-            this.txtExpedienteId.MinimumSize = new System.Drawing.Size(1, 1);
-            this.txtExpedienteId.Modified = false;
-            this.txtExpedienteId.Multiline = true;
-            this.txtExpedienteId.Name = "txtExpedienteId";
-            stateProperties21.BorderColor = System.Drawing.Color.Teal;
-            stateProperties21.FillColor = System.Drawing.Color.Empty;
-            stateProperties21.ForeColor = System.Drawing.Color.Empty;
-            stateProperties21.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtExpedienteId.OnActiveState = stateProperties21;
-            stateProperties22.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            stateProperties22.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties22.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.txtExpedienteId.OnDisabledState = stateProperties22;
-            stateProperties23.BorderColor = System.Drawing.Color.LightSeaGreen;
-            stateProperties23.FillColor = System.Drawing.Color.Empty;
-            stateProperties23.ForeColor = System.Drawing.Color.Empty;
-            stateProperties23.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtExpedienteId.OnHoverState = stateProperties23;
-            stateProperties24.BorderColor = System.Drawing.Color.Silver;
-            stateProperties24.FillColor = System.Drawing.Color.White;
-            stateProperties24.ForeColor = System.Drawing.Color.Empty;
-            stateProperties24.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtExpedienteId.OnIdleState = stateProperties24;
-            this.txtExpedienteId.Padding = new System.Windows.Forms.Padding(3);
-            this.txtExpedienteId.PasswordChar = '\0';
-            this.txtExpedienteId.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txtExpedienteId.PlaceholderText = "";
-            this.txtExpedienteId.ReadOnly = false;
-            this.txtExpedienteId.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtExpedienteId.SelectedText = "";
-            this.txtExpedienteId.SelectionLength = 0;
-            this.txtExpedienteId.SelectionStart = 0;
-            this.txtExpedienteId.ShortcutsEnabled = true;
-            this.txtExpedienteId.Size = new System.Drawing.Size(55, 38);
-            this.txtExpedienteId.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.txtExpedienteId.TabIndex = 180;
-            this.txtExpedienteId.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtExpedienteId.TextMarginBottom = 0;
-            this.txtExpedienteId.TextMarginLeft = 3;
-            this.txtExpedienteId.TextMarginTop = 1;
-            this.txtExpedienteId.TextPlaceholder = "";
-            this.txtExpedienteId.UseSystemPasswordChar = false;
-            this.txtExpedienteId.WordWrap = true;
-            // 
             // label14
             // 
-            this.label14.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(22, 303);
+            this.label14.Location = new System.Drawing.Point(46, 303);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(143, 23);
             this.label14.TabIndex = 187;
@@ -847,10 +752,9 @@
             // 
             // label6
             // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(21, 675);
+            this.label6.Location = new System.Drawing.Point(45, 675);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(213, 23);
             this.label6.TabIndex = 179;
@@ -860,7 +764,8 @@
             // 
             this.txtRiesgoValorado.AcceptsReturn = false;
             this.txtRiesgoValorado.AcceptsTab = false;
-            this.txtRiesgoValorado.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtRiesgoValorado.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtRiesgoValorado.AnimationSpeed = 200;
             this.txtRiesgoValorado.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
             this.txtRiesgoValorado.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
@@ -886,32 +791,32 @@
             this.txtRiesgoValorado.IconRight = null;
             this.txtRiesgoValorado.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtRiesgoValorado.Lines = new string[0];
-            this.txtRiesgoValorado.Location = new System.Drawing.Point(26, 701);
+            this.txtRiesgoValorado.Location = new System.Drawing.Point(50, 701);
             this.txtRiesgoValorado.MaxLength = 500;
             this.txtRiesgoValorado.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtRiesgoValorado.Modified = false;
             this.txtRiesgoValorado.Multiline = true;
             this.txtRiesgoValorado.Name = "txtRiesgoValorado";
-            stateProperties25.BorderColor = System.Drawing.Color.Teal;
-            stateProperties25.FillColor = System.Drawing.Color.Empty;
-            stateProperties25.ForeColor = System.Drawing.Color.Empty;
-            stateProperties25.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtRiesgoValorado.OnActiveState = stateProperties25;
-            stateProperties26.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            stateProperties26.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties26.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.txtRiesgoValorado.OnDisabledState = stateProperties26;
-            stateProperties27.BorderColor = System.Drawing.Color.LightSeaGreen;
-            stateProperties27.FillColor = System.Drawing.Color.Empty;
-            stateProperties27.ForeColor = System.Drawing.Color.Empty;
-            stateProperties27.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtRiesgoValorado.OnHoverState = stateProperties27;
-            stateProperties28.BorderColor = System.Drawing.Color.Silver;
-            stateProperties28.FillColor = System.Drawing.Color.White;
-            stateProperties28.ForeColor = System.Drawing.Color.Empty;
-            stateProperties28.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtRiesgoValorado.OnIdleState = stateProperties28;
+            stateProperties21.BorderColor = System.Drawing.Color.Teal;
+            stateProperties21.FillColor = System.Drawing.Color.Empty;
+            stateProperties21.ForeColor = System.Drawing.Color.Empty;
+            stateProperties21.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtRiesgoValorado.OnActiveState = stateProperties21;
+            stateProperties22.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties22.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties22.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.txtRiesgoValorado.OnDisabledState = stateProperties22;
+            stateProperties23.BorderColor = System.Drawing.Color.LightSeaGreen;
+            stateProperties23.FillColor = System.Drawing.Color.Empty;
+            stateProperties23.ForeColor = System.Drawing.Color.Empty;
+            stateProperties23.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtRiesgoValorado.OnHoverState = stateProperties23;
+            stateProperties24.BorderColor = System.Drawing.Color.Silver;
+            stateProperties24.FillColor = System.Drawing.Color.White;
+            stateProperties24.ForeColor = System.Drawing.Color.Empty;
+            stateProperties24.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtRiesgoValorado.OnIdleState = stateProperties24;
             this.txtRiesgoValorado.Padding = new System.Windows.Forms.Padding(3);
             this.txtRiesgoValorado.PasswordChar = '\0';
             this.txtRiesgoValorado.PlaceholderForeColor = System.Drawing.Color.Silver;
@@ -935,7 +840,6 @@
             // 
             // bunifuGradientPanel3
             // 
-            this.bunifuGradientPanel3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bunifuGradientPanel3.BackColor = System.Drawing.Color.Transparent;
             this.bunifuGradientPanel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel3.BackgroundImage")));
             this.bunifuGradientPanel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -945,7 +849,7 @@
             this.bunifuGradientPanel3.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(179)))), ((int)(((byte)(166)))));
             this.bunifuGradientPanel3.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(199)))), ((int)(((byte)(187)))));
             this.bunifuGradientPanel3.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(179)))), ((int)(((byte)(166)))));
-            this.bunifuGradientPanel3.Location = new System.Drawing.Point(606, 1039);
+            this.bunifuGradientPanel3.Location = new System.Drawing.Point(630, 1039);
             this.bunifuGradientPanel3.Name = "bunifuGradientPanel3";
             this.bunifuGradientPanel3.Quality = 10;
             this.bunifuGradientPanel3.Size = new System.Drawing.Size(213, 48);
@@ -953,7 +857,6 @@
             // 
             // bunifuGradientPanel2
             // 
-            this.bunifuGradientPanel2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bunifuGradientPanel2.BackColor = System.Drawing.Color.Transparent;
             this.bunifuGradientPanel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel2.BackgroundImage")));
             this.bunifuGradientPanel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -963,7 +866,7 @@
             this.bunifuGradientPanel2.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(179)))), ((int)(((byte)(166)))));
             this.bunifuGradientPanel2.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(199)))), ((int)(((byte)(187)))));
             this.bunifuGradientPanel2.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(179)))), ((int)(((byte)(166)))));
-            this.bunifuGradientPanel2.Location = new System.Drawing.Point(379, 1039);
+            this.bunifuGradientPanel2.Location = new System.Drawing.Point(403, 1039);
             this.bunifuGradientPanel2.Name = "bunifuGradientPanel2";
             this.bunifuGradientPanel2.Quality = 10;
             this.bunifuGradientPanel2.Size = new System.Drawing.Size(213, 48);
@@ -971,10 +874,9 @@
             // 
             // label5
             // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(21, 583);
+            this.label5.Location = new System.Drawing.Point(45, 583);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(457, 23);
             this.label5.TabIndex = 175;
@@ -984,7 +886,8 @@
             // 
             this.txtPauta.AcceptsReturn = false;
             this.txtPauta.AcceptsTab = false;
-            this.txtPauta.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtPauta.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtPauta.AnimationSpeed = 200;
             this.txtPauta.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
             this.txtPauta.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
@@ -1010,32 +913,32 @@
             this.txtPauta.IconRight = null;
             this.txtPauta.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtPauta.Lines = new string[0];
-            this.txtPauta.Location = new System.Drawing.Point(25, 609);
+            this.txtPauta.Location = new System.Drawing.Point(49, 609);
             this.txtPauta.MaxLength = 500;
             this.txtPauta.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtPauta.Modified = false;
             this.txtPauta.Multiline = true;
             this.txtPauta.Name = "txtPauta";
-            stateProperties29.BorderColor = System.Drawing.Color.Teal;
-            stateProperties29.FillColor = System.Drawing.Color.Empty;
-            stateProperties29.ForeColor = System.Drawing.Color.Empty;
-            stateProperties29.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtPauta.OnActiveState = stateProperties29;
-            stateProperties30.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            stateProperties30.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties30.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties30.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.txtPauta.OnDisabledState = stateProperties30;
-            stateProperties31.BorderColor = System.Drawing.Color.LightSeaGreen;
-            stateProperties31.FillColor = System.Drawing.Color.Empty;
-            stateProperties31.ForeColor = System.Drawing.Color.Empty;
-            stateProperties31.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtPauta.OnHoverState = stateProperties31;
-            stateProperties32.BorderColor = System.Drawing.Color.Silver;
-            stateProperties32.FillColor = System.Drawing.Color.White;
-            stateProperties32.ForeColor = System.Drawing.Color.Empty;
-            stateProperties32.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtPauta.OnIdleState = stateProperties32;
+            stateProperties25.BorderColor = System.Drawing.Color.Teal;
+            stateProperties25.FillColor = System.Drawing.Color.Empty;
+            stateProperties25.ForeColor = System.Drawing.Color.Empty;
+            stateProperties25.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtPauta.OnActiveState = stateProperties25;
+            stateProperties26.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties26.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties26.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.txtPauta.OnDisabledState = stateProperties26;
+            stateProperties27.BorderColor = System.Drawing.Color.LightSeaGreen;
+            stateProperties27.FillColor = System.Drawing.Color.Empty;
+            stateProperties27.ForeColor = System.Drawing.Color.Empty;
+            stateProperties27.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtPauta.OnHoverState = stateProperties27;
+            stateProperties28.BorderColor = System.Drawing.Color.Silver;
+            stateProperties28.FillColor = System.Drawing.Color.White;
+            stateProperties28.ForeColor = System.Drawing.Color.Empty;
+            stateProperties28.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtPauta.OnIdleState = stateProperties28;
             this.txtPauta.Padding = new System.Windows.Forms.Padding(3);
             this.txtPauta.PasswordChar = '\0';
             this.txtPauta.PlaceholderForeColor = System.Drawing.Color.Silver;
@@ -1059,10 +962,9 @@
             // 
             // label4
             // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(22, 489);
+            this.label4.Location = new System.Drawing.Point(46, 489);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(257, 23);
             this.label4.TabIndex = 173;
@@ -1072,7 +974,8 @@
             // 
             this.txtRedSocial.AcceptsReturn = false;
             this.txtRedSocial.AcceptsTab = false;
-            this.txtRedSocial.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtRedSocial.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtRedSocial.AnimationSpeed = 200;
             this.txtRedSocial.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
             this.txtRedSocial.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
@@ -1098,32 +1001,32 @@
             this.txtRedSocial.IconRight = null;
             this.txtRedSocial.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtRedSocial.Lines = new string[0];
-            this.txtRedSocial.Location = new System.Drawing.Point(25, 515);
+            this.txtRedSocial.Location = new System.Drawing.Point(49, 515);
             this.txtRedSocial.MaxLength = 500;
             this.txtRedSocial.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtRedSocial.Modified = false;
             this.txtRedSocial.Multiline = true;
             this.txtRedSocial.Name = "txtRedSocial";
-            stateProperties33.BorderColor = System.Drawing.Color.Teal;
-            stateProperties33.FillColor = System.Drawing.Color.Empty;
-            stateProperties33.ForeColor = System.Drawing.Color.Empty;
-            stateProperties33.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtRedSocial.OnActiveState = stateProperties33;
-            stateProperties34.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            stateProperties34.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties34.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties34.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.txtRedSocial.OnDisabledState = stateProperties34;
-            stateProperties35.BorderColor = System.Drawing.Color.LightSeaGreen;
-            stateProperties35.FillColor = System.Drawing.Color.Empty;
-            stateProperties35.ForeColor = System.Drawing.Color.Empty;
-            stateProperties35.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtRedSocial.OnHoverState = stateProperties35;
-            stateProperties36.BorderColor = System.Drawing.Color.Silver;
-            stateProperties36.FillColor = System.Drawing.Color.White;
-            stateProperties36.ForeColor = System.Drawing.Color.Empty;
-            stateProperties36.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtRedSocial.OnIdleState = stateProperties36;
+            stateProperties29.BorderColor = System.Drawing.Color.Teal;
+            stateProperties29.FillColor = System.Drawing.Color.Empty;
+            stateProperties29.ForeColor = System.Drawing.Color.Empty;
+            stateProperties29.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtRedSocial.OnActiveState = stateProperties29;
+            stateProperties30.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties30.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties30.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties30.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.txtRedSocial.OnDisabledState = stateProperties30;
+            stateProperties31.BorderColor = System.Drawing.Color.LightSeaGreen;
+            stateProperties31.FillColor = System.Drawing.Color.Empty;
+            stateProperties31.ForeColor = System.Drawing.Color.Empty;
+            stateProperties31.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtRedSocial.OnHoverState = stateProperties31;
+            stateProperties32.BorderColor = System.Drawing.Color.Silver;
+            stateProperties32.FillColor = System.Drawing.Color.White;
+            stateProperties32.ForeColor = System.Drawing.Color.Empty;
+            stateProperties32.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtRedSocial.OnIdleState = stateProperties32;
             this.txtRedSocial.Padding = new System.Windows.Forms.Padding(3);
             this.txtRedSocial.PasswordChar = '\0';
             this.txtRedSocial.PlaceholderForeColor = System.Drawing.Color.Silver;
@@ -1147,10 +1050,9 @@
             // 
             // label3
             // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(156, 396);
+            this.label3.Location = new System.Drawing.Point(180, 396);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(264, 23);
             this.label3.TabIndex = 171;
@@ -1158,10 +1060,9 @@
             // 
             // label2
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(188, 207);
+            this.label2.Location = new System.Drawing.Point(212, 207);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(63, 23);
             this.label2.TabIndex = 170;
@@ -1169,10 +1070,9 @@
             // 
             // label1
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(146, 19);
+            this.label1.Location = new System.Drawing.Point(170, 19);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(369, 23);
             this.label1.TabIndex = 169;
@@ -1182,7 +1082,8 @@
             // 
             this.txtCognicion.AcceptsReturn = false;
             this.txtCognicion.AcceptsTab = false;
-            this.txtCognicion.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtCognicion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtCognicion.AnimationSpeed = 200;
             this.txtCognicion.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
             this.txtCognicion.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
@@ -1208,32 +1109,32 @@
             this.txtCognicion.IconRight = null;
             this.txtCognicion.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtCognicion.Lines = new string[0];
-            this.txtCognicion.Location = new System.Drawing.Point(26, 422);
+            this.txtCognicion.Location = new System.Drawing.Point(50, 422);
             this.txtCognicion.MaxLength = 500;
             this.txtCognicion.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtCognicion.Modified = false;
             this.txtCognicion.Multiline = true;
             this.txtCognicion.Name = "txtCognicion";
-            stateProperties37.BorderColor = System.Drawing.Color.Teal;
-            stateProperties37.FillColor = System.Drawing.Color.Empty;
-            stateProperties37.ForeColor = System.Drawing.Color.Empty;
-            stateProperties37.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtCognicion.OnActiveState = stateProperties37;
-            stateProperties38.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            stateProperties38.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties38.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties38.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.txtCognicion.OnDisabledState = stateProperties38;
-            stateProperties39.BorderColor = System.Drawing.Color.LightSeaGreen;
-            stateProperties39.FillColor = System.Drawing.Color.Empty;
-            stateProperties39.ForeColor = System.Drawing.Color.Empty;
-            stateProperties39.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtCognicion.OnHoverState = stateProperties39;
-            stateProperties40.BorderColor = System.Drawing.Color.Silver;
-            stateProperties40.FillColor = System.Drawing.Color.White;
-            stateProperties40.ForeColor = System.Drawing.Color.Empty;
-            stateProperties40.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtCognicion.OnIdleState = stateProperties40;
+            stateProperties33.BorderColor = System.Drawing.Color.Teal;
+            stateProperties33.FillColor = System.Drawing.Color.Empty;
+            stateProperties33.ForeColor = System.Drawing.Color.Empty;
+            stateProperties33.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtCognicion.OnActiveState = stateProperties33;
+            stateProperties34.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties34.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties34.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties34.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.txtCognicion.OnDisabledState = stateProperties34;
+            stateProperties35.BorderColor = System.Drawing.Color.LightSeaGreen;
+            stateProperties35.FillColor = System.Drawing.Color.Empty;
+            stateProperties35.ForeColor = System.Drawing.Color.Empty;
+            stateProperties35.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtCognicion.OnHoverState = stateProperties35;
+            stateProperties36.BorderColor = System.Drawing.Color.Silver;
+            stateProperties36.FillColor = System.Drawing.Color.White;
+            stateProperties36.ForeColor = System.Drawing.Color.Empty;
+            stateProperties36.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtCognicion.OnIdleState = stateProperties36;
             this.txtCognicion.Padding = new System.Windows.Forms.Padding(3);
             this.txtCognicion.PasswordChar = '\0';
             this.txtCognicion.PlaceholderForeColor = System.Drawing.Color.Silver;
@@ -1257,10 +1158,9 @@
             // 
             // label15
             // 
-            this.label15.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(22, 396);
+            this.label15.Location = new System.Drawing.Point(46, 396);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(140, 23);
             this.label15.TabIndex = 167;
@@ -1270,7 +1170,8 @@
             // 
             this.txtSomatizacion.AcceptsReturn = false;
             this.txtSomatizacion.AcceptsTab = false;
-            this.txtSomatizacion.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtSomatizacion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtSomatizacion.AnimationSpeed = 200;
             this.txtSomatizacion.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
             this.txtSomatizacion.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
@@ -1296,32 +1197,32 @@
             this.txtSomatizacion.IconRight = null;
             this.txtSomatizacion.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtSomatizacion.Lines = new string[0];
-            this.txtSomatizacion.Location = new System.Drawing.Point(25, 233);
+            this.txtSomatizacion.Location = new System.Drawing.Point(49, 233);
             this.txtSomatizacion.MaxLength = 500;
             this.txtSomatizacion.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtSomatizacion.Modified = false;
             this.txtSomatizacion.Multiline = true;
             this.txtSomatizacion.Name = "txtSomatizacion";
-            stateProperties41.BorderColor = System.Drawing.Color.Teal;
-            stateProperties41.FillColor = System.Drawing.Color.Empty;
-            stateProperties41.ForeColor = System.Drawing.Color.Empty;
-            stateProperties41.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtSomatizacion.OnActiveState = stateProperties41;
-            stateProperties42.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            stateProperties42.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties42.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties42.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.txtSomatizacion.OnDisabledState = stateProperties42;
-            stateProperties43.BorderColor = System.Drawing.Color.LightSeaGreen;
-            stateProperties43.FillColor = System.Drawing.Color.Empty;
-            stateProperties43.ForeColor = System.Drawing.Color.Empty;
-            stateProperties43.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtSomatizacion.OnHoverState = stateProperties43;
-            stateProperties44.BorderColor = System.Drawing.Color.Silver;
-            stateProperties44.FillColor = System.Drawing.Color.White;
-            stateProperties44.ForeColor = System.Drawing.Color.Empty;
-            stateProperties44.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtSomatizacion.OnIdleState = stateProperties44;
+            stateProperties37.BorderColor = System.Drawing.Color.Teal;
+            stateProperties37.FillColor = System.Drawing.Color.Empty;
+            stateProperties37.ForeColor = System.Drawing.Color.Empty;
+            stateProperties37.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtSomatizacion.OnActiveState = stateProperties37;
+            stateProperties38.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties38.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties38.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties38.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.txtSomatizacion.OnDisabledState = stateProperties38;
+            stateProperties39.BorderColor = System.Drawing.Color.LightSeaGreen;
+            stateProperties39.FillColor = System.Drawing.Color.Empty;
+            stateProperties39.ForeColor = System.Drawing.Color.Empty;
+            stateProperties39.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtSomatizacion.OnHoverState = stateProperties39;
+            stateProperties40.BorderColor = System.Drawing.Color.Silver;
+            stateProperties40.FillColor = System.Drawing.Color.White;
+            stateProperties40.ForeColor = System.Drawing.Color.Empty;
+            stateProperties40.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtSomatizacion.OnIdleState = stateProperties40;
             this.txtSomatizacion.Padding = new System.Windows.Forms.Padding(3);
             this.txtSomatizacion.PasswordChar = '\0';
             this.txtSomatizacion.PlaceholderForeColor = System.Drawing.Color.Silver;
@@ -1345,10 +1246,9 @@
             // 
             // label16
             // 
-            this.label16.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(21, 207);
+            this.label16.Location = new System.Drawing.Point(45, 207);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(169, 23);
             this.label16.TabIndex = 165;
@@ -1358,7 +1258,8 @@
             // 
             this.txtEstadoConductual.AcceptsReturn = false;
             this.txtEstadoConductual.AcceptsTab = false;
-            this.txtEstadoConductual.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtEstadoConductual.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtEstadoConductual.AnimationSpeed = 200;
             this.txtEstadoConductual.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
             this.txtEstadoConductual.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
@@ -1384,32 +1285,32 @@
             this.txtEstadoConductual.IconRight = null;
             this.txtEstadoConductual.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtEstadoConductual.Lines = new string[0];
-            this.txtEstadoConductual.Location = new System.Drawing.Point(25, 137);
+            this.txtEstadoConductual.Location = new System.Drawing.Point(49, 137);
             this.txtEstadoConductual.MaxLength = 500;
             this.txtEstadoConductual.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtEstadoConductual.Modified = false;
             this.txtEstadoConductual.Multiline = true;
             this.txtEstadoConductual.Name = "txtEstadoConductual";
-            stateProperties45.BorderColor = System.Drawing.Color.Teal;
-            stateProperties45.FillColor = System.Drawing.Color.Empty;
-            stateProperties45.ForeColor = System.Drawing.Color.Empty;
-            stateProperties45.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtEstadoConductual.OnActiveState = stateProperties45;
-            stateProperties46.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            stateProperties46.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties46.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties46.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.txtEstadoConductual.OnDisabledState = stateProperties46;
-            stateProperties47.BorderColor = System.Drawing.Color.LightSeaGreen;
-            stateProperties47.FillColor = System.Drawing.Color.Empty;
-            stateProperties47.ForeColor = System.Drawing.Color.Empty;
-            stateProperties47.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtEstadoConductual.OnHoverState = stateProperties47;
-            stateProperties48.BorderColor = System.Drawing.Color.Silver;
-            stateProperties48.FillColor = System.Drawing.Color.White;
-            stateProperties48.ForeColor = System.Drawing.Color.Empty;
-            stateProperties48.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtEstadoConductual.OnIdleState = stateProperties48;
+            stateProperties41.BorderColor = System.Drawing.Color.Teal;
+            stateProperties41.FillColor = System.Drawing.Color.Empty;
+            stateProperties41.ForeColor = System.Drawing.Color.Empty;
+            stateProperties41.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtEstadoConductual.OnActiveState = stateProperties41;
+            stateProperties42.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties42.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties42.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties42.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.txtEstadoConductual.OnDisabledState = stateProperties42;
+            stateProperties43.BorderColor = System.Drawing.Color.LightSeaGreen;
+            stateProperties43.FillColor = System.Drawing.Color.Empty;
+            stateProperties43.ForeColor = System.Drawing.Color.Empty;
+            stateProperties43.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtEstadoConductual.OnHoverState = stateProperties43;
+            stateProperties44.BorderColor = System.Drawing.Color.Silver;
+            stateProperties44.FillColor = System.Drawing.Color.White;
+            stateProperties44.ForeColor = System.Drawing.Color.Empty;
+            stateProperties44.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtEstadoConductual.OnIdleState = stateProperties44;
             this.txtEstadoConductual.Padding = new System.Windows.Forms.Padding(3);
             this.txtEstadoConductual.PasswordChar = '\0';
             this.txtEstadoConductual.PlaceholderForeColor = System.Drawing.Color.Silver;
@@ -1433,10 +1334,9 @@
             // 
             // label13
             // 
-            this.label13.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(22, 111);
+            this.label13.Location = new System.Drawing.Point(46, 111);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(198, 23);
             this.label13.TabIndex = 163;
@@ -1446,7 +1346,8 @@
             // 
             this.txtEstadoAnimo.AcceptsReturn = false;
             this.txtEstadoAnimo.AcceptsTab = false;
-            this.txtEstadoAnimo.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtEstadoAnimo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtEstadoAnimo.AnimationSpeed = 200;
             this.txtEstadoAnimo.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
             this.txtEstadoAnimo.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
@@ -1472,32 +1373,32 @@
             this.txtEstadoAnimo.IconRight = null;
             this.txtEstadoAnimo.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtEstadoAnimo.Lines = new string[0];
-            this.txtEstadoAnimo.Location = new System.Drawing.Point(25, 45);
+            this.txtEstadoAnimo.Location = new System.Drawing.Point(49, 45);
             this.txtEstadoAnimo.MaxLength = 500;
             this.txtEstadoAnimo.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtEstadoAnimo.Modified = false;
             this.txtEstadoAnimo.Multiline = true;
             this.txtEstadoAnimo.Name = "txtEstadoAnimo";
-            stateProperties49.BorderColor = System.Drawing.Color.Teal;
-            stateProperties49.FillColor = System.Drawing.Color.Empty;
-            stateProperties49.ForeColor = System.Drawing.Color.Empty;
-            stateProperties49.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtEstadoAnimo.OnActiveState = stateProperties49;
-            stateProperties50.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            stateProperties50.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties50.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties50.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.txtEstadoAnimo.OnDisabledState = stateProperties50;
-            stateProperties51.BorderColor = System.Drawing.Color.LightSeaGreen;
-            stateProperties51.FillColor = System.Drawing.Color.Empty;
-            stateProperties51.ForeColor = System.Drawing.Color.Empty;
-            stateProperties51.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtEstadoAnimo.OnHoverState = stateProperties51;
-            stateProperties52.BorderColor = System.Drawing.Color.Silver;
-            stateProperties52.FillColor = System.Drawing.Color.White;
-            stateProperties52.ForeColor = System.Drawing.Color.Empty;
-            stateProperties52.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtEstadoAnimo.OnIdleState = stateProperties52;
+            stateProperties45.BorderColor = System.Drawing.Color.Teal;
+            stateProperties45.FillColor = System.Drawing.Color.Empty;
+            stateProperties45.ForeColor = System.Drawing.Color.Empty;
+            stateProperties45.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtEstadoAnimo.OnActiveState = stateProperties45;
+            stateProperties46.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties46.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties46.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties46.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.txtEstadoAnimo.OnDisabledState = stateProperties46;
+            stateProperties47.BorderColor = System.Drawing.Color.LightSeaGreen;
+            stateProperties47.FillColor = System.Drawing.Color.Empty;
+            stateProperties47.ForeColor = System.Drawing.Color.Empty;
+            stateProperties47.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtEstadoAnimo.OnHoverState = stateProperties47;
+            stateProperties48.BorderColor = System.Drawing.Color.Silver;
+            stateProperties48.FillColor = System.Drawing.Color.White;
+            stateProperties48.ForeColor = System.Drawing.Color.Empty;
+            stateProperties48.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtEstadoAnimo.OnIdleState = stateProperties48;
             this.txtEstadoAnimo.Padding = new System.Windows.Forms.Padding(3);
             this.txtEstadoAnimo.PasswordChar = '\0';
             this.txtEstadoAnimo.PlaceholderForeColor = System.Drawing.Color.Silver;
@@ -1521,10 +1422,9 @@
             // 
             // label12
             // 
-            this.label12.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(22, 19);
+            this.label12.Location = new System.Drawing.Point(46, 19);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(129, 23);
             this.label12.TabIndex = 161;
@@ -1533,7 +1433,7 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(41, 1083);
+            this.label17.Location = new System.Drawing.Point(74, 1083);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(13, 13);
             this.label17.TabIndex = 193;
@@ -1556,8 +1456,6 @@
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.txtExpedienteId);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtRiesgoValorado);
@@ -1603,8 +1501,6 @@
         public System.Windows.Forms.Label label10;
         public System.Windows.Forms.Label label9;
         public System.Windows.Forms.Label label8;
-        public System.Windows.Forms.Label label7;
-        public Bunifu.UI.WinForms.BunifuTextBox txtExpedienteId;
         public System.Windows.Forms.Label label14;
         public System.Windows.Forms.Label label6;
         public Bunifu.UI.WinForms.BunifuTextBox txtRiesgoValorado;

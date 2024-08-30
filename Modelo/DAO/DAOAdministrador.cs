@@ -40,7 +40,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                     try
                     {
                         //Inicializamos la consulta
-                        string consultaSQLProfesional = "INSERT INTO Profesional(DUI, telefono, nombre, apellido, correoElectronico, foto, desempenoId, usuarioId, especialidadId, especialidadAltId)\r\nOUTPUT INSERTED.profesionalId VALUES \r\n(@DUI, @telefono, @nombre, @apellido, @correoElectronico, @foto, @desempenoId, @usuarioId, @especialidadId, @especialidadAltId)";
+                        string consultaSQLProfesional = "INSERT INTO Profesional(DUI, telefono, nombre, apellido, correoElectronico, foto, desempenoId, usuarioId, especialidadId, especialidadAltId) VALUES (@DUI, @telefono, @nombre, @apellido, @correoElectronico, @foto, @desempenoId, @usuarioId, @especialidadId, @especialidadAltId)";
 
                         //Inicializamos el comando
                         SqlCommand ObjComandoSQLServerProfesional = new SqlCommand(consultaSQLProfesional, Conexion.Connection);
@@ -91,24 +91,22 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                 Conexion.Connection = Conectar();
 
                 //Inicializamos la consulta
-                string consultaSQLProfesional = "UPDATE Profesional SET " +
-                                                "DUI				= @DUI, " +
-                                                "telefono			= @telefono, " +
-                                                "nombre				= @nombre, " +
-                                                "apellido			= @apellido, " +
-                                                "correoElectronico	= @correoElectronico, " +
-                                                "foto				= @foto, " +
-                                                "desempenoId		= @desempenoId, " +
-                                                "especialidadId		= @especialidadId, " +
-                                                "especialidadAltId	= @especialidadAltId " +
+                    string consultaSQLProfesional = "UPDATE Profesional SET " +
+                                                    "telefono           = @telefono, " +
+                                                    "nombre             = @nombre, " +
+                                                    "apellido           = @apellido, " +
+                                                    "correoElectronico  = @correoElectronico," +
+                                                    "foto               = @foto, " +
+                                                    "desempenoId        = @desempenoId," +
+                                                    "especialidadId     = @especialidadId, " +
+                                                    "especialidadAltId  = @especialidadAltId " +
 
-                                                "WHERE " +
-                                                "profesionalId = @profesionalId ";
+                                                    "WHERE " +
+                                                    "DUI = @DUI";
                 //Inicializamos el comando
                 SqlCommand ObjComandoSQLServerProfesional = new SqlCommand(consultaSQLProfesional, Conexion.Connection);
 
                 //Añadimos los valores
-                ObjComandoSQLServerProfesional.Parameters.AddWithValue("@DUI", Dui);
                 ObjComandoSQLServerProfesional.Parameters.AddWithValue("@telefono", Telefono);
                 ObjComandoSQLServerProfesional.Parameters.AddWithValue("@nombre", Nombres);
                 ObjComandoSQLServerProfesional.Parameters.AddWithValue("@apellido", Apellidos);
@@ -117,7 +115,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                 ObjComandoSQLServerProfesional.Parameters.AddWithValue("@desempenoId", DesempenoId);
                 ObjComandoSQLServerProfesional.Parameters.AddWithValue("@especialidadId", Especialidad);
                 ObjComandoSQLServerProfesional.Parameters.AddWithValue("@especialidadAltId", EspecialidadAlt);
-                ObjComandoSQLServerProfesional.Parameters.AddWithValue("@profesionalId", ProfesionalId);
+                ObjComandoSQLServerProfesional.Parameters.AddWithValue("@DUI", Dui);
 
                 if (ObjComandoSQLServerProfesional.ExecuteNonQuery() > 0)
                 {
@@ -199,7 +197,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                 Conexion.Connection = Conectar();
 
                 //Iniciamos el tipo de comando
-                string consultaSQLLLenarDGV = "SELECT * FROM vistaProfesionalDGV";
+                string consultaSQLLLenarDGV = "SELECT * FROM vistaProfesional";
 
                 //Llenamos el comando
                 SqlCommand ObjComandoSQLServerDGV = new SqlCommand(consultaSQLLLenarDGV, Conexion.Connection);

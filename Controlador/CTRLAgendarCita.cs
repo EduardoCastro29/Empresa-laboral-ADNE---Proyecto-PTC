@@ -50,15 +50,16 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                     string.IsNullOrWhiteSpace(ObjAgendarCitaForm.txtHoraFinal.Text) ||
                     string.IsNullOrWhiteSpace(ObjAgendarCitaForm.txtMotivoConsulta.Text))
                 {
-                    MessageBox.Show("Existen campos vacíos, verifique si existe algún campo faltante", "Agendar Cita", MessageBoxButtons.OK, MessageBoxIcon.Error);                }
+                    MessageBox.Show("Existen campos vacíos, verifique si existe algún campo faltante", "Agendar Cita", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
                 else
                 {
                     //Instanciamos a la clase DAOAgendarCita para acceder a los métodos del Getter y Setter
                     DAOAgendarCita ObjDAOAgendarCita = new DAOAgendarCita();
 
                     //Declaramos cada Getter y Setter de la clase DAOAgendarCita a cada control del formulario
-                    ObjDAOAgendarCita.PacienteId = int.Parse(ObjAgendarCitaForm.txtPacienteID.Text.Trim());
-                    ObjDAOAgendarCita.ProfesionalId = int.Parse(ObjAgendarCitaForm.txtProfesionalID.Text.Trim());
+                    ObjDAOAgendarCita.DocumentoPresentado = ObjAgendarCitaForm.txtPacienteID.Text.Trim();
+                    ObjDAOAgendarCita.DuiProfesional = ObjAgendarCitaForm.txtProfesionalID.Text.Trim();
                     ObjDAOAgendarCita.HoraInicio = TimeSpan.Parse(ObjAgendarCitaForm.txtHoraInicio.Text.Trim());
                     ObjDAOAgendarCita.HoraFinal = TimeSpan.Parse(ObjAgendarCitaForm.txtHoraFinal.Text.Trim());
                     ObjDAOAgendarCita.Fecha = DateTime.Parse(ObjAgendarCitaForm.dtFecha.Text.Trim());
@@ -102,8 +103,8 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                     //Declaramos cada Getter y Setter de la clase DAOAgendarCita a cada control del formulario
                     ObjDAOActualizarCita.CitaId = int.Parse(ObjAgendarCitaForm.txtIDCita.Text.Trim());
                     ObjDAOActualizarCita.ConsultaId = int.Parse(ObjAgendarCitaForm.txtIDConsulta.Text.Trim());
-                    ObjDAOActualizarCita.PacienteId = int.Parse(ObjAgendarCitaForm.txtPacienteID.Text.Trim());
-                    ObjDAOActualizarCita.ProfesionalId = int.Parse(ObjAgendarCitaForm.txtProfesionalID.Text.Trim());
+                    ObjDAOActualizarCita.DocumentoPresentado = ObjAgendarCitaForm.txtPacienteID.Text.Trim();
+                    ObjDAOActualizarCita.DuiProfesional = ObjAgendarCitaForm.txtProfesionalID.Text.Trim();
                     ObjDAOActualizarCita.HoraInicio = TimeSpan.Parse(ObjAgendarCitaForm.txtHoraInicio.Text.Trim());
                     ObjDAOActualizarCita.HoraFinal = TimeSpan.Parse(ObjAgendarCitaForm.txtHoraFinal.Text.Trim());
                     ObjDAOActualizarCita.Fecha = DateTime.Parse(ObjAgendarCitaForm.dtFecha.Text.Trim());

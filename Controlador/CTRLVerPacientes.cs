@@ -39,7 +39,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             foreach (DataRow dr in dt.Rows)
             {
                 ObjDaoPacientes.NombreApellido = (string)dr[0];
-                ObjDaoPacientes.PacienteId = (int)dr[1];
+                ObjDaoPacientes.DocumentoPresentado = (string)dr[1];
 
 
                 ControlVerPacientesUC ObjControlPaciente = new ControlVerPacientesUC(ObjDaoPacientes);
@@ -55,7 +55,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             foreach (DataRow dr in ds.Tables[0].Rows)
             {
                 ObjDaoPacientes.NombreApellido = (string)dr[0];
-                ObjDaoPacientes.PacienteId = (int)dr[1];
+                ObjDaoPacientes.DocumentoPresentado = (string)dr[1];
                 ControlVerPacientesUC panelPaciente = new ControlVerPacientesUC(ObjDaoPacientes);
                 ObjVerPaciente.flpVerPacientes.Controls.Add(panelPaciente);
             }

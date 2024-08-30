@@ -12,7 +12,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DTO
     internal class DTOInformacionPersonal : Conexion
     {
         // Atributos del paciente
-        private int pacienteId;
         private DateTime fechaNacimiento;
         private string nombre;
         private string apellido;
@@ -45,7 +44,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DTO
         public string Motivo { get => motivo; set => motivo = value; }
         public string Antecedente { get => antecedente; set => antecedente = value; }
         public int ExpedienteId { get => expedienteId; set => expedienteId = value; }
-        public int PacienteId { get => pacienteId; set => pacienteId = value; }
         public string Descripcion { get => descripcion; set => descripcion = value; }
         public string AspectosPreocupantes { get => aspectosPreocupantes; set => aspectosPreocupantes = value; }
         public int GeneroId1 { get => generoId; set => generoId = value; }

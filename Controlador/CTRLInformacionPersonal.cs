@@ -24,7 +24,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             //Enlazando el objeto con la Vista dentro del constructor
             ObjInformacionPersonal = vista;
             ObjInformacionPersonal.Load += new EventHandler(Modificar);
-            ObjInformacionPersonal.dtFechaNacimiento.ValueChanged += new EventHandler (DtFechaNacimiento_ValueChanged);
+            ObjInformacionPersonal.dtFechaNacimiento.ValueChanged += new EventHandler(DtFechaNacimiento_ValueChanged);
             ObjInformacionPersonal.btnGuardarPaciente.Click += new EventHandler(GuardarInformacionPersonal);
 
             ObjInformacionPersonal.txtNacionalidad.KeyPress += new KeyPressEventHandler(ValidarCampoLetra);
@@ -47,8 +47,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             try
             {
                 //Dado el objeto del DaoInformacionPersonal, evaluamos si los datos fueron ingresados correctamente dados sus métodos
-                if (string.IsNullOrWhiteSpace(ObjInformacionPersonal.txtPacienteId.Text.Trim()) ||
-                    string.IsNullOrWhiteSpace(ObjInformacionPersonal.txtNacionalidad.Text.Trim()) ||
+                if (string.IsNullOrWhiteSpace(ObjInformacionPersonal.txtNacionalidad.Text.Trim()) ||
                     string.IsNullOrWhiteSpace(ObjInformacionPersonal.txtDocumentoPresentado.Text.Trim()) ||
                     string.IsNullOrWhiteSpace(ObjInformacionPersonal.txtEdad.Text.Trim()) ||
                     string.IsNullOrWhiteSpace(ObjInformacionPersonal.txtTelefono1.Text.Trim()) ||
@@ -75,7 +74,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                     DAOInformacionPersonal ObjDAOInformacionPersonal = new DAOInformacionPersonal();
                     ObjDAOInformacionPersonal.FechaNacimiento = ObjInformacionPersonal.dtFechaNacimiento.Value.Date;
 
-                    ObjDAOInformacionPersonal.PacienteId = int.Parse(ObjInformacionPersonal.txtPacienteId.Text.Trim());
                     ObjDAOInformacionPersonal.Nacionalidad = ObjInformacionPersonal.txtNacionalidad.Text.Trim();
                     ObjDAOInformacionPersonal.DocumentoPresentado = ObjInformacionPersonal.txtDocumentoPresentado.Text.Trim();
                     ObjDAOInformacionPersonal.GeneroId1 = int.Parse(ObjInformacionPersonal.cmbGeneroId.SelectedValue.ToString());
@@ -120,7 +118,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
         private void LimpiarCampos()
         {
             ObjInformacionPersonal.dtFechaNacimiento.Value = DateTime.Now;
-            ObjInformacionPersonal.txtPacienteId.Clear();
             ObjInformacionPersonal.txtNacionalidad.Clear();
             ObjInformacionPersonal.txtDocumentoPresentado.Clear();
             ObjInformacionPersonal.cmbGeneroId.SelectedIndex = -1;
@@ -137,16 +134,15 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             ObjInformacionPersonal.txtDescripcion.Clear();
             ObjInformacionPersonal.txtAspectosPreocupantes.Clear();
         }
-        private void Modificar(object sender, EventArgs e )
+        private void Modificar(object sender, EventArgs e)
         {
             ObjInformacionPersonal.txtEdad.Enabled = false;
             ObjInformacionPersonal.btnGuardarPaciente.Enabled = true;
-            ObjInformacionPersonal.btnModificarPaciente.Enabled = false;           
+            ObjInformacionPersonal.btnModificarPaciente.Enabled = false;
         }
-
+        #region Validaciones de Campos
         private void DtFechaNacimiento_ValueChanged(object sender, EventArgs e)
         {
-
             // Verificar si la fecha seleccionada es mayor que la fecha de hoy
             if (ObjInformacionPersonal.dtFechaNacimiento.Value.Date > DateTime.Today)
             {
@@ -170,9 +166,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                 // Actualizar el campo de texto con la edad calculada
                 ObjInformacionPersonal.txtEdad.Text = edad.ToString();
             }
-
         }
-
         private void ValidarCampoLetra(object sender, KeyPressEventArgs e)
         {
             // e.KeyChar El evento que detecta el ingreso de cualquier caracter.
@@ -190,7 +184,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             // e.Handled en true, indicas que has manejado el evento y que el sistema no debe hacer nada más con él. 
             e.Handled = true;
         }
-
         private void ValidarCampoCorreo(object sender, KeyPressEventArgs e)
         {
             // Permite caracteres de control como el retroceso(Backspace) 
@@ -220,11 +213,8 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             {
                 return;
             }
-
-
             e.Handled = true;
-
         }
-
+        #endregion
     }
 }

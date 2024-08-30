@@ -17,7 +17,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
         readonly EquipodeTrabajoForm ObjEquipoTrabajoForm;
         AdministradorForm ObjAdministrarUsuarios = null;
 
-        public CTRLEquipoTrabajo (EquipodeTrabajoForm Vista)
+        public CTRLEquipoTrabajo(EquipodeTrabajoForm Vista)
         {
             ObjEquipoTrabajoForm = Vista;
 
@@ -46,7 +46,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             //Creamos un bucle foreach
             foreach (DataRow DataRow in ObjCargarUC.Rows)
             {
-                ObjDAOEquipo.ProfesionalId = (int)DataRow[0];
+                ObjDAOEquipo.DUI = (string)DataRow[0];
                 ObjDAOEquipo.NombresApellidos = (string)DataRow[1];
                 ObjDAOEquipo.Correo = (string)DataRow[2];
                 ObjDAOEquipo.Especialidad = (string)DataRow[3];

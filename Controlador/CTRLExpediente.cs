@@ -32,12 +32,10 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
         //ABRIR EXPEDIENTE
         private void CargarExpediente(object sender, EventArgs e)
         {
-            if (ObjExpediente.txtPacienteId.Text == "")
+            if (string.IsNullOrWhiteSpace(ObjExpediente.txtPacienteId.Text))
             {
                 ObjExpediente.btnModificar.Enabled = false;
             }
-            //ObjExpediente.btnModificar.Enabled = false;
-            //ObjExpediente.btnGuardar.Enabled = true;
         }
 
         //INSERT
@@ -47,7 +45,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             {
                 //Dado el objeto del DAOExpedienteMédico, evaluamos si los datos fueron ingresados correctamente dados sus métodos
                 if (string.IsNullOrWhiteSpace(ObjExpediente.txtPacienteId.Text.Trim()) || //////////
-                     string.IsNullOrWhiteSpace(ObjExpediente.txtExpedienteId.Text.Trim()) ||
                      string.IsNullOrWhiteSpace(ObjExpediente.txtEstadoAnimo.Text.Trim()) ||
                      string.IsNullOrWhiteSpace(ObjExpediente.txtEstadoConductual.Text.Trim()) ||
                      string.IsNullOrWhiteSpace(ObjExpediente.txtSomatizacion.Text.Trim()) ||
@@ -70,8 +67,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                     DAOExpediente ObjDAOExpediente = new DAOExpediente();
 
                     //Obtenemos datos del objeto ObjDAOExpediente
-                    ObjDAOExpediente.PacienteId = int.Parse(ObjExpediente.txtPacienteId.Text.Trim()); ///////////////
-                    ObjDAOExpediente.ExpedienteId = int.Parse(ObjExpediente.txtExpedienteId.Text);
+                    ObjDAOExpediente.DocumentoPresentado = ObjExpediente.txtPacienteId.Text.Trim();
                     ObjDAOExpediente.EstadoAnimo = ObjExpediente.txtEstadoAnimo.Text.Trim();
                     ObjDAOExpediente.EstadoConductual = ObjExpediente.txtEstadoConductual.Text.Trim();
                     ObjDAOExpediente.Somatizacion = ObjExpediente.txtSomatizacion.Text.Trim();
@@ -116,8 +112,8 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             try
             {
                 //Dado el objeto del DAOExpedienteMédico, evaluamos si los datos fueron ingresados correctamente dados sus métodos
-                if (string.IsNullOrWhiteSpace(ObjExpediente.txtPacienteId.Text.Trim()) || ////////////////////
-                     string.IsNullOrWhiteSpace(ObjExpediente.txtExpedienteId.Text.Trim()) ||
+                if (string.IsNullOrWhiteSpace(ObjExpediente.txtPacienteId.Text.Trim()) ||
+
                      string.IsNullOrWhiteSpace(ObjExpediente.txtEstadoAnimo.Text.Trim()) ||
                      string.IsNullOrWhiteSpace(ObjExpediente.txtEstadoConductual.Text.Trim()) ||
                      string.IsNullOrWhiteSpace(ObjExpediente.txtSomatizacion.Text.Trim()) ||
@@ -140,8 +136,8 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                     DAOExpediente ObjDAOExpediente = new DAOExpediente();
 
                     //Obtenemos datos del objeto ObjDAOExpediente
-                    ObjDAOExpediente.PacienteId = int.Parse(ObjExpediente.txtPacienteId.Text.Trim()); /////////////////
-                    ObjDAOExpediente.ExpedienteId = int.Parse(ObjExpediente.txtExpedienteId.Text);
+                    ObjDAOExpediente.DocumentoPresentado = ObjExpediente.txtPacienteId.Text.Trim();
+
                     ObjDAOExpediente.EstadoAnimo = ObjExpediente.txtEstadoAnimo.Text.Trim();
                     ObjDAOExpediente.EstadoConductual = ObjExpediente.txtEstadoConductual.Text.Trim();
                     ObjDAOExpediente.Somatizacion = ObjExpediente.txtSomatizacion.Text.Trim();
@@ -191,7 +187,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             ObjExpediente.txtObservacion.Clear();
             ObjExpediente.txtAproximacionDiag.Clear();
             ObjExpediente.txtAtencionBrindada.Clear();
-            ObjExpediente.txtExpedienteId.Clear();
+
             ObjExpediente.txtPacienteId.Clear();
         }
     }

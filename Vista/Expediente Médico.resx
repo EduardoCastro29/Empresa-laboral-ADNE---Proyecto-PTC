@@ -222,20 +222,6 @@
         +ZqmmXaR8faLOxoAAABxquojIgNrkzNKa6wAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="txtExpedienteId.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAADcAAAAmCAYAAABgUQN4AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGzSURBVGhD7ZkxS8NQEMff2NHR0dGP0I/glxBcBEdH3fwA
-        DuLg7uzsatukeS0d6lBaCqEBKSHUqBFijCWE9P7pdSiVzrn2/eBN71rej3vvAndq72g0GjVaZ7ZtPziO
-        89psNouqLZyr3W4/0jkvaB3w0bdDgXX64dtoNIqn02kRRVFRRXAu3/eL8Xic0Hnf6dwnrPA/lKnrXq8X
-        JUnCfyGD+Xxe9Pv9SGt9xyrrIGMQ43iRDAaDL8uyTllpCYnV6P4GaZpymEyyLMNb/CCfQ1Yr5S5d1/3j
-        GNGgTqAQsppSlLWnIAh4WzYoNKikrFbKeXEc87ZscDVbrdYvqymF78YuAR9WM3KiMHJSMXJSMXJSMXJS
-        MXJSMXJSMXJSMXJS2R8527ZD6T3LFXmeo0GUsZpSjuO8hGHI27JBFw/dPFYrm7JXk8kk433RYDiC6Q+r
-        lXJHWusIKZUO5h3kU2e1JZZlnQ+Hw2+OEQndvpiydstK6+Dtua77IzGDnuelnU5HU9ZqrLMJVc6bbrf7
-        idlB1VvsmCPOZrPyKlJi7reKraCgYwxHUHXwzajqokT4JPW88cZ2H6UWlGCBmUOd4uMAAAAASUVORK5C
-        YII=
-</value>
-  </data>
   <data name="txtRiesgoValorado.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAxsAAAA8CAYAAAAOn6faAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8

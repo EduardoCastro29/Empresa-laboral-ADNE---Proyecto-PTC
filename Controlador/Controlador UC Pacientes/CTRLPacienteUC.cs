@@ -27,14 +27,14 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador.ControladorUserControl
             try
             {
                 DAOExpediente objDAOExpedienteMedico = new DAOExpediente();
-                objDAOExpedienteMedico.PacienteId = int.Parse(ObjVerPacienteUS.lblPacienteId.Text);
+                objDAOExpedienteMedico.DocumentoPresentado = ObjVerPacienteUS.lblPacienteId.Text;
 
                 //Se asigna el ID del expediente que se desea cargar
                 bool Comprobar = objDAOExpedienteMedico.ObtenerExpedientePaciente();
                 if (Comprobar)
                 {
                     ExpedienteMédicoForm objExpedienteMedico = new ExpedienteMédicoForm();
-                    objExpedienteMedico.txtExpedienteId.Text = objDAOExpedienteMedico.ExpedienteId.ToString();
+                   
                     objExpedienteMedico.txtEstadoAnimo.Text = objDAOExpedienteMedico.EstadoAnimo;
                     objExpedienteMedico.txtEstadoConductual.Text = objDAOExpedienteMedico.EstadoConductual;
                     objExpedienteMedico.txtSomatizacion.Text = objDAOExpedienteMedico.Somatizacion;
@@ -46,7 +46,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador.ControladorUserControl
                     objExpedienteMedico.txtObservacion.Text = objDAOExpedienteMedico.Observacion;
                     objExpedienteMedico.txtAproximacionDiag.Text = objDAOExpedienteMedico.AproximacionDiag;
                     objExpedienteMedico.txtAtencionBrindada.Text = objDAOExpedienteMedico.AtencionBrindada;
-                    objExpedienteMedico.txtPacienteId.Text = objDAOExpedienteMedico.PacienteId.ToString();
+                    objExpedienteMedico.txtPacienteId.Text = objDAOExpedienteMedico.DocumentoPresentado;
 
                     objExpedienteMedico.btnGuardar.Enabled = false;
                     objExpedienteMedico.btnModificar.Enabled = true;
@@ -72,7 +72,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador.ControladorUserControl
             try
             {
                 DAOInformacionPersonal ObjDaoInformacionPersonal = new DAOInformacionPersonal();
-                ObjDaoInformacionPersonal.PacienteId = int.Parse(ObjVerPacienteUS.lblPacienteId.Text); // Asigna el ID del paciente que deseas cargar
+                ObjDaoInformacionPersonal.DocumentoPresentado = ObjVerPacienteUS.lblPacienteId.Text; // Asigna el ID del paciente que deseas cargar
 
                 bool Comprobar = ObjDaoInformacionPersonal.ObtenerInformacionPaciente();
                 if (Comprobar)
@@ -80,7 +80,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador.ControladorUserControl
                     InformaciónPersonalForm ObjVerInformacion = new InformaciónPersonalForm();
 
                     // Pasar datos al formulario
-                    ObjVerInformacion.txtPacienteId.Text = ObjDaoInformacionPersonal.PacienteId.ToString();
                     ObjVerInformacion.dtFechaNacimiento.Value = ObjDaoInformacionPersonal.FechaNacimiento;
                     ObjVerInformacion.txtNombrePaciente.Text = ObjDaoInformacionPersonal.Nombre;
                     ObjVerInformacion.txtApellidoPaciente.Text = ObjDaoInformacionPersonal.Apellido;
@@ -145,8 +144,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador.ControladorUserControl
         {
             try
             {
-                if (string.IsNullOrWhiteSpace(ObjInformacionPersonal.txtPacienteId.Text.Trim()) ||
-                   string.IsNullOrWhiteSpace(ObjInformacionPersonal.txtNacionalidad.Text.Trim()) ||
+                if (string.IsNullOrWhiteSpace(ObjInformacionPersonal.txtNacionalidad.Text.Trim()) ||
                    string.IsNullOrWhiteSpace(ObjInformacionPersonal.txtDocumentoPresentado.Text.Trim()) ||
                    string.IsNullOrWhiteSpace(ObjInformacionPersonal.txtEdad.Text.Trim()) ||
                    string.IsNullOrWhiteSpace(ObjInformacionPersonal.txtTelefono1.Text.Trim()) ||
@@ -171,7 +169,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador.ControladorUserControl
                     //Realizamos el proceso para capturar los datos ingresados por el usuario dado el DaoInformacionPersonal
                     DAOInformacionPersonal ObjDAOActualizarInformacionPersonal = new DAOInformacionPersonal();
                     ObjDAOActualizarInformacionPersonal.FechaNacimiento = ObjInformacionPersonal.dtFechaNacimiento.Value.Date;
-                    ObjDAOActualizarInformacionPersonal.PacienteId = int.Parse(ObjInformacionPersonal.txtPacienteId.Text.Trim());
+                    
                     ObjDAOActualizarInformacionPersonal.Nacionalidad = ObjInformacionPersonal.txtNacionalidad.Text.Trim();
                     ObjDAOActualizarInformacionPersonal.DocumentoPresentado = ObjInformacionPersonal.txtDocumentoPresentado.Text.Trim();
                     ObjDAOActualizarInformacionPersonal.Edad = int.Parse(ObjInformacionPersonal.txtEdad.Text.Trim());

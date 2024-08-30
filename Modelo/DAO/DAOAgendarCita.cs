@@ -27,7 +27,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                 Conexion.Connection = Conectar();
 
                 //Declaramos la consulta que deseamos en una variable de tipo string
-                string consultaSQLInsertarCita = "INSERT INTO Cita (fecha, horaInicio, horaFinal, estadoId, pacienteId, profesionalId, lugarId) OUTPUT INSERTED.citaId VALUES (@fecha, @horaInicio, @horaFinal, @estadoId, @pacienteId, @profesionalId, @lugarId)";
+                string consultaSQLInsertarCita = "INSERT INTO Cita (fecha, horaInicio, horaFinal, estadoId, documentoPresentado, DUI, lugarId) OUTPUT INSERTED.citaId VALUES (@fecha, @horaInicio, @horaFinal, @estadoId, @documentoPresentado, @DUI, @lugarId)";
 
                 SqlCommand ObjComandoSQLInsertarCita = new SqlCommand(consultaSQLInsertarCita, Conexion.Connection);
 
@@ -36,15 +36,15 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                 ObjComandoSQLInsertarCita.Parameters.AddWithValue("@horaInicio", HoraInicio);
                 ObjComandoSQLInsertarCita.Parameters.AddWithValue("@horaFinal", HoraFinal);
                 ObjComandoSQLInsertarCita.Parameters.AddWithValue("@estadoId", EstadoId);
-                ObjComandoSQLInsertarCita.Parameters.AddWithValue("@pacienteId", PacienteId);
-                ObjComandoSQLInsertarCita.Parameters.AddWithValue("@profesionalId", ProfesionalId);
+                ObjComandoSQLInsertarCita.Parameters.AddWithValue("@documentoPresentado", DocumentoPresentado);
+                ObjComandoSQLInsertarCita.Parameters.AddWithValue("@DUI", DuiProfesional);
                 ObjComandoSQLInsertarCita.Parameters.AddWithValue("@lugarId", LugarId);
 
                 //Creamos una variable que nos capturará el ID de la Cita creada, que posteriormente se insertará dentro de la consulta
                 //La variable usada (int) es para indicarle que es de tipo entero, y que nos retornará el ID creado
-                int CitaID = (int)ObjComandoSQLInsertarCita.ExecuteScalar();
+                int citaIdGenerada = (int)ObjComandoSQLInsertarCita.ExecuteScalar();
 
-                if (CitaID > 0)
+                if (citaIdGenerada > 0)
                 {
                     try
                     {
@@ -54,7 +54,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                         SqlCommand ObjComandoSQLInsertaConsulta = new SqlCommand(consultaSQLInsertarConsulta, Conexion.Connection);
 
                         ObjComandoSQLInsertaConsulta.Parameters.AddWithValue("@descripcion", Descripcion);
-                        ObjComandoSQLInsertaConsulta.Parameters.AddWithValue("@citaId", CitaID);
+                        ObjComandoSQLInsertaConsulta.Parameters.AddWithValue("@citaId", citaIdGenerada);
 
                         //Si el ID de la Cita es mayor a 0, es decir, el ID se insertó correctamente
                         //Procedemos a insertar los valores de la Consulta
@@ -95,16 +95,16 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                 Conexion.Connection = Conectar();
 
                 string consultaSQLActualizarCita = "UPDATE Cita SET " +
-                                                   "fecha          = @fecha, " +
-                                                   "horaInicio     = @horaInicio, " +
-                                                   "horaFinal      = @horaFinal, " +
-                                                   "estadoId       = @estadoId, " +
-                                                   "pacienteId     = @pacienteId, " +
-                                                   "profesionalId  = @profesionalId, " +
-                                                   "lugarId        = @lugarId " +
+                                                   "fecha                   = @fecha, " +
+                                                   "horaInicio              = @horaInicio, " +
+                                                   "horaFinal               = @horaFinal, " +
+                                                   "estadoId                = @estadoId, " +
+                                                   "documentoPresentado     = @documentoPresentado, " +
+                                                   "DUI                     = @DUI, " +
+                                                   "lugarId                 = @lugarId " +
 
                                                    "WHERE " +
-                                                    "citaId = @citaId ";
+                                                   "citaId = @citaId ";
 
                 SqlCommand ObjComandoSQLServerActuCita = new SqlCommand(consultaSQLActualizarCita, Conexion.Connection);
 
@@ -112,8 +112,8 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                 ObjComandoSQLServerActuCita.Parameters.AddWithValue("@horaInicio", HoraInicio);
                 ObjComandoSQLServerActuCita.Parameters.AddWithValue("@horaFinal", HoraFinal);
                 ObjComandoSQLServerActuCita.Parameters.AddWithValue("@estadoId", EstadoId);
-                ObjComandoSQLServerActuCita.Parameters.AddWithValue("@pacienteId", PacienteId);
-                ObjComandoSQLServerActuCita.Parameters.AddWithValue("@profesionalId", ProfesionalId);
+                ObjComandoSQLServerActuCita.Parameters.AddWithValue("@documentoPresentado", DocumentoPresentado);
+                ObjComandoSQLServerActuCita.Parameters.AddWithValue("@DUI", DuiProfesional);
                 ObjComandoSQLServerActuCita.Parameters.AddWithValue("@lugarId", LugarId);
                 ObjComandoSQLServerActuCita.Parameters.AddWithValue("@citaId", CitaId);
 

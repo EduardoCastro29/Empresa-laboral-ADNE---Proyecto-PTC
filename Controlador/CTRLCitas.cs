@@ -42,7 +42,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             foreach (DataRow dr in dt.Rows)
             {
                 objCitaUC.CitaId = (int)dr[0];
-                objCitaUC.PacienteId = (int)dr[1];
+                objCitaUC.DocumentoPaciente = (string)dr[1];
                 objCitaUC.N_expediente = (int)dr[2];
                 objCitaUC.EstadoId = (string)dr[3];
                 objCitaUC.Nombre = (string)dr[4];
@@ -79,7 +79,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                 guardar.FileName = DateTime.Now.ToString("ddMMyyyy") + ".pdf";
 
                 DAOCitas objCitasDAO = new DAOCitas();
-                objCitasDAO.PacienteId = int.Parse(objUC.lblPacienteId.Text);
+                objCitasDAO.DocumentoPaciente = objUC.lblPacienteId.Text;
                 objCitasDAO.CitaId = int.Parse(objUC.lblCitaId.Text);
                 objCitasDAO.N_expediente = int.Parse(objUC.lblExpedienteId.Text);
 

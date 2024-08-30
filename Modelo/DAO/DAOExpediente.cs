@@ -13,8 +13,6 @@ using System.IO;
 using System.Data;
 using System.Security.Cryptography;
 using static TheArtOfDev.HtmlRenderer.Adapters.RGraphicsPath;
-using System.CodeDom.Compiler;
-using System.Web.UI.WebControls.WebParts;
 
 namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
 {
@@ -28,13 +26,12 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                 //Abrimos la conexión
                 Conexion.Connection = Conectar();
                 //Creamos el query
-                string consultaSQLExpediente = "INSERT INTO Expediente (expedienteId, estadoAnimo, estadoConductual, somatizacion, vidaInterpersonal, cognicion, redSocial, pauta, riesgoValorado, observacion, aproximacionDiag, atencionBrindada, pacienteId) VALUES (@expedienteId, @estadoAnimo, @estadoConductual, @somatizacion, @vidaInterpersonal, @cognicion, @redSocial, @pauta, @riesgoValorado, @observacion, @aproximacionDiag, @atencionBrindada, @pacienteId)";
+                string consultaSQLExpediente = "INSERT INTO Expediente(estadoAnimo, estadoConductual, somatizacion, vidaInterpersonal, cognicion, redSocial, pauta, riesgoValorado, observacion, aproximacionDiag, atencionBrindada, documentoPresentado)\r\nVALUES \r\n(@estadoAnimo, @estadoConductual, @somatizacion, @vidaInterpersonal, @cognicion, @redSocial, @pauta, @riesgoValorado, @observacion, @aproximacionDiag, @atencionBrindada, @documentoPresentado)";
 
                 //Le mandamos la consulta a SQL por medio de un comando. Como parametros: Consulta, Conexión
                 SqlCommand ObjQuerySQL = new SqlCommand(consultaSQLExpediente, Conexion.Connection);
 
                 //Añadimos los valores
-                ObjQuerySQL.Parameters.AddWithValue("@expedienteId", ExpedienteId);
                 ObjQuerySQL.Parameters.AddWithValue("@estadoAnimo", EstadoAnimo);
                 ObjQuerySQL.Parameters.AddWithValue("@estadoConductual", EstadoConductual);
                 ObjQuerySQL.Parameters.AddWithValue("@somatizacion", Somatizacion);
@@ -46,8 +43,8 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                 ObjQuerySQL.Parameters.AddWithValue("@observacion", Observacion);
                 ObjQuerySQL.Parameters.AddWithValue("@aproximacionDiag", AproximacionDiag);
                 ObjQuerySQL.Parameters.AddWithValue("@atencionBrindada", AtencionBrindada);
-                //Aquí se usa expedienteId para ser insertado y guardado en foránea pacienteId
-                ObjQuerySQL.Parameters.AddWithValue("@pacienteId", PacienteId); ////////////////////
+                //Aquí se usa el Documento Presentado del paciente para ser insertado y guardado en foránea expedienteId
+                ObjQuerySQL.Parameters.AddWithValue("@documentoPresentado", DocumentoPresentado);
 
                 //Si el número de filas afectadas fueron existosas, retornamos verdadero
                 if (ObjQuerySQL.ExecuteNonQuery() > 0)
@@ -64,7 +61,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
             {
                 Conexion.Connection.Close();
             }
-
         }
         public bool ExpedienteActualizarDatos()
         {
@@ -73,26 +69,28 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                 //Abrimos la conexión
                 Conexion.Connection = Conectar();
                 //Creamos el query
-                string consultaSQLExpediente = "UPDATE Expediente SET" +
-                    "                           pacienteId          =    @pacienteId," +
-                    "                           estadoAnimo         =    @estadoAnimo," +
-                    "                           estadoConductual    =    @estadoConductual," +
-                    "                           somatizacion        =    @somatizacion," +
-                    "                           vidaInterpersonal   =    @vidaInterpersonal," +
-                    "                           cognicion           =    @cognicion," +
-                    "                           redSocial           =    @redSocial," +
-                    "                           pauta               =    @pauta," +
-                    "                           riesgoValorado      =    @riesgoValorado," +
-                    "                           observacion         =    @observacion," +
-                    "                           aproximacionDiag    =    @aproximacionDiag," +
-                    "                           atencionBrindada    =    @atencionBrindada" +
-                    "                           WHERE  expedienteId =    @expedienteId";
+                string consultaSQLExpediente = "UPDATE Expediente SET " +
+                                               "estadoAnimo             = @estadoAnimo, " +
+                                               "estadoConductual        = @estadoConductual, " +
+                                               "somatizacion            = @somatizacion, " +
+                                               "vidaInterpersonal       = @vidaInterpersonal, " +
+                                               "cognicion               = @cognicion, " +
+                                               "redSocial               = @redSocial, " +
+                                               "pauta                   = @pauta, " +
+                                               "riesgoValorado          = @riesgoValorado, " +
+                                               "observacion             = @observacion, " +
+                                               "aproximacionDiag        = @aproximacionDiag, " +
+                                               "atencionBrindada        = @atencionBrindada, " +
+                                               "documentopresentado     = @documentoPresentado " +
+
+                                               "WHERE " +
+                                               "expedienteId = @expedienteId";
 
                 //Le mandamos la consulta a SQL por medio de un comando. Como parametros: Consulta, Conexión
                 SqlCommand ObjQuerySQL = new SqlCommand(consultaSQLExpediente, Conexion.Connection);
 
                 //Añadimos los valores
-                ObjQuerySQL.Parameters.AddWithValue("@pacienteId", PacienteId); ///////////////////
+                ObjQuerySQL.Parameters.AddWithValue("@documentoPresentado", DocumentoPresentado);
                 ObjQuerySQL.Parameters.AddWithValue("@expedienteId", ExpedienteId);
                 ObjQuerySQL.Parameters.AddWithValue("@estadoAnimo", EstadoAnimo);
                 ObjQuerySQL.Parameters.AddWithValue("@estadoConductual", EstadoConductual);
@@ -105,7 +103,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                 ObjQuerySQL.Parameters.AddWithValue("@observacion", Observacion);
                 ObjQuerySQL.Parameters.AddWithValue("@aproximacionDiag", AproximacionDiag);
                 ObjQuerySQL.Parameters.AddWithValue("@atencionBrindada", AtencionBrindada);
-                //Aquí se usa expedienteId para ser insertado y guardado en foránea pacienteId
 
                 //Si el número de filas afectadas fueron existosas, retornamos verdadero
                 if (ObjQuerySQL.ExecuteNonQuery() > 0)
@@ -131,13 +128,13 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                 //Abrimos la conexion 
                 Conexion.Connection = Conectar();
                 // Se crea el query
-                string consultaSqlActualizarPaciente = "SELECT * FROM Expediente WHERE pacienteId = @pacienteId";
+                string consultaSqlActualizarPaciente = "SELECT * FROM Expediente WHERE documentoPresentado = @documentoPresentado";
 
                 //Le mandamos la consulta a SQL por medio de un comando
                 SqlCommand objConsultaActualizar = new SqlCommand(consultaSqlActualizarPaciente, Conexion.Connection);
 
                 // Se añaden los valores 
-                objConsultaActualizar.Parameters.AddWithValue("@pacienteId", PacienteId);
+                objConsultaActualizar.Parameters.AddWithValue("@documentoPresentado", DocumentoPresentado);
 
                 //Si el número de filas afectadas fueron existosas, retornamos verdadero
                 objConsultaActualizar.CommandType = CommandType.Text;
@@ -158,10 +155,9 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                     Observacion = ObjFilasEncontradas.GetString(9);
                     AproximacionDiag = ObjFilasEncontradas.GetString(10);
                     AtencionBrindada = ObjFilasEncontradas.GetString(11);
-                    PacienteId = ObjFilasEncontradas.GetInt32(12);
+                    DocumentoPresentado = ObjFilasEncontradas.GetString(12);
                 }
                 return ObjFilasEncontradas.HasRows;
-
             }
             catch (Exception ex)
             {
@@ -171,7 +167,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
             finally
             {
                 //Independientemente se haga o no el proceso cerramos la conexión
-
                 Conexion.Connection.Close();
             }
         }

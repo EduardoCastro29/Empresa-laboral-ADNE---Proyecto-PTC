@@ -16,6 +16,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DTO
         private TimeSpan horaInicio;
         private string estadoId;
         private int pacienteId;
+        private string documentoPaciente;
 
         //Atributos para el expediente
         private int n_expediente;
@@ -82,5 +83,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DTO
         public DateTime Fecha_Cita { get => fecha_Cita; set => fecha_Cita = value; }
         public string Lugar { get => lugar; set => lugar = value; }
         public string Desc_Cita { get => desc_Cita; set => desc_Cita = value; }
+        public string DocumentoPaciente { get => documentoPaciente; set => documentoPaciente = value; }
     }
 }

@@ -23,13 +23,14 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
         readonly AdministradorForm ObjAdministradorForm;
         readonly RegistroForm ObjRegistroForm;
 
-        /****                     CONSTRUCTOR DEL FORMULARIO ADMINISTRADOR                     ****/
+        /**                     CONSTRUCTOR DEL FORMULARIO ADMINISTRADOR                     **/
         //Este es el constructor del DataGridView
         public CTRLAdministrador(AdministradorForm Vista)
         {
             ObjAdministradorForm = Vista;
 
             RecargarDGVEmpleados();
+
             //Creamos el evento que nos redireccionará al formulario de Agregar nuevo Profesional
             ObjAdministradorForm.btnAñadirProfesional.Click += new EventHandler(AbrirAgregarProfesional);
             ObjAdministradorForm.cmsActualizar.Click += new EventHandler(AbrirActualizarProfesional);
@@ -50,8 +51,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
 
                 //Indicamos que columnas no queremos que se muestren a simple vista
                 ObjAdministradorForm.dgvAdministrarProfesional.Columns[0].Visible = false;
-                ObjAdministradorForm.dgvAdministrarProfesional.Columns[1].Visible = false;
-                ObjAdministradorForm.dgvAdministrarProfesional.Columns[7].Visible = false;
+                ObjAdministradorForm.dgvAdministrarProfesional.Columns[6].Visible = false;
             }
             catch (Exception ex)
             {
@@ -80,21 +80,19 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
 
             //Capturamos los datos de cada dato del DataGridView, iniciamos con el ID de la persona
             //Asignamos las respectivas variables para ser mostradas dentro del formulario de registro
-            int IDProfesional = int.Parse(ObjAdministradorForm.dgvAdministrarProfesional[0, PosicionFila].Value.ToString());
-            int IDUsuario = int.Parse(ObjAdministradorForm.dgvAdministrarProfesional[1, PosicionFila].Value.ToString());
-            string DUIProfesional = ObjAdministradorForm.dgvAdministrarProfesional[2, PosicionFila].Value.ToString();
-            string TelefonoProfesional = ObjAdministradorForm.dgvAdministrarProfesional[3, PosicionFila].Value.ToString();
-            string NombreProfesional = ObjAdministradorForm.dgvAdministrarProfesional[4, PosicionFila].Value.ToString();
-            string ApellidosProfesional = ObjAdministradorForm.dgvAdministrarProfesional[5, PosicionFila].Value.ToString();
-            string CorreoProfesional = ObjAdministradorForm.dgvAdministrarProfesional[6, PosicionFila].Value.ToString();
-            string ImagenProfesional = ObjAdministradorForm.dgvAdministrarProfesional[7, PosicionFila].Value.ToString();
-            string DesempenoProfesional = ObjAdministradorForm.dgvAdministrarProfesional[8, PosicionFila].Value.ToString();
-            string NombreUsuario = ObjAdministradorForm.dgvAdministrarProfesional[9, PosicionFila].Value.ToString();
-            string Especialidad = ObjAdministradorForm.dgvAdministrarProfesional[10, PosicionFila].Value.ToString();
-            string EspecialidadAlt = ObjAdministradorForm.dgvAdministrarProfesional[11, PosicionFila].Value.ToString();
+            int IDUsuario = int.Parse(ObjAdministradorForm.dgvAdministrarProfesional[0, PosicionFila].Value.ToString());
+            string DUIProfesional = ObjAdministradorForm.dgvAdministrarProfesional[1, PosicionFila].Value.ToString();
+            string TelefonoProfesional = ObjAdministradorForm.dgvAdministrarProfesional[2, PosicionFila].Value.ToString();
+            string NombreProfesional = ObjAdministradorForm.dgvAdministrarProfesional[3, PosicionFila].Value.ToString();
+            string ApellidosProfesional = ObjAdministradorForm.dgvAdministrarProfesional[4, PosicionFila].Value.ToString();
+            string CorreoProfesional = ObjAdministradorForm.dgvAdministrarProfesional[5, PosicionFila].Value.ToString();
+            string ImagenProfesional = ObjAdministradorForm.dgvAdministrarProfesional[6, PosicionFila].Value.ToString();
+            string DesempenoProfesional = ObjAdministradorForm.dgvAdministrarProfesional[7, PosicionFila].Value.ToString();
+            string NombreUsuario = ObjAdministradorForm.dgvAdministrarProfesional[8, PosicionFila].Value.ToString();
+            string Especialidad = ObjAdministradorForm.dgvAdministrarProfesional[9, PosicionFila].Value.ToString();
+            string EspecialidadAlt = ObjAdministradorForm.dgvAdministrarProfesional[10, PosicionFila].Value.ToString();
 
-            //Ahora, procedemos a usar la instancia antes establecida para mostrar los valores de las filas encontradas
-            ObjActualizarProfesional.txtIDProfesional.Text = IDProfesional.ToString();
+            //Ahora, procedemos a usar la instancia antes establecida para mostrar los valores de las filas encontradas            
             ObjActualizarProfesional.txtIDUsuario.Text = IDUsuario.ToString();
             ObjActualizarProfesional.txtDui.Text = DUIProfesional;
             ObjActualizarProfesional.txtTelefono.Text = TelefonoProfesional;
@@ -122,7 +120,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             int PosicionFila = ObjAdministradorForm.dgvAdministrarProfesional.CurrentRow.Index;
 
             //Capturamos el valor del ID que queremos eliminar
-            int IDUsuario = int.Parse(ObjAdministradorForm.dgvAdministrarProfesional[1, PosicionFila].Value.ToString());
+            int IDUsuario = int.Parse(ObjAdministradorForm.dgvAdministrarProfesional[0, PosicionFila].Value.ToString());
 
             //Si el usuario coincide con el estado activo dentro del programa, significa que no podrá ser eliminado
             if (IDUsuario == InicioSesion.UsuarioId)
@@ -132,7 +130,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             else
             {
                 if (MessageBox.Show($"Hola, Administrador, estas seguro de eliminar a:\n" +
-                    $" {ObjAdministradorForm.dgvAdministrarProfesional[4, PosicionFila].Value} {ObjAdministradorForm.dgvAdministrarProfesional[5, PosicionFila]}\n" +
+                    $" {ObjAdministradorForm.dgvAdministrarProfesional[3, PosicionFila].Value} {ObjAdministradorForm.dgvAdministrarProfesional[4, PosicionFila]}\n" +
                     $", El Usuario y Profesional asociados serán eliminados de forma permanente, se eliminaran todos los datos asociados.", "Eliminar Profesional", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     //Instanciamos a la clase DAOAdministrador para obtener los valores
@@ -147,7 +145,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                 }
             }
         }
-        /****                     CONSTRUCTOR DEL FORMULARIO DE REGISTRO                     ****/
+        /**                     CONSTRUCTOR DEL FORMULARIO DE REGISTRO                     **/
         //Este es el constructor del Controlador Administrador, el cuál tendrá las acciones dentro del InitialComponent
         public CTRLAdministrador(RegistroForm Vista)
         {
@@ -298,7 +296,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                     CommonMethods ObjMetodosComunes = new CommonMethods();
 
                     //Obtenemos datos del objeto ObjDAOActualizarProfesional
-                    ObjDAOActualizarProfesional.ProfesionalId = int.Parse(ObjRegistroForm.txtIDProfesional.Text.Trim());
                     ObjDAOActualizarProfesional.UsuarioId = int.Parse(ObjRegistroForm.txtIDUsuario.Text.Trim());
                     ObjDAOActualizarProfesional.Usuario = ObjRegistroForm.txtUsuario.Text.Trim();
                     //Mandamos a llamar el método MetodoEncriptacionAES para encriptarla y enviarla a la base de datos

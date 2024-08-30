@@ -18,8 +18,8 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DTO
         private TimeSpan horaInicio;
         private TimeSpan horaFinal;
         private int estadoId;
-        private int pacienteId;
-        private int profesionalId;
+        private string documentoPresentado;
+        private string duiProfesional;
         private int lugarId;
 
         public int ConsultaId { get => consultaId; set => consultaId = value; }
@@ -29,8 +29,8 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DTO
         public TimeSpan HoraInicio { get => horaInicio; set => horaInicio = value; }
         public TimeSpan HoraFinal { get => horaFinal; set => horaFinal = value; }
         public int EstadoId { get => estadoId; set => estadoId = value; }
-        public int PacienteId { get => pacienteId; set => pacienteId = value; }
-        public int ProfesionalId { get => profesionalId; set => profesionalId = value; }
         public int LugarId { get => lugarId; set => lugarId = value; }
+        public string DocumentoPresentado { get => documentoPresentado; set => documentoPresentado = value; }
+        public string DuiProfesional { get => duiProfesional; set => duiProfesional = value; }
     }
 }

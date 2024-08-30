@@ -81,7 +81,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                               "AND [ID del Expediente] = @expedienteId AND [ID de la Cita] = @citaId";
                 SqlCommand objComando = new SqlCommand(info, Conexion.Connection);
 
-                objComando.Parameters.AddWithValue("@pacienteId", PacienteId);
+                objComando.Parameters.AddWithValue("@pacienteId", DocumentoPaciente);
                 objComando.Parameters.AddWithValue("@expedienteId", N_expediente);
                 objComando.Parameters.AddWithValue("@citaId", CitaId);
 

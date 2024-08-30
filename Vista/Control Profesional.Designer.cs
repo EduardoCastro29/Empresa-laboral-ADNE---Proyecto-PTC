@@ -115,7 +115,7 @@
             this.lblEmail.Location = new System.Drawing.Point(234, 80);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblEmail.Size = new System.Drawing.Size(287, 40);
+            this.lblEmail.Size = new System.Drawing.Size(163, 22);
             this.lblEmail.TabIndex = 5;
             this.lblEmail.Text = "email@proveedor";
             this.lblEmail.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -130,7 +130,7 @@
             this.lblCorreo.Location = new System.Drawing.Point(29, 79);
             this.lblCorreo.Name = "lblCorreo";
             this.lblCorreo.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblCorreo.Size = new System.Drawing.Size(308, 39);
+            this.lblCorreo.Size = new System.Drawing.Size(176, 23);
             this.lblCorreo.TabIndex = 4;
             this.lblCorreo.Text = "Correo Electrónico:";
             this.lblCorreo.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -172,12 +172,12 @@
             this.lblIdProfesional.AutoEllipsis = false;
             this.lblIdProfesional.CursorType = null;
             this.lblIdProfesional.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Italic);
-            this.lblIdProfesional.Location = new System.Drawing.Point(575, 21);
+            this.lblIdProfesional.Location = new System.Drawing.Point(493, 21);
             this.lblIdProfesional.Name = "lblIdProfesional";
             this.lblIdProfesional.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblIdProfesional.Size = new System.Drawing.Size(16, 19);
+            this.lblIdProfesional.Size = new System.Drawing.Size(95, 19);
             this.lblIdProfesional.TabIndex = 1;
-            this.lblIdProfesional.Text = "ID";
+            this.lblIdProfesional.Text = "012345678-9";
             this.lblIdProfesional.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lblIdProfesional.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
@@ -191,7 +191,7 @@
             this.lblNombreProfesional.Location = new System.Drawing.Point(29, 31);
             this.lblNombreProfesional.Name = "lblNombreProfesional";
             this.lblNombreProfesional.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblNombreProfesional.Size = new System.Drawing.Size(377, 39);
+            this.lblNombreProfesional.Size = new System.Drawing.Size(217, 23);
             this.lblNombreProfesional.TabIndex = 0;
             this.lblNombreProfesional.Text = "Nombre del profesional";
             this.lblNombreProfesional.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
