@@ -14,8 +14,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
     {
         readonly ActividadesForm ObjActividadesForm;
         HistorialForm ObjVerHistorial = null;
-
-        //Creamos el constructor
         public CTRLActividades(ActividadesForm Vista)
         {
             ObjActividadesForm = Vista;
