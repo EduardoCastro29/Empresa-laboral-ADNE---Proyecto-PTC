@@ -53,11 +53,11 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
             {
                 Conexion.Connection = Conectar();
 
-                string queryInsertarEmpresa = "";
+                string queryVerificarEmpresa = "";
 
-                SqlCommand ObjComandoInsertarEmpresa = new SqlCommand(queryInsertarEmpresa, Conexion.Connection);
+                SqlCommand ObjComandoVerificarEmpresa = new SqlCommand(queryVerificarEmpresa, Conexion.Connection);
 
-                if (ObjComandoInsertarEmpresa.ExecuteNonQuery() > 0)
+                if (ObjComandoVerificarEmpresa.ExecuteNonQuery() > 0)
                     return true;
                 else return false;
             }
