@@ -25,13 +25,13 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
 
                 SqlCommand ObjComandoInsertarEmpresa = new SqlCommand(queryInsertarEmpresa, Conexion.Connection);
 
-                ObjComandoInsertarEmpresa.Parameters.AddWithValue("", );
-                ObjComandoInsertarEmpresa.Parameters.AddWithValue("", );
-                ObjComandoInsertarEmpresa.Parameters.AddWithValue("", );
-                ObjComandoInsertarEmpresa.Parameters.AddWithValue("", );
-                ObjComandoInsertarEmpresa.Parameters.AddWithValue("", );
-                ObjComandoInsertarEmpresa.Parameters.AddWithValue("", );
-                ObjComandoInsertarEmpresa.Parameters.AddWithValue("", );
+                //ObjComandoInsertarEmpresa.Parameters.AddWithValue("", );
+                //ObjComandoInsertarEmpresa.Parameters.AddWithValue("", );
+                //ObjComandoInsertarEmpresa.Parameters.AddWithValue("", );
+                //ObjComandoInsertarEmpresa.Parameters.AddWithValue("", );
+                //ObjComandoInsertarEmpresa.Parameters.AddWithValue("", );
+                //ObjComandoInsertarEmpresa.Parameters.AddWithValue("", );
+                //ObjComandoInsertarEmpresa.Parameters.AddWithValue("", );
 
                 if (ObjComandoInsertarEmpresa.ExecuteNonQuery() > 0)
                     return true;

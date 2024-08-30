@@ -31,7 +31,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             //Se generara un formulario en específico dentro del panel
             ObjDashboard.Load += new EventHandler(FormularioPredeterminado);
             ObjDashboard.Load += new EventHandler(DatosUsuarioLogin);
-            //ObjDashboard.btnCerrarPrograma.Click += new EventHandler(CerrarPrograma);
+            ObjDashboard.FormClosing += new FormClosingEventHandler(CerrarPrograma);
             ObjDashboard.btnCerrarS.Click += new EventHandler(CerrarSesion);
 
             //Creamos los eventos click de los formularios, como referencia a qué formulario se tomara en cuenta
@@ -50,11 +50,11 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             ObjDashboard.lblIdUsuario.Text = InicioSesion.DesempenoId;
             ObjDashboard.picUsuario.Image = Image.FromFile(InicioSesion.Imagen);
         }
-        private void CerrarPrograma(object sender, EventArgs e)
+        private void CerrarPrograma(object sender, FormClosingEventArgs e)
         {
             if (MessageBox.Show("Desea cerrar el programa de forma autmática? Al cerrarse, cerrará la sesión de forma automática", "Cerrar el Programa", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                Application.Exit();
+                Environment.Exit(0);
             }
         }
         private void CerrarSesion(object sender, EventArgs e)

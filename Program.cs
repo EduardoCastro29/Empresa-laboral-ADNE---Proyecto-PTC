@@ -22,11 +22,11 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC
             DAOPrimerUsoSistema ObjVerificarEmpresa = new DAOPrimerUsoSistema();
 
             //Indicamos que formularios se abriran según la consulta SQL
-            if (ObjVerificarEmpresa.VerificarEmpresa() == false)
-            {
-                Application.Run(new PrimerUsoSistemaForm());
-            }
-            else if (ObjVerificarUsuarios.VerificarUsuario() == false)
+            //if (ObjVerificarEmpresa.VerificarEmpresa() == false)
+            //{
+            //    Application.Run(new PrimerUsoSistemaForm());
+            //}
+            /*else*/ if (ObjVerificarUsuarios.VerificarUsuario() == false)
             {
                 Application.Run(new RegistroForm());
             }
