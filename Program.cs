@@ -18,17 +18,22 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC
             Application.SetCompatibleTextRenderingDefault(false);
 
             //Creamos un objeto de la clase DAOLogin
-            DAOLogin verificarUsuarios = new DAOLogin();
+            DAOLogin ObjVerificarUsuarios = new DAOLogin();
+            DAOPrimerUsoSistema ObjVerificarEmpresa = new DAOPrimerUsoSistema();
 
-            //Si hay usuarios registrados en la base de datos, abrimos el formulario de Login
-            if (verificarUsuarios.VerificarUsuario() == true)
+            //Indicamos que formularios se abriran según la consulta SQL
+            if (ObjVerificarEmpresa.VerificarEmpresa() == false)
             {
-                Application.Run(new LoginForm());
+                Application.Run(new PrimerUsoSistemaForm());
+            }
+            else if (ObjVerificarUsuarios.VerificarUsuario() == false)
+            {
+                Application.Run(new RegistroForm());
             }
             else
             {
-                //Caso contrario, se abrira el formulario de Registro
-                Application.Run(new RegistroForm());
+                //Caso contrario, se abrira el formulario de Login (Ya existe una empresa registrada y el primer empleado registrado)
+                Application.Run(new LoginForm());
             }
         }
     }

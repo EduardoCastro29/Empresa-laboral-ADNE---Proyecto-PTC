@@ -14,6 +14,62 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
 {
     internal class DAOPrimerUsoSistema : DTOPrimerUsoSistema
     {
+        readonly SqlCommand Conexion = new SqlCommand();
+        public bool RegistrarEmpresa()
+        {
+            try
+            {
+                Conexion.Connection = Conectar();
 
+                string queryInsertarEmpresa = "";
+
+                SqlCommand ObjComandoInsertarEmpresa = new SqlCommand(queryInsertarEmpresa, Conexion.Connection);
+
+                ObjComandoInsertarEmpresa.Parameters.AddWithValue("", );
+                ObjComandoInsertarEmpresa.Parameters.AddWithValue("", );
+                ObjComandoInsertarEmpresa.Parameters.AddWithValue("", );
+                ObjComandoInsertarEmpresa.Parameters.AddWithValue("", );
+                ObjComandoInsertarEmpresa.Parameters.AddWithValue("", );
+                ObjComandoInsertarEmpresa.Parameters.AddWithValue("", );
+                ObjComandoInsertarEmpresa.Parameters.AddWithValue("", );
+
+                if (ObjComandoInsertarEmpresa.ExecuteNonQuery() > 0)
+                    return true;
+                else return false;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return false;
+            }
+            finally
+            {
+                Conexion.Connection.Close();
+            }
+        }
+        public bool VerificarEmpresa()
+        {
+            try
+            {
+                Conexion.Connection = Conectar();
+
+                string queryInsertarEmpresa = "";
+
+                SqlCommand ObjComandoInsertarEmpresa = new SqlCommand(queryInsertarEmpresa, Conexion.Connection);
+
+                if (ObjComandoInsertarEmpresa.ExecuteNonQuery() > 0)
+                    return true;
+                else return false;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return false;
+            }
+            finally
+            {
+                Conexion.Connection.Close();
+            }
+        }
     }
 }

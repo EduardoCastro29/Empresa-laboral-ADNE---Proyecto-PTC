@@ -197,7 +197,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                 Conexion.Connection = Conectar();
 
                 //Iniciamos el tipo de comando
-                string consultaSQLLLenarDGV = "SELECT * FROM vistaProfesional";
+                string consultaSQLLLenarDGV = "SELECT * FROM vistaProfesionalDGV";
 
                 //Llenamos el comando
                 SqlCommand ObjComandoSQLServerDGV = new SqlCommand(consultaSQLLLenarDGV, Conexion.Connection);
