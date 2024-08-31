@@ -44,7 +44,8 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                     try
                     {
                         //Creamos el query
-                        string consultaSQLProfesional = "INSERT INTO Profesional(DUI, telefono, nombre, apellido, correoElectronico, foto, desempenoId, usuarioId, especialidadId, especialidadAltId)\r\nVALUES \r\n(@DUI, @telefono, @nombre, @apellido, @correoElectronico, @foto, @desempenoId, @usuarioId, @especialidadId, @especialidadAltId)";
+                        string consultaSQLProfesional = "INSERT INTO Profesional(DUI, telefono, nombre, apellido, correoElectronico, foto, desempenoId, usuarioId)\r\nVALUES \r\n(@DUI, @telefono, @nombre, @apellido, @correoElectronico, @foto, @desempenoId, @usuarioId)";
+                        
                         //Le mandamos la consulta a SQL por medio de un comando
                         SqlCommand ObjComandoSQLServer = new SqlCommand(consultaSQLProfesional, Conexion.Connection);
 
@@ -58,8 +59,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                         ObjComandoSQLServer.Parameters.AddWithValue("@desempenoId", DesempenoId);
                         //Insertamos el ID del usuario antes creado
                         ObjComandoSQLServer.Parameters.AddWithValue("@usuarioId", UsuarioID);
-                        ObjComandoSQLServer.Parameters.AddWithValue("@especialidadId", Especialidad);
-                        ObjComandoSQLServer.Parameters.AddWithValue("@especialidadAltId", EspecialidadAlt);
 
                         //Si el número de filas afectadas fueron existosas, retornamos verdadero
                         if (ObjComandoSQLServer.ExecuteNonQuery() > 0)
@@ -116,47 +115,47 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                 Conexion.Connection.Close();
             }
         }
-        public DataTable AgregarCMBEspecialidad()
-        {
-            try
-            {
-                Conexion.Connection = Conectar();
-                string consultaSQL = "SELECT * FROM Especialidad";
-                SqlDataAdapter ObjLlenarCombobox = new SqlDataAdapter(consultaSQL, Conexion.Connection);
-                DataTable ObjllenarDT = new DataTable();
-                ObjLlenarCombobox.Fill(ObjllenarDT);
-                return ObjllenarDT;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-                return null;
-            }
-            finally
-            {
-                Conexion.Connection.Close();
-            }
-        }
-        public DataTable AgregarCMBEspecialidadAlt()
-        {
-            try
-            {
-                Conexion.Connection = Conectar();
-                string consultaSQL = "SELECT * FROM EspecialidadAlt";
-                SqlDataAdapter ObjLlenarCombobox = new SqlDataAdapter(consultaSQL, Conexion.Connection);
-                DataTable ObjllenarDT = new DataTable();
-                ObjLlenarCombobox.Fill(ObjllenarDT);
-                return ObjllenarDT;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-                return null;
-            }
-            finally
-            {
-                Conexion.Connection.Close();
-            }
-        }
+        //public DataTable AgregarCMBEspecialidad()
+        //{
+        //    try
+        //    {
+        //        Conexion.Connection = Conectar();
+        //        string consultaSQL = "SELECT * FROM Especialidad";
+        //        SqlDataAdapter ObjLlenarCombobox = new SqlDataAdapter(consultaSQL, Conexion.Connection);
+        //        DataTable ObjllenarDT = new DataTable();
+        //        ObjLlenarCombobox.Fill(ObjllenarDT);
+        //        return ObjllenarDT;
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        MessageBox.Show(ex.Message);
+        //        return null;
+        //    }
+        //    finally
+        //    {
+        //        Conexion.Connection.Close();
+        //    }
+        //}
+        //public DataTable AgregarCMBEspecialidadAlt()
+        //{
+        //    try
+        //    {
+        //        Conexion.Connection = Conectar();
+        //        string consultaSQL = "SELECT * FROM EspecialidadAlt";
+        //        SqlDataAdapter ObjLlenarCombobox = new SqlDataAdapter(consultaSQL, Conexion.Connection);
+        //        DataTable ObjllenarDT = new DataTable();
+        //        ObjLlenarCombobox.Fill(ObjllenarDT);
+        //        return ObjllenarDT;
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        MessageBox.Show(ex.Message);
+        //        return null;
+        //    }
+        //    finally
+        //    {
+        //        Conexion.Connection.Close();
+        //    }
+        //}
     }
 }

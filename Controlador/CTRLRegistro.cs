@@ -13,6 +13,7 @@ using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
 using System.Drawing.Text;
+using Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DTO;
 
 namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
 {
@@ -26,6 +27,8 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             //Enlazando el objeto con la Vista dentro del constructor
             ObjRegistro = Vista;
 
+            ObjRegistro.Load += new EventHandler(CargarCMB);
+
             //Creando el evento EventHandler con el boton Ingresar con parametros AccederLogin, que posteriormente ejecutará un método
             ObjRegistro.btnRegistrar.Click += new EventHandler(AccederLoginPrimerUso);
             ObjRegistro.btnCargarImagen.Click += new EventHandler(CargarImagen);
@@ -38,10 +41,8 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             ObjRegistro.txtTelefono.KeyPress += new KeyPressEventHandler(ValidarCampoNumero);
             ObjRegistro.txtUsuario.KeyPress += new KeyPressEventHandler(ValidarCampoUsuario);
             ObjRegistro.txtCorreo.KeyPress += new KeyPressEventHandler(ValidarCampoCorreo);
-
-            ObjRegistro.Load += new EventHandler(CargarCMB);
         }
-
+        #region Validaciones de Campos
         private void ValidarCampoCorreo(object sender, KeyPressEventArgs e )
         {
             // Permite caracteres de control como el retroceso(Backspace) 
@@ -65,8 +66,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                 // e.Handled en true, indicas que has manejado el evento y que el sistema no debe hacer nada más con él. 
                 e.Handled = true;
         }
-
-
         private void ValidarCampoUsuario(object sender, KeyPressEventArgs e )
         {
             // Permite caracteres de control como el retroceso(Backspace) 
@@ -103,7 +102,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                 // e.Handled en true, indicas que has manejado el evento y que el sistema no debe hacer nada más con él. 
                  e.Handled = true;
         }
-
         private void ValidarCampoNumero(object sender, KeyPressEventArgs e)
         {
             if (char.IsDigit (e.KeyChar))
@@ -115,6 +113,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             e.Handled = true;
 
         }
+        #endregion
         private void CargarCMB(object sender, EventArgs e)
         {
             DAORegistro ObjDAOCargarCMB = new DAORegistro();
@@ -124,15 +123,15 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             ObjRegistro.cmbDesempeno.DisplayMember = "desempeno"; //Lo que se mostrara del Value
             ObjRegistro.cmbDesempeno.Enabled = false;
 
-            //Combobox Especialidad 
-            ObjRegistro.cmbEspecialidad1.DataSource = ObjDAOCargarCMB.AgregarCMBEspecialidad();
-            ObjRegistro.cmbEspecialidad1.ValueMember = "especialidadId"; //Agregamos los atributos que estan en la tabla Especialidad
-            ObjRegistro.cmbEspecialidad1.DisplayMember = "nombreEspecialidad";
+            ////Combobox Especialidad 
+            //ObjRegistro.cmbEspecialidad1.DataSource = ObjDAOCargarCMB.AgregarCMBEspecialidad();
+            //ObjRegistro.cmbEspecialidad1.ValueMember = "especialidadId"; //Agregamos los atributos que estan en la tabla Especialidad
+            //ObjRegistro.cmbEspecialidad1.DisplayMember = "nombreEspecialidad";
 
-            //Combobox Especialidad Alternativa 
-            ObjRegistro.cmbEspecialidad2.DataSource = ObjDAOCargarCMB.AgregarCMBEspecialidadAlt();
-            ObjRegistro.cmbEspecialidad2.ValueMember = "especialidadAltId";
-            ObjRegistro.cmbEspecialidad2.DisplayMember = "nombreEspecialidadAlt";
+            ////Combobox Especialidad Alternativa 
+            //ObjRegistro.cmbEspecialidad2.DataSource = ObjDAOCargarCMB.AgregarCMBEspecialidadAlt();
+            //ObjRegistro.cmbEspecialidad2.ValueMember = "especialidadAltId";
+            //ObjRegistro.cmbEspecialidad2.DisplayMember = "nombreEspecialidadAlt";
         }
         private void AccederLoginPrimerUso(object sender, EventArgs e)
         {
@@ -175,8 +174,8 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                     ObjDAORegistro.Apellidos = ObjRegistro.txtApellido.Text.Trim();
                     ObjDAORegistro.Telefono = ObjRegistro.txtTelefono.Text;
                     ObjDAORegistro.DesempenoId = 1;
-                    ObjDAORegistro.Especialidad = int.Parse(ObjRegistro.cmbEspecialidad1.SelectedValue.ToString());
-                    ObjDAORegistro.EspecialidadAlt = int.Parse(ObjRegistro.cmbEspecialidad2.SelectedValue.ToString());
+                    //ObjDAORegistro.Especialidad = int.Parse(ObjRegistro.cmbEspecialidad1.SelectedValue.ToString());
+                    //ObjDAORegistro.EspecialidadAlt = int.Parse(ObjRegistro.cmbEspecialidad2.SelectedValue.ToString());
 
                     //Guardar imagen
                     if (ObjRegistro.picProfesional.Image != null)
@@ -210,9 +209,20 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                     }
                     else
                     {
+                        MessageBox.Show("Excelente", "Primer Usuario", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        RegistroEspecialidadesForm ObjAbrirRegistroEspecialidad = new RegistroEspecialidadesForm();
+                        ObjRegistro.Hide();
+
+                        //Guardamos las variables de registro que se han hecho durante la inserción de la tabla profesional
+                        ObjAbrirRegistroEspecialidad.txtDUIProfesional.Text = ObjRegistro.txtDui.Text;
+                        ObjAbrirRegistroEspecialidad.picProfesional.Image = Image.FromFile(ObjDAORegistro.Imagen);
+                        ObjAbrirRegistroEspecialidad.lblNombreProfesional.Text = ObjDAORegistro.Nombres + " " + ObjDAORegistro.Apellidos;
+
+                        ObjAbrirRegistroEspecialidad.ShowDialog();
+
                         //Ocultamos el formulario de registro y le daremos la bienvenida al Login
                         LoginForm ObjMostrarLogin = new LoginForm();
-                        ObjRegistro.Hide();
                         ObjMostrarLogin.Show();
                     }
                 }

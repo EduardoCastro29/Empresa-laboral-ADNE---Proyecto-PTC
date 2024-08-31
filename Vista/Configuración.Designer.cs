@@ -32,6 +32,7 @@
             Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             this.bunifuShadowPanel1 = new Bunifu.UI.WinForms.BunifuShadowPanel();
             this.pnlForms = new Bunifu.UI.WinForms.BunifuGradientPanel();
+            this.bunifuPanel2 = new Bunifu.UI.WinForms.BunifuPanel();
             this.bunifuVScrollBar1 = new Bunifu.UI.WinForms.BunifuVScrollBar();
             this.pnl3Section = new Bunifu.UI.WinForms.BunifuGradientPanel();
             this.bunifuShadowPanel4 = new Bunifu.UI.WinForms.BunifuShadowPanel();
@@ -59,7 +60,6 @@
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.bunifuLabel5 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
-            this.bunifuPanel2 = new Bunifu.UI.WinForms.BunifuPanel();
             this.bunifuShadowPanel1.SuspendLayout();
             this.pnlForms.SuspendLayout();
             this.pnl3Section.SuspendLayout();
@@ -122,6 +122,22 @@
             this.pnlForms.Quality = 10;
             this.pnlForms.Size = new System.Drawing.Size(986, 851);
             this.pnlForms.TabIndex = 1;
+            // 
+            // bunifuPanel2
+            // 
+            this.bunifuPanel2.BackgroundColor = System.Drawing.Color.White;
+            this.bunifuPanel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuPanel2.BackgroundImage")));
+            this.bunifuPanel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuPanel2.BorderColor = System.Drawing.Color.White;
+            this.bunifuPanel2.BorderRadius = 3;
+            this.bunifuPanel2.BorderThickness = 1;
+            this.bunifuPanel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.bunifuPanel2.Location = new System.Drawing.Point(0, 82);
+            this.bunifuPanel2.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);
+            this.bunifuPanel2.Name = "bunifuPanel2";
+            this.bunifuPanel2.ShowBorders = true;
+            this.bunifuPanel2.Size = new System.Drawing.Size(976, 1);
+            this.bunifuPanel2.TabIndex = 20;
             // 
             // bunifuVScrollBar1
             // 
@@ -261,7 +277,7 @@
             this.lblAcercaDe.Location = new System.Drawing.Point(60, 21);
             this.lblAcercaDe.Name = "lblAcercaDe";
             this.lblAcercaDe.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblAcercaDe.Size = new System.Drawing.Size(152, 36);
+            this.lblAcercaDe.Size = new System.Drawing.Size(522, 117);
             this.lblAcercaDe.TabIndex = 9;
             this.lblAcercaDe.Text = "Acerca de";
             this.lblAcercaDe.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -341,7 +357,7 @@
             this.lblPerosnalizacionModo.Location = new System.Drawing.Point(60, 108);
             this.lblPerosnalizacionModo.Name = "lblPerosnalizacionModo";
             this.lblPerosnalizacionModo.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblPerosnalizacionModo.Size = new System.Drawing.Size(398, 32);
+            this.lblPerosnalizacionModo.Size = new System.Drawing.Size(488, 39);
             this.lblPerosnalizacionModo.TabIndex = 12;
             this.lblPerosnalizacionModo.Text = "Cambiar tema a modo oscuro";
             this.lblPerosnalizacionModo.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -358,7 +374,7 @@
             this.lblPersonalizacion.Location = new System.Drawing.Point(60, 23);
             this.lblPersonalizacion.Name = "lblPersonalizacion";
             this.lblPersonalizacion.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblPersonalizacion.Size = new System.Drawing.Size(220, 36);
+            this.lblPersonalizacion.Size = new System.Drawing.Size(758, 117);
             this.lblPersonalizacion.TabIndex = 9;
             this.lblPersonalizacion.Text = "Personalización";
             this.lblPersonalizacion.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -529,9 +545,9 @@
             this.lblDUIIdentificacion.Location = new System.Drawing.Point(348, 212);
             this.lblDUIIdentificacion.Margin = new System.Windows.Forms.Padding(20, 0, 3, 20);
             this.lblDUIIdentificacion.Name = "lblDUIIdentificacion";
-            this.lblDUIIdentificacion.Size = new System.Drawing.Size(211, 25);
+            this.lblDUIIdentificacion.Size = new System.Drawing.Size(225, 25);
             this.lblDUIIdentificacion.TabIndex = 16;
-            this.lblDUIIdentificacion.Text = "ID de Identificación";
+            this.lblDUIIdentificacion.Text = "DUI de Identificación";
             // 
             // lblCorreoUsuario
             // 
@@ -581,13 +597,13 @@
             this.lblRolUsuario.AutoSize = true;
             this.lblRolUsuario.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRolUsuario.ForeColor = System.Drawing.Color.White;
-            this.lblRolUsuario.Location = new System.Drawing.Point(747, 0);
+            this.lblRolUsuario.Location = new System.Drawing.Point(518, 0);
             this.lblRolUsuario.Margin = new System.Windows.Forms.Padding(3, 10, 3, 0);
             this.lblRolUsuario.Name = "lblRolUsuario";
             this.lblRolUsuario.Padding = new System.Windows.Forms.Padding(0, 20, 10, 0);
-            this.lblRolUsuario.Size = new System.Drawing.Size(190, 48);
+            this.lblRolUsuario.Size = new System.Drawing.Size(416, 48);
             this.lblRolUsuario.TabIndex = 11;
-            this.lblRolUsuario.Text = "Rol de Usuario";
+            this.lblRolUsuario.Text = "Profesional, Psicólogo, Terapeuta";
             this.lblRolUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // picUsuario
@@ -596,7 +612,7 @@
             this.picUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.picUsuario.AutoSizeHeight = false;
-            this.picUsuario.BorderRadius = 129;
+            this.picUsuario.BorderRadius = 136;
             this.picUsuario.Image = global::Empresa_laboral_ADNE___Proyecto_PTC.Properties.Resources.Foto_configuración;
             this.picUsuario.IsCircle = true;
             this.picUsuario.Location = new System.Drawing.Point(17, 81);
@@ -619,7 +635,7 @@
             this.lblCuenta.Location = new System.Drawing.Point(84, 21);
             this.lblCuenta.Name = "lblCuenta";
             this.lblCuenta.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblCuenta.Size = new System.Drawing.Size(145, 36);
+            this.lblCuenta.Size = new System.Drawing.Size(500, 117);
             this.lblCuenta.TabIndex = 9;
             this.lblCuenta.Text = "Mi Cuenta";
             this.lblCuenta.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -659,7 +675,7 @@
             this.bunifuLabel5.Margin = new System.Windows.Forms.Padding(30, 30, 3, 3);
             this.bunifuLabel5.Name = "bunifuLabel5";
             this.bunifuLabel5.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel5.Size = new System.Drawing.Size(255, 44);
+            this.bunifuLabel5.Size = new System.Drawing.Size(690, 117);
             this.bunifuLabel5.TabIndex = 3;
             this.bunifuLabel5.Text = "Configuración";
             this.bunifuLabel5.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -680,22 +696,6 @@
             this.bunifuPanel1.ShowBorders = true;
             this.bunifuPanel1.Size = new System.Drawing.Size(991, 861);
             this.bunifuPanel1.TabIndex = 4;
-            // 
-            // bunifuPanel2
-            // 
-            this.bunifuPanel2.BackgroundColor = System.Drawing.Color.White;
-            this.bunifuPanel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuPanel2.BackgroundImage")));
-            this.bunifuPanel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuPanel2.BorderColor = System.Drawing.Color.White;
-            this.bunifuPanel2.BorderRadius = 3;
-            this.bunifuPanel2.BorderThickness = 1;
-            this.bunifuPanel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.bunifuPanel2.Location = new System.Drawing.Point(0, 82);
-            this.bunifuPanel2.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);
-            this.bunifuPanel2.Name = "bunifuPanel2";
-            this.bunifuPanel2.ShowBorders = true;
-            this.bunifuPanel2.Size = new System.Drawing.Size(976, 1);
-            this.bunifuPanel2.TabIndex = 20;
             // 
             // ConfiguraciónForm
             // 

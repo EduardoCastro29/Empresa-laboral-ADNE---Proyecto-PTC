@@ -31,34 +31,36 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                 ObjComandoSQLServerUsuario.Parameters.AddWithValue("@contraseña", Contraseña);
                 ObjComandoSQLServerUsuario.Parameters.AddWithValue("@correoElectronico", Correo);
 
-                int UsuarioId = (int)ObjComandoSQLServerUsuario.ExecuteScalar();
+                int UsuarioID = (int)ObjComandoSQLServerUsuario.ExecuteScalar();
 
                 //Si el UsuarioID insertado fue mayor a 0, es decir, hay un usuario insertado con el ID encontrado
                 //Ingresamos los datos del empleado
-                if (UsuarioId > 0)
+                if (UsuarioID > 0)
                 {
+                    //Si todo salio bien, insertamos lo datos del empleado
                     try
                     {
-                        //Inicializamos la consulta
-                        string consultaSQLProfesional = "INSERT INTO Profesional(DUI, telefono, nombre, apellido, correoElectronico, foto, desempenoId, usuarioId, especialidadId, especialidadAltId) VALUES (@DUI, @telefono, @nombre, @apellido, @correoElectronico, @foto, @desempenoId, @usuarioId, @especialidadId, @especialidadAltId)";
+                        //Creamos el query
+                        string consultaSQLProfesional = "INSERT INTO Profesional(DUI, telefono, nombre, apellido, correoElectronico, foto, desempenoId, usuarioId)\r\nVALUES \r\n(@DUI, @telefono, @nombre, @apellido, @correoElectronico, @foto, @desempenoId, @usuarioId)";
 
-                        //Inicializamos el comando
-                        SqlCommand ObjComandoSQLServerProfesional = new SqlCommand(consultaSQLProfesional, Conexion.Connection);
+                        //Le mandamos la consulta a SQL por medio de un comando
+                        SqlCommand ObjComandoSQLServer = new SqlCommand(consultaSQLProfesional, Conexion.Connection);
 
                         //Añadimos los valores
-                        ObjComandoSQLServerProfesional.Parameters.AddWithValue("@DUI", Dui);
-                        ObjComandoSQLServerProfesional.Parameters.AddWithValue("@telefono", Telefono);
-                        ObjComandoSQLServerProfesional.Parameters.AddWithValue("@nombre", Nombres);
-                        ObjComandoSQLServerProfesional.Parameters.AddWithValue("@apellido", Apellidos);
-                        ObjComandoSQLServerProfesional.Parameters.AddWithValue("@correoElectronico", Correo);
-                        ObjComandoSQLServerProfesional.Parameters.AddWithValue("@foto", Imagen);
-                        ObjComandoSQLServerProfesional.Parameters.AddWithValue("@desempenoId", DesempenoId);
-                        ObjComandoSQLServerProfesional.Parameters.AddWithValue("@usuarioId", UsuarioId);
-                        ObjComandoSQLServerProfesional.Parameters.AddWithValue("@especialidadId", Especialidad);
-                        ObjComandoSQLServerProfesional.Parameters.AddWithValue("@especialidadAltId", EspecialidadAlt);
+                        ObjComandoSQLServer.Parameters.AddWithValue("@DUI", Dui);
+                        ObjComandoSQLServer.Parameters.AddWithValue("@telefono", Telefono);
+                        ObjComandoSQLServer.Parameters.AddWithValue("@nombre", Nombres);
+                        ObjComandoSQLServer.Parameters.AddWithValue("@apellido", Apellidos);
+                        ObjComandoSQLServer.Parameters.AddWithValue("@correoElectronico", Correo);
+                        ObjComandoSQLServer.Parameters.AddWithValue("@foto", Imagen);
+                        ObjComandoSQLServer.Parameters.AddWithValue("@desempenoId", DesempenoId);
+                        //Insertamos el ID del usuario antes creado
+                        ObjComandoSQLServer.Parameters.AddWithValue("@usuarioId", UsuarioID);
 
-                        if (ObjComandoSQLServerProfesional.ExecuteNonQuery() > 0)
+                        //Si el número de filas afectadas fueron existosas, retornamos verdadero
+                        if (ObjComandoSQLServer.ExecuteNonQuery() > 0)
                             return true;
+                        //En caso contrario, retornamos falso
                         else return false;
                     }
                     catch (Exception ex)
@@ -95,11 +97,9 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                                                     "telefono           = @telefono, " +
                                                     "nombre             = @nombre, " +
                                                     "apellido           = @apellido, " +
-                                                    "correoElectronico  = @correoElectronico," +
+                                                    "correoElectronico  = @correoElectronico, " +
                                                     "foto               = @foto, " +
-                                                    "desempenoId        = @desempenoId," +
-                                                    "especialidadId     = @especialidadId, " +
-                                                    "especialidadAltId  = @especialidadAltId " +
+                                                    "desempenoId        = @desempenoId " +
 
                                                     "WHERE " +
                                                     "DUI = @DUI";
@@ -113,8 +113,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                 ObjComandoSQLServerProfesional.Parameters.AddWithValue("@correoElectronico", Correo);
                 ObjComandoSQLServerProfesional.Parameters.AddWithValue("@foto", Imagen);
                 ObjComandoSQLServerProfesional.Parameters.AddWithValue("@desempenoId", DesempenoId);
-                ObjComandoSQLServerProfesional.Parameters.AddWithValue("@especialidadId", Especialidad);
-                ObjComandoSQLServerProfesional.Parameters.AddWithValue("@especialidadAltId", EspecialidadAlt);
                 ObjComandoSQLServerProfesional.Parameters.AddWithValue("@DUI", Dui);
 
                 if (ObjComandoSQLServerProfesional.ExecuteNonQuery() > 0)

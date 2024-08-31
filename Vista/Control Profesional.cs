@@ -22,7 +22,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Vista
                 lblNombreProfesional.Text = DAOProfesional.NombresApellidos;
                 lblEmail.Text = DAOProfesional.Correo;
                 lblEspecialidad.Text = DAOProfesional.Especialidad;
-                lblEspecialidadAlt.Text = DAOProfesional.EspecialidadAlt;
             }
             catch (Exception ex)
             {

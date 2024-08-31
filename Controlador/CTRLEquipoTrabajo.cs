@@ -50,7 +50,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                 ObjDAOEquipo.NombresApellidos = (string)DataRow[1];
                 ObjDAOEquipo.Correo = (string)DataRow[2];
                 ObjDAOEquipo.Especialidad = (string)DataRow[3];
-                ObjDAOEquipo.EspecialidadAlt = (string)DataRow[4];
 
                 //Instanciamos a la clase UCEmpleado que necesitamos recrear
                 Control_Profesional ObjControlProfesional = new Control_Profesional(ObjDAOEquipo);

@@ -25,11 +25,11 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             ObjLogin = Vista;
 
             // Creando el evento EventHandler con el botón Ingresar, y los eventos KeyDown y Click
-            ObjLogin.Load += new EventHandler(CargarLogIn);
+            ObjLogin.Load += new EventHandler(CargarLogin);
             ObjLogin.btnIniciarSesion.Click += new EventHandler(AccederLogin);
             ObjLogin.btnOlvidarContrasena.Click += new EventHandler(OlvidarContrasena);
         }
-        private void CargarLogIn(object sender, EventArgs e)
+        private void CargarLogin(object sender, EventArgs e)
         {
             ObjLogin.txtUsuario.Text = Properties.Settings.Default.Usuario;
             ObjLogin.txtContraseña.Text = Properties.Settings.Default.Contrasena;
@@ -62,7 +62,21 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                 {
                     if (ValidarLoginUsuario == true && ValidarLoginEmpleado == true)
                     {
-                        //MessageBox.Show($"Bienvenido, {InicioSesion.Usuario}", "Bienvenido!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        if (ObjLogin.cbRecuerdame.Checked == true)
+                        {
+                            //string usuario = ObjDAOUsuario.Usuario;
+                            Properties.Settings.Default.Usuario = ObjLogin.txtUsuario.Text;
+                            Properties.Settings.Default.Contrasena = ObjLogin.txtContraseña.Text;
+                            Properties.Settings.Default.Save();
+                        }
+                        else
+                        {
+                            //string usuario = ObjDAOUsuario.Usuario;
+                            Properties.Settings.Default.Usuario = "";
+                            Properties.Settings.Default.Contrasena = "";
+                            Properties.Settings.Default.Save();
+                        }
+
                         DashboardForm ObjMostrarDashboard = new DashboardForm();
                         ObjLogin.Hide();
                         ObjMostrarDashboard.Show();
@@ -70,20 +84,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                     else
                     {
                         MessageBox.Show("El usuario o contraseña son incorrectos", "Inicio de sesión", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                    if (ObjLogin.cbRecuerdame.Checked == true)
-                    {
-                        string usuario = ObjDAOUsuario.Usuario;
-                        Properties.Settings.Default.Usuario = ObjLogin.txtUsuario.Text;
-                        Properties.Settings.Default.Contrasena = ObjLogin.txtContraseña.Text;
-                        Properties.Settings.Default.Save();
-                    }
-                    else
-                    {
-                        string usuario = ObjDAOUsuario.Usuario;
-                        Properties.Settings.Default.Usuario = "";
-                        Properties.Settings.Default.Contrasena = "";
-                        Properties.Settings.Default.Save();
                     }
                 }
             }
@@ -97,8 +97,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             RecuperarContraseñaOPCForm ObjRecuperarContrasenaOPC = new RecuperarContraseñaOPCForm();
             ObjLogin.Hide();
             ObjRecuperarContrasenaOPC.Show();
-        }
-
-       
+        }       
     }
 }

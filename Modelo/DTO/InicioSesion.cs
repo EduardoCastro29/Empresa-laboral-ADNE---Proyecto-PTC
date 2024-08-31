@@ -22,7 +22,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DTO
         private static string telefono = string.Empty;
         private static string imagen = string.Empty;
         private static string especialidad = string.Empty;
-        private static string especialidadAlt = string.Empty;
         private static string desempenoId = string.Empty;
 
         public static int UsuarioId { get => usuarioId; set => usuarioId = value; }
@@ -34,7 +33,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DTO
         public static string Telefono { get => telefono; set => telefono = value; }
         public static string Imagen { get => imagen; set => imagen = value; }
         public static string Especialidad { get => especialidad; set => especialidad = value; }
-        public static string EspecialidadAlt { get => especialidadAlt; set => especialidadAlt = value; }
         public static string DesempenoId { get => desempenoId; set => desempenoId = value; }
     }
 }

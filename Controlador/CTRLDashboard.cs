@@ -78,7 +78,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             InicioSesion.Telefono = string.Empty;
             InicioSesion.Imagen = string.Empty;
             InicioSesion.Especialidad = string.Empty;
-            InicioSesion.EspecialidadAlt = string.Empty;
             InicioSesion.DesempenoId = string.Empty;
         }
         //Creamos la cadena de Eventos haciendo referencia a los menus que se tiene al entrar en la aplicación
@@ -100,7 +99,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
         private void FormularioCitas(object sender, EventArgs e)
         {
             //En caso de seleccionarse el formulario Pacientes, se abrirá declarandolo como un nuevo formulario después del método
-            AbrirFormulario<VerCitasForm>();
+            AbrirFormulario<CitasForm>();
         }
         private void FormularioEquipoTrabajo(object sender, EventArgs e)
         {

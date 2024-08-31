@@ -89,8 +89,8 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             string ImagenProfesional = ObjAdministradorForm.dgvAdministrarProfesional[6, PosicionFila].Value.ToString();
             string DesempenoProfesional = ObjAdministradorForm.dgvAdministrarProfesional[7, PosicionFila].Value.ToString();
             string NombreUsuario = ObjAdministradorForm.dgvAdministrarProfesional[8, PosicionFila].Value.ToString();
-            string Especialidad = ObjAdministradorForm.dgvAdministrarProfesional[9, PosicionFila].Value.ToString();
-            string EspecialidadAlt = ObjAdministradorForm.dgvAdministrarProfesional[10, PosicionFila].Value.ToString();
+            //string Especialidad = ObjAdministradorForm.dgvAdministrarProfesional[9, PosicionFila].Value.ToString();
+            //string EspecialidadAlt = ObjAdministradorForm.dgvAdministrarProfesional[10, PosicionFila].Value.ToString();
 
             //Ahora, procedemos a usar la instancia antes establecida para mostrar los valores de las filas encontradas            
             ObjActualizarProfesional.txtIDUsuario.Text = IDUsuario.ToString();
@@ -102,8 +102,8 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             ObjActualizarProfesional.picProfesional.Image = Image.FromFile(ImagenProfesional);
             ObjActualizarProfesional.cmbDesempeno.SelectedValue = DesempenoProfesional;
             ObjActualizarProfesional.txtUsuario.Text = NombreUsuario;
-            ObjActualizarProfesional.cmbEspecialidad1.SelectedValue = Especialidad;
-            ObjActualizarProfesional.cmbEspecialidad2.SelectedValue = EspecialidadAlt;
+            //ObjActualizarProfesional.cmbEspecialidad1.SelectedValue = Especialidad;
+            //ObjActualizarProfesional.cmbEspecialidad2.SelectedValue = EspecialidadAlt;
 
             //Especificamos qué apartados no deben de mostrarse a la hora del Update
             ObjActualizarProfesional.btnRegistrar.Visible = false;
@@ -136,7 +136,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                     //Instanciamos a la clase DAOAdministrador para obtener los valores
                     DAOAdministrador ObjDAOEliminarUsuario = new DAOAdministrador();
 
-                    ObjDAOEliminarUsuario.UsuarioId = int.Parse(ObjAdministradorForm.dgvAdministrarProfesional[1, PosicionFila].Value.ToString());
+                    ObjDAOEliminarUsuario.UsuarioId = IDUsuario;
 
                     if (ObjDAOEliminarUsuario.EliminarUsuarioEmpleado() == true)
                     {
@@ -184,16 +184,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             ObjRegistroForm.cmbDesempeno.DataSource = ObjDAOCargarCMB.AgregarCMBDesempeno();
             ObjRegistroForm.cmbDesempeno.ValueMember = "desempenoId";
             ObjRegistroForm.cmbDesempeno.DisplayMember = "desempeno";
-
-            //Combobox Especialidad 
-            ObjRegistroForm.cmbEspecialidad1.DataSource = ObjDAOCargarCMB.AgregarCMBEspecialidad();
-            ObjRegistroForm.cmbEspecialidad1.ValueMember = "especialidadId";
-            ObjRegistroForm.cmbEspecialidad1.DisplayMember = "nombreEspecialidad";
-
-            //Combobox Especialidad Alternativa 
-            ObjRegistroForm.cmbEspecialidad2.DataSource = ObjDAOCargarCMB.AgregarCMBEspecialidadAlt();
-            ObjRegistroForm.cmbEspecialidad2.ValueMember = "especialidadAltId";
-            ObjRegistroForm.cmbEspecialidad2.DisplayMember = "nombreEspecialidadAlt";
         }
         private void GuardarRegistroProfesional(object sender, EventArgs e)
         {
@@ -229,8 +219,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                     ObjDAORegistrarProfesional.Apellidos = ObjRegistroForm.txtApellido.Text.Trim();
                     ObjDAORegistrarProfesional.Telefono = ObjRegistroForm.txtTelefono.Text;
                     ObjDAORegistrarProfesional.DesempenoId = int.Parse(ObjRegistroForm.cmbDesempeno.SelectedValue.ToString());
-                    ObjDAORegistrarProfesional.Especialidad = int.Parse(ObjRegistroForm.cmbEspecialidad1.SelectedValue.ToString());
-                    ObjDAORegistrarProfesional.EspecialidadAlt = int.Parse(ObjRegistroForm.cmbEspecialidad2.SelectedValue.ToString());
 
                     if (ObjRegistroForm.picProfesional.Image != null)
                     {
@@ -308,8 +296,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                     ObjDAOActualizarProfesional.Apellidos = ObjRegistroForm.txtApellido.Text.Trim();
                     ObjDAOActualizarProfesional.Telefono = ObjRegistroForm.txtTelefono.Text;
                     ObjDAOActualizarProfesional.DesempenoId = int.Parse(ObjRegistroForm.cmbDesempeno.SelectedValue.ToString());
-                    ObjDAOActualizarProfesional.Especialidad = int.Parse(ObjRegistroForm.cmbEspecialidad1.SelectedValue.ToString());
-                    ObjDAOActualizarProfesional.EspecialidadAlt = int.Parse(ObjRegistroForm.cmbEspecialidad2.SelectedValue.ToString());
 
                     //Llamamos al método para registrar la imagen del Usuario
                     if (ObjRegistroForm.picProfesional.Image != null)

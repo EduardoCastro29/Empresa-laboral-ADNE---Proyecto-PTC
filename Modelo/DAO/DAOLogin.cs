@@ -112,7 +112,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                     InicioSesion.DesempenoId = ObjFilasEncontradas.GetString(4);
                     InicioSesion.Usuario = ObjFilasEncontradas.GetString(5);
                     InicioSesion.Especialidad = ObjFilasEncontradas.GetString(6);
-                    InicioSesion.EspecialidadAlt = ObjFilasEncontradas.GetString(7);
                 }
 
                 //Retornamos las filas encontradas por SQLServer

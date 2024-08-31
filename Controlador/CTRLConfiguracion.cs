@@ -51,7 +51,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             InicioSesion.Telefono = string.Empty;
             InicioSesion.Imagen = string.Empty;
             InicioSesion.Especialidad = string.Empty;
-            InicioSesion.EspecialidadAlt = string.Empty;
             InicioSesion.DesempenoId = string.Empty;
         }
     }

@@ -30,12 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Control_Profesional));
             this.bunifuShadowPanel1 = new Bunifu.UI.WinForms.BunifuShadowPanel();
-            this.lblEspecialidadAlt = new Bunifu.UI.WinForms.BunifuLabel();
             this.lblEspecialidad = new Bunifu.UI.WinForms.BunifuLabel();
             this.lblEmail = new Bunifu.UI.WinForms.BunifuLabel();
             this.lblCorreo = new Bunifu.UI.WinForms.BunifuLabel();
-            this.lblEspecialidad2 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.lblEspecialidad1 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.lblEspecialidades = new Bunifu.UI.WinForms.BunifuLabel();
             this.lblIdProfesional = new Bunifu.UI.WinForms.BunifuLabel();
             this.lblNombreProfesional = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuShadowPanel2 = new Bunifu.UI.WinForms.BunifuShadowPanel();
@@ -53,12 +51,10 @@
             this.bunifuShadowPanel1.BorderColor = System.Drawing.Color.WhiteSmoke;
             this.bunifuShadowPanel1.BorderRadius = 15;
             this.bunifuShadowPanel1.BorderThickness = 1;
-            this.bunifuShadowPanel1.Controls.Add(this.lblEspecialidadAlt);
             this.bunifuShadowPanel1.Controls.Add(this.lblEspecialidad);
             this.bunifuShadowPanel1.Controls.Add(this.lblEmail);
             this.bunifuShadowPanel1.Controls.Add(this.lblCorreo);
-            this.bunifuShadowPanel1.Controls.Add(this.lblEspecialidad2);
-            this.bunifuShadowPanel1.Controls.Add(this.lblEspecialidad1);
+            this.bunifuShadowPanel1.Controls.Add(this.lblEspecialidades);
             this.bunifuShadowPanel1.Controls.Add(this.lblIdProfesional);
             this.bunifuShadowPanel1.Controls.Add(this.lblNombreProfesional);
             this.bunifuShadowPanel1.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
@@ -76,33 +72,18 @@
             this.bunifuShadowPanel1.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
             this.bunifuShadowPanel1.TabIndex = 2;
             // 
-            // lblEspecialidadAlt
-            // 
-            this.lblEspecialidadAlt.AllowParentOverrides = false;
-            this.lblEspecialidadAlt.AutoEllipsis = false;
-            this.lblEspecialidadAlt.CursorType = null;
-            this.lblEspecialidadAlt.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
-            this.lblEspecialidadAlt.Location = new System.Drawing.Point(448, 141);
-            this.lblEspecialidadAlt.Name = "lblEspecialidadAlt";
-            this.lblEspecialidadAlt.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblEspecialidadAlt.Size = new System.Drawing.Size(101, 19);
-            this.lblEspecialidadAlt.TabIndex = 7;
-            this.lblEspecialidadAlt.Text = "Especialidad";
-            this.lblEspecialidadAlt.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.lblEspecialidadAlt.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
             // lblEspecialidad
             // 
             this.lblEspecialidad.AllowParentOverrides = false;
             this.lblEspecialidad.AutoEllipsis = false;
             this.lblEspecialidad.CursorType = null;
             this.lblEspecialidad.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
-            this.lblEspecialidad.Location = new System.Drawing.Point(169, 141);
+            this.lblEspecialidad.Location = new System.Drawing.Point(158, 141);
             this.lblEspecialidad.Name = "lblEspecialidad";
             this.lblEspecialidad.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblEspecialidad.Size = new System.Drawing.Size(101, 19);
+            this.lblEspecialidad.Size = new System.Drawing.Size(428, 19);
             this.lblEspecialidad.TabIndex = 6;
-            this.lblEspecialidad.Text = "Especialidad";
+            this.lblEspecialidad.Text = "Especialidad, Especialidad, Especialidad, Especialidad";
             this.lblEspecialidad.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lblEspecialidad.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
@@ -115,7 +96,7 @@
             this.lblEmail.Location = new System.Drawing.Point(234, 80);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblEmail.Size = new System.Drawing.Size(163, 22);
+            this.lblEmail.Size = new System.Drawing.Size(287, 40);
             this.lblEmail.TabIndex = 5;
             this.lblEmail.Text = "email@proveedor";
             this.lblEmail.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -130,41 +111,26 @@
             this.lblCorreo.Location = new System.Drawing.Point(29, 79);
             this.lblCorreo.Name = "lblCorreo";
             this.lblCorreo.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblCorreo.Size = new System.Drawing.Size(176, 23);
+            this.lblCorreo.Size = new System.Drawing.Size(308, 39);
             this.lblCorreo.TabIndex = 4;
             this.lblCorreo.Text = "Correo Electrónico:";
             this.lblCorreo.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lblCorreo.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
-            // lblEspecialidad2
+            // lblEspecialidades
             // 
-            this.lblEspecialidad2.AllowParentOverrides = false;
-            this.lblEspecialidad2.AutoEllipsis = false;
-            this.lblEspecialidad2.CursorType = null;
-            this.lblEspecialidad2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
-            this.lblEspecialidad2.Location = new System.Drawing.Point(314, 141);
-            this.lblEspecialidad2.Name = "lblEspecialidad2";
-            this.lblEspecialidad2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblEspecialidad2.Size = new System.Drawing.Size(128, 19);
-            this.lblEspecialidad2.TabIndex = 3;
-            this.lblEspecialidad2.Text = "Especialidad #2:";
-            this.lblEspecialidad2.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.lblEspecialidad2.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // lblEspecialidad1
-            // 
-            this.lblEspecialidad1.AllowParentOverrides = false;
-            this.lblEspecialidad1.AutoEllipsis = false;
-            this.lblEspecialidad1.CursorType = null;
-            this.lblEspecialidad1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
-            this.lblEspecialidad1.Location = new System.Drawing.Point(29, 141);
-            this.lblEspecialidad1.Name = "lblEspecialidad1";
-            this.lblEspecialidad1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblEspecialidad1.Size = new System.Drawing.Size(128, 19);
-            this.lblEspecialidad1.TabIndex = 2;
-            this.lblEspecialidad1.Text = "Especialidad #1:";
-            this.lblEspecialidad1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.lblEspecialidad1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.lblEspecialidades.AllowParentOverrides = false;
+            this.lblEspecialidades.AutoEllipsis = false;
+            this.lblEspecialidades.CursorType = null;
+            this.lblEspecialidades.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.lblEspecialidades.Location = new System.Drawing.Point(29, 141);
+            this.lblEspecialidades.Name = "lblEspecialidades";
+            this.lblEspecialidades.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblEspecialidades.Size = new System.Drawing.Size(121, 19);
+            this.lblEspecialidades.TabIndex = 2;
+            this.lblEspecialidades.Text = "Especialidades:";
+            this.lblEspecialidades.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lblEspecialidades.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // lblIdProfesional
             // 
@@ -172,7 +138,7 @@
             this.lblIdProfesional.AutoEllipsis = false;
             this.lblIdProfesional.CursorType = null;
             this.lblIdProfesional.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Italic);
-            this.lblIdProfesional.Location = new System.Drawing.Point(493, 21);
+            this.lblIdProfesional.Location = new System.Drawing.Point(493, 31);
             this.lblIdProfesional.Name = "lblIdProfesional";
             this.lblIdProfesional.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblIdProfesional.Size = new System.Drawing.Size(95, 19);
@@ -191,7 +157,7 @@
             this.lblNombreProfesional.Location = new System.Drawing.Point(29, 31);
             this.lblNombreProfesional.Name = "lblNombreProfesional";
             this.lblNombreProfesional.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblNombreProfesional.Size = new System.Drawing.Size(217, 23);
+            this.lblNombreProfesional.Size = new System.Drawing.Size(377, 39);
             this.lblNombreProfesional.TabIndex = 0;
             this.lblNombreProfesional.Text = "Nombre del profesional";
             this.lblNombreProfesional.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -272,12 +238,10 @@
         #endregion
 
         private Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel1;
-        public Bunifu.UI.WinForms.BunifuLabel lblEspecialidadAlt;
         public Bunifu.UI.WinForms.BunifuLabel lblEspecialidad;
         public Bunifu.UI.WinForms.BunifuLabel lblEmail;
         private Bunifu.UI.WinForms.BunifuLabel lblCorreo;
-        private Bunifu.UI.WinForms.BunifuLabel lblEspecialidad2;
-        private Bunifu.UI.WinForms.BunifuLabel lblEspecialidad1;
+        private Bunifu.UI.WinForms.BunifuLabel lblEspecialidades;
         public Bunifu.UI.WinForms.BunifuLabel lblIdProfesional;
         public Bunifu.UI.WinForms.BunifuLabel lblNombreProfesional;
         private Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel2;

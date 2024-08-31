@@ -149,20 +149,6 @@
         TkSuQmCC
 </value>
   </data>
-  <data name="btnRegistrarEspecialidad.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAOoAAAA9CAYAAACjr/XZAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHtSURBVHhe7dmvctRQFMDhuLrKujocNhtoHW4drg6Jq8Px
-        Bjie4W62u3eDZGJwOFxlHW6fg9xu+DcNg2o3Z+Y7M5/au/I3Jzep/jXNqj+tU3f5ot29Ax5Xae0ipbMx
-        v//P4qa7albdt6bN+4Md8OgOvdXt7rZJ+XrM8eGUDdqkbi1OOLYS7PZzvdmcj3n+nkOkU38CjmK1+7Ls
-        +5Mx0SHS9tMbmxTmZmhy3b0fMy2hbu+mDwLHNcQ6XEur8hxsm8JcDffV1F1Wi5SXQoW5yvtFm99W5RvO
-        9AFgDkqjQoWZEyoEIFQIQKgQgFAhAKFCAEKFAIQKAQgVAhAqBCBUCECoEIBQIQChQgBChQCECgEIFQIQ
-        KgQgVAhAqBCAUCEAoUIAQoUAhAoBCBUCECoEIFQIQKgQgFAhAKFCAEKFAIQKAQgVAhAqBCBUCECoEIBQ
-        IQChQgBChQCECgEIFQIQKgQgVAhAqBDAfaiLm+6qafPkAeDYhjZTvi6hPhcqzFXeL1JeVmXq1e779CHg
-        uPL+IqWzMdT8wVaFGUrd+j7SMsu+P6nb/HXyIHAUdbu7/bVNf065q5YfbFaYg+3d4NWY59/TrPrTRbv9
-        eIhVsPC0xu6Gx90Hm3Rq6s3mvLxpKt9vgKfRtN3rlyk/GzP8Y6rqB3uRGgp7jINRAAAAAElFTkSuQmCC
-</value>
-  </data>
   <data name="lblNombreProfesional.BaseStylesheet" xml:space="preserve">
     <value>#bunifu-label { padding: 0px; font-family: 'Century Gothic'; font-size: 14,25pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(0, 0, 0); text-align: left; }</value>
   </data>
@@ -367,5 +353,20 @@
   </metadata>
   <data name="Titulo_Registrar.BaseStylesheet" xml:space="preserve">
     <value>#bunifu-label { padding: 0px; font-family: 'Century Gothic'; font-size: 21,75pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(42, 86, 100); text-align: left; }</value>
+  </data>
+  <data name="btnSiguiente.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAPgAAABMCAYAAABAinpoAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIXSURBVHhe7dmvctRQGMbhuLrKujocdjfQOtw6XB0SV4fj
+        DnBcQzbtbjZIZg0Oh6usw+11kNMN/6ZhsM07zzfzqD0rf/PlJNW/pl7vTxdNf/mi3b0DnqbS6EXTnI3Z
+        /n+Wt/1Vve6/1W13ONoBT9ax00W7u6ub7nrM+PGUjV03/Y2oYa5K6NvPi83mfMz69xzjnvoTMCvr3ZfV
+        fn8ypj3E3X56Y3NDiqHlm/79mHcJfHs/fRCYpyHy4dpdled12xvSDPfxpr+slk23Ejik6Q7LtntblW9p
+        0weAOSttCxxCCRyCCRyCCRyCCRyCCRyCCRyCCRyCCRyCCRyCCRyCCRyCCRyCCRyCCRyCCRyCCRyCCRyC
+        CRyCCRyCCRyCCRyCCRyCCRyCCRyCCRyCCRyCCRyCCRyCCRyCCRyCCRyCCRyCCRyCCRyCCRyCCRyCCRyC
+        CRyCCRyCCRyCCRyCCRyCCRyCCRyCCRyCCRyCCRyCCRyCCRyCCRyCCRyCCRyCCRyCCRyCCRyCCRyCCRyC
+        CRyCPQS+vO2v6rabPADM1dB0012XwJ8LHNJ0h2XTraoyi/Xu+/QhYJ66w0XTnI2Bdx9scQjS9DcPcZdZ
+        7fcni7b7OnkQmJVFu7v7tb1/TrmLlx9scpiz7f3g1Zj131Ov96fLdvvxGLnQYR7GXofH8kebe2oWm815
+        eQNXvqMBT1vd9q9fNt2zMd8/pqp+AGI5JKcnYiUEAAAAAElFTkSuQmCC
+</value>
   </data>
 </root>
