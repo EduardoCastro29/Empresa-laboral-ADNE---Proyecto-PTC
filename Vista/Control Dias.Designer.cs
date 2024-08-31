@@ -34,7 +34,7 @@
             // lblDias
             // 
             this.lblDias.AutoSize = true;
-            this.lblDias.BackColor = System.Drawing.Color.White;
+            this.lblDias.BackColor = System.Drawing.Color.Transparent;
             this.lblDias.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDias.ForeColor = System.Drawing.Color.Teal;
             this.lblDias.Location = new System.Drawing.Point(12, 10);
@@ -49,6 +49,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.lblDias);
+            this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Margin = new System.Windows.Forms.Padding(1);
             this.Name = "UCDias";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;

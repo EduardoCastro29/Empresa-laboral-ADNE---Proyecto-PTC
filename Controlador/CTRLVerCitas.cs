@@ -124,6 +124,8 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
 
             //Especificamos qué apartados no deben de mostrarse a la hora de la vista
             ObjVerCitasDetalladas.btnGuardar.Enabled = false;
+            //Activamos que el estado de la cita pueda ser modificado por el usuario
+            ObjVerCitasDetalladas.cmbEstado.Enabled = true;
 
             ObjVerCitasDetalladas.ShowDialog();
 
