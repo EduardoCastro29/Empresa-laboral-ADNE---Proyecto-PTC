@@ -17,7 +17,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo
             try
             {
                 //Definiendo las variables de conexión
-                string servidor = "JOR\\SQLEXPRESS01"; //Pongan su dirección de SQL Server, en mi caso es esa bv
+                string servidor = "DESKTOP-FSK1K0V\\SQLEXPRESS"; //Pongan su dirección de SQL Server, en mi caso es esa bv
                 string DBnombre = "ADNE2024"; //Queda igual, ya que es el nombre de la DB
 
                 //Creando objeto ObjConexion de tipo SqlConnection con los datos de la conexión hacia la base de datos
