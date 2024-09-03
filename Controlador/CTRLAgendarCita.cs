@@ -144,7 +144,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                     //Declaramos cada Getter y Setter de la clase DAOAgendarCita a cada control del formulario
                     ObjDAOActualizarCita.CitaId = int.Parse(ObjAgendarCitaForm.txtIDCita.Text.Trim());
                     ObjDAOActualizarCita.ConsultaId = int.Parse(ObjAgendarCitaForm.txtIDConsulta.Text.Trim());
-                    ObjDAOActualizarCita.DocumentoPresentado = ObjAgendarCitaForm.txtNombrePacienteCita.Text.Trim();
+                    ObjDAOActualizarCita.DocumentoPresentado = ObjAgendarCitaForm.txtDUIPaciente.Text.Trim();
                     ObjDAOActualizarCita.DuiProfesional = InicioSesion.Dui;
                     ObjDAOActualizarCita.HoraInicio = TimeSpan.Parse(ObjAgendarCitaForm.txtHoraInicio.Text.Trim());
                     ObjDAOActualizarCita.HoraFinal = TimeSpan.Parse(ObjAgendarCitaForm.txtHoraFinal.Text.Trim());
@@ -160,7 +160,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                     else
                     {
                         MessageBox.Show("Los datos fueron actualizados correctamente", "Actualizar Cita", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        ObjAgendarCitaForm.Close();
+                        ObjAgendarCitaForm.Hide();
                     }
                 }
             }

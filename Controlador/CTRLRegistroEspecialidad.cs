@@ -20,8 +20,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
         {
             ObjRegistroEspecialidad = Vista;
 
-            CargarDGVEspecialidades();
-            ObjRegistroEspecialidad.Load += new EventHandler(CargarEspecialidades);
+            ObjRegistroEspecialidad.Load += new EventHandler(CargarEspecialidadesYGRID);
             ObjRegistroEspecialidad.btnAnadirEspecialidad.Click += new EventHandler(AgregarEspecialidad);
             ObjRegistroEspecialidad.btnSiguiente.Click += new EventHandler(IngresarLogin);
         }
@@ -37,14 +36,20 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             ObjRegistroEspecialidad.dgvEspecialidades.Columns[0].Visible = false;
             ObjRegistroEspecialidad.dgvEspecialidades.Columns[1].Visible = false;
         }
-        private void CargarEspecialidades(object sender, EventArgs e)
+        private void CargarEspecialidadesYGRID(object sender, EventArgs e)
         {
-            DAORegistroEspecialidad ObjDAOCargarEspecialidad = new DAORegistroEspecialidad();
-
+            DAORegistroEspecialidad ObjDAOCargarEspecialidadYGrid = new DAORegistroEspecialidad();
+            ObjDAOCargarEspecialidadYGrid.DUIEmpleado1 = ObjRegistroEspecialidad.txtDUIProfesional.Text;
             //Combobox Especialidad 
-            ObjRegistroEspecialidad.cmbEspecialidades.DataSource = ObjDAOCargarEspecialidad.AgregarCMBEspecialidad();
+            ObjRegistroEspecialidad.cmbEspecialidades.DataSource = ObjDAOCargarEspecialidadYGrid.AgregarCMBEspecialidad();
             ObjRegistroEspecialidad.cmbEspecialidades.ValueMember = "especialidadId"; //Agregamos los atributos que estan en la tabla Especialidad
             ObjRegistroEspecialidad.cmbEspecialidades.DisplayMember = "nombreEspecialidad";
+
+            ObjRegistroEspecialidad.dgvEspecialidades.DataSource = null;
+            ObjRegistroEspecialidad.dgvEspecialidades.DataSource = ObjDAOCargarEspecialidadYGrid.CargarDGVEspecialidadesN();
+            //Indicamos que columnas no queremos que se muestren a simple vista
+            ObjRegistroEspecialidad.dgvEspecialidades.Columns[0].Visible = false;
+            ObjRegistroEspecialidad.dgvEspecialidades.Columns[1].Visible = false;
         }
         #endregion
         #region Agregar una nueva especialidad al empleado seleccionado (CREATE), relación de muchos a muchos

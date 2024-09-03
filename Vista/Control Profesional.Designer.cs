@@ -47,6 +47,8 @@
             // 
             // bunifuShadowPanel1
             // 
+            this.bunifuShadowPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.bunifuShadowPanel1.BackColor = System.Drawing.Color.Transparent;
             this.bunifuShadowPanel1.BorderColor = System.Drawing.Color.WhiteSmoke;
             this.bunifuShadowPanel1.BorderRadius = 15;
@@ -96,7 +98,7 @@
             this.lblEmail.Location = new System.Drawing.Point(234, 80);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblEmail.Size = new System.Drawing.Size(287, 40);
+            this.lblEmail.Size = new System.Drawing.Size(163, 22);
             this.lblEmail.TabIndex = 5;
             this.lblEmail.Text = "email@proveedor";
             this.lblEmail.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -111,7 +113,7 @@
             this.lblCorreo.Location = new System.Drawing.Point(29, 79);
             this.lblCorreo.Name = "lblCorreo";
             this.lblCorreo.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblCorreo.Size = new System.Drawing.Size(308, 39);
+            this.lblCorreo.Size = new System.Drawing.Size(176, 23);
             this.lblCorreo.TabIndex = 4;
             this.lblCorreo.Text = "Correo Electrónico:";
             this.lblCorreo.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -135,6 +137,7 @@
             // lblIdProfesional
             // 
             this.lblIdProfesional.AllowParentOverrides = false;
+            this.lblIdProfesional.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblIdProfesional.AutoEllipsis = false;
             this.lblIdProfesional.CursorType = null;
             this.lblIdProfesional.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Italic);
@@ -157,7 +160,7 @@
             this.lblNombreProfesional.Location = new System.Drawing.Point(29, 31);
             this.lblNombreProfesional.Name = "lblNombreProfesional";
             this.lblNombreProfesional.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblNombreProfesional.Size = new System.Drawing.Size(377, 39);
+            this.lblNombreProfesional.Size = new System.Drawing.Size(217, 23);
             this.lblNombreProfesional.TabIndex = 0;
             this.lblNombreProfesional.Text = "Nombre del profesional";
             this.lblNombreProfesional.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -222,10 +225,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Highlight;
             this.Controls.Add(this.bunifuShadowPanel1);
             this.Controls.Add(this.bunifuShadowPanel2);
+            this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "Control_Profesional";
             this.Size = new System.Drawing.Size(856, 200);
+            this.Load += new System.EventHandler(this.Control_Profesional_Load);
             this.bunifuShadowPanel1.ResumeLayout(false);
             this.bunifuShadowPanel1.PerformLayout();
             this.bunifuShadowPanel2.ResumeLayout(false);

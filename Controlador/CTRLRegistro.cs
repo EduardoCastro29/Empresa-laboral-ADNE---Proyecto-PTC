@@ -18,6 +18,7 @@ using System.Text.RegularExpressions;
 using Aspose.Email;
 using System.Net.Sockets;
 using System.Net;
+using Aspose.Email.Clients.ActiveSync.TransportLayer;
 
 namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
 {
@@ -327,10 +328,10 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                     return false;
                 }
             }
-            catch (AsposeException AsposeEx)
+            catch (Exception ex)
             {
                 //En caso de error, mostramos el mensaje con su retorno falso
-                MessageBox.Show(AsposeEx.Message);
+                MessageBox.Show(ex.Message);
                 return false;
             }
 

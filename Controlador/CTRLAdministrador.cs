@@ -278,7 +278,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             {
                 if (ObjRegistroForm.txtUsuario.Text.Length < 3 ||
                     ObjRegistroForm.txtNombre.Text.Length < 3 ||
-                    ObjRegistroForm.txtContrasena.Text.Length < 13 ||
                     ObjRegistroForm.txtCorreo.Text.Length < 10 ||
                     ObjRegistroForm.txtApellido.Text.Length < 3 ||
                     ObjRegistroForm.txtDui.Text.Length < 10 ||

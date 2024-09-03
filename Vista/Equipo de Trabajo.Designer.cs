@@ -39,11 +39,11 @@
             this.flpEmpleadosControl = new System.Windows.Forms.FlowLayoutPanel();
             this.pnlSombraTitulo = new Bunifu.UI.WinForms.BunifuShadowPanel();
             this.pnlTituloGradiente = new Bunifu.UI.WinForms.BunifuGradientPanel();
+            this.bunifuPictureBox1 = new Bunifu.UI.WinForms.BunifuPictureBox();
+            this.pnlSombraBoton = new Bunifu.UI.WinForms.BunifuPanel();
             this.btnExpedienteGradient = new Bunifu.UI.WinForms.BunifuGradientPanel();
             this.btnAdministrarEmpleado = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.pnlSombraBoton = new Bunifu.UI.WinForms.BunifuPanel();
             this.lblTItulo = new Bunifu.UI.WinForms.BunifuLabel();
-            this.bunifuPictureBox1 = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.pnlFondo.SuspendLayout();
             this.pnlSombraFondo.SuspendLayout();
             this.pnlForms.SuspendLayout();
@@ -52,9 +52,9 @@
             this.bunifuShadowPanel3.SuspendLayout();
             this.pnlSombraTitulo.SuspendLayout();
             this.pnlTituloGradiente.SuspendLayout();
-            this.btnExpedienteGradient.SuspendLayout();
-            this.pnlSombraBoton.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).BeginInit();
+            this.pnlSombraBoton.SuspendLayout();
+            this.btnExpedienteGradient.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlFondo
@@ -175,6 +175,7 @@
             this.bunifuShadowPanel3.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
             this.bunifuShadowPanel3.Location = new System.Drawing.Point(18, 129);
             this.bunifuShadowPanel3.Name = "bunifuShadowPanel3";
+            this.bunifuShadowPanel3.Padding = new System.Windows.Forms.Padding(20);
             this.bunifuShadowPanel3.PanelColor = System.Drawing.Color.WhiteSmoke;
             this.bunifuShadowPanel3.PanelColor2 = System.Drawing.Color.WhiteSmoke;
             this.bunifuShadowPanel3.ShadowColor = System.Drawing.Color.DarkGray;
@@ -188,13 +189,13 @@
             // 
             // flpEmpleadosControl
             // 
-            this.flpEmpleadosControl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.flpEmpleadosControl.AutoScroll = true;
-            this.flpEmpleadosControl.Location = new System.Drawing.Point(14, 14);
+            this.flpEmpleadosControl.BackColor = System.Drawing.Color.IndianRed;
+            this.flpEmpleadosControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flpEmpleadosControl.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flpEmpleadosControl.Location = new System.Drawing.Point(20, 20);
             this.flpEmpleadosControl.Name = "flpEmpleadosControl";
-            this.flpEmpleadosControl.Size = new System.Drawing.Size(870, 470);
+            this.flpEmpleadosControl.Size = new System.Drawing.Size(858, 458);
             this.flpEmpleadosControl.TabIndex = 0;
             // 
             // pnlSombraTitulo
@@ -241,6 +242,38 @@
             this.pnlTituloGradiente.Quality = 10;
             this.pnlTituloGradiente.Size = new System.Drawing.Size(934, 104);
             this.pnlTituloGradiente.TabIndex = 0;
+            // 
+            // bunifuPictureBox1
+            // 
+            this.bunifuPictureBox1.AllowFocused = false;
+            this.bunifuPictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.bunifuPictureBox1.AutoSizeHeight = true;
+            this.bunifuPictureBox1.BorderRadius = 25;
+            this.bunifuPictureBox1.Image = global::Empresa_laboral_ADNE___Proyecto_PTC.Properties.Resources.Equipo_Profesional;
+            this.bunifuPictureBox1.IsCircle = true;
+            this.bunifuPictureBox1.Location = new System.Drawing.Point(31, 27);
+            this.bunifuPictureBox1.Name = "bunifuPictureBox1";
+            this.bunifuPictureBox1.Size = new System.Drawing.Size(51, 51);
+            this.bunifuPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuPictureBox1.TabIndex = 13;
+            this.bunifuPictureBox1.TabStop = false;
+            this.bunifuPictureBox1.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle;
+            // 
+            // pnlSombraBoton
+            // 
+            this.pnlSombraBoton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlSombraBoton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.pnlSombraBoton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlSombraBoton.BackgroundImage")));
+            this.pnlSombraBoton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnlSombraBoton.BorderColor = System.Drawing.Color.Transparent;
+            this.pnlSombraBoton.BorderRadius = 12;
+            this.pnlSombraBoton.BorderThickness = 0;
+            this.pnlSombraBoton.Controls.Add(this.btnExpedienteGradient);
+            this.pnlSombraBoton.Location = new System.Drawing.Point(634, 25);
+            this.pnlSombraBoton.Name = "pnlSombraBoton";
+            this.pnlSombraBoton.ShowBorders = true;
+            this.pnlSombraBoton.Size = new System.Drawing.Size(268, 58);
+            this.pnlSombraBoton.TabIndex = 12;
             // 
             // btnExpedienteGradient
             // 
@@ -352,22 +385,6 @@
             this.btnAdministrarEmpleado.TextPadding = new System.Windows.Forms.Padding(0);
             this.btnAdministrarEmpleado.UseDefaultRadiusAndThickness = true;
             // 
-            // pnlSombraBoton
-            // 
-            this.pnlSombraBoton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlSombraBoton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.pnlSombraBoton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlSombraBoton.BackgroundImage")));
-            this.pnlSombraBoton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pnlSombraBoton.BorderColor = System.Drawing.Color.Transparent;
-            this.pnlSombraBoton.BorderRadius = 12;
-            this.pnlSombraBoton.BorderThickness = 0;
-            this.pnlSombraBoton.Controls.Add(this.btnExpedienteGradient);
-            this.pnlSombraBoton.Location = new System.Drawing.Point(634, 25);
-            this.pnlSombraBoton.Name = "pnlSombraBoton";
-            this.pnlSombraBoton.ShowBorders = true;
-            this.pnlSombraBoton.Size = new System.Drawing.Size(268, 58);
-            this.pnlSombraBoton.TabIndex = 12;
-            // 
             // lblTItulo
             // 
             this.lblTItulo.AllowParentOverrides = false;
@@ -384,22 +401,6 @@
             this.lblTItulo.Text = "Equipo de Trabajo";
             this.lblTItulo.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lblTItulo.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // bunifuPictureBox1
-            // 
-            this.bunifuPictureBox1.AllowFocused = false;
-            this.bunifuPictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.bunifuPictureBox1.AutoSizeHeight = true;
-            this.bunifuPictureBox1.BorderRadius = 25;
-            this.bunifuPictureBox1.Image = global::Empresa_laboral_ADNE___Proyecto_PTC.Properties.Resources.Equipo_Profesional;
-            this.bunifuPictureBox1.IsCircle = true;
-            this.bunifuPictureBox1.Location = new System.Drawing.Point(31, 27);
-            this.bunifuPictureBox1.Name = "bunifuPictureBox1";
-            this.bunifuPictureBox1.Size = new System.Drawing.Size(51, 51);
-            this.bunifuPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bunifuPictureBox1.TabIndex = 13;
-            this.bunifuPictureBox1.TabStop = false;
-            this.bunifuPictureBox1.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle;
             // 
             // EquipodeTrabajoForm
             // 
@@ -422,9 +423,9 @@
             this.pnlSombraTitulo.ResumeLayout(false);
             this.pnlTituloGradiente.ResumeLayout(false);
             this.pnlTituloGradiente.PerformLayout();
-            this.btnExpedienteGradient.ResumeLayout(false);
-            this.pnlSombraBoton.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).EndInit();
+            this.pnlSombraBoton.ResumeLayout(false);
+            this.btnExpedienteGradient.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

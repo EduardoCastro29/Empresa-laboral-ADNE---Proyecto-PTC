@@ -9,6 +9,7 @@ using Empresa_laboral_ADNE___Proyecto_PTC.Controlador;
 using Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DTO;
 using System.Windows.Forms;
 using System.Data;
+using Microsoft.VisualBasic;
 
 namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
 {
@@ -36,7 +37,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                 ObjComandoSQLInsertarCita.Parameters.AddWithValue("@horaInicio", HoraInicio);
                 ObjComandoSQLInsertarCita.Parameters.AddWithValue("@horaFinal", HoraFinal);
                 ObjComandoSQLInsertarCita.Parameters.AddWithValue("@estadoId", EstadoId);
-                ObjComandoSQLInsertarCita.Parameters.AddWithValue("@documentoPresentado", DocumentoPresentado);
+                ObjComandoSQLInsertarCita.Parameters.AddWithValue("@documentoPresentado",  DocumentoPresentado);
                 ObjComandoSQLInsertarCita.Parameters.AddWithValue("@DUI", DuiProfesional);
                 ObjComandoSQLInsertarCita.Parameters.AddWithValue("@lugarId", LugarId);
 
@@ -95,13 +96,13 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                 Conexion.Connection = Conectar();
 
                 string consultaSQLActualizarCita = "UPDATE Cita SET " +
-                                                   "fecha                   = @fecha, " +
-                                                   "horaInicio              = @horaInicio, " +
-                                                   "horaFinal               = @horaFinal, " +
-                                                   "estadoId                = @estadoId, " +
-                                                   "documentoPresentado     = @documentoPresentado, " +
-                                                   "DUI                     = @DUI, " +
-                                                   "lugarId                 = @lugarId " +
+                                                   "fecha                = @fecha, " +
+                                                   "horaInicio           = @horaInicio, " +
+                                                   "horaFinal            = @horaFinal, " +
+                                                   "estadoId             = @estadoId, " +
+                                                   "documentoPresentado  = @documentoPresentado, " +
+                                                   "DUI                  = @DUI, " +
+                                                   "lugarId              = @lugarId " +
 
                                                    "WHERE " +
                                                    "citaId = @citaId ";

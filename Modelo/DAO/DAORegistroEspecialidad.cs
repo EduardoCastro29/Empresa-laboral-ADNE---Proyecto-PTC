@@ -75,8 +75,10 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
             try
             {
                 Conexion.Connection = Conectar();
-                string consultaSQL = "SELECT * FROM vistaEspecialidades";
-                SqlDataAdapter ObjLlenarCombobox = new SqlDataAdapter(consultaSQL, Conexion.Connection);
+                string consultaSQL = "SELECT * FROM vistaEspecialidades WHERE DUI = @DUI";
+                SqlCommand ObjComandoSQL = new SqlCommand(consultaSQL, Conexion.Connection);
+                ObjComandoSQL.Parameters.AddWithValue("@DUI", DUIEmpleado1);
+                SqlDataAdapter ObjLlenarCombobox = new SqlDataAdapter(ObjComandoSQL);
                 DataTable ObjllenarDT = new DataTable();
                 ObjLlenarCombobox.Fill(ObjllenarDT);
                 return ObjllenarDT;

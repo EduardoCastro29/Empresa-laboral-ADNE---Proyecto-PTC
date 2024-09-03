@@ -116,7 +116,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             int CitaID = int.Parse(ObjVerCitasForm.dgvCitasAgendadas[0, PosicionFila].Value.ToString());
             int ConsultaID = int.Parse(ObjVerCitasForm.dgvCitasAgendadas[1, PosicionFila].Value.ToString());
             string PacienteDUI = ObjVerCitasForm.dgvCitasAgendadas[2, PosicionFila].Value.ToString();
-            string ProfesionalDUI = ObjVerCitasForm.dgvCitasAgendadas[3, PosicionFila].Value.ToString();
             DateTime FechaCita = DateTime.Parse(ObjVerCitasForm.dgvCitasAgendadas[4, PosicionFila].Value.ToString());
             TimeSpan HoraInicioCita = TimeSpan.Parse(ObjVerCitasForm.dgvCitasAgendadas[5, PosicionFila].Value.ToString());
             TimeSpan FechaFinalCita = TimeSpan.Parse(ObjVerCitasForm.dgvCitasAgendadas[6, PosicionFila].Value.ToString());
@@ -134,7 +133,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             ObjActualizarCita.cmbEstado.ValueMember = EstadoCita;
             ObjActualizarCita.txtMotivoConsulta.Text = DescripcionCita;
             ObjActualizarCita.txtDUIPaciente.Text = PacienteDUI;
-            ObjActualizarCita.txtDUIProfesional.Text = ProfesionalDUI;
+            ObjActualizarCita.txtDUIProfesional.Text = InicioSesion.Dui;
             ObjActualizarCita.cmbLugar.ValueMember = LugarCita;
 
             //Especificamos qué apartados no deben de modificarse a la hora de la actualización
