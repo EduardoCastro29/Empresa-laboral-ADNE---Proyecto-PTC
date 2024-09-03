@@ -329,6 +329,7 @@
             this.btnSalir.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnSalir.AutoSizeHeight = true;
             this.btnSalir.BorderRadius = 0;
+            this.btnSalir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSalir.Image = global::Empresa_laboral_ADNE___Proyecto_PTC.Properties.Resources.Cerrar_Login;
             this.btnSalir.IsCircle = true;
             this.btnSalir.Location = new System.Drawing.Point(959, 22);
