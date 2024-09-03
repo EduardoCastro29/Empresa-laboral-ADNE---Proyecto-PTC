@@ -32,7 +32,37 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             ObjDireccionGmailForm.btnSiguiente.Click += new EventHandler(VerificacionCorreoUsuario);
             ObjDireccionGmailForm.btnCancelar.Click += new EventHandler(RegresarLoginForm);
 
+            //Validaciones de campos
+            ObjDireccionGmailForm.txtIngresarEmail.Text += new KeyPressEventHandler(ValidarCampoCorreo);
         }
+        #region Validaciones de Campos
+        private void ValidarCampoCorreo(object sender, KeyPressEventArgs e)
+        {
+            //La propiedad char.IsControl permite controles como BackSpace, Inicio, Fin, etc.
+            if (char.IsControl(e.KeyChar))
+            {
+                //Retornamos los valores e.KeyChar
+                return;
+            }
+            //Declaramos la variable de tipo char que recibirá los parámetros de las letras registradas por las variables e.KeyChar creadas anteriormente
+            char ch = e.KeyChar;
+
+            //Declaramos lo valores que únicamente permitirá el textbox
+            if ((ch >= '0' && ch <= '9') ||
+                (ch >= 'A' && ch <= 'Z') ||
+                (ch >= 'a' && ch <= 'z') ||
+                 ch == '.' ||
+                 ch == '@' ||
+                 ch == '_')
+            {
+                //Retornamos los valores e.KeyChar
+                return;
+            }
+            //Indicamos que se creará el evento e.Char con todos los valores antes proporcionados, como un EventHandler
+            e.Handled = true;
+        }
+        #endregion
+        #region Solicitud de recuperación de contraseña
         private void SolicitudRecuperarContrasena(object sender, EventArgs e)
         {
             //Creamos una instancia de la clase DAOLogin donde se alojará la respuesta al Usuario Solicitante
@@ -46,11 +76,13 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             //Dentro del formulario, de esta forma se podrá saber con mayor certeza si realmente se ha enviado el correo o no
             ObjDireccionGmailForm.lblConfirmacion.Text = respuestaUsuarioSolicitante;
         }
+        #endregion
+        #region Verificación del correo del Usuario (Método de verificación SMTP)
         private void VerificacionCorreoUsuario(object sender, EventArgs e)
         {
             DAODireccionGmail ObjVerificarCorreoUsuario = new DAODireccionGmail();
 
-            if (string.IsNullOrWhiteSpace(ObjDireccionGmailForm.txtIngresarEmail.Text.Trim()) ||
+            if (ObjDireccionGmailForm.txtIngresarEmail.Text.Length < 10 ||
                 ObjVerificarCorreoUsuario.VerificarCorreoUsuario(ObjDireccionGmailForm.txtIngresarEmail.Text.Trim()) == null)
             {
                 MessageBox.Show("Por favor, ingrese un nombre de usuario/dirección de correo válida antes de seguir.", "Recuperación de Contraseña", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -71,5 +103,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             ObjDireccionGmailForm.Hide();
             ObjMostrarLogin.Show();
         }
+        #endregion
     }
 }

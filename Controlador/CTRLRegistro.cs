@@ -14,6 +14,10 @@ using System.Drawing.Imaging;
 using System.IO;
 using System.Drawing.Text;
 using Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DTO;
+using System.Text.RegularExpressions;
+using Aspose.Email;
+using System.Net.Sockets;
+using System.Net;
 
 namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
 {
@@ -33,87 +37,91 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             ObjRegistro.btnRegistrar.Click += new EventHandler(AccederLoginPrimerUso);
             ObjRegistro.btnCargarImagen.Click += new EventHandler(CargarImagen);
             ObjRegistro.btnEliminar.Click += new EventHandler(EliminarFoto);
-            // Validaciones en los textbox 
+
+            //Validaciones en los textbox 
             ObjRegistro.txtNombre.KeyPress += new KeyPressEventHandler(ValidarCampoLetra);
             ObjRegistro.txtApellido.KeyPress += new KeyPressEventHandler(ValidarCampoLetra);
-
             ObjRegistro.txtDui.KeyPress += new KeyPressEventHandler(ValidarCampoNumero);
             ObjRegistro.txtTelefono.KeyPress += new KeyPressEventHandler(ValidarCampoNumero);
             ObjRegistro.txtUsuario.KeyPress += new KeyPressEventHandler(ValidarCampoUsuario);
             ObjRegistro.txtCorreo.KeyPress += new KeyPressEventHandler(ValidarCampoCorreo);
         }
         #region Validaciones de Campos
-        private void ValidarCampoCorreo(object sender, KeyPressEventArgs e )
+        //Validaciones de campos
+        private void ValidarCampoCorreo(object sender, KeyPressEventArgs e)
         {
-            // Permite caracteres de control como el retroceso(Backspace) 
+            //La propiedad char.IsControl permite controles como BackSpace, Inicio, Fin, etc.
             if (char.IsControl(e.KeyChar))
             {
+                //Retornamos los valores e.KeyChar
                 return;
             }
-            // Se declara la variable ch de tipo char que se igualara = e.keyChar(Referencia al evento de ingreso de caracteres) 
-            char ch = e.KeyChar;   
-
-            // Solo estos caracteres permitira el text box
-            if ((ch >= '0' && ch <= '9') ||
-                 (ch >= 'A' && ch <= 'Z') ||
-                (ch >= 'a' && ch <= 'z') ||
-                 ch == '.' ||
-                 ch == '@'||
-                 ch == '_')
-            {
-                return;
-            }
-                // e.Handled en true, indicas que has manejado el evento y que el sistema no debe hacer nada más con él. 
-                e.Handled = true;
-        }
-        private void ValidarCampoUsuario(object sender, KeyPressEventArgs e )
-        {
-            // Permite caracteres de control como el retroceso(Backspace) 
-            if (char.IsControl(e.KeyChar))
-            {
-                return;
-            }
+            //Declaramos la variable de tipo char que recibirá los parámetros de las letras registradas por las variables e.KeyChar creadas anteriormente
             char ch = e.KeyChar;
 
+            //Declaramos lo valores que únicamente permitirá el textbox
+            if ((ch >= '0' && ch <= '9') ||
+                (ch >= 'A' && ch <= 'Z') ||
+                (ch >= 'a' && ch <= 'z') ||
+                 ch == '.' ||
+                 ch == '@' ||
+                 ch == '_')
+            {
+                //Retornamos los valores e.KeyChar
+                return;
+            }
+            //Indicamos que se creará el evento e.Char con todos los valores antes proporcionados, como un EventHandler
+            e.Handled = true;
+        }
+        private void ValidarCampoUsuario(object sender, KeyPressEventArgs e)
+        {
+            //La propiedad char.IsControl permite controles como BackSpace, Inicio, Fin, etc.
+            if (char.IsControl(e.KeyChar))
+            {
+                //Retornamos los valores e.KeyChar//Declaramos la variable de tipo char que recibirá los parámetros de las letras registradas por las variables e.KeyChar creadas anteriormente
+                return;
+            }
+            //Declaramos la variable de tipo char que recibirá los parámetros de las letras registradas por las variables e.KeyChar creadas anteriormente
+            char ch = e.KeyChar;
+
+            //Declaramos lo valores que únicamente permitirá el textbox
             if ((ch >= '0' && ch <= '9') ||
                 (ch >= 'A' && ch <= 'Z') ||
                 (ch >= 'a' && ch <= 'z'))
             {
+                //Retornamos los valores e.KeyChar
                 return;
             }
-            // e.Handled en true, indicas que has manejado el evento y que el sistema no debe hacer nada más con él. 
+            //Indicamos que se creará el evento e.Char con todos los valores antes proporcionados, como un EventHandler
             e.Handled = true;
-
         }
         private void ValidarCampoLetra(object sender, KeyPressEventArgs e)
         {
-            // e.KeyChar El evento que detecta el ingreso de cualquier caracter.
-            // Permite caracteres de control como el retroceso(Backspace) 
+            //La propiedad char.IsControl permite controles como BackSpace, Inicio, Fin, etc.
             if (char.IsControl(e.KeyChar))
             {
-                return  ;
-            }
-
-            // Permitir letras (incluyendo letras acentuadas) y espacios
-            if (char.IsLetter(e.KeyChar) || e.KeyChar == ' ')
-            {
+                //Retornamos los valores e.KeyChar
                 return;
             }
-                // e.Handled en true, indicas que has manejado el evento y que el sistema no debe hacer nada más con él. 
-                 e.Handled = true;
+            //Declaramos la variable de tipo char que recibirá los parámetros de las letras registradas por las variables e.KeyChar creadas anteriormente
+            if (char.IsLetter(e.KeyChar) || e.KeyChar == ' ')
+            {
+                //Retornamos los valores e.KeyChar
+                return;
+            }
+            //Indicamos que se creará el evento e.Char con todos los valores antes proporcionados, como un EventHandler
+            e.Handled = true;
         }
         private void ValidarCampoNumero(object sender, KeyPressEventArgs e)
         {
-            if (char.IsDigit (e.KeyChar))
+            if (char.IsDigit(e.KeyChar))
             {
                 return;
             }
-
-
             e.Handled = true;
-
         }
         #endregion
+        #region Eventos Iniciales al cargar el Formulario
         private void CargarCMB(object sender, EventArgs e)
         {
             DAORegistro ObjDAOCargarCMB = new DAORegistro();
@@ -133,22 +141,24 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             //ObjRegistro.cmbEspecialidad2.ValueMember = "especialidadAltId";
             //ObjRegistro.cmbEspecialidad2.DisplayMember = "nombreEspecialidadAlt";
         }
+        #endregion
+        #region Inserción al primer uso del sistema y creación del primer Usuario
         private void AccederLoginPrimerUso(object sender, EventArgs e)
         {
             try
             {
                 //Dado el objeto del DAORegistro, evaluamos si los datos fueron ingresados correctamente dados sus métodos
-                if (string.IsNullOrWhiteSpace(ObjRegistro.txtUsuario.Text.Trim()) ||
-                    string.IsNullOrWhiteSpace(ObjRegistro.txtNombre.Text.Trim()) ||
-                    string.IsNullOrWhiteSpace(ObjRegistro.txtContrasena.Text.Trim()) ||
-                    string.IsNullOrWhiteSpace(ObjRegistro.txtCorreo.Text.Trim()) ||
-                    string.IsNullOrWhiteSpace(ObjRegistro.txtApellido.Text.Trim()) ||
-                    string.IsNullOrWhiteSpace(ObjRegistro.txtDui.Text.Trim()) ||
-                    string.IsNullOrWhiteSpace(ObjRegistro.txtTelefono.Text.Trim()) ||
-                    ObjRegistro.picProfesional.Image == null)
+                if (ObjRegistro.txtUsuario.Text.Length < 3 ||
+                    ObjRegistro.txtNombre.Text.Length < 3 ||
+                    ObjRegistro.txtContrasena.Text.Length < 13 ||
+                    ObjRegistro.txtCorreo.Text.Length < 10 ||
+                    ObjRegistro.txtApellido.Text.Length < 3 ||
+                    ObjRegistro.txtDui.Text.Length < 10 ||
+                    ObjRegistro.txtTelefono.Text.Length < 9 ||
+                    ObjRegistro.picProfesional.Image == Properties.Resources.ProfesionalPic)
                 {
                     //Si los datos no fueron ingresados correctamente, mostramos un mensaje de error
-                    MessageBox.Show("Error al registrarse, verifique si todos los datos han sido ingresados correctamente", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Error al registrarse, verifique si todos los datos han sido ingresados correctamente o si los datos han sido rellenados con éxito", "Primer Usuario", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
@@ -164,9 +174,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                     ObjDAORegistro.Usuario = ObjRegistro.txtUsuario.Text.Trim();
                     //Mandamos a llamar el método MetodoEncriptacionAES para encriptarla y enviarla a la base de datos
                     ObjDAORegistro.Contraseña = ObjMetodosComunes.MetodoEncriptacionAES(ObjRegistro.txtContrasena.Text.Trim());
-                    //Mandamos a llamar al método pinAcceso para que nos genere un ping aleatorio
-                    //Que posteriormente nos servirá para la recuperación de contraseña
-                    ObjDAORegistro.Correo = ObjRegistro.txtCorreo.Text.Trim();
 
                     //Obtenemos los datos del Profesional
                     ObjDAORegistro.Dui = ObjRegistro.txtDui.Text;
@@ -178,7 +185,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                     //ObjDAORegistro.EspecialidadAlt = int.Parse(ObjRegistro.cmbEspecialidad2.SelectedValue.ToString());
 
                     //Guardar imagen
-                    if (ObjRegistro.picProfesional.Image != null)
+                    if (ObjRegistro.picProfesional.Image != Properties.Resources.ProfesionalPic)
                     {
                         string rutaImagen = ObjRegistro.ofdImagen.FileName;
                         string escritorio = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
@@ -199,42 +206,55 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                     }
                     else
                     {
-                        ObjDAORegistro.Imagen = ""; //Terminamos de guardar imagen
+                        ObjDAORegistro.Imagen = Properties.Resources.ProfesionalPic.ToString(); //Terminamos de guardar imagen
                     }
 
-                    //Llamamos a los métodos para verificar si la inserción se hizo correctamente 
-                    if (ObjDAORegistro.RegistroInsertarUsuarioProfesional() == false)
+                    //Llamamos al método de verificación de correo electrónico
+                    //De esta forma, nos aseguramos de ingresar una dirección de correo válida
+                    //Caso contrario, llegase a retornar null, la inserción no se ejecuta y nos mandará un mensaje de error
+                    if (VerificarCorreoUsuario(ObjRegistro.txtCorreo.Text.Trim()) == true)
                     {
-                        MessageBox.Show("Oops!, Algo salió mal, verifique si todas las credenciales han sido ingresadas correctamente", "Primer Usuario", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        ObjDAORegistro.Correo = ObjRegistro.txtCorreo.Text.Trim();
+                        //Llamamos a los métodos para verificar si la inserción se hizo correctamente 
+                        if (ObjDAORegistro.RegistroInsertarUsuarioProfesional() == false)
+                        {
+                            MessageBox.Show("Oops!, Algo salió mal, verifique si todas las credenciales han sido ingresadas correctamente", "Primer Usuario", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Excelente", "Primer Usuario", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                            RegistroEspecialidadesForm ObjAbrirRegistroEspecialidad = new RegistroEspecialidadesForm();
+
+                            //Guardamos las variables de registro que se han hecho durante la inserción de la tabla profesional
+                            ObjAbrirRegistroEspecialidad.txtDUIProfesional.Text = ObjRegistro.txtDui.Text.Trim();
+                            ObjAbrirRegistroEspecialidad.picProfesional.Image = Image.FromFile(ObjDAORegistro.Imagen);
+                            ObjAbrirRegistroEspecialidad.lblNombreProfesional.Text = ObjDAORegistro.Nombres + " " + ObjDAORegistro.Apellidos;
+
+                            ObjAbrirRegistroEspecialidad.ShowDialog();
+                            ObjRegistro.Hide();
+
+                            //Ocultamos el formulario de registro y le daremos la bienvenida al Login
+                            LoginForm ObjMostrarLogin = new LoginForm();
+                            ObjMostrarLogin.Show();
+                        }
                     }
                     else
                     {
-                        MessageBox.Show("Excelente", "Primer Usuario", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                        RegistroEspecialidadesForm ObjAbrirRegistroEspecialidad = new RegistroEspecialidadesForm();
-                        ObjRegistro.Hide();
-
-                        //Guardamos las variables de registro que se han hecho durante la inserción de la tabla profesional
-                        ObjAbrirRegistroEspecialidad.txtDUIProfesional.Text = ObjRegistro.txtDui.Text;
-                        ObjAbrirRegistroEspecialidad.picProfesional.Image = Image.FromFile(ObjDAORegistro.Imagen);
-                        ObjAbrirRegistroEspecialidad.lblNombreProfesional.Text = ObjDAORegistro.Nombres + " " + ObjDAORegistro.Apellidos;
-
-                        ObjAbrirRegistroEspecialidad.ShowDialog();
-
-                        //Ocultamos el formulario de registro y le daremos la bienvenida al Login
-                        LoginForm ObjMostrarLogin = new LoginForm();
-                        ObjMostrarLogin.Show();
+                        MessageBox.Show("El correo electrónico ingresado no posee una dirección de correo válida, verifique si contiene @ o dominio correcto", "Primer Usuario", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("El correo electrónico ingresado no posee una dirección de correo válida, verifique si contiene @ o dominio correcto", "Primer Usuario", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        #endregion
+        #region Métodos para cargar y mostrar la imagen en el PictureBox
         private void CargarImagen(object sender, EventArgs e)
         {
-            ObjRegistro.ofdImagen.Filter = "Archivos De Imagen | *.jpg; *.png; *.jpeg;";
+            ObjRegistro.ofdImagen.Filter = "Archivos de Imagen | *.jpg; *.png; *.jpeg;";
 
             try
             {
@@ -254,5 +274,69 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             ObjRegistro.picProfesional.Image = null;
             ObjRegistro.picProfesional.Image = Properties.Resources.ProfesionalPic;
         }
+        #endregion
+        #region Validar el campo de Correo Electrónico
+        //Creamos un método de tipo booleano, de esta forma nos permitirá retornar un valor (ya sea verdadero o falso)
+        //Y de esta forma, poderse igualar en una condición if
+        //Si el método fuera de tipo void, solo se podría llamar al método, las condiciones no estaría permitidas
+        private bool VerificarCorreoUsuario(string TextBoxEMAILRegistro)
+        {
+            try
+            {
+                //Indicamos el formato EMAIL que contendrá nuestra variable string
+                //Este es el formato de EMAIL común para cualquier tipo de dominio
+                bool VerificarFormato = Regex.IsMatch(TextBoxEMAILRegistro, @"^[^@\s]+@[^@\s]+\.[^@\s]+$");
+
+                //Si el formato de correo no es correcto, retornamos falso
+                if (VerificarFormato != true)
+                    return false;
+
+                //Creamos un bloque TryCatch que nos retornará si el dominio ingresado tiene una dirección válida dentro de la librería de correos
+                try
+                {
+                    //Ahora, procedemos a evaluar si el dominio ingresado, existe dentro de los formatos EMAIL
+                    //La variable denominada "var" es utilizada para declarar variables que no se definen como tal (bool, string, int)
+                    //Sin embargo, se les puede dar uso posteriormente, en este caso igualandola a una variable de tipo string
+                    var DominioCorreo = new MailAddress(TextBoxEMAILRegistro);
+
+                    //Ahora, procedemos a verificar la existencia actual del dominio para ese mismo campo de Correo Electrónico
+                    //Primero, declaramos que el dominio lo almacenaremos en una variable de tipo string
+                    string DominioHost = DominioCorreo.Host;
+
+                    //Ahora, comprobamos la existencia del dominio y registro MX
+                    bool ComprobarMXDominio = Dns.GetHostAddresses(DominioHost).Any(IPAddress => IPAddress.AddressFamily == AddressFamily.InterNetwork);
+                    if (ComprobarMXDominio != true)
+                        return false;
+
+                    //Ahora, indicamos la dirección de la IP de entrada del Host
+                    //De esta forma, nos permitirá entrar al DNS respectivo del dominio del correo
+                    try
+                    {
+                        IPHostEntry ObjIPEntrada = Dns.GetHostEntry(DominioHost);
+                    }
+                    catch (SocketException SocketEx)
+                    {
+                        //En caso de error, mostranos el mensaje con su retorno falso
+                        MessageBox.Show(SocketEx.Message);
+                        return false;
+                    }
+                }
+                catch (FormatException FormatEx)
+                {
+                    MessageBox.Show(FormatEx.Message);
+                    return false;
+                }
+            }
+            catch (AsposeException AsposeEx)
+            {
+                //En caso de error, mostramos el mensaje con su retorno falso
+                MessageBox.Show(AsposeEx.Message);
+                return false;
+            }
+
+            //Si todo salio bien, retornamos verdadero
+            return true;
+        }
+        #endregion
     }
 }

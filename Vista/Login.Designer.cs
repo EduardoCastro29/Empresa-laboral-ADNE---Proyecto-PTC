@@ -135,7 +135,7 @@
             this.lblRecuerdame.Location = new System.Drawing.Point(169, 444);
             this.lblRecuerdame.Name = "lblRecuerdame";
             this.lblRecuerdame.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblRecuerdame.Size = new System.Drawing.Size(121, 22);
+            this.lblRecuerdame.Size = new System.Drawing.Size(210, 40);
             this.lblRecuerdame.TabIndex = 184;
             this.lblRecuerdame.Text = "Recuerdame";
             this.lblRecuerdame.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -469,7 +469,7 @@
             this.txtUsuario.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtUsuario.Lines = new string[0];
             this.txtUsuario.Location = new System.Drawing.Point(4, 3);
-            this.txtUsuario.MaxLength = 32767;
+            this.txtUsuario.MaxLength = 30;
             this.txtUsuario.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtUsuario.Modified = false;
             this.txtUsuario.Multiline = false;
@@ -587,7 +587,7 @@
             this.txtContraseña.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtContraseña.Lines = new string[0];
             this.txtContraseña.Location = new System.Drawing.Point(4, 3);
-            this.txtContraseña.MaxLength = 32767;
+            this.txtContraseña.MaxLength = 64;
             this.txtContraseña.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtContraseña.Modified = false;
             this.txtContraseña.Multiline = false;
@@ -644,7 +644,7 @@
             this.lblBienvenido.Location = new System.Drawing.Point(269, 123);
             this.lblBienvenido.Name = "lblBienvenido";
             this.lblBienvenido.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblBienvenido.Size = new System.Drawing.Size(234, 52);
+            this.lblBienvenido.Size = new System.Drawing.Size(179, 40);
             this.lblBienvenido.TabIndex = 13;
             this.lblBienvenido.Text = "Bienvenido";
             this.lblBienvenido.TextAlignment = System.Drawing.ContentAlignment.TopLeft;

@@ -24,14 +24,12 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             ObjVerPaciente.txtBuscarPaciente.KeyPress += new KeyPressEventHandler(BuscarNombrePaciente);
             ObjVerPaciente.btnAbrirDocumentos.Click += new EventHandler(AbrirDocumento);
         }
-
         private void AbrirDocumento(object sender, EventArgs e)
         {
             CitasForm ObjMostrarCitas = new CitasForm();
             ObjVerPaciente.Hide();
             ObjMostrarCitas.Show();
         }
-
         private void CargarPacientes(object sender, EventArgs e)
         {
             DAOVerPacientes ObjDaoPacientes = new DAOVerPacientes();
@@ -46,7 +44,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                 ObjVerPaciente.flpVerPacientes.Controls.Add(ObjControlPaciente);
             }
         }
-
         private void BuscarNombrePaciente(object sender, KeyPressEventArgs e)
         {
             DAOVerPacientes ObjDaoPacientes = new DAOVerPacientes();
@@ -59,7 +56,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                 ControlVerPacientesUC panelPaciente = new ControlVerPacientesUC(ObjDaoPacientes);
                 ObjVerPaciente.flpVerPacientes.Controls.Add(panelPaciente);
             }
-
         }
     }
 }

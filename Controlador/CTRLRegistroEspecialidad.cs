@@ -25,14 +25,17 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             ObjRegistroEspecialidad.btnAnadirEspecialidad.Click += new EventHandler(AgregarEspecialidad);
             ObjRegistroEspecialidad.btnSiguiente.Click += new EventHandler(IngresarLogin);
         }
+        #region Eventos Iniciales al cargar el Formulario
         private void CargarDGVEspecialidades()
         {
-            DAORegistroEspecialidad ObjCargarGrid = new DAORegistroEspecialidad();
+            DAORegistroEspecialidad ObjCargarGridYDUI = new DAORegistroEspecialidad();
+
 
             ObjRegistroEspecialidad.dgvEspecialidades.DataSource = null;
-            ObjRegistroEspecialidad.dgvEspecialidades.DataSource = ObjCargarGrid.CargarDGVEspecialidadesN();
+            ObjRegistroEspecialidad.dgvEspecialidades.DataSource = ObjCargarGridYDUI.CargarDGVEspecialidadesN();
             //Indicamos que columnas no queremos que se muestren a simple vista
             ObjRegistroEspecialidad.dgvEspecialidades.Columns[0].Visible = false;
+            ObjRegistroEspecialidad.dgvEspecialidades.Columns[1].Visible = false;
         }
         private void CargarEspecialidades(object sender, EventArgs e)
         {
@@ -43,6 +46,8 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             ObjRegistroEspecialidad.cmbEspecialidades.ValueMember = "especialidadId"; //Agregamos los atributos que estan en la tabla Especialidad
             ObjRegistroEspecialidad.cmbEspecialidades.DisplayMember = "nombreEspecialidad";
         }
+        #endregion
+        #region Agregar una nueva especialidad al empleado seleccionado (CREATE), relación de muchos a muchos
         private void AgregarEspecialidad(object sender, EventArgs e)
         {
             try
@@ -67,6 +72,8 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                 MessageBox.Show(ex.Message);
             }
         }
+        #endregion
+        #region Validación de Login después que el profesional haya registrado una especialidad
         private void IngresarLogin(object sender, EventArgs e)
         {
             try
@@ -89,5 +96,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                 MessageBox.Show(ex.Message);
             }
         }
+        #endregion
     }
 }

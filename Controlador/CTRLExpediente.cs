@@ -27,8 +27,46 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             ObjExpediente.btnGuardar.Click += new EventHandler(ExpedienteDataInsert);
             ObjExpediente.btnModificar.Click += new EventHandler(ExpedienteDataUpdate);
             ObjExpediente.Load += new EventHandler(CargarExpediente);
-        }
 
+            //Validaciones de Campos
+            ObjExpediente.txtAproximacionDiag.Text += new KeyPressEventHandler(ValidarCampoTextBox);
+            ObjExpediente.txtAtencionBrindada.Text += new KeyPressEventHandler(ValidarCampoTextBox);
+            ObjExpediente.txtCognicion.Text += new KeyPressEventHandler(ValidarCampoTextBox);
+            ObjExpediente.txtEstadoAnimo.Text += new KeyPressEventHandler(ValidarCampoTextBox);
+            ObjExpediente.txtEstadoConductual.Text += new KeyPressEventHandler(ValidarCampoTextBox);
+            ObjExpediente.txtObservacion.Text += new KeyPressEventHandler(ValidarCampoTextBox);
+            ObjExpediente.txtPauta.Text += new KeyPressEventHandler(ValidarCampoTextBox);
+            ObjExpediente.txtRedSocial.Text += new KeyPressEventHandler(ValidarCampoTextBox);
+            ObjExpediente.txtRiesgoValorado.Text += new KeyPressEventHandler(ValidarCampoTextBox);
+            ObjExpediente.txtSomatizacion.Text += new KeyPressEventHandler(ValidarCampoTextBox);
+            ObjExpediente.txtVidaInterpersonal.Text += new KeyPressEventHandler(ValidarCampoTextBox);
+        }
+        #region Validaciones de Campos
+        private void ValidarCampoTextBox(object sender, KeyPressEventArgs e)
+        {
+            //La propiedad char.IsControl permite controles como BackSpace, Inicio, Fin, etc.
+            if (char.IsControl(e.KeyChar))
+            {
+                //Retornamos los valores e.KeyChar
+                return;
+            }
+            //Declaramos la variable de tipo char que recibirá los parámetros de las letras registradas por las variables e.KeyChar creadas anteriormente
+            char ch = e.KeyChar;
+
+            //Declaramos lo valores que únicamente permitirá el textbox
+            if ((ch >= 'A' && ch <= 'Z') ||
+                (ch >= 'a' && ch <= 'z') ||
+                 ch == '.' ||
+                 ch == ',')
+            {
+                //Retornamos los valores e.KeyChar
+                return;
+            }
+            //Indicamos que se creará el evento e.Char con todos los valores antes proporcionados, como un EventHandler
+            e.Handled = true;
+        }
+        #endregion
+        #region Eventos Iniciales al cargar el Formulario
         //ABRIR EXPEDIENTE
         private void CargarExpediente(object sender, EventArgs e)
         {
@@ -37,28 +75,29 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                 ObjExpediente.btnModificar.Enabled = false;
             }
         }
-
+        #endregion
+        #region Inserción en el Formulario de Expediente (INSERT)
         //INSERT
         private void ExpedienteDataInsert(object sender, EventArgs e)
         {
             try
             {
                 //Dado el objeto del DAOExpedienteMédico, evaluamos si los datos fueron ingresados correctamente dados sus métodos
-                if (string.IsNullOrWhiteSpace(ObjExpediente.txtPacienteId.Text.Trim()) || //////////
-                     string.IsNullOrWhiteSpace(ObjExpediente.txtEstadoAnimo.Text.Trim()) ||
-                     string.IsNullOrWhiteSpace(ObjExpediente.txtEstadoConductual.Text.Trim()) ||
-                     string.IsNullOrWhiteSpace(ObjExpediente.txtSomatizacion.Text.Trim()) ||
-                     string.IsNullOrWhiteSpace(ObjExpediente.txtVidaInterpersonal.Text.Trim()) ||
-                     string.IsNullOrWhiteSpace(ObjExpediente.txtCognicion.Text.Trim()) ||
-                     string.IsNullOrWhiteSpace(ObjExpediente.txtRedSocial.Text.Trim()) ||
-                     string.IsNullOrWhiteSpace(ObjExpediente.txtPauta.Text.Trim()) ||
-                     string.IsNullOrWhiteSpace(ObjExpediente.txtRiesgoValorado.Text.Trim()) ||
-                     string.IsNullOrWhiteSpace(ObjExpediente.txtObservacion.Text.Trim()) ||
-                     string.IsNullOrWhiteSpace(ObjExpediente.txtAproximacionDiag.Text.Trim()) ||
-                     string.IsNullOrWhiteSpace(ObjExpediente.txtAtencionBrindada.Text.Trim()))
+                if (ObjExpediente.txtPacienteId.Text.Length < 10 ||
+                    ObjExpediente.txtEstadoAnimo.Text.Length < 5 ||
+                    ObjExpediente.txtEstadoConductual.Text.Length < 5 ||
+                    ObjExpediente.txtSomatizacion.Text.Length < 5 ||
+                    ObjExpediente.txtVidaInterpersonal.Text.Length < 5 ||
+                    ObjExpediente.txtCognicion.Text.Length < 5 ||
+                    ObjExpediente.txtRedSocial.Text.Length < 5 ||
+                    ObjExpediente.txtPauta.Text.Length < 5 ||
+                    ObjExpediente.txtRiesgoValorado.Text.Length < 5 ||
+                    ObjExpediente.txtObservacion.Text.Length < 5 ||
+                    ObjExpediente.txtAproximacionDiag.Text.Length < 5 ||
+                    ObjExpediente.txtAtencionBrindada.Text.Length < 5)
                 {
                     //Si los datos no fueron ingresados correctamente, mostramos un mensaje de error
-                    MessageBox.Show("Error al guardar, verifique si todos los datos han sido ingresados correctamente", "Expediente", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Error al guardar, verifique si todos los datos han sido ingresados correctamente o cumple con la cantidad mínima de caracteres", "Expediente", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
@@ -105,29 +144,29 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                 MessageBox.Show(ex.Message);
             }
         }
-
+        #endregion
+        #region Actualización en el Formulario de Expediente (UPDATE)
         //UPDATE
         private void ExpedienteDataUpdate(object sender, EventArgs e)
         {
             try
             {
                 //Dado el objeto del DAOExpedienteMédico, evaluamos si los datos fueron ingresados correctamente dados sus métodos
-                if (string.IsNullOrWhiteSpace(ObjExpediente.txtPacienteId.Text.Trim()) ||
-
-                     string.IsNullOrWhiteSpace(ObjExpediente.txtEstadoAnimo.Text.Trim()) ||
-                     string.IsNullOrWhiteSpace(ObjExpediente.txtEstadoConductual.Text.Trim()) ||
-                     string.IsNullOrWhiteSpace(ObjExpediente.txtSomatizacion.Text.Trim()) ||
-                     string.IsNullOrWhiteSpace(ObjExpediente.txtVidaInterpersonal.Text.Trim()) ||
-                     string.IsNullOrWhiteSpace(ObjExpediente.txtCognicion.Text.Trim()) ||
-                     string.IsNullOrWhiteSpace(ObjExpediente.txtRedSocial.Text.Trim()) ||
-                     string.IsNullOrWhiteSpace(ObjExpediente.txtPauta.Text.Trim()) ||
-                     string.IsNullOrWhiteSpace(ObjExpediente.txtRiesgoValorado.Text.Trim()) ||
-                     string.IsNullOrWhiteSpace(ObjExpediente.txtObservacion.Text.Trim()) ||
-                     string.IsNullOrWhiteSpace(ObjExpediente.txtAproximacionDiag.Text.Trim()) ||
-                     string.IsNullOrWhiteSpace(ObjExpediente.txtAtencionBrindada.Text.Trim()))
+                if (ObjExpediente.txtPacienteId.Text.Length < 10 ||
+                    ObjExpediente.txtEstadoAnimo.Text.Length < 5 ||
+                    ObjExpediente.txtEstadoConductual.Text.Length < 5 ||
+                    ObjExpediente.txtSomatizacion.Text.Length < 5 ||
+                    ObjExpediente.txtVidaInterpersonal.Text.Length < 5 ||
+                    ObjExpediente.txtCognicion.Text.Length < 5 ||
+                    ObjExpediente.txtRedSocial.Text.Length < 5 ||
+                    ObjExpediente.txtPauta.Text.Length < 5 ||
+                    ObjExpediente.txtRiesgoValorado.Text.Length < 5 ||
+                    ObjExpediente.txtObservacion.Text.Length < 5 ||
+                    ObjExpediente.txtAproximacionDiag.Text.Length < 5 ||
+                    ObjExpediente.txtAtencionBrindada.Text.Length < 5)
                 {
                     //Si los datos no fueron ingresados correctamente, mostramos un mensaje de error
-                    MessageBox.Show("Error al guardar, verifique si todos los datos han sido ingresados correctamente", "Expediente", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Error al guardar, verifique si todos los datos han sido ingresados correctamente o cumple con la cantidad mínima de caracteres", "Expediente", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
@@ -174,6 +213,8 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                 MessageBox.Show(ex.Message);
             }
         }
+        #endregion
+        #region Limpiar Campos (después de cada acción)
         private void LimpiarCampos()
         {
             ObjExpediente.txtEstadoAnimo.Clear();
@@ -190,5 +231,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
 
             ObjExpediente.txtPacienteId.Clear();
         }
+        #endregion
     }
 }

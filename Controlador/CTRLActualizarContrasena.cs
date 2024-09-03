@@ -19,6 +19,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
 
             ObjActualizarForm.btnActualizarContrasena.Click += new EventHandler(ActualizarContrasena);
         }
+        #region Actualización de contraseña como método de recuperación hacia el profesional (UPDATE)
         private void ActualizarContrasena(object sender, EventArgs e)
         {
             try
@@ -26,10 +27,10 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                 DAOActualizarContrasena ObjDAOActualizarContrasena = new DAOActualizarContrasena();
                 CommonMethods ObjMetodosComunes = new CommonMethods();
 
-                if (string.IsNullOrWhiteSpace(ObjActualizarForm.txtNuevaContrasena.Text.Trim()) ||
-                    string.IsNullOrWhiteSpace(ObjActualizarForm.txtConfirmarContrasena.Text.Trim()))
+                if (ObjActualizarForm.txtNuevaContrasena.Text.Length < 13 ||
+                    ObjActualizarForm.txtConfirmarContrasena.Text.Length < 13)
                 {
-                    MessageBox.Show("Uno o varios de los campos están vacios, debe de ingresar una contraseña válida", "Actualización de contraseña", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Debe de registrar una contraseña válida, verifique si la contraseña cumple con la condición de mínimo 13 caracteres", "Actualización de contraseña", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 else if (ObjActualizarForm.txtNuevaContrasena.Text != ObjActualizarForm.txtConfirmarContrasena.Text)
                 {
@@ -58,5 +59,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                 MessageBox.Show(ex.Message);
             }
         }
+        #endregion
     }
 }

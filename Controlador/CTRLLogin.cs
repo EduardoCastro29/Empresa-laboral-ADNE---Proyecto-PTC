@@ -29,12 +29,15 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             ObjLogin.btnIniciarSesion.Click += new EventHandler(AccederLogin);
             ObjLogin.btnOlvidarContrasena.Click += new EventHandler(OlvidarContrasena);
         }
+        #region Carga Inicial dentro del Formulario
         private void CargarLogin(object sender, EventArgs e)
         {
             ObjLogin.txtUsuario.Text = Properties.Settings.Default.Usuario;
             ObjLogin.txtContraseña.Text = Properties.Settings.Default.Contrasena;
             ObjLogin.cbRecuerdame.Checked = false;
         }
+        #endregion
+        #region Acceder al Login
         // Creando un método llamado AccederLogin que tomará como proceso los valores dentro de la clase DAO y del DTO
         private void AccederLogin(object sender, EventArgs e)
         {
@@ -92,11 +95,12 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                 MessageBox.Show(ex.Message);
             }
         }
+        #endregion
         private void OlvidarContrasena(object sender, EventArgs e)
         {
             RecuperarContraseñaOPCForm ObjRecuperarContrasenaOPC = new RecuperarContraseñaOPCForm();
             ObjLogin.Hide();
             ObjRecuperarContrasenaOPC.Show();
-        }       
+        }
     }
 }

@@ -11,12 +11,16 @@ using System.Drawing;
 using System.Data;
 using System.Runtime.InteropServices.ComTypes;
 using Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DTO;
+using System.Text.RegularExpressions;
+using Aspose.Email;
+using System.Net.Sockets;
+using System.Net;
 
 namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
 {
     internal class CTRLAdministrador
     {
-        //El formulario Registro pooserá 2 constructores
+        //El formulario Registro poseerá 2 constructores
         //Con lo cual, es necesario saber que constructor accionara cierta acción
         //Para eso usaremos un if dentro del InitialComponent del Formulario de registro
 
@@ -36,7 +40,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             ObjAdministradorForm.cmsActualizar.Click += new EventHandler(AbrirActualizarProfesional);
             ObjAdministradorForm.cmsEliminarProfesional.Click += new EventHandler(EliminarProfesional);
         }
-        #region Llenado de DataGridView (Empleados)
+        #region Eventos Iniciales al cargar el Formulario
         private void RecargarDGVEmpleados()
         {
             DAOAdministrador ObjDAOLlenarDGV = new DAOAdministrador();
@@ -59,6 +63,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             }
         }
         #endregion
+        #region Abrir desde el DGV la inserción de un nuevo Profesional (INSERT)
         private void AbrirAgregarProfesional(object sender, EventArgs e)
         {
             //Procedemos a abrir el formulario de agregar nuevo profesional
@@ -68,6 +73,8 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             //Refrescamos el DataGridView cuando el formulario se cierre por completo
             RecargarDGVEmpleados();
         }
+        #endregion
+        #region Abrir desde el DGV la actualización de un nuevo Profesional (UPDATE)
         private void AbrirActualizarProfesional(object sender, EventArgs e)
         {
             //Indicamos la fila específica del DataGridView que se mostrará en el formulario de registro
@@ -114,6 +121,8 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             //Refrescamos el DataGridView cuando el formulario se cierre por completo
             RecargarDGVEmpleados();
         }
+        #endregion
+        #region Eliminar un Profesional desde el DataGridView (DELETE)
         private void EliminarProfesional(object sender, EventArgs e)
         {
             //Indicamos en que posición nos encontramos dentro del DataGridView
@@ -145,6 +154,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                 }
             }
         }
+        #endregion
         /**                     CONSTRUCTOR DEL FORMULARIO DE REGISTRO                     **/
         //Este es el constructor del Controlador Administrador, el cuál tendrá las acciones dentro del InitialComponent
         public CTRLAdministrador(RegistroForm Vista)
@@ -163,202 +173,10 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             //Validar los diferentes TextBox que se encuentran dentro del formulario
             ObjRegistroForm.txtNombre.KeyPress += new KeyPressEventHandler(ValidarCampoLetra);
             ObjRegistroForm.txtApellido.KeyPress += new KeyPressEventHandler(ValidarCampoLetra);
-
             ObjRegistroForm.txtDui.KeyPress += new KeyPressEventHandler(ValidarCampoNumero);
             ObjRegistroForm.txtTelefono.KeyPress += new KeyPressEventHandler(ValidarCampoNumero);
             ObjRegistroForm.txtUsuario.KeyPress += new KeyPressEventHandler(ValidarCampoUsuario);
             ObjRegistroForm.txtCorreo.KeyPress += new KeyPressEventHandler(ValidarCampoCorreo);
-        }
-        private void AccionesIniciales(object sender, EventArgs e)
-        {
-            //Indicamos cuales son los controles principales que, al cargar el formulario, no se podrán ver a simple vista
-            ObjRegistroForm.txtContrasena.Visible = false;
-            ObjRegistroForm.bsContrasena.Visible = false;
-            ObjRegistroForm.lblContrasena.Visible = false;
-
-            //Podemos reutilizar esta clase para cargar los Combobox Específicos, ya que se trata de un mismo formulario
-            //Lo cual, no cambia, sin embargo sí las acciones a realizar
-            DAORegistro ObjDAOCargarCMB = new DAORegistro();
-
-            //Combobox Desempeño
-            ObjRegistroForm.cmbDesempeno.DataSource = ObjDAOCargarCMB.AgregarCMBDesempeno();
-            ObjRegistroForm.cmbDesempeno.ValueMember = "desempenoId";
-            ObjRegistroForm.cmbDesempeno.DisplayMember = "desempeno";
-        }
-        private void GuardarRegistroProfesional(object sender, EventArgs e)
-        {
-            try
-            {
-                if (string.IsNullOrWhiteSpace(ObjRegistroForm.txtUsuario.Text.Trim()) ||
-                    string.IsNullOrWhiteSpace(ObjRegistroForm.txtNombre.Text.Trim()) ||
-                    string.IsNullOrWhiteSpace(ObjRegistroForm.txtCorreo.Text.Trim()) ||
-                    string.IsNullOrWhiteSpace(ObjRegistroForm.txtApellido.Text.Trim()) ||
-                    string.IsNullOrWhiteSpace(ObjRegistroForm.txtDui.Text.Trim()) ||
-                    string.IsNullOrWhiteSpace(ObjRegistroForm.txtTelefono.Text.Trim()) ||
-                    ObjRegistroForm.picProfesional.Image == null)
-                {
-                    MessageBox.Show("Error al registrarse, verifique si todos los datos han sido ingresados correctamente", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                else
-                {
-                    //Llamamos a los métodos correspondientes a utilizar
-                    DAOAdministrador ObjDAORegistrarProfesional = new DAOAdministrador();
-                    CommonMethods ObjMetodosComunes = new CommonMethods();
-
-                    //Obtenemos datos del objeto ObjDAORegistrarProfesional
-                    ObjDAORegistrarProfesional.Usuario = ObjRegistroForm.txtUsuario.Text.Trim();
-                    //Mandamos a llamar el método MetodoEncriptacionAES para encriptarla y enviarla a la base de datos
-                    ObjDAORegistrarProfesional.Contraseña = ObjMetodosComunes.MetodoEncriptacionAES(ObjRegistroForm.txtUsuario.Text.Trim() + "ADNE2024");
-                    //Mandamos a llamar al método pinAcceso para que nos genere un ping aleatorio
-                    //Que posteriormente nos servirá para la recuperación de contraseña
-                    ObjDAORegistrarProfesional.Correo = ObjRegistroForm.txtCorreo.Text.Trim();
-
-                    //Obtenemos los datos del Profesional
-                    ObjDAORegistrarProfesional.Dui = ObjRegistroForm.txtDui.Text;
-                    ObjDAORegistrarProfesional.Nombres = ObjRegistroForm.txtNombre.Text.Trim();
-                    ObjDAORegistrarProfesional.Apellidos = ObjRegistroForm.txtApellido.Text.Trim();
-                    ObjDAORegistrarProfesional.Telefono = ObjRegistroForm.txtTelefono.Text;
-                    ObjDAORegistrarProfesional.DesempenoId = int.Parse(ObjRegistroForm.cmbDesempeno.SelectedValue.ToString());
-
-                    if (ObjRegistroForm.picProfesional.Image != null)
-                    {
-                        string rutaImagen = ObjRegistroForm.ofdImagen.FileName;
-                        string escritorio = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-                        string carpetaDestino = Path.Combine(escritorio, "Imagenes");
-
-                        Directory.CreateDirectory(carpetaDestino);
-
-                        string imagenDestino = Path.Combine(carpetaDestino, Guid.NewGuid().ToString() + Path.GetExtension(rutaImagen));
-                        File.Copy(rutaImagen, imagenDestino);
-                        try
-                        {
-                            ObjDAORegistrarProfesional.Imagen = imagenDestino;
-                        }
-                        catch (Exception ex)
-                        {
-                            MessageBox.Show(ex.Message);
-                        }
-                    }
-                    else
-                    {
-                        ObjDAORegistrarProfesional.Imagen = "";
-                    }
-
-                    //Evaluamos si la inserción se hizo correctamente
-                    if (ObjDAORegistrarProfesional.AgregarEmpleadoUsuario() == false)
-                    {
-                        MessageBox.Show("El Usuario no pudo ser registrado, verifique que los datos han sido ingresados correctamente", "Registrar Profesional", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                    else
-                    {
-                        //Ocultamos el formulario de Registro
-                        ObjRegistroForm.Hide();
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-        private void ActualizarRegistroProfesional(object sender, EventArgs e)
-        {
-            //Empezamos el bloque de código con un try catch, esto para verificar si hubo algún error, identificar la línea respectiva
-            try
-            {
-                //Evaluamos si existen campos vacios dentro del formulario
-                if (string.IsNullOrWhiteSpace(ObjRegistroForm.txtUsuario.Text.Trim()) ||
-                    string.IsNullOrWhiteSpace(ObjRegistroForm.txtNombre.Text.Trim()) ||
-                    string.IsNullOrWhiteSpace(ObjRegistroForm.txtCorreo.Text.Trim()) ||
-                    string.IsNullOrWhiteSpace(ObjRegistroForm.txtApellido.Text.Trim()) ||
-                    string.IsNullOrWhiteSpace(ObjRegistroForm.txtDui.Text.Trim()) ||
-                    string.IsNullOrWhiteSpace(ObjRegistroForm.txtTelefono.Text.Trim()) ||
-                    ObjRegistroForm.picProfesional.Image == null)
-                {
-                    MessageBox.Show("Error al registrarse, verifique si todos los datos han sido ingresados correctamente", "Actualizar Profesional", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                }
-                else
-                {
-                    //Creamos las clases que usaremos para la actualización del PROFESIONAL y USUARIO
-                    DAOAdministrador ObjDAOActualizarProfesional = new DAOAdministrador();
-                    CommonMethods ObjMetodosComunes = new CommonMethods();
-
-                    //Obtenemos datos del objeto ObjDAOActualizarProfesional
-                    ObjDAOActualizarProfesional.UsuarioId = int.Parse(ObjRegistroForm.txtIDUsuario.Text.Trim());
-                    ObjDAOActualizarProfesional.Usuario = ObjRegistroForm.txtUsuario.Text.Trim();
-                    //Mandamos a llamar el método MetodoEncriptacionAES para encriptarla y enviarla a la base de datos
-                    //De igual forma, al actualizar el Usuario del Profesional, se actualizará la contraseña del mismo
-                    //De esta forma, el reseteo de contraseña vía administrador se hace presente
-                    ObjDAOActualizarProfesional.Contraseña = ObjMetodosComunes.MetodoEncriptacionAES(ObjRegistroForm.txtUsuario.Text.Trim() + "ADNE2024");
-                    ObjDAOActualizarProfesional.Correo = ObjRegistroForm.txtCorreo.Text.Trim();
-                    ObjDAOActualizarProfesional.Dui = ObjRegistroForm.txtDui.Text;
-                    ObjDAOActualizarProfesional.Nombres = ObjRegistroForm.txtNombre.Text.Trim();
-                    ObjDAOActualizarProfesional.Apellidos = ObjRegistroForm.txtApellido.Text.Trim();
-                    ObjDAOActualizarProfesional.Telefono = ObjRegistroForm.txtTelefono.Text;
-                    ObjDAOActualizarProfesional.DesempenoId = int.Parse(ObjRegistroForm.cmbDesempeno.SelectedValue.ToString());
-
-                    //Llamamos al método para registrar la imagen del Usuario
-                    if (ObjRegistroForm.picProfesional.Image != null)
-                    {
-                        string rutaImagen = ObjRegistroForm.ofdImagen.FileName;
-                        string escritorio = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-                        string carpetaDestino = Path.Combine(escritorio, "Imagenes");
-
-                        Directory.CreateDirectory(carpetaDestino);
-
-                        string imagenDestino = Path.Combine(carpetaDestino, Guid.NewGuid().ToString() + Path.GetExtension(rutaImagen));
-                        File.Copy(rutaImagen, imagenDestino);
-                        try
-                        {
-                            ObjDAOActualizarProfesional.Imagen = imagenDestino;
-                        }
-                        catch (Exception ex)
-                        {
-                            MessageBox.Show(ex.Message);
-                        }
-                    }
-                    else
-                    {
-                        ObjDAOActualizarProfesional.Imagen = "";
-                    }
-
-                    //Finalmente, evaluamos si la actualización se hizo correctamente
-                    if (ObjDAOActualizarProfesional.ActualizarUsuarioEmpleado() == false)
-                    {
-                        MessageBox.Show("Error al actualizar el profesional, verifique si todos los datos han sido ingresados correctamente", "Actualizar Profesional", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                    else
-                    {
-                        //Ocultamos el formulario de Registro
-                        ObjRegistroForm.Hide();
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-        private void CargarImagenProfesional(object sender, EventArgs e)
-        {
-            ObjRegistroForm.ofdImagen.Filter = "Archivos De Imagen | *.jpg; *.png; *.jpeg;";
-
-            try
-            {
-                if (ObjRegistroForm.ofdImagen.ShowDialog() == DialogResult.OK)
-                {
-                    string ruta = ObjRegistroForm.ofdImagen.FileName;
-                    ObjRegistroForm.picProfesional.Image = Image.FromFile(ruta);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-        private void EliminarFotoProfesional(object sender, EventArgs e)
-        {
-            ObjRegistroForm.picProfesional.Image = null;
         }
         #region Validaciones de Campos
         //Validaciones de campos
@@ -375,7 +193,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
 
             //Declaramos lo valores que únicamente permitirá el textbox
             if ((ch >= '0' && ch <= '9') ||
-                 (ch >= 'A' && ch <= 'Z') ||
+                (ch >= 'A' && ch <= 'Z') ||
                 (ch >= 'a' && ch <= 'z') ||
                  ch == '.' ||
                  ch == '@' ||
@@ -433,6 +251,280 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                 return;
             }
             e.Handled = true;
+        }
+        #endregion
+        #region Eventos Iniciales al cargar el Formulario
+        private void AccionesIniciales(object sender, EventArgs e)
+        {
+            //Indicamos cuales son los controles principales que, al cargar el formulario, no se podrán ver a simple vista
+            ObjRegistroForm.txtContrasena.Visible = false;
+            ObjRegistroForm.bsContrasena.Visible = false;
+            ObjRegistroForm.lblContrasena.Visible = false;
+
+            //Podemos reutilizar esta clase para cargar los Combobox Específicos, ya que se trata de un mismo formulario
+            //Lo cual, no cambia, sin embargo sí las acciones a realizar
+            DAORegistro ObjDAOCargarCMB = new DAORegistro();
+
+            //Combobox Desempeño
+            ObjRegistroForm.cmbDesempeno.DataSource = ObjDAOCargarCMB.AgregarCMBDesempeno();
+            ObjRegistroForm.cmbDesempeno.ValueMember = "desempenoId";
+            ObjRegistroForm.cmbDesempeno.DisplayMember = "desempeno";
+        }
+        #endregion
+        #region Inserción al Formulario de nuevo Profesional (CREATE)
+        private void GuardarRegistroProfesional(object sender, EventArgs e)
+        {
+            try
+            {
+                if (ObjRegistroForm.txtUsuario.Text.Length < 3 ||
+                    ObjRegistroForm.txtNombre.Text.Length < 3 ||
+                    ObjRegistroForm.txtContrasena.Text.Length < 13 ||
+                    ObjRegistroForm.txtCorreo.Text.Length < 10 ||
+                    ObjRegistroForm.txtApellido.Text.Length < 3 ||
+                    ObjRegistroForm.txtDui.Text.Length < 10 ||
+                    ObjRegistroForm.txtTelefono.Text.Length < 9 ||
+                    ObjRegistroForm.picProfesional.Image == Properties.Resources.ProfesionalPic)
+                {
+                    MessageBox.Show("Error al registrarse, verifique si todos los datos han sido ingresados correctamente o si los datos han sido rellenados con éxito", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    //Llamamos a los métodos correspondientes a utilizar
+                    DAOAdministrador ObjDAORegistrarProfesional = new DAOAdministrador();
+                    CommonMethods ObjMetodosComunes = new CommonMethods();
+
+                    //Obtenemos datos del objeto ObjDAORegistrarProfesional
+                    ObjDAORegistrarProfesional.Usuario = ObjRegistroForm.txtUsuario.Text.Trim();
+                    //Mandamos a llamar el método MetodoEncriptacionAES para encriptarla y enviarla a la base de datos
+                    ObjDAORegistrarProfesional.Contraseña = ObjMetodosComunes.MetodoEncriptacionAES(ObjRegistroForm.txtUsuario.Text.Trim() + "ADNE2024");
+
+                    //Obtenemos los datos del Profesional
+                    ObjDAORegistrarProfesional.Dui = ObjRegistroForm.txtDui.Text;
+                    ObjDAORegistrarProfesional.Nombres = ObjRegistroForm.txtNombre.Text.Trim();
+                    ObjDAORegistrarProfesional.Apellidos = ObjRegistroForm.txtApellido.Text.Trim();
+                    ObjDAORegistrarProfesional.Telefono = ObjRegistroForm.txtTelefono.Text;
+                    ObjDAORegistrarProfesional.DesempenoId = int.Parse(ObjRegistroForm.cmbDesempeno.SelectedValue.ToString());
+
+                    if (ObjRegistroForm.picProfesional.Image != Properties.Resources.ProfesionalPic)
+                    {
+                        string rutaImagen = ObjRegistroForm.ofdImagen.FileName;
+                        string escritorio = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+                        string carpetaDestino = Path.Combine(escritorio, "Imagenes");
+
+                        Directory.CreateDirectory(carpetaDestino);
+
+                        string imagenDestino = Path.Combine(carpetaDestino, Guid.NewGuid().ToString() + Path.GetExtension(rutaImagen));
+                        File.Copy(rutaImagen, imagenDestino);
+                        try
+                        {
+                            ObjDAORegistrarProfesional.Imagen = imagenDestino;
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message);
+                        }
+                    }
+                    else
+                    {
+                        ObjDAORegistrarProfesional.Imagen = Properties.Resources.ProfesionalPic.ToString();
+                    }
+
+                    if (VerificarCorreoUsuario(ObjRegistroForm.txtCorreo.Text.Trim()) == true)
+                    {
+                        ObjDAORegistrarProfesional.Correo = ObjRegistroForm.txtCorreo.Text.Trim();
+                        //Evaluamos si la inserción se hizo correctamente
+                        if (ObjDAORegistrarProfesional.AgregarEmpleadoUsuario() == false)
+                        {
+                            MessageBox.Show("El Usuario no pudo ser registrado, verifique que los datos han sido ingresados correctamente", "Registrar Profesional", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                        else
+                        {
+                            MessageBox.Show("El Profesional ha sido registrado exitosamente", "Registrar Profesional", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            //Ocultamos el formulario de Registro
+                            ObjRegistroForm.Hide();
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("El correo electrónico ingresado no posee una dirección de correo válida, verifique si contiene @ o dominio correcto", "Registrar Profesional", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        #endregion
+        #region Actualización al Formulario del Profesional (UPDATE)
+        private void ActualizarRegistroProfesional(object sender, EventArgs e)
+        {
+            //Empezamos el bloque de código con un try catch, esto para verificar si hubo algún error, identificar la línea respectiva
+            try
+            {
+                //Evaluamos si existen campos vacios dentro del formulario
+                if (ObjRegistroForm.txtUsuario.Text.Length < 3 ||
+                    ObjRegistroForm.txtNombre.Text.Length < 3 ||
+                    ObjRegistroForm.txtContrasena.Text.Length < 13 ||
+                    ObjRegistroForm.txtCorreo.Text.Length < 10 ||
+                    ObjRegistroForm.txtApellido.Text.Length < 3 ||
+                    ObjRegistroForm.txtDui.Text.Length < 10 ||
+                    ObjRegistroForm.txtTelefono.Text.Length < 9 ||
+                    ObjRegistroForm.picProfesional.Image == Properties.Resources.ProfesionalPic)
+                {
+                    MessageBox.Show("Error al registrarse, verifique si todos los datos han sido ingresados correctamente o si los datos han sido rellenados con éxito", "Actualizar Profesional", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+                else
+                {
+                    //Creamos las clases que usaremos para la actualización del PROFESIONAL y USUARIO
+                    DAOAdministrador ObjDAOActualizarProfesional = new DAOAdministrador();
+                    CommonMethods ObjMetodosComunes = new CommonMethods();
+
+                    //Obtenemos datos del objeto ObjDAOActualizarProfesional
+                    ObjDAOActualizarProfesional.UsuarioId = int.Parse(ObjRegistroForm.txtIDUsuario.Text.Trim());
+                    ObjDAOActualizarProfesional.Usuario = ObjRegistroForm.txtUsuario.Text.Trim();
+                    //Mandamos a llamar el método MetodoEncriptacionAES para encriptarla y enviarla a la base de datos
+                    //De igual forma, al actualizar el Usuario del Profesional, se actualizará la contraseña del mismo
+                    //De esta forma, el reseteo de contraseña vía administrador se hace presente
+                    ObjDAOActualizarProfesional.Contraseña = ObjMetodosComunes.MetodoEncriptacionAES(ObjRegistroForm.txtUsuario.Text.Trim() + "ADNE2024");
+                    ObjDAOActualizarProfesional.Dui = ObjRegistroForm.txtDui.Text;
+                    ObjDAOActualizarProfesional.Nombres = ObjRegistroForm.txtNombre.Text.Trim();
+                    ObjDAOActualizarProfesional.Apellidos = ObjRegistroForm.txtApellido.Text.Trim();
+                    ObjDAOActualizarProfesional.Telefono = ObjRegistroForm.txtTelefono.Text;
+                    ObjDAOActualizarProfesional.DesempenoId = int.Parse(ObjRegistroForm.cmbDesempeno.SelectedValue.ToString());
+
+                    //Llamamos al método para registrar la imagen del Usuario
+                    if (ObjRegistroForm.picProfesional.Image != Properties.Resources.ProfesionalPic)
+                    {
+                        string rutaImagen = ObjRegistroForm.ofdImagen.FileName;
+                        string escritorio = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+                        string carpetaDestino = Path.Combine(escritorio, "Imagenes");
+
+                        Directory.CreateDirectory(carpetaDestino);
+
+                        string imagenDestino = Path.Combine(carpetaDestino, Guid.NewGuid().ToString() + Path.GetExtension(rutaImagen));
+                        File.Copy(rutaImagen, imagenDestino);
+                        try
+                        {
+                            ObjDAOActualizarProfesional.Imagen = imagenDestino;
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message);
+                        }
+                    }
+
+                    if (VerificarCorreoUsuario(ObjRegistroForm.txtCorreo.Text.Trim()) == true)
+                    {
+                        ObjDAOActualizarProfesional.Correo = ObjRegistroForm.txtCorreo.Text.Trim();
+                        //Finalmente, evaluamos si la actualización se hizo correctamente
+                        if (ObjDAOActualizarProfesional.ActualizarUsuarioEmpleado() == false)
+                        {
+                            MessageBox.Show("Error al actualizar el profesional, verifique si todos los datos han sido ingresados correctamente", "Actualizar Profesional", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                        else
+                        {
+                            MessageBox.Show("El profesional ha sido actualizado correctamente", "Actualizar Profesional", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            //Ocultamos el formulario de Registro                            
+                            ObjRegistroForm.Hide();
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("El correo electrónico ingresado no posee una dirección de correo válida, verifique si contiene @ o dominio correcto", "Actualizar Profesional", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        #endregion
+        #region Métodos para cargar, mostrar y eliminar la imagen en el PictureBox
+        private void CargarImagenProfesional(object sender, EventArgs e)
+        {
+            ObjRegistroForm.ofdImagen.Filter = "Archivos De Imagen | *.jpg; *.png; *.jpeg;";
+
+            try
+            {
+                if (ObjRegistroForm.ofdImagen.ShowDialog() == DialogResult.OK)
+                {
+                    string ruta = ObjRegistroForm.ofdImagen.FileName;
+                    ObjRegistroForm.picProfesional.Image = Image.FromFile(ruta);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        private void EliminarFotoProfesional(object sender, EventArgs e)
+        {
+            ObjRegistroForm.picProfesional.Image = null;
+        }
+        #endregion
+        #region Validar el campo de Correo Electrónico
+        //Creamos un método de tipo booleano, de esta forma nos permitirá retornar un valor (ya sea verdadero o falso)
+        //Y de esta forma, poderse igualar en una condición if
+        //Si el método fuera de tipo void, solo se podría llamar al método, las condiciones no estaría permitidas
+        private bool VerificarCorreoUsuario(string TextBoxEMAILRegistro)
+        {
+            try
+            {
+                //Indicamos el formato EMAIL que contendrá nuestra variable string
+                //Este es el formato de EMAIL común para cualquier tipo de dominio
+                bool VerificarFormato = Regex.IsMatch(TextBoxEMAILRegistro, @"^[^@\s]+@[^@\s]+\.[^@\s]+$");
+
+                //Si el formato de correo no es correcto, retornamos falso
+                if (VerificarFormato != true)
+                    return false;
+
+                //Creamos un bloque TryCatch que nos retornará si el dominio ingresado tiene una dirección válida dentro de la librería de correos
+                try
+                {
+                    //Ahora, procedemos a evaluar si el dominio ingresado, existe dentro de los formatos EMAIL
+                    //La variable denominada "var" es utilizada para declarar variables que no se definen como tal (bool, string, int)
+                    //Sin embargo, se les puede dar uso posteriormente, en este caso igualandola a una variable de tipo string
+                    var DominioCorreo = new MailAddress(TextBoxEMAILRegistro);
+
+                    //Ahora, procedemos a verificar la existencia actual del dominio para ese mismo campo de Correo Electrónico
+                    //Primero, declaramos que el dominio lo almacenaremos en una variable de tipo string
+                    string DominioHost = DominioCorreo.Host;
+
+                    //Ahora, comprobamos la existencia del dominio y registro MX
+                    bool ComprobarMXDominio = Dns.GetHostAddresses(DominioHost).Any(IPAddress => IPAddress.AddressFamily == AddressFamily.InterNetwork);
+                    if (ComprobarMXDominio != true)
+                        return false;
+
+                    //Ahora, indicamos la dirección de la IP de entrada del Host
+                    //De esta forma, nos permitirá entrar al DNS respectivo del dominio del correo
+                    try
+                    {
+                        IPHostEntry ObjIPEntrada = Dns.GetHostEntry(DominioHost);
+                    }
+                    catch (SocketException SocketEx)
+                    {
+                        //En caso de error, mostranos el mensaje con su retorno falso
+                        MessageBox.Show(SocketEx.Message);
+                        return false;
+                    }
+                }
+                catch (FormatException FormatEx)
+                {
+                    MessageBox.Show(FormatEx.Message);
+                    return false;
+                }
+            }
+            catch (AsposeException AsposeEx)
+            {
+                //En caso de error, mostramos el mensaje con su retorno falso
+                MessageBox.Show(AsposeEx.Message);
+                return false;
+            }
+
+            //Si todo salio bien, retornamos verdadero
+            return true;
         }
         #endregion
     }

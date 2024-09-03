@@ -143,7 +143,7 @@
             this.lblFechaCreacion.Location = new System.Drawing.Point(48, 418);
             this.lblFechaCreacion.Name = "lblFechaCreacion";
             this.lblFechaCreacion.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblFechaCreacion.Size = new System.Drawing.Size(175, 23);
+            this.lblFechaCreacion.Size = new System.Drawing.Size(306, 39);
             this.lblFechaCreacion.TabIndex = 15;
             this.lblFechaCreacion.Text = "Fecha de creación";
             this.lblFechaCreacion.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -205,7 +205,7 @@
             this.lblTelefono.Location = new System.Drawing.Point(48, 332);
             this.lblTelefono.Name = "lblTelefono";
             this.lblTelefono.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblTelefono.Size = new System.Drawing.Size(183, 23);
+            this.lblTelefono.Size = new System.Drawing.Size(320, 39);
             this.lblTelefono.TabIndex = 12;
             this.lblTelefono.Text = "Número de teléfono";
             this.lblTelefono.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -241,7 +241,7 @@
             this.txtTelefono.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtTelefono.Lines = new string[0];
             this.txtTelefono.Location = new System.Drawing.Point(48, 361);
-            this.txtTelefono.MaxLength = 32767;
+            this.txtTelefono.MaxLength = 15;
             this.txtTelefono.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtTelefono.Modified = false;
             this.txtTelefono.Multiline = false;
@@ -298,7 +298,7 @@
             this.lblCorreoElectronico.Location = new System.Drawing.Point(48, 246);
             this.lblCorreoElectronico.Name = "lblCorreoElectronico";
             this.lblCorreoElectronico.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblCorreoElectronico.Size = new System.Drawing.Size(173, 23);
+            this.lblCorreoElectronico.Size = new System.Drawing.Size(303, 39);
             this.lblCorreoElectronico.TabIndex = 10;
             this.lblCorreoElectronico.Text = "Correo electrónico";
             this.lblCorreoElectronico.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -315,7 +315,7 @@
             this.lblDireccion.Location = new System.Drawing.Point(48, 127);
             this.lblDireccion.Name = "lblDireccion";
             this.lblDireccion.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblDireccion.Size = new System.Drawing.Size(141, 23);
+            this.lblDireccion.Size = new System.Drawing.Size(246, 39);
             this.lblDireccion.TabIndex = 9;
             this.lblDireccion.Text = "Dirección física";
             this.lblDireccion.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -351,7 +351,7 @@
             this.txtCorreoElectronico.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtCorreoElectronico.Lines = new string[0];
             this.txtCorreoElectronico.Location = new System.Drawing.Point(48, 275);
-            this.txtCorreoElectronico.MaxLength = 32767;
+            this.txtCorreoElectronico.MaxLength = 125;
             this.txtCorreoElectronico.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtCorreoElectronico.Modified = false;
             this.txtCorreoElectronico.Multiline = false;
@@ -497,7 +497,7 @@
             this.lblNombre.Location = new System.Drawing.Point(48, 47);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblNombre.Size = new System.Drawing.Size(362, 23);
+            this.lblNombre.Size = new System.Drawing.Size(629, 39);
             this.lblNombre.TabIndex = 6;
             this.lblNombre.Text = "Nombre de la empresa u Organización";
             this.lblNombre.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -514,7 +514,7 @@
             this.lblPBX.Location = new System.Drawing.Point(330, 332);
             this.lblPBX.Name = "lblPBX";
             this.lblPBX.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblPBX.Size = new System.Drawing.Size(35, 23);
+            this.lblPBX.Size = new System.Drawing.Size(59, 39);
             this.lblPBX.TabIndex = 5;
             this.lblPBX.Text = "PBX";
             this.lblPBX.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -650,7 +650,7 @@
             this.txtPBX.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtPBX.Lines = new string[0];
             this.txtPBX.Location = new System.Drawing.Point(330, 361);
-            this.txtPBX.MaxLength = 32767;
+            this.txtPBX.MaxLength = 15;
             this.txtPBX.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtPBX.Modified = false;
             this.txtPBX.Multiline = false;
@@ -726,7 +726,7 @@
             this.txtDireccion.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtDireccion.Lines = new string[0];
             this.txtDireccion.Location = new System.Drawing.Point(48, 156);
-            this.txtDireccion.MaxLength = 32767;
+            this.txtDireccion.MaxLength = 300;
             this.txtDireccion.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtDireccion.Modified = false;
             this.txtDireccion.Multiline = true;
@@ -802,7 +802,7 @@
             this.txtNombreEmpresa.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtNombreEmpresa.Lines = new string[0];
             this.txtNombreEmpresa.Location = new System.Drawing.Point(48, 76);
-            this.txtNombreEmpresa.MaxLength = 32767;
+            this.txtNombreEmpresa.MaxLength = 150;
             this.txtNombreEmpresa.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtNombreEmpresa.Modified = false;
             this.txtNombreEmpresa.Multiline = false;

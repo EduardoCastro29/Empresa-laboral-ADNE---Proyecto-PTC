@@ -143,7 +143,7 @@
             this.txtConfirmarContrasena.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtConfirmarContrasena.Lines = new string[0];
             this.txtConfirmarContrasena.Location = new System.Drawing.Point(6, 1);
-            this.txtConfirmarContrasena.MaxLength = 256;
+            this.txtConfirmarContrasena.MaxLength = 64;
             this.txtConfirmarContrasena.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtConfirmarContrasena.Modified = false;
             this.txtConfirmarContrasena.Multiline = false;
@@ -244,7 +244,7 @@
             this.txtNuevaContrasena.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtNuevaContrasena.Lines = new string[0];
             this.txtNuevaContrasena.Location = new System.Drawing.Point(6, 1);
-            this.txtNuevaContrasena.MaxLength = 256;
+            this.txtNuevaContrasena.MaxLength = 64;
             this.txtNuevaContrasena.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtNuevaContrasena.Modified = false;
             this.txtNuevaContrasena.Multiline = false;

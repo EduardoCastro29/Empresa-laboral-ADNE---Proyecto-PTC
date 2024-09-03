@@ -469,7 +469,7 @@
             this.txtIngresarEmail.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtIngresarEmail.Lines = new string[0];
             this.txtIngresarEmail.Location = new System.Drawing.Point(3, 2);
-            this.txtIngresarEmail.MaxLength = 124;
+            this.txtIngresarEmail.MaxLength = 125;
             this.txtIngresarEmail.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtIngresarEmail.Modified = false;
             this.txtIngresarEmail.Multiline = false;

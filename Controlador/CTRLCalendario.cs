@@ -26,15 +26,15 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
         {
             ObjCalendario = Vista;
 
-            ObjCalendario.btnVerCitas.Click += new EventHandler(VerCitasAgendadas);
+            VerCitasAgendadas();
             ObjCalendario.Load += new EventHandler(DesplegarDias);
             ObjCalendario.btnAnterior.Click += new EventHandler(RetrocederMes);
             ObjCalendario.btnSiguiente.Click += new EventHandler(SiguienteMes);
         }
-        private void VerCitasAgendadas(object sender, EventArgs e)
+        private void VerCitasAgendadas()
         {
             VerCitasForm ObjAbrirVerCitas = new VerCitasForm();
-            ObjAbrirVerCitas.Show();
+            ObjAbrirVerCitas.ShowDialog();
         }
         private void DesplegarDias(object sender, EventArgs e)
         {
@@ -128,7 +128,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             if (Mes < 1)
             {
                 Mes = 12;
-                Año --;
+                Año--;
             }
 
             string mesNombre = DateTimeFormatInfo.CurrentInfo.GetMonthName(Mes);

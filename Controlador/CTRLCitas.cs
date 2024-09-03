@@ -9,7 +9,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Web.UI;
 using System.Windows.Forms;
-
 using iTextSharp.text;
 using System.IO;
 using iTextSharp.text.pdf;
@@ -87,7 +86,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                 {
                     string pag = Properties.Resources.Expediente__Psicosocial.ToString();
 
-                    #region
+                    #region Variables remplazadas para la impresión del reporte
                     pag = pag.Replace("@FECHA", DateTime.Now.ToString("dd/MM/yyyy"));
                     pag = pag.Replace("@EXPEDIENTEID", objCitasDAO.N_expediente.ToString());
                     //Remplazando en el documento los Datos de identificación

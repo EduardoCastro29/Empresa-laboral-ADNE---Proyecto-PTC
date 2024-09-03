@@ -20,14 +20,28 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             //Creación de nuevos eventos
             ObjPinAccesoForm.btnSiguiente.Click += new EventHandler(AbrirActualizarContrasena);
             ObjPinAccesoForm.btnAtras.Click += new EventHandler(VolverDireccionCorreo);
+
+            //Validaciones de Campos
+            ObjPinAccesoForm.txtIngresarPin.Text += new KeyPressEventHandler(ValidarCampoNumero);
         }
+        #region Validaciones de Campos
+        private void ValidarCampoNumero(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsDigit(e.KeyChar))
+            {
+                return;
+            }
+            e.Handled = true;
+        }
+        #endregion
+        #region Validación al Ingresar el Pin de Acceso
         //Creación de eventos
         private void AbrirActualizarContrasena(object sender, EventArgs e)
-        {            
+        {
             try
             {
                 //Mandamos la variable estática GuardarCódigoRandom que posteriormente se insertará en el textbox
-                if (string.IsNullOrWhiteSpace(ObjPinAccesoForm.txtIngresarPin.Text.Trim()) || DAODireccionGmail.GuardarCodigoRandom != ObjPinAccesoForm.txtIngresarPin.Text)
+                if (ObjPinAccesoForm.txtIngresarPin.Text.Length < 8 || DAODireccionGmail.GuardarCodigoRandom != ObjPinAccesoForm.txtIngresarPin.Text)
                 {
                     MessageBox.Show("Por favor, ingrese un pin de acceso válido antes de seguir", "Pin de Acceso", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
@@ -49,5 +63,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             ObjPinAccesoForm.Hide();
             ObjVolverDireccionCorreo.Show();
         }
+        #endregion
     }
 }

@@ -10,6 +10,7 @@ using Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO;
 using Empresa_laboral_ADNE___Proyecto_PTC.Vista;
 using Empresa_laboral_ADNE___Proyecto_PTC.Controlador.Controlador_UC_Calendario;
 using Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DTO;
+using System.Drawing;
 
 namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
 {
@@ -19,12 +20,15 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
         public CTRLVerCitas(VerCitasForm Vista)
         {
             ObjVerCitasForm = Vista;
-            
+
             CargarDGVCitas();
             ObjVerCitasForm.cmsVerCita.Click += new EventHandler(VerCitaDetallada);
             ObjVerCitasForm.cmsActualizar.Click += new EventHandler(ActualizarCita);
             ObjVerCitasForm.cmsEliminarCita.Click += new EventHandler(EliminarCita);
+
+            //Validaciones de campos dentro de los TextBox
         }
+        #region Eventos Iniciales al cargar el Formulario
         private void CargarDGVCitas()
         {
             DAOVerCitas ObjDAOLlenarDGVCitas = new DAOVerCitas();
@@ -49,6 +53,8 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                 MessageBox.Show(ex.Message);
             }
         }
+        #endregion
+        #region Ver la Cita de forma solo Lectura (READ)
         private void VerCitaDetallada(object sender, EventArgs e)
         {
             int PosicionFila = ObjVerCitasForm.dgvCitasAgendadas.CurrentRow.Index;
@@ -73,8 +79,8 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             ObjVerCitasDetalladas.txtHoraFinal.Text = FechaFinalCita.ToString();
             ObjVerCitasDetalladas.cmbEstado.SelectedValue = EstadoCita;
             ObjVerCitasDetalladas.txtMotivoConsulta.Text = DescripcionCita;
-            ObjVerCitasDetalladas.txtPacienteID.Text = NombrePaciente;
-            ObjVerCitasDetalladas.txtProfesionalID.Text = NombreProfesional;
+            ObjVerCitasDetalladas.txtNombrePacienteCita.Text = NombrePaciente;
+            ObjVerCitasDetalladas.txtNombreProfesionalCita.Text = NombreProfesional;
             ObjVerCitasDetalladas.cmbLugar.ValueMember = LugarCita;
 
             //Especificamos qué apartados no deben de mostrarse a la hora de la vista
@@ -83,25 +89,34 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             ObjVerCitasDetalladas.txtHoraFinal.Enabled = false;
             ObjVerCitasDetalladas.cmbEstado.Enabled = false;
             ObjVerCitasDetalladas.txtMotivoConsulta.Enabled = false;
-            ObjVerCitasDetalladas.txtPacienteID.Enabled = false;
-            ObjVerCitasDetalladas.txtProfesionalID.Enabled = false;
+            ObjVerCitasDetalladas.txtNombrePacienteCita.Enabled = false;
+            ObjVerCitasDetalladas.txtNombreProfesionalCita.Enabled = false;
             ObjVerCitasDetalladas.cmbLugar.Enabled = false;
             ObjVerCitasDetalladas.btnModificar.Enabled = false;
             ObjVerCitasDetalladas.btnGuardar.Enabled = false;
+
+            //Indicamos que, en primeras instancias, no deseamos mostrar el DUI del profesional, tampoco el DUI del paciente
+            //Para una mejor referencia y estética, será mejor mostrar los nombres de los representantes
+            ObjVerCitasDetalladas.pnlDUIProfesional.Visible = false;
+            ObjVerCitasDetalladas.txtDUIProfesional.Visible = false;
+            ObjVerCitasDetalladas.pnlDUIPaciente.Visible = false;
+            ObjVerCitasDetalladas.txtDUIPaciente.Visible = false;
 
             ObjVerCitasDetalladas.ShowDialog();
 
             //Una vez cerrado el formulario de citas, se procede a recargar el DataGridView
             CargarDGVCitas();
         }
+        #endregion
+        #region Actualización en el Formulario de Citas (CREATE)
         private void ActualizarCita(object sender, EventArgs e)
         {
             int PosicionFila = ObjVerCitasForm.dgvCitasAgendadas.CurrentRow.Index;
 
             int CitaID = int.Parse(ObjVerCitasForm.dgvCitasAgendadas[0, PosicionFila].Value.ToString());
             int ConsultaID = int.Parse(ObjVerCitasForm.dgvCitasAgendadas[1, PosicionFila].Value.ToString());
-            int PacienteID = int.Parse(ObjVerCitasForm.dgvCitasAgendadas[2, PosicionFila].Value.ToString());
-            int ProfesionalID = int.Parse(ObjVerCitasForm.dgvCitasAgendadas[3, PosicionFila].Value.ToString());
+            string PacienteDUI = ObjVerCitasForm.dgvCitasAgendadas[2, PosicionFila].Value.ToString();
+            string ProfesionalDUI = ObjVerCitasForm.dgvCitasAgendadas[3, PosicionFila].Value.ToString();
             DateTime FechaCita = DateTime.Parse(ObjVerCitasForm.dgvCitasAgendadas[4, PosicionFila].Value.ToString());
             TimeSpan HoraInicioCita = TimeSpan.Parse(ObjVerCitasForm.dgvCitasAgendadas[5, PosicionFila].Value.ToString());
             TimeSpan FechaFinalCita = TimeSpan.Parse(ObjVerCitasForm.dgvCitasAgendadas[6, PosicionFila].Value.ToString());
@@ -109,29 +124,30 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             string DescripcionCita = ObjVerCitasForm.dgvCitasAgendadas[8, PosicionFila].Value.ToString();
             string LugarCita = ObjVerCitasForm.dgvCitasAgendadas[12, PosicionFila].Value.ToString();
 
-            AgendarCitaForm ObjVerCitasDetalladas = new AgendarCitaForm();
+            AgendarCitaForm ObjActualizarCita = new AgendarCitaForm();
 
-            ObjVerCitasDetalladas.txtIDCita.Text = CitaID.ToString();
-            ObjVerCitasDetalladas.txtIDConsulta.Text = ConsultaID.ToString();
-            ObjVerCitasDetalladas.dtFecha.Value = FechaCita.Date;
-            ObjVerCitasDetalladas.txtHoraInicio.Text = HoraInicioCita.ToString();
-            ObjVerCitasDetalladas.txtHoraFinal.Text = FechaFinalCita.ToString();
-            ObjVerCitasDetalladas.cmbEstado.ValueMember = EstadoCita;
-            ObjVerCitasDetalladas.txtMotivoConsulta.Text = DescripcionCita;
-            ObjVerCitasDetalladas.txtPacienteID.Text = PacienteID.ToString();
-            ObjVerCitasDetalladas.txtProfesionalID.Text = ProfesionalID.ToString();
-            ObjVerCitasDetalladas.cmbLugar.ValueMember = LugarCita;
+            ObjActualizarCita.txtIDCita.Text = CitaID.ToString();
+            ObjActualizarCita.txtIDConsulta.Text = ConsultaID.ToString();
+            ObjActualizarCita.dtFecha.Value = FechaCita.Date;
+            ObjActualizarCita.txtHoraInicio.Text = HoraInicioCita.ToString();
+            ObjActualizarCita.txtHoraFinal.Text = FechaFinalCita.ToString();
+            ObjActualizarCita.cmbEstado.ValueMember = EstadoCita;
+            ObjActualizarCita.txtMotivoConsulta.Text = DescripcionCita;
+            ObjActualizarCita.txtDUIPaciente.Text = PacienteDUI;
+            ObjActualizarCita.txtDUIProfesional.Text = ProfesionalDUI;
+            ObjActualizarCita.cmbLugar.ValueMember = LugarCita;
 
-            //Especificamos qué apartados no deben de mostrarse a la hora de la vista
-            ObjVerCitasDetalladas.btnGuardar.Enabled = false;
-            //Activamos que el estado de la cita pueda ser modificado por el usuario
-            ObjVerCitasDetalladas.cmbEstado.Enabled = true;
+            //Especificamos qué apartados no deben de modificarse a la hora de la actualización
+            ObjActualizarCita.btnGuardar.Enabled = false;
+            ObjActualizarCita.txtDUIProfesional.Enabled = false;
 
-            ObjVerCitasDetalladas.ShowDialog();
+            ObjActualizarCita.ShowDialog();
 
             //Una vez cerrado el formulario de citas, se procede a recargar el DataGridView
             CargarDGVCitas();
         }
+        #endregion
+        #region Eliminación del Formulario de Citas (DELETE)
         private void EliminarCita(object sender, EventArgs e)
         {
             //Primero, indicamos en qué fila nos encontramos dentro del DataGridView
@@ -157,5 +173,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                 }
             }
         }
+        #endregion
     }
 }

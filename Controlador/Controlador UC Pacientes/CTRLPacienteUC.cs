@@ -1,9 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Net.Sockets;
+using System.Net;
 using System.Runtime.Remoting.Channels;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
+using Aspose.Email;
 using Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO;
 using Empresa_laboral_ADNE___Proyecto_PTC.Vista;
+using System.Linq;
 
 namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador.ControladorUserControlPaciente
 {
@@ -20,52 +25,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador.ControladorUserControl
             ObjVerPacienteUS.btnVerInformacion.Click += new EventHandler(CargarInformacionPersonal);
             ObjVerPacienteUS.btnVerExpediente.Click += new EventHandler(CargarExpediente);
         }
-
-        //Método para cargar los datos de expediente
-        private void CargarExpediente(object sender, EventArgs e)
-        {
-            try
-            {
-                DAOExpediente objDAOExpedienteMedico = new DAOExpediente();
-                objDAOExpedienteMedico.DocumentoPresentado = ObjVerPacienteUS.lblPacienteId.Text;
-
-                //Se asigna el ID del expediente que se desea cargar
-                bool Comprobar = objDAOExpedienteMedico.ObtenerExpedientePaciente();
-                if (Comprobar)
-                {
-                    ExpedienteMédicoForm objExpedienteMedico = new ExpedienteMédicoForm();
-                   
-                    objExpedienteMedico.txtEstadoAnimo.Text = objDAOExpedienteMedico.EstadoAnimo;
-                    objExpedienteMedico.txtEstadoConductual.Text = objDAOExpedienteMedico.EstadoConductual;
-                    objExpedienteMedico.txtSomatizacion.Text = objDAOExpedienteMedico.Somatizacion;
-                    objExpedienteMedico.txtVidaInterpersonal.Text = objDAOExpedienteMedico.VidaInterpersonal;
-                    objExpedienteMedico.txtCognicion.Text = objDAOExpedienteMedico.Cognicion;
-                    objExpedienteMedico.txtRedSocial.Text = objDAOExpedienteMedico.RedSocial;
-                    objExpedienteMedico.txtPauta.Text = objDAOExpedienteMedico.Pauta;
-                    objExpedienteMedico.txtRiesgoValorado.Text = objDAOExpedienteMedico.RiesgoValorado;
-                    objExpedienteMedico.txtObservacion.Text = objDAOExpedienteMedico.Observacion;
-                    objExpedienteMedico.txtAproximacionDiag.Text = objDAOExpedienteMedico.AproximacionDiag;
-                    objExpedienteMedico.txtAtencionBrindada.Text = objDAOExpedienteMedico.AtencionBrindada;
-                    objExpedienteMedico.txtPacienteId.Text = objDAOExpedienteMedico.DocumentoPresentado;
-
-                    objExpedienteMedico.btnGuardar.Enabled = false;
-                    objExpedienteMedico.btnModificar.Enabled = true;
-
-                    objExpedienteMedico.Show();
-                }
-                else
-                {
-                    MessageBox.Show("No se encontraron datos para el expediente seleccionado.",
-                                    "Proceso interrumpido",
-                                    MessageBoxButtons.OK,
-                                    MessageBoxIcon.Error);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
+        #region Método para cargar el Formulario (Lleno con los datos) de la Información Personal de la persona
         // Metodo para cargar la Informacion del Paciente
         private void CargarInformacionPersonal(object sender, EventArgs e)
         {
@@ -112,7 +72,54 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador.ControladorUserControl
                 MessageBox.Show(ex.Message);
             }
         }
+        #endregion
+        #region Método para cargar el Formulario (Lleno con los datos) del Expediente de la persona
+        //Método para cargar los datos de expediente
+        private void CargarExpediente(object sender, EventArgs e)
+        {
+            try
+            {
+                DAOExpediente objDAOExpedienteMedico = new DAOExpediente();
+                objDAOExpedienteMedico.DocumentoPresentado = ObjVerPacienteUS.lblPacienteId.Text;
 
+                //Se asigna el ID del expediente que se desea cargar
+                bool Comprobar = objDAOExpedienteMedico.ObtenerExpedientePaciente();
+                if (Comprobar)
+                {
+                    ExpedienteMédicoForm objExpedienteMedico = new ExpedienteMédicoForm();
+
+                    objExpedienteMedico.txtEstadoAnimo.Text = objDAOExpedienteMedico.EstadoAnimo;
+                    objExpedienteMedico.txtEstadoConductual.Text = objDAOExpedienteMedico.EstadoConductual;
+                    objExpedienteMedico.txtSomatizacion.Text = objDAOExpedienteMedico.Somatizacion;
+                    objExpedienteMedico.txtVidaInterpersonal.Text = objDAOExpedienteMedico.VidaInterpersonal;
+                    objExpedienteMedico.txtCognicion.Text = objDAOExpedienteMedico.Cognicion;
+                    objExpedienteMedico.txtRedSocial.Text = objDAOExpedienteMedico.RedSocial;
+                    objExpedienteMedico.txtPauta.Text = objDAOExpedienteMedico.Pauta;
+                    objExpedienteMedico.txtRiesgoValorado.Text = objDAOExpedienteMedico.RiesgoValorado;
+                    objExpedienteMedico.txtObservacion.Text = objDAOExpedienteMedico.Observacion;
+                    objExpedienteMedico.txtAproximacionDiag.Text = objDAOExpedienteMedico.AproximacionDiag;
+                    objExpedienteMedico.txtAtencionBrindada.Text = objDAOExpedienteMedico.AtencionBrindada;
+                    objExpedienteMedico.txtPacienteId.Text = objDAOExpedienteMedico.DocumentoPresentado;
+
+                    objExpedienteMedico.btnGuardar.Enabled = false;
+                    objExpedienteMedico.btnModificar.Enabled = true;
+
+                    objExpedienteMedico.Show();
+                }
+                else
+                {
+                    MessageBox.Show("No se encontraron datos para el expediente seleccionado.",
+                                    "Proceso interrumpido",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        #endregion
         //  Segundo Controlador de la vista de Informacion Personal Forms 
         public CTRLPacienteUC(InformaciónPersonalForm vista) // Controlador de la vista del Informacion Personal
         {
@@ -122,8 +129,107 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador.ControladorUserControl
             // Metodo para actualizar la Informacion del Paciente presionando el boton de Modificar 
             ObjInformacionPersonal.btnModificarPaciente.Click += new EventHandler(ActualizarInformacionPaciente);
             ObjInformacionPersonal.Load += new EventHandler(CargarCMB);
-        }
 
+            //Validaciones de Campos
+            ObjInformacionPersonal.dtFechaNacimiento.ValueChanged += new EventHandler(DtFechaNacimiento_ValueChanged);
+            ObjInformacionPersonal.txtNacionalidad.KeyPress += new KeyPressEventHandler(ValidarCampoTextBox);
+            ObjInformacionPersonal.txtProfesion.KeyPress += new KeyPressEventHandler(ValidarCampoTextBox);
+            ObjInformacionPersonal.txtNombrePaciente.KeyPress += new KeyPressEventHandler(ValidarCampoTextBox);
+            ObjInformacionPersonal.txtApellidoPaciente.KeyPress += new KeyPressEventHandler(ValidarCampoTextBox);
+            ObjInformacionPersonal.txtComposicionFamiliar.KeyPress += new KeyPressEventHandler(ValidarCampoTextBox);
+            ObjInformacionPersonal.txtMotivoIntervencion.KeyPress += new KeyPressEventHandler(ValidarCampoTextBox);
+            ObjInformacionPersonal.txtAntecedentes.KeyPress += new KeyPressEventHandler(ValidarCampoTextBox);
+            ObjInformacionPersonal.txtDescripcion.KeyPress += new KeyPressEventHandler(ValidarCampoTextBox);
+            ObjInformacionPersonal.txtAspectosPreocupantes.KeyPress += new KeyPressEventHandler(ValidarCampoTextBox);
+            ObjInformacionPersonal.txtDocumentoPresentado.KeyPress += new KeyPressEventHandler(ValidarCampoNumero);
+            ObjInformacionPersonal.txtTelefono1.KeyPress += new KeyPressEventHandler(ValidarCampoNumero);
+            ObjInformacionPersonal.txtCorreoElectronico.KeyPress += new KeyPressEventHandler(ValidarCampoCorreo);
+        }
+        #region Validaciones de Campos
+        private void DtFechaNacimiento_ValueChanged(object sender, EventArgs e)
+        {
+            // Verificar si la fecha seleccionada es mayor que la fecha de hoy
+            if (ObjInformacionPersonal.dtFechaNacimiento.Value.Date > DateTime.Today)
+            {
+                // Mostrar un mensaje de advertencia
+                MessageBox.Show("La fecha de nacimiento no puede ser una fecha futura.", "Fecha no válida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                // Restablecer la fecha al valor anterior o a la fecha actual
+                ObjInformacionPersonal.dtFechaNacimiento.Value = DateTime.Today;
+            }
+            else
+            {
+                // Calcular la edad
+                int edad = DateTime.Today.Year - ObjInformacionPersonal.dtFechaNacimiento.Value.Year;
+
+                // Ajustar la edad si la fecha de nacimiento aún no ha ocurrido este año
+                if (DateTime.Today.DayOfYear < ObjInformacionPersonal.dtFechaNacimiento.Value.DayOfYear)
+                {
+                    edad--;
+                }
+
+                // Actualizar el campo de texto con la edad calculada
+                ObjInformacionPersonal.txtEdad.Text = edad.ToString();
+            }
+        }
+        private void ValidarCampoTextBox(object sender, KeyPressEventArgs e)
+        {
+            //La propiedad char.IsControl permite controles como BackSpace, Inicio, Fin, etc.
+            if (char.IsControl(e.KeyChar))
+            {
+                //Retornamos los valores e.KeyChar
+                return;
+            }
+            //Declaramos la variable de tipo char que recibirá los parámetros de las letras registradas por las variables e.KeyChar creadas anteriormente
+            char ch = e.KeyChar;
+
+            //Declaramos lo valores que únicamente permitirá el textbox
+            if ((ch >= 'A' && ch <= 'Z') ||
+                (ch >= 'a' && ch <= 'z') ||
+                 ch == '.' ||
+                 ch == ',')
+            {
+                //Retornamos los valores e.KeyChar
+                return;
+            }
+            //Indicamos que se creará el evento e.Char con todos los valores antes proporcionados, como un EventHandler
+            e.Handled = true;
+        }
+        private void ValidarCampoCorreo(object sender, KeyPressEventArgs e)
+        {
+            //La propiedad char.IsControl permite controles como BackSpace, Inicio, Fin, etc.
+            if (char.IsControl(e.KeyChar))
+            {
+                //Retornamos los valores e.KeyChar
+                return;
+            }
+            //Declaramos la variable de tipo char que recibirá los parámetros de las letras registradas por las variables e.KeyChar creadas anteriormente
+            char ch = e.KeyChar;
+
+            //Declaramos lo valores que únicamente permitirá el textbox
+            if ((ch >= '0' && ch <= '9') ||
+                (ch >= 'A' && ch <= 'Z') ||
+                (ch >= 'a' && ch <= 'z') ||
+                 ch == '.' ||
+                 ch == '@' ||
+                 ch == '_')
+            {
+                //Retornamos los valores e.KeyChar
+                return;
+            }
+            //Indicamos que se creará el evento e.Char con todos los valores antes proporcionados, como un EventHandler
+            e.Handled = true;
+        }
+        private void ValidarCampoNumero(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsDigit(e.KeyChar))
+            {
+                return;
+            }
+            e.Handled = true;
+        }
+        #endregion
+        #region Eventos Iniciales a la hora de cargar el Formulario
         private void CargarCMB(object sender, EventArgs e)
         {
             DAOInformacionPersonal ObjDaoCargarCMB = new DAOInformacionPersonal();
@@ -131,36 +237,37 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador.ControladorUserControl
             ObjInformacionPersonal.cmbGeneroId.ValueMember = "generoId";
             ObjInformacionPersonal.cmbGeneroId.DisplayMember = "genero";
         }
-
         // Instrucciones que se haran en el metodo DesactivarAgregarPaciente para desactivar el boton de agregar Paciente 
         private void DesactivarAgregarPaciente(object sender, EventArgs e)  // Todo el proceso para desactivar el boton de Guardar Paciente
         {
             ObjInformacionPersonal.btnModificarPaciente.Enabled = true;
             ObjInformacionPersonal.btnGuardarPaciente.Enabled = false;
         }
-
+        #endregion
+        #region Actualización en el Formulario de Información Personal
         // Metodo para Actualizar la Informacion del Paciente
         private void ActualizarInformacionPaciente(object sender, EventArgs e)
         {
             try
             {
-                if (string.IsNullOrWhiteSpace(ObjInformacionPersonal.txtNacionalidad.Text.Trim()) ||
-                   string.IsNullOrWhiteSpace(ObjInformacionPersonal.txtDocumentoPresentado.Text.Trim()) ||
-                   string.IsNullOrWhiteSpace(ObjInformacionPersonal.txtEdad.Text.Trim()) ||
-                   string.IsNullOrWhiteSpace(ObjInformacionPersonal.txtTelefono1.Text.Trim()) ||
-                   string.IsNullOrWhiteSpace(ObjInformacionPersonal.txtProfesion.Text.Trim()) ||
-                   string.IsNullOrWhiteSpace(ObjInformacionPersonal.txtNombrePaciente.Text.Trim()) ||
-                   string.IsNullOrWhiteSpace(ObjInformacionPersonal.txtApellidoPaciente.Text.Trim()) ||
-                   string.IsNullOrWhiteSpace(ObjInformacionPersonal.txtDomicilio.Text.Trim()) ||
-                   string.IsNullOrWhiteSpace(ObjInformacionPersonal.txtCorreoElectronico.Text.Trim()) ||
-                   string.IsNullOrWhiteSpace(ObjInformacionPersonal.txtComposicionFamiliar.Text.Trim()) ||
-                   string.IsNullOrWhiteSpace(ObjInformacionPersonal.txtMotivoIntervencion.Text.Trim()) ||
-                   string.IsNullOrWhiteSpace(ObjInformacionPersonal.txtAntecedentes.Text.Trim()) ||
-                   string.IsNullOrWhiteSpace(ObjInformacionPersonal.txtDescripcion.Text.Trim()) ||
-                   string.IsNullOrWhiteSpace(ObjInformacionPersonal.txtAspectosPreocupantes.Text.Trim()))
+                if (ObjInformacionPersonal.txtNacionalidad.Text.Length < 5 ||
+                    ObjInformacionPersonal.txtDocumentoPresentado.Text.Length < 10 ||
+                    ObjInformacionPersonal.txtEdad.Text.Length < 2 ||
+                    ObjInformacionPersonal.txtTelefono1.Text.Length < 9 ||
+                    ObjInformacionPersonal.txtProfesion.Text.Length < 3 ||
+                    ObjInformacionPersonal.txtNombrePaciente.Text.Length < 3 ||
+                    ObjInformacionPersonal.txtApellidoPaciente.Text.Length < 5 ||
+                    ObjInformacionPersonal.txtDomicilio.Text.Length < 5 ||
+                    ObjInformacionPersonal.txtCorreoElectronico.Text.Length < 10 ||
+                    ObjInformacionPersonal.txtComposicionFamiliar.Text.Length < 3 ||
+                    ObjInformacionPersonal.txtMotivoIntervencion.Text.Length < 5 ||
+                    ObjInformacionPersonal.txtAntecedentes.Text.Length < 5 ||
+                    ObjInformacionPersonal.txtDescripcion.Text.Length < 5 ||
+                    ObjInformacionPersonal.dtFechaNacimiento.Value.Date > DateTime.Today ||
+                    ObjInformacionPersonal.txtAspectosPreocupantes.Text.Length < 5)
                 {
                     //Si los datos no fueron ingresados correctamente, mostramos un mensaje de error
-                    MessageBox.Show("Error al modificar datos de  paciente, verifique si todos los datos han sido ingresados correctamente", "Actualizar paciente", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Error al modificar datos de  paciente, verifique si todos los datos han sido ingresados correctamente o cumple con la cantidad mínima de caracteres", "Actualizar Paciente", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
@@ -178,7 +285,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador.ControladorUserControl
                     ObjDAOActualizarInformacionPersonal.Nombre = ObjInformacionPersonal.txtNombrePaciente.Text.Trim();
                     ObjDAOActualizarInformacionPersonal.Apellido = ObjInformacionPersonal.txtApellidoPaciente.Text.Trim();
                     ObjDAOActualizarInformacionPersonal.Domicilio = ObjInformacionPersonal.txtDomicilio.Text.Trim();
-                    ObjDAOActualizarInformacionPersonal.CorreoElectronico = ObjInformacionPersonal.txtCorreoElectronico.Text.Trim();
                     ObjDAOActualizarInformacionPersonal.ComposicionFamiliar = ObjInformacionPersonal.txtComposicionFamiliar.Text.Trim();
                     ObjDAOActualizarInformacionPersonal.Motivo = ObjInformacionPersonal.txtMotivoIntervencion.Text.Trim();
                     ObjDAOActualizarInformacionPersonal.Antecedente = ObjInformacionPersonal.txtAntecedentes.Text.Trim();
@@ -186,20 +292,28 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador.ControladorUserControl
                     ObjDAOActualizarInformacionPersonal.AspectosPreocupantes = ObjInformacionPersonal.txtAspectosPreocupantes.Text.Trim();
                     ObjDAOActualizarInformacionPersonal.GeneroId1 = (int)ObjInformacionPersonal.cmbGeneroId.SelectedValue;
 
-                    bool comprobar = ObjDAOActualizarInformacionPersonal.ActualizarInformacionPaciente();
-                    if (comprobar == true)
+                    if (VerificarCorreoUsuario(ObjInformacionPersonal.txtCorreoElectronico.Text) == true)
                     {
-                        MessageBox.Show("Los datos han sido actualizados exitosamente",
-                                   "Proceso completado",
-                                   MessageBoxButtons.OK,
-                                   MessageBoxIcon.Information);
+                        ObjDAOActualizarInformacionPersonal.CorreoElectronico = ObjInformacionPersonal.txtCorreoElectronico.Text.Trim();
+                        bool comprobar = ObjDAOActualizarInformacionPersonal.ActualizarInformacionPaciente();
+                        if (comprobar == true)
+                        {
+                            MessageBox.Show("Los datos han sido actualizados exitosamente",
+                                       "Proceso completado",
+                                       MessageBoxButtons.OK,
+                                       MessageBoxIcon.Information);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Los datos no pudieron ser actualizados",
+                                    "Proceso interrumpido",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Error);
+                        }
                     }
                     else
                     {
-                        MessageBox.Show("Los datos no pudieron ser actualizados",
-                                "Proceso interrumpido",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Error);
+                        MessageBox.Show("El correo electrónico ingresado no posee una dirección de correo válida, verifique si contiene @ o dominio correcto", "Primer Usuario", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
@@ -208,5 +322,69 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador.ControladorUserControl
                 MessageBox.Show(ex.Message);
             }
         }
+        #endregion
+        #region Validar el campo de Correo Electrónico
+        //Creamos un método de tipo booleano, de esta forma nos permitirá retornar un valor (ya sea verdadero o falso)
+        //Y de esta forma, poderse igualar en una condición if
+        //Si el método fuera de tipo void, solo se podría llamar al método, las condiciones no estaría permitidas
+        private bool VerificarCorreoUsuario(string TextBoxEMAILRegistro)
+        {
+            try
+            {
+                //Indicamos el formato EMAIL que contendrá nuestra variable string
+                //Este es el formato de EMAIL común para cualquier tipo de dominio
+                bool VerificarFormato = Regex.IsMatch(TextBoxEMAILRegistro, @"^[^@\s]+@[^@\s]+\.[^@\s]+$");
+
+                //Si el formato de correo no es correcto, retornamos falso
+                if (VerificarFormato != true)
+                    return false;
+
+                //Creamos un bloque TryCatch que nos retornará si el dominio ingresado tiene una dirección válida dentro de la librería de correos
+                try
+                {
+                    //Ahora, procedemos a evaluar si el dominio ingresado, existe dentro de los formatos EMAIL
+                    //La variable denominada "var" es utilizada para declarar variables que no se definen como tal (bool, string, int)
+                    //Sin embargo, se les puede dar uso posteriormente, en este caso igualandola a una variable de tipo string
+                    var DominioCorreo = new MailAddress(TextBoxEMAILRegistro);
+
+                    //Ahora, procedemos a verificar la existencia actual del dominio para ese mismo campo de Correo Electrónico
+                    //Primero, declaramos que el dominio lo almacenaremos en una variable de tipo string
+                    string DominioHost = DominioCorreo.Host;
+
+                    //Ahora, comprobamos la existencia del dominio y registro MX
+                    bool ComprobarMXDominio = Dns.GetHostAddresses(DominioHost).Any(IPAddress => IPAddress.AddressFamily == AddressFamily.InterNetwork);
+                    if (ComprobarMXDominio != true)
+                        return false;
+
+                    //Ahora, indicamos la dirección de la IP de entrada del Host
+                    //De esta forma, nos permitirá entrar al DNS respectivo del dominio del correo
+                    try
+                    {
+                        IPHostEntry ObjIPEntrada = Dns.GetHostEntry(DominioHost);
+                    }
+                    catch (SocketException SocketEx)
+                    {
+                        //En caso de error, mostranos el mensaje con su retorno falso
+                        MessageBox.Show(SocketEx.Message);
+                        return false;
+                    }
+                }
+                catch (FormatException FormatEx)
+                {
+                    MessageBox.Show(FormatEx.Message);
+                    return false;
+                }
+            }
+            catch (AsposeException AsposeEx)
+            {
+                //En caso de error, mostramos el mensaje con su retorno falso
+                MessageBox.Show(AsposeEx.Message);
+                return false;
+            }
+
+            //Si todo salio bien, retornamos verdadero
+            return true;
+        }
+        #endregion
     }
 }
