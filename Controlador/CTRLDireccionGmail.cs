@@ -33,7 +33,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             ObjDireccionGmailForm.btnCancelar.Click += new EventHandler(RegresarLoginForm);
 
             //Validaciones de campos
-            ObjDireccionGmailForm.txtIngresarEmail.Text += new KeyPressEventHandler(ValidarCampoCorreo);
+            ObjDireccionGmailForm.txtIngresarEmail.KeyPress += new KeyPressEventHandler(ValidarCampoCorreo);
         }
         #region Validaciones de Campos
         private void ValidarCampoCorreo(object sender, KeyPressEventArgs e)

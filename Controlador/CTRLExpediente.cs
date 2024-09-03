@@ -29,17 +29,17 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             ObjExpediente.Load += new EventHandler(CargarExpediente);
 
             //Validaciones de Campos
-            ObjExpediente.txtAproximacionDiag.Text += new KeyPressEventHandler(ValidarCampoTextBox);
-            ObjExpediente.txtAtencionBrindada.Text += new KeyPressEventHandler(ValidarCampoTextBox);
-            ObjExpediente.txtCognicion.Text += new KeyPressEventHandler(ValidarCampoTextBox);
-            ObjExpediente.txtEstadoAnimo.Text += new KeyPressEventHandler(ValidarCampoTextBox);
-            ObjExpediente.txtEstadoConductual.Text += new KeyPressEventHandler(ValidarCampoTextBox);
-            ObjExpediente.txtObservacion.Text += new KeyPressEventHandler(ValidarCampoTextBox);
-            ObjExpediente.txtPauta.Text += new KeyPressEventHandler(ValidarCampoTextBox);
-            ObjExpediente.txtRedSocial.Text += new KeyPressEventHandler(ValidarCampoTextBox);
-            ObjExpediente.txtRiesgoValorado.Text += new KeyPressEventHandler(ValidarCampoTextBox);
-            ObjExpediente.txtSomatizacion.Text += new KeyPressEventHandler(ValidarCampoTextBox);
-            ObjExpediente.txtVidaInterpersonal.Text += new KeyPressEventHandler(ValidarCampoTextBox);
+            ObjExpediente.txtAproximacionDiag.KeyPress += new KeyPressEventHandler(ValidarCampoTextBox);
+            ObjExpediente.txtAtencionBrindada.KeyPress += new KeyPressEventHandler(ValidarCampoTextBox);
+            ObjExpediente.txtCognicion.KeyPress += new KeyPressEventHandler(ValidarCampoTextBox);
+            ObjExpediente.txtEstadoAnimo.KeyPress += new KeyPressEventHandler(ValidarCampoTextBox);
+            ObjExpediente.txtEstadoConductual.KeyPress += new KeyPressEventHandler(ValidarCampoTextBox);
+            ObjExpediente.txtObservacion.KeyPress += new KeyPressEventHandler(ValidarCampoTextBox);
+            ObjExpediente.txtPauta.KeyPress += new KeyPressEventHandler(ValidarCampoTextBox);
+            ObjExpediente.txtRedSocial.KeyPress += new KeyPressEventHandler(ValidarCampoTextBox);
+            ObjExpediente.txtRiesgoValorado.KeyPress += new KeyPressEventHandler(ValidarCampoTextBox);
+            ObjExpediente.txtSomatizacion.KeyPress += new KeyPressEventHandler(ValidarCampoTextBox);
+            ObjExpediente.txtVidaInterpersonal.KeyPress += new KeyPressEventHandler(ValidarCampoTextBox);
         }
         #region Validaciones de Campos
         private void ValidarCampoTextBox(object sender, KeyPressEventArgs e)

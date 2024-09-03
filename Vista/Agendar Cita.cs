@@ -32,6 +32,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Vista
 
             CTRLAgendarCita ObjAgendarCitaControlador = new CTRLAgendarCita(this);
         }
+
         private void btnSalir_Click(object sender, EventArgs e)
         {
             this.Close();

@@ -22,7 +22,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             ObjPinAccesoForm.btnAtras.Click += new EventHandler(VolverDireccionCorreo);
 
             //Validaciones de Campos
-            ObjPinAccesoForm.txtIngresarPin.Text += new KeyPressEventHandler(ValidarCampoNumero);
+            ObjPinAccesoForm.txtIngresarPin.KeyPress += new KeyPressEventHandler(ValidarCampoNumero);
         }
         #region Validaciones de Campos
         private void ValidarCampoNumero(object sender, KeyPressEventArgs e)

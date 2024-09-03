@@ -26,12 +26,12 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
         {
             ObjCalendario = Vista;
 
-            VerCitasAgendadas();
+            ObjCalendario.btnVerCitas.Click += new EventHandler(VerCitasAgendadas);
             ObjCalendario.Load += new EventHandler(DesplegarDias);
             ObjCalendario.btnAnterior.Click += new EventHandler(RetrocederMes);
             ObjCalendario.btnSiguiente.Click += new EventHandler(SiguienteMes);
         }
-        private void VerCitasAgendadas()
+        private void VerCitasAgendadas(object sender, EventArgs e)
         {
             VerCitasForm ObjAbrirVerCitas = new VerCitasForm();
             ObjAbrirVerCitas.ShowDialog();

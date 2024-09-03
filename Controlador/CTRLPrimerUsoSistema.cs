@@ -31,9 +31,9 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
 
             //Validaciones de Campos
             ObjPrimerUsoSistema.dpCreacionEmpresa.ValueChanged += new EventHandler(DtFechaNacimiento_ValueChanged);
-            ObjPrimerUsoSistema.txtCorreoElectronico.Text += new KeyPressEventHandler(ValidarCampoCorreo);
-            ObjPrimerUsoSistema.txtDireccion.Text += new KeyPressEventHandler(ValidarCampoLetra);
-            ObjPrimerUsoSistema.txtNombreEmpresa.Text += new KeyPressEventHandler(ValidarCampoLetra);
+            ObjPrimerUsoSistema.txtCorreoElectronico.KeyPress += new KeyPressEventHandler(ValidarCampoCorreo);
+            ObjPrimerUsoSistema.txtDireccion.KeyPress += new KeyPressEventHandler(ValidarCampoLetra);
+            ObjPrimerUsoSistema.txtNombreEmpresa.KeyPress += new KeyPressEventHandler(ValidarCampoLetra);
         }
         #region Validaciones de Campos
         private void DtFechaNacimiento_ValueChanged(object sender, EventArgs e)

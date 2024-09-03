@@ -26,7 +26,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             ObjAgendarCitaForm.btnModificar.Click += new EventHandler(ModificarCita);
 
             //Validaciones de campos
-            ObjAgendarCitaForm.txtMotivoConsulta.Text += new KeyPressEventHandler(ValidarCampoTextBox);
+            ObjAgendarCitaForm.txtMotivoConsulta.KeyPress += new KeyPressEventHandler(ValidarCampoTextBox);
         }
         #region Validaciones de campos
         private void ValidarCampoTextBox(object sender, KeyPressEventArgs e)
