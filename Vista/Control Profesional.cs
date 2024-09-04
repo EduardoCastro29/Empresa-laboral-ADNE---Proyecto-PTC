@@ -40,10 +40,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Vista
             }
         }
         private void DResponsive(object sender, EventArgs e)
-        {
-            //int anchoflp = objForm.flpEmpleadosControl.Width;
-            //this.Size = new Size(anchoflp, this.Height);
-            
+        {     
             FlowLayoutPanel ObjFlowLayout = sender as FlowLayoutPanel;
             if (ObjFlowLayout != null || objForm.WindowState is FormWindowState.Normal || objForm.WindowState is FormWindowState.Minimized)
             {
