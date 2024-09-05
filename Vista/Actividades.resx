@@ -667,28 +667,52 @@
         rkJggg==
 </value>
   </data>
-  <data name="btnPersonalizable.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnVerEsteMes.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAGIAAAAfCAYAAAAcGRgRAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAB2SURBVGhD7dGhAYAwAMAwLtnL8B9n4Dc4AA0VEVGV3cYx
-        z3GsxZ/m+Yx4C3zNiAgjIoyIMCLCiAgjIoyIMCLCiAgjIoyIMCLCiAgjIoyIMCLCiAgjIoyIMCLCiAgj
-        IoyIMCLCiAgjIoyIMCJiG/u83gIf2ud1A6k4tpRasEqVAAAAAElFTkSuQmCC
+        iVBORw0KGgoAAAANSUhEUgAAAFAAAAAfCAYAAABwH0oUAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABvSURBVGhD7dChEYAwAMBAJunKsB9j4FsYAMER++JVXLZx
+        zHMca/HHPJ+Bb4GvDIwMjAyMDIwMjAyMDIwMjAyMDIwMjAyMDIwMjAyMDIwMjAyMDIwMjAyMDIwMjAyM
+        DIwMjAyMDIy2sc/rLfDBPq8bba3jUieY4IoAAAAASUVORK5CYII=
 </value>
   </data>
   <data name="btnVer30Dias.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAGgAAAAfCAYAAAALO4jYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAB0SURBVGhD7dExAYAwAMAwlMzy8IeM/RsIQECOHrl69hr3
-        fsZ9TkT7+Qb9hSgahGsQrkG4BuEahGsQrkG4BuEahGsQrkG4BuEahGsQrkG4BuEahGsQrkG4BuEahGsQ
-        rkG4BuEahGsQrkG4BuGuMff6CwHMvV4H56eqOzK2oQAAAABJRU5ErkJggg==
+        iVBORw0KGgoAAAANSUhEUgAAAFYAAAAfCAYAAAB9ATpTAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABySURBVGhD7dChAYAwAMAwLtnL8B9n4Dc4AAd1EVF13cYx
+        z3GsxZ/m+Yx9C3xlbMTYiLERYyPGRoyNGBsxNmJsxNiIsRFjI8ZGjI0YGzE2YmzE2IixEWMjxkaMjRgb
+        MTZibMTYiLERYyPb2Of1Fvhgn9cN3BvUaObaXmcAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="btnOk.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAEgAAAAfCAYAAABEZosIAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABrSURBVGhD7dChEYAwAMBAJunKsB9j4FswuN5lgRev4nKM
+        a97jWoudeX+DdoGfQcGgYFAwKBgUDAoGBYOCQcGgYFAwKBgUDAoGBYOCQcGgYFAwKBgUDAoGBYOCQcGg
+        YFAwKBzjnM8u8Dnn8wJp6UyUQGNqFwAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="btnVerPersonalizadoDia.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAFYAAAAfCAYAAAB9ATpTAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABySURBVGhD7dChAYAwAMAwLtnL8B9n4Dc4AAd1EVF13cYx
+        z3GsxZ/m+Yx9C3xlbMTYiLERYyPGRoyNGBsxNmJsxNiIsRFjI8ZGjI0YGzE2YmzE2IixEWMjxkaMjRgb
+        MTZibMTYiLERYyPb2Of1Fvhgn9cN3BvUaObaXmcAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="btnVerEsteDia.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAFYAAAAfCAYAAAB9ATpTAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABySURBVGhD7dChAYAwAMAwLtnL8B9n4Dc4AAd1EVF13cYx
+        z3GsxZ/m+Yx9C3xlbMTYiLERYyPGRoyNGBsxNmJsxNiIsRFjI8ZGjI0YGzE2YmzE2IixEWMjxkaMjRgb
+        MTZibMTYiLERYyPb2Of1Fvhgn9cN3BvUaObaXmcAAAAASUVORK5CYII=
 </value>
   </data>
   <data name="btnVer7Dias.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAGgAAAAfCAYAAAALO4jYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAB0SURBVGhD7dExAYAwAMAwlMzy8IeM/RsIQECOHrl69hr3
-        fsZ9TkT7+Qb9hSgahGsQrkG4BuEahGsQrkG4BuEahGsQrkG4BuEahGsQrkG4BuEahGsQrkG4BuEahGsQ
-        rkG4BuEahGsQrkG4BuGuMff6CwHMvV4H56eqOzK2oQAAAABJRU5ErkJggg==
+        iVBORw0KGgoAAAANSUhEUgAAAFYAAAAfCAYAAAB9ATpTAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABySURBVGhD7dChAYAwAMAwLtnL8B9n4Dc4AAd1EVF13cYx
+        z3GsxZ/m+Yx9C3xlbMTYiLERYyPGRoyNGBsxNmJsxNiIsRFjI8ZGjI0YGzE2YmzE2IixEWMjxkaMjRgb
+        MTZibMTYiLERYyPb2Of1Fvhgn9cN3BvUaObaXmcAAAAASUVORK5CYII=
 </value>
   </data>
   <data name="pnlSiguientePaciente.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
