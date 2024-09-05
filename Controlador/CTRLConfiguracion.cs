@@ -36,22 +36,21 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
         {
             if (MessageBox.Show("¿Desea cerrar sesión automáticamente? Considere que al accionase, el programa cerrará consecuentemente", "Cerrar Sesión", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                LimpiarVariablesInicioSesion();
                 Application.Exit();
             }
         }
-        void LimpiarVariablesInicioSesion()
-        {
-            InicioSesion.UsuarioId = 0;
-            InicioSesion.Usuario = string.Empty;
-            InicioSesion.Contraseña = string.Empty;
-            InicioSesion.Correo = string.Empty;
-            InicioSesion.Dui = string.Empty;
-            InicioSesion.NombresApellidos = string.Empty;
-            InicioSesion.Telefono = string.Empty;
-            InicioSesion.Imagen = string.Empty;
-            InicioSesion.Especialidad = string.Empty;
-            InicioSesion.DesempenoId = string.Empty;
-        }
+        //private void LimpiarVariablesInicioSesion()
+        //{
+        //    InicioSesion.UsuarioId = 0;
+        //    InicioSesion.Usuario = string.Empty;
+        //    InicioSesion.Contraseña = string.Empty;
+        //    InicioSesion.Correo = string.Empty;
+        //    InicioSesion.Dui = string.Empty;
+        //    InicioSesion.NombresApellidos = string.Empty;
+        //    InicioSesion.Telefono = string.Empty;
+        //    InicioSesion.Imagen = string.Empty;
+        //    InicioSesion.Especialidad = string.Empty;
+        //    InicioSesion.DesempenoId = string.Empty;
+        //}
     }
 }

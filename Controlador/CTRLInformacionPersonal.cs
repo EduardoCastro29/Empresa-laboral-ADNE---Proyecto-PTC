@@ -30,7 +30,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             ObjInformacionPersonal.btnGuardarPaciente.Click += new EventHandler(GuardarInformacionPersonal);
 
             //Validaciones de Campos
-            ObjInformacionPersonal.dtFechaNacimiento.ValueChanged += new EventHandler(DtFechaNacimiento_ValueChanged);
+            ObjInformacionPersonal.dtFechaNacimiento.ValueChanged += new EventHandler(ComprobarFechaActual);
             ObjInformacionPersonal.txtNacionalidad.KeyPress += new KeyPressEventHandler(ValidarCampoTextBox);
             ObjInformacionPersonal.txtProfesion.KeyPress += new KeyPressEventHandler(ValidarCampoTextBox);
             ObjInformacionPersonal.txtNombrePaciente.KeyPress += new KeyPressEventHandler(ValidarCampoTextBox);
@@ -45,7 +45,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             ObjInformacionPersonal.txtCorreoElectronico.KeyPress += new KeyPressEventHandler(ValidarCampoCorreo);
         }
         #region Validaciones de Campos
-        private void DtFechaNacimiento_ValueChanged(object sender, EventArgs e)
+        private void ComprobarFechaActual(object sender, EventArgs e)
         {
             // Verificar si la fecha seleccionada es mayor que la fecha de hoy
             if (ObjInformacionPersonal.dtFechaNacimiento.Value.Date > DateTime.Today)
@@ -86,7 +86,9 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             if ((ch >= 'A' && ch <= 'Z') ||
                 (ch >= 'a' && ch <= 'z') ||
                  ch == '.' ||
-                 ch == ',')
+                 ch == ',' ||
+                 ch == '´' || 
+                 e.KeyChar == ' ')
             {
                 //Retornamos los valores e.KeyChar
                 return;

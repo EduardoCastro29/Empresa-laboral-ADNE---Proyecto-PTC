@@ -27,7 +27,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo
                 SqlConnection ObjConexionOnline = new SqlConnection($"Server = {nombreServidor}; Database = {DBNombre}; User Id = {IDUsuario}; Password = {Contraseña}");
                 */
                 //Definiendo las variables de conexión
-                string nombreServidor = "SANGUCHITO\\SQLEXPRESS"; //Pongan su dirección de SQL Server, en mi caso es esa bv
+                string nombreServidor = "\\SQLEXPRESS"; //Pongan su dirección de SQL Server, en mi caso es esa bv
                 string DBNombre = "ADNE2024"; //Queda igual, ya que es el nombre de la DB
 
                 //Creando objeto ObjConexion de tipo SqlConnection con los datos de la conexión hacia la base de datos

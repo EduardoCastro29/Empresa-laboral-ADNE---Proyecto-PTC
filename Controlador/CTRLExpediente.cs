@@ -57,7 +57,9 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             if ((ch >= 'A' && ch <= 'Z') ||
                 (ch >= 'a' && ch <= 'z') ||
                  ch == '.' ||
-                 ch == ',')
+                 ch == ',' ||
+                 ch == '´' || 
+                 e.KeyChar == ' ')
             {
                 //Retornamos los valores e.KeyChar
                 return;

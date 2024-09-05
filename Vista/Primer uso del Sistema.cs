@@ -32,8 +32,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Vista
 
             CTRLPrimerUsoSistema ObjControladorPUSistema = new CTRLPrimerUsoSistema(this);
         }
-
-        private void bunifuPictureBox1_Click(object sender, EventArgs e)
+        private void btnSalir_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }

@@ -131,7 +131,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador.ControladorUserControl
             ObjInformacionPersonal.Load += new EventHandler(CargarCMB);
 
             //Validaciones de Campos
-            ObjInformacionPersonal.dtFechaNacimiento.ValueChanged += new EventHandler(DtFechaNacimiento_ValueChanged);
+            ObjInformacionPersonal.dtFechaNacimiento.ValueChanged += new EventHandler(ComprobarFechaActual);
             ObjInformacionPersonal.txtNacionalidad.KeyPress += new KeyPressEventHandler(ValidarCampoTextBox);
             ObjInformacionPersonal.txtProfesion.KeyPress += new KeyPressEventHandler(ValidarCampoTextBox);
             ObjInformacionPersonal.txtNombrePaciente.KeyPress += new KeyPressEventHandler(ValidarCampoTextBox);
@@ -146,7 +146,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador.ControladorUserControl
             ObjInformacionPersonal.txtCorreoElectronico.KeyPress += new KeyPressEventHandler(ValidarCampoCorreo);
         }
         #region Validaciones de Campos
-        private void DtFechaNacimiento_ValueChanged(object sender, EventArgs e)
+        private void ComprobarFechaActual(object sender, EventArgs e)
         {
             // Verificar si la fecha seleccionada es mayor que la fecha de hoy
             if (ObjInformacionPersonal.dtFechaNacimiento.Value.Date > DateTime.Today)
@@ -187,7 +187,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador.ControladorUserControl
             if ((ch >= 'A' && ch <= 'Z') ||
                 (ch >= 'a' && ch <= 'z') ||
                  ch == '.' ||
-                 ch == ',')
+                 ch == ',' || e.KeyChar == ' ')
             {
                 //Retornamos los valores e.KeyChar
                 return;
@@ -236,6 +236,11 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador.ControladorUserControl
             ObjInformacionPersonal.cmbGeneroId.DataSource = ObjDaoCargarCMB.AgregarCMBGenero();
             ObjInformacionPersonal.cmbGeneroId.ValueMember = "generoId";
             ObjInformacionPersonal.cmbGeneroId.DisplayMember = "genero";
+
+            //Indicamos la fecha actual en la que se encontrará el DateTimePicker
+            int ValidarEdadAños = DateTime.Today.Year;
+            int ValidarEdad = ValidarEdadAños - 2;
+            ValidarEdad = ObjInformacionPersonal.dtFechaNacimiento.Value.Year;
         }
         // Instrucciones que se haran en el metodo DesactivarAgregarPaciente para desactivar el boton de agregar Paciente 
         private void DesactivarAgregarPaciente(object sender, EventArgs e)  // Todo el proceso para desactivar el boton de Guardar Paciente

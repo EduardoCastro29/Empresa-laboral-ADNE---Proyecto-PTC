@@ -29,7 +29,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
         {
             DAORegistroEspecialidad ObjCargarGridYDUI = new DAORegistroEspecialidad();
 
-
+            ObjCargarGridYDUI.DUIEmpleado1 = ObjRegistroEspecialidad.txtDUIProfesional.Text;
             ObjRegistroEspecialidad.dgvEspecialidades.DataSource = null;
             ObjRegistroEspecialidad.dgvEspecialidades.DataSource = ObjCargarGridYDUI.CargarDGVEspecialidadesN();
             //Indicamos que columnas no queremos que se muestren a simple vista
@@ -69,7 +69,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                 }
                 else
                 {
-                    MessageBox.Show("La especialidad no se ha podido agregar, consulte a su soporte ténico", "Especialidad del Empleado", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("La especialidad no se ha podido agregar, verifique si la especialidad se repite o consulte al soporte técnico", "Especialidad del Empleado", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception ex)

@@ -30,19 +30,19 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             ObjPrimerUsoSistema.btnAgregarLogo.Click += new EventHandler(MostrarLogoEmpresa);
 
             //Validaciones de Campos
-            ObjPrimerUsoSistema.dpCreacionEmpresa.ValueChanged += new EventHandler(DtFechaNacimiento_ValueChanged);
+            ObjPrimerUsoSistema.dpCreacionEmpresa.ValueChanged += new EventHandler(ComprobarFechaActual);
             ObjPrimerUsoSistema.txtCorreoElectronico.KeyPress += new KeyPressEventHandler(ValidarCampoCorreo);
-            ObjPrimerUsoSistema.txtDireccion.KeyPress += new KeyPressEventHandler(ValidarCampoLetra);
-            ObjPrimerUsoSistema.txtNombreEmpresa.KeyPress += new KeyPressEventHandler(ValidarCampoLetra);
+            ObjPrimerUsoSistema.txtDireccion.KeyPress += new KeyPressEventHandler(ValidarCampoTextBox);
+            ObjPrimerUsoSistema.txtNombreEmpresa.KeyPress += new KeyPressEventHandler(ValidarCampoTextBox);
         }
         #region Validaciones de Campos
-        private void DtFechaNacimiento_ValueChanged(object sender, EventArgs e)
+        private void ComprobarFechaActual(object sender, EventArgs e)
         {
             // Verificar si la fecha seleccionada es mayor que la fecha de hoy
             if (ObjPrimerUsoSistema.dpCreacionEmpresa.Value.Date > DateTime.Today)
             {
                 // Mostrar un mensaje de advertencia
-                MessageBox.Show("La fecha de nacimiento no puede ser una fecha futura.", "Fecha no válida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("La fecha de la creación de la empresa no puede ser una fecha futura", "Registro de Empresa", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
                 // Restablecer la fecha al valor anterior o a la fecha actual
                 ObjPrimerUsoSistema.dpCreacionEmpresa.Value = DateTime.Today;
@@ -73,7 +73,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             //Indicamos que se creará el evento e.Char con todos los valores antes proporcionados, como un EventHandler
             e.Handled = true;
         }
-        private void ValidarCampoLetra(object sender, KeyPressEventArgs e)
+        private void ValidarCampoTextBox(object sender, KeyPressEventArgs e)
         {
             //La propiedad char.IsControl permite controles como BackSpace, Inicio, Fin, etc.
             if (char.IsControl(e.KeyChar))
@@ -82,7 +82,15 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                 return;
             }
             //Declaramos la variable de tipo char que recibirá los parámetros de las letras registradas por las variables e.KeyChar creadas anteriormente
-            if (char.IsLetter(e.KeyChar) || e.KeyChar == ' ')
+            char ch = e.KeyChar;
+
+            //Declaramos lo valores que únicamente permitirá el textbox
+            if ((ch >= 'A' && ch <= 'Z') ||
+                (ch >= 'a' && ch <= 'z') ||
+                 ch == '.' ||
+                 ch == ',' ||
+                 e.KeyChar == ' ' ||
+                 e.KeyChar == '´')
             {
                 //Retornamos los valores e.KeyChar
                 return;
@@ -90,7 +98,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             //Indicamos que se creará el evento e.Char con todos los valores antes proporcionados, como un EventHandler
             e.Handled = true;
         }
-
         #endregion
         #region Registrar la primera empresa según el primer uso del Sistema (INSERT)
         private void RegistrarEmpresa(object sender, EventArgs e)

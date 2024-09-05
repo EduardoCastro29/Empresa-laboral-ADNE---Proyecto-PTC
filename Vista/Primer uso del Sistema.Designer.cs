@@ -165,6 +165,7 @@
             this.btnSalir.TabIndex = 14;
             this.btnSalir.TabStop = false;
             this.btnSalir.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Square;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // dpCreacionEmpresa
             // 
@@ -230,7 +231,7 @@
             this.txtTelefono.CharacterCase = Bunifu.UI.WinForms.BunifuTextBox.CharacterCases.Normal;
             this.txtTelefono.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtTelefono.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtTelefono.DefaultFont = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTelefono.DefaultFont = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelefono.DefaultText = "";
             this.txtTelefono.FillColor = System.Drawing.Color.White;
             this.txtTelefono.HideSelection = true;
@@ -269,21 +270,21 @@
             this.txtTelefono.Padding = new System.Windows.Forms.Padding(3);
             this.txtTelefono.PasswordChar = '\0';
             this.txtTelefono.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.txtTelefono.PlaceholderText = "";
+            this.txtTelefono.PlaceholderText = "Teléfono";
             this.txtTelefono.ReadOnly = false;
             this.txtTelefono.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtTelefono.SelectedText = "";
             this.txtTelefono.SelectionLength = 0;
             this.txtTelefono.SelectionStart = 0;
             this.txtTelefono.ShortcutsEnabled = false;
-            this.txtTelefono.Size = new System.Drawing.Size(276, 42);
+            this.txtTelefono.Size = new System.Drawing.Size(276, 46);
             this.txtTelefono.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtTelefono.TabIndex = 3;
             this.txtTelefono.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtTelefono.TextMarginBottom = 0;
             this.txtTelefono.TextMarginLeft = 3;
             this.txtTelefono.TextMarginTop = 1;
-            this.txtTelefono.TextPlaceholder = "";
+            this.txtTelefono.TextPlaceholder = "Teléfono";
             this.txtTelefono.UseSystemPasswordChar = false;
             this.txtTelefono.WordWrap = true;
             // 
@@ -340,7 +341,7 @@
             this.txtCorreoElectronico.CharacterCase = Bunifu.UI.WinForms.BunifuTextBox.CharacterCases.Normal;
             this.txtCorreoElectronico.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtCorreoElectronico.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtCorreoElectronico.DefaultFont = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCorreoElectronico.DefaultFont = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCorreoElectronico.DefaultText = "";
             this.txtCorreoElectronico.FillColor = System.Drawing.Color.White;
             this.txtCorreoElectronico.HideSelection = true;
@@ -379,21 +380,21 @@
             this.txtCorreoElectronico.Padding = new System.Windows.Forms.Padding(3);
             this.txtCorreoElectronico.PasswordChar = '\0';
             this.txtCorreoElectronico.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.txtCorreoElectronico.PlaceholderText = "";
+            this.txtCorreoElectronico.PlaceholderText = "Correo electrónico";
             this.txtCorreoElectronico.ReadOnly = false;
             this.txtCorreoElectronico.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtCorreoElectronico.SelectedText = "";
             this.txtCorreoElectronico.SelectionLength = 0;
             this.txtCorreoElectronico.SelectionStart = 0;
             this.txtCorreoElectronico.ShortcutsEnabled = false;
-            this.txtCorreoElectronico.Size = new System.Drawing.Size(530, 42);
+            this.txtCorreoElectronico.Size = new System.Drawing.Size(530, 46);
             this.txtCorreoElectronico.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtCorreoElectronico.TabIndex = 2;
             this.txtCorreoElectronico.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtCorreoElectronico.TextMarginBottom = 0;
             this.txtCorreoElectronico.TextMarginLeft = 3;
             this.txtCorreoElectronico.TextMarginTop = 1;
-            this.txtCorreoElectronico.TextPlaceholder = "";
+            this.txtCorreoElectronico.TextPlaceholder = "Correo electrónico";
             this.txtCorreoElectronico.UseSystemPasswordChar = false;
             this.txtCorreoElectronico.WordWrap = true;
             // 
@@ -527,7 +528,7 @@
             this.pbLogo.Location = new System.Drawing.Point(707, 76);
             this.pbLogo.Name = "pbLogo";
             this.pbLogo.Size = new System.Drawing.Size(250, 250);
-            this.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbLogo.TabIndex = 4;
             this.pbLogo.TabStop = false;
             // 
@@ -678,7 +679,7 @@
             this.txtPBX.Padding = new System.Windows.Forms.Padding(3);
             this.txtPBX.PasswordChar = '\0';
             this.txtPBX.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.txtPBX.PlaceholderText = "";
+            this.txtPBX.PlaceholderText = "PBX";
             this.txtPBX.ReadOnly = false;
             this.txtPBX.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtPBX.SelectedText = "";
@@ -692,7 +693,7 @@
             this.txtPBX.TextMarginBottom = 0;
             this.txtPBX.TextMarginLeft = 3;
             this.txtPBX.TextMarginTop = 1;
-            this.txtPBX.TextPlaceholder = "";
+            this.txtPBX.TextPlaceholder = "PBX";
             this.txtPBX.UseSystemPasswordChar = false;
             this.txtPBX.WordWrap = true;
             // 
@@ -715,7 +716,7 @@
             this.txtDireccion.CharacterCase = Bunifu.UI.WinForms.BunifuTextBox.CharacterCases.Normal;
             this.txtDireccion.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtDireccion.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtDireccion.DefaultFont = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDireccion.DefaultFont = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDireccion.DefaultText = "";
             this.txtDireccion.FillColor = System.Drawing.Color.White;
             this.txtDireccion.HideSelection = true;
@@ -754,7 +755,7 @@
             this.txtDireccion.Padding = new System.Windows.Forms.Padding(3);
             this.txtDireccion.PasswordChar = '\0';
             this.txtDireccion.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.txtDireccion.PlaceholderText = "";
+            this.txtDireccion.PlaceholderText = "Dirección física";
             this.txtDireccion.ReadOnly = false;
             this.txtDireccion.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtDireccion.SelectedText = "";
@@ -768,7 +769,7 @@
             this.txtDireccion.TextMarginBottom = 0;
             this.txtDireccion.TextMarginLeft = 3;
             this.txtDireccion.TextMarginTop = 1;
-            this.txtDireccion.TextPlaceholder = "";
+            this.txtDireccion.TextPlaceholder = "Dirección física";
             this.txtDireccion.UseSystemPasswordChar = false;
             this.txtDireccion.WordWrap = true;
             // 
@@ -791,7 +792,7 @@
             this.txtNombreEmpresa.CharacterCase = Bunifu.UI.WinForms.BunifuTextBox.CharacterCases.Normal;
             this.txtNombreEmpresa.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtNombreEmpresa.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtNombreEmpresa.DefaultFont = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombreEmpresa.DefaultFont = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombreEmpresa.DefaultText = "";
             this.txtNombreEmpresa.FillColor = System.Drawing.Color.White;
             this.txtNombreEmpresa.HideSelection = true;
@@ -830,21 +831,21 @@
             this.txtNombreEmpresa.Padding = new System.Windows.Forms.Padding(3);
             this.txtNombreEmpresa.PasswordChar = '\0';
             this.txtNombreEmpresa.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.txtNombreEmpresa.PlaceholderText = "";
+            this.txtNombreEmpresa.PlaceholderText = "Nombre de la empresa";
             this.txtNombreEmpresa.ReadOnly = false;
             this.txtNombreEmpresa.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtNombreEmpresa.SelectedText = "";
             this.txtNombreEmpresa.SelectionLength = 0;
             this.txtNombreEmpresa.SelectionStart = 0;
             this.txtNombreEmpresa.ShortcutsEnabled = false;
-            this.txtNombreEmpresa.Size = new System.Drawing.Size(530, 42);
+            this.txtNombreEmpresa.Size = new System.Drawing.Size(530, 46);
             this.txtNombreEmpresa.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtNombreEmpresa.TabIndex = 0;
             this.txtNombreEmpresa.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtNombreEmpresa.TextMarginBottom = 0;
             this.txtNombreEmpresa.TextMarginLeft = 3;
             this.txtNombreEmpresa.TextMarginTop = 1;
-            this.txtNombreEmpresa.TextPlaceholder = "";
+            this.txtNombreEmpresa.TextPlaceholder = "Nombre de la empresa";
             this.txtNombreEmpresa.UseSystemPasswordChar = false;
             this.txtNombreEmpresa.WordWrap = true;
             // 
