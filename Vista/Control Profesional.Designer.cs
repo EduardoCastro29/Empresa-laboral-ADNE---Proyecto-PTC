@@ -36,11 +36,9 @@
             this.lblEspecialidades = new Bunifu.UI.WinForms.BunifuLabel();
             this.lblIdProfesional = new Bunifu.UI.WinForms.BunifuLabel();
             this.lblNombreProfesional = new Bunifu.UI.WinForms.BunifuLabel();
-            this.bunifuShadowPanel2 = new Bunifu.UI.WinForms.BunifuShadowPanel();
             this.bunifuGradientPanel1 = new Bunifu.UI.WinForms.BunifuGradientPanel();
             this.bunifuPictureBox1 = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.bunifuShadowPanel1.SuspendLayout();
-            this.bunifuShadowPanel2.SuspendLayout();
             this.bunifuGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -95,12 +93,12 @@
             this.lblEmail.AutoEllipsis = false;
             this.lblEmail.CursorType = null;
             this.lblEmail.Font = new System.Drawing.Font("Century Gothic", 14.25F);
-            this.lblEmail.Location = new System.Drawing.Point(234, 80);
+            this.lblEmail.Location = new System.Drawing.Point(210, 81);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblEmail.Size = new System.Drawing.Size(163, 22);
+            this.lblEmail.Size = new System.Drawing.Size(173, 22);
             this.lblEmail.TabIndex = 5;
-            this.lblEmail.Text = "email@proveedor";
+            this.lblEmail.Text = "direccion@dominio";
             this.lblEmail.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lblEmail.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
@@ -157,7 +155,7 @@
             this.lblNombreProfesional.Cursor = System.Windows.Forms.Cursors.Default;
             this.lblNombreProfesional.CursorType = System.Windows.Forms.Cursors.Default;
             this.lblNombreProfesional.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombreProfesional.Location = new System.Drawing.Point(29, 31);
+            this.lblNombreProfesional.Location = new System.Drawing.Point(29, 30);
             this.lblNombreProfesional.Name = "lblNombreProfesional";
             this.lblNombreProfesional.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblNombreProfesional.Size = new System.Drawing.Size(217, 23);
@@ -165,28 +163,6 @@
             this.lblNombreProfesional.Text = "Nombre del profesional";
             this.lblNombreProfesional.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lblNombreProfesional.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // bunifuShadowPanel2
-            // 
-            this.bunifuShadowPanel2.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuShadowPanel2.BorderColor = System.Drawing.Color.Transparent;
-            this.bunifuShadowPanel2.BorderRadius = 15;
-            this.bunifuShadowPanel2.BorderThickness = 1;
-            this.bunifuShadowPanel2.Controls.Add(this.bunifuGradientPanel1);
-            this.bunifuShadowPanel2.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
-            this.bunifuShadowPanel2.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
-            this.bunifuShadowPanel2.Location = new System.Drawing.Point(13, 14);
-            this.bunifuShadowPanel2.Name = "bunifuShadowPanel2";
-            this.bunifuShadowPanel2.PanelColor = System.Drawing.Color.Transparent;
-            this.bunifuShadowPanel2.PanelColor2 = System.Drawing.Color.Transparent;
-            this.bunifuShadowPanel2.ShadowColor = System.Drawing.Color.Silver;
-            this.bunifuShadowPanel2.ShadowDept = 2;
-            this.bunifuShadowPanel2.ShadowDepth = 5;
-            this.bunifuShadowPanel2.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.ForwardDiagonal;
-            this.bunifuShadowPanel2.ShadowTopLeftVisible = false;
-            this.bunifuShadowPanel2.Size = new System.Drawing.Size(207, 175);
-            this.bunifuShadowPanel2.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Raised;
-            this.bunifuShadowPanel2.TabIndex = 3;
             // 
             // bunifuGradientPanel1
             // 
@@ -199,7 +175,7 @@
             this.bunifuGradientPanel1.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(165)))), ((int)(((byte)(171)))));
             this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(207)))), ((int)(((byte)(214)))));
             this.bunifuGradientPanel1.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(183)))), ((int)(((byte)(188)))));
-            this.bunifuGradientPanel1.Location = new System.Drawing.Point(0, -1);
+            this.bunifuGradientPanel1.Location = new System.Drawing.Point(14, 14);
             this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
             this.bunifuGradientPanel1.Quality = 10;
             this.bunifuGradientPanel1.Size = new System.Drawing.Size(204, 173);
@@ -225,16 +201,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Highlight;
+            this.BackColor = System.Drawing.Color.Transparent;
+            this.Controls.Add(this.bunifuGradientPanel1);
             this.Controls.Add(this.bunifuShadowPanel1);
-            this.Controls.Add(this.bunifuShadowPanel2);
             this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "Control_Profesional";
             this.Size = new System.Drawing.Size(856, 200);
-            this.Load += new System.EventHandler(this.Control_Profesional_Load);
             this.bunifuShadowPanel1.ResumeLayout(false);
             this.bunifuShadowPanel1.PerformLayout();
-            this.bunifuShadowPanel2.ResumeLayout(false);
             this.bunifuGradientPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -250,7 +224,6 @@
         private Bunifu.UI.WinForms.BunifuLabel lblEspecialidades;
         public Bunifu.UI.WinForms.BunifuLabel lblIdProfesional;
         public Bunifu.UI.WinForms.BunifuLabel lblNombreProfesional;
-        private Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel2;
         private Bunifu.UI.WinForms.BunifuGradientPanel bunifuGradientPanel1;
         private Bunifu.UI.WinForms.BunifuPictureBox bunifuPictureBox1;
     }

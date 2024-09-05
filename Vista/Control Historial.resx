@@ -118,17 +118,35 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="bunifuButton21.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnExpediente.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAHoAAAApCAYAAAD6Qz29AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGaSURBVHhe7ZyhTgQxEIYrkUgkEolE8gYQdnucYyUSeXIf
-        guS2RexjIKcOefIkEolEQqfbQLjMccFtO/8kn+rcmi+daZObmkNxQ+6soadLS76z5HowJ3yX3ZxnXf+P
-        loYHG/w28gnmTxP8K8u/o/EoK/w7eAe3YXiRPgaKYLsgf5F1ypFKQRg+hB+D0iC3ylp/R+rFkFwV3L+z
-        3p9Aua6P2Lffrmg8zoq/D15iMiibWKXHrNmYdGITkkD5cDtOu5rvYFICqIcFuetYtt1SWgQVwSdw9GcF
-        kOtj6Xa9uAjqAaKVANFKgGglQLQSIFoJEK0EiFYCRCsBopUA0UqAaCVAtBIgWgkQrQSIVgJEKwGilQDR
-        SsiiV+IiqIdJtO/ERVAPLJon78RFUA38l27D87Q2DO9SAqiDW1qfppGcNri1lADKpwnDJknmsPR4wpN3
-        UiIolzQGvfvsBc/nSMmgYPYNw6OE10Os0M9ZqxzTdQuHs1KZyvWenbwb3LNtcCR9CMyaww/VSMHH8rjD
-        7/nCDeYLT8TyGzRZmxDGfAH7273rWs17hAAAAABJRU5ErkJggg==
+        iVBORw0KGgoAAAANSUhEUgAAALAAAAArCAYAAADYFgLeAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAF/SURBVHhe7d0tT8UwGIbhSSQS10kkPwGJRCKRSCQSx09A
+        Hnl6Csm+SI5EIpFIJPJIJOwdDZ8l4PY+yd3kUu3cnaWbaKvfRmia7TBc7YdudQ7Mxhq8STs5y79H6NJx
+        3afH0QvgRhufQpvOcqY/h71x6z6uiw8DftyFZlnnbD8G8UJGF+/D7WIrpzu+fdvVSXEh4NUQL3K+09t3
+        U1wEOGbb3nHvu6xLk4B39oeiCn08LE0C3oUunlb2r600CXhn7RIwZBEwpBEwpBEwpBEwpBEwpBEwpBEw
+        pBEwpBEwpBEwpBEwpBEwpBEwpBEwpBEwpBEwpBEwpBEwpBEwpBEwpBEwpBEwpBEwpBEwpBEwpOWApxPZ
+        iwsAz6YT20OT9kqTgHd2MOXb+cBtei4tADx7v/ylHtJlaQHgV1xP8dqw+wbqNj6UFwLO2I1F36/emvbC
+        40TxAcCNuAnd6iBn+3Xkq7YW5QeBucX1vy49tHsz7AvP/rMBs2vjUeivd3Oen0ZVvQK44/W2dgUyIAAA
+        AABJRU5ErkJggg==
 </value>
+  </data>
+  <data name="lblPaciente.BaseStylesheet" xml:space="preserve">
+    <value>#bunifu-label { padding: 0px; font-family: 'Century Gothic'; font-size: 14.25pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(0, 0, 0); text-align: left; }</value>
+  </data>
+  <data name="lblFinal.BaseStylesheet" xml:space="preserve">
+    <value>#bunifu-label { padding: 0px; font-family: 'Century Gothic'; font-size: 14.25pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(0, 0, 0); text-align: left; }</value>
+  </data>
+  <data name="lblHoraInicio.BaseStylesheet" xml:space="preserve">
+    <value>#bunifu-label { padding: 0px; font-family: 'Century Gothic'; font-size: 14.25pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(0, 0, 0); text-align: left; }</value>
+  </data>
+  <data name="bunifuLabel1.BaseStylesheet" xml:space="preserve">
+    <value>#bunifu-label { padding: 0px; font-family: 'Century Gothic'; font-size: 14.25pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(0, 0, 0); text-align: left; }</value>
+  </data>
+  <data name="lblHoraFinal.BaseStylesheet" xml:space="preserve">
+    <value>#bunifu-label { padding: 0px; font-family: 'Century Gothic'; font-size: 14.25pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(0, 0, 0); text-align: left; }</value>
+  </data>
+  <data name="lblNombrePaciente.BaseStylesheet" xml:space="preserve">
+    <value>#bunifu-label { padding: 0px; font-family: 'Century Gothic'; font-size: 14.25pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(0, 0, 0); text-align: left; }</value>
   </data>
 </root>

@@ -44,6 +44,8 @@
             // 
             // pnlFondoUC
             // 
+            this.pnlFondoUC.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlFondoUC.BackColor = System.Drawing.Color.Transparent;
             this.pnlFondoUC.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlFondoUC.BackgroundImage")));
             this.pnlFondoUC.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -56,12 +58,12 @@
             this.pnlFondoUC.Controls.Add(this.lblHora);
             this.pnlFondoUC.Controls.Add(this.lblFecha);
             this.pnlFondoUC.Controls.Add(this.lblNombrePaciente);
-            this.pnlFondoUC.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlFondoUC.GradientBottomLeft = System.Drawing.Color.WhiteSmoke;
             this.pnlFondoUC.GradientBottomRight = System.Drawing.Color.WhiteSmoke;
             this.pnlFondoUC.GradientTopLeft = System.Drawing.Color.White;
             this.pnlFondoUC.GradientTopRight = System.Drawing.Color.White;
             this.pnlFondoUC.Location = new System.Drawing.Point(0, 0);
+            this.pnlFondoUC.Margin = new System.Windows.Forms.Padding(1);
             this.pnlFondoUC.Name = "pnlFondoUC";
             this.pnlFondoUC.Quality = 10;
             this.pnlFondoUC.Size = new System.Drawing.Size(955, 51);
@@ -112,8 +114,7 @@
             this.btnDescargar.AllowAnimations = true;
             this.btnDescargar.AllowMouseEffects = true;
             this.btnDescargar.AllowToggling = false;
-            this.btnDescargar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDescargar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDescargar.AnimationSpeed = 200;
             this.btnDescargar.AutoGenerateColors = false;
             this.btnDescargar.AutoRoundBorders = false;
@@ -201,8 +202,7 @@
             // lblEstado
             // 
             this.lblEstado.AllowParentOverrides = false;
-            this.lblEstado.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblEstado.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblEstado.AutoEllipsis = false;
             this.lblEstado.CursorType = null;
             this.lblEstado.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
@@ -252,8 +252,6 @@
             // lblNombrePaciente
             // 
             this.lblNombrePaciente.AllowParentOverrides = false;
-            this.lblNombrePaciente.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblNombrePaciente.AutoEllipsis = false;
             this.lblNombrePaciente.CursorType = null;
             this.lblNombrePaciente.Font = new System.Drawing.Font("Century Gothic", 11.25F);

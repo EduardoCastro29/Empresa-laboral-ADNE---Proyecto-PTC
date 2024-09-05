@@ -441,7 +441,7 @@
             this.btnPersonalizable.IdleIconLeftImage = null;
             this.btnPersonalizable.IdleIconRightImage = null;
             this.btnPersonalizable.IndicateFocus = false;
-            this.btnPersonalizable.Location = new System.Drawing.Point(672, 3);
+            this.btnPersonalizable.Location = new System.Drawing.Point(646, 23);
             this.btnPersonalizable.Name = "btnPersonalizable";
             this.btnPersonalizable.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnPersonalizable.OnDisabledState.BorderRadius = 1;
@@ -475,7 +475,7 @@
             this.btnPersonalizable.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btnPersonalizable.OnPressedState.IconLeftImage = null;
             this.btnPersonalizable.OnPressedState.IconRightImage = null;
-            this.btnPersonalizable.Size = new System.Drawing.Size(80, 31);
+            this.btnPersonalizable.Size = new System.Drawing.Size(98, 31);
             this.btnPersonalizable.TabIndex = 5;
             this.btnPersonalizable.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnPersonalizable.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -485,14 +485,14 @@
             // 
             // dtFechaFinal
             // 
-            this.dtFechaFinal.Location = new System.Drawing.Point(236, 11);
+            this.dtFechaFinal.Location = new System.Drawing.Point(230, 29);
             this.dtFechaFinal.Name = "dtFechaFinal";
             this.dtFechaFinal.Size = new System.Drawing.Size(200, 20);
             this.dtFechaFinal.TabIndex = 4;
             // 
             // dtFechaInicio
             // 
-            this.dtFechaInicio.Location = new System.Drawing.Point(14, 11);
+            this.dtFechaInicio.Location = new System.Drawing.Point(14, 29);
             this.dtFechaInicio.Name = "dtFechaInicio";
             this.dtFechaInicio.Size = new System.Drawing.Size(200, 20);
             this.dtFechaInicio.TabIndex = 3;
@@ -544,7 +544,7 @@
             this.btnVer30Dias.IdleIconLeftImage = null;
             this.btnVer30Dias.IdleIconRightImage = null;
             this.btnVer30Dias.IndicateFocus = false;
-            this.btnVer30Dias.Location = new System.Drawing.Point(576, 3);
+            this.btnVer30Dias.Location = new System.Drawing.Point(550, 23);
             this.btnVer30Dias.Name = "btnVer30Dias";
             this.btnVer30Dias.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnVer30Dias.OnDisabledState.BorderRadius = 1;
@@ -578,7 +578,7 @@
             this.btnVer30Dias.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btnVer30Dias.OnPressedState.IconLeftImage = null;
             this.btnVer30Dias.OnPressedState.IconRightImage = null;
-            this.btnVer30Dias.Size = new System.Drawing.Size(86, 31);
+            this.btnVer30Dias.Size = new System.Drawing.Size(104, 31);
             this.btnVer30Dias.TabIndex = 2;
             this.btnVer30Dias.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnVer30Dias.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -633,7 +633,7 @@
             this.btnVer7Dias.IdleIconLeftImage = null;
             this.btnVer7Dias.IdleIconRightImage = null;
             this.btnVer7Dias.IndicateFocus = false;
-            this.btnVer7Dias.Location = new System.Drawing.Point(480, 3);
+            this.btnVer7Dias.Location = new System.Drawing.Point(454, 23);
             this.btnVer7Dias.Name = "btnVer7Dias";
             this.btnVer7Dias.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnVer7Dias.OnDisabledState.BorderRadius = 1;
@@ -667,7 +667,7 @@
             this.btnVer7Dias.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btnVer7Dias.OnPressedState.IconLeftImage = null;
             this.btnVer7Dias.OnPressedState.IconRightImage = null;
-            this.btnVer7Dias.Size = new System.Drawing.Size(86, 31);
+            this.btnVer7Dias.Size = new System.Drawing.Size(104, 31);
             this.btnVer7Dias.TabIndex = 1;
             this.btnVer7Dias.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnVer7Dias.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -677,17 +677,20 @@
             // 
             // GraficoCitas
             // 
+            this.GraficoCitas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             chartArea1.Name = "ChartArea1";
             this.GraficoCitas.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.GraficoCitas.Legends.Add(legend1);
-            this.GraficoCitas.Location = new System.Drawing.Point(68, 94);
+            this.GraficoCitas.Location = new System.Drawing.Point(21, 82);
             this.GraficoCitas.Name = "GraficoCitas";
             series1.ChartArea = "ChartArea1";
             series1.Legend = "Legend1";
             series1.Name = "Series1";
             this.GraficoCitas.Series.Add(series1);
-            this.GraficoCitas.Size = new System.Drawing.Size(594, 182);
+            this.GraficoCitas.Size = new System.Drawing.Size(705, 182);
             this.GraficoCitas.TabIndex = 0;
             this.GraficoCitas.Text = "chart1";
             // 
@@ -914,7 +917,7 @@
             this.btnHistorial.AutoSizeLeftIcon = true;
             this.btnHistorial.AutoSizeRightIcon = true;
             this.btnHistorial.BackColor = System.Drawing.Color.Transparent;
-            this.btnHistorial.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(189)))), ((int)(((byte)(152)))));
+            this.btnHistorial.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(172)))), ((int)(((byte)(158)))));
             this.btnHistorial.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnHistorial.BackgroundImage")));
             this.btnHistorial.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.btnHistorial.ButtonText = "Ver";
@@ -943,17 +946,17 @@
             this.btnHistorial.IconRightCursor = System.Windows.Forms.Cursors.Hand;
             this.btnHistorial.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
             this.btnHistorial.IconSize = 25;
-            this.btnHistorial.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(189)))), ((int)(((byte)(152)))));
-            this.btnHistorial.IdleBorderRadius = 20;
+            this.btnHistorial.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(172)))), ((int)(((byte)(158)))));
+            this.btnHistorial.IdleBorderRadius = 37;
             this.btnHistorial.IdleBorderThickness = 1;
-            this.btnHistorial.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(189)))), ((int)(((byte)(152)))));
+            this.btnHistorial.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(172)))), ((int)(((byte)(158)))));
             this.btnHistorial.IdleIconLeftImage = null;
             this.btnHistorial.IdleIconRightImage = null;
             this.btnHistorial.IndicateFocus = false;
-            this.btnHistorial.Location = new System.Drawing.Point(392, 39);
+            this.btnHistorial.Location = new System.Drawing.Point(382, 44);
             this.btnHistorial.Name = "btnHistorial";
             this.btnHistorial.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.btnHistorial.OnDisabledState.BorderRadius = 20;
+            this.btnHistorial.OnDisabledState.BorderRadius = 37;
             this.btnHistorial.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.btnHistorial.OnDisabledState.BorderThickness = 1;
             this.btnHistorial.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -961,30 +964,30 @@
             this.btnHistorial.OnDisabledState.IconLeftImage = null;
             this.btnHistorial.OnDisabledState.IconRightImage = null;
             this.btnHistorial.onHoverState.BorderColor = System.Drawing.Color.Transparent;
-            this.btnHistorial.onHoverState.BorderRadius = 20;
+            this.btnHistorial.onHoverState.BorderRadius = 37;
             this.btnHistorial.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.btnHistorial.onHoverState.BorderThickness = 1;
             this.btnHistorial.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(2)))), ((int)(((byte)(161)))), ((int)(((byte)(104)))));
             this.btnHistorial.onHoverState.ForeColor = System.Drawing.Color.White;
             this.btnHistorial.onHoverState.IconLeftImage = null;
             this.btnHistorial.onHoverState.IconRightImage = null;
-            this.btnHistorial.OnIdleState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(189)))), ((int)(((byte)(152)))));
-            this.btnHistorial.OnIdleState.BorderRadius = 20;
+            this.btnHistorial.OnIdleState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(172)))), ((int)(((byte)(158)))));
+            this.btnHistorial.OnIdleState.BorderRadius = 37;
             this.btnHistorial.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.btnHistorial.OnIdleState.BorderThickness = 1;
-            this.btnHistorial.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(189)))), ((int)(((byte)(152)))));
+            this.btnHistorial.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(172)))), ((int)(((byte)(158)))));
             this.btnHistorial.OnIdleState.ForeColor = System.Drawing.Color.White;
             this.btnHistorial.OnIdleState.IconLeftImage = null;
             this.btnHistorial.OnIdleState.IconRightImage = null;
             this.btnHistorial.OnPressedState.BorderColor = System.Drawing.Color.Transparent;
-            this.btnHistorial.OnPressedState.BorderRadius = 20;
+            this.btnHistorial.OnPressedState.BorderRadius = 37;
             this.btnHistorial.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.btnHistorial.OnPressedState.BorderThickness = 1;
             this.btnHistorial.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(2)))), ((int)(((byte)(161)))), ((int)(((byte)(104)))));
             this.btnHistorial.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btnHistorial.OnPressedState.IconLeftImage = null;
             this.btnHistorial.OnPressedState.IconRightImage = null;
-            this.btnHistorial.Size = new System.Drawing.Size(168, 53);
+            this.btnHistorial.Size = new System.Drawing.Size(178, 45);
             this.btnHistorial.TabIndex = 0;
             this.btnHistorial.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnHistorial.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;

@@ -190,7 +190,7 @@
             // flpEmpleadosControl
             // 
             this.flpEmpleadosControl.AutoScroll = true;
-            this.flpEmpleadosControl.BackColor = System.Drawing.Color.IndianRed;
+            this.flpEmpleadosControl.BackColor = System.Drawing.Color.Transparent;
             this.flpEmpleadosControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flpEmpleadosControl.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flpEmpleadosControl.Location = new System.Drawing.Point(20, 20);
