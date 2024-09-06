@@ -413,7 +413,7 @@
             this.btnCitas.BackColor1 = System.Drawing.Color.Transparent;
             this.btnCitas.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCitas.BackgroundImage")));
             this.btnCitas.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.btnCitas.ButtonText = "Citas";
+            this.btnCitas.ButtonText = "Expedientes";
             this.btnCitas.ButtonTextMarginLeft = 0;
             this.btnCitas.ColorContrastOnClick = 45;
             this.btnCitas.ColorContrastOnHover = 45;
@@ -486,7 +486,7 @@
             this.btnCitas.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnCitas.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnCitas.TextMarginLeft = 0;
-            this.btnCitas.TextPadding = new System.Windows.Forms.Padding(-45, 0, 0, 0);
+            this.btnCitas.TextPadding = new System.Windows.Forms.Padding(-10, 0, 0, 0);
             this.btnCitas.UseDefaultRadiusAndThickness = true;
             // 
             // btnPacientes
@@ -900,7 +900,7 @@
             this.lblIdUsuario.Margin = new System.Windows.Forms.Padding(3, 5, 3, 3);
             this.lblIdUsuario.Name = "lblIdUsuario";
             this.lblIdUsuario.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblIdUsuario.Size = new System.Drawing.Size(212, 39);
+            this.lblIdUsuario.Size = new System.Drawing.Size(118, 22);
             this.lblIdUsuario.TabIndex = 1;
             this.lblIdUsuario.Text = "ID de Usuario";
             this.lblIdUsuario.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -994,7 +994,7 @@
             this.MinimumSize = new System.Drawing.Size(1297, 759);
             this.Name = "DashboardForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Dashboard";
+            this.Text = "ADNE";
             this.bunifuGradientPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.flowLayoutPanel6.ResumeLayout(false);

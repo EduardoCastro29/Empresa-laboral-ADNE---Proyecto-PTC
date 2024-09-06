@@ -243,7 +243,7 @@
             this.lblNombreProfesional.Location = new System.Drawing.Point(52, 459);
             this.lblNombreProfesional.Name = "lblNombreProfesional";
             this.lblNombreProfesional.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblNombreProfesional.Size = new System.Drawing.Size(313, 39);
+            this.lblNombreProfesional.Size = new System.Drawing.Size(180, 23);
             this.lblNombreProfesional.TabIndex = 60;
             this.lblNombreProfesional.Text = "Nombre Profesional";
             this.lblNombreProfesional.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -331,7 +331,7 @@
             this.lblAnadirEspecialidad.Location = new System.Drawing.Point(402, 157);
             this.lblAnadirEspecialidad.Name = "lblAnadirEspecialidad";
             this.lblAnadirEspecialidad.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblAnadirEspecialidad.Size = new System.Drawing.Size(337, 39);
+            this.lblAnadirEspecialidad.Size = new System.Drawing.Size(196, 23);
             this.lblAnadirEspecialidad.TabIndex = 56;
             this.lblAnadirEspecialidad.Text = "Añadir especialidad:";
             this.lblAnadirEspecialidad.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -359,8 +359,8 @@
             this.bunifuGradientPanel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel3.BackgroundImage")));
             this.bunifuGradientPanel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuGradientPanel3.BorderRadius = 15;
-            this.bunifuGradientPanel3.Controls.Add(this.menuStrip1);
             this.bunifuGradientPanel3.Controls.Add(this.Titulo_Registrar);
+            this.bunifuGradientPanel3.Controls.Add(this.menuStrip1);
             this.bunifuGradientPanel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.bunifuGradientPanel3.GradientBottomLeft = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(163)))), ((int)(((byte)(170)))));
             this.bunifuGradientPanel3.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(181)))), ((int)(((byte)(166)))));
@@ -399,10 +399,10 @@
             this.Titulo_Registrar.CursorType = System.Windows.Forms.Cursors.Default;
             this.Titulo_Registrar.Font = new System.Drawing.Font("Century Gothic", 21.75F);
             this.Titulo_Registrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(86)))), ((int)(((byte)(100)))));
-            this.Titulo_Registrar.Location = new System.Drawing.Point(52, 32);
+            this.Titulo_Registrar.Location = new System.Drawing.Point(51, 30);
             this.Titulo_Registrar.Name = "Titulo_Registrar";
             this.Titulo_Registrar.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.Titulo_Registrar.Size = new System.Drawing.Size(731, 119);
+            this.Titulo_Registrar.Size = new System.Drawing.Size(215, 36);
             this.Titulo_Registrar.TabIndex = 0;
             this.Titulo_Registrar.Text = "Especialidades";
             this.Titulo_Registrar.TextAlignment = System.Drawing.ContentAlignment.TopLeft;

@@ -41,12 +41,12 @@
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties8 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             this.bunifuPictureBox1 = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.bunifuGradientPanel1 = new Bunifu.UI.WinForms.BunifuGradientPanel();
-            this.bunifuPanel2 = new Bunifu.UI.WinForms.BunifuPanel();
+            this.pnlFondoFormulario = new Bunifu.UI.WinForms.BunifuPanel();
             this.lblRecuerdame = new Bunifu.UI.WinForms.BunifuLabel();
             this.cbRecuerdame = new Bunifu.UI.WinForms.BunifuCheckBox();
             this.btnOlvidarContrasena = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.bunifuShadowPanel2 = new Bunifu.UI.WinForms.BunifuShadowPanel();
-            this.bunifuGradientPanel3 = new Bunifu.UI.WinForms.BunifuGradientPanel();
+            this.pnlGradienteBoton = new Bunifu.UI.WinForms.BunifuGradientPanel();
             this.btnIniciarSesion = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.bunifuShadowPanel3 = new Bunifu.UI.WinForms.BunifuShadowPanel();
             this.txtUsuario = new Bunifu.UI.WinForms.BunifuTextBox();
@@ -57,9 +57,9 @@
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).BeginInit();
             this.bunifuGradientPanel1.SuspendLayout();
-            this.bunifuPanel2.SuspendLayout();
+            this.pnlFondoFormulario.SuspendLayout();
             this.bunifuShadowPanel2.SuspendLayout();
-            this.bunifuGradientPanel3.SuspendLayout();
+            this.pnlGradienteBoton.SuspendLayout();
             this.bunifuShadowPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).BeginInit();
             this.bunifuShadowPanel1.SuspendLayout();
@@ -69,7 +69,8 @@
             // bunifuPictureBox1
             // 
             this.bunifuPictureBox1.AllowFocused = false;
-            this.bunifuPictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bunifuPictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.bunifuPictureBox1.AutoSizeHeight = false;
             this.bunifuPictureBox1.BorderRadius = 0;
             this.bunifuPictureBox1.Image = global::Empresa_laboral_ADNE___Proyecto_PTC.Properties.Resources.ADNE_EDIT1_4;
@@ -88,7 +89,7 @@
             this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
             this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuGradientPanel1.BorderRadius = 1;
-            this.bunifuGradientPanel1.Controls.Add(this.bunifuPanel2);
+            this.bunifuGradientPanel1.Controls.Add(this.pnlFondoFormulario);
             this.bunifuGradientPanel1.Controls.Add(this.bunifuPanel1);
             this.bunifuGradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bunifuGradientPanel1.GradientBottomLeft = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(161)))), ((int)(((byte)(159)))));
@@ -101,33 +102,34 @@
             this.bunifuGradientPanel1.Size = new System.Drawing.Size(1230, 729);
             this.bunifuGradientPanel1.TabIndex = 1;
             // 
-            // bunifuPanel2
+            // pnlFondoFormulario
             // 
-            this.bunifuPanel2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.bunifuPanel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuPanel2.BackgroundImage")));
-            this.bunifuPanel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuPanel2.BorderColor = System.Drawing.Color.Transparent;
-            this.bunifuPanel2.BorderRadius = 55;
-            this.bunifuPanel2.BorderThickness = 1;
-            this.bunifuPanel2.Controls.Add(this.lblRecuerdame);
-            this.bunifuPanel2.Controls.Add(this.cbRecuerdame);
-            this.bunifuPanel2.Controls.Add(this.btnOlvidarContrasena);
-            this.bunifuPanel2.Controls.Add(this.bunifuShadowPanel2);
-            this.bunifuPanel2.Controls.Add(this.bunifuShadowPanel3);
-            this.bunifuPanel2.Controls.Add(this.btnSalir);
-            this.bunifuPanel2.Controls.Add(this.bunifuShadowPanel1);
-            this.bunifuPanel2.Controls.Add(this.lblBienvenido);
-            this.bunifuPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bunifuPanel2.Location = new System.Drawing.Point(520, 0);
-            this.bunifuPanel2.Name = "bunifuPanel2";
-            this.bunifuPanel2.ShowBorders = true;
-            this.bunifuPanel2.Size = new System.Drawing.Size(710, 729);
-            this.bunifuPanel2.TabIndex = 0;
+            this.pnlFondoFormulario.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlFondoFormulario.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.pnlFondoFormulario.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlFondoFormulario.BackgroundImage")));
+            this.pnlFondoFormulario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnlFondoFormulario.BorderColor = System.Drawing.Color.Transparent;
+            this.pnlFondoFormulario.BorderRadius = 55;
+            this.pnlFondoFormulario.BorderThickness = 1;
+            this.pnlFondoFormulario.Controls.Add(this.lblRecuerdame);
+            this.pnlFondoFormulario.Controls.Add(this.cbRecuerdame);
+            this.pnlFondoFormulario.Controls.Add(this.btnOlvidarContrasena);
+            this.pnlFondoFormulario.Controls.Add(this.bunifuShadowPanel2);
+            this.pnlFondoFormulario.Controls.Add(this.bunifuShadowPanel3);
+            this.pnlFondoFormulario.Controls.Add(this.btnSalir);
+            this.pnlFondoFormulario.Controls.Add(this.bunifuShadowPanel1);
+            this.pnlFondoFormulario.Controls.Add(this.lblBienvenido);
+            this.pnlFondoFormulario.Location = new System.Drawing.Point(520, 0);
+            this.pnlFondoFormulario.Name = "pnlFondoFormulario";
+            this.pnlFondoFormulario.ShowBorders = true;
+            this.pnlFondoFormulario.Size = new System.Drawing.Size(710, 729);
+            this.pnlFondoFormulario.TabIndex = 0;
             // 
             // lblRecuerdame
             // 
             this.lblRecuerdame.AllowParentOverrides = false;
-            this.lblRecuerdame.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblRecuerdame.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblRecuerdame.AutoEllipsis = false;
             this.lblRecuerdame.Cursor = System.Windows.Forms.Cursors.Default;
             this.lblRecuerdame.CursorType = System.Windows.Forms.Cursors.Default;
@@ -135,7 +137,7 @@
             this.lblRecuerdame.Location = new System.Drawing.Point(169, 444);
             this.lblRecuerdame.Name = "lblRecuerdame";
             this.lblRecuerdame.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblRecuerdame.Size = new System.Drawing.Size(210, 40);
+            this.lblRecuerdame.Size = new System.Drawing.Size(121, 22);
             this.lblRecuerdame.TabIndex = 184;
             this.lblRecuerdame.Text = "Recuerdame";
             this.lblRecuerdame.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -149,7 +151,7 @@
             this.cbRecuerdame.AllowCheckBoxAnimation = false;
             this.cbRecuerdame.AllowCheckmarkAnimation = true;
             this.cbRecuerdame.AllowOnHoverStates = true;
-            this.cbRecuerdame.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cbRecuerdame.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cbRecuerdame.AutoCheck = true;
             this.cbRecuerdame.BackColor = System.Drawing.Color.Transparent;
             this.cbRecuerdame.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cbRecuerdame.BackgroundImage")));
@@ -200,7 +202,7 @@
             this.btnOlvidarContrasena.AllowAnimations = true;
             this.btnOlvidarContrasena.AllowMouseEffects = true;
             this.btnOlvidarContrasena.AllowToggling = false;
-            this.btnOlvidarContrasena.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnOlvidarContrasena.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnOlvidarContrasena.AnimationSpeed = 200;
             this.btnOlvidarContrasena.AutoGenerateColors = false;
             this.btnOlvidarContrasena.AutoRoundBorders = false;
@@ -287,12 +289,12 @@
             // 
             // bunifuShadowPanel2
             // 
-            this.bunifuShadowPanel2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bunifuShadowPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.bunifuShadowPanel2.BackColor = System.Drawing.Color.Transparent;
             this.bunifuShadowPanel2.BorderColor = System.Drawing.Color.Transparent;
             this.bunifuShadowPanel2.BorderRadius = 30;
             this.bunifuShadowPanel2.BorderThickness = 1;
-            this.bunifuShadowPanel2.Controls.Add(this.bunifuGradientPanel3);
+            this.bunifuShadowPanel2.Controls.Add(this.pnlGradienteBoton);
             this.bunifuShadowPanel2.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
             this.bunifuShadowPanel2.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
             this.bunifuShadowPanel2.Location = new System.Drawing.Point(391, 543);
@@ -308,22 +310,22 @@
             this.bunifuShadowPanel2.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
             this.bunifuShadowPanel2.TabIndex = 14;
             // 
-            // bunifuGradientPanel3
+            // pnlGradienteBoton
             // 
-            this.bunifuGradientPanel3.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuGradientPanel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel3.BackgroundImage")));
-            this.bunifuGradientPanel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuGradientPanel3.BorderRadius = 60;
-            this.bunifuGradientPanel3.Controls.Add(this.btnIniciarSesion);
-            this.bunifuGradientPanel3.GradientBottomLeft = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(94)))), ((int)(((byte)(255)))));
-            this.bunifuGradientPanel3.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(173)))), ((int)(((byte)(220)))));
-            this.bunifuGradientPanel3.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(93)))), ((int)(((byte)(254)))));
-            this.bunifuGradientPanel3.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(173)))), ((int)(((byte)(220)))));
-            this.bunifuGradientPanel3.Location = new System.Drawing.Point(2, 1);
-            this.bunifuGradientPanel3.Name = "bunifuGradientPanel3";
-            this.bunifuGradientPanel3.Quality = 10;
-            this.bunifuGradientPanel3.Size = new System.Drawing.Size(223, 60);
-            this.bunifuGradientPanel3.TabIndex = 12;
+            this.pnlGradienteBoton.BackColor = System.Drawing.Color.Transparent;
+            this.pnlGradienteBoton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlGradienteBoton.BackgroundImage")));
+            this.pnlGradienteBoton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnlGradienteBoton.BorderRadius = 60;
+            this.pnlGradienteBoton.Controls.Add(this.btnIniciarSesion);
+            this.pnlGradienteBoton.GradientBottomLeft = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(94)))), ((int)(((byte)(255)))));
+            this.pnlGradienteBoton.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(173)))), ((int)(((byte)(220)))));
+            this.pnlGradienteBoton.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(93)))), ((int)(((byte)(254)))));
+            this.pnlGradienteBoton.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(173)))), ((int)(((byte)(220)))));
+            this.pnlGradienteBoton.Location = new System.Drawing.Point(2, 1);
+            this.pnlGradienteBoton.Name = "pnlGradienteBoton";
+            this.pnlGradienteBoton.Quality = 10;
+            this.pnlGradienteBoton.Size = new System.Drawing.Size(223, 60);
+            this.pnlGradienteBoton.TabIndex = 12;
             // 
             // btnIniciarSesion
             // 
@@ -417,7 +419,7 @@
             // 
             // bunifuShadowPanel3
             // 
-            this.bunifuShadowPanel3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bunifuShadowPanel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.bunifuShadowPanel3.BackColor = System.Drawing.Color.Transparent;
             this.bunifuShadowPanel3.BorderColor = System.Drawing.Color.Transparent;
             this.bunifuShadowPanel3.BorderRadius = 40;
@@ -518,7 +520,7 @@
             // btnSalir
             // 
             this.btnSalir.AllowFocused = false;
-            this.btnSalir.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSalir.AutoSizeHeight = true;
             this.btnSalir.BorderRadius = 0;
             this.btnSalir.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -535,7 +537,7 @@
             // 
             // bunifuShadowPanel1
             // 
-            this.bunifuShadowPanel1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bunifuShadowPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.bunifuShadowPanel1.BackColor = System.Drawing.Color.Transparent;
             this.bunifuShadowPanel1.BorderColor = System.Drawing.Color.Transparent;
             this.bunifuShadowPanel1.BorderRadius = 40;
@@ -560,7 +562,7 @@
             // 
             this.txtContraseña.AcceptsReturn = false;
             this.txtContraseña.AcceptsTab = false;
-            this.txtContraseña.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtContraseña.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtContraseña.AnimationSpeed = 200;
             this.txtContraseña.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
             this.txtContraseña.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
@@ -636,7 +638,7 @@
             // lblBienvenido
             // 
             this.lblBienvenido.AllowParentOverrides = false;
-            this.lblBienvenido.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblBienvenido.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblBienvenido.AutoEllipsis = false;
             this.lblBienvenido.Cursor = System.Windows.Forms.Cursors.Default;
             this.lblBienvenido.CursorType = System.Windows.Forms.Cursors.Default;
@@ -644,7 +646,7 @@
             this.lblBienvenido.Location = new System.Drawing.Point(269, 123);
             this.lblBienvenido.Name = "lblBienvenido";
             this.lblBienvenido.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblBienvenido.Size = new System.Drawing.Size(179, 40);
+            this.lblBienvenido.Size = new System.Drawing.Size(234, 52);
             this.lblBienvenido.TabIndex = 13;
             this.lblBienvenido.Text = "Bienvenido";
             this.lblBienvenido.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -681,10 +683,10 @@
             this.Text = "Login";
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).EndInit();
             this.bunifuGradientPanel1.ResumeLayout(false);
-            this.bunifuPanel2.ResumeLayout(false);
-            this.bunifuPanel2.PerformLayout();
+            this.pnlFondoFormulario.ResumeLayout(false);
+            this.pnlFondoFormulario.PerformLayout();
             this.bunifuShadowPanel2.ResumeLayout(false);
-            this.bunifuGradientPanel3.ResumeLayout(false);
+            this.pnlGradienteBoton.ResumeLayout(false);
             this.bunifuShadowPanel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).EndInit();
             this.bunifuShadowPanel1.ResumeLayout(false);
@@ -697,7 +699,7 @@
 
         private Bunifu.UI.WinForms.BunifuPictureBox bunifuPictureBox1;
         private Bunifu.UI.WinForms.BunifuGradientPanel bunifuGradientPanel1;
-        private Bunifu.UI.WinForms.BunifuPanel bunifuPanel2;
+        private Bunifu.UI.WinForms.BunifuPanel pnlFondoFormulario;
         public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnOlvidarContrasena;
         public Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel2;
         public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnIniciarSesion;
@@ -708,7 +710,7 @@
         private Bunifu.UI.WinForms.BunifuPanel bunifuPanel1;
         public Bunifu.UI.WinForms.BunifuLabel lblRecuerdame;
         public Bunifu.UI.WinForms.BunifuCheckBox cbRecuerdame;
-        public Bunifu.UI.WinForms.BunifuGradientPanel bunifuGradientPanel3;
+        public Bunifu.UI.WinForms.BunifuGradientPanel pnlGradienteBoton;
         public Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel3;
         public Bunifu.UI.WinForms.BunifuLabel lblBienvenido;
     }

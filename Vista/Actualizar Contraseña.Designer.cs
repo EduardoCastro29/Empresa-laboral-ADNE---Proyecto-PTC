@@ -296,16 +296,16 @@
             this.bunifuGradientPanel3.BackColor = System.Drawing.Color.Transparent;
             this.bunifuGradientPanel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel3.BackgroundImage")));
             this.bunifuGradientPanel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuGradientPanel3.BorderRadius = 12;
+            this.bunifuGradientPanel3.BorderRadius = 15;
             this.bunifuGradientPanel3.Controls.Add(this.btnActualizarContrasena);
             this.bunifuGradientPanel3.GradientBottomLeft = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(163)))), ((int)(((byte)(170)))));
             this.bunifuGradientPanel3.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(181)))), ((int)(((byte)(166)))));
             this.bunifuGradientPanel3.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(164)))), ((int)(((byte)(171)))));
             this.bunifuGradientPanel3.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(164)))), ((int)(((byte)(171)))));
-            this.bunifuGradientPanel3.Location = new System.Drawing.Point(678, 376);
+            this.bunifuGradientPanel3.Location = new System.Drawing.Point(668, 372);
             this.bunifuGradientPanel3.Name = "bunifuGradientPanel3";
             this.bunifuGradientPanel3.Quality = 10;
-            this.bunifuGradientPanel3.Size = new System.Drawing.Size(276, 56);
+            this.bunifuGradientPanel3.Size = new System.Drawing.Size(286, 60);
             this.bunifuGradientPanel3.TabIndex = 9;
             // 
             // btnActualizarContrasena
@@ -390,7 +390,7 @@
             this.btnActualizarContrasena.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btnActualizarContrasena.OnPressedState.IconLeftImage = null;
             this.btnActualizarContrasena.OnPressedState.IconRightImage = null;
-            this.btnActualizarContrasena.Size = new System.Drawing.Size(276, 56);
+            this.btnActualizarContrasena.Size = new System.Drawing.Size(286, 60);
             this.btnActualizarContrasena.TabIndex = 0;
             this.btnActualizarContrasena.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnActualizarContrasena.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -417,7 +417,7 @@
             this.lblConfirmarContrasena.Location = new System.Drawing.Point(51, 255);
             this.lblConfirmarContrasena.Name = "lblConfirmarContrasena";
             this.lblConfirmarContrasena.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblConfirmarContrasena.Size = new System.Drawing.Size(390, 40);
+            this.lblConfirmarContrasena.Size = new System.Drawing.Size(223, 22);
             this.lblConfirmarContrasena.TabIndex = 7;
             this.lblConfirmarContrasena.Text = "Confirme su contraseña:";
             this.lblConfirmarContrasena.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -433,7 +433,7 @@
             this.lblNuevaContrasena.Location = new System.Drawing.Point(51, 136);
             this.lblNuevaContrasena.Name = "lblNuevaContrasena";
             this.lblNuevaContrasena.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblNuevaContrasena.Size = new System.Drawing.Size(470, 40);
+            this.lblNuevaContrasena.Size = new System.Drawing.Size(274, 22);
             this.lblNuevaContrasena.TabIndex = 6;
             this.lblNuevaContrasena.Text = "Ingrese su nueva contraseña:";
             this.lblNuevaContrasena.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -488,7 +488,7 @@
             this.lblRestablecer.Location = new System.Drawing.Point(31, 28);
             this.lblRestablecer.Name = "lblRestablecer";
             this.lblRestablecer.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblRestablecer.Size = new System.Drawing.Size(381, 40);
+            this.lblRestablecer.Size = new System.Drawing.Size(313, 33);
             this.lblRestablecer.TabIndex = 1;
             this.lblRestablecer.Text = "Restablecer contraseña";
             this.lblRestablecer.TextAlignment = System.Drawing.ContentAlignment.TopLeft;

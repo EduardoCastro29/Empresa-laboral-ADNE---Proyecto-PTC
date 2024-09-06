@@ -49,6 +49,7 @@
             this.pnlSombreBoton = new Bunifu.UI.WinForms.BunifuShadowPanel();
             this.btnAñadirProfesional = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.dgvAdministrarProfesional = new Bunifu.UI.WinForms.BunifuDataGridView();
+            this.btnSalir = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.cmsOpciones.SuspendLayout();
             this.pnlFondo.SuspendLayout();
             this.pnlSombraFondo.SuspendLayout();
@@ -56,6 +57,7 @@
             this.pnlSombraBuscar.SuspendLayout();
             this.pnlSombreBoton.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAdministrarProfesional)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).BeginInit();
             this.SuspendLayout();
             // 
             // cmsOpciones
@@ -126,6 +128,7 @@
             this.pnlForms.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlForms.BackgroundImage")));
             this.pnlForms.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pnlForms.BorderRadius = 60;
+            this.pnlForms.Controls.Add(this.btnSalir);
             this.pnlForms.Controls.Add(this.pnlSombraBuscar);
             this.pnlForms.Controls.Add(this.pnlSombreBoton);
             this.pnlForms.Controls.Add(this.dgvAdministrarProfesional);
@@ -152,7 +155,7 @@
             this.pnlSombraBuscar.BorderRadius = 60;
             this.pnlSombraBuscar.BorderThickness = 1;
             this.pnlSombraBuscar.Controls.Add(this.txtBuscarEmpleado);
-            this.pnlSombraBuscar.Location = new System.Drawing.Point(126, 50);
+            this.pnlSombraBuscar.Location = new System.Drawing.Point(124, 58);
             this.pnlSombraBuscar.Name = "pnlSombraBuscar";
             this.pnlSombraBuscar.Padding = new System.Windows.Forms.Padding(5, 2, 1, 6);
             this.pnlSombraBuscar.ShowBorders = true;
@@ -246,7 +249,7 @@
             this.pnlSombreBoton.Controls.Add(this.btnAñadirProfesional);
             this.pnlSombreBoton.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
             this.pnlSombreBoton.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
-            this.pnlSombreBoton.Location = new System.Drawing.Point(720, 53);
+            this.pnlSombreBoton.Location = new System.Drawing.Point(697, 61);
             this.pnlSombreBoton.Name = "pnlSombreBoton";
             this.pnlSombreBoton.Padding = new System.Windows.Forms.Padding(0, 0, 3, 4);
             this.pnlSombreBoton.PanelColor = System.Drawing.Color.Transparent;
@@ -256,7 +259,7 @@
             this.pnlSombreBoton.ShadowDepth = 10;
             this.pnlSombreBoton.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Surrounded;
             this.pnlSombreBoton.ShadowTopLeftVisible = false;
-            this.pnlSombreBoton.Size = new System.Drawing.Size(200, 65);
+            this.pnlSombreBoton.Size = new System.Drawing.Size(185, 65);
             this.pnlSombreBoton.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
             this.pnlSombreBoton.TabIndex = 101;
             // 
@@ -271,7 +274,7 @@
             this.btnAñadirProfesional.AutoSizeLeftIcon = true;
             this.btnAñadirProfesional.AutoSizeRightIcon = true;
             this.btnAñadirProfesional.BackColor = System.Drawing.Color.Transparent;
-            this.btnAñadirProfesional.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(189)))), ((int)(((byte)(152)))));
+            this.btnAñadirProfesional.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(172)))), ((int)(((byte)(158)))));
             this.btnAñadirProfesional.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAñadirProfesional.BackgroundImage")));
             this.btnAñadirProfesional.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.btnAñadirProfesional.ButtonText = "Añadir";
@@ -304,7 +307,7 @@
             this.btnAñadirProfesional.IdleBorderColor = System.Drawing.Color.Transparent;
             this.btnAñadirProfesional.IdleBorderRadius = 25;
             this.btnAñadirProfesional.IdleBorderThickness = 1;
-            this.btnAñadirProfesional.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(189)))), ((int)(((byte)(152)))));
+            this.btnAñadirProfesional.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(172)))), ((int)(((byte)(158)))));
             this.btnAñadirProfesional.IdleIconLeftImage = null;
             this.btnAñadirProfesional.IdleIconRightImage = null;
             this.btnAñadirProfesional.IndicateFocus = false;
@@ -322,7 +325,7 @@
             this.btnAñadirProfesional.onHoverState.BorderRadius = 25;
             this.btnAñadirProfesional.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.btnAñadirProfesional.onHoverState.BorderThickness = 1;
-            this.btnAñadirProfesional.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(2)))), ((int)(((byte)(161)))), ((int)(((byte)(104)))));
+            this.btnAñadirProfesional.onHoverState.FillColor = System.Drawing.Color.LightSeaGreen;
             this.btnAñadirProfesional.onHoverState.ForeColor = System.Drawing.Color.White;
             this.btnAñadirProfesional.onHoverState.IconLeftImage = null;
             this.btnAñadirProfesional.onHoverState.IconRightImage = null;
@@ -330,7 +333,7 @@
             this.btnAñadirProfesional.OnIdleState.BorderRadius = 25;
             this.btnAñadirProfesional.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.btnAñadirProfesional.OnIdleState.BorderThickness = 1;
-            this.btnAñadirProfesional.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(189)))), ((int)(((byte)(152)))));
+            this.btnAñadirProfesional.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(172)))), ((int)(((byte)(158)))));
             this.btnAñadirProfesional.OnIdleState.ForeColor = System.Drawing.Color.White;
             this.btnAñadirProfesional.OnIdleState.IconLeftImage = null;
             this.btnAñadirProfesional.OnIdleState.IconRightImage = null;
@@ -338,11 +341,11 @@
             this.btnAñadirProfesional.OnPressedState.BorderRadius = 25;
             this.btnAñadirProfesional.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.btnAñadirProfesional.OnPressedState.BorderThickness = 1;
-            this.btnAñadirProfesional.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(2)))), ((int)(((byte)(161)))), ((int)(((byte)(104)))));
+            this.btnAñadirProfesional.OnPressedState.FillColor = System.Drawing.Color.Teal;
             this.btnAñadirProfesional.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btnAñadirProfesional.OnPressedState.IconLeftImage = null;
             this.btnAñadirProfesional.OnPressedState.IconRightImage = null;
-            this.btnAñadirProfesional.Size = new System.Drawing.Size(197, 61);
+            this.btnAñadirProfesional.Size = new System.Drawing.Size(182, 61);
             this.btnAñadirProfesional.TabIndex = 3;
             this.btnAñadirProfesional.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnAñadirProfesional.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -419,6 +422,23 @@
             this.dgvAdministrarProfesional.TabIndex = 100;
             this.dgvAdministrarProfesional.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Teal;
             // 
+            // btnSalir
+            // 
+            this.btnSalir.AllowFocused = false;
+            this.btnSalir.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnSalir.AutoSizeHeight = true;
+            this.btnSalir.BorderRadius = 0;
+            this.btnSalir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSalir.Image = global::Empresa_laboral_ADNE___Proyecto_PTC.Properties.Resources.Cerrar_Login;
+            this.btnSalir.IsCircle = true;
+            this.btnSalir.Location = new System.Drawing.Point(931, 23);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(27, 27);
+            this.btnSalir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnSalir.TabIndex = 103;
+            this.btnSalir.TabStop = false;
+            this.btnSalir.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Square;
+            // 
             // AdministradorForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -438,6 +458,7 @@
             this.pnlSombraBuscar.ResumeLayout(false);
             this.pnlSombreBoton.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAdministrarProfesional)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -454,5 +475,6 @@
         public Bunifu.UI.WinForms.BunifuShadowPanel pnlSombreBoton;
         public Bunifu.UI.WinForms.BunifuPanel pnlSombraBuscar;
         public Bunifu.UI.WinForms.BunifuTextBox txtBuscarEmpleado;
+        public Bunifu.UI.WinForms.BunifuPictureBox btnSalir;
     }
 }

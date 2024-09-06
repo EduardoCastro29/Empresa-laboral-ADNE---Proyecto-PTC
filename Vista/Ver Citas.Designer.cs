@@ -47,12 +47,14 @@
             this.pnlSombraBuscar = new Bunifu.UI.WinForms.BunifuPanel();
             this.txtBuscar = new Bunifu.UI.WinForms.BunifuTextBox();
             this.dgvCitasAgendadas = new Bunifu.UI.WinForms.BunifuDataGridView();
+            this.btnSalir = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.cmsOpciones.SuspendLayout();
             this.pnlFondo.SuspendLayout();
             this.pnlSombraFondo.SuspendLayout();
             this.pnlForms.SuspendLayout();
             this.pnlSombraBuscar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCitasAgendadas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).BeginInit();
             this.SuspendLayout();
             // 
             // cmsOpciones
@@ -131,6 +133,7 @@
             this.pnlForms.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlForms.BackgroundImage")));
             this.pnlForms.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pnlForms.BorderRadius = 60;
+            this.pnlForms.Controls.Add(this.btnSalir);
             this.pnlForms.Controls.Add(this.pnlSombraBuscar);
             this.pnlForms.Controls.Add(this.dgvCitasAgendadas);
             this.pnlForms.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -156,7 +159,7 @@
             this.pnlSombraBuscar.BorderRadius = 60;
             this.pnlSombraBuscar.BorderThickness = 1;
             this.pnlSombraBuscar.Controls.Add(this.txtBuscar);
-            this.pnlSombraBuscar.Location = new System.Drawing.Point(156, 40);
+            this.pnlSombraBuscar.Location = new System.Drawing.Point(153, 57);
             this.pnlSombraBuscar.Name = "pnlSombraBuscar";
             this.pnlSombraBuscar.Padding = new System.Windows.Forms.Padding(5, 2, 1, 6);
             this.pnlSombraBuscar.ShowBorders = true;
@@ -244,6 +247,8 @@
             // 
             this.dgvCitasAgendadas.AllowCustomTheming = false;
             this.dgvCitasAgendadas.AllowUserToAddRows = false;
+            this.dgvCitasAgendadas.AllowUserToResizeColumns = false;
+            this.dgvCitasAgendadas.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(223)))), ((int)(((byte)(223)))));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
             this.dgvCitasAgendadas.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
@@ -296,15 +301,32 @@
             this.dgvCitasAgendadas.HeaderBackColor = System.Drawing.Color.Teal;
             this.dgvCitasAgendadas.HeaderBgColor = System.Drawing.Color.Empty;
             this.dgvCitasAgendadas.HeaderForeColor = System.Drawing.Color.White;
-            this.dgvCitasAgendadas.Location = new System.Drawing.Point(28, 155);
+            this.dgvCitasAgendadas.Location = new System.Drawing.Point(28, 165);
             this.dgvCitasAgendadas.Name = "dgvCitasAgendadas";
             this.dgvCitasAgendadas.ReadOnly = true;
             this.dgvCitasAgendadas.RowHeadersVisible = false;
             this.dgvCitasAgendadas.RowTemplate.Height = 40;
             this.dgvCitasAgendadas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvCitasAgendadas.Size = new System.Drawing.Size(931, 518);
+            this.dgvCitasAgendadas.Size = new System.Drawing.Size(931, 497);
             this.dgvCitasAgendadas.TabIndex = 100;
             this.dgvCitasAgendadas.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Teal;
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.AllowFocused = false;
+            this.btnSalir.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnSalir.AutoSizeHeight = true;
+            this.btnSalir.BorderRadius = 0;
+            this.btnSalir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSalir.Image = global::Empresa_laboral_ADNE___Proyecto_PTC.Properties.Resources.Cerrar_Login;
+            this.btnSalir.IsCircle = true;
+            this.btnSalir.Location = new System.Drawing.Point(934, 24);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(27, 27);
+            this.btnSalir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnSalir.TabIndex = 103;
+            this.btnSalir.TabStop = false;
+            this.btnSalir.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Square;
             // 
             // VerCitasForm
             // 
@@ -324,6 +346,7 @@
             this.pnlForms.ResumeLayout(false);
             this.pnlSombraBuscar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCitasAgendadas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -339,5 +362,6 @@
         public Bunifu.UI.WinForms.BunifuDataGridView dgvCitasAgendadas;
         public Bunifu.UI.WinForms.BunifuPanel pnlSombraBuscar;
         public Bunifu.UI.WinForms.BunifuTextBox txtBuscar;
+        public Bunifu.UI.WinForms.BunifuPictureBox btnSalir;
     }
 }
