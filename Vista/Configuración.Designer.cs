@@ -274,10 +274,10 @@
             this.lblAcercaDe.CursorType = System.Windows.Forms.Cursors.Default;
             this.lblAcercaDe.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAcercaDe.ForeColor = System.Drawing.Color.White;
-            this.lblAcercaDe.Location = new System.Drawing.Point(60, 21);
+            this.lblAcercaDe.Location = new System.Drawing.Point(30, 23);
             this.lblAcercaDe.Name = "lblAcercaDe";
             this.lblAcercaDe.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblAcercaDe.Size = new System.Drawing.Size(522, 117);
+            this.lblAcercaDe.Size = new System.Drawing.Size(152, 36);
             this.lblAcercaDe.TabIndex = 9;
             this.lblAcercaDe.Text = "Acerca de";
             this.lblAcercaDe.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -335,12 +335,12 @@
             this.switchModo.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(192)))), ((int)(((byte)(175)))));
             this.switchModo.CheckedSwitchColor = System.Drawing.Color.White;
             this.switchModo.CheckedSwitchStyle = Bunifu.UI.WinForms.BunifuToggleSwitch2.SwitchStyles.Fill;
-            this.switchModo.Location = new System.Drawing.Point(808, 99);
+            this.switchModo.Location = new System.Drawing.Point(828, 108);
             this.switchModo.Margin = new System.Windows.Forms.Padding(3, 3, 40, 3);
             this.switchModo.MaximumSize = new System.Drawing.Size(110, 50);
             this.switchModo.Name = "switchModo";
             this.switchModo.OutlineThickness = 2;
-            this.switchModo.Size = new System.Drawing.Size(110, 50);
+            this.switchModo.Size = new System.Drawing.Size(80, 35);
             this.switchModo.TabIndex = 13;
             this.switchModo.UncheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(92)))), ((int)(((byte)(98)))));
             this.switchModo.UncheckedSwitchColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(213)))), ((int)(((byte)(213)))));
@@ -352,12 +352,12 @@
             this.lblPerosnalizacionModo.AutoEllipsis = false;
             this.lblPerosnalizacionModo.Cursor = System.Windows.Forms.Cursors.Default;
             this.lblPerosnalizacionModo.CursorType = System.Windows.Forms.Cursors.Default;
-            this.lblPerosnalizacionModo.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPerosnalizacionModo.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPerosnalizacionModo.ForeColor = System.Drawing.Color.White;
             this.lblPerosnalizacionModo.Location = new System.Drawing.Point(60, 108);
             this.lblPerosnalizacionModo.Name = "lblPerosnalizacionModo";
             this.lblPerosnalizacionModo.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblPerosnalizacionModo.Size = new System.Drawing.Size(488, 39);
+            this.lblPerosnalizacionModo.Size = new System.Drawing.Size(402, 33);
             this.lblPerosnalizacionModo.TabIndex = 12;
             this.lblPerosnalizacionModo.Text = "Cambiar tema a modo oscuro";
             this.lblPerosnalizacionModo.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -371,10 +371,10 @@
             this.lblPersonalizacion.CursorType = System.Windows.Forms.Cursors.Default;
             this.lblPersonalizacion.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPersonalizacion.ForeColor = System.Drawing.Color.White;
-            this.lblPersonalizacion.Location = new System.Drawing.Point(60, 23);
+            this.lblPersonalizacion.Location = new System.Drawing.Point(28, 22);
             this.lblPersonalizacion.Name = "lblPersonalizacion";
             this.lblPersonalizacion.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblPersonalizacion.Size = new System.Drawing.Size(758, 117);
+            this.lblPersonalizacion.Size = new System.Drawing.Size(220, 36);
             this.lblPersonalizacion.TabIndex = 9;
             this.lblPersonalizacion.Text = "Personalización";
             this.lblPersonalizacion.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -442,7 +442,7 @@
             this.btnCerrarSesion.AutoSizeLeftIcon = true;
             this.btnCerrarSesion.AutoSizeRightIcon = true;
             this.btnCerrarSesion.BackColor = System.Drawing.Color.Transparent;
-            this.btnCerrarSesion.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(147)))), ((int)(((byte)(142)))));
+            this.btnCerrarSesion.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(174)))), ((int)(((byte)(147)))), ((int)(((byte)(142)))));
             this.btnCerrarSesion.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCerrarSesion.BackgroundImage")));
             this.btnCerrarSesion.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.btnCerrarSesion.ButtonText = "Cerrar sesión";
@@ -471,14 +471,14 @@
             this.btnCerrarSesion.IconRightCursor = System.Windows.Forms.Cursors.Default;
             this.btnCerrarSesion.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
             this.btnCerrarSesion.IconSize = 20;
-            this.btnCerrarSesion.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(147)))), ((int)(((byte)(142)))));
+            this.btnCerrarSesion.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(174)))), ((int)(((byte)(147)))), ((int)(((byte)(142)))));
             this.btnCerrarSesion.IdleBorderRadius = 25;
             this.btnCerrarSesion.IdleBorderThickness = 1;
-            this.btnCerrarSesion.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(147)))), ((int)(((byte)(142)))));
+            this.btnCerrarSesion.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(174)))), ((int)(((byte)(147)))), ((int)(((byte)(142)))));
             this.btnCerrarSesion.IdleIconLeftImage = global::Empresa_laboral_ADNE___Proyecto_PTC.Properties.Resources.Cerrar_sesion_confg;
             this.btnCerrarSesion.IdleIconRightImage = null;
             this.btnCerrarSesion.IndicateFocus = false;
-            this.btnCerrarSesion.Location = new System.Drawing.Point(688, 292);
+            this.btnCerrarSesion.Location = new System.Drawing.Point(676, 294);
             this.btnCerrarSesion.MaximumSize = new System.Drawing.Size(232, 48);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
             this.btnCerrarSesion.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
@@ -497,11 +497,11 @@
             this.btnCerrarSesion.onHoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
             this.btnCerrarSesion.onHoverState.IconLeftImage = null;
             this.btnCerrarSesion.onHoverState.IconRightImage = null;
-            this.btnCerrarSesion.OnIdleState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(147)))), ((int)(((byte)(142)))));
+            this.btnCerrarSesion.OnIdleState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(174)))), ((int)(((byte)(147)))), ((int)(((byte)(142)))));
             this.btnCerrarSesion.OnIdleState.BorderRadius = 25;
             this.btnCerrarSesion.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.btnCerrarSesion.OnIdleState.BorderThickness = 1;
-            this.btnCerrarSesion.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(147)))), ((int)(((byte)(142)))));
+            this.btnCerrarSesion.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(174)))), ((int)(((byte)(147)))), ((int)(((byte)(142)))));
             this.btnCerrarSesion.OnIdleState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
             this.btnCerrarSesion.OnIdleState.IconLeftImage = global::Empresa_laboral_ADNE___Proyecto_PTC.Properties.Resources.Cerrar_sesion_confg;
             this.btnCerrarSesion.OnIdleState.IconRightImage = null;
@@ -526,14 +526,14 @@
             this.lblDUI.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblDUI.AutoSize = true;
-            this.lblDUI.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDUI.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDUI.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.lblDUI.Location = new System.Drawing.Point(348, 256);
+            this.lblDUI.Location = new System.Drawing.Point(642, 214);
             this.lblDUI.Margin = new System.Windows.Forms.Padding(20, 0, 3, 20);
             this.lblDUI.Name = "lblDUI";
-            this.lblDUI.Size = new System.Drawing.Size(121, 24);
+            this.lblDUI.Size = new System.Drawing.Size(125, 24);
             this.lblDUI.TabIndex = 17;
-            this.lblDUI.Text = "#12334567";
+            this.lblDUI.Text = "12345678-9";
             // 
             // lblDUIIdentificacion
             // 
@@ -542,12 +542,12 @@
             this.lblDUIIdentificacion.AutoSize = true;
             this.lblDUIIdentificacion.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDUIIdentificacion.ForeColor = System.Drawing.Color.White;
-            this.lblDUIIdentificacion.Location = new System.Drawing.Point(348, 212);
+            this.lblDUIIdentificacion.Location = new System.Drawing.Point(329, 213);
             this.lblDUIIdentificacion.Margin = new System.Windows.Forms.Padding(20, 0, 3, 20);
             this.lblDUIIdentificacion.Name = "lblDUIIdentificacion";
-            this.lblDUIIdentificacion.Size = new System.Drawing.Size(225, 25);
+            this.lblDUIIdentificacion.Size = new System.Drawing.Size(315, 25);
             this.lblDUIIdentificacion.TabIndex = 16;
-            this.lblDUIIdentificacion.Text = "DUI de Identificación";
+            this.lblDUIIdentificacion.Text = "Documento de Identificación:";
             // 
             // lblCorreoUsuario
             // 
@@ -556,12 +556,12 @@
             this.lblCorreoUsuario.AutoSize = true;
             this.lblCorreoUsuario.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCorreoUsuario.ForeColor = System.Drawing.Color.White;
-            this.lblCorreoUsuario.Location = new System.Drawing.Point(348, 168);
+            this.lblCorreoUsuario.Location = new System.Drawing.Point(329, 169);
             this.lblCorreoUsuario.Margin = new System.Windows.Forms.Padding(20, 0, 3, 20);
             this.lblCorreoUsuario.Name = "lblCorreoUsuario";
-            this.lblCorreoUsuario.Size = new System.Drawing.Size(192, 24);
+            this.lblCorreoUsuario.Size = new System.Drawing.Size(64, 24);
             this.lblCorreoUsuario.TabIndex = 15;
-            this.lblCorreoUsuario.Text = "Correo de usuario";
+            this.lblCorreoUsuario.Text = "Email";
             // 
             // lblUsuario
             // 
@@ -570,7 +570,7 @@
             this.lblUsuario.AutoSize = true;
             this.lblUsuario.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsuario.ForeColor = System.Drawing.Color.White;
-            this.lblUsuario.Location = new System.Drawing.Point(348, 124);
+            this.lblUsuario.Location = new System.Drawing.Point(329, 125);
             this.lblUsuario.Margin = new System.Windows.Forms.Padding(20, 0, 3, 20);
             this.lblUsuario.Name = "lblUsuario";
             this.lblUsuario.Size = new System.Drawing.Size(81, 24);
@@ -584,7 +584,7 @@
             this.lblNomprePersona.AutoSize = true;
             this.lblNomprePersona.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNomprePersona.ForeColor = System.Drawing.Color.White;
-            this.lblNomprePersona.Location = new System.Drawing.Point(348, 80);
+            this.lblNomprePersona.Location = new System.Drawing.Point(329, 81);
             this.lblNomprePersona.Margin = new System.Windows.Forms.Padding(20, 0, 3, 20);
             this.lblNomprePersona.Name = "lblNomprePersona";
             this.lblNomprePersona.Size = new System.Drawing.Size(241, 24);
@@ -595,16 +595,16 @@
             // 
             this.lblRolUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblRolUsuario.AutoSize = true;
-            this.lblRolUsuario.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRolUsuario.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRolUsuario.ForeColor = System.Drawing.Color.White;
-            this.lblRolUsuario.Location = new System.Drawing.Point(518, 0);
+            this.lblRolUsuario.Location = new System.Drawing.Point(330, 233);
             this.lblRolUsuario.Margin = new System.Windows.Forms.Padding(3, 10, 3, 0);
             this.lblRolUsuario.Name = "lblRolUsuario";
             this.lblRolUsuario.Padding = new System.Windows.Forms.Padding(0, 20, 10, 0);
-            this.lblRolUsuario.Size = new System.Drawing.Size(416, 48);
+            this.lblRolUsuario.Size = new System.Drawing.Size(474, 44);
             this.lblRolUsuario.TabIndex = 11;
-            this.lblRolUsuario.Text = "Profesional, Psicólogo, Terapeuta";
-            this.lblRolUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblRolUsuario.Text = "Profesional, Psicólogo, Terapeuta, Educador";
+            this.lblRolUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // picUsuario
             // 
@@ -612,17 +612,17 @@
             this.picUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.picUsuario.AutoSizeHeight = false;
-            this.picUsuario.BorderRadius = 136;
+            this.picUsuario.BorderRadius = 0;
             this.picUsuario.Image = global::Empresa_laboral_ADNE___Proyecto_PTC.Properties.Resources.Foto_configuración;
-            this.picUsuario.IsCircle = true;
-            this.picUsuario.Location = new System.Drawing.Point(17, 81);
+            this.picUsuario.IsCircle = false;
+            this.picUsuario.Location = new System.Drawing.Point(30, 81);
             this.picUsuario.Margin = new System.Windows.Forms.Padding(30, 3, 3, 3);
             this.picUsuario.Name = "picUsuario";
-            this.picUsuario.Size = new System.Drawing.Size(272, 272);
+            this.picUsuario.Size = new System.Drawing.Size(259, 259);
             this.picUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picUsuario.TabIndex = 10;
             this.picUsuario.TabStop = false;
-            this.picUsuario.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle;
+            this.picUsuario.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Custom;
             // 
             // lblCuenta
             // 
@@ -632,10 +632,10 @@
             this.lblCuenta.CursorType = System.Windows.Forms.Cursors.Default;
             this.lblCuenta.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCuenta.ForeColor = System.Drawing.Color.White;
-            this.lblCuenta.Location = new System.Drawing.Point(84, 21);
+            this.lblCuenta.Location = new System.Drawing.Point(28, 21);
             this.lblCuenta.Name = "lblCuenta";
             this.lblCuenta.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblCuenta.Size = new System.Drawing.Size(500, 117);
+            this.lblCuenta.Size = new System.Drawing.Size(145, 36);
             this.lblCuenta.TabIndex = 9;
             this.lblCuenta.Text = "Mi Cuenta";
             this.lblCuenta.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -669,13 +669,13 @@
             this.bunifuLabel5.Cursor = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel5.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel5.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.bunifuLabel5.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuLabel5.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuLabel5.ForeColor = System.Drawing.Color.White;
             this.bunifuLabel5.Location = new System.Drawing.Point(30, 30);
             this.bunifuLabel5.Margin = new System.Windows.Forms.Padding(30, 30, 3, 3);
             this.bunifuLabel5.Name = "bunifuLabel5";
             this.bunifuLabel5.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel5.Size = new System.Drawing.Size(690, 117);
+            this.bunifuLabel5.Size = new System.Drawing.Size(219, 38);
             this.bunifuLabel5.TabIndex = 3;
             this.bunifuLabel5.Text = "Configuración";
             this.bunifuLabel5.TextAlignment = System.Drawing.ContentAlignment.TopLeft;

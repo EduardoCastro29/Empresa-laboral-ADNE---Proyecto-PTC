@@ -566,7 +566,7 @@
     <value>#bunifu-label { padding: 0px; font-family: 'Century Gothic'; font-size: 18pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(255, 255, 255); text-align: left; }</value>
   </data>
   <data name="lblAcercaDe.BaseStylesheet" xml:space="preserve">
-    <value>#bunifu-label { padding: 0px; font-family: 'Century Gothic'; font-size: 21,75pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(255, 255, 255); text-align: left; }</value>
+    <value>#bunifu-label { padding: 0px; font-family: 'Century Gothic'; font-size: 21.75pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(255, 255, 255); text-align: left; }</value>
   </data>
   <data name="pnl2Section.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -908,10 +908,10 @@
 </value>
   </data>
   <data name="lblPerosnalizacionModo.BaseStylesheet" xml:space="preserve">
-    <value>#bunifu-label { padding: 0px; font-family: 'Century Gothic'; font-size: 20,25pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(255, 255, 255); text-align: left; }</value>
+    <value>#bunifu-label { padding: 0px; font-family: 'Century Gothic'; font-size: 20.25pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(255, 255, 255); text-align: left; }</value>
   </data>
   <data name="lblPersonalizacion.BaseStylesheet" xml:space="preserve">
-    <value>#bunifu-label { padding: 0px; font-family: 'Century Gothic'; font-size: 21,75pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(255, 255, 255); text-align: left; }</value>
+    <value>#bunifu-label { padding: 0px; font-family: 'Century Gothic'; font-size: 21.75pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(255, 255, 255); text-align: left; }</value>
   </data>
   <data name="pnl1Section.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1506,27 +1506,29 @@
   <data name="btnCerrarSesion.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAOgAAAAwCAYAAAAbxDY6AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJ7SURBVHhe7d2xixNBFMfxlFdeaemfYGnpXyBX3p8gdpaC
-        cK1IZpbMhisOjmAleJldG8HqwMoyhYVg4T9wHkkUPTDF+d5mFHKZyEWS7Cu+Dz5kycxsqh9vdheyndvU
-        MHQPqrI4q4IfNUp/DWBNf/NTnMXSHQ4GR3spYutXXRT7EszncsKZmMTcDwJY2zxLbiohvZLjk9f9F3dS
-        7G5Xsew+lMVjPUHuBwBsRuy5meRsGoN7nOL373oT/BNZeHnzRAC26rIu/WmKYb4IJ9Ae6aJXcjn5KsVx
-        sXRbK5MIJ9Ci2HfTYc89TbGcl16k6j44twDAbkkn/Vr3i3spnto9/YlerOYmA9gtaZb6ed6EU5/FcLcW
-        sMZ9r4virnRPd6jPZPKTALShaZp996wTg3+bmwCgZcGPOnLwaWkAQOti6S/0BtFFbhBA+7SDZgcAtI+A
-        AoYRUMAwAgoYRkABwwgoYBgBBQwjoIBhBBQwjIAChhFQwDACChhGQAHDCChgGAEFDCOggGEEFDCMgAKG
-        EVDAMAIKGEZAAcMIKGCYBJR/lQes0lc/fMkNAGibm+oW90MVcoMA2qTNUwP6KAb/4+YggPZIJmfD0C2a
-        l/dKByWggCHSPcex5+437wiVL87li+xEALvXbG//lL5uOwY3yU0EsGPBT2R7e5DiOS8J6LEMfMsuALAT
-        sq39VfV9lWK5WBLQ95VOyCwEsH116T8OBkd7KZKLpQMa0hi6P3OLAWzJvDF+rotiP8VxdUmKTyWo46WT
-        ANg8ueaUS8x3KztnruqyeCALR3q7Vz7zJwbw/6QJ6t3apRtC65Q+i5GOesyr8oHNmGep+1KbYIrZiup0
-        fgPIuZz1Ts+W9wAAAABJRU5ErkJggg==
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALhSURBVHhe7d27axRBHMDxhUAQrATBJmhlJ2olCDYqaRQE
+        CyGF2KUSC7H3GkHi7Uz2MRffBEIeZLNzZ2JickbNv+b89lYlYSI5ktxO8R34BJKb21RfZl8w0VGGTdOJ
+        0qh73UxNV4wyAIZU9yMtlaZ9qSiKsTqx4UfRao1/fatudHOlbR7bbq5/2VztCve3TQDD+dePtBR/6ZnZ
+        pExnbu/Nz5+pszva2HifXLRGK1f7jjvYlu+fATguvdXr6O+l0R07175S5/f/sd55c9WmatmV/s1/UAAn
+        yy2CRhWrSTxZZ+gfEqdM9B8EwKnK4m3bye7XOe4f1WmtWzm9XwQwEmWq1jc/zF6vsxwMuUiV82CuN4Gm
+        SYP609Lc63N1nlEkd5LkYtX/BQCjZHP9o8jbU1Wc8ixGbveyegLhKHP1ub/QPhvJA1N5JuObBKAZZR73
+        baauRTZRD90ffh6cAKA51QsNmZqO3Or5tMwU159AQHodve1Oc19G8kN+8U0C0CCjTFS9xOv7EECzCBQI
+        GIECASNQIGAECgSMQIGAESgQMAIFAkagQMAIFAgYgQIBI1AgYAQKBIxAgYARKBAwAgUCRqBAwAgUCBiB
+        AgEjUCBgBAoEjECBgEmga4l61TOavUCB0Eig1ujnNo/73gkAGiGLpiyekc3UE1fqrm8SgGbIoimLZ1Qm
+        M5dtzikuEJjd1XezNweb92btj54JAJqzuBTH5wd7hObtKdk01DMJwIj9Pb39M2S77W6mFnyTAYyWC9Ta
+        NJ2o8xyMFZPcdR9uHJwMYHSsUX0X6IM6y/1jLVOPu0bt+L4I4HTJPr3uUvNZURRjdZL7h3wgkdpccVcX
+        GCW3MJZGvSharfE6x8PHahJPlpleqbbh9h0MwImobgi5a85unjw6dOX0jeUkuSB75LuDLHaN3mMXbuBk
+        SEs2i/eqRVDe5Dt4Q2iYIc9iChPfkq3y5d1AAMcjLa3P6TuyCNaZHTKi6Ddoi6AsEsbarAAAAABJRU5E
+        rkJggg==
 </value>
   </data>
   <data name="lblCuenta.BaseStylesheet" xml:space="preserve">
-    <value>#bunifu-label { padding: 0px; font-family: 'Century Gothic'; font-size: 21,75pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(255, 255, 255); text-align: left; }</value>
+    <value>#bunifu-label { padding: 0px; font-family: 'Century Gothic'; font-size: 21.75pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(255, 255, 255); text-align: left; }</value>
   </data>
   <data name="pictureADNE.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAA2MAAAMaCAYAAAALHJ4AAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EAAACxABrSO9dQAA/7JJREFUeF7s/WeQW2W29o2fNAzBgDEGbIPBCWyMcc45p3Z/fL6/n07V/1Sdep95
+        DgAACw4BQL7hQQAA/7JJREFUeF7s/WeQW2W29o2fNAzBgDEGbIPBCWyMcc45p3Z/fL6/n07V/1Sdep95
         B3c2CJxtsBkTTXIOo3Fod1BopW51bqtbrZbcwe04hgMHv4d6mSqqzoenyv91rfteW1vtNsPMmQAz66pa
         vbekrb23ttRb+6drrXX/g0qlUqlUKpVKpVKpVCqVSqVSqVQqlUqlUqlUKpVKpVKpVCqVSqVSqVQqlUql
         UqlUKpVKpVKpVCqVSqVSqVQqlUqlUqlUKpVKpVKpVCqVSqVSqVQqlUqlUqlUKpVKpVKpVCqVSqVSqVQq
@@ -8939,7 +8941,7 @@
 </value>
   </data>
   <data name="bunifuLabel5.BaseStylesheet" xml:space="preserve">
-    <value>#bunifu-label { padding: 0px; font-family: 'Century Gothic'; font-size: 27,75pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(255, 255, 255); text-align: left; }</value>
+    <value>#bunifu-label { padding: 0px; font-family: 'Century Gothic'; font-size: 24pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(255, 255, 255); text-align: left; }</value>
   </data>
   <data name="bunifuPanel1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

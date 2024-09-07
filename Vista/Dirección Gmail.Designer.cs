@@ -157,7 +157,7 @@
             this.btnAceptarGmail.IdleIconLeftImage = null;
             this.btnAceptarGmail.IdleIconRightImage = null;
             this.btnAceptarGmail.IndicateFocus = false;
-            this.btnAceptarGmail.Location = new System.Drawing.Point(553, 243);
+            this.btnAceptarGmail.Location = new System.Drawing.Point(558, 238);
             this.btnAceptarGmail.Name = "btnAceptarGmail";
             this.btnAceptarGmail.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnAceptarGmail.OnDisabledState.BorderRadius = 5;
@@ -206,12 +206,12 @@
             this.lblOlvidasteContraseña.AutoEllipsis = false;
             this.lblOlvidasteContraseña.Cursor = System.Windows.Forms.Cursors.Default;
             this.lblOlvidasteContraseña.CursorType = System.Windows.Forms.Cursors.Default;
-            this.lblOlvidasteContraseña.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOlvidasteContraseña.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblOlvidasteContraseña.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(86)))), ((int)(((byte)(100)))));
-            this.lblOlvidasteContraseña.Location = new System.Drawing.Point(38, 44);
+            this.lblOlvidasteContraseña.Location = new System.Drawing.Point(33, 44);
             this.lblOlvidasteContraseña.Name = "lblOlvidasteContraseña";
             this.lblOlvidasteContraseña.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblOlvidasteContraseña.Size = new System.Drawing.Size(411, 39);
+            this.lblOlvidasteContraseña.Size = new System.Drawing.Size(376, 36);
             this.lblOlvidasteContraseña.TabIndex = 14;
             this.lblOlvidasteContraseña.Text = "¿Olvidaste tu contraseña?";
             this.lblOlvidasteContraseña.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -247,7 +247,7 @@
             this.btnSiguiente.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.btnSiguiente.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
             this.btnSiguiente.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
-            this.btnSiguiente.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSiguiente.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSiguiente.ForeColor = System.Drawing.Color.White;
             this.btnSiguiente.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSiguiente.IconLeftCursor = System.Windows.Forms.Cursors.Default;
@@ -265,7 +265,7 @@
             this.btnSiguiente.IdleIconLeftImage = null;
             this.btnSiguiente.IdleIconRightImage = null;
             this.btnSiguiente.IndicateFocus = false;
-            this.btnSiguiente.Location = new System.Drawing.Point(554, 360);
+            this.btnSiguiente.Location = new System.Drawing.Point(558, 358);
             this.btnSiguiente.Name = "btnSiguiente";
             this.btnSiguiente.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnSiguiente.OnDisabledState.BorderRadius = 5;
@@ -299,7 +299,7 @@
             this.btnSiguiente.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btnSiguiente.OnPressedState.IconLeftImage = null;
             this.btnSiguiente.OnPressedState.IconRightImage = null;
-            this.btnSiguiente.Size = new System.Drawing.Size(161, 42);
+            this.btnSiguiente.Size = new System.Drawing.Size(163, 48);
             this.btnSiguiente.TabIndex = 13;
             this.btnSiguiente.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnSiguiente.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -337,7 +337,7 @@
             this.btnCancelar.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.btnCancelar.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
             this.btnCancelar.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
-            this.btnCancelar.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.Color.White;
             this.btnCancelar.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCancelar.IconLeftCursor = System.Windows.Forms.Cursors.Default;
@@ -355,7 +355,7 @@
             this.btnCancelar.IdleIconLeftImage = null;
             this.btnCancelar.IdleIconRightImage = null;
             this.btnCancelar.IndicateFocus = false;
-            this.btnCancelar.Location = new System.Drawing.Point(387, 360);
+            this.btnCancelar.Location = new System.Drawing.Point(389, 358);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnCancelar.OnDisabledState.BorderRadius = 5;
@@ -389,7 +389,7 @@
             this.btnCancelar.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btnCancelar.OnPressedState.IconLeftImage = null;
             this.btnCancelar.OnPressedState.IconRightImage = null;
-            this.btnCancelar.Size = new System.Drawing.Size(161, 42);
+            this.btnCancelar.Size = new System.Drawing.Size(163, 48);
             this.btnCancelar.TabIndex = 9;
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnCancelar.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -406,7 +406,7 @@
             this.lblIngresarCorreo.CursorType = System.Windows.Forms.Cursors.Default;
             this.lblIngresarCorreo.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIngresarCorreo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(86)))), ((int)(((byte)(100)))));
-            this.lblIngresarCorreo.Location = new System.Drawing.Point(45, 132);
+            this.lblIngresarCorreo.Location = new System.Drawing.Point(35, 135);
             this.lblIngresarCorreo.Name = "lblIngresarCorreo";
             this.lblIngresarCorreo.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblIngresarCorreo.Size = new System.Drawing.Size(249, 23);
@@ -425,8 +425,9 @@
             this.bunifuShadowPanel2.Controls.Add(this.txtIngresarEmail);
             this.bunifuShadowPanel2.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
             this.bunifuShadowPanel2.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
-            this.bunifuShadowPanel2.Location = new System.Drawing.Point(37, 170);
+            this.bunifuShadowPanel2.Location = new System.Drawing.Point(30, 170);
             this.bunifuShadowPanel2.Name = "bunifuShadowPanel2";
+            this.bunifuShadowPanel2.Padding = new System.Windows.Forms.Padding(1, 1, 2, 4);
             this.bunifuShadowPanel2.PanelColor = System.Drawing.Color.White;
             this.bunifuShadowPanel2.PanelColor2 = System.Drawing.Color.White;
             this.bunifuShadowPanel2.ShadowColor = System.Drawing.Color.DarkGray;
@@ -434,7 +435,7 @@
             this.bunifuShadowPanel2.ShadowDepth = 5;
             this.bunifuShadowPanel2.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Surrounded;
             this.bunifuShadowPanel2.ShadowTopLeftVisible = false;
-            this.bunifuShadowPanel2.Size = new System.Drawing.Size(684, 62);
+            this.bunifuShadowPanel2.Size = new System.Drawing.Size(691, 62);
             this.bunifuShadowPanel2.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
             this.bunifuShadowPanel2.TabIndex = 3;
             // 
@@ -442,7 +443,6 @@
             // 
             this.txtIngresarEmail.AcceptsReturn = false;
             this.txtIngresarEmail.AcceptsTab = false;
-            this.txtIngresarEmail.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtIngresarEmail.AnimationSpeed = 200;
             this.txtIngresarEmail.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
             this.txtIngresarEmail.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
@@ -460,6 +460,7 @@
             this.txtIngresarEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtIngresarEmail.DefaultFont = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIngresarEmail.DefaultText = "";
+            this.txtIngresarEmail.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtIngresarEmail.FillColor = System.Drawing.Color.White;
             this.txtIngresarEmail.HideSelection = true;
             this.txtIngresarEmail.IconLeft = global::Empresa_laboral_ADNE___Proyecto_PTC.Properties.Resources.mail;
@@ -468,7 +469,7 @@
             this.txtIngresarEmail.IconRight = null;
             this.txtIngresarEmail.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtIngresarEmail.Lines = new string[0];
-            this.txtIngresarEmail.Location = new System.Drawing.Point(3, 2);
+            this.txtIngresarEmail.Location = new System.Drawing.Point(1, 1);
             this.txtIngresarEmail.MaxLength = 125;
             this.txtIngresarEmail.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtIngresarEmail.Modified = false;
@@ -504,7 +505,7 @@
             this.txtIngresarEmail.SelectionLength = 0;
             this.txtIngresarEmail.SelectionStart = 0;
             this.txtIngresarEmail.ShortcutsEnabled = false;
-            this.txtIngresarEmail.Size = new System.Drawing.Size(677, 56);
+            this.txtIngresarEmail.Size = new System.Drawing.Size(688, 57);
             this.txtIngresarEmail.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtIngresarEmail.TabIndex = 6;
             this.txtIngresarEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -593,11 +594,11 @@
         public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnSiguiente;
         public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnCancelar;
         private Bunifu.UI.WinForms.BunifuLabel lblIngresarCorreo;
-        private Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel2;
         public Bunifu.UI.WinForms.BunifuTextBox txtIngresarEmail;
         private Bunifu.UI.WinForms.BunifuLabel Titulo_Registrar;
         private Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel1;
         private System.Windows.Forms.Panel panel1;
         public Bunifu.UI.WinForms.BunifuGradientPanel bunifuGradientPanel2;
+        public Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel2;
     }
 }

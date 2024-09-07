@@ -143,7 +143,7 @@
             this.lblFechaCreacion.Location = new System.Drawing.Point(48, 418);
             this.lblFechaCreacion.Name = "lblFechaCreacion";
             this.lblFechaCreacion.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblFechaCreacion.Size = new System.Drawing.Size(306, 39);
+            this.lblFechaCreacion.Size = new System.Drawing.Size(175, 23);
             this.lblFechaCreacion.TabIndex = 15;
             this.lblFechaCreacion.Text = "Fecha de creación";
             this.lblFechaCreacion.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -158,7 +158,7 @@
             this.btnSalir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSalir.Image = global::Empresa_laboral_ADNE___Proyecto_PTC.Properties.Resources.Cerrar_Login;
             this.btnSalir.IsCircle = false;
-            this.btnSalir.Location = new System.Drawing.Point(1002, 15);
+            this.btnSalir.Location = new System.Drawing.Point(997, 20);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(27, 27);
             this.btnSalir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -206,7 +206,7 @@
             this.lblTelefono.Location = new System.Drawing.Point(48, 332);
             this.lblTelefono.Name = "lblTelefono";
             this.lblTelefono.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblTelefono.Size = new System.Drawing.Size(320, 39);
+            this.lblTelefono.Size = new System.Drawing.Size(183, 23);
             this.lblTelefono.TabIndex = 12;
             this.lblTelefono.Text = "Número de teléfono";
             this.lblTelefono.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -299,7 +299,7 @@
             this.lblCorreoElectronico.Location = new System.Drawing.Point(48, 246);
             this.lblCorreoElectronico.Name = "lblCorreoElectronico";
             this.lblCorreoElectronico.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblCorreoElectronico.Size = new System.Drawing.Size(303, 39);
+            this.lblCorreoElectronico.Size = new System.Drawing.Size(173, 23);
             this.lblCorreoElectronico.TabIndex = 10;
             this.lblCorreoElectronico.Text = "Correo electrónico";
             this.lblCorreoElectronico.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -316,7 +316,7 @@
             this.lblDireccion.Location = new System.Drawing.Point(48, 127);
             this.lblDireccion.Name = "lblDireccion";
             this.lblDireccion.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblDireccion.Size = new System.Drawing.Size(246, 39);
+            this.lblDireccion.Size = new System.Drawing.Size(141, 23);
             this.lblDireccion.TabIndex = 9;
             this.lblDireccion.Text = "Dirección física";
             this.lblDireccion.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -380,7 +380,7 @@
             this.txtCorreoElectronico.Padding = new System.Windows.Forms.Padding(3);
             this.txtCorreoElectronico.PasswordChar = '\0';
             this.txtCorreoElectronico.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.txtCorreoElectronico.PlaceholderText = "Correo electrónico";
+            this.txtCorreoElectronico.PlaceholderText = "email@dominio";
             this.txtCorreoElectronico.ReadOnly = false;
             this.txtCorreoElectronico.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtCorreoElectronico.SelectedText = "";
@@ -394,7 +394,7 @@
             this.txtCorreoElectronico.TextMarginBottom = 0;
             this.txtCorreoElectronico.TextMarginLeft = 3;
             this.txtCorreoElectronico.TextMarginTop = 1;
-            this.txtCorreoElectronico.TextPlaceholder = "Correo electrónico";
+            this.txtCorreoElectronico.TextPlaceholder = "email@dominio";
             this.txtCorreoElectronico.UseSystemPasswordChar = false;
             this.txtCorreoElectronico.WordWrap = true;
             // 
@@ -498,7 +498,7 @@
             this.lblNombre.Location = new System.Drawing.Point(48, 47);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblNombre.Size = new System.Drawing.Size(629, 39);
+            this.lblNombre.Size = new System.Drawing.Size(362, 23);
             this.lblNombre.TabIndex = 6;
             this.lblNombre.Text = "Nombre de la empresa u Organización";
             this.lblNombre.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -515,7 +515,7 @@
             this.lblPBX.Location = new System.Drawing.Point(330, 332);
             this.lblPBX.Name = "lblPBX";
             this.lblPBX.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblPBX.Size = new System.Drawing.Size(59, 39);
+            this.lblPBX.Size = new System.Drawing.Size(35, 23);
             this.lblPBX.TabIndex = 5;
             this.lblPBX.Text = "PBX";
             this.lblPBX.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -537,6 +537,7 @@
             this.btnRegistrar.AllowAnimations = true;
             this.btnRegistrar.AllowMouseEffects = true;
             this.btnRegistrar.AllowToggling = false;
+            this.btnRegistrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnRegistrar.AnimationSpeed = 200;
             this.btnRegistrar.AutoGenerateColors = false;
             this.btnRegistrar.AutoRoundBorders = false;
@@ -755,7 +756,7 @@
             this.txtDireccion.Padding = new System.Windows.Forms.Padding(3);
             this.txtDireccion.PasswordChar = '\0';
             this.txtDireccion.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.txtDireccion.PlaceholderText = "Dirección física";
+            this.txtDireccion.PlaceholderText = "Ubicación";
             this.txtDireccion.ReadOnly = false;
             this.txtDireccion.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtDireccion.SelectedText = "";
@@ -769,7 +770,7 @@
             this.txtDireccion.TextMarginBottom = 0;
             this.txtDireccion.TextMarginLeft = 3;
             this.txtDireccion.TextMarginTop = 1;
-            this.txtDireccion.TextPlaceholder = "Dirección física";
+            this.txtDireccion.TextPlaceholder = "Ubicación";
             this.txtDireccion.UseSystemPasswordChar = false;
             this.txtDireccion.WordWrap = true;
             // 
@@ -831,7 +832,7 @@
             this.txtNombreEmpresa.Padding = new System.Windows.Forms.Padding(3);
             this.txtNombreEmpresa.PasswordChar = '\0';
             this.txtNombreEmpresa.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.txtNombreEmpresa.PlaceholderText = "Nombre de la empresa";
+            this.txtNombreEmpresa.PlaceholderText = "Empresa";
             this.txtNombreEmpresa.ReadOnly = false;
             this.txtNombreEmpresa.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtNombreEmpresa.SelectedText = "";
@@ -845,7 +846,7 @@
             this.txtNombreEmpresa.TextMarginBottom = 0;
             this.txtNombreEmpresa.TextMarginLeft = 3;
             this.txtNombreEmpresa.TextMarginTop = 1;
-            this.txtNombreEmpresa.TextPlaceholder = "Nombre de la empresa";
+            this.txtNombreEmpresa.TextPlaceholder = "Empresa";
             this.txtNombreEmpresa.UseSystemPasswordChar = false;
             this.txtNombreEmpresa.WordWrap = true;
             // 

@@ -741,6 +741,8 @@
             this.ClientSize = new System.Drawing.Size(730, 820);
             this.Controls.Add(this.pnlGradiente);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.MaximumSize = new System.Drawing.Size(746, 859);
+            this.MinimumSize = new System.Drawing.Size(746, 859);
             this.Name = "Preguntas_de_Seguridad";
             this.Text = "Preguntas_de_Seguridad";
             this.pnlGradiente.ResumeLayout(false);

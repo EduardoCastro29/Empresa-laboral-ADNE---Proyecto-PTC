@@ -710,23 +710,23 @@
   </data>
   <data name="txtIngresarPin.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAp8AAAA4CAYAAAC7bpN3AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJzSURBVHhe7dsxbtNgHMZhjx0ZGRk5AiMjl+AODAw9AhIb
-        N+AQXevazlfaShFDx6hIGSoUTBRVVetGVmXs4CIQUyH5T88jvRk+O/tPdpL9Ls/zvX5vUkoHVVXVR0dH
-        nZmZmZnZYzZ0ZN+Th31X7vd7Mqbmn/oLL/ub5rPZ7G6xWHRN03QAAPBYQ0fWdd1dXFy0fV9+6zvz1Zic
-        Pw0Hp6enVzc3N+NXAADg/63X6246nV6VZfn6ITz3JpPJV086AQDYhbZtu5TS9747nw7xuT88Eh2vAQDA
-        1l1eXnaTyeRjNvwYdHgnDwAAu3J9fT3E55esKIrb4VEoAADs0vBP+Gz4AACAXROfAACEEZ8AAIQRnwAA
-        hBGfAACEEZ8AAIQRnwAAhBGfAACEEZ8AAIQRnwAAhBGfAACEEZ8AAIQRnwAAhBGfAACEEZ8AAIQRnwAA
-        hBGfAACEEZ8AAIQRnwAAhBGfAACEEZ8AAIQRnwAAhBGfAACEEZ8AAIQRnwAAhBGfAACEEZ8AAIQRnwAA
-        hBGfAACEEZ8AAIQRnwAAhBGfAACEEZ8AAIQRnwAAhBGfAACEEZ8AAIQRnwAAhBGfAACEEZ8AAIQRnwAA
-        hBGfAACEEZ8AAITZxGdRFO39/f14BAAAu7GJz5TS59VqNR4BAMD2NU3TVVVVZ2VZvp/P5+MxAABs32Kx
-        6FJKB1me58+Oj49XXr0DALArZ2dnq747X2SDoijenp+fNwIUAIBtm81mdymlD5vwfFBV1buTk5NlXdfd
-        er0ebwUAgMdr27ZbLpebJ55/heeDPM+f9xcPy7K8Gv6NZGZmZmb2LyuK4rbvyk+/XrVvZNkPnb1VJ6qV
-        3hEAAAAASUVORK5CYII=
+        iVBORw0KGgoAAAANSUhEUgAAAqYAAAA7CAYAAACpHEgrAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKISURBVHhe7dsxbtNgHMZhjx0ZGRk5AiMjl+AODAw9AhIb
+        N+AQXevazlfaShVDx6hIGSoUTBRVVetGVmXs4KIi1pD8h+eR3gyfnf0nO8meyvN8r9+7lNJBVVX10dFR
+        Z2ZmZma2qQ2N2bfmYd+c+/2ejRn6t/7C6/6m2XQ6vZ/P513TNB0AAGzS0Jh1XXeXl5dt354/+gZ9M+bo
+        b8PB6enp9e3t7fgVAAD4v1arVXd+fn5dluXbxyjdm0wm3z0hBQBg29q27VJKP/smfT6E6f7wKHW8BgAA
+        W3V1ddVNJpPP2fDj0+E9PwAA7MLNzc0Qpt+yoijuhkeoAACwK8M/9rPhAwAAdkmYAgAQgjAFACAEYQoA
+        QAjCFACAEIQpAAAhCFMAAEIQpgAAhCBMAQAIQZgCABCCMAUAIARhCgBACMIUAIAQhCkAACEIUwAAQhCm
+        AACEIEwBAAhBmAIAEIIwBQAgBGEKAEAIwhQAgBCEKQAAIQhTAABCEKYAAIQgTAEACEGYAgAQgjAFACAE
+        YQoAQAjCFACAEIQpAAAhCFMAAEIQpgAAhCBMAQAIQZgCABCCMAUAIARhCgBACMIUAIAQhCkAACEIUwAA
+        QhCmAACEIEwBAAhBmAIAEIIwBQAgBGEKAEAIwhQAgBDWYVoURfvw8DAeAQDA9q3DNKX0dblcjkcAALBd
+        TdN0VVXVWVmWH2ez2XgMAADbNZ/Pu5TSQZbn+Yvj4+Ol1/kAAOzC2dnZsm/SV9mgKIr3FxcXjTgFAGCb
+        ptPpfUrp0zpKH1VV9eHk5GRR13W3Wq3GWwEAYLPatu0Wi8X6Sek/Ufooz/OX/cXDsiyvh39GmZmZmZlt
+        ekVR3PXN+eXP6/u1LPsFVb0KtbCqMuEAAAAASUVORK5CYII=
 </value>
   </data>
   <data name="lblOlvidasteContrasena.BaseStylesheet" xml:space="preserve">
-    <value>#bunifu-label { padding: 0px; font-family: 'Century Gothic'; font-size: 24pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(42, 86, 100); text-align: left; }</value>
+    <value>#bunifu-label { padding: 0px; font-family: 'Century Gothic'; font-size: 21.75pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(42, 86, 100); text-align: left; }</value>
   </data>
   <data name="btnAtras.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -740,6 +740,6 @@
 </value>
   </data>
   <data name="Titulo_Registrar.BaseStylesheet" xml:space="preserve">
-    <value>#bunifu-label { padding: 0px; font-family: 'Century Gothic'; font-size: 21,75pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(42, 86, 100); text-align: left; }</value>
+    <value>#bunifu-label { padding: 0px; font-family: 'Century Gothic'; font-size: 21.75pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(42, 86, 100); text-align: left; }</value>
   </data>
 </root>

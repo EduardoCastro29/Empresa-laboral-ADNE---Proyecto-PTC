@@ -900,9 +900,9 @@
             this.lblIdUsuario.Margin = new System.Windows.Forms.Padding(3, 5, 3, 3);
             this.lblIdUsuario.Name = "lblIdUsuario";
             this.lblIdUsuario.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblIdUsuario.Size = new System.Drawing.Size(118, 22);
+            this.lblIdUsuario.Size = new System.Drawing.Size(128, 22);
             this.lblIdUsuario.TabIndex = 1;
-            this.lblIdUsuario.Text = "ID de Usuario";
+            this.lblIdUsuario.Text = "Rol de Usuario";
             this.lblIdUsuario.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lblIdUsuario.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 

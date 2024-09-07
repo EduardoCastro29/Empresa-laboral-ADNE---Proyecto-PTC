@@ -83,10 +83,10 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
         {
             try
             {
-                if (ObjAgendarCitaForm.txtDUIProfesional.Text.Length < 10 ||
-                    ObjAgendarCitaForm.txtDUIPaciente.Text.Length < 10 ||
-                    ObjAgendarCitaForm.txtHoraInicio.Text.Length < 3 ||
-                    ObjAgendarCitaForm.txtHoraFinal.Text.Length < 3 ||
+                if (ObjAgendarCitaForm.txtDUIProfesional.Text.Length < 10   ||
+                    ObjAgendarCitaForm.txtDUIPaciente.Text.Length < 10      ||
+                    ObjAgendarCitaForm.dtHoraInicio.Text.Length < 3 || //Verificar esta validación
+                    ObjAgendarCitaForm.dtHoraFinal.Text.Length < 3          || //Verificar esta validación
                     ObjAgendarCitaForm.txtMotivoConsulta.Text.Length < 5)
                 {
                     MessageBox.Show("Existen campos vacíos o los campos son demasiado cortos en el listado, verifique si existe algún campo faltante", "Agendar Cita", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -101,8 +101,8 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                     //Indicamos que el DUI del presente, será sustituido por el DUI del profesional
                     //De este modo, no podremos agendar citas a otros profesionales, sino al correspondiente
                     ObjDAOAgendarCita.DuiProfesional = ObjAgendarCitaForm.txtDUIProfesional.Text;
-                    ObjDAOAgendarCita.HoraInicio = TimeSpan.Parse(ObjAgendarCitaForm.txtHoraInicio.Text.Trim());
-                    ObjDAOAgendarCita.HoraFinal = TimeSpan.Parse(ObjAgendarCitaForm.txtHoraFinal.Text.Trim());
+                    ObjDAOAgendarCita.HoraInicio = TimeSpan.Parse(ObjAgendarCitaForm.dtHoraInicio.Text.Trim());
+                    ObjDAOAgendarCita.HoraFinal = TimeSpan.Parse(ObjAgendarCitaForm.dtHoraFinal.Text.Trim());
                     ObjDAOAgendarCita.Fecha = DateTime.Parse(ObjAgendarCitaForm.dtFecha.Text.Trim());
                     ObjDAOAgendarCita.LugarId = int.Parse(ObjAgendarCitaForm.cmbLugar.SelectedValue.ToString());
                     ObjDAOAgendarCita.EstadoId = int.Parse(ObjAgendarCitaForm.cmbEstado.SelectedValue.ToString());
@@ -130,10 +130,10 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
         {
             try
             {
-                if (ObjAgendarCitaForm.txtDUIProfesional.Text.Length < 10 ||
-                    ObjAgendarCitaForm.txtDUIPaciente.Text.Length < 10 ||
-                    ObjAgendarCitaForm.txtHoraInicio.Text.Length < 3 ||
-                    ObjAgendarCitaForm.txtHoraFinal.Text.Length < 3 ||
+                if (ObjAgendarCitaForm.txtDUIProfesional.Text.Length < 10   ||
+                    ObjAgendarCitaForm.txtDUIPaciente.Text.Length < 10      ||
+                    ObjAgendarCitaForm.dtHoraInicio.Text.Length < 3         || // Verificar esta validación
+                    ObjAgendarCitaForm.dtHoraFinal.Text.Length < 3          || // Verificar esta validación
                     ObjAgendarCitaForm.txtMotivoConsulta.Text.Length < 5)
                 {
                     MessageBox.Show("Existen campos vacíos o los campos son demasiado cortos en el listado, verifique si existe algún campo faltante", "Actualizar Cita", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -148,8 +148,8 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                     ObjDAOActualizarCita.ConsultaId = int.Parse(ObjAgendarCitaForm.txtIDConsulta.Text.Trim());
                     ObjDAOActualizarCita.DocumentoPresentado = ObjAgendarCitaForm.txtDUIPaciente.Text.Trim();
                     ObjDAOActualizarCita.DuiProfesional = InicioSesion.Dui;
-                    ObjDAOActualizarCita.HoraInicio = TimeSpan.Parse(ObjAgendarCitaForm.txtHoraInicio.Text.Trim());
-                    ObjDAOActualizarCita.HoraFinal = TimeSpan.Parse(ObjAgendarCitaForm.txtHoraFinal.Text.Trim());
+                    ObjDAOActualizarCita.HoraInicio = TimeSpan.Parse(ObjAgendarCitaForm.dtHoraInicio.Text.Trim());
+                    ObjDAOActualizarCita.HoraFinal = TimeSpan.Parse(ObjAgendarCitaForm.dtHoraFinal.Text.Trim());
                     ObjDAOActualizarCita.Fecha = DateTime.Parse(ObjAgendarCitaForm.dtFecha.Text.Trim());
                     ObjDAOActualizarCita.LugarId = int.Parse(ObjAgendarCitaForm.cmbLugar.SelectedValue.ToString());
                     ObjDAOActualizarCita.EstadoId = int.Parse(ObjAgendarCitaForm.cmbEstado.SelectedValue.ToString());

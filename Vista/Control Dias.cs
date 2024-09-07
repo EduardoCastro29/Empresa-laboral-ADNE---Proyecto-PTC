@@ -18,5 +18,9 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Vista
             InitializeComponent();
             CTRLUCDias ObjUCControladorDias = new CTRLUCDias(this);
         }
+        public void ModificarFondo(Color color)
+        {
+            this.BackColor = color;
+        }
     }
 }

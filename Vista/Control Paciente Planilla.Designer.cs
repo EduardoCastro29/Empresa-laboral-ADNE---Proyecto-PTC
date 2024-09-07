@@ -35,10 +35,9 @@
             this.lblExpedienteId = new System.Windows.Forms.Label();
             this.lblCitaId = new Bunifu.UI.WinForms.BunifuLabel();
             this.btnDescargar = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
-            this.lblEstado = new Bunifu.UI.WinForms.BunifuLabel();
-            this.lblHora = new Bunifu.UI.WinForms.BunifuLabel();
-            this.lblFecha = new Bunifu.UI.WinForms.BunifuLabel();
+            this.lblDUI = new Bunifu.UI.WinForms.BunifuLabel();
             this.lblNombrePaciente = new Bunifu.UI.WinForms.BunifuLabel();
+            this.pnlSeparador = new Bunifu.UI.WinForms.BunifuPanel();
             this.pnlFondoUC.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,13 +49,12 @@
             this.pnlFondoUC.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlFondoUC.BackgroundImage")));
             this.pnlFondoUC.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pnlFondoUC.BorderRadius = 10;
+            this.pnlFondoUC.Controls.Add(this.pnlSeparador);
             this.pnlFondoUC.Controls.Add(this.lblPacienteId);
             this.pnlFondoUC.Controls.Add(this.lblExpedienteId);
             this.pnlFondoUC.Controls.Add(this.lblCitaId);
             this.pnlFondoUC.Controls.Add(this.btnDescargar);
-            this.pnlFondoUC.Controls.Add(this.lblEstado);
-            this.pnlFondoUC.Controls.Add(this.lblHora);
-            this.pnlFondoUC.Controls.Add(this.lblFecha);
+            this.pnlFondoUC.Controls.Add(this.lblDUI);
             this.pnlFondoUC.Controls.Add(this.lblNombrePaciente);
             this.pnlFondoUC.GradientBottomLeft = System.Drawing.Color.WhiteSmoke;
             this.pnlFondoUC.GradientBottomRight = System.Drawing.Color.WhiteSmoke;
@@ -121,7 +119,7 @@
             this.btnDescargar.AutoSizeLeftIcon = true;
             this.btnDescargar.AutoSizeRightIcon = true;
             this.btnDescargar.BackColor = System.Drawing.Color.Transparent;
-            this.btnDescargar.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(2)))), ((int)(((byte)(161)))), ((int)(((byte)(104)))));
+            this.btnDescargar.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(204)))), ((int)(((byte)(192)))));
             this.btnDescargar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnDescargar.BackgroundImage")));
             this.btnDescargar.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.btnDescargar.ButtonText = "Descargar";
@@ -140,7 +138,7 @@
             this.btnDescargar.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
             this.btnDescargar.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
             this.btnDescargar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDescargar.ForeColor = System.Drawing.Color.White;
+            this.btnDescargar.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnDescargar.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDescargar.IconLeftCursor = System.Windows.Forms.Cursors.Default;
             this.btnDescargar.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
@@ -153,11 +151,11 @@
             this.btnDescargar.IdleBorderColor = System.Drawing.Color.Transparent;
             this.btnDescargar.IdleBorderRadius = 12;
             this.btnDescargar.IdleBorderThickness = 1;
-            this.btnDescargar.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(2)))), ((int)(((byte)(161)))), ((int)(((byte)(104)))));
+            this.btnDescargar.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(204)))), ((int)(((byte)(192)))));
             this.btnDescargar.IdleIconLeftImage = null;
             this.btnDescargar.IdleIconRightImage = null;
             this.btnDescargar.IndicateFocus = false;
-            this.btnDescargar.Location = new System.Drawing.Point(764, 6);
+            this.btnDescargar.Location = new System.Drawing.Point(750, 6);
             this.btnDescargar.Name = "btnDescargar";
             this.btnDescargar.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnDescargar.OnDisabledState.BorderRadius = 12;
@@ -171,27 +169,27 @@
             this.btnDescargar.onHoverState.BorderRadius = 12;
             this.btnDescargar.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.btnDescargar.onHoverState.BorderThickness = 1;
-            this.btnDescargar.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(2)))), ((int)(((byte)(161)))), ((int)(((byte)(104)))));
-            this.btnDescargar.onHoverState.ForeColor = System.Drawing.Color.White;
+            this.btnDescargar.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.btnDescargar.onHoverState.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnDescargar.onHoverState.IconLeftImage = null;
             this.btnDescargar.onHoverState.IconRightImage = null;
             this.btnDescargar.OnIdleState.BorderColor = System.Drawing.Color.Transparent;
             this.btnDescargar.OnIdleState.BorderRadius = 12;
             this.btnDescargar.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.btnDescargar.OnIdleState.BorderThickness = 1;
-            this.btnDescargar.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(2)))), ((int)(((byte)(161)))), ((int)(((byte)(104)))));
-            this.btnDescargar.OnIdleState.ForeColor = System.Drawing.Color.White;
+            this.btnDescargar.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(204)))), ((int)(((byte)(192)))));
+            this.btnDescargar.OnIdleState.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnDescargar.OnIdleState.IconLeftImage = null;
             this.btnDescargar.OnIdleState.IconRightImage = null;
             this.btnDescargar.OnPressedState.BorderColor = System.Drawing.Color.Transparent;
             this.btnDescargar.OnPressedState.BorderRadius = 12;
             this.btnDescargar.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.btnDescargar.OnPressedState.BorderThickness = 1;
-            this.btnDescargar.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(2)))), ((int)(((byte)(161)))), ((int)(((byte)(104)))));
+            this.btnDescargar.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(174)))), ((int)(((byte)(170)))));
             this.btnDescargar.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btnDescargar.OnPressedState.IconLeftImage = null;
             this.btnDescargar.OnPressedState.IconRightImage = null;
-            this.btnDescargar.Size = new System.Drawing.Size(180, 39);
+            this.btnDescargar.Size = new System.Drawing.Size(194, 39);
             this.btnDescargar.TabIndex = 20;
             this.btnDescargar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnDescargar.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -199,55 +197,20 @@
             this.btnDescargar.TextPadding = new System.Windows.Forms.Padding(0);
             this.btnDescargar.UseDefaultRadiusAndThickness = true;
             // 
-            // lblEstado
+            // lblDUI
             // 
-            this.lblEstado.AllowParentOverrides = false;
-            this.lblEstado.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblEstado.AutoEllipsis = false;
-            this.lblEstado.CursorType = null;
-            this.lblEstado.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
-            this.lblEstado.Location = new System.Drawing.Point(628, 18);
-            this.lblEstado.Name = "lblEstado";
-            this.lblEstado.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblEstado.Size = new System.Drawing.Size(48, 18);
-            this.lblEstado.TabIndex = 4;
-            this.lblEstado.Text = "Estado ";
-            this.lblEstado.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.lblEstado.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // lblHora
-            // 
-            this.lblHora.AllowParentOverrides = false;
-            this.lblHora.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblHora.AutoEllipsis = false;
-            this.lblHora.CursorType = null;
-            this.lblHora.Font = new System.Drawing.Font("Century Gothic", 11.25F);
-            this.lblHora.Location = new System.Drawing.Point(486, 16);
-            this.lblHora.Name = "lblHora";
-            this.lblHora.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblHora.Size = new System.Drawing.Size(35, 20);
-            this.lblHora.TabIndex = 3;
-            this.lblHora.Text = "Hora";
-            this.lblHora.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.lblHora.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // lblFecha
-            // 
-            this.lblFecha.AllowParentOverrides = false;
-            this.lblFecha.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblFecha.AutoEllipsis = false;
-            this.lblFecha.CursorType = null;
-            this.lblFecha.Font = new System.Drawing.Font("Century Gothic", 11.25F);
-            this.lblFecha.Location = new System.Drawing.Point(378, 16);
-            this.lblFecha.Name = "lblFecha";
-            this.lblFecha.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblFecha.Size = new System.Drawing.Size(46, 20);
-            this.lblFecha.TabIndex = 2;
-            this.lblFecha.Text = "Fecha";
-            this.lblFecha.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.lblFecha.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.lblDUI.AllowParentOverrides = false;
+            this.lblDUI.AutoEllipsis = false;
+            this.lblDUI.CursorType = null;
+            this.lblDUI.Font = new System.Drawing.Font("Century Gothic", 11.25F);
+            this.lblDUI.Location = new System.Drawing.Point(24, 16);
+            this.lblDUI.Name = "lblDUI";
+            this.lblDUI.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblDUI.Size = new System.Drawing.Size(85, 20);
+            this.lblDUI.TabIndex = 2;
+            this.lblDUI.Text = "012345678-9";
+            this.lblDUI.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lblDUI.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // lblNombrePaciente
             // 
@@ -255,7 +218,7 @@
             this.lblNombrePaciente.AutoEllipsis = false;
             this.lblNombrePaciente.CursorType = null;
             this.lblNombrePaciente.Font = new System.Drawing.Font("Century Gothic", 11.25F);
-            this.lblNombrePaciente.Location = new System.Drawing.Point(16, 16);
+            this.lblNombrePaciente.Location = new System.Drawing.Point(144, 16);
             this.lblNombrePaciente.Name = "lblNombrePaciente";
             this.lblNombrePaciente.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblNombrePaciente.Size = new System.Drawing.Size(78, 20);
@@ -263,6 +226,20 @@
             this.lblNombrePaciente.Text = "Paciente...";
             this.lblNombrePaciente.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lblNombrePaciente.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // pnlSeparador
+            // 
+            this.pnlSeparador.BackgroundColor = System.Drawing.Color.Gray;
+            this.pnlSeparador.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlSeparador.BackgroundImage")));
+            this.pnlSeparador.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnlSeparador.BorderColor = System.Drawing.Color.Transparent;
+            this.pnlSeparador.BorderRadius = 3;
+            this.pnlSeparador.BorderThickness = 1;
+            this.pnlSeparador.Location = new System.Drawing.Point(127, 10);
+            this.pnlSeparador.Name = "pnlSeparador";
+            this.pnlSeparador.ShowBorders = true;
+            this.pnlSeparador.Size = new System.Drawing.Size(4, 35);
+            this.pnlSeparador.TabIndex = 26;
             // 
             // ControlPacientePlanillaUC
             // 
@@ -282,12 +259,11 @@
 
         public Bunifu.UI.WinForms.BunifuGradientPanel pnlFondoUC;
         public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnDescargar;
-        public Bunifu.UI.WinForms.BunifuLabel lblEstado;
-        public Bunifu.UI.WinForms.BunifuLabel lblHora;
-        public Bunifu.UI.WinForms.BunifuLabel lblFecha;
         public Bunifu.UI.WinForms.BunifuLabel lblNombrePaciente;
         public Bunifu.UI.WinForms.BunifuLabel lblCitaId;
         public System.Windows.Forms.Label lblPacienteId;
         public System.Windows.Forms.Label lblExpedienteId;
+        public Bunifu.UI.WinForms.BunifuLabel lblDUI;
+        private Bunifu.UI.WinForms.BunifuPanel pnlSeparador;
     }
 }

@@ -39,12 +39,10 @@
             this.pnlSombraBuscar = new Bunifu.UI.WinForms.BunifuPanel();
             this.txtBuscarCita = new Bunifu.UI.WinForms.BunifuTextBox();
             this.pnlEncabezadoPlanillasUC = new Bunifu.UI.WinForms.BunifuGradientPanel();
-            this.lblEstadoDeLaCitaPlanilla = new Bunifu.UI.WinForms.BunifuLabel();
-            this.lblHoraPlanilla = new Bunifu.UI.WinForms.BunifuLabel();
-            this.lblFechaPlanilla = new Bunifu.UI.WinForms.BunifuLabel();
             this.lblExpedientesPlanillas = new Bunifu.UI.WinForms.BunifuLabel();
             this.lblPacientesPlanilla = new Bunifu.UI.WinForms.BunifuLabel();
             this.flpCitas = new System.Windows.Forms.FlowLayoutPanel();
+            this.lblDUI = new Bunifu.UI.WinForms.BunifuLabel();
             this.pnlFondo.SuspendLayout();
             this.pnlSombraFondo.SuspendLayout();
             this.pnlForms.SuspendLayout();
@@ -217,9 +215,7 @@
             this.pnlEncabezadoPlanillasUC.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlEncabezadoPlanillasUC.BackgroundImage")));
             this.pnlEncabezadoPlanillasUC.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pnlEncabezadoPlanillasUC.BorderRadius = 12;
-            this.pnlEncabezadoPlanillasUC.Controls.Add(this.lblEstadoDeLaCitaPlanilla);
-            this.pnlEncabezadoPlanillasUC.Controls.Add(this.lblHoraPlanilla);
-            this.pnlEncabezadoPlanillasUC.Controls.Add(this.lblFechaPlanilla);
+            this.pnlEncabezadoPlanillasUC.Controls.Add(this.lblDUI);
             this.pnlEncabezadoPlanillasUC.Controls.Add(this.lblExpedientesPlanillas);
             this.pnlEncabezadoPlanillasUC.Controls.Add(this.lblPacientesPlanilla);
             this.pnlEncabezadoPlanillasUC.GradientBottomLeft = System.Drawing.Color.DarkCyan;
@@ -232,57 +228,6 @@
             this.pnlEncabezadoPlanillasUC.Size = new System.Drawing.Size(955, 61);
             this.pnlEncabezadoPlanillasUC.TabIndex = 19;
             // 
-            // lblEstadoDeLaCitaPlanilla
-            // 
-            this.lblEstadoDeLaCitaPlanilla.AllowParentOverrides = false;
-            this.lblEstadoDeLaCitaPlanilla.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblEstadoDeLaCitaPlanilla.AutoEllipsis = false;
-            this.lblEstadoDeLaCitaPlanilla.CursorType = null;
-            this.lblEstadoDeLaCitaPlanilla.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
-            this.lblEstadoDeLaCitaPlanilla.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblEstadoDeLaCitaPlanilla.Location = new System.Drawing.Point(597, 22);
-            this.lblEstadoDeLaCitaPlanilla.Name = "lblEstadoDeLaCitaPlanilla";
-            this.lblEstadoDeLaCitaPlanilla.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblEstadoDeLaCitaPlanilla.Size = new System.Drawing.Size(127, 19);
-            this.lblEstadoDeLaCitaPlanilla.TabIndex = 4;
-            this.lblEstadoDeLaCitaPlanilla.Text = "Estado de la cita";
-            this.lblEstadoDeLaCitaPlanilla.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.lblEstadoDeLaCitaPlanilla.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // lblHoraPlanilla
-            // 
-            this.lblHoraPlanilla.AllowParentOverrides = false;
-            this.lblHoraPlanilla.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblHoraPlanilla.AutoEllipsis = false;
-            this.lblHoraPlanilla.CursorType = null;
-            this.lblHoraPlanilla.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
-            this.lblHoraPlanilla.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblHoraPlanilla.Location = new System.Drawing.Point(486, 22);
-            this.lblHoraPlanilla.Name = "lblHoraPlanilla";
-            this.lblHoraPlanilla.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblHoraPlanilla.Size = new System.Drawing.Size(37, 19);
-            this.lblHoraPlanilla.TabIndex = 3;
-            this.lblHoraPlanilla.Text = "Hora";
-            this.lblHoraPlanilla.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.lblHoraPlanilla.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // lblFechaPlanilla
-            // 
-            this.lblFechaPlanilla.AllowParentOverrides = false;
-            this.lblFechaPlanilla.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblFechaPlanilla.AutoEllipsis = false;
-            this.lblFechaPlanilla.CursorType = null;
-            this.lblFechaPlanilla.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
-            this.lblFechaPlanilla.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblFechaPlanilla.Location = new System.Drawing.Point(378, 22);
-            this.lblFechaPlanilla.Name = "lblFechaPlanilla";
-            this.lblFechaPlanilla.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblFechaPlanilla.Size = new System.Drawing.Size(49, 19);
-            this.lblFechaPlanilla.TabIndex = 2;
-            this.lblFechaPlanilla.Text = "Fecha";
-            this.lblFechaPlanilla.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.lblFechaPlanilla.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
             // lblExpedientesPlanillas
             // 
             this.lblExpedientesPlanillas.AllowParentOverrides = false;
@@ -291,7 +236,7 @@
             this.lblExpedientesPlanillas.CursorType = null;
             this.lblExpedientesPlanillas.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.lblExpedientesPlanillas.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblExpedientesPlanillas.Location = new System.Drawing.Point(815, 22);
+            this.lblExpedientesPlanillas.Location = new System.Drawing.Point(802, 22);
             this.lblExpedientesPlanillas.Name = "lblExpedientesPlanillas";
             this.lblExpedientesPlanillas.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblExpedientesPlanillas.Size = new System.Drawing.Size(87, 19);
@@ -308,7 +253,7 @@
             this.lblPacientesPlanilla.CursorType = System.Windows.Forms.Cursors.Default;
             this.lblPacientesPlanilla.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.lblPacientesPlanilla.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblPacientesPlanilla.Location = new System.Drawing.Point(18, 22);
+            this.lblPacientesPlanilla.Location = new System.Drawing.Point(145, 22);
             this.lblPacientesPlanilla.Name = "lblPacientesPlanilla";
             this.lblPacientesPlanilla.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblPacientesPlanilla.Size = new System.Drawing.Size(68, 19);
@@ -328,6 +273,22 @@
             this.flpCitas.Name = "flpCitas";
             this.flpCitas.Size = new System.Drawing.Size(956, 429);
             this.flpCitas.TabIndex = 18;
+            // 
+            // lblDUI
+            // 
+            this.lblDUI.AllowParentOverrides = false;
+            this.lblDUI.AutoEllipsis = false;
+            this.lblDUI.CursorType = null;
+            this.lblDUI.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.lblDUI.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblDUI.Location = new System.Drawing.Point(23, 22);
+            this.lblDUI.Name = "lblDUI";
+            this.lblDUI.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblDUI.Size = new System.Drawing.Size(91, 19);
+            this.lblDUI.TabIndex = 5;
+            this.lblDUI.Text = "Documento";
+            this.lblDUI.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lblDUI.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // CitasForm
             // 
@@ -357,13 +318,11 @@
         public Bunifu.UI.WinForms.BunifuShadowPanel pnlSombraFondo;
         public Bunifu.UI.WinForms.BunifuGradientPanel pnlForms;
         public Bunifu.UI.WinForms.BunifuGradientPanel pnlEncabezadoPlanillasUC;
-        public Bunifu.UI.WinForms.BunifuLabel lblEstadoDeLaCitaPlanilla;
-        public Bunifu.UI.WinForms.BunifuLabel lblHoraPlanilla;
-        public Bunifu.UI.WinForms.BunifuLabel lblFechaPlanilla;
         public Bunifu.UI.WinForms.BunifuLabel lblExpedientesPlanillas;
         public Bunifu.UI.WinForms.BunifuLabel lblPacientesPlanilla;
         public System.Windows.Forms.FlowLayoutPanel flpCitas;
         public Bunifu.UI.WinForms.BunifuPanel pnlSombraBuscar;
         public Bunifu.UI.WinForms.BunifuTextBox txtBuscarCita;
+        public Bunifu.UI.WinForms.BunifuLabel lblDUI;
     }
 }

@@ -455,7 +455,7 @@
             this.bunifuGradientPanel2.Location = new System.Drawing.Point(0, 0);
             this.bunifuGradientPanel2.Name = "bunifuGradientPanel2";
             this.bunifuGradientPanel2.Quality = 10;
-            this.bunifuGradientPanel2.Size = new System.Drawing.Size(995, 91);
+            this.bunifuGradientPanel2.Size = new System.Drawing.Size(995, 96);
             this.bunifuGradientPanel2.TabIndex = 1;
             // 
             // menuStrip1
@@ -485,7 +485,7 @@
             this.lblRestablecer.CursorType = System.Windows.Forms.Cursors.Default;
             this.lblRestablecer.Font = new System.Drawing.Font("Century Gothic", 20.25F);
             this.lblRestablecer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(86)))), ((int)(((byte)(100)))));
-            this.lblRestablecer.Location = new System.Drawing.Point(31, 28);
+            this.lblRestablecer.Location = new System.Drawing.Point(31, 31);
             this.lblRestablecer.Name = "lblRestablecer";
             this.lblRestablecer.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblRestablecer.Size = new System.Drawing.Size(313, 33);
@@ -511,7 +511,7 @@
             this.bunifuShadowPanel1.ShadowDepth = 5;
             this.bunifuShadowPanel1.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Surrounded;
             this.bunifuShadowPanel1.ShadowTopLeftVisible = false;
-            this.bunifuShadowPanel1.Size = new System.Drawing.Size(988, 85);
+            this.bunifuShadowPanel1.Size = new System.Drawing.Size(988, 90);
             this.bunifuShadowPanel1.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
             this.bunifuShadowPanel1.TabIndex = 12;
             // 

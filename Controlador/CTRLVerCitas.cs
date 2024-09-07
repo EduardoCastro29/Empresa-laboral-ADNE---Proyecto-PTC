@@ -75,22 +75,22 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             ObjVerCitasDetalladas.txtIDCita.Text = CitaID.ToString();
             ObjVerCitasDetalladas.txtIDConsulta.Text = ConsultaID.ToString();
             ObjVerCitasDetalladas.dtFecha.Value = FechaCita.Date;
-            ObjVerCitasDetalladas.txtHoraInicio.Text = HoraInicioCita.ToString();
-            ObjVerCitasDetalladas.txtHoraFinal.Text = FechaFinalCita.ToString();
+            ObjVerCitasDetalladas.dtHoraInicio.Text = HoraInicioCita.ToString(); //Nuevo dt en lugar del textbox
+            ObjVerCitasDetalladas.dtHoraFinal.Text = FechaFinalCita.ToString(); //Nuevo dt en lugar del textbox
             ObjVerCitasDetalladas.cmbEstado.SelectedValue = EstadoCita;
             ObjVerCitasDetalladas.txtMotivoConsulta.Text = DescripcionCita;
-            ObjVerCitasDetalladas.txtNombrePacienteCita.Text = NombrePaciente;
-            ObjVerCitasDetalladas.txtNombreProfesionalCita.Text = NombreProfesional;
+            //ObjVerCitasDetalladas.txtNombrePacienteCita.Text = NombrePaciente;
+            //ObjVerCitasDetalladas.txtNombreProfesionalCita.Text = NombreProfesional;
             ObjVerCitasDetalladas.cmbLugar.ValueMember = LugarCita;
 
             //Especificamos qué apartados no deben de mostrarse a la hora de la vista
             ObjVerCitasDetalladas.dtFecha.Enabled = false;
-            ObjVerCitasDetalladas.txtHoraInicio.Enabled = false;
-            ObjVerCitasDetalladas.txtHoraFinal.Enabled = false;
+            ObjVerCitasDetalladas.dtHoraInicio.Enabled = false; //Nuevo dt en lugar del textbox
+            ObjVerCitasDetalladas.dtHoraFinal.Enabled = false; //Nuevo dt en lugar del textbox
             ObjVerCitasDetalladas.cmbEstado.Enabled = false;
             ObjVerCitasDetalladas.txtMotivoConsulta.Enabled = false;
-            ObjVerCitasDetalladas.txtNombrePacienteCita.Enabled = false;
-            ObjVerCitasDetalladas.txtNombreProfesionalCita.Enabled = false;
+            //ObjVerCitasDetalladas.txtNombrePacienteCita.Enabled = false;
+            //ObjVerCitasDetalladas.txtNombreProfesionalCita.Enabled = false;
             ObjVerCitasDetalladas.cmbLugar.Enabled = false;
             ObjVerCitasDetalladas.btnModificar.Enabled = false;
             ObjVerCitasDetalladas.btnGuardar.Enabled = false;
@@ -128,8 +128,8 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             ObjActualizarCita.txtIDCita.Text = CitaID.ToString();
             ObjActualizarCita.txtIDConsulta.Text = ConsultaID.ToString();
             ObjActualizarCita.dtFecha.Value = FechaCita.Date;
-            ObjActualizarCita.txtHoraInicio.Text = HoraInicioCita.ToString();
-            ObjActualizarCita.txtHoraFinal.Text = FechaFinalCita.ToString();
+            ObjActualizarCita.dtHoraInicio.Text = HoraInicioCita.ToString(); //Nuevo dt en lugar del textbox
+            ObjActualizarCita.dtHoraFinal.Text = FechaFinalCita.ToString(); // Nuevo dt en lugar del textbox
             ObjActualizarCita.cmbEstado.ValueMember = EstadoCita;
             ObjActualizarCita.txtMotivoConsulta.Text = DescripcionCita;
             ObjActualizarCita.txtDUIPaciente.Text = PacienteDUI;

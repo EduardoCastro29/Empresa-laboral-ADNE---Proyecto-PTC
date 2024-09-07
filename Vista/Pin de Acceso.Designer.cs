@@ -124,7 +124,7 @@
             this.btnSiguiente.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.btnSiguiente.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
             this.btnSiguiente.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
-            this.btnSiguiente.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSiguiente.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSiguiente.ForeColor = System.Drawing.Color.White;
             this.btnSiguiente.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSiguiente.IconLeftCursor = System.Windows.Forms.Cursors.Default;
@@ -142,7 +142,7 @@
             this.btnSiguiente.IdleIconLeftImage = null;
             this.btnSiguiente.IdleIconRightImage = null;
             this.btnSiguiente.IndicateFocus = false;
-            this.btnSiguiente.Location = new System.Drawing.Point(554, 318);
+            this.btnSiguiente.Location = new System.Drawing.Point(550, 318);
             this.btnSiguiente.Name = "btnSiguiente";
             this.btnSiguiente.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnSiguiente.OnDisabledState.BorderRadius = 5;
@@ -214,6 +214,7 @@
             this.bunifuShadowPanel3.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
             this.bunifuShadowPanel3.Location = new System.Drawing.Point(47, 168);
             this.bunifuShadowPanel3.Name = "bunifuShadowPanel3";
+            this.bunifuShadowPanel3.Padding = new System.Windows.Forms.Padding(1, 1, 3, 4);
             this.bunifuShadowPanel3.PanelColor = System.Drawing.Color.Transparent;
             this.bunifuShadowPanel3.PanelColor2 = System.Drawing.Color.Transparent;
             this.bunifuShadowPanel3.ShadowColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
@@ -229,7 +230,6 @@
             // 
             this.txtIngresarPin.AcceptsReturn = false;
             this.txtIngresarPin.AcceptsTab = false;
-            this.txtIngresarPin.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtIngresarPin.AnimationSpeed = 200;
             this.txtIngresarPin.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
             this.txtIngresarPin.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
@@ -247,6 +247,7 @@
             this.txtIngresarPin.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtIngresarPin.DefaultFont = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIngresarPin.DefaultText = "";
+            this.txtIngresarPin.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtIngresarPin.FillColor = System.Drawing.Color.White;
             this.txtIngresarPin.HideSelection = true;
             this.txtIngresarPin.IconLeft = null;
@@ -255,7 +256,7 @@
             this.txtIngresarPin.IconRight = null;
             this.txtIngresarPin.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtIngresarPin.Lines = new string[0];
-            this.txtIngresarPin.Location = new System.Drawing.Point(6, 4);
+            this.txtIngresarPin.Location = new System.Drawing.Point(1, 1);
             this.txtIngresarPin.MaxLength = 8;
             this.txtIngresarPin.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtIngresarPin.Modified = false;
@@ -291,7 +292,7 @@
             this.txtIngresarPin.SelectionLength = 0;
             this.txtIngresarPin.SelectionStart = 0;
             this.txtIngresarPin.ShortcutsEnabled = false;
-            this.txtIngresarPin.Size = new System.Drawing.Size(671, 56);
+            this.txtIngresarPin.Size = new System.Drawing.Size(678, 59);
             this.txtIngresarPin.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtIngresarPin.TabIndex = 1;
             this.txtIngresarPin.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -309,12 +310,12 @@
             this.lblOlvidasteContrasena.AutoEllipsis = false;
             this.lblOlvidasteContrasena.Cursor = System.Windows.Forms.Cursors.Default;
             this.lblOlvidasteContrasena.CursorType = System.Windows.Forms.Cursors.Default;
-            this.lblOlvidasteContrasena.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOlvidasteContrasena.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblOlvidasteContrasena.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(86)))), ((int)(((byte)(100)))));
-            this.lblOlvidasteContrasena.Location = new System.Drawing.Point(32, 42);
+            this.lblOlvidasteContrasena.Location = new System.Drawing.Point(48, 42);
             this.lblOlvidasteContrasena.Name = "lblOlvidasteContrasena";
             this.lblOlvidasteContrasena.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblOlvidasteContrasena.Size = new System.Drawing.Size(411, 39);
+            this.lblOlvidasteContrasena.Size = new System.Drawing.Size(376, 36);
             this.lblOlvidasteContrasena.TabIndex = 999;
             this.lblOlvidasteContrasena.Text = "¿Olvidaste tu contraseña?";
             this.lblOlvidasteContrasena.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -350,7 +351,7 @@
             this.btnAtras.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.btnAtras.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
             this.btnAtras.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
-            this.btnAtras.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAtras.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAtras.ForeColor = System.Drawing.Color.White;
             this.btnAtras.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAtras.IconLeftCursor = System.Windows.Forms.Cursors.Default;
@@ -368,7 +369,7 @@
             this.btnAtras.IdleIconLeftImage = null;
             this.btnAtras.IdleIconRightImage = null;
             this.btnAtras.IndicateFocus = false;
-            this.btnAtras.Location = new System.Drawing.Point(372, 318);
+            this.btnAtras.Location = new System.Drawing.Point(366, 318);
             this.btnAtras.Name = "btnAtras";
             this.btnAtras.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnAtras.OnDisabledState.BorderRadius = 5;

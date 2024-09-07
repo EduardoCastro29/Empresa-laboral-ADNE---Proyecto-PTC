@@ -42,6 +42,9 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             Año = FechaActual.Year;
 
             string mesNombre = DateTimeFormatInfo.CurrentInfo.GetMonthName(Mes);
+
+            mesNombre = FormatoPrimeraLetraMes(mesNombre);
+
             ObjCalendario.lblFecha.Text = mesNombre + " " + Año;
 
             static_month = Mes;
@@ -69,8 +72,23 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                 UCDias ObjUCDias = new UCDias();
                 CTRLUCDias ObjDias = new CTRLUCDias(ObjUCDias);
                 ObjDias.days(i);
+
+                if (Año == DateTime.Now.Year && Mes == DateTime.Now.Month && i == DateTime.Now.Day)
+                {
+                    ObjUCDias.ModificarFondo(Color.FromArgb(176, 255, 242)); // Cambia el color de fondo
+                }
+
                 ObjCalendario.daycontainer.Controls.Add(ObjUCDias);
             }
+        }
+        public static string FormatoPrimeraLetraMes(string input)
+        {
+            if (string.IsNullOrEmpty(input))
+            {
+                return input;
+            }
+
+            return char.ToUpper(input[0]) + input.Substring(1);
         }
         private void SiguienteMes(object sender, EventArgs e)
         {
@@ -87,6 +105,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             }
 
             string mesNombre = DateTimeFormatInfo.CurrentInfo.GetMonthName(Mes);
+            mesNombre = FormatoPrimeraLetraMes(mesNombre);
             ObjCalendario.lblFecha.Text = mesNombre + "  " + Año;
 
             static_month = Mes;
@@ -114,6 +133,12 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                 UCDias ObjUCDias = new UCDias();
                 CTRLUCDias ObjDias = new CTRLUCDias(ObjUCDias);
                 ObjDias.days(i);
+
+                if (Año == DateTime.Now.Year && Mes == DateTime.Now.Month && i == DateTime.Now.Day)
+                {
+                    ObjUCDias.ModificarFondo(Color.FromArgb(176, 255, 242)); // Cambia el color de fondo
+                }
+
                 ObjCalendario.daycontainer.Controls.Add(ObjUCDias);
             }
         }
@@ -132,6 +157,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             }
 
             string mesNombre = DateTimeFormatInfo.CurrentInfo.GetMonthName(Mes);
+            mesNombre = FormatoPrimeraLetraMes(mesNombre);
             ObjCalendario.lblFecha.Text = mesNombre + "  " + Año;
 
             static_month = Mes;
@@ -159,6 +185,12 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                 UCDias ObjUCDias = new UCDias();
                 CTRLUCDias ObjDias = new CTRLUCDias(ObjUCDias);
                 ObjDias.days(i);
+
+                if (Año == DateTime.Now.Year && Mes == DateTime.Now.Month && i == DateTime.Now.Day)
+                {
+                    ObjUCDias.ModificarFondo(Color.FromArgb(176, 255, 242)); // Cambia el color de fondo
+                }
+
                 ObjCalendario.daycontainer.Controls.Add(ObjUCDias);
             }
         }

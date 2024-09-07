@@ -55,6 +55,10 @@
             this.lblCitasAtendidas = new Bunifu.UI.WinForms.BunifuLabel();
             this.pnlSombraPanelGrafico = new Bunifu.UI.WinForms.BunifuShadowPanel();
             this.pnlGrafico = new Bunifu.UI.WinForms.BunifuPanel();
+            this.bunifuLabel2 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.dtFechaFinal = new Bunifu.UI.WinForms.BunifuDatePicker();
+            this.dtFechaInicio = new Bunifu.UI.WinForms.BunifuDatePicker();
             this.btnVerEsteMes = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.btnVer30Dias = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.btnOk = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
@@ -78,10 +82,6 @@
             this.lblHistorial = new Bunifu.UI.WinForms.BunifuLabel();
             this.pnlFondoBase = new Bunifu.UI.WinForms.BunifuPanel();
             this.pnlSombraFormulario = new Bunifu.UI.WinForms.BunifuShadowPanel();
-            this.dtFechaInicio = new Bunifu.UI.WinForms.BunifuDatePicker();
-            this.dtFechaFinal = new Bunifu.UI.WinForms.BunifuDatePicker();
-            this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.bunifuLabel2 = new Bunifu.UI.WinForms.BunifuLabel();
             this.pnlFondoDashboard.SuspendLayout();
             this.pnlBienvenida.SuspendLayout();
             this.pnlSombraCitas.SuspendLayout();
@@ -402,6 +402,90 @@
             this.pnlGrafico.Size = new System.Drawing.Size(764, 301);
             this.pnlGrafico.TabIndex = 0;
             // 
+            // bunifuLabel2
+            // 
+            this.bunifuLabel2.AllowParentOverrides = false;
+            this.bunifuLabel2.AutoEllipsis = false;
+            this.bunifuLabel2.CursorType = null;
+            this.bunifuLabel2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuLabel2.Location = new System.Drawing.Point(214, 54);
+            this.bunifuLabel2.Name = "bunifuLabel2";
+            this.bunifuLabel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel2.Size = new System.Drawing.Size(53, 23);
+            this.bunifuLabel2.TabIndex = 19;
+            this.bunifuLabel2.Text = "Hasta";
+            this.bunifuLabel2.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel2.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // bunifuLabel1
+            // 
+            this.bunifuLabel1.AllowParentOverrides = false;
+            this.bunifuLabel1.AutoEllipsis = false;
+            this.bunifuLabel1.CursorType = null;
+            this.bunifuLabel1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuLabel1.Location = new System.Drawing.Point(214, 20);
+            this.bunifuLabel1.Name = "bunifuLabel1";
+            this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel1.Size = new System.Drawing.Size(58, 23);
+            this.bunifuLabel1.TabIndex = 18;
+            this.bunifuLabel1.Text = "Desde";
+            this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // dtFechaFinal
+            // 
+            this.dtFechaFinal.BackColor = System.Drawing.Color.Transparent;
+            this.dtFechaFinal.BorderColor = System.Drawing.Color.Silver;
+            this.dtFechaFinal.BorderRadius = 5;
+            this.dtFechaFinal.Color = System.Drawing.Color.Silver;
+            this.dtFechaFinal.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dtFechaFinal.DateBorderThickness = Bunifu.UI.WinForms.BunifuDatePicker.BorderThickness.Thin;
+            this.dtFechaFinal.DateTextAlign = Bunifu.UI.WinForms.BunifuDatePicker.TextAlign.Left;
+            this.dtFechaFinal.DisabledColor = System.Drawing.Color.Gray;
+            this.dtFechaFinal.DisplayWeekNumbers = false;
+            this.dtFechaFinal.DPHeight = 0;
+            this.dtFechaFinal.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
+            this.dtFechaFinal.Enabled = false;
+            this.dtFechaFinal.FillDatePicker = false;
+            this.dtFechaFinal.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtFechaFinal.ForeColor = System.Drawing.Color.Black;
+            this.dtFechaFinal.Icon = ((System.Drawing.Image)(resources.GetObject("dtFechaFinal.Icon")));
+            this.dtFechaFinal.IconColor = System.Drawing.Color.LightSeaGreen;
+            this.dtFechaFinal.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
+            this.dtFechaFinal.LeftTextMargin = 5;
+            this.dtFechaFinal.Location = new System.Drawing.Point(279, 51);
+            this.dtFechaFinal.MinimumSize = new System.Drawing.Size(4, 32);
+            this.dtFechaFinal.Name = "dtFechaFinal";
+            this.dtFechaFinal.Size = new System.Drawing.Size(273, 32);
+            this.dtFechaFinal.TabIndex = 16;
+            // 
+            // dtFechaInicio
+            // 
+            this.dtFechaInicio.BackColor = System.Drawing.Color.Transparent;
+            this.dtFechaInicio.BorderColor = System.Drawing.Color.Silver;
+            this.dtFechaInicio.BorderRadius = 5;
+            this.dtFechaInicio.Color = System.Drawing.Color.Silver;
+            this.dtFechaInicio.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dtFechaInicio.DateBorderThickness = Bunifu.UI.WinForms.BunifuDatePicker.BorderThickness.Thin;
+            this.dtFechaInicio.DateTextAlign = Bunifu.UI.WinForms.BunifuDatePicker.TextAlign.Left;
+            this.dtFechaInicio.DisabledColor = System.Drawing.Color.Gray;
+            this.dtFechaInicio.DisplayWeekNumbers = false;
+            this.dtFechaInicio.DPHeight = 0;
+            this.dtFechaInicio.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
+            this.dtFechaInicio.Enabled = false;
+            this.dtFechaInicio.FillDatePicker = false;
+            this.dtFechaInicio.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtFechaInicio.ForeColor = System.Drawing.Color.Black;
+            this.dtFechaInicio.Icon = ((System.Drawing.Image)(resources.GetObject("dtFechaInicio.Icon")));
+            this.dtFechaInicio.IconColor = System.Drawing.Color.LightSeaGreen;
+            this.dtFechaInicio.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
+            this.dtFechaInicio.LeftTextMargin = 5;
+            this.dtFechaInicio.Location = new System.Drawing.Point(279, 16);
+            this.dtFechaInicio.MinimumSize = new System.Drawing.Size(4, 32);
+            this.dtFechaInicio.Name = "dtFechaInicio";
+            this.dtFechaInicio.Size = new System.Drawing.Size(273, 32);
+            this.dtFechaInicio.TabIndex = 15;
+            // 
             // btnVerEsteMes
             // 
             this.btnVerEsteMes.AllowAnimations = true;
@@ -433,7 +517,7 @@
             this.btnVerEsteMes.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
             this.btnVerEsteMes.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
             this.btnVerEsteMes.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVerEsteMes.ForeColor = System.Drawing.Color.White;
+            this.btnVerEsteMes.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnVerEsteMes.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnVerEsteMes.IconLeftCursor = System.Windows.Forms.Cursors.Default;
             this.btnVerEsteMes.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
@@ -450,7 +534,7 @@
             this.btnVerEsteMes.IdleIconLeftImage = null;
             this.btnVerEsteMes.IdleIconRightImage = null;
             this.btnVerEsteMes.IndicateFocus = false;
-            this.btnVerEsteMes.Location = new System.Drawing.Point(15, 91);
+            this.btnVerEsteMes.Location = new System.Drawing.Point(16, 91);
             this.btnVerEsteMes.Name = "btnVerEsteMes";
             this.btnVerEsteMes.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnVerEsteMes.OnDisabledState.BorderRadius = 10;
@@ -473,7 +557,7 @@
             this.btnVerEsteMes.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Dash;
             this.btnVerEsteMes.OnIdleState.BorderThickness = 1;
             this.btnVerEsteMes.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(204)))), ((int)(((byte)(192)))));
-            this.btnVerEsteMes.OnIdleState.ForeColor = System.Drawing.Color.White;
+            this.btnVerEsteMes.OnIdleState.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnVerEsteMes.OnIdleState.IconLeftImage = null;
             this.btnVerEsteMes.OnIdleState.IconRightImage = null;
             this.btnVerEsteMes.OnPressedState.BorderColor = System.Drawing.Color.Transparent;
@@ -523,7 +607,7 @@
             this.btnVer30Dias.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
             this.btnVer30Dias.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
             this.btnVer30Dias.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVer30Dias.ForeColor = System.Drawing.Color.White;
+            this.btnVer30Dias.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnVer30Dias.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnVer30Dias.IconLeftCursor = System.Windows.Forms.Cursors.Default;
             this.btnVer30Dias.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
@@ -540,7 +624,7 @@
             this.btnVer30Dias.IdleIconLeftImage = null;
             this.btnVer30Dias.IdleIconRightImage = null;
             this.btnVer30Dias.IndicateFocus = false;
-            this.btnVer30Dias.Location = new System.Drawing.Point(15, 137);
+            this.btnVer30Dias.Location = new System.Drawing.Point(16, 137);
             this.btnVer30Dias.Name = "btnVer30Dias";
             this.btnVer30Dias.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnVer30Dias.OnDisabledState.BorderRadius = 10;
@@ -563,7 +647,7 @@
             this.btnVer30Dias.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Dash;
             this.btnVer30Dias.OnIdleState.BorderThickness = 1;
             this.btnVer30Dias.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(204)))), ((int)(((byte)(192)))));
-            this.btnVer30Dias.OnIdleState.ForeColor = System.Drawing.Color.White;
+            this.btnVer30Dias.OnIdleState.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnVer30Dias.OnIdleState.IconLeftImage = null;
             this.btnVer30Dias.OnIdleState.IconRightImage = null;
             this.btnVer30Dias.OnPressedState.BorderColor = System.Drawing.Color.Transparent;
@@ -613,7 +697,7 @@
             this.btnOk.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
             this.btnOk.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
             this.btnOk.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOk.ForeColor = System.Drawing.Color.White;
+            this.btnOk.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnOk.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnOk.IconLeftCursor = System.Windows.Forms.Cursors.Default;
             this.btnOk.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
@@ -653,7 +737,7 @@
             this.btnOk.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.btnOk.OnIdleState.BorderThickness = 1;
             this.btnOk.OnIdleState.FillColor = System.Drawing.Color.MediumTurquoise;
-            this.btnOk.OnIdleState.ForeColor = System.Drawing.Color.White;
+            this.btnOk.OnIdleState.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnOk.OnIdleState.IconLeftImage = null;
             this.btnOk.OnIdleState.IconRightImage = null;
             this.btnOk.OnPressedState.BorderColor = System.Drawing.Color.Transparent;
@@ -703,7 +787,7 @@
             this.btnVerPersonalizadoDia.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
             this.btnVerPersonalizadoDia.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
             this.btnVerPersonalizadoDia.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVerPersonalizadoDia.ForeColor = System.Drawing.Color.White;
+            this.btnVerPersonalizadoDia.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnVerPersonalizadoDia.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnVerPersonalizadoDia.IconLeftCursor = System.Windows.Forms.Cursors.Default;
             this.btnVerPersonalizadoDia.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
@@ -720,7 +804,7 @@
             this.btnVerPersonalizadoDia.IdleIconLeftImage = null;
             this.btnVerPersonalizadoDia.IdleIconRightImage = null;
             this.btnVerPersonalizadoDia.IndicateFocus = false;
-            this.btnVerPersonalizadoDia.Location = new System.Drawing.Point(15, 20);
+            this.btnVerPersonalizadoDia.Location = new System.Drawing.Point(16, 20);
             this.btnVerPersonalizadoDia.Name = "btnVerPersonalizadoDia";
             this.btnVerPersonalizadoDia.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnVerPersonalizadoDia.OnDisabledState.BorderRadius = 10;
@@ -743,7 +827,7 @@
             this.btnVerPersonalizadoDia.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Dash;
             this.btnVerPersonalizadoDia.OnIdleState.BorderThickness = 1;
             this.btnVerPersonalizadoDia.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(204)))), ((int)(((byte)(192)))));
-            this.btnVerPersonalizadoDia.OnIdleState.ForeColor = System.Drawing.Color.White;
+            this.btnVerPersonalizadoDia.OnIdleState.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnVerPersonalizadoDia.OnIdleState.IconLeftImage = null;
             this.btnVerPersonalizadoDia.OnIdleState.IconRightImage = null;
             this.btnVerPersonalizadoDia.OnPressedState.BorderColor = System.Drawing.Color.Transparent;
@@ -793,7 +877,7 @@
             this.btnVerEsteDia.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
             this.btnVerEsteDia.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
             this.btnVerEsteDia.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVerEsteDia.ForeColor = System.Drawing.Color.White;
+            this.btnVerEsteDia.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnVerEsteDia.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnVerEsteDia.IconLeftCursor = System.Windows.Forms.Cursors.Default;
             this.btnVerEsteDia.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
@@ -810,7 +894,7 @@
             this.btnVerEsteDia.IdleIconLeftImage = null;
             this.btnVerEsteDia.IdleIconRightImage = null;
             this.btnVerEsteDia.IndicateFocus = false;
-            this.btnVerEsteDia.Location = new System.Drawing.Point(15, 229);
+            this.btnVerEsteDia.Location = new System.Drawing.Point(16, 229);
             this.btnVerEsteDia.Name = "btnVerEsteDia";
             this.btnVerEsteDia.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnVerEsteDia.OnDisabledState.BorderRadius = 10;
@@ -833,7 +917,7 @@
             this.btnVerEsteDia.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Dash;
             this.btnVerEsteDia.OnIdleState.BorderThickness = 1;
             this.btnVerEsteDia.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(204)))), ((int)(((byte)(192)))));
-            this.btnVerEsteDia.OnIdleState.ForeColor = System.Drawing.Color.White;
+            this.btnVerEsteDia.OnIdleState.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnVerEsteDia.OnIdleState.IconLeftImage = null;
             this.btnVerEsteDia.OnIdleState.IconRightImage = null;
             this.btnVerEsteDia.OnPressedState.BorderColor = System.Drawing.Color.Transparent;
@@ -883,7 +967,7 @@
             this.btnVer7Dias.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
             this.btnVer7Dias.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
             this.btnVer7Dias.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVer7Dias.ForeColor = System.Drawing.Color.White;
+            this.btnVer7Dias.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnVer7Dias.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnVer7Dias.IconLeftCursor = System.Windows.Forms.Cursors.Default;
             this.btnVer7Dias.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
@@ -900,7 +984,7 @@
             this.btnVer7Dias.IdleIconLeftImage = null;
             this.btnVer7Dias.IdleIconRightImage = null;
             this.btnVer7Dias.IndicateFocus = false;
-            this.btnVer7Dias.Location = new System.Drawing.Point(15, 183);
+            this.btnVer7Dias.Location = new System.Drawing.Point(16, 183);
             this.btnVer7Dias.Name = "btnVer7Dias";
             this.btnVer7Dias.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnVer7Dias.OnDisabledState.BorderRadius = 10;
@@ -923,7 +1007,7 @@
             this.btnVer7Dias.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Dash;
             this.btnVer7Dias.OnIdleState.BorderThickness = 1;
             this.btnVer7Dias.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(204)))), ((int)(((byte)(192)))));
-            this.btnVer7Dias.OnIdleState.ForeColor = System.Drawing.Color.White;
+            this.btnVer7Dias.OnIdleState.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnVer7Dias.OnIdleState.IconLeftImage = null;
             this.btnVer7Dias.OnIdleState.IconRightImage = null;
             this.btnVer7Dias.OnPressedState.BorderColor = System.Drawing.Color.Transparent;
@@ -1220,7 +1304,7 @@
             this.btnHistorial.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
             this.btnHistorial.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
             this.btnHistorial.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHistorial.ForeColor = System.Drawing.Color.White;
+            this.btnHistorial.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnHistorial.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnHistorial.IconLeftCursor = System.Windows.Forms.Cursors.Hand;
             this.btnHistorial.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
@@ -1237,7 +1321,7 @@
             this.btnHistorial.IdleIconLeftImage = null;
             this.btnHistorial.IdleIconRightImage = null;
             this.btnHistorial.IndicateFocus = false;
-            this.btnHistorial.Location = new System.Drawing.Point(352, 43);
+            this.btnHistorial.Location = new System.Drawing.Point(352, 44);
             this.btnHistorial.Name = "btnHistorial";
             this.btnHistorial.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnHistorial.OnDisabledState.BorderRadius = 37;
@@ -1260,7 +1344,7 @@
             this.btnHistorial.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.btnHistorial.OnIdleState.BorderThickness = 1;
             this.btnHistorial.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(172)))), ((int)(((byte)(158)))));
-            this.btnHistorial.OnIdleState.ForeColor = System.Drawing.Color.White;
+            this.btnHistorial.OnIdleState.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnHistorial.OnIdleState.IconLeftImage = null;
             this.btnHistorial.OnIdleState.IconRightImage = null;
             this.btnHistorial.OnPressedState.BorderColor = System.Drawing.Color.Transparent;
@@ -1333,88 +1417,6 @@
             this.pnlSombraFormulario.Size = new System.Drawing.Size(991, 707);
             this.pnlSombraFormulario.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Lowered;
             this.pnlSombraFormulario.TabIndex = 2;
-            // 
-            // dtFechaInicio
-            // 
-            this.dtFechaInicio.BackColor = System.Drawing.Color.Transparent;
-            this.dtFechaInicio.BorderColor = System.Drawing.Color.Silver;
-            this.dtFechaInicio.BorderRadius = 5;
-            this.dtFechaInicio.Color = System.Drawing.Color.Silver;
-            this.dtFechaInicio.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dtFechaInicio.DateBorderThickness = Bunifu.UI.WinForms.BunifuDatePicker.BorderThickness.Thin;
-            this.dtFechaInicio.DateTextAlign = Bunifu.UI.WinForms.BunifuDatePicker.TextAlign.Left;
-            this.dtFechaInicio.DisabledColor = System.Drawing.Color.Gray;
-            this.dtFechaInicio.DisplayWeekNumbers = false;
-            this.dtFechaInicio.DPHeight = 0;
-            this.dtFechaInicio.Enabled = false;
-            this.dtFechaInicio.FillDatePicker = false;
-            this.dtFechaInicio.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtFechaInicio.ForeColor = System.Drawing.Color.Black;
-            this.dtFechaInicio.Icon = ((System.Drawing.Image)(resources.GetObject("dtFechaInicio.Icon")));
-            this.dtFechaInicio.IconColor = System.Drawing.Color.LightSeaGreen;
-            this.dtFechaInicio.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
-            this.dtFechaInicio.LeftTextMargin = 5;
-            this.dtFechaInicio.Location = new System.Drawing.Point(279, 16);
-            this.dtFechaInicio.MinimumSize = new System.Drawing.Size(0, 32);
-            this.dtFechaInicio.Name = "dtFechaInicio";
-            this.dtFechaInicio.Size = new System.Drawing.Size(273, 32);
-            this.dtFechaInicio.TabIndex = 15;
-            // 
-            // dtFechaFinal
-            // 
-            this.dtFechaFinal.BackColor = System.Drawing.Color.Transparent;
-            this.dtFechaFinal.BorderColor = System.Drawing.Color.Silver;
-            this.dtFechaFinal.BorderRadius = 5;
-            this.dtFechaFinal.Color = System.Drawing.Color.Silver;
-            this.dtFechaFinal.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dtFechaFinal.DateBorderThickness = Bunifu.UI.WinForms.BunifuDatePicker.BorderThickness.Thin;
-            this.dtFechaFinal.DateTextAlign = Bunifu.UI.WinForms.BunifuDatePicker.TextAlign.Left;
-            this.dtFechaFinal.DisabledColor = System.Drawing.Color.Gray;
-            this.dtFechaFinal.DisplayWeekNumbers = false;
-            this.dtFechaFinal.DPHeight = 0;
-            this.dtFechaFinal.Enabled = false;
-            this.dtFechaFinal.FillDatePicker = false;
-            this.dtFechaFinal.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtFechaFinal.ForeColor = System.Drawing.Color.Black;
-            this.dtFechaFinal.Icon = ((System.Drawing.Image)(resources.GetObject("dtFechaFinal.Icon")));
-            this.dtFechaFinal.IconColor = System.Drawing.Color.LightSeaGreen;
-            this.dtFechaFinal.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
-            this.dtFechaFinal.LeftTextMargin = 5;
-            this.dtFechaFinal.Location = new System.Drawing.Point(279, 51);
-            this.dtFechaFinal.MinimumSize = new System.Drawing.Size(0, 32);
-            this.dtFechaFinal.Name = "dtFechaFinal";
-            this.dtFechaFinal.Size = new System.Drawing.Size(273, 32);
-            this.dtFechaFinal.TabIndex = 16;
-            // 
-            // bunifuLabel1
-            // 
-            this.bunifuLabel1.AllowParentOverrides = false;
-            this.bunifuLabel1.AutoEllipsis = false;
-            this.bunifuLabel1.CursorType = null;
-            this.bunifuLabel1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuLabel1.Location = new System.Drawing.Point(214, 20);
-            this.bunifuLabel1.Name = "bunifuLabel1";
-            this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel1.Size = new System.Drawing.Size(58, 23);
-            this.bunifuLabel1.TabIndex = 18;
-            this.bunifuLabel1.Text = "Desde";
-            this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // bunifuLabel2
-            // 
-            this.bunifuLabel2.AllowParentOverrides = false;
-            this.bunifuLabel2.AutoEllipsis = false;
-            this.bunifuLabel2.CursorType = null;
-            this.bunifuLabel2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuLabel2.Location = new System.Drawing.Point(214, 54);
-            this.bunifuLabel2.Name = "bunifuLabel2";
-            this.bunifuLabel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel2.Size = new System.Drawing.Size(53, 23);
-            this.bunifuLabel2.TabIndex = 19;
-            this.bunifuLabel2.Text = "Hasta";
-            this.bunifuLabel2.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel2.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // ActividadesForm
             // 

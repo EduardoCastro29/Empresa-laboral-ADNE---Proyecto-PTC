@@ -423,13 +423,7 @@
         Ye63Q/f56LrjoYZPhwMbAAAAmLSuO6sWi+9j0Y6jqv4Bd0tb6IYCGnAAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="lblEstadoDeLaCitaPlanilla.BaseStylesheet" xml:space="preserve">
-    <value>#bunifu-label { padding: 0px; font-family: 'Century Gothic'; font-size: 12pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(245, 245, 245); text-align: left; }</value>
-  </data>
-  <data name="lblHoraPlanilla.BaseStylesheet" xml:space="preserve">
-    <value>#bunifu-label { padding: 0px; font-family: 'Century Gothic'; font-size: 12pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(245, 245, 245); text-align: left; }</value>
-  </data>
-  <data name="lblFechaPlanilla.BaseStylesheet" xml:space="preserve">
+  <data name="lblDUI.BaseStylesheet" xml:space="preserve">
     <value>#bunifu-label { padding: 0px; font-family: 'Century Gothic'; font-size: 12pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(245, 245, 245); text-align: left; }</value>
   </data>
   <data name="lblExpedientesPlanillas.BaseStylesheet" xml:space="preserve">

@@ -1,5 +1,4 @@
-﻿using Empresa_laboral_ADNE___Proyecto_PTC.Controlador;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,12 +10,11 @@ using System.Windows.Forms;
 
 namespace Empresa_laboral_ADNE___Proyecto_PTC.Vista
 {
-    public partial class VerCitasForm : Form
+    public partial class AgregarConexion : Form
     {
-        public VerCitasForm()
+        public AgregarConexion()
         {
             InitializeComponent();
-            CTRLVerCitas ObjControladorVerCitas = new CTRLVerCitas(this);
         }
     }
 }

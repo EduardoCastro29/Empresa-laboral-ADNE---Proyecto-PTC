@@ -214,12 +214,12 @@
             this.lblOlvidasteContrasena.AutoEllipsis = false;
             this.lblOlvidasteContrasena.Cursor = System.Windows.Forms.Cursors.Default;
             this.lblOlvidasteContrasena.CursorType = System.Windows.Forms.Cursors.Default;
-            this.lblOlvidasteContrasena.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOlvidasteContrasena.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblOlvidasteContrasena.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(86)))), ((int)(((byte)(100)))));
-            this.lblOlvidasteContrasena.Location = new System.Drawing.Point(37, 42);
+            this.lblOlvidasteContrasena.Location = new System.Drawing.Point(37, 38);
             this.lblOlvidasteContrasena.Name = "lblOlvidasteContrasena";
             this.lblOlvidasteContrasena.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblOlvidasteContrasena.Size = new System.Drawing.Size(411, 39);
+            this.lblOlvidasteContrasena.Size = new System.Drawing.Size(376, 36);
             this.lblOlvidasteContrasena.TabIndex = 1;
             this.lblOlvidasteContrasena.Text = "¿Olvidaste tu contraseña?";
             this.lblOlvidasteContrasena.TextAlignment = System.Drawing.ContentAlignment.TopLeft;

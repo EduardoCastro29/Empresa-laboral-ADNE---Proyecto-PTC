@@ -38,12 +38,26 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador.Controlador_UC_Calenda
         //Cambio de color cuando el cursor se encuentra sobre el User control
         public void HoverUC(object sender, EventArgs e)
         {
-            ObjUCDIAS.BackColor = System.Drawing.Color.PaleTurquoise;
+            ObjUCDIAS.BackColor = Color.PaleTurquoise;
         }
         //Este método hace que el UC vuelva a la normalidad
         public void NormalUC(object sender, EventArgs e)
         {
-            ObjUCDIAS.BackColor = System.Drawing.Color.White;
+            int diaActual = DateTime.Now.Day;
+            int mesActual = DateTime.Now.Month;
+            int añoActual = DateTime.Now.Year;
+
+            // Si es el día actual, mantenemos el color LightBlue
+            if (ObjUCDIAS.lblDias.Text == diaActual.ToString() &&
+                CTRLCalendario.static_month == mesActual &&
+                CTRLCalendario.static_year == añoActual)
+            {
+                ObjUCDIAS.BackColor = Color.FromArgb(176, 255, 242); // Mantener color para el día actual
+            }
+            else
+            {
+                ObjUCDIAS.BackColor = Color.White; // Volver al color blanco para otros días
+            }
         }
     }
 }

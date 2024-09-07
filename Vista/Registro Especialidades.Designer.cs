@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistroEspecialidadesForm));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges7 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges8 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges9 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             this.btnCargarImagen = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.btnAnadirEspecialidad = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.lblNombreProfesional = new Bunifu.UI.WinForms.BunifuLabel();
@@ -43,9 +43,9 @@
             this.lblAnadirEspecialidad = new Bunifu.UI.WinForms.BunifuLabel();
             this.picProfesional = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.bunifuGradientPanel3 = new Bunifu.UI.WinForms.BunifuGradientPanel();
+            this.Titulo_Registrar = new Bunifu.UI.WinForms.BunifuLabel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.txtDUIProfesional = new System.Windows.Forms.ToolStripTextBox();
-            this.Titulo_Registrar = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuShadowPanel2 = new Bunifu.UI.WinForms.BunifuShadowPanel();
             this.cmbEspecialidades = new Bunifu.UI.WinForms.BunifuDropdown();
             this.btnSiguiente = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
@@ -75,11 +75,11 @@
             this.btnCargarImagen.ColorContrastOnClick = 45;
             this.btnCargarImagen.ColorContrastOnHover = 45;
             this.btnCargarImagen.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges1.BottomLeft = false;
-            borderEdges1.BottomRight = true;
-            borderEdges1.TopLeft = false;
-            borderEdges1.TopRight = true;
-            this.btnCargarImagen.CustomizableEdges = borderEdges1;
+            borderEdges7.BottomLeft = false;
+            borderEdges7.BottomRight = true;
+            borderEdges7.TopLeft = false;
+            borderEdges7.TopRight = true;
+            this.btnCargarImagen.CustomizableEdges = borderEdges7;
             this.btnCargarImagen.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnCargarImagen.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnCargarImagen.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -164,11 +164,11 @@
             this.btnAnadirEspecialidad.ColorContrastOnClick = 45;
             this.btnAnadirEspecialidad.ColorContrastOnHover = 45;
             this.btnAnadirEspecialidad.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges2.BottomLeft = true;
-            borderEdges2.BottomRight = false;
-            borderEdges2.TopLeft = true;
-            borderEdges2.TopRight = false;
-            this.btnAnadirEspecialidad.CustomizableEdges = borderEdges2;
+            borderEdges8.BottomLeft = true;
+            borderEdges8.BottomRight = false;
+            borderEdges8.TopLeft = true;
+            borderEdges8.TopRight = false;
+            this.btnAnadirEspecialidad.CustomizableEdges = borderEdges8;
             this.btnAnadirEspecialidad.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnAnadirEspecialidad.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnAnadirEspecialidad.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -255,22 +255,22 @@
             this.dgvEspecialidades.AllowUserToAddRows = false;
             this.dgvEspecialidades.AllowUserToResizeColumns = false;
             this.dgvEspecialidades.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(223)))), ((int)(((byte)(223)))));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            this.dgvEspecialidades.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(223)))), ((int)(((byte)(223)))));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
+            this.dgvEspecialidades.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
             this.dgvEspecialidades.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvEspecialidades.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
             this.dgvEspecialidades.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvEspecialidades.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvEspecialidades.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvEspecialidades.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvEspecialidades.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.dgvEspecialidades.ColumnHeadersHeight = 40;
             this.dgvEspecialidades.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(223)))), ((int)(((byte)(223)))));
             this.dgvEspecialidades.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
@@ -290,14 +290,14 @@
             this.dgvEspecialidades.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
             this.dgvEspecialidades.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(178)))), ((int)(((byte)(178)))));
             this.dgvEspecialidades.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(178)))), ((int)(((byte)(178)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvEspecialidades.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(178)))), ((int)(((byte)(178)))));
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvEspecialidades.DefaultCellStyle = dataGridViewCellStyle11;
             this.dgvEspecialidades.EnableHeadersVisualStyles = false;
             this.dgvEspecialidades.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
             this.dgvEspecialidades.HeaderBackColor = System.Drawing.Color.Teal;
@@ -306,14 +306,14 @@
             this.dgvEspecialidades.Location = new System.Drawing.Point(402, 260);
             this.dgvEspecialidades.Name = "dgvEspecialidades";
             this.dgvEspecialidades.ReadOnly = true;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvEspecialidades.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvEspecialidades.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.dgvEspecialidades.RowHeadersVisible = false;
             this.dgvEspecialidades.RowTemplate.Height = 40;
             this.dgvEspecialidades.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -328,7 +328,7 @@
             this.lblAnadirEspecialidad.AutoEllipsis = false;
             this.lblAnadirEspecialidad.CursorType = null;
             this.lblAnadirEspecialidad.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAnadirEspecialidad.Location = new System.Drawing.Point(402, 157);
+            this.lblAnadirEspecialidad.Location = new System.Drawing.Point(402, 165);
             this.lblAnadirEspecialidad.Name = "lblAnadirEspecialidad";
             this.lblAnadirEspecialidad.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblAnadirEspecialidad.Size = new System.Drawing.Size(196, 23);
@@ -369,8 +369,26 @@
             this.bunifuGradientPanel3.Location = new System.Drawing.Point(0, 0);
             this.bunifuGradientPanel3.Name = "bunifuGradientPanel3";
             this.bunifuGradientPanel3.Quality = 10;
-            this.bunifuGradientPanel3.Size = new System.Drawing.Size(1080, 101);
+            this.bunifuGradientPanel3.Size = new System.Drawing.Size(1080, 107);
             this.bunifuGradientPanel3.TabIndex = 52;
+            // 
+            // Titulo_Registrar
+            // 
+            this.Titulo_Registrar.AllowParentOverrides = false;
+            this.Titulo_Registrar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Titulo_Registrar.AutoEllipsis = false;
+            this.Titulo_Registrar.Cursor = System.Windows.Forms.Cursors.Default;
+            this.Titulo_Registrar.CursorType = System.Windows.Forms.Cursors.Default;
+            this.Titulo_Registrar.Font = new System.Drawing.Font("Century Gothic", 21.75F);
+            this.Titulo_Registrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(86)))), ((int)(((byte)(100)))));
+            this.Titulo_Registrar.Location = new System.Drawing.Point(51, 33);
+            this.Titulo_Registrar.Name = "Titulo_Registrar";
+            this.Titulo_Registrar.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.Titulo_Registrar.Size = new System.Drawing.Size(215, 36);
+            this.Titulo_Registrar.TabIndex = 0;
+            this.Titulo_Registrar.Text = "Especialidades";
+            this.Titulo_Registrar.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.Titulo_Registrar.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // menuStrip1
             // 
@@ -390,24 +408,6 @@
             this.txtDUIProfesional.Name = "txtDUIProfesional";
             this.txtDUIProfesional.Size = new System.Drawing.Size(116, 23);
             // 
-            // Titulo_Registrar
-            // 
-            this.Titulo_Registrar.AllowParentOverrides = false;
-            this.Titulo_Registrar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Titulo_Registrar.AutoEllipsis = false;
-            this.Titulo_Registrar.Cursor = System.Windows.Forms.Cursors.Default;
-            this.Titulo_Registrar.CursorType = System.Windows.Forms.Cursors.Default;
-            this.Titulo_Registrar.Font = new System.Drawing.Font("Century Gothic", 21.75F);
-            this.Titulo_Registrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(86)))), ((int)(((byte)(100)))));
-            this.Titulo_Registrar.Location = new System.Drawing.Point(51, 30);
-            this.Titulo_Registrar.Name = "Titulo_Registrar";
-            this.Titulo_Registrar.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.Titulo_Registrar.Size = new System.Drawing.Size(215, 36);
-            this.Titulo_Registrar.TabIndex = 0;
-            this.Titulo_Registrar.Text = "Especialidades";
-            this.Titulo_Registrar.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.Titulo_Registrar.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
             // bunifuShadowPanel2
             // 
             this.bunifuShadowPanel2.BackColor = System.Drawing.Color.Transparent;
@@ -425,7 +425,7 @@
             this.bunifuShadowPanel2.ShadowDepth = 5;
             this.bunifuShadowPanel2.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Surrounded;
             this.bunifuShadowPanel2.ShadowTopLeftVisible = false;
-            this.bunifuShadowPanel2.Size = new System.Drawing.Size(1080, 110);
+            this.bunifuShadowPanel2.Size = new System.Drawing.Size(1080, 116);
             this.bunifuShadowPanel2.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
             this.bunifuShadowPanel2.TabIndex = 54;
             // 
@@ -434,7 +434,7 @@
             this.cmbEspecialidades.BackColor = System.Drawing.Color.Transparent;
             this.cmbEspecialidades.BackgroundColor = System.Drawing.Color.White;
             this.cmbEspecialidades.BorderColor = System.Drawing.Color.Silver;
-            this.cmbEspecialidades.BorderRadius = 1;
+            this.cmbEspecialidades.BorderRadius = 5;
             this.cmbEspecialidades.Color = System.Drawing.Color.Silver;
             this.cmbEspecialidades.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
             this.cmbEspecialidades.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
@@ -449,12 +449,12 @@
             this.cmbEspecialidades.FillDropDown = true;
             this.cmbEspecialidades.FillIndicator = false;
             this.cmbEspecialidades.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbEspecialidades.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.cmbEspecialidades.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbEspecialidades.ForeColor = System.Drawing.Color.Black;
             this.cmbEspecialidades.FormattingEnabled = true;
             this.cmbEspecialidades.Icon = null;
             this.cmbEspecialidades.IndicatorAlignment = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
-            this.cmbEspecialidades.IndicatorColor = System.Drawing.Color.DarkGray;
+            this.cmbEspecialidades.IndicatorColor = System.Drawing.Color.Teal;
             this.cmbEspecialidades.IndicatorLocation = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
             this.cmbEspecialidades.IndicatorThickness = 2;
             this.cmbEspecialidades.IsDropdownOpened = false;
@@ -492,11 +492,11 @@
             this.btnSiguiente.ColorContrastOnClick = 45;
             this.btnSiguiente.ColorContrastOnHover = 45;
             this.btnSiguiente.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges3.BottomLeft = true;
-            borderEdges3.BottomRight = true;
-            borderEdges3.TopLeft = true;
-            borderEdges3.TopRight = true;
-            this.btnSiguiente.CustomizableEdges = borderEdges3;
+            borderEdges9.BottomLeft = true;
+            borderEdges9.BottomRight = true;
+            borderEdges9.TopLeft = true;
+            borderEdges9.TopRight = true;
+            this.btnSiguiente.CustomizableEdges = borderEdges9;
             this.btnSiguiente.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnSiguiente.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnSiguiente.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));

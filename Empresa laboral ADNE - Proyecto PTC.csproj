@@ -207,6 +207,12 @@
     <Compile Include="Vista\Administrador.Designer.cs">
       <DependentUpon>Administrador.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\AgregarConexion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\AgregarConexion.Designer.cs">
+      <DependentUpon>AgregarConexion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\Citas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -387,6 +393,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\Administrador.resx">
       <DependentUpon>Administrador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\AgregarConexion.resx">
+      <DependentUpon>AgregarConexion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\Citas.resx">
       <DependentUpon>Citas.cs</DependentUpon>
@@ -596,6 +605,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Personal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dato.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
