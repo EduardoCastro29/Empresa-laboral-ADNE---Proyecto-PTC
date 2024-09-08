@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Empresa_laboral_ADNE___Proyecto_PTC.Controlador;
 using Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO;
 using Empresa_laboral_ADNE___Proyecto_PTC.Vista;
 
@@ -16,12 +17,17 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            //Creamos un objeto de la clase DAOLogin
+            //Creamos las instancias de las clases respectivas para la verificación de formularios
             DAOLogin ObjVerificarUsuarios = new DAOLogin();
             DAOPrimerUsoSistema ObjVerificarEmpresa = new DAOPrimerUsoSistema();
+            /*CommonMethods ObjVerificarDocumentoXML = new CommonMethods();
 
+            if (ObjVerificarDocumentoXML.LeerArchivoXMLConexion() == false)
+            {
+                Application.Run(new AgregarConexion());
+            }
             //Indicamos que formularios se abriran según la consulta SQL
-            if (ObjVerificarEmpresa.VerificarEmpresa() == false)
+            else */if (ObjVerificarEmpresa.VerificarEmpresa() == false)
             {
                 Application.Run(new PrimerUsoSistemaForm());
             }

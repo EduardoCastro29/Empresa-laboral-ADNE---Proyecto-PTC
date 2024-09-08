@@ -8,8 +8,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DTO
 {
     internal class DTOAgregarConexion
     {
-
-        //**** ARCHIVO DE CONEXIÓN ****
+        //Getters y setters para la creación del archivo de conexión
         private static string server;
         private static string database;
         private static string user;

@@ -8,6 +8,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
     internal class CTRLActividades
     {
         readonly ActividadesForm ObjActividadesForm;
+        HistorialForm ObjHistorialForm = null;
 
         public CTRLActividades(ActividadesForm Vista)
         {
@@ -15,6 +16,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             ObjActividadesForm.Load += new EventHandler(CargarInfo);
 
             // Al presionar el boton Ver este dia Se carga el metodo asignado
+            ObjActividadesForm.btnHistorial.Click += new EventHandler(AbrirHistorial);
             ObjActividadesForm.btnVerEsteDia.Click += new EventHandler(CargarGraficoEsteDia);
             ObjActividadesForm.btnVer7Dias.Click += new EventHandler(CargarGraficoUltimos7Dias);
             ObjActividadesForm.btnVer30Dias.Click += new EventHandler(CargarGraficoUltimos30Dias);
@@ -22,6 +24,20 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             ObjActividadesForm.btnVerPersonalizadoDia.Click += new EventHandler(CargarGraficoPersonalizado);
             ObjActividadesForm.btnOk.Click += new EventHandler(CargarGraficoPersonalizadoOK);
         }
+        #region Abrir Historial desde el formulario de actividades
+        private void AbrirHistorial(object sender, EventArgs e)
+        {
+            if (ObjHistorialForm == null || ObjHistorialForm.IsDisposed)
+            {
+                ObjHistorialForm = new HistorialForm();
+                ObjHistorialForm.Show();
+            }
+            else
+            {
+                ObjHistorialForm.BringToFront();
+            }
+        }
+        #endregion
         #region GraficoChart 
         private void CargarGraficoEsteDia(object Sender, EventArgs e)
         {

@@ -27,7 +27,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Vista
         public AgendarCitaForm()
         {
             InitializeComponent();
-            this.FormBorderStyle = FormBorderStyle.None;
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 15, 15));
 
             CTRLAgendarCita ObjAgendarCitaControlador = new CTRLAgendarCita(this);

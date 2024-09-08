@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Empresa_laboral_ADNE___Proyecto_PTC.Vista
 {
-    public partial class Preguntas_de_Seguridad : Form
+    public partial class PreguntasdeSeguridadForm : Form
     {
-        public Preguntas_de_Seguridad()
+        public PreguntasdeSeguridadForm()
         {
             InitializeComponent();
         }

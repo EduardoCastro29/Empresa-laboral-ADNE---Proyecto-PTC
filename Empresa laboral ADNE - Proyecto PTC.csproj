@@ -116,6 +116,7 @@
     <Compile Include="Controlador\Controlador UC Calendario\CTRLUCDias.cs" />
     <Compile Include="Controlador\Controlador UC Pacientes\CTRLPacienteUC.cs" />
     <Compile Include="Controlador\CTRLAgregarConexion.cs" />
+    <Compile Include="Controlador\CTRLPreguntasSeguridad.cs" />
     <Compile Include="Controlador\CTRLPrimerUsoSistema.cs" />
     <Compile Include="Controlador\CTRLActividades.cs" />
     <Compile Include="Controlador\CTRLActualizarContrasena.cs" />
@@ -159,6 +160,7 @@
     <Compile Include="Modelo\DAO\DAONuevoPaciente.cs" />
     <Compile Include="Modelo\DAO\DAOPacientes.cs" />
     <Compile Include="Modelo\DAO\DAOPinAcceso.cs" />
+    <Compile Include="Modelo\DAO\DAOPreguntasSeguridad.cs" />
     <Compile Include="Modelo\DAO\DAOPrimerUsoSistema.cs" />
     <Compile Include="Modelo\DAO\DAORegistro.cs" />
     <Compile Include="Modelo\DAO\DAORegistroEspecialidad.cs" />
@@ -183,6 +185,7 @@
     <Compile Include="Modelo\DTO\DTONuevoPaciente.cs" />
     <Compile Include="Modelo\DTO\DTOPacientes.cs" />
     <Compile Include="Modelo\DTO\DTOPinAcceso.cs" />
+    <Compile Include="Modelo\DTO\DTOPreguntasSeguridad.cs" />
     <Compile Include="Modelo\DTO\DTOPrimerUsoSistema.cs" />
     <Compile Include="Modelo\DTO\DTORegistro.cs" />
     <Compile Include="Modelo\DTO\DTORegistroEspecialidad.cs" />

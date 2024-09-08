@@ -26,9 +26,9 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
         }
         private void MetodoPreguntasAutenticacion(object sender, EventArgs e)
         {
-            //DirecciónGmailForm ObjDireccionMetodo = new DirecciónGmailForm();
-            //ObjRecuperarContrasenaForm.Hide();
-            //ObjDireccionMetodo.Show();
+            PreguntasdeSeguridadForm ObjPreguntasSMetodo = new PreguntasdeSeguridadForm();
+            ObjRecuperarContrasenaForm.Hide();
+            ObjPreguntasSMetodo.Show();
         }
     }
 }
