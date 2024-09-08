@@ -112,6 +112,9 @@
             // 
             // bunifuGradientPanel3
             // 
+            this.bunifuGradientPanel3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.bunifuGradientPanel3.BackColor = System.Drawing.Color.Transparent;
             this.bunifuGradientPanel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel3.BackgroundImage")));
             this.bunifuGradientPanel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -167,6 +170,8 @@
             // 
             // pnlTituloGradiente
             // 
+            this.pnlTituloGradiente.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlTituloGradiente.BackColor = System.Drawing.Color.Transparent;
             this.pnlTituloGradiente.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlTituloGradiente.BackgroundImage")));
             this.pnlTituloGradiente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
