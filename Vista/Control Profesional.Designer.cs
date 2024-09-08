@@ -29,48 +29,17 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Control_Profesional));
-            this.bunifuShadowPanel1 = new Bunifu.UI.WinForms.BunifuShadowPanel();
             this.lblEspecialidad = new Bunifu.UI.WinForms.BunifuLabel();
             this.lblEmail = new Bunifu.UI.WinForms.BunifuLabel();
             this.lblCorreo = new Bunifu.UI.WinForms.BunifuLabel();
             this.lblEspecialidades = new Bunifu.UI.WinForms.BunifuLabel();
             this.lblIdProfesional = new Bunifu.UI.WinForms.BunifuLabel();
             this.lblNombreProfesional = new Bunifu.UI.WinForms.BunifuLabel();
-            this.bunifuGradientPanel1 = new Bunifu.UI.WinForms.BunifuGradientPanel();
-            this.bunifuPictureBox1 = new Bunifu.UI.WinForms.BunifuPictureBox();
-            this.bunifuShadowPanel1.SuspendLayout();
-            this.bunifuGradientPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).BeginInit();
+            this.pbProfesional = new System.Windows.Forms.PictureBox();
+            this.pnlProfesional = new Bunifu.UI.WinForms.BunifuPanel();
+            ((System.ComponentModel.ISupportInitialize)(this.pbProfesional)).BeginInit();
+            this.pnlProfesional.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // bunifuShadowPanel1
-            // 
-            this.bunifuShadowPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.bunifuShadowPanel1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuShadowPanel1.BorderColor = System.Drawing.Color.WhiteSmoke;
-            this.bunifuShadowPanel1.BorderRadius = 15;
-            this.bunifuShadowPanel1.BorderThickness = 1;
-            this.bunifuShadowPanel1.Controls.Add(this.lblEspecialidad);
-            this.bunifuShadowPanel1.Controls.Add(this.lblEmail);
-            this.bunifuShadowPanel1.Controls.Add(this.lblCorreo);
-            this.bunifuShadowPanel1.Controls.Add(this.lblEspecialidades);
-            this.bunifuShadowPanel1.Controls.Add(this.lblIdProfesional);
-            this.bunifuShadowPanel1.Controls.Add(this.lblNombreProfesional);
-            this.bunifuShadowPanel1.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
-            this.bunifuShadowPanel1.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
-            this.bunifuShadowPanel1.Location = new System.Drawing.Point(226, 8);
-            this.bunifuShadowPanel1.Name = "bunifuShadowPanel1";
-            this.bunifuShadowPanel1.PanelColor = System.Drawing.Color.WhiteSmoke;
-            this.bunifuShadowPanel1.PanelColor2 = System.Drawing.Color.WhiteSmoke;
-            this.bunifuShadowPanel1.ShadowColor = System.Drawing.Color.Gray;
-            this.bunifuShadowPanel1.ShadowDept = 2;
-            this.bunifuShadowPanel1.ShadowDepth = 5;
-            this.bunifuShadowPanel1.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Surrounded;
-            this.bunifuShadowPanel1.ShadowTopLeftVisible = false;
-            this.bunifuShadowPanel1.Size = new System.Drawing.Size(617, 184);
-            this.bunifuShadowPanel1.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
-            this.bunifuShadowPanel1.TabIndex = 2;
             // 
             // lblEspecialidad
             // 
@@ -78,7 +47,7 @@
             this.lblEspecialidad.AutoEllipsis = false;
             this.lblEspecialidad.CursorType = null;
             this.lblEspecialidad.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
-            this.lblEspecialidad.Location = new System.Drawing.Point(158, 141);
+            this.lblEspecialidad.Location = new System.Drawing.Point(148, 122);
             this.lblEspecialidad.Name = "lblEspecialidad";
             this.lblEspecialidad.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblEspecialidad.Size = new System.Drawing.Size(428, 19);
@@ -93,7 +62,7 @@
             this.lblEmail.AutoEllipsis = false;
             this.lblEmail.CursorType = null;
             this.lblEmail.Font = new System.Drawing.Font("Century Gothic", 14.25F);
-            this.lblEmail.Location = new System.Drawing.Point(210, 81);
+            this.lblEmail.Location = new System.Drawing.Point(203, 78);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblEmail.Size = new System.Drawing.Size(173, 22);
@@ -108,7 +77,7 @@
             this.lblCorreo.AutoEllipsis = false;
             this.lblCorreo.CursorType = null;
             this.lblCorreo.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold);
-            this.lblCorreo.Location = new System.Drawing.Point(29, 79);
+            this.lblCorreo.Location = new System.Drawing.Point(21, 77);
             this.lblCorreo.Name = "lblCorreo";
             this.lblCorreo.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblCorreo.Size = new System.Drawing.Size(176, 23);
@@ -123,7 +92,7 @@
             this.lblEspecialidades.AutoEllipsis = false;
             this.lblEspecialidades.CursorType = null;
             this.lblEspecialidades.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
-            this.lblEspecialidades.Location = new System.Drawing.Point(29, 141);
+            this.lblEspecialidades.Location = new System.Drawing.Point(21, 122);
             this.lblEspecialidades.Name = "lblEspecialidades";
             this.lblEspecialidades.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblEspecialidades.Size = new System.Drawing.Size(121, 19);
@@ -139,7 +108,7 @@
             this.lblIdProfesional.AutoEllipsis = false;
             this.lblIdProfesional.CursorType = null;
             this.lblIdProfesional.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Italic);
-            this.lblIdProfesional.Location = new System.Drawing.Point(493, 31);
+            this.lblIdProfesional.Location = new System.Drawing.Point(488, 22);
             this.lblIdProfesional.Name = "lblIdProfesional";
             this.lblIdProfesional.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblIdProfesional.Size = new System.Drawing.Size(95, 19);
@@ -155,7 +124,7 @@
             this.lblNombreProfesional.Cursor = System.Windows.Forms.Cursors.Default;
             this.lblNombreProfesional.CursorType = System.Windows.Forms.Cursors.Default;
             this.lblNombreProfesional.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombreProfesional.Location = new System.Drawing.Point(29, 30);
+            this.lblNombreProfesional.Location = new System.Drawing.Point(21, 22);
             this.lblNombreProfesional.Name = "lblNombreProfesional";
             this.lblNombreProfesional.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblNombreProfesional.Size = new System.Drawing.Size(217, 23);
@@ -164,67 +133,63 @@
             this.lblNombreProfesional.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lblNombreProfesional.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
-            // bunifuGradientPanel1
+            // pbProfesional
             // 
-            this.bunifuGradientPanel1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
-            this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuGradientPanel1.BorderRadius = 15;
-            this.bunifuGradientPanel1.Controls.Add(this.bunifuPictureBox1);
-            this.bunifuGradientPanel1.GradientBottomLeft = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(191)))), ((int)(((byte)(197)))));
-            this.bunifuGradientPanel1.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(165)))), ((int)(((byte)(171)))));
-            this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(207)))), ((int)(((byte)(214)))));
-            this.bunifuGradientPanel1.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(183)))), ((int)(((byte)(188)))));
-            this.bunifuGradientPanel1.Location = new System.Drawing.Point(14, 14);
-            this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
-            this.bunifuGradientPanel1.Quality = 10;
-            this.bunifuGradientPanel1.Size = new System.Drawing.Size(204, 173);
-            this.bunifuGradientPanel1.TabIndex = 0;
+            this.pbProfesional.Image = global::Empresa_laboral_ADNE___Proyecto_PTC.Properties.Resources.Frame_34__1_;
+            this.pbProfesional.Location = new System.Drawing.Point(11, 6);
+            this.pbProfesional.Name = "pbProfesional";
+            this.pbProfesional.Size = new System.Drawing.Size(209, 187);
+            this.pbProfesional.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbProfesional.TabIndex = 3;
+            this.pbProfesional.TabStop = false;
             // 
-            // bunifuPictureBox1
+            // pnlProfesional
             // 
-            this.bunifuPictureBox1.AllowFocused = false;
-            this.bunifuPictureBox1.AutoSizeHeight = true;
-            this.bunifuPictureBox1.BorderRadius = 102;
-            this.bunifuPictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bunifuPictureBox1.Image = global::Empresa_laboral_ADNE___Proyecto_PTC.Properties.Resources.Equipo_de_Trabajo;
-            this.bunifuPictureBox1.IsCircle = false;
-            this.bunifuPictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.bunifuPictureBox1.Name = "bunifuPictureBox1";
-            this.bunifuPictureBox1.Size = new System.Drawing.Size(204, 173);
-            this.bunifuPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.bunifuPictureBox1.TabIndex = 0;
-            this.bunifuPictureBox1.TabStop = false;
-            this.bunifuPictureBox1.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Custom;
+            this.pnlProfesional.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlProfesional.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.pnlProfesional.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlProfesional.BackgroundImage")));
+            this.pnlProfesional.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnlProfesional.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.pnlProfesional.BorderRadius = 25;
+            this.pnlProfesional.BorderThickness = 5;
+            this.pnlProfesional.Controls.Add(this.lblEmail);
+            this.pnlProfesional.Controls.Add(this.lblIdProfesional);
+            this.pnlProfesional.Controls.Add(this.lblNombreProfesional);
+            this.pnlProfesional.Controls.Add(this.lblCorreo);
+            this.pnlProfesional.Controls.Add(this.lblEspecialidades);
+            this.pnlProfesional.Controls.Add(this.lblEspecialidad);
+            this.pnlProfesional.Location = new System.Drawing.Point(226, 14);
+            this.pnlProfesional.Name = "pnlProfesional";
+            this.pnlProfesional.ShowBorders = true;
+            this.pnlProfesional.Size = new System.Drawing.Size(613, 165);
+            this.pnlProfesional.TabIndex = 4;
             // 
             // Control_Profesional
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
-            this.Controls.Add(this.bunifuGradientPanel1);
-            this.Controls.Add(this.bunifuShadowPanel1);
+            this.Controls.Add(this.pnlProfesional);
+            this.Controls.Add(this.pbProfesional);
             this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "Control_Profesional";
-            this.Size = new System.Drawing.Size(856, 200);
-            this.bunifuShadowPanel1.ResumeLayout(false);
-            this.bunifuShadowPanel1.PerformLayout();
-            this.bunifuGradientPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).EndInit();
+            this.Size = new System.Drawing.Size(856, 201);
+            ((System.ComponentModel.ISupportInitialize)(this.pbProfesional)).EndInit();
+            this.pnlProfesional.ResumeLayout(false);
+            this.pnlProfesional.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel1;
         public Bunifu.UI.WinForms.BunifuLabel lblEspecialidad;
         public Bunifu.UI.WinForms.BunifuLabel lblEmail;
         private Bunifu.UI.WinForms.BunifuLabel lblCorreo;
         private Bunifu.UI.WinForms.BunifuLabel lblEspecialidades;
         public Bunifu.UI.WinForms.BunifuLabel lblIdProfesional;
         public Bunifu.UI.WinForms.BunifuLabel lblNombreProfesional;
-        private Bunifu.UI.WinForms.BunifuGradientPanel bunifuGradientPanel1;
-        private Bunifu.UI.WinForms.BunifuPictureBox bunifuPictureBox1;
+        private System.Windows.Forms.PictureBox pbProfesional;
+        private Bunifu.UI.WinForms.BunifuPanel pnlProfesional;
     }
 }

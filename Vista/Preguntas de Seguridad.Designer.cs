@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PreguntasdeSeguridadForm));
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
@@ -46,9 +47,10 @@
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties15 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties16 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             this.pnlGradiente = new Bunifu.UI.WinForms.BunifuGradientPanel();
             this.pnlSombraFondo = new Bunifu.UI.WinForms.BunifuShadowPanel();
+            this.bunifuShadowPanel1 = new Bunifu.UI.WinForms.BunifuShadowPanel();
+            this.btnVerificarPregunta = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.txtCuartaPregunta = new Bunifu.UI.WinForms.BunifuTextBox();
             this.txtTerceraPregunta = new Bunifu.UI.WinForms.BunifuTextBox();
             this.txtSegundaPregunta = new Bunifu.UI.WinForms.BunifuTextBox();
@@ -60,12 +62,10 @@
             this.pnlSombraBoton = new Bunifu.UI.WinForms.BunifuShadowPanel();
             this.btnComprobar = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.lblTitulo = new Bunifu.UI.WinForms.BunifuLabel();
-            this.bunifuShadowPanel1 = new Bunifu.UI.WinForms.BunifuShadowPanel();
-            this.btnVerificarPregunta = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.pnlGradiente.SuspendLayout();
             this.pnlSombraFondo.SuspendLayout();
-            this.pnlSombraBoton.SuspendLayout();
             this.bunifuShadowPanel1.SuspendLayout();
+            this.pnlSombraBoton.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlGradiente
@@ -84,7 +84,7 @@
             this.pnlGradiente.Name = "pnlGradiente";
             this.pnlGradiente.Padding = new System.Windows.Forms.Padding(30);
             this.pnlGradiente.Quality = 10;
-            this.pnlGradiente.Size = new System.Drawing.Size(730, 820);
+            this.pnlGradiente.Size = new System.Drawing.Size(746, 859);
             this.pnlGradiente.TabIndex = 1;
             // 
             // pnlSombraFondo
@@ -117,9 +117,123 @@
             this.pnlSombraFondo.ShadowDepth = 5;
             this.pnlSombraFondo.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Surrounded;
             this.pnlSombraFondo.ShadowTopLeftVisible = false;
-            this.pnlSombraFondo.Size = new System.Drawing.Size(670, 760);
+            this.pnlSombraFondo.Size = new System.Drawing.Size(686, 799);
             this.pnlSombraFondo.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
             this.pnlSombraFondo.TabIndex = 0;
+            // 
+            // bunifuShadowPanel1
+            // 
+            this.bunifuShadowPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.bunifuShadowPanel1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuShadowPanel1.BorderColor = System.Drawing.Color.Transparent;
+            this.bunifuShadowPanel1.BorderRadius = 10;
+            this.bunifuShadowPanel1.BorderThickness = 1;
+            this.bunifuShadowPanel1.Controls.Add(this.btnVerificarPregunta);
+            this.bunifuShadowPanel1.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
+            this.bunifuShadowPanel1.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
+            this.bunifuShadowPanel1.Location = new System.Drawing.Point(303, 688);
+            this.bunifuShadowPanel1.Name = "bunifuShadowPanel1";
+            this.bunifuShadowPanel1.Padding = new System.Windows.Forms.Padding(1, 1, 3, 3);
+            this.bunifuShadowPanel1.PanelColor = System.Drawing.Color.Transparent;
+            this.bunifuShadowPanel1.PanelColor2 = System.Drawing.Color.Transparent;
+            this.bunifuShadowPanel1.ShadowColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.bunifuShadowPanel1.ShadowDept = 2;
+            this.bunifuShadowPanel1.ShadowDepth = 5;
+            this.bunifuShadowPanel1.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Surrounded;
+            this.bunifuShadowPanel1.ShadowTopLeftVisible = false;
+            this.bunifuShadowPanel1.Size = new System.Drawing.Size(163, 65);
+            this.bunifuShadowPanel1.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
+            this.bunifuShadowPanel1.TabIndex = 7;
+            // 
+            // btnVerificarPregunta
+            // 
+            this.btnVerificarPregunta.AllowAnimations = true;
+            this.btnVerificarPregunta.AllowMouseEffects = true;
+            this.btnVerificarPregunta.AllowToggling = false;
+            this.btnVerificarPregunta.AnimationSpeed = 200;
+            this.btnVerificarPregunta.AutoGenerateColors = false;
+            this.btnVerificarPregunta.AutoRoundBorders = false;
+            this.btnVerificarPregunta.AutoSizeLeftIcon = true;
+            this.btnVerificarPregunta.AutoSizeRightIcon = true;
+            this.btnVerificarPregunta.BackColor = System.Drawing.Color.Transparent;
+            this.btnVerificarPregunta.BackColor1 = System.Drawing.Color.LightSeaGreen;
+            this.btnVerificarPregunta.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnVerificarPregunta.BackgroundImage")));
+            this.btnVerificarPregunta.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btnVerificarPregunta.ButtonText = "Verificar";
+            this.btnVerificarPregunta.ButtonTextMarginLeft = 0;
+            this.btnVerificarPregunta.ColorContrastOnClick = 45;
+            this.btnVerificarPregunta.ColorContrastOnHover = 45;
+            this.btnVerificarPregunta.Cursor = System.Windows.Forms.Cursors.Hand;
+            borderEdges1.BottomLeft = true;
+            borderEdges1.BottomRight = true;
+            borderEdges1.TopLeft = true;
+            borderEdges1.TopRight = true;
+            this.btnVerificarPregunta.CustomizableEdges = borderEdges1;
+            this.btnVerificarPregunta.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnVerificarPregunta.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btnVerificarPregunta.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btnVerificarPregunta.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btnVerificarPregunta.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnVerificarPregunta.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
+            this.btnVerificarPregunta.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVerificarPregunta.ForeColor = System.Drawing.Color.White;
+            this.btnVerificarPregunta.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnVerificarPregunta.IconLeftCursor = System.Windows.Forms.Cursors.Hand;
+            this.btnVerificarPregunta.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
+            this.btnVerificarPregunta.IconMarginLeft = 11;
+            this.btnVerificarPregunta.IconPadding = 10;
+            this.btnVerificarPregunta.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnVerificarPregunta.IconRightCursor = System.Windows.Forms.Cursors.Hand;
+            this.btnVerificarPregunta.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
+            this.btnVerificarPregunta.IconSize = 25;
+            this.btnVerificarPregunta.IdleBorderColor = System.Drawing.Color.Transparent;
+            this.btnVerificarPregunta.IdleBorderRadius = 15;
+            this.btnVerificarPregunta.IdleBorderThickness = 1;
+            this.btnVerificarPregunta.IdleFillColor = System.Drawing.Color.LightSeaGreen;
+            this.btnVerificarPregunta.IdleIconLeftImage = null;
+            this.btnVerificarPregunta.IdleIconRightImage = null;
+            this.btnVerificarPregunta.IndicateFocus = false;
+            this.btnVerificarPregunta.Location = new System.Drawing.Point(1, 1);
+            this.btnVerificarPregunta.Name = "btnVerificarPregunta";
+            this.btnVerificarPregunta.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btnVerificarPregunta.OnDisabledState.BorderRadius = 15;
+            this.btnVerificarPregunta.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btnVerificarPregunta.OnDisabledState.BorderThickness = 1;
+            this.btnVerificarPregunta.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btnVerificarPregunta.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btnVerificarPregunta.OnDisabledState.IconLeftImage = null;
+            this.btnVerificarPregunta.OnDisabledState.IconRightImage = null;
+            this.btnVerificarPregunta.onHoverState.BorderColor = System.Drawing.Color.Transparent;
+            this.btnVerificarPregunta.onHoverState.BorderRadius = 15;
+            this.btnVerificarPregunta.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btnVerificarPregunta.onHoverState.BorderThickness = 1;
+            this.btnVerificarPregunta.onHoverState.FillColor = System.Drawing.Color.MediumTurquoise;
+            this.btnVerificarPregunta.onHoverState.ForeColor = System.Drawing.Color.White;
+            this.btnVerificarPregunta.onHoverState.IconLeftImage = null;
+            this.btnVerificarPregunta.onHoverState.IconRightImage = null;
+            this.btnVerificarPregunta.OnIdleState.BorderColor = System.Drawing.Color.Transparent;
+            this.btnVerificarPregunta.OnIdleState.BorderRadius = 15;
+            this.btnVerificarPregunta.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btnVerificarPregunta.OnIdleState.BorderThickness = 1;
+            this.btnVerificarPregunta.OnIdleState.FillColor = System.Drawing.Color.LightSeaGreen;
+            this.btnVerificarPregunta.OnIdleState.ForeColor = System.Drawing.Color.White;
+            this.btnVerificarPregunta.OnIdleState.IconLeftImage = null;
+            this.btnVerificarPregunta.OnIdleState.IconRightImage = null;
+            this.btnVerificarPregunta.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(166)))), ((int)(((byte)(158)))));
+            this.btnVerificarPregunta.OnPressedState.BorderRadius = 15;
+            this.btnVerificarPregunta.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btnVerificarPregunta.OnPressedState.BorderThickness = 1;
+            this.btnVerificarPregunta.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(166)))), ((int)(((byte)(158)))));
+            this.btnVerificarPregunta.OnPressedState.ForeColor = System.Drawing.Color.White;
+            this.btnVerificarPregunta.OnPressedState.IconLeftImage = null;
+            this.btnVerificarPregunta.OnPressedState.IconRightImage = null;
+            this.btnVerificarPregunta.Size = new System.Drawing.Size(159, 61);
+            this.btnVerificarPregunta.TabIndex = 5;
+            this.btnVerificarPregunta.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnVerificarPregunta.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnVerificarPregunta.TextMarginLeft = 0;
+            this.btnVerificarPregunta.TextPadding = new System.Windows.Forms.Padding(0);
+            this.btnVerificarPregunta.UseDefaultRadiusAndThickness = true;
             // 
             // txtCuartaPregunta
             // 
@@ -188,7 +302,7 @@
             this.txtCuartaPregunta.SelectionLength = 0;
             this.txtCuartaPregunta.SelectionStart = 0;
             this.txtCuartaPregunta.ShortcutsEnabled = false;
-            this.txtCuartaPregunta.Size = new System.Drawing.Size(564, 42);
+            this.txtCuartaPregunta.Size = new System.Drawing.Size(580, 42);
             this.txtCuartaPregunta.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtCuartaPregunta.TabIndex = 14;
             this.txtCuartaPregunta.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -266,7 +380,7 @@
             this.txtTerceraPregunta.SelectionLength = 0;
             this.txtTerceraPregunta.SelectionStart = 0;
             this.txtTerceraPregunta.ShortcutsEnabled = false;
-            this.txtTerceraPregunta.Size = new System.Drawing.Size(564, 42);
+            this.txtTerceraPregunta.Size = new System.Drawing.Size(580, 42);
             this.txtTerceraPregunta.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtTerceraPregunta.TabIndex = 13;
             this.txtTerceraPregunta.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -344,7 +458,7 @@
             this.txtSegundaPregunta.SelectionLength = 0;
             this.txtSegundaPregunta.SelectionStart = 0;
             this.txtSegundaPregunta.ShortcutsEnabled = false;
-            this.txtSegundaPregunta.Size = new System.Drawing.Size(564, 42);
+            this.txtSegundaPregunta.Size = new System.Drawing.Size(580, 42);
             this.txtSegundaPregunta.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtSegundaPregunta.TabIndex = 12;
             this.txtSegundaPregunta.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -422,7 +536,7 @@
             this.txtPrimeraPregunta.SelectionLength = 0;
             this.txtPrimeraPregunta.SelectionStart = 0;
             this.txtPrimeraPregunta.ShortcutsEnabled = false;
-            this.txtPrimeraPregunta.Size = new System.Drawing.Size(564, 42);
+            this.txtPrimeraPregunta.Size = new System.Drawing.Size(580, 42);
             this.txtPrimeraPregunta.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtPrimeraPregunta.TabIndex = 11;
             this.txtPrimeraPregunta.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -619,7 +733,7 @@
             this.pnlSombraBoton.Controls.Add(this.btnComprobar);
             this.pnlSombraBoton.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
             this.pnlSombraBoton.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
-            this.pnlSombraBoton.Location = new System.Drawing.Point(456, 648);
+            this.pnlSombraBoton.Location = new System.Drawing.Point(472, 687);
             this.pnlSombraBoton.Name = "pnlSombraBoton";
             this.pnlSombraBoton.Padding = new System.Windows.Forms.Padding(1, 1, 3, 3);
             this.pnlSombraBoton.PanelColor = System.Drawing.Color.Transparent;
@@ -733,125 +847,11 @@
             this.lblTitulo.Location = new System.Drawing.Point(52, 61);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblTitulo.Size = new System.Drawing.Size(385, 39);
+            this.lblTitulo.Size = new System.Drawing.Size(314, 32);
             this.lblTitulo.TabIndex = 0;
             this.lblTitulo.Text = "Preguntas de Seguridad";
             this.lblTitulo.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lblTitulo.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // bunifuShadowPanel1
-            // 
-            this.bunifuShadowPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.bunifuShadowPanel1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuShadowPanel1.BorderColor = System.Drawing.Color.Transparent;
-            this.bunifuShadowPanel1.BorderRadius = 10;
-            this.bunifuShadowPanel1.BorderThickness = 1;
-            this.bunifuShadowPanel1.Controls.Add(this.btnVerificarPregunta);
-            this.bunifuShadowPanel1.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
-            this.bunifuShadowPanel1.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
-            this.bunifuShadowPanel1.Location = new System.Drawing.Point(292, 648);
-            this.bunifuShadowPanel1.Name = "bunifuShadowPanel1";
-            this.bunifuShadowPanel1.Padding = new System.Windows.Forms.Padding(1, 1, 3, 3);
-            this.bunifuShadowPanel1.PanelColor = System.Drawing.Color.Transparent;
-            this.bunifuShadowPanel1.PanelColor2 = System.Drawing.Color.Transparent;
-            this.bunifuShadowPanel1.ShadowColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.bunifuShadowPanel1.ShadowDept = 2;
-            this.bunifuShadowPanel1.ShadowDepth = 5;
-            this.bunifuShadowPanel1.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Surrounded;
-            this.bunifuShadowPanel1.ShadowTopLeftVisible = false;
-            this.bunifuShadowPanel1.Size = new System.Drawing.Size(149, 65);
-            this.bunifuShadowPanel1.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
-            this.bunifuShadowPanel1.TabIndex = 7;
-            // 
-            // btnVerificarPregunta
-            // 
-            this.btnVerificarPregunta.AllowAnimations = true;
-            this.btnVerificarPregunta.AllowMouseEffects = true;
-            this.btnVerificarPregunta.AllowToggling = false;
-            this.btnVerificarPregunta.AnimationSpeed = 200;
-            this.btnVerificarPregunta.AutoGenerateColors = false;
-            this.btnVerificarPregunta.AutoRoundBorders = false;
-            this.btnVerificarPregunta.AutoSizeLeftIcon = true;
-            this.btnVerificarPregunta.AutoSizeRightIcon = true;
-            this.btnVerificarPregunta.BackColor = System.Drawing.Color.Transparent;
-            this.btnVerificarPregunta.BackColor1 = System.Drawing.Color.LightSeaGreen;
-            this.btnVerificarPregunta.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnVerificarPregunta.BackgroundImage")));
-            this.btnVerificarPregunta.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.btnVerificarPregunta.ButtonText = "Verificar";
-            this.btnVerificarPregunta.ButtonTextMarginLeft = 0;
-            this.btnVerificarPregunta.ColorContrastOnClick = 45;
-            this.btnVerificarPregunta.ColorContrastOnHover = 45;
-            this.btnVerificarPregunta.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges1.BottomLeft = true;
-            borderEdges1.BottomRight = true;
-            borderEdges1.TopLeft = true;
-            borderEdges1.TopRight = true;
-            this.btnVerificarPregunta.CustomizableEdges = borderEdges1;
-            this.btnVerificarPregunta.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnVerificarPregunta.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.btnVerificarPregunta.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.btnVerificarPregunta.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.btnVerificarPregunta.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnVerificarPregunta.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
-            this.btnVerificarPregunta.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVerificarPregunta.ForeColor = System.Drawing.Color.White;
-            this.btnVerificarPregunta.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVerificarPregunta.IconLeftCursor = System.Windows.Forms.Cursors.Hand;
-            this.btnVerificarPregunta.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
-            this.btnVerificarPregunta.IconMarginLeft = 11;
-            this.btnVerificarPregunta.IconPadding = 10;
-            this.btnVerificarPregunta.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnVerificarPregunta.IconRightCursor = System.Windows.Forms.Cursors.Hand;
-            this.btnVerificarPregunta.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
-            this.btnVerificarPregunta.IconSize = 25;
-            this.btnVerificarPregunta.IdleBorderColor = System.Drawing.Color.Transparent;
-            this.btnVerificarPregunta.IdleBorderRadius = 15;
-            this.btnVerificarPregunta.IdleBorderThickness = 1;
-            this.btnVerificarPregunta.IdleFillColor = System.Drawing.Color.LightSeaGreen;
-            this.btnVerificarPregunta.IdleIconLeftImage = null;
-            this.btnVerificarPregunta.IdleIconRightImage = null;
-            this.btnVerificarPregunta.IndicateFocus = false;
-            this.btnVerificarPregunta.Location = new System.Drawing.Point(1, 1);
-            this.btnVerificarPregunta.Name = "btnVerificarPregunta";
-            this.btnVerificarPregunta.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.btnVerificarPregunta.OnDisabledState.BorderRadius = 15;
-            this.btnVerificarPregunta.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.btnVerificarPregunta.OnDisabledState.BorderThickness = 1;
-            this.btnVerificarPregunta.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.btnVerificarPregunta.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.btnVerificarPregunta.OnDisabledState.IconLeftImage = null;
-            this.btnVerificarPregunta.OnDisabledState.IconRightImage = null;
-            this.btnVerificarPregunta.onHoverState.BorderColor = System.Drawing.Color.Transparent;
-            this.btnVerificarPregunta.onHoverState.BorderRadius = 15;
-            this.btnVerificarPregunta.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.btnVerificarPregunta.onHoverState.BorderThickness = 1;
-            this.btnVerificarPregunta.onHoverState.FillColor = System.Drawing.Color.MediumTurquoise;
-            this.btnVerificarPregunta.onHoverState.ForeColor = System.Drawing.Color.White;
-            this.btnVerificarPregunta.onHoverState.IconLeftImage = null;
-            this.btnVerificarPregunta.onHoverState.IconRightImage = null;
-            this.btnVerificarPregunta.OnIdleState.BorderColor = System.Drawing.Color.Transparent;
-            this.btnVerificarPregunta.OnIdleState.BorderRadius = 15;
-            this.btnVerificarPregunta.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.btnVerificarPregunta.OnIdleState.BorderThickness = 1;
-            this.btnVerificarPregunta.OnIdleState.FillColor = System.Drawing.Color.LightSeaGreen;
-            this.btnVerificarPregunta.OnIdleState.ForeColor = System.Drawing.Color.White;
-            this.btnVerificarPregunta.OnIdleState.IconLeftImage = null;
-            this.btnVerificarPregunta.OnIdleState.IconRightImage = null;
-            this.btnVerificarPregunta.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(166)))), ((int)(((byte)(158)))));
-            this.btnVerificarPregunta.OnPressedState.BorderRadius = 15;
-            this.btnVerificarPregunta.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.btnVerificarPregunta.OnPressedState.BorderThickness = 1;
-            this.btnVerificarPregunta.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(166)))), ((int)(((byte)(158)))));
-            this.btnVerificarPregunta.OnPressedState.ForeColor = System.Drawing.Color.White;
-            this.btnVerificarPregunta.OnPressedState.IconLeftImage = null;
-            this.btnVerificarPregunta.OnPressedState.IconRightImage = null;
-            this.btnVerificarPregunta.Size = new System.Drawing.Size(145, 61);
-            this.btnVerificarPregunta.TabIndex = 5;
-            this.btnVerificarPregunta.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnVerificarPregunta.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btnVerificarPregunta.TextMarginLeft = 0;
-            this.btnVerificarPregunta.TextPadding = new System.Windows.Forms.Padding(0);
-            this.btnVerificarPregunta.UseDefaultRadiusAndThickness = true;
             // 
             // PreguntasdeSeguridadForm
             // 
@@ -859,7 +859,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(730, 820);
             this.Controls.Add(this.pnlGradiente);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximumSize = new System.Drawing.Size(746, 859);
             this.MinimumSize = new System.Drawing.Size(746, 859);
             this.Name = "PreguntasdeSeguridadForm";
@@ -868,8 +868,8 @@
             this.pnlGradiente.ResumeLayout(false);
             this.pnlSombraFondo.ResumeLayout(false);
             this.pnlSombraFondo.PerformLayout();
-            this.pnlSombraBoton.ResumeLayout(false);
             this.bunifuShadowPanel1.ResumeLayout(false);
+            this.pnlSombraBoton.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
