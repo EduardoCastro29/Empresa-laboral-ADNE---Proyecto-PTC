@@ -26,8 +26,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             ObjAgregarConexion.btnGuardar.Click += new EventHandler(GuardarRegistro);
         }
 
-
-
         private void DesabilitarOpcion(object Sender, EventArgs e)
         {
             if(ObjAgregarConexion.rbDesabilitar.Checked == true)
@@ -120,9 +118,5 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                 MessageBox.Show($"{ex.Message}, no se pudo crear el archivo de configuración.", "Consulte el manual técnico", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-
-
-
     }
 }

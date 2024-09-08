@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Windows.Forms;
+using Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DTO;
 
 namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo
 {
@@ -19,13 +20,28 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo
                 //Definiendo las variables de conexión, que en este caso
                 //Admitirá una conexión hacia la DB de forma online, quiere decir que la base de datos se trabaja en línea
                 //De esta forma, se garantiza el uso del programa de forma general sin tener que modificar sus valores en caso de ser local
-                /*
-                string nombreServidor = "SQL8020.site4now.net"; //Este es el nombre del servidor proporcionado por ASP.NET a la hora de crearse
-                string DBNombre = "db_aacf96_adne2024"; //Este es el nombre de la base de datos proporcionado por ASP.NET (credenciales por defecto + el nombre de la base)
-                string IDUsuario = "db_aacf96_adne2024_admin"; //Este es el nombre del usuario el cuál maneja todo el funcionamiento por ASP.NET (Es el propietario de la DB)
-                string Contraseña = "ADNE2024C#"; //Esta es la contraseña del usuario proporcionado por la misma persona (La que creo la DB y su respectivo usuario)
-                SqlConnection ObjConexionOnline = new SqlConnection($"Server = {nombreServidor}; Database = {DBNombre}; User Id = {IDUsuario}; Password = {Contraseña}");
-                */
+                ///*
+                //string nombreServidor = "SQL8020.site4now.net"; //Este es el nombre del servidor proporcionado por ASP.NET a la hora de crearse
+                //string DBNombre = "db_aacf96_adne2024"; //Este es el nombre de la base de datos proporcionado por ASP.NET (credenciales por defecto + el nombre de la base)
+                //string IDUsuario = "db_aacf96_adne2024_admin"; //Este es el nombre del usuario el cuál maneja todo el funcionamiento por ASP.NET (Es el propietario de la DB)
+                ////string Contraseña = "ADNE2024C#"; //Esta es la contraseña del usuario proporcionado por la misma persona (La que creo la DB y su respectivo usuario)
+                ///
+                //SqlConnection ObjConexionOnline = new SqlConnection($"Server = {nombreServidor}; Database = {DBNombre}; User Id = {IDUsuario}; Password = {Contraseña}");
+                //*/
+
+                // ALTERNATIVA DE LA DB
+                //try
+                //{
+                //    //MessageBox.Show($"{DTOdbContext.Server}, {DTOdbContext.Database}, {DTOdbContext.User}, {DTOdbContext.Password}");
+
+                //    //SqlConnection ObjConexionOnline = new SqlConnection($"Server = {DTOAgregarConexion.Server}; DataBase = {DTOAgregarConexion.Database}; User Id = {DTOAgregarConexion.User}; Password = {DTOAgregarConexion.Password}");
+                //}
+                //catch (SqlException ex)
+                //{
+                //    MessageBox.Show($"{ex.Message} Código de error: EC-001 \nNo fue posible conectarse a la base de datos, favor verifique las credenciales o que tenga acceso al sistema.", "Error crítico", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //    return null;
+                //}
+
                 //Definiendo las variables de conexión
                 string nombreServidor = "Edwin\\SQLEXPRESS"; //Pongan su dirección de SQL Server, en mi caso es esa bv
                 string DBNombre = "ADNE2024"; //Queda igual, ya que es el nombre de la DB
