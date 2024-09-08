@@ -80,15 +80,10 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                     //Restablecemos la fecha al valor anterior o a una fecha válida (hace 2 años)
                     ObjInformacionPersonal.dtFechaNacimiento.Value = DateTime.Today.AddYears(-2);
                 }
-                else
+                //Verificamos si la edad es mayor a 120 años, por políticas de seguridad, la persona registrada no puede ser mayor a 120 años
+                else if (CalcularEdad > 120)
                 {
-                    //Actualizamos el campo de la edad según la edad calculada
-                    ObjInformacionPersonal.txtEdad.Text = CalcularEdad.ToString();
-                }
-
-                //Verificamos si la edad es mayor a 158 años
-                if (CalcularEdad > 120)
-                {
+                    //En caso de mostrarnos un error, mandamos un mensaje de error validando el ingreso correcto de la fecha propuesta
                     MessageBox.Show("La edad máxima permitida es de 120 años", "Edad no válida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
                     //Restablecemos la fecha al valor máximo permitido (120 años)
