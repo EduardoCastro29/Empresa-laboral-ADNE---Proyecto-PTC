@@ -41,9 +41,9 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                 //Retornamos el DataTable
                 return ObjLlenarUC;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Ha ocurrido un error, ERR-002-2", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return null;
             }
             finally

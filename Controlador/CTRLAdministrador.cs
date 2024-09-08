@@ -39,6 +39,8 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             ObjAdministradorForm.btnAñadirProfesional.Click += new EventHandler(AbrirAgregarProfesional);
             ObjAdministradorForm.cmsActualizar.Click += new EventHandler(AbrirActualizarProfesional);
             ObjAdministradorForm.cmsEliminarProfesional.Click += new EventHandler(EliminarProfesional);
+            ObjAdministradorForm.cmsVerEspecialidades.Click += new EventHandler(AbrirEspecialidadesProfesional);
+            ObjAdministradorForm.txtBuscarEmpleado.KeyPress += new KeyPressEventHandler(BuscarProfesional);
         }
         #region Eventos Iniciales al cargar el Formulario
         private void RecargarDGVEmpleados()
@@ -106,7 +108,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             ObjActualizarProfesional.txtNombre.Text = NombreProfesional;
             ObjActualizarProfesional.txtApellido.Text = ApellidosProfesional;
             ObjActualizarProfesional.txtCorreo.Text = CorreoProfesional;
-            ObjActualizarProfesional.picProfesional.Image = Image.FromFile(ImagenProfesional);
+            //ObjActualizarProfesional.picProfesional.Image = Image.FromFile(ImagenProfesional);
             ObjActualizarProfesional.cmbDesempeno.SelectedValue = DesempenoProfesional;
             ObjActualizarProfesional.txtUsuario.Text = NombreUsuario;
             //ObjActualizarProfesional.cmbEspecialidad1.SelectedValue = Especialidad;
@@ -117,6 +119,38 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             ObjActualizarProfesional.bpRegistrar.Visible = false;
             //Mostramos el Formulario
             ObjActualizarProfesional.ShowDialog();
+
+            //Refrescamos el DataGridView cuando el formulario se cierre por completo
+            RecargarDGVEmpleados();
+        }
+        #endregion
+        #region Abrir desde el DGV la vista de las especialidades de un Profesional (READ/INSERT/DELETE/UPDATE)
+        private void AbrirEspecialidadesProfesional(object sender, EventArgs e)
+        {
+            //Indicamos la fila específica del DataGridView que se mostrará en el formulario de registro especialidades
+            //Recordemos que, como es actualizar, necesitamos mostrar los datos respectivos del DataGrid de la fila que estamos mostrando
+            //Creamos una instancia del formulario registro especialidades, el cuál usaremos mas adelante
+            RegistroEspecialidadesForm ObjVerEspecialidadesForm = new RegistroEspecialidadesForm();
+
+            //Capturamos las filas del DatGridView al cuál queremos mostrar los valores
+            int PosicionFila = ObjAdministradorForm.dgvAdministrarProfesional.CurrentRow.Index;
+
+            //Capturamos los datos de cada dato del DataGridView, iniciamos con el DUI de la persona
+            //Asignamos las respectivas variables para ser mostradas dentro del formulario de registro especialidades
+            string DUIProfesional = ObjAdministradorForm.dgvAdministrarProfesional[1, PosicionFila].Value.ToString();
+            string NombreProfesional = ObjAdministradorForm.dgvAdministrarProfesional[3, PosicionFila].Value.ToString() +
+                                       " " +
+                                       ObjAdministradorForm.dgvAdministrarProfesional[4, PosicionFila].Value.ToString();
+            string ImagenProfesional = ObjAdministradorForm.dgvAdministrarProfesional[6, PosicionFila].Value.ToString();
+
+
+            //Llenamos los valores respectivos para la vista de las especialidades específicas de cada profesional
+            ObjVerEspecialidadesForm.txtDUIProfesional.Text = DUIProfesional;
+            ObjVerEspecialidadesForm.lblNombreProfesional.Text = NombreProfesional;
+            //ObjVerEspecialidadesForm.picProfesional.Image = Image.FromFile(ImagenProfesional);
+
+            //Procedemos a abrir el formulario de agregar nuevo profesional
+            ObjVerEspecialidadesForm.ShowDialog();
 
             //Refrescamos el DataGridView cuando el formulario se cierre por completo
             RecargarDGVEmpleados();
@@ -153,6 +187,14 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                     }
                 }
             }
+        }
+        #endregion
+        #region Buscar un profesional por sus denominaciones relevantes (SEARCH)
+        private void BuscarProfesional(object sender, KeyPressEventArgs e)
+        {
+            DAOAdministrador ObjDAOBuscarEmpleado = new DAOAdministrador();
+            DataTable ObjBuscar = ObjDAOBuscarEmpleado.BuscarProfesionalP(ObjAdministradorForm.txtBuscarEmpleado.Text);
+            ObjAdministradorForm.dgvAdministrarProfesional.DataSource = ObjBuscar;
         }
         #endregion
         /**                     CONSTRUCTOR DEL FORMULARIO DE REGISTRO                     **/
@@ -276,10 +318,10 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
         {
             try
             {
-                if (ObjRegistroForm.txtUsuario.Text.Length < 3 ||
-                    ObjRegistroForm.txtNombre.Text.Length < 3 ||
+                if (ObjRegistroForm.txtUsuario.Text.Length < 2 ||
+                    ObjRegistroForm.txtNombre.Text.Length < 2 ||
                     ObjRegistroForm.txtCorreo.Text.Length < 10 ||
-                    ObjRegistroForm.txtApellido.Text.Length < 3 ||
+                    ObjRegistroForm.txtApellido.Text.Length < 2 ||
                     ObjRegistroForm.txtDui.Text.Length < 10 ||
                     ObjRegistroForm.txtTelefono.Text.Length < 9 ||
                     ObjRegistroForm.picProfesional.Image == Properties.Resources.ProfesionalPic)
@@ -339,6 +381,14 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                         else
                         {
                             MessageBox.Show("El Profesional ha sido registrado exitosamente", "Registrar Profesional", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                            RegistroEspecialidadesForm ObjAbrirRegistroEspecialidad = new RegistroEspecialidadesForm();
+                            //Guardamos las variables de registro que se han hecho durante la inserción de la tabla profesional
+                            ObjAbrirRegistroEspecialidad.txtDUIProfesional.Text = ObjRegistroForm.txtDui.Text.Trim();
+                            ObjAbrirRegistroEspecialidad.picProfesional.Image = Image.FromFile(ObjDAORegistrarProfesional.Imagen);
+                            ObjAbrirRegistroEspecialidad.lblNombreProfesional.Text = ObjDAORegistrarProfesional.Nombres + " " + ObjDAORegistrarProfesional.Apellidos;
+
+                            ObjAbrirRegistroEspecialidad.ShowDialog();
                             //Ocultamos el formulario de Registro
                             ObjRegistroForm.Hide();
                         }
@@ -362,11 +412,10 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             try
             {
                 //Evaluamos si existen campos vacios dentro del formulario
-                if (ObjRegistroForm.txtUsuario.Text.Length < 3 ||
-                    ObjRegistroForm.txtNombre.Text.Length < 3 ||
-                    ObjRegistroForm.txtContrasena.Text.Length < 13 ||
+                if (ObjRegistroForm.txtUsuario.Text.Length < 2 ||
+                    ObjRegistroForm.txtNombre.Text.Length < 2 ||
                     ObjRegistroForm.txtCorreo.Text.Length < 10 ||
-                    ObjRegistroForm.txtApellido.Text.Length < 3 ||
+                    ObjRegistroForm.txtApellido.Text.Length < 2 ||
                     ObjRegistroForm.txtDui.Text.Length < 10 ||
                     ObjRegistroForm.txtTelefono.Text.Length < 9 ||
                     ObjRegistroForm.picProfesional.Image == Properties.Resources.ProfesionalPic)

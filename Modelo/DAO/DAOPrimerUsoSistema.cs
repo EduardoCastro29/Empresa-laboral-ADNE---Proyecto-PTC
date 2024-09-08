@@ -9,6 +9,7 @@ using System.Data.SqlClient;
 using Empresa_laboral_ADNE___Proyecto_PTC.Controlador;
 using Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DTO;
 using System.Windows.Forms;
+using System.Runtime.ConstrainedExecution;
 
 namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
 {
@@ -37,9 +38,9 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                     return true;
                 else return false;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Ha ocurrido un error, ERR-001-5", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             finally
@@ -64,9 +65,9 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                     return true;
                 else return false;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Ha ocurrido un error, ERR-002-8", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             finally

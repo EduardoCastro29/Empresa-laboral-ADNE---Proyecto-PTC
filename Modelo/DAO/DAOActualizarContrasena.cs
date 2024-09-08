@@ -25,11 +25,13 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
             {
                 Conexion.Connection = Conectar();
 
-                string comandoSQL = "UPDATE Usuario SET contraseña = @contraseña WHERE nombreUsuario = '"+ UsuarioCorreoSolicitud + "' OR correoElectronico = '"+ UsuarioCorreoSolicitud + "'";
+                string comandoSQL = "UPDATE Usuario SET contraseña = @contraseña WHERE nombreUsuario = @nombreUsuario OR correoElectronico = @correoElectronico";
 
                 SqlCommand ObjComandoSQLServer = new SqlCommand(comandoSQL, Conexion.Connection);
 
                 ObjComandoSQLServer.Parameters.AddWithValue("@contraseña", Contrasena);
+                ObjComandoSQLServer.Parameters.AddWithValue("@nombreUsuario", UsuarioCorreoSolicitud);
+                ObjComandoSQLServer.Parameters.AddWithValue("@correoElectronico", UsuarioCorreoSolicitud);
 
                 ObjComandoSQLServer.ExecuteNonQuery();
 
@@ -37,9 +39,9 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                     return true;
                 else return false;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Ha ocurrido un error, ERR-003-1", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             finally

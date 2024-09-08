@@ -82,15 +82,10 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                 return;
             }
             //Declaramos la variable de tipo char que recibirá los parámetros de las letras registradas por las variables e.KeyChar creadas anteriormente
-            char ch = e.KeyChar;
-
-            //Declaramos lo valores que únicamente permitirá el textbox
-            if ((ch >= 'A' && ch <= 'Z') ||
-                (ch >= 'a' && ch <= 'z') ||
-                 ch == '.' ||
-                 ch == ',' ||
-                 e.KeyChar == ' ' ||
-                 e.KeyChar == '´')
+            if (char.IsLetter(e.KeyChar) ||
+                e.KeyChar == ' ' ||
+                e.KeyChar == ',' ||
+                e.KeyChar == '.')
             {
                 //Retornamos los valores e.KeyChar
                 return;

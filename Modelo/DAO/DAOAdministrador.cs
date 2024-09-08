@@ -63,9 +63,9 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                         //En caso contrario, retornamos falso
                         else return false;
                     }
-                    catch (Exception ex)
+                    catch (Exception)
                     {
-                        MessageBox.Show(ex.Message);
+                        MessageBox.Show("Ha ocurrido un error, ERR-001-1", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return false;
                     }
                 }
@@ -74,9 +74,9 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                     return false;
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Ha ocurrido un error, ERR-001-1", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             finally
@@ -93,16 +93,16 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                 Conexion.Connection = Conectar();
 
                 //Inicializamos la consulta
-                    string consultaSQLProfesional = "UPDATE Profesional SET " +
-                                                    "telefono           = @telefono, " +
-                                                    "nombre             = @nombre, " +
-                                                    "apellido           = @apellido, " +
-                                                    "correoElectronico  = @correoElectronico, " +
-                                                    "foto               = @foto, " +
-                                                    "desempenoId        = @desempenoId " +
+                string consultaSQLProfesional = "UPDATE Profesional SET " +
+                                                "telefono           = @telefono, " +
+                                                "nombre             = @nombre, " +
+                                                "apellido           = @apellido, " +
+                                                "correoElectronico  = @correoElectronico, " +
+                                                "foto               = @foto, " +
+                                                "desempenoId        = @desempenoId " +
 
-                                                    "WHERE " +
-                                                    "DUI = @DUI";
+                                                "WHERE " +
+                                                "DUI = @DUI";
                 //Inicializamos el comando
                 SqlCommand ObjComandoSQLServerProfesional = new SqlCommand(consultaSQLProfesional, Conexion.Connection);
 
@@ -132,9 +132,9 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                             return true;
                         else return false;
                     }
-                    catch (Exception ex)
+                    catch (Exception)
                     {
-                        MessageBox.Show(ex.Message);
+                        MessageBox.Show("Ha ocurrido un error, ERR-003-2", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return false;
                     }
                 }
@@ -143,9 +143,9 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                     return false;
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Ha ocurrido un error, ERR-003-2", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             finally
@@ -176,9 +176,9 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                 //Caso contrario, retornamos falso
                 else return false;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Ha ocurrido un error, ERR-004-1", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             finally
@@ -211,13 +211,54 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                 //Retornamos el DataTable
                 return ObjCargarData;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Ha ocurrido un error, ERR-011-1", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return null;
             }
             finally
             {
+                Conexion.Connection.Close();
+            }
+        }
+        //Este es el método común para buscar datos dentro de un cuadro TextBox (De formar parametrizada)
+        //De esta forma, se evitan casos como la injección SQLServer, donde en algunos casos, puede ser eliminada la base de datos
+        public DataTable BuscarProfesionalP(string BuscarProfesional)
+        {
+            try
+            {
+                //Inicializamos la conexión
+                Conexion.Connection = Conectar();
+
+                //Declaramos la consulta
+                string consultaSQL = "SELECT * FROM vistaProfesionalDGV WHERE Nombres LIKE @nombres OR Apellidos LIKE @apellidos OR DUI LIKE @DUI OR [Nombre del Usuario] LIKE @nombreUsuario";
+
+                //Ejecutamos el comando
+                SqlCommand ObjCommandSQL = new SqlCommand(consultaSQL, Conexion.Connection);
+
+                ObjCommandSQL.Parameters.AddWithValue("@nombres", "%" + BuscarProfesional + "%");
+                ObjCommandSQL.Parameters.AddWithValue("@apellidos", "%" + BuscarProfesional + "%");
+                ObjCommandSQL.Parameters.AddWithValue("@DUI", "%" + BuscarProfesional + "%");
+                ObjCommandSQL.Parameters.AddWithValue("@nombreUsuario", "%" + BuscarProfesional + "%");
+
+                //Declaramos el adaptador SQL
+                SqlDataAdapter ObjAdaptador = new SqlDataAdapter(ObjCommandSQL);
+                //Declaramos el DataTable
+                DataTable ObjDT = new DataTable();
+                //Llenamos el DataTable
+                ObjAdaptador.Fill(ObjDT);
+                //Retornamos el DT
+                return ObjDT;
+            }
+            catch (Exception)
+            {
+                //Imprimimos un mensaje de error junto con el retorno nulo
+                MessageBox.Show("Ha ocurrido un error, ERR-005-1", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+            finally
+            {
+                //Cerramos la conexión
                 Conexion.Connection.Close();
             }
         }

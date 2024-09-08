@@ -30,7 +30,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             CargarIntervaloCitas();
             DesabilitarBotones();
         }
-
         private void CargarGraficoUltimos7Dias(object Sender, EventArgs e)
         {
             ObjActividadesForm.dtFechaInicio.Value = DateTime.Today.AddDays(-7);
@@ -38,7 +37,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             CargarIntervaloCitas();
             DesabilitarBotones();
         }
-
         private void CargarGraficoUltimos30Dias(object Sender, EventArgs e)
         {
             ObjActividadesForm.dtFechaInicio.Value = DateTime.Today.AddDays(-30);
@@ -46,7 +44,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             CargarIntervaloCitas();
             DesabilitarBotones();
         }
-
         private void CargarGraficoEsteMes(object Sender, EventArgs e)
         {
             ObjActividadesForm.dtFechaInicio.Value = new DateTime(DateTime.Today.Year, DateTime.Today.Month, 1);
@@ -54,20 +51,16 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             CargarIntervaloCitas();
             DesabilitarBotones();
         }
-
         private void CargarGraficoPersonalizado(object Sender, EventArgs e)
         {
             ObjActividadesForm.dtFechaInicio.Enabled = true;
             ObjActividadesForm.dtFechaFinal.Enabled = true;
             ObjActividadesForm.btnOk.Visible = true;
         }
-
         private void CargarGraficoPersonalizadoOK(object Sender, EventArgs e)
         {
             CargarIntervaloCitas();
-
         }
-
         private void DesabilitarBotones()
         {
             ObjActividadesForm.dtFechaInicio.Enabled = false;
@@ -89,9 +82,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             ObjActividadesForm.dtFechaFinal.Value = DateTime.Now;
             ObjActividadesForm.btnVer7Dias.Select();
             CargarIntervaloCitas();
-
         }
-
         private void CargarIntervaloCitas()
         {
             try
@@ -121,11 +112,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                         ObjActividadesForm.GraficoCitas.Series[0].YValueMembers = "TotalCitas";
 
                         ObjActividadesForm.GraficoCitas.DataBind();
-                    }
-                    else
-                    {
-                        // Agregar valores default
-                        //MessageBox.Show("No se encontraron datos para mostrar en el gráfico.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
             }

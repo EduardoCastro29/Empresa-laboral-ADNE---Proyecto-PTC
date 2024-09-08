@@ -13,10 +13,11 @@ using System.IO;
 using System.Data;
 using System.Security.Cryptography;
 using static TheArtOfDev.HtmlRenderer.Adapters.RGraphicsPath;
+using Org.BouncyCastle.Utilities.Collections;
 
 namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
 {
-    internal class DAOExpediente : DTOExpedienteMedico
+    internal class DAOExpediente : DTOExpediente
     {
         readonly SqlCommand Conexion = new SqlCommand();
         public bool ExpedienteInsertarDatos()
@@ -26,7 +27,9 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                 //Abrimos la conexión
                 Conexion.Connection = Conectar();
                 //Creamos el query
-                string consultaSQLExpediente = "INSERT INTO Expediente(estadoAnimo, estadoConductual, somatizacion, vidaInterpersonal, cognicion, redSocial, pauta, riesgoValorado, observacion, aproximacionDiag, atencionBrindada, documentoPresentado)\r\nVALUES \r\n(@estadoAnimo, @estadoConductual, @somatizacion, @vidaInterpersonal, @cognicion, @redSocial, @pauta, @riesgoValorado, @observacion, @aproximacionDiag, @atencionBrindada, @documentoPresentado)";
+                string consultaSQLExpediente = "INSERT INTO DiagnosticoPsicosocial (estadoAnimo, estadoConductual, somatizacion, vidaInterpersonal, cognicion, redSocial, pauta, riesgoValorado, observacion, aproximacionDiag, atencionBrindada, documentoPresentado) " +
+                                               "VALUES " +
+                                               "(@estadoAnimo, @estadoConductual, @somatizacion, @vidaInterpersonal, @cognicion, @redSocial, @pauta, @riesgoValorado, @observacion, @aproximacionDiag, @atencionBrindada, @documentoPresentado)";
 
                 //Le mandamos la consulta a SQL por medio de un comando. Como parametros: Consulta, Conexión
                 SqlCommand ObjQuerySQL = new SqlCommand(consultaSQLExpediente, Conexion.Connection);
@@ -52,9 +55,9 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                 //En caso contrario, retornamos falso
                 else return false;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Ha ocurrido un error, ERR-001-3", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             finally
@@ -69,7 +72,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                 //Abrimos la conexión
                 Conexion.Connection = Conectar();
                 //Creamos el query
-                string consultaSQLExpediente = "UPDATE Expediente SET " +
+                string consultaSQLExpediente = "UPDATE DiagnosticoPsicosocial SET " +
                                                "estadoAnimo             = @estadoAnimo, " +
                                                "estadoConductual        = @estadoConductual, " +
                                                "somatizacion            = @somatizacion, " +
@@ -80,18 +83,15 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                                                "riesgoValorado          = @riesgoValorado, " +
                                                "observacion             = @observacion, " +
                                                "aproximacionDiag        = @aproximacionDiag, " +
-                                               "atencionBrindada        = @atencionBrindada, " +
-                                               "documentopresentado     = @documentoPresentado " +
+                                               "atencionBrindada        = @atencionBrindada " +
 
                                                "WHERE " +
-                                               "expedienteId = @expedienteId";
+                                               "documentopresentado = @documentoPresentado ";
 
                 //Le mandamos la consulta a SQL por medio de un comando. Como parametros: Consulta, Conexión
                 SqlCommand ObjQuerySQL = new SqlCommand(consultaSQLExpediente, Conexion.Connection);
 
-                //Añadimos los valores
-                ObjQuerySQL.Parameters.AddWithValue("@documentoPresentado", DocumentoPresentado);
-                ObjQuerySQL.Parameters.AddWithValue("@expedienteId", ExpedienteId);
+                //Añadimos los valores            
                 ObjQuerySQL.Parameters.AddWithValue("@estadoAnimo", EstadoAnimo);
                 ObjQuerySQL.Parameters.AddWithValue("@estadoConductual", EstadoConductual);
                 ObjQuerySQL.Parameters.AddWithValue("@somatizacion", Somatizacion);
@@ -103,6 +103,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                 ObjQuerySQL.Parameters.AddWithValue("@observacion", Observacion);
                 ObjQuerySQL.Parameters.AddWithValue("@aproximacionDiag", AproximacionDiag);
                 ObjQuerySQL.Parameters.AddWithValue("@atencionBrindada", AtencionBrindada);
+                ObjQuerySQL.Parameters.AddWithValue("@documentoPresentado", DocumentoPresentado);
 
                 //Si el número de filas afectadas fueron existosas, retornamos verdadero
                 if (ObjQuerySQL.ExecuteNonQuery() > 0)
@@ -110,9 +111,9 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                 //En caso contrario, retornamos falso
                 else return false;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Ha ocurrido un error, ERR-003-4", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             finally
@@ -128,7 +129,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                 //Abrimos la conexion 
                 Conexion.Connection = Conectar();
                 // Se crea el query
-                string consultaSqlActualizarPaciente = "SELECT * FROM Expediente WHERE documentoPresentado = @documentoPresentado";
+                string consultaSqlActualizarPaciente = "SELECT * FROM DiagnosticoPsicosocial WHERE documentoPresentado = @documentoPresentado";
 
                 //Le mandamos la consulta a SQL por medio de un comando
                 SqlCommand objConsultaActualizar = new SqlCommand(consultaSqlActualizarPaciente, Conexion.Connection);
@@ -159,9 +160,9 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                 }
                 return ObjFilasEncontradas.HasRows;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Ha ocurrido un error, ERR-002-4", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             finally

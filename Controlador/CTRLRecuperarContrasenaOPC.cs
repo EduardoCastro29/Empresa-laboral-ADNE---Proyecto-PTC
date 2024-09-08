@@ -15,16 +15,16 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
         {
             ObjRecuperarContrasenaForm = Vista;
 
-            ObjRecuperarContrasenaForm.btnCorreoElectronico.Click += new EventHandler(MetodoPorCorreo);
-            ObjRecuperarContrasenaForm.btnSoporteAdmin.Click += new EventHandler(MetodoPorAdministrador);
+            ObjRecuperarContrasenaForm.btnCorreoElectronico.Click += new EventHandler(MetodoCorreo);
+            ObjRecuperarContrasenaForm.btnPreguntasAutenticacion.Click += new EventHandler(MetodoPreguntasAutenticacion);
         }
-        private void MetodoPorCorreo(object sender, EventArgs e)
+        private void MetodoCorreo(object sender, EventArgs e)
         {
             DirecciónGmailForm ObjDireccionMetodo = new DirecciónGmailForm();
             ObjRecuperarContrasenaForm.Hide();
             ObjDireccionMetodo.Show();
         }
-        private void MetodoPorAdministrador(object sender, EventArgs e)
+        private void MetodoPreguntasAutenticacion(object sender, EventArgs e)
         {
             //DirecciónGmailForm ObjDireccionMetodo = new DirecciónGmailForm();
             //ObjRecuperarContrasenaForm.Hide();

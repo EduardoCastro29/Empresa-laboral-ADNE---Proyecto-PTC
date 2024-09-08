@@ -14,7 +14,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Vista
 {
     public partial class ControlPacientePlanillaUC : UserControl
     {
-        internal ControlPacientePlanillaUC(DAOCitas objDAOCitas)
+        internal ControlPacientePlanillaUC(DAODiagnosticos objDAOCitas)
         {
             InitializeComponent();
             this.ParentChanged += new EventHandler(OnParentChanged);

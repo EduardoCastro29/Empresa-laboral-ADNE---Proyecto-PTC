@@ -20,7 +20,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
             try
             {
                 Conexion.Connection = Conectar();
-                string ConsultaSqlVerPaciente = "SELECT*FROM vistaPaciente";
+                string ConsultaSqlVerPaciente = "SELECT * FROM vistaPaciente";
                 SqlCommand ObjConsultaSql = new SqlCommand(ConsultaSqlVerPaciente, Conexion.Connection);
 
                 SqlDataAdapter ad = new SqlDataAdapter(ObjConsultaSql);
@@ -29,9 +29,9 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                 ad.Fill(dt);
                 return dt;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Ha ocurrido un error, ERR-011-7", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return null;
             }
             finally
@@ -40,17 +40,17 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
             }
         }
 
-        public DataSet BuscarPaciente(string valor)
+        public DataSet BuscarPaciente(string BuscarPacienteP)
         {
             try
             {
                 Conexion.Connection = Conectar();
 
-                string consulta = $"SELECT * FROM VistaPaciente WHERE [Nombre de Paciente] LIKE '%{valor}%'";
+                string consulta = "SELECT * FROM VistaPaciente WHERE [Nombre de Paciente] LIKE @nombrePaciente";
 
                 SqlCommand objComando = new SqlCommand(consulta, Conexion.Connection);
 
-                objComando.ExecuteNonQuery();
+                objComando.Parameters.AddWithValue("@nombrePaciente", "%" + BuscarPacienteP + "%");
 
                 SqlDataAdapter adapter = new SqlDataAdapter(objComando);
                 DataSet dt = new DataSet();
@@ -60,6 +60,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
             }
             catch (Exception)
             {
+                MessageBox.Show("Ha ocurrido un error, ERR-011-7", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return null;
             }
             finally

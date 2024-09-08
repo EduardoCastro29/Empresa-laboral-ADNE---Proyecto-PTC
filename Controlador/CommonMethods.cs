@@ -129,18 +129,17 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                 //Se especifica el tamaño que contendra la clave dentro de la base (encriptada)
                 ObjAlgoritmoRijndael.KeySize = 256;
 
-                //Definimos el vector de inicialización (IV, initialization vector) que será la que represente la claveSal
-                ObjAlgoritmoRijndael.IV = ObjLlaveConstructora.GetBytes(System.Convert.ToInt32(ObjAlgoritmoRijndael.BlockSize / (double)8));
+                //Definimos el vector de inicialización (IV, Initialization Vector) que será la que represente la claveSal
+                ObjAlgoritmoRijndael.IV = ObjLlaveConstructora.GetBytes(Convert.ToInt32(ObjAlgoritmoRijndael.BlockSize / (double)8));
 
                 //Definimos la clave secreta que será la que represente la claveSecreta dentro de la llave constructora
-                ObjAlgoritmoRijndael.Key = ObjLlaveConstructora.GetBytes(System.Convert.ToInt32(ObjAlgoritmoRijndael.KeySize / (double)8));
+                ObjAlgoritmoRijndael.Key = ObjLlaveConstructora.GetBytes(Convert.ToInt32(ObjAlgoritmoRijndael.KeySize / (double)8));
 
                 //Se define el modo de relleno que tendrá el algoritmo Rijndael, es una sentencia que se tiene por sintaxis
                 ObjAlgoritmoRijndael.Padding = PaddingMode.PKCS7;
 
                 //Retornamos el algoritmo Rijndael con los datos epecificados para el encriptado
                 return ObjAlgoritmoRijndael;
-
             }
             catch (Exception)
             {
@@ -148,23 +147,65 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                 return null;
             }
         }
-        //Se crea el método que generará un pin de acceso aleatorio para el usuario
-        //Utilizado para el método de recuperación de contraseñas
-        public string PinAcceso()
+
+        //Estos son los métodos comúnes para verificar si la contraseña ingresada por el usuario
+        //Indicamos que, cada método retornará algo en específico, en este caso validar cada campo según sea su necesidad
+        //Indicamos que, en primera instancia la contraseña debe poseer al menos 13 carácteres
+        public bool Contiene12Caracteres(string Contrasena12Caracteres)
         {
-            //Esto ya lo sabemos XD
-            string clavePin = null;
-
-            Random aleatorio = new Random();
-
-            for (int i = 0; i < 8; i++)
-            {
-                clavePin += aleatorio.Next(0, 10).ToString();
-            }
-
-            return clavePin;
+            //Si la contraseña accedida por el usuario, posee más de 12 carácteres, retornamos verdadero
+            if (Contrasena12Caracteres.Length >= 12 == true)
+                return true;
+            //Caso contrario, retornamos falso
+            else return false;
         }
-
+        public bool ContieneUnNumero(string ContrasenaUnNumero)
+        {
+            //Si la contraseña accedida por el usuario, contiene al menos 1 número, retornamos verdadero
+            if (ContrasenaUnNumero.Any(char.IsDigit) == true)
+                return true;
+            //Caso contrario, retornamos falso
+            else return false;
+        }
+        public bool ContieneUnaMayuscula(string ContrasenaUnaMayuscula)
+        {
+            //Si la contraseña accedida por el usuario, contiene al menos 1 letra mayúscula, retornamos verdadero
+            if (ContrasenaUnaMayuscula.Any(char.IsUpper) == true)
+                return true;
+            //Caso contrario, retornamos falso
+            else return false;
+        }
+        public bool ContieneUnaMinuscula(string ContrasenaUnaMinuscula)
+        {
+            //Si la contraseña accedida por el usuario, contiene al menos 1 letra minúscula, retornamos verdadero
+            if (ContrasenaUnaMinuscula.Any(char.IsLower) == true)
+                return true;
+            //Caso contrario, retornamos falso
+            else return false;
+        }
+        public bool ContieneUnSimbolo(string ContrasenaUnSimbolo)
+        {
+            //Si la contraseña accedida por el usuario, contiene al menos 1 símbolo proporcionado, retornamos verdadero
+            string SimbolosPermitidos = "@$#_";
+            if (ContrasenaUnSimbolo.Any(ParametroSimbolo => SimbolosPermitidos.Contains(ParametroSimbolo)) == true)
+                return true;
+            //Caso contrario, retornamos falso
+            else return false;
+        }
+        //Ahora, procedemos a validar todas las acciones hechas por el usuario
+        public bool ValidarContrasena(string ContrasenaValida)
+        {
+            //Declaramos en una estructura if para validar si todos los campos han sido ingresados correctamente
+            if (Contiene12Caracteres(ContrasenaValida) &&
+                ContieneUnNumero(ContrasenaValida) &&
+                ContieneUnaMayuscula(ContrasenaValida) &&
+                ContieneUnaMinuscula(ContrasenaValida) &&
+                ContieneUnSimbolo(ContrasenaValida) == true)
+                //Si todos los datos ingresados por el usuario, resultan ser correctos, retornamos verdadero
+                return true;
+            //Caso contrario, retornamos falso
+            else return false;
+        }
 
         //public string EncriptarContraseña (string contraseñaEncriptar)
         //{

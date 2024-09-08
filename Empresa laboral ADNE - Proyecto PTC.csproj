@@ -145,7 +145,7 @@
     <Compile Include="Modelo\DAO\DAOAdministrador.cs" />
     <Compile Include="Modelo\DAO\DAOAgendarCita.cs" />
     <Compile Include="Modelo\DAO\DAOCalendario.cs" />
-    <Compile Include="Modelo\DAO\DAOCitas.cs" />
+    <Compile Include="Modelo\DAO\DAODiagnosticos.cs" />
     <Compile Include="Modelo\DAO\DAOConfiguracion.cs" />
     <Compile Include="Modelo\DAO\DAODashboard.cs" />
     <Compile Include="Modelo\DAO\DAODireccionGmail.cs" />
@@ -174,7 +174,7 @@
     <Compile Include="Modelo\DTO\DTODashboard.cs" />
     <Compile Include="Modelo\DTO\DTOEnviarMails.cs" />
     <Compile Include="Modelo\DTO\DTOEquipoTrabajo.cs" />
-    <Compile Include="Modelo\DTO\DTOExpedienteMedico.cs" />
+    <Compile Include="Modelo\DTO\DTOExpediente.cs" />
     <Compile Include="Modelo\DTO\DTOHistorial.cs" />
     <Compile Include="Modelo\DTO\DTOInformacionPersonal.cs" />
     <Compile Include="Modelo\DTO\DTOLogin.cs" />
@@ -402,6 +402,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\Configuración.resx">
       <DependentUpon>Configuración.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\Control Dias.resx">
       <DependentUpon>Control Dias.cs</DependentUpon>
@@ -608,6 +609,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\dato.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ver Especialidades.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

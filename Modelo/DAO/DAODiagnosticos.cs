@@ -13,7 +13,7 @@ using System.Windows.Forms;
 
 namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
 {
-    internal class DAOCitas : DTOCitas
+    internal class DAODiagnosticos : DTOCitas
     {
         readonly SqlCommand Conexion = new SqlCommand();
 
@@ -34,9 +34,9 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
 
                 return dt;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Ha ocurrido un error, ERR-011-2", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return null;
             }
             finally
@@ -44,15 +44,17 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                 Conexion.Connection.Close();
             }
         }
-        public DataSet BuscarCita(string valor)
+        public DataSet BuscarCita(string BuscarDiagnostico)
         {
             try
             {
                 Conexion.Connection = Conectar();
 
-                string consulta = $"SELECT * FROM vistaCita WHERE [Nombre del Paciente] LIKE '%{valor}%'";
+                string consulta = "SELECT * FROM vistaCita WHERE [Nombre del Paciente] LIKE @NombrePaciente";
 
                 SqlCommand objComando = new SqlCommand(consulta, Conexion.Connection);
+
+                objComando.Parameters.AddWithValue("@NombrePaciente", "%" + BuscarDiagnostico + "%");
 
                 objComando.ExecuteNonQuery();
 
@@ -64,6 +66,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
             }
             catch (Exception)
             {
+                MessageBox.Show("Ha ocurrido un error, ERR-005-2", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return null;
             }
             finally
@@ -121,9 +124,9 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                 }
                 return lectura.HasRows;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Ha ocurrido un error, ERR-002-1", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             finally

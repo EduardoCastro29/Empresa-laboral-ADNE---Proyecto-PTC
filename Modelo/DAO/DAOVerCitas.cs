@@ -36,9 +36,9 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                     return true;
                 else return false;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Ha ocurrido un error, ERR-004-3", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             finally
@@ -71,9 +71,9 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                 //Retornamos el DataTable
                 return ObjCargarData;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Ha ocurrido un error, ERR-011-6", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return null;
             }
             finally

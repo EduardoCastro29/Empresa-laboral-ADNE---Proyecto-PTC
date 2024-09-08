@@ -73,9 +73,9 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                            "\n" + "Si tienes alguna falla, contacta con tu administrador");
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Ha ocurrido un error, ERR-002-2", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return null;
             }
             finally
@@ -103,8 +103,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                 ObjComandoSQLServer.Parameters.AddWithValue("@nombreUsuario", VerificarUsuarioSolicitante);
                 ObjComandoSQLServer.Parameters.AddWithValue("@correoElectronico", VerificarUsuarioSolicitante);
 
-                ObjComandoSQLServer.CommandType = CommandType.Text;
-
                 SqlDataReader ObjFilasEncontradas = ObjComandoSQLServer.ExecuteReader();
 
                 if (ObjFilasEncontradas.Read() == true)
@@ -117,9 +115,9 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                     return null;
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Ha ocurrido un error, ERR-002-3", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return null;
             }
             finally

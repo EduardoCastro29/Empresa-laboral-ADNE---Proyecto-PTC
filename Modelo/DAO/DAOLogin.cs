@@ -15,7 +15,6 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 using System.Windows.Forms;
 using System.IO;
 using System.Data;
-using System.Security.Cryptography;
 
 namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
 {
@@ -67,9 +66,9 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                 //Retornamos si la sentencia SQLServer encontró filas, caso contrario retornará false
                 return ObjFilasEncontradas.HasRows;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Ha ocurrido un error, ERR-002-6", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             finally
@@ -117,9 +116,9 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                 //Retornamos las filas encontradas por SQLServer
                 return ObjFilasEncontradas.HasRows;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Ha ocurrido un error, ERR-011-4", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             finally
@@ -155,9 +154,9 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                     return false;
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Ha ocurrido un error, ERR-002-7", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             finally

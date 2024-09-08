@@ -15,7 +15,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
     internal class DAORegistroEspecialidad : DTORegistroEspecialidad
     {
         readonly SqlCommand Conexion = new SqlCommand();
-        public bool RegistrarEspecialidadEmpleado()
+        public bool RegistrarEspecialidadProfesional()
         {
             try
             {
@@ -32,9 +32,9 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                     return true;
                 else return false;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Ha ocurrido un error, ERR-001-7", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             finally
@@ -60,9 +60,35 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                     return true;
                 else return false;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Ha ocurrido un error, ERR-002-9", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            finally
+            {
+                Conexion.Connection.Close();
+            }
+        }
+        public bool EliminarEspecialidadProfesional()
+        {
+            try
+            {
+                Conexion.Connection = Conectar();
+
+                string InsertarEspecialidadE = "DELETE FROM NombreEspecialidades WHERE especialidadNId = @especialidadNId";
+
+                SqlCommand ObjInsertarEspecialidad = new SqlCommand(InsertarEspecialidadE, Conexion.Connection);
+
+                ObjInsertarEspecialidad.Parameters.AddWithValue("@especialidadNId", IdEspecialidad);
+
+                if (ObjInsertarEspecialidad.ExecuteNonQuery() > 0)
+                    return true;
+                else return false;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Ha ocurrido un error, ERR-004-2", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             finally
@@ -83,9 +109,9 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                 ObjLlenarCombobox.Fill(ObjllenarDT);
                 return ObjllenarDT;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Ha ocurrido un error, ERR-011-5", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return null;
             }
             finally
@@ -104,9 +130,9 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                 ObjLlenarCombobox.Fill(ObjllenarDT);
                 return ObjllenarDT;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Ha ocurrido un error, ERR-008-5", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return null;
             }
             finally

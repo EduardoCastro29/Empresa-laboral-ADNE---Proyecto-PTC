@@ -54,9 +54,9 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                 //Enviando el correo
                 ObjSMTPClient.Send(ObjMensajeMail);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Ha ocurrido un error, ERR-041-1", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {

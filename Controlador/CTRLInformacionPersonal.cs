@@ -80,15 +80,10 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                 return;
             }
             //Declaramos la variable de tipo char que recibirá los parámetros de las letras registradas por las variables e.KeyChar creadas anteriormente
-            char ch = e.KeyChar;
-
-            //Declaramos lo valores que únicamente permitirá el textbox
-            if ((ch >= 'A' && ch <= 'Z') ||
-                (ch >= 'a' && ch <= 'z') ||
-                 ch == '.' ||
-                 ch == ',' ||
-                 ch == '´' || 
-                 e.KeyChar == ' ')
+            if (char.IsLetter(e.KeyChar) ||
+                e.KeyChar == ' ' ||
+                e.KeyChar == ',' ||
+                e.KeyChar == '.')
             {
                 //Retornamos los valores e.KeyChar
                 return;
@@ -136,13 +131,13 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             try
             {
                 //Dado el objeto del DaoInformacionPersonal, evaluamos si los datos fueron ingresados correctamente dados sus métodos
-                if (ObjInformacionPersonal.txtNacionalidad.Text.Length < 5 ||
+                if (ObjInformacionPersonal.txtNacionalidad.Text.Length < 3 ||
                     ObjInformacionPersonal.txtDocumentoPresentado.Text.Length < 10 ||
-                    ObjInformacionPersonal.txtEdad.Text.Length < 2 ||
+                    string.IsNullOrWhiteSpace(ObjInformacionPersonal.txtEdad.Text.Trim()) ||
                     ObjInformacionPersonal.txtTelefono1.Text.Length < 9 ||
                     ObjInformacionPersonal.txtProfesion.Text.Length < 3 ||
-                    ObjInformacionPersonal.txtNombrePaciente.Text.Length < 3 ||
-                    ObjInformacionPersonal.txtApellidoPaciente.Text.Length < 5 ||
+                    ObjInformacionPersonal.txtNombrePaciente.Text.Length < 2 ||
+                    ObjInformacionPersonal.txtApellidoPaciente.Text.Length < 2 ||
                     ObjInformacionPersonal.txtDomicilio.Text.Length < 5 ||
                     ObjInformacionPersonal.txtCorreoElectronico.Text.Length < 10 ||
                     ObjInformacionPersonal.txtComposicionFamiliar.Text.Length < 3 ||

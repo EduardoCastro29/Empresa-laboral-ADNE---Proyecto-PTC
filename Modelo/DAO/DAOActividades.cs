@@ -20,9 +20,9 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                 CitasAtendidas = (int)ObjIntervaloCitaA.ExecuteScalar();
                 return CitasAtendidas;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show(ex.Message, "Error");
+                MessageBox.Show("Ha ocurrido un error, ERR-006-1", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return -1;
             }
             finally
@@ -41,9 +41,9 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                 CitasPedientes = (int)ObjIntervaloCitaPN.ExecuteScalar();
                 return CitasPedientes;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Ha ocurrido un error, ERR-006-2", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return -1;
             }
             finally
@@ -62,9 +62,9 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                 CitasPerdidas = (int)ObjIntervaloCitaPR.ExecuteScalar();
                 return CitasPerdidas;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Ha ocurrido un error, ERR-006-3", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return -1;
             }
             finally
@@ -85,9 +85,9 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                 NumeroCitas = (int)ObjVerCitas.ExecuteScalar();
                 return NumeroCitas;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Ha ocurrido un error, ERR-006-4", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return -1;
             }
             finally
@@ -95,7 +95,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                 Conexion.Connection.Close();
             }
         }
-
         public bool CargarDatos(DateTime FechaInicio1, DateTime FechaFinal1)
         {
             FechaFinal1 = new DateTime(FechaFinal1.Year, FechaFinal1.Month, FechaFinal1.Day, FechaFinal1.Hour, FechaFinal1.Minute, 59);
@@ -114,7 +113,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                 return false;
             }
         }
-
         private void RellenarGraficoCitas()
         {
             try
@@ -127,24 +125,24 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                 ObjGraficoCitas.Parameters.AddWithValue("@fechaInicio", FechaInicio1);
                 ObjGraficoCitas.Parameters.AddWithValue("@fechaFinal", FechaFinal1);
 
-                SqlDataReader reader = ObjGraficoCitas.ExecuteReader();
+                SqlDataReader ObjLecturaSQL = ObjGraficoCitas.ExecuteReader();
 
                 GraficoCitas = new List<revenueByDate>();
 
-                while (reader.Read())
+                while (ObjLecturaSQL.Read())
                 {
                     GraficoCitas.Add(new revenueByDate
                     {
-                        Date = Convert.ToDateTime(reader["fecha"]).Date.ToString("dd/MM/yyyy"),
-                        TotalCitas = Convert.ToInt32(reader["TotalCitas"])
+                        Date = Convert.ToDateTime(ObjLecturaSQL["fecha"]).Date.ToString("dd/MM/yyyy"),
+                        TotalCitas = Convert.ToInt32(ObjLecturaSQL["TotalCitas"])
                     });
                 }
 
-                reader.Close();
+                ObjLecturaSQL.Close();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Ha ocurrido un error, no se encontraron datos para cargar el gráfico, ERR-007", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {

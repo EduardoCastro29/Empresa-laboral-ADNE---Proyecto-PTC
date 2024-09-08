@@ -9,7 +9,7 @@ using Empresa_laboral_ADNE___Proyecto_PTC.Controlador;
 
 namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DTO
 {
-    internal class DTOExpedienteMedico : Conexion
+    internal class DTOExpediente : Conexion
     {
         // Atributos para expediente 
         private int expedienteId;

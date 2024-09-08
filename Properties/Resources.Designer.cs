@@ -483,6 +483,16 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Ver_Especialidades {
+            get {
+                object obj = ResourceManager.GetObject("Ver Especialidades", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Ver_pacientes {
             get {
                 object obj = ResourceManager.GetObject("Ver pacientes", resourceCulture);

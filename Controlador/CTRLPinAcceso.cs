@@ -27,6 +27,13 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
         #region Validaciones de Campos
         private void ValidarCampoNumero(object sender, KeyPressEventArgs e)
         {
+            //La propiedad char.IsControl permite controles como BackSpace, Inicio, Fin, etc.
+            if (char.IsControl(e.KeyChar))
+            {
+                //Retornamos los valores e.KeyChar
+                return;
+            }
+
             if (char.IsDigit(e.KeyChar))
             {
                 return;
@@ -41,7 +48,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             try
             {
                 //Mandamos la variable estática GuardarCódigoRandom que posteriormente se insertará en el textbox
-                if (ObjPinAccesoForm.txtIngresarPin.Text.Length < 8 || DAODireccionGmail.GuardarCodigoRandom != ObjPinAccesoForm.txtIngresarPin.Text)
+                if (ObjPinAccesoForm.txtIngresarPin.Text.Length < 7 || DAODireccionGmail.GuardarCodigoRandom != ObjPinAccesoForm.txtIngresarPin.Text)
                 {
                     MessageBox.Show("Por favor, ingrese un pin de acceso válido antes de seguir", "Pin de Acceso", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }

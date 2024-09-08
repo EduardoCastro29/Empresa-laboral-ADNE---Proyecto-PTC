@@ -45,7 +45,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                     {
                         //Creamos el query
                         string consultaSQLProfesional = "INSERT INTO Profesional(DUI, telefono, nombre, apellido, correoElectronico, foto, desempenoId, usuarioId)\r\nVALUES \r\n(@DUI, @telefono, @nombre, @apellido, @correoElectronico, @foto, @desempenoId, @usuarioId)";
-                        
+
                         //Le mandamos la consulta a SQL por medio de un comando
                         SqlCommand ObjComandoSQLServer = new SqlCommand(consultaSQLProfesional, Conexion.Connection);
 
@@ -66,9 +66,9 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                         //En caso contrario, retornamos falso
                         else return false;
                     }
-                    catch (Exception ex)
+                    catch (Exception)
                     {
-                        MessageBox.Show(ex.Message);
+                        MessageBox.Show("Ha ocurrido un error, ERR-001-6", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return false;
                     }
                 }
@@ -77,9 +77,9 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                     return false;
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Ha ocurrido un error, ERR-001-6", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             finally
@@ -105,9 +105,9 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                 //Retornamos los valores dentro del DT
                 return ObjllenarDT;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Ha ocurrido un error, ERR-008-4", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return null;
             }
             finally
@@ -115,47 +115,5 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                 Conexion.Connection.Close();
             }
         }
-        //public DataTable AgregarCMBEspecialidad()
-        //{
-        //    try
-        //    {
-        //        Conexion.Connection = Conectar();
-        //        string consultaSQL = "SELECT * FROM Especialidad";
-        //        SqlDataAdapter ObjLlenarCombobox = new SqlDataAdapter(consultaSQL, Conexion.Connection);
-        //        DataTable ObjllenarDT = new DataTable();
-        //        ObjLlenarCombobox.Fill(ObjllenarDT);
-        //        return ObjllenarDT;
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        MessageBox.Show(ex.Message);
-        //        return null;
-        //    }
-        //    finally
-        //    {
-        //        Conexion.Connection.Close();
-        //    }
-        //}
-        //public DataTable AgregarCMBEspecialidadAlt()
-        //{
-        //    try
-        //    {
-        //        Conexion.Connection = Conectar();
-        //        string consultaSQL = "SELECT * FROM EspecialidadAlt";
-        //        SqlDataAdapter ObjLlenarCombobox = new SqlDataAdapter(consultaSQL, Conexion.Connection);
-        //        DataTable ObjllenarDT = new DataTable();
-        //        ObjLlenarCombobox.Fill(ObjllenarDT);
-        //        return ObjllenarDT;
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        MessageBox.Show(ex.Message);
-        //        return null;
-        //    }
-        //    finally
-        //    {
-        //        Conexion.Connection.Close();
-        //    }
-        //}
     }
 }

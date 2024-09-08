@@ -38,7 +38,7 @@
             this.btnDatosIdentificacionGradient = new Bunifu.UI.WinForms.BunifuGradientPanel();
             this.btnDatosIdentificacion = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.bunifuGradientPanel1 = new Bunifu.UI.WinForms.BunifuGradientPanel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblRegistroPaciente = new System.Windows.Forms.Label();
             this.bunifuPictureBox1 = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.bunifuShadowPanel1 = new Bunifu.UI.WinForms.BunifuShadowPanel();
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
@@ -303,7 +303,7 @@
             this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
             this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuGradientPanel1.BorderRadius = 5;
-            this.bunifuGradientPanel1.Controls.Add(this.label1);
+            this.bunifuGradientPanel1.Controls.Add(this.lblRegistroPaciente);
             this.bunifuGradientPanel1.Controls.Add(this.bunifuPictureBox1);
             this.bunifuGradientPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.bunifuGradientPanel1.GradientBottomLeft = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(163)))), ((int)(((byte)(170)))));
@@ -316,22 +316,23 @@
             this.bunifuGradientPanel1.Size = new System.Drawing.Size(991, 85);
             this.bunifuGradientPanel1.TabIndex = 8;
             // 
-            // label1
+            // lblRegistroPaciente
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(89)))), ((int)(((byte)(101)))));
-            this.label1.Location = new System.Drawing.Point(87, 26);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(230, 33);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Nuevo Paciente";
+            this.lblRegistroPaciente.AutoSize = true;
+            this.lblRegistroPaciente.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRegistroPaciente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(89)))), ((int)(((byte)(101)))));
+            this.lblRegistroPaciente.Location = new System.Drawing.Point(87, 26);
+            this.lblRegistroPaciente.Name = "lblRegistroPaciente";
+            this.lblRegistroPaciente.Size = new System.Drawing.Size(295, 33);
+            this.lblRegistroPaciente.TabIndex = 2;
+            this.lblRegistroPaciente.Text = "Registro del Paciente";
             // 
             // bunifuPictureBox1
             // 
             this.bunifuPictureBox1.AllowFocused = false;
+            this.bunifuPictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.bunifuPictureBox1.AutoSizeHeight = true;
-            this.bunifuPictureBox1.BorderRadius = 0;
+            this.bunifuPictureBox1.BorderRadius = 22;
             this.bunifuPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuPictureBox1.Image")));
             this.bunifuPictureBox1.IsCircle = false;
             this.bunifuPictureBox1.Location = new System.Drawing.Point(30, 22);
@@ -428,7 +429,7 @@
         private Bunifu.UI.WinForms.BunifuGradientPanel btnExpedienteGradient;
         private Bunifu.UI.WinForms.BunifuGradientPanel btnDatosIdentificacionGradient;
         private Bunifu.UI.WinForms.BunifuGradientPanel bunifuGradientPanel1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblRegistroPaciente;
         private Bunifu.UI.WinForms.BunifuPictureBox bunifuPictureBox1;
         private Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel1;
         private Bunifu.UI.WinForms.BunifuPanel bunifuPanel1;

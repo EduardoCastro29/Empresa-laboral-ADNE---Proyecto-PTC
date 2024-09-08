@@ -115,6 +115,13 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
         }
         private void ValidarCampoNumero(object sender, KeyPressEventArgs e)
         {
+            //La propiedad char.IsControl permite controles como BackSpace, Inicio, Fin, etc.
+            if (char.IsControl(e.KeyChar))
+            {
+                //Retornamos los valores e.KeyChar
+                return;
+            }
+
             if (char.IsDigit(e.KeyChar))
             {
                 return;
@@ -131,16 +138,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             ObjRegistro.cmbDesempeno.ValueMember = "desempenoId"; //Agregamos los atributos que estan en la tabla Desempeno
             ObjRegistro.cmbDesempeno.DisplayMember = "desempeno"; //Lo que se mostrara del Value
             ObjRegistro.cmbDesempeno.Enabled = false;
-
-            ////Combobox Especialidad 
-            //ObjRegistro.cmbEspecialidad1.DataSource = ObjDAOCargarCMB.AgregarCMBEspecialidad();
-            //ObjRegistro.cmbEspecialidad1.ValueMember = "especialidadId"; //Agregamos los atributos que estan en la tabla Especialidad
-            //ObjRegistro.cmbEspecialidad1.DisplayMember = "nombreEspecialidad";
-
-            ////Combobox Especialidad Alternativa 
-            //ObjRegistro.cmbEspecialidad2.DataSource = ObjDAOCargarCMB.AgregarCMBEspecialidadAlt();
-            //ObjRegistro.cmbEspecialidad2.ValueMember = "especialidadAltId";
-            //ObjRegistro.cmbEspecialidad2.DisplayMember = "nombreEspecialidadAlt";
         }
         #endregion
         #region Inserción al primer uso del sistema y creación del primer Usuario
@@ -149,11 +146,11 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             try
             {
                 //Dado el objeto del DAORegistro, evaluamos si los datos fueron ingresados correctamente dados sus métodos
-                if (ObjRegistro.txtUsuario.Text.Length < 3 ||
-                    ObjRegistro.txtNombre.Text.Length < 3 ||
-                    ObjRegistro.txtContrasena.Text.Length < 13 ||
+                if (ObjRegistro.txtUsuario.Text.Length < 2 ||
+                    ObjRegistro.txtNombre.Text.Length < 2 ||
+                    ObjRegistro.txtContrasena.Text.Length < 12 ||
                     ObjRegistro.txtCorreo.Text.Length < 10 ||
-                    ObjRegistro.txtApellido.Text.Length < 3 ||
+                    ObjRegistro.txtApellido.Text.Length < 2 ||
                     ObjRegistro.txtDui.Text.Length < 10 ||
                     ObjRegistro.txtTelefono.Text.Length < 9 ||
                     ObjRegistro.picProfesional.Image == Properties.Resources.ProfesionalPic)
@@ -229,7 +226,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
 
                             //Guardamos las variables de registro que se han hecho durante la inserción de la tabla profesional
                             ObjAbrirRegistroEspecialidad.txtDUIProfesional.Text = ObjRegistro.txtDui.Text.Trim();
-                            ObjAbrirRegistroEspecialidad.picProfesional.Image = Image.FromFile(ObjDAORegistro.Imagen);
+                            //ObjAbrirRegistroEspecialidad.picProfesional.Image = Image.FromFile(ObjDAORegistro.Imagen);
                             ObjAbrirRegistroEspecialidad.lblNombreProfesional.Text = ObjDAORegistro.Nombres + " " + ObjDAORegistro.Apellidos;
 
                             ObjAbrirRegistroEspecialidad.ShowDialog();

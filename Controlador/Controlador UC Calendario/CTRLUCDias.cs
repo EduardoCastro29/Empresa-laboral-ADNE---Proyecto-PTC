@@ -5,13 +5,14 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador.Controlador_UC_Calendario
 {
     internal class CTRLUCDias
     {
         readonly UCDias ObjUCDIAS;
-        public static string static_day;
+        public static int static_day;
         public CTRLUCDias(UCDias Vista)
         {
             ObjUCDIAS = Vista;
@@ -22,14 +23,21 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador.Controlador_UC_Calenda
         }
         private void AgregarCita(object sender, EventArgs e)
         {
-            static_day = ObjUCDIAS.lblDias.Text;
-            AgendarCitaForm ObjAgendarCita = new AgendarCitaForm();
-            ObjAgendarCita.btnModificar.Enabled = false;
-            ObjAgendarCita.dtFecha.Enabled = false;
-            ObjAgendarCita.Show();
-            //Dejamos un valor por defecto en el combobox
-            ObjAgendarCita.cmbEstado.SelectedIndex = 1;
-            ObjAgendarCita.cmbEstado.Enabled = false;
+            static_day = int.Parse(ObjUCDIAS.lblDias.Text);
+            if (static_day < DateTime.Now.Day)
+            {
+                MessageBox.Show("No se puede elejir una fecha pasada a la fecha actual al agendar una cita", "Agendar Cita", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
+            else
+            {
+                AgendarCitaForm ObjAgendarCita = new AgendarCitaForm();
+                ObjAgendarCita.btnModificar.Enabled = false;
+                ObjAgendarCita.dtFecha.Enabled = false;
+                ObjAgendarCita.Show();
+                //Dejamos un valor por defecto en el combobox
+                ObjAgendarCita.cmbEstado.SelectedIndex = 1;
+                ObjAgendarCita.cmbEstado.Enabled = false;
+            }
         }
         public void days(int numDia)
         {

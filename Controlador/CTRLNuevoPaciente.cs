@@ -25,8 +25,15 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
         }
         private void FormularioPorDefecto(object sender, EventArgs e)
         {
-            //En caso de seleccionarse el formulario Pacientes, se abrirá declarandolo como un nuevo formulario después del método
-            AbrirFormulario<InformaciónPersonalForm>();
+            if (ObjNuevoPacienteForm.btnDatosIdentificacion.Enabled == true)
+            {
+                //En caso de seleccionarse el formulario Pacientes, se abrirá declarandolo como un nuevo formulario después del método
+                AbrirFormulario<InformaciónPersonalForm>();
+            }
+            else
+            {
+                AbrirFormulario<ExpedienteMédicoForm>();
+            }
         }
         private void FormularioInformacionPersonal(object sender, EventArgs e)
         {

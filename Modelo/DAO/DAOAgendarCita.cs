@@ -37,7 +37,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                 ObjComandoSQLInsertarCita.Parameters.AddWithValue("@horaInicio", HoraInicio);
                 ObjComandoSQLInsertarCita.Parameters.AddWithValue("@horaFinal", HoraFinal);
                 ObjComandoSQLInsertarCita.Parameters.AddWithValue("@estadoId", EstadoId);
-                ObjComandoSQLInsertarCita.Parameters.AddWithValue("@documentoPresentado",  DocumentoPresentado);
+                ObjComandoSQLInsertarCita.Parameters.AddWithValue("@documentoPresentado", DocumentoPresentado);
                 ObjComandoSQLInsertarCita.Parameters.AddWithValue("@DUI", DuiProfesional);
                 ObjComandoSQLInsertarCita.Parameters.AddWithValue("@lugarId", LugarId);
 
@@ -68,9 +68,9 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                             return false;
                         }
                     }
-                    catch (Exception ex)
+                    catch (Exception)
                     {
-                        MessageBox.Show(ex.Message);
+                        MessageBox.Show("Ha ocurrido un error, ERR-001-2", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return false;
                     }
                 }
@@ -79,9 +79,9 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                     return false;
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Ha ocurrido un error, ERR-001-2", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             finally
@@ -134,9 +134,9 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                             return true;
                         else return false;
                     }
-                    catch (Exception ex)
+                    catch (Exception)
                     {
-                        MessageBox.Show(ex.Message);
+                        MessageBox.Show("Ha ocurrido un error, ERR-003-3", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return false;
                     }
                 }
@@ -145,9 +145,9 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                     return false;
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Ha ocurrido un error, ERR-003-3", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             finally
@@ -175,9 +175,9 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                 //Retornamos los valores dentro del DT
                 return ObjllenarDT;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Ha ocurrido un error, ERR-008-1", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return null;
             }
             finally
@@ -197,9 +197,9 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                 ObjLlenarCombobox.Fill(ObjllenarDT);
                 return ObjllenarDT;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Ha ocurrido un error, ERR-008-2", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return null;
             }
             finally

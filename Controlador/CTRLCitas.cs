@@ -35,7 +35,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
         }
         public void CargarCitas(object sender, EventArgs e)
         {
-            DAOCitas objCitaUC = new DAOCitas();
+            DAODiagnosticos objCitaUC = new DAODiagnosticos();
             DataTable dt = objCitaUC.Cargar();
 
             foreach (DataRow dr in dt.Rows)
@@ -54,7 +54,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
         }
         public void BuscarCitas(object sender, KeyPressEventArgs e)
         {
-            DAOCitas objCitas = new DAOCitas();
+            DAODiagnosticos objCitas = new DAODiagnosticos();
             DataSet ds = objCitas.BuscarCita(objCitasForm.txtBuscarCita.Text.Trim());
 
             objCitasForm.flpCitas.Controls.Clear();
@@ -77,7 +77,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                 SaveFileDialog guardar = new SaveFileDialog();
                 guardar.FileName = DateTime.Now.ToString("ddMMyyyy") + ".pdf";
 
-                DAOCitas objCitasDAO = new DAOCitas();
+                DAODiagnosticos objCitasDAO = new DAODiagnosticos();
                 objCitasDAO.DocumentoPaciente = objUC.lblPacienteId.Text;
                 objCitasDAO.CitaId = int.Parse(objUC.lblCitaId.Text);
                 objCitasDAO.N_expediente = int.Parse(objUC.lblExpedienteId.Text);

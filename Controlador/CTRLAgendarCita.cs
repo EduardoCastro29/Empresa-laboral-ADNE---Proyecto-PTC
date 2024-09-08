@@ -38,15 +38,10 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                 return;
             }
             //Declaramos la variable de tipo char que recibirá los parámetros de las letras registradas por las variables e.KeyChar creadas anteriormente
-            char ch = e.KeyChar;
-
-            //Declaramos lo valores que únicamente permitirá el textbox
-            if ((ch >= 'A' && ch <= 'Z') ||
-                (ch >= 'a' && ch <= 'z') ||
-                 ch == '.' ||
-                 ch == ',' ||
-                 ch == '´' ||
-                 e.KeyChar == ' ')
+            if (char.IsLetter(e.KeyChar) ||
+                e.KeyChar == ' ' ||
+                e.KeyChar == ',' ||
+                e.KeyChar == '.')
             {
                 //Retornamos los valores e.KeyChar
                 return;
@@ -85,8 +80,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             {
                 if (ObjAgendarCitaForm.txtDUIProfesional.Text.Length < 10   ||
                     ObjAgendarCitaForm.txtDUIPaciente.Text.Length < 10      ||
-                    ObjAgendarCitaForm.dtHoraInicio.Text.Length < 3 || //Verificar esta validación
-                    ObjAgendarCitaForm.dtHoraFinal.Text.Length < 3          || //Verificar esta validación
+                    ObjAgendarCitaForm.dtHoraInicio.Value.TimeOfDay >= ObjAgendarCitaForm.dtHoraFinal.Value.TimeOfDay ||
                     ObjAgendarCitaForm.txtMotivoConsulta.Text.Length < 5)
                 {
                     MessageBox.Show("Existen campos vacíos o los campos son demasiado cortos en el listado, verifique si existe algún campo faltante", "Agendar Cita", MessageBoxButtons.OK, MessageBoxIcon.Error);

@@ -51,15 +51,10 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                 return;
             }
             //Declaramos la variable de tipo char que recibirá los parámetros de las letras registradas por las variables e.KeyChar creadas anteriormente
-            char ch = e.KeyChar;
-
-            //Declaramos lo valores que únicamente permitirá el textbox
-            if ((ch >= 'A' && ch <= 'Z') ||
-                (ch >= 'a' && ch <= 'z') ||
-                 ch == '.' ||
-                 ch == ',' ||
-                 ch == '´' || 
-                 e.KeyChar == ' ')
+            if (char.IsLetter(e.KeyChar) ||
+                e.KeyChar == ' ' ||
+                e.KeyChar == ',' ||
+                e.KeyChar == '.')
             {
                 //Retornamos los valores e.KeyChar
                 return;
@@ -178,7 +173,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
 
                     //Obtenemos datos del objeto ObjDAOExpediente
                     ObjDAOExpediente.DocumentoPresentado = ObjExpediente.txtPacienteId.Text.Trim();
-
                     ObjDAOExpediente.EstadoAnimo = ObjExpediente.txtEstadoAnimo.Text.Trim();
                     ObjDAOExpediente.EstadoConductual = ObjExpediente.txtEstadoConductual.Text.Trim();
                     ObjDAOExpediente.Somatizacion = ObjExpediente.txtSomatizacion.Text.Trim();

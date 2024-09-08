@@ -22,6 +22,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
 
             ObjRegistroEspecialidad.Load += new EventHandler(CargarEspecialidadesYGRID);
             ObjRegistroEspecialidad.btnAnadirEspecialidad.Click += new EventHandler(AgregarEspecialidad);
+            ObjRegistroEspecialidad.btnEliminarEspecialidad.Click += new EventHandler(EliminarEspecialidadP);
             ObjRegistroEspecialidad.btnSiguiente.Click += new EventHandler(IngresarLogin);
         }
         #region Eventos Iniciales al cargar el Formulario
@@ -62,7 +63,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                 ObjInsertarEspecialidad.DUIEmpleado1 = ObjRegistroEspecialidad.txtDUIProfesional.Text.Trim();
                 ObjInsertarEspecialidad.IdEspecialidadNombre = int.Parse(ObjRegistroEspecialidad.cmbEspecialidades.SelectedValue.ToString());
 
-                if (ObjInsertarEspecialidad.RegistrarEspecialidadEmpleado() == true)
+                if (ObjInsertarEspecialidad.RegistrarEspecialidadProfesional() == true)
                 {
                     MessageBox.Show("La especialidad se ha agregado correctamente", "Especialidad del Empleado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     CargarDGVEspecialidades();
@@ -75,6 +76,27 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+            }
+        }
+        #endregion
+        #region Eliminar una especialidad al empleado seleccionado (DELETE), relación de muchos a muchos
+        private void EliminarEspecialidadP(object sender, EventArgs e)
+        {
+            //Indicamos en que posición nos encontramos dentro del DataGridView
+            int PosicionFila = ObjRegistroEspecialidad.dgvEspecialidades.CurrentRow.Index;
+
+            if (MessageBox.Show("Bienvenido administrador, está seguro que desea eliminar la especialidad seleccionada en relación al profesional? La acción puede revertirse", "Eliminar Especialidad", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                //Instanciamos a la clase DAOAdministrador para obtener los valores
+                DAORegistroEspecialidad ObjDAOEliminarEspecialidad = new DAORegistroEspecialidad();
+
+                ObjDAOEliminarEspecialidad.IdEspecialidad = int.Parse(ObjRegistroEspecialidad.dgvEspecialidades[1, PosicionFila].Value.ToString());
+
+                if (ObjDAOEliminarEspecialidad.EliminarEspecialidadProfesional() == true)
+                {
+                    MessageBox.Show("La especialidad se ha removido correctamente", "Eliminar Especialidad", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    CargarDGVEspecialidades();
+                }
             }
         }
         #endregion
@@ -92,8 +114,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                 }
                 else
                 {
-                    MessageBox.Show("Ingreso exitoso", "Bienvenido!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    ObjRegistroEspecialidad.Close();
+                    ObjRegistroEspecialidad.Hide();
                 }
             }
             catch (Exception ex)

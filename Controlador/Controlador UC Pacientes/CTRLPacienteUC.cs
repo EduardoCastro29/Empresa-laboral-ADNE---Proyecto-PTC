@@ -16,6 +16,8 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador.ControladorUserControl
     {
         readonly ControlVerPacientesUC ObjVerPacienteUS;
         readonly InformaciónPersonalForm ObjInformacionPersonal;
+        NuevoPacienteForm ObjVerDatosPaciente = null;
+        Form FormActual;
 
         // Primer Controlador de la vista del user control
         public CTRLPacienteUC(ControlVerPacientesUC vista) // Controlador de la vista del User control
@@ -29,47 +31,57 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador.ControladorUserControl
         // Metodo para cargar la Informacion del Paciente
         private void CargarInformacionPersonal(object sender, EventArgs e)
         {
-            try
+            if (ObjVerDatosPaciente == null || ObjVerDatosPaciente.IsDisposed)
             {
-                DAOInformacionPersonal ObjDaoInformacionPersonal = new DAOInformacionPersonal();
-                ObjDaoInformacionPersonal.DocumentoPresentado = ObjVerPacienteUS.lblPacienteId.Text; // Asigna el ID del paciente que deseas cargar
-
-                bool Comprobar = ObjDaoInformacionPersonal.ObtenerInformacionPaciente();
-                if (Comprobar)
+                ObjVerDatosPaciente = new NuevoPacienteForm();
+                ObjVerDatosPaciente.btnExpediente.Enabled = false;
+                try
                 {
-                    InformaciónPersonalForm ObjVerInformacion = new InformaciónPersonalForm();
+                    DAOInformacionPersonal ObjDaoInformacionPersonal = new DAOInformacionPersonal();
+                    ObjDaoInformacionPersonal.DocumentoPresentado = ObjVerPacienteUS.lblPacienteId.Text; // Asigna el ID del paciente que deseas cargar
 
-                    // Pasar datos al formulario
-                    ObjVerInformacion.dtFechaNacimiento.Value = ObjDaoInformacionPersonal.FechaNacimiento;
-                    ObjVerInformacion.txtNombrePaciente.Text = ObjDaoInformacionPersonal.Nombre;
-                    ObjVerInformacion.txtApellidoPaciente.Text = ObjDaoInformacionPersonal.Apellido;
-                    ObjVerInformacion.txtDomicilio.Text = ObjDaoInformacionPersonal.Domicilio;
-                    ObjVerInformacion.txtNacionalidad.Text = ObjDaoInformacionPersonal.Nacionalidad;
-                    ObjVerInformacion.txtDocumentoPresentado.Text = ObjDaoInformacionPersonal.DocumentoPresentado;
-                    ObjVerInformacion.txtCorreoElectronico.Text = ObjDaoInformacionPersonal.CorreoElectronico;
-                    ObjVerInformacion.txtTelefono1.Text = ObjDaoInformacionPersonal.Telefono;
-                    ObjVerInformacion.txtProfesion.Text = ObjDaoInformacionPersonal.Profesion;
-                    ObjVerInformacion.txtEdad.Text = ObjDaoInformacionPersonal.Edad.ToString();
-                    ObjVerInformacion.txtComposicionFamiliar.Text = ObjDaoInformacionPersonal.ComposicionFamiliar;
-                    ObjVerInformacion.txtMotivoIntervencion.Text = ObjDaoInformacionPersonal.Motivo;
-                    ObjVerInformacion.txtAntecedentes.Text = ObjDaoInformacionPersonal.Antecedente;
-                    ObjVerInformacion.txtDescripcion.Text = ObjDaoInformacionPersonal.Descripcion;
-                    ObjVerInformacion.txtAspectosPreocupantes.Text = ObjDaoInformacionPersonal.AspectosPreocupantes;
-                    ObjVerInformacion.cmbGeneroId.SelectedValue = ObjDaoInformacionPersonal.GeneroId1;
+                    bool Comprobar = ObjDaoInformacionPersonal.ObtenerInformacionPaciente();
+                    if (Comprobar)
+                    {
+                        InformaciónPersonalForm ObjVerInformacion = new InformaciónPersonalForm();
 
-                    ObjVerInformacion.Show();
+                        // Pasar datos al formulario
+                        ObjVerInformacion.dtFechaNacimiento.Value = ObjDaoInformacionPersonal.FechaNacimiento;
+                        ObjVerInformacion.txtNombrePaciente.Text = ObjDaoInformacionPersonal.Nombre;
+                        ObjVerInformacion.txtApellidoPaciente.Text = ObjDaoInformacionPersonal.Apellido;
+                        ObjVerInformacion.txtDomicilio.Text = ObjDaoInformacionPersonal.Domicilio;
+                        ObjVerInformacion.txtNacionalidad.Text = ObjDaoInformacionPersonal.Nacionalidad;
+                        ObjVerInformacion.txtDocumentoPresentado.Text = ObjDaoInformacionPersonal.DocumentoPresentado;
+                        ObjVerInformacion.txtCorreoElectronico.Text = ObjDaoInformacionPersonal.CorreoElectronico;
+                        ObjVerInformacion.txtTelefono1.Text = ObjDaoInformacionPersonal.Telefono;
+                        ObjVerInformacion.txtProfesion.Text = ObjDaoInformacionPersonal.Profesion;
+                        ObjVerInformacion.txtEdad.Text = ObjDaoInformacionPersonal.Edad.ToString();
+                        ObjVerInformacion.txtComposicionFamiliar.Text = ObjDaoInformacionPersonal.ComposicionFamiliar;
+                        ObjVerInformacion.txtMotivoIntervencion.Text = ObjDaoInformacionPersonal.Motivo;
+                        ObjVerInformacion.txtAntecedentes.Text = ObjDaoInformacionPersonal.Antecedente;
+                        ObjVerInformacion.txtDescripcion.Text = ObjDaoInformacionPersonal.Descripcion;
+                        ObjVerInformacion.txtAspectosPreocupantes.Text = ObjDaoInformacionPersonal.AspectosPreocupantes;
+                        ObjVerInformacion.cmbGeneroId.SelectedValue = ObjDaoInformacionPersonal.GeneroId1;
+
+                        AbrirFormulario(ObjVerInformacion);
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se encontraron datos para el paciente seleccionado.",
+                                       "Proceso interrumpido",
+                                       MessageBoxButtons.OK,
+                                       MessageBoxIcon.Error);
+                    }
                 }
-                else
+                catch (Exception ex)
                 {
-                    MessageBox.Show("No se encontraron datos para el paciente seleccionado.",
-                                   "Proceso interrumpido",
-                                   MessageBoxButtons.OK,
-                                   MessageBoxIcon.Error);
+                    MessageBox.Show(ex.Message);
                 }
+                ObjVerDatosPaciente.Show();
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show(ex.Message);
+                ObjVerDatosPaciente.BringToFront();
             }
         }
         #endregion
@@ -77,46 +89,102 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador.ControladorUserControl
         //Método para cargar los datos de expediente
         private void CargarExpediente(object sender, EventArgs e)
         {
-            try
+            if (ObjVerDatosPaciente == null || ObjVerDatosPaciente.IsDisposed)
             {
-                DAOExpediente objDAOExpedienteMedico = new DAOExpediente();
-                objDAOExpedienteMedico.DocumentoPresentado = ObjVerPacienteUS.lblPacienteId.Text;
+                ObjVerDatosPaciente = new NuevoPacienteForm();
+                ObjVerDatosPaciente.btnDatosIdentificacion.Enabled = false;
 
-                //Se asigna el ID del expediente que se desea cargar
-                bool Comprobar = objDAOExpedienteMedico.ObtenerExpedientePaciente();
-                if (Comprobar)
+                try
                 {
-                    ExpedienteMédicoForm objExpedienteMedico = new ExpedienteMédicoForm();
+                    DAOExpediente objDAOExpedienteMedico = new DAOExpediente();
+                    objDAOExpedienteMedico.DocumentoPresentado = ObjVerPacienteUS.lblPacienteId.Text;
 
-                    objExpedienteMedico.txtEstadoAnimo.Text = objDAOExpedienteMedico.EstadoAnimo;
-                    objExpedienteMedico.txtEstadoConductual.Text = objDAOExpedienteMedico.EstadoConductual;
-                    objExpedienteMedico.txtSomatizacion.Text = objDAOExpedienteMedico.Somatizacion;
-                    objExpedienteMedico.txtVidaInterpersonal.Text = objDAOExpedienteMedico.VidaInterpersonal;
-                    objExpedienteMedico.txtCognicion.Text = objDAOExpedienteMedico.Cognicion;
-                    objExpedienteMedico.txtRedSocial.Text = objDAOExpedienteMedico.RedSocial;
-                    objExpedienteMedico.txtPauta.Text = objDAOExpedienteMedico.Pauta;
-                    objExpedienteMedico.txtRiesgoValorado.Text = objDAOExpedienteMedico.RiesgoValorado;
-                    objExpedienteMedico.txtObservacion.Text = objDAOExpedienteMedico.Observacion;
-                    objExpedienteMedico.txtAproximacionDiag.Text = objDAOExpedienteMedico.AproximacionDiag;
-                    objExpedienteMedico.txtAtencionBrindada.Text = objDAOExpedienteMedico.AtencionBrindada;
-                    objExpedienteMedico.txtPacienteId.Text = objDAOExpedienteMedico.DocumentoPresentado;
+                    //Se asigna el ID del expediente que se desea cargar
+                    bool Comprobar = objDAOExpedienteMedico.ObtenerExpedientePaciente();
+                    if (Comprobar == true)
+                    {
+                        ExpedienteMédicoForm objExpedienteMedico = new ExpedienteMédicoForm();
 
-                    objExpedienteMedico.btnGuardar.Enabled = false;
-                    objExpedienteMedico.btnModificar.Enabled = true;
+                        objExpedienteMedico.txtEstadoAnimo.Text = objDAOExpedienteMedico.EstadoAnimo;
+                        objExpedienteMedico.txtEstadoConductual.Text = objDAOExpedienteMedico.EstadoConductual;
+                        objExpedienteMedico.txtSomatizacion.Text = objDAOExpedienteMedico.Somatizacion;
+                        objExpedienteMedico.txtVidaInterpersonal.Text = objDAOExpedienteMedico.VidaInterpersonal;
+                        objExpedienteMedico.txtCognicion.Text = objDAOExpedienteMedico.Cognicion;
+                        objExpedienteMedico.txtRedSocial.Text = objDAOExpedienteMedico.RedSocial;
+                        objExpedienteMedico.txtPauta.Text = objDAOExpedienteMedico.Pauta;
+                        objExpedienteMedico.txtRiesgoValorado.Text = objDAOExpedienteMedico.RiesgoValorado;
+                        objExpedienteMedico.txtObservacion.Text = objDAOExpedienteMedico.Observacion;
+                        objExpedienteMedico.txtAproximacionDiag.Text = objDAOExpedienteMedico.AproximacionDiag;
+                        objExpedienteMedico.txtAtencionBrindada.Text = objDAOExpedienteMedico.AtencionBrindada;
+                        objExpedienteMedico.txtPacienteId.Text = objDAOExpedienteMedico.DocumentoPresentado;
 
-                    objExpedienteMedico.Show();
+                        objExpedienteMedico.btnGuardar.Enabled = false;
+                        objExpedienteMedico.btnModificar.Enabled = true;
+                        objExpedienteMedico.txtPacienteId.Enabled = false;
+
+                        AbrirFormulario(objExpedienteMedico);
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se encontraron datos para el expediente seleccionado.",
+                                        "Proceso interrumpido",
+                                        MessageBoxButtons.OK,
+                                        MessageBoxIcon.Error);
+                    }
                 }
-                else
+                catch (Exception ex)
                 {
-                    MessageBox.Show("No se encontraron datos para el expediente seleccionado.",
-                                    "Proceso interrumpido",
-                                    MessageBoxButtons.OK,
-                                    MessageBoxIcon.Error);
+                    MessageBox.Show(ex.Message);
                 }
+                ObjVerDatosPaciente.Show();
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show(ex.Message);
+                ObjVerDatosPaciente.BringToFront();
+            }
+        }
+        #endregion
+        #region Método para cargar un formulario dentro del formulario padre (al que queremos llamar)
+        private void AbrirFormulario(Form Formulario)
+        {
+            //Creamos un objeto de tipo Forms que heredara el nuevo Formulario
+            Form nuevoFormulario;
+            //Se guardan los datos en el panelGeneralVistas que hereda el objeto nuevoFormulario que abrira el Formulario
+            nuevoFormulario = ObjVerDatosPaciente.panelElement.Controls.OfType<Form>().FirstOrDefault(ParametroFormulario => ParametroFormulario.GetType() == Formulario.GetType());
+            //Si el objeto nuevoFormulario no llegase a existir, se crea uno nuevo
+            if (nuevoFormulario == null)
+            {
+                //Se declara un uevo formulario que tendra como instancia <Formulario>
+                nuevoFormulario = Formulario;
+                //Especificamos que el formulario deberá abrirse como ventana
+                //Evitando los marcos de WindowsForms
+                nuevoFormulario.TopLevel = false;
+                //Se eliminan los bordes del formulario
+                nuevoFormulario.FormBorderStyle = FormBorderStyle.None;
+                //Declaramos que utilizará todo el espacio del Panel
+                nuevoFormulario.Dock = DockStyle.Fill;
+                //Evaluamos si el FormularioActual es nulo, en caso de serlo, se ejecuta el siguiente código
+                if (FormActual != null)
+                {
+                    //Se cierra el formulario actual para mostrar el nuevo formulario
+                    FormActual.Close();
+                    //Se eliminan todos los controles del FormularioActual dentro del panel
+                    ObjVerDatosPaciente.panelElement.Controls.Remove(FormActual);
+                }
+                //Establecemos que el FormularioActual es igual al nuevo formulario creado
+                FormActual = nuevoFormulario;
+                //Se agregan los controles que fueron previamente puestos en el nuevoFormulario dentro del Panel
+                ObjVerDatosPaciente.panelElement.Controls.Add(nuevoFormulario);
+                ObjVerDatosPaciente.panelElement.Tag = nuevoFormulario;
+                //Se muestra el objeto nuevoFormulario creado
+                nuevoFormulario.Show();
+                //Se muestra al frente
+                nuevoFormulario.BringToFront();
+            }
+            else
+            {
+                //En caso de no haberse ejecutado el código, se trae al frente un formulario nulo
+                nuevoFormulario.BringToFront();
             }
         }
         #endregion
@@ -181,13 +249,10 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador.ControladorUserControl
                 return;
             }
             //Declaramos la variable de tipo char que recibirá los parámetros de las letras registradas por las variables e.KeyChar creadas anteriormente
-            char ch = e.KeyChar;
-
-            //Declaramos lo valores que únicamente permitirá el textbox
-            if ((ch >= 'A' && ch <= 'Z') ||
-                (ch >= 'a' && ch <= 'z') ||
-                 ch == '.' ||
-                 ch == ',' || e.KeyChar == ' ')
+            if (char.IsLetter(e.KeyChar) ||
+                e.KeyChar == ' ' ||
+                e.KeyChar == ',' ||
+                e.KeyChar == '.')
             {
                 //Retornamos los valores e.KeyChar
                 return;
@@ -222,6 +287,13 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador.ControladorUserControl
         }
         private void ValidarCampoNumero(object sender, KeyPressEventArgs e)
         {
+            //La propiedad char.IsControl permite controles como BackSpace, Inicio, Fin, etc.
+            if (char.IsControl(e.KeyChar))
+            {
+                //Retornamos los valores e.KeyChar
+                return;
+            }
+
             if (char.IsDigit(e.KeyChar))
             {
                 return;
@@ -236,11 +308,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador.ControladorUserControl
             ObjInformacionPersonal.cmbGeneroId.DataSource = ObjDaoCargarCMB.AgregarCMBGenero();
             ObjInformacionPersonal.cmbGeneroId.ValueMember = "generoId";
             ObjInformacionPersonal.cmbGeneroId.DisplayMember = "genero";
-
-            //Indicamos la fecha actual en la que se encontrará el DateTimePicker
-            int ValidarEdadAños = DateTime.Today.Year;
-            int ValidarEdad = ValidarEdadAños - 2;
-            ValidarEdad = ObjInformacionPersonal.dtFechaNacimiento.Value.Year;
         }
         // Instrucciones que se haran en el metodo DesactivarAgregarPaciente para desactivar el boton de agregar Paciente 
         private void DesactivarAgregarPaciente(object sender, EventArgs e)  // Todo el proceso para desactivar el boton de Guardar Paciente
@@ -281,7 +348,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador.ControladorUserControl
                     //Realizamos el proceso para capturar los datos ingresados por el usuario dado el DaoInformacionPersonal
                     DAOInformacionPersonal ObjDAOActualizarInformacionPersonal = new DAOInformacionPersonal();
                     ObjDAOActualizarInformacionPersonal.FechaNacimiento = ObjInformacionPersonal.dtFechaNacimiento.Value.Date;
-                    
+
                     ObjDAOActualizarInformacionPersonal.Nacionalidad = ObjInformacionPersonal.txtNacionalidad.Text.Trim();
                     ObjDAOActualizarInformacionPersonal.DocumentoPresentado = ObjInformacionPersonal.txtDocumentoPresentado.Text.Trim();
                     ObjDAOActualizarInformacionPersonal.Edad = int.Parse(ObjInformacionPersonal.txtEdad.Text.Trim());

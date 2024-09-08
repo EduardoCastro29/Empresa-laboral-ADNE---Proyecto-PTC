@@ -41,6 +41,7 @@
             this.cmsOpciones = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.cmsActualizar = new System.Windows.Forms.ToolStripMenuItem();
             this.cmsEliminarProfesional = new System.Windows.Forms.ToolStripMenuItem();
+            this.cmsVerEspecialidades = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlFondo = new Bunifu.UI.WinForms.BunifuPanel();
             this.pnlSombraFondo = new Bunifu.UI.WinForms.BunifuShadowPanel();
             this.pnlForms = new Bunifu.UI.WinForms.BunifuGradientPanel();
@@ -62,9 +63,10 @@
             // 
             this.cmsOpciones.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cmsActualizar,
-            this.cmsEliminarProfesional});
+            this.cmsEliminarProfesional,
+            this.cmsVerEspecialidades});
             this.cmsOpciones.Name = "cmsOpciones";
-            this.cmsOpciones.Size = new System.Drawing.Size(189, 48);
+            this.cmsOpciones.Size = new System.Drawing.Size(189, 70);
             // 
             // cmsActualizar
             // 
@@ -79,6 +81,13 @@
             this.cmsEliminarProfesional.Name = "cmsEliminarProfesional";
             this.cmsEliminarProfesional.Size = new System.Drawing.Size(188, 22);
             this.cmsEliminarProfesional.Text = "Eliminar Profesional";
+            // 
+            // cmsVerEspecialidades
+            // 
+            this.cmsVerEspecialidades.Image = global::Empresa_laboral_ADNE___Proyecto_PTC.Properties.Resources.Ver_Especialidades;
+            this.cmsVerEspecialidades.Name = "cmsVerEspecialidades";
+            this.cmsVerEspecialidades.Size = new System.Drawing.Size(188, 22);
+            this.cmsVerEspecialidades.Text = "Ver Especialidades";
             // 
             // pnlFondo
             // 
@@ -456,5 +465,6 @@
         public Bunifu.UI.WinForms.BunifuShadowPanel pnlSombreBoton;
         public Bunifu.UI.WinForms.BunifuPanel pnlSombraBuscar;
         public Bunifu.UI.WinForms.BunifuTextBox txtBuscarEmpleado;
+        public System.Windows.Forms.ToolStripMenuItem cmsVerEspecialidades;
     }
 }
