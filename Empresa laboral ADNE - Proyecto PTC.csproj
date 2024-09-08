@@ -115,6 +115,7 @@
     <Compile Include="Controlador\CommonMethods.cs" />
     <Compile Include="Controlador\Controlador UC Calendario\CTRLUCDias.cs" />
     <Compile Include="Controlador\Controlador UC Pacientes\CTRLPacienteUC.cs" />
+    <Compile Include="Controlador\CTRLAgregarConexion.cs" />
     <Compile Include="Controlador\CTRLPrimerUsoSistema.cs" />
     <Compile Include="Controlador\CTRLActividades.cs" />
     <Compile Include="Controlador\CTRLActualizarContrasena.cs" />
@@ -168,6 +169,7 @@
     <Compile Include="Modelo\DTO\DTOActualizarContrasena.cs" />
     <Compile Include="Modelo\DTO\DTOAdministrador.cs" />
     <Compile Include="Modelo\DTO\DTOAgendarCita.cs" />
+    <Compile Include="Modelo\DTO\DTOAgregarConexion.cs" />
     <Compile Include="Modelo\DTO\DTOCalendario.cs" />
     <Compile Include="Modelo\DTO\DTOCitas.cs" />
     <Compile Include="Modelo\DTO\DTOConfiguracion.cs" />
