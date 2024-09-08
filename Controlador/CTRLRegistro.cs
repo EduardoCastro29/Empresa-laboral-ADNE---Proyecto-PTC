@@ -156,7 +156,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                     ObjRegistro.picProfesional.Image == Properties.Resources.ProfesionalPic)
                 {
                     //Si los datos no fueron ingresados correctamente, mostramos un mensaje de error
-                    MessageBox.Show("Error al registrarse, verifique si todos los datos han sido ingresados correctamente o si los datos han sido rellenados con éxito", "Primer Usuario", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    ObjRegistro.Notificacion1.Show(ObjRegistro, "Error al registrarse, verifique si todos los datos han sido ingresados correctamente o si los datos han sido rellenados con éxito");
                 }
                 else
                 {
@@ -216,13 +216,16 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                         //Llamamos a los métodos para verificar si la inserción se hizo correctamente 
                         if (ObjDAORegistro.RegistroInsertarUsuarioProfesional() == false)
                         {
-                            MessageBox.Show("Oops!, Algo salió mal, verifique si todas las credenciales han sido ingresadas correctamente", "Primer Usuario", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            ObjRegistro.Notificacion1.Show(ObjRegistro, "Oops!, Algo salió mal, verifique si todas las credenciales han sido ingresadas correctamente");
                         }
                         else
                         {
-                            MessageBox.Show("Excelente", "Primer Usuario", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            //MessageBox.Show("Excelente", "Primer Usuario", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                             RegistroEspecialidadesForm ObjAbrirRegistroEspecialidad = new RegistroEspecialidadesForm();
+
+                            ObjAbrirRegistroEspecialidad.NotificacionEspecialidad.Show(ObjAbrirRegistroEspecialidad, "Registro realizado", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Success);
+
 
                             //Guardamos las variables de registro que se han hecho durante la inserción de la tabla profesional
                             ObjAbrirRegistroEspecialidad.txtDUIProfesional.Text = ObjRegistro.txtDui.Text.Trim();
@@ -239,13 +242,13 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                     }
                     else
                     {
-                        MessageBox.Show("El correo electrónico ingresado no posee una dirección de correo válida, verifique si contiene @ o dominio correcto", "Primer Usuario", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        ObjRegistro.Notificacion1.Show(ObjRegistro, "El correo electrónico ingresado no posee una dirección de correo válida, verifique si contiene @ o dominio correcto", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error);
                     }
                 }
             }
             catch (Exception)
             {
-                MessageBox.Show("El correo electrónico ingresado no posee una dirección de correo válida, verifique si contiene @ o dominio correcto", "Primer Usuario", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ObjRegistro.Notificacion1.Show(ObjRegistro, "El correo electrónico ingresado no posee una dirección de correo válida, verifique si contiene @ o dominio correcto", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error);
             }
         }
         #endregion

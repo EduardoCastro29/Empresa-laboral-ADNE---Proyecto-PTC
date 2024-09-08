@@ -83,7 +83,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                     ObjAgendarCitaForm.dtHoraInicio.Value.TimeOfDay >= ObjAgendarCitaForm.dtHoraFinal.Value.TimeOfDay ||
                     ObjAgendarCitaForm.txtMotivoConsulta.Text.Length < 5)
                 {
-                    MessageBox.Show("Existen campos vacíos o los campos son demasiado cortos en el listado, verifique si existe algún campo faltante", "Agendar Cita", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    ObjAgendarCitaForm.NotificacionCita.Show(ObjAgendarCitaForm, "Existen campos vacíos o los campos son demasiado cortos en el listado, verifique si existe algún campo faltante", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error);
                 }
                 else
                 {
@@ -104,11 +104,11 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
 
                     if (ObjDAOAgendarCita.RegistrarCitaConsulta() == false)
                     {
-                        MessageBox.Show("Uno de los apartados no ha sido ingresado correctamente", "Agendar Cita", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        ObjAgendarCitaForm.NotificacionCita.Show(ObjAgendarCitaForm, "Uno de los apartados no ha sido ingresado correctamente", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Warning);
                     }
                     else
                     {
-                        MessageBox.Show("Los datos han sido ingresados correctamente", "Agendar Cita", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        ObjAgendarCitaForm.NotificacionCita.Show(ObjAgendarCitaForm, "Los datos han sido ingresados correctamente", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Success);
                         ObjAgendarCitaForm.Hide();
                     }
                 }
@@ -130,7 +130,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                     ObjAgendarCitaForm.dtHoraFinal.Text.Length < 3          || // Verificar esta validación
                     ObjAgendarCitaForm.txtMotivoConsulta.Text.Length < 5)
                 {
-                    MessageBox.Show("Existen campos vacíos o los campos son demasiado cortos en el listado, verifique si existe algún campo faltante", "Actualizar Cita", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    ObjAgendarCitaForm.NotificacionCita.Show(ObjAgendarCitaForm, "Existen campos vacíos o los campos son demasiado cortos en el listado, verifique si existe algún campo faltante", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error);
                 }
                 else
                 {
@@ -151,11 +151,11 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
 
                     if (ObjDAOActualizarCita.ActualizarCitaYConsulta() == false)
                     {
-                        MessageBox.Show("Uno de los apartados no ha sido ingresado correctamente", "Actualizar Cita", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        ObjAgendarCitaForm.NotificacionCita.Show(ObjAgendarCitaForm, "Uno de los apartados no ha sido ingresado correctamente", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Warning);
                     }
                     else
                     {
-                        MessageBox.Show("Los datos fueron actualizados correctamente", "Actualizar Cita", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        ObjAgendarCitaForm.NotificacionCita.Show(ObjAgendarCitaForm, "Los datos fueron actualizados correctamente", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Information);
                         ObjAgendarCitaForm.Hide();
                     }
                 }

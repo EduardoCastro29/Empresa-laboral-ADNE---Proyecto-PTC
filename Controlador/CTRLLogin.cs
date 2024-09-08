@@ -86,7 +86,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                     }
                     else
                     {
-                        MessageBox.Show("El usuario o contraseña son incorrectos", "Inicio de sesión", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        ObjLogin.NotificacionLogin.Show(ObjLogin, "El usuario o contraseña son incorrectos", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error);
                     }
                 }
             }

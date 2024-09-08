@@ -51,7 +51,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             if (ObjInformacionPersonal.dtFechaNacimiento.Value.Date > DateTime.Today)
             {
                 //En caso de error, mostramos un mensaje de error
-                MessageBox.Show("La fecha de nacimiento no puede ser una fecha futura", "Fecha no válida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                //objNuevoPaciente.NotificacionNuevoPaciente.Show(objNuevoPaciente, "La fecha de nacimiento no puede ser una fecha futura.", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Warning);
 
                 //Restablecemos la fecha al valor anterior o a la fecha actual
                 ObjInformacionPersonal.dtFechaNacimiento.Value = DateTime.Today;

@@ -65,12 +65,12 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
 
                 if (ObjInsertarEspecialidad.RegistrarEspecialidadProfesional() == true)
                 {
-                    MessageBox.Show("La especialidad se ha agregado correctamente", "Especialidad del Empleado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    ObjRegistroEspecialidad.NotificacionEspecialidad.Show(ObjRegistroEspecialidad, "La especialidad se ha agregado correctamente", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Success);
                     CargarDGVEspecialidades();
                 }
                 else
                 {
-                    MessageBox.Show("La especialidad no se ha podido agregar, verifique si la especialidad se repite o consulte al soporte técnico", "Especialidad del Empleado", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    ObjRegistroEspecialidad.NotificacionEspecialidad.Show(ObjRegistroEspecialidad, "La especialidad no se ha podido agregar, verifique si la especialidad se repite o consulte al soporte técnico", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error);
                 }
             }
             catch (Exception ex)
@@ -110,10 +110,12 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
 
                 if (ObjVerificarEspecialidades.VerificarEspecialidad() == false)
                 {
-                    MessageBox.Show("Debe de registrar al menos 1 especialidad", "Registro de Especialidad", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    ObjRegistroEspecialidad.NotificacionEspecialidad.Show(ObjRegistroEspecialidad, "Debe de registrar al menos 1 especialidad", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Warning);
                 }
                 else
                 {
+                    ObjRegistroEspecialidad.NotificacionEspecialidad.Show(ObjRegistroEspecialidad, "Ingreso exitoso", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Success);
+
                     ObjRegistroEspecialidad.Hide();
                 }
             }

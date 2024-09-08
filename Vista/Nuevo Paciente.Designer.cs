@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NuevoPacienteForm));
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
@@ -43,6 +44,7 @@
             this.bunifuShadowPanel1 = new Bunifu.UI.WinForms.BunifuShadowPanel();
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
             this.bunifuPanel2 = new Bunifu.UI.WinForms.BunifuPanel();
+            this.NotificacionNuevoPaciente = new Bunifu.UI.WinForms.BunifuSnackbar(this.components);
             this.btnExpedienteGradient.SuspendLayout();
             this.btnDatosIdentificacionGradient.SuspendLayout();
             this.bunifuGradientPanel1.SuspendLayout();
@@ -151,8 +153,8 @@
             this.btnExpediente.OnDisabledState.BorderRadius = 1;
             this.btnExpediente.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.btnExpediente.OnDisabledState.BorderThickness = 1;
-            this.btnExpediente.OnDisabledState.FillColor = System.Drawing.Color.Transparent;
-            this.btnExpediente.OnDisabledState.ForeColor = System.Drawing.Color.White;
+            this.btnExpediente.OnDisabledState.FillColor = System.Drawing.Color.LightSlateGray;
+            this.btnExpediente.OnDisabledState.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnExpediente.OnDisabledState.IconLeftImage = null;
             this.btnExpediente.OnDisabledState.IconRightImage = null;
             this.btnExpediente.onHoverState.BorderColor = System.Drawing.Color.Transparent;
@@ -210,7 +212,6 @@
             this.btnDatosIdentificacion.AllowAnimations = true;
             this.btnDatosIdentificacion.AllowMouseEffects = true;
             this.btnDatosIdentificacion.AllowToggling = false;
-            this.btnDatosIdentificacion.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnDatosIdentificacion.AnimationSpeed = 200;
             this.btnDatosIdentificacion.AutoGenerateColors = false;
             this.btnDatosIdentificacion.AutoRoundBorders = false;
@@ -234,6 +235,7 @@
             this.btnDatosIdentificacion.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnDatosIdentificacion.DisabledFillColor = System.Drawing.Color.Empty;
             this.btnDatosIdentificacion.DisabledForecolor = System.Drawing.Color.Empty;
+            this.btnDatosIdentificacion.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnDatosIdentificacion.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
             this.btnDatosIdentificacion.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDatosIdentificacion.ForeColor = System.Drawing.Color.White;
@@ -255,14 +257,14 @@
             this.btnDatosIdentificacion.IdleIconLeftImage = null;
             this.btnDatosIdentificacion.IdleIconRightImage = null;
             this.btnDatosIdentificacion.IndicateFocus = false;
-            this.btnDatosIdentificacion.Location = new System.Drawing.Point(5, 0);
+            this.btnDatosIdentificacion.Location = new System.Drawing.Point(0, 0);
             this.btnDatosIdentificacion.Name = "btnDatosIdentificacion";
             this.btnDatosIdentificacion.OnDisabledState.BorderColor = System.Drawing.Color.Transparent;
             this.btnDatosIdentificacion.OnDisabledState.BorderRadius = 1;
             this.btnDatosIdentificacion.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.btnDatosIdentificacion.OnDisabledState.BorderThickness = 1;
-            this.btnDatosIdentificacion.OnDisabledState.FillColor = System.Drawing.Color.Transparent;
-            this.btnDatosIdentificacion.OnDisabledState.ForeColor = System.Drawing.Color.White;
+            this.btnDatosIdentificacion.OnDisabledState.FillColor = System.Drawing.Color.LightSlateGray;
+            this.btnDatosIdentificacion.OnDisabledState.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnDatosIdentificacion.OnDisabledState.IconLeftImage = null;
             this.btnDatosIdentificacion.OnDisabledState.IconRightImage = null;
             this.btnDatosIdentificacion.onHoverState.BorderColor = System.Drawing.Color.Transparent;
@@ -289,7 +291,7 @@
             this.btnDatosIdentificacion.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btnDatosIdentificacion.OnPressedState.IconLeftImage = null;
             this.btnDatosIdentificacion.OnPressedState.IconRightImage = null;
-            this.btnDatosIdentificacion.Size = new System.Drawing.Size(270, 63);
+            this.btnDatosIdentificacion.Size = new System.Drawing.Size(281, 63);
             this.btnDatosIdentificacion.TabIndex = 1;
             this.btnDatosIdentificacion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnDatosIdentificacion.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -396,6 +398,76 @@
             this.bunifuPanel2.Size = new System.Drawing.Size(273, 58);
             this.bunifuPanel2.TabIndex = 11;
             // 
+            // NotificacionNuevoPaciente
+            // 
+            this.NotificacionNuevoPaciente.AllowDragging = false;
+            this.NotificacionNuevoPaciente.AllowMultipleViews = true;
+            this.NotificacionNuevoPaciente.ClickToClose = true;
+            this.NotificacionNuevoPaciente.DoubleClickToClose = true;
+            this.NotificacionNuevoPaciente.DurationAfterIdle = 3000;
+            this.NotificacionNuevoPaciente.ErrorOptions.ActionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.NotificacionNuevoPaciente.ErrorOptions.ActionBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.NotificacionNuevoPaciente.ErrorOptions.ActionBorderRadius = 1;
+            this.NotificacionNuevoPaciente.ErrorOptions.ActionFont = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NotificacionNuevoPaciente.ErrorOptions.ActionForeColor = System.Drawing.Color.Black;
+            this.NotificacionNuevoPaciente.ErrorOptions.BackColor = System.Drawing.Color.White;
+            this.NotificacionNuevoPaciente.ErrorOptions.BorderColor = System.Drawing.Color.White;
+            this.NotificacionNuevoPaciente.ErrorOptions.CloseIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(199)))));
+            this.NotificacionNuevoPaciente.ErrorOptions.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NotificacionNuevoPaciente.ErrorOptions.ForeColor = System.Drawing.Color.Black;
+            this.NotificacionNuevoPaciente.ErrorOptions.Icon = ((System.Drawing.Image)(resources.GetObject("resource.Icon")));
+            this.NotificacionNuevoPaciente.ErrorOptions.IconLeftMargin = 12;
+            this.NotificacionNuevoPaciente.FadeCloseIcon = false;
+            this.NotificacionNuevoPaciente.Host = Bunifu.UI.WinForms.BunifuSnackbar.Hosts.FormOwner;
+            this.NotificacionNuevoPaciente.InformationOptions.ActionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.NotificacionNuevoPaciente.InformationOptions.ActionBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.NotificacionNuevoPaciente.InformationOptions.ActionBorderRadius = 1;
+            this.NotificacionNuevoPaciente.InformationOptions.ActionFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.NotificacionNuevoPaciente.InformationOptions.ActionForeColor = System.Drawing.Color.Black;
+            this.NotificacionNuevoPaciente.InformationOptions.BackColor = System.Drawing.Color.White;
+            this.NotificacionNuevoPaciente.InformationOptions.BorderColor = System.Drawing.Color.White;
+            this.NotificacionNuevoPaciente.InformationOptions.CloseIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(213)))), ((int)(((byte)(255)))));
+            this.NotificacionNuevoPaciente.InformationOptions.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NotificacionNuevoPaciente.InformationOptions.ForeColor = System.Drawing.Color.Black;
+            this.NotificacionNuevoPaciente.InformationOptions.Icon = ((System.Drawing.Image)(resources.GetObject("resource.Icon1")));
+            this.NotificacionNuevoPaciente.InformationOptions.IconLeftMargin = 12;
+            this.NotificacionNuevoPaciente.Margin = 10;
+            this.NotificacionNuevoPaciente.MaximumSize = new System.Drawing.Size(0, 0);
+            this.NotificacionNuevoPaciente.MaximumViews = 2;
+            this.NotificacionNuevoPaciente.MessageRightMargin = 15;
+            this.NotificacionNuevoPaciente.MessageTopMargin = 0;
+            this.NotificacionNuevoPaciente.MinimumSize = new System.Drawing.Size(0, 0);
+            this.NotificacionNuevoPaciente.ShowBorders = false;
+            this.NotificacionNuevoPaciente.ShowCloseIcon = false;
+            this.NotificacionNuevoPaciente.ShowIcon = true;
+            this.NotificacionNuevoPaciente.ShowShadows = true;
+            this.NotificacionNuevoPaciente.SuccessOptions.ActionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.NotificacionNuevoPaciente.SuccessOptions.ActionBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.NotificacionNuevoPaciente.SuccessOptions.ActionBorderRadius = 1;
+            this.NotificacionNuevoPaciente.SuccessOptions.ActionFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.NotificacionNuevoPaciente.SuccessOptions.ActionForeColor = System.Drawing.Color.Black;
+            this.NotificacionNuevoPaciente.SuccessOptions.BackColor = System.Drawing.Color.White;
+            this.NotificacionNuevoPaciente.SuccessOptions.BorderColor = System.Drawing.Color.White;
+            this.NotificacionNuevoPaciente.SuccessOptions.CloseIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(255)))), ((int)(((byte)(237)))));
+            this.NotificacionNuevoPaciente.SuccessOptions.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NotificacionNuevoPaciente.SuccessOptions.ForeColor = System.Drawing.Color.Black;
+            this.NotificacionNuevoPaciente.SuccessOptions.Icon = ((System.Drawing.Image)(resources.GetObject("resource.Icon2")));
+            this.NotificacionNuevoPaciente.SuccessOptions.IconLeftMargin = 12;
+            this.NotificacionNuevoPaciente.ViewsMargin = 7;
+            this.NotificacionNuevoPaciente.WarningOptions.ActionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.NotificacionNuevoPaciente.WarningOptions.ActionBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.NotificacionNuevoPaciente.WarningOptions.ActionBorderRadius = 1;
+            this.NotificacionNuevoPaciente.WarningOptions.ActionFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.NotificacionNuevoPaciente.WarningOptions.ActionForeColor = System.Drawing.Color.Black;
+            this.NotificacionNuevoPaciente.WarningOptions.BackColor = System.Drawing.Color.White;
+            this.NotificacionNuevoPaciente.WarningOptions.BorderColor = System.Drawing.Color.White;
+            this.NotificacionNuevoPaciente.WarningOptions.CloseIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(229)))), ((int)(((byte)(143)))));
+            this.NotificacionNuevoPaciente.WarningOptions.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NotificacionNuevoPaciente.WarningOptions.ForeColor = System.Drawing.Color.Black;
+            this.NotificacionNuevoPaciente.WarningOptions.Icon = ((System.Drawing.Image)(resources.GetObject("resource.Icon3")));
+            this.NotificacionNuevoPaciente.WarningOptions.IconLeftMargin = 12;
+            this.NotificacionNuevoPaciente.ZoomCloseIcon = true;
+            // 
             // NuevoPacienteForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -437,5 +509,6 @@
         public Bunifu.UI.WinForms.BunifuButton.BunifuButton btnDatosIdentificacion;
         public Bunifu.UI.WinForms.BunifuButton.BunifuButton btnExpediente;
         public System.Windows.Forms.Panel panelElement;
+        public Bunifu.UI.WinForms.BunifuSnackbar NotificacionNuevoPaciente;
     }
 }
