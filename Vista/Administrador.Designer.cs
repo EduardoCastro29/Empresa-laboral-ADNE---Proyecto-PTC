@@ -128,7 +128,7 @@
             this.pnlSombraFondo.ShadowTopLeftVisible = false;
             this.pnlSombraFondo.Size = new System.Drawing.Size(991, 707);
             this.pnlSombraFondo.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Lowered;
-            this.pnlSombraFondo.TabIndex = 2;
+            this.pnlSombraFondo.TabIndex = 0;
             // 
             // pnlForms
             // 
@@ -149,7 +149,7 @@
             this.pnlForms.Name = "pnlForms";
             this.pnlForms.Quality = 10;
             this.pnlForms.Size = new System.Drawing.Size(986, 697);
-            this.pnlForms.TabIndex = 1;
+            this.pnlForms.TabIndex = 0;
             // 
             // pnlSombraBuscar
             // 
@@ -167,7 +167,7 @@
             this.pnlSombraBuscar.Padding = new System.Windows.Forms.Padding(5, 2, 1, 6);
             this.pnlSombraBuscar.ShowBorders = true;
             this.pnlSombraBuscar.Size = new System.Drawing.Size(551, 73);
-            this.pnlSombraBuscar.TabIndex = 102;
+            this.pnlSombraBuscar.TabIndex = 0;
             // 
             // txtBuscarEmpleado
             // 
@@ -237,7 +237,7 @@
             this.txtBuscarEmpleado.ShortcutsEnabled = false;
             this.txtBuscarEmpleado.Size = new System.Drawing.Size(545, 65);
             this.txtBuscarEmpleado.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.txtBuscarEmpleado.TabIndex = 7;
+            this.txtBuscarEmpleado.TabIndex = 0;
             this.txtBuscarEmpleado.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtBuscarEmpleado.TextMarginBottom = 0;
             this.txtBuscarEmpleado.TextMarginLeft = 10;
@@ -353,7 +353,7 @@
             this.btnAñadirProfesional.OnPressedState.IconLeftImage = null;
             this.btnAñadirProfesional.OnPressedState.IconRightImage = null;
             this.btnAñadirProfesional.Size = new System.Drawing.Size(182, 61);
-            this.btnAñadirProfesional.TabIndex = 3;
+            this.btnAñadirProfesional.TabIndex = 0;
             this.btnAñadirProfesional.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnAñadirProfesional.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnAñadirProfesional.TextMarginLeft = 0;
@@ -426,7 +426,7 @@
             this.dgvAdministrarProfesional.RowTemplate.Height = 40;
             this.dgvAdministrarProfesional.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvAdministrarProfesional.Size = new System.Drawing.Size(946, 500);
-            this.dgvAdministrarProfesional.TabIndex = 100;
+            this.dgvAdministrarProfesional.TabIndex = 1;
             this.dgvAdministrarProfesional.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Teal;
             // 
             // NotificacionAdmin

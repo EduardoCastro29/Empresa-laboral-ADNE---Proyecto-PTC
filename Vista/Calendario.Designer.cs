@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CalendarioForm));
             Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
@@ -45,6 +46,7 @@
             this.btnAnterior = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.btnVerCitas = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.pnlSombraBoton = new Bunifu.UI.WinForms.BunifuShadowPanel();
+            this.NotificacionCalendario = new Bunifu.UI.WinForms.BunifuSnackbar(this.components);
             this.pnlSombraBoton.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -153,7 +155,7 @@
             this.daycontainer.Location = new System.Drawing.Point(30, 108);
             this.daycontainer.Name = "daycontainer";
             this.daycontainer.Size = new System.Drawing.Size(945, 540);
-            this.daycontainer.TabIndex = 11;
+            this.daycontainer.TabIndex = 99;
             // 
             // btnSiguiente
             // 
@@ -238,7 +240,7 @@
             this.btnSiguiente.OnPressedState.IconLeftImage = null;
             this.btnSiguiente.OnPressedState.IconRightImage = null;
             this.btnSiguiente.Size = new System.Drawing.Size(65, 42);
-            this.btnSiguiente.TabIndex = 21;
+            this.btnSiguiente.TabIndex = 1;
             this.btnSiguiente.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnSiguiente.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnSiguiente.TextMarginLeft = 0;
@@ -328,7 +330,7 @@
             this.btnAnterior.OnPressedState.IconLeftImage = null;
             this.btnAnterior.OnPressedState.IconRightImage = null;
             this.btnAnterior.Size = new System.Drawing.Size(64, 42);
-            this.btnAnterior.TabIndex = 22;
+            this.btnAnterior.TabIndex = 0;
             this.btnAnterior.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnAnterior.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnAnterior.TextMarginLeft = 0;
@@ -418,7 +420,7 @@
             this.btnVerCitas.OnPressedState.IconLeftImage = null;
             this.btnVerCitas.OnPressedState.IconRightImage = null;
             this.btnVerCitas.Size = new System.Drawing.Size(221, 49);
-            this.btnVerCitas.TabIndex = 23;
+            this.btnVerCitas.TabIndex = 0;
             this.btnVerCitas.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnVerCitas.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnVerCitas.TextMarginLeft = 0;
@@ -447,7 +449,77 @@
             this.pnlSombraBoton.ShadowTopLeftVisible = false;
             this.pnlSombraBoton.Size = new System.Drawing.Size(224, 54);
             this.pnlSombraBoton.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
-            this.pnlSombraBoton.TabIndex = 24;
+            this.pnlSombraBoton.TabIndex = 3;
+            // 
+            // NotificacionCalendario
+            // 
+            this.NotificacionCalendario.AllowDragging = false;
+            this.NotificacionCalendario.AllowMultipleViews = true;
+            this.NotificacionCalendario.ClickToClose = true;
+            this.NotificacionCalendario.DoubleClickToClose = true;
+            this.NotificacionCalendario.DurationAfterIdle = 3000;
+            this.NotificacionCalendario.ErrorOptions.ActionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.NotificacionCalendario.ErrorOptions.ActionBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.NotificacionCalendario.ErrorOptions.ActionBorderRadius = 1;
+            this.NotificacionCalendario.ErrorOptions.ActionFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.NotificacionCalendario.ErrorOptions.ActionForeColor = System.Drawing.Color.Black;
+            this.NotificacionCalendario.ErrorOptions.BackColor = System.Drawing.Color.White;
+            this.NotificacionCalendario.ErrorOptions.BorderColor = System.Drawing.Color.White;
+            this.NotificacionCalendario.ErrorOptions.CloseIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(199)))));
+            this.NotificacionCalendario.ErrorOptions.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NotificacionCalendario.ErrorOptions.ForeColor = System.Drawing.Color.Black;
+            this.NotificacionCalendario.ErrorOptions.Icon = ((System.Drawing.Image)(resources.GetObject("resource.Icon")));
+            this.NotificacionCalendario.ErrorOptions.IconLeftMargin = 12;
+            this.NotificacionCalendario.FadeCloseIcon = false;
+            this.NotificacionCalendario.Host = Bunifu.UI.WinForms.BunifuSnackbar.Hosts.FormOwner;
+            this.NotificacionCalendario.InformationOptions.ActionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.NotificacionCalendario.InformationOptions.ActionBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.NotificacionCalendario.InformationOptions.ActionBorderRadius = 1;
+            this.NotificacionCalendario.InformationOptions.ActionFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.NotificacionCalendario.InformationOptions.ActionForeColor = System.Drawing.Color.Black;
+            this.NotificacionCalendario.InformationOptions.BackColor = System.Drawing.Color.White;
+            this.NotificacionCalendario.InformationOptions.BorderColor = System.Drawing.Color.White;
+            this.NotificacionCalendario.InformationOptions.CloseIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(213)))), ((int)(((byte)(255)))));
+            this.NotificacionCalendario.InformationOptions.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.NotificacionCalendario.InformationOptions.ForeColor = System.Drawing.Color.Black;
+            this.NotificacionCalendario.InformationOptions.Icon = ((System.Drawing.Image)(resources.GetObject("resource.Icon1")));
+            this.NotificacionCalendario.InformationOptions.IconLeftMargin = 12;
+            this.NotificacionCalendario.Margin = 10;
+            this.NotificacionCalendario.MaximumSize = new System.Drawing.Size(0, 0);
+            this.NotificacionCalendario.MaximumViews = 7;
+            this.NotificacionCalendario.MessageRightMargin = 15;
+            this.NotificacionCalendario.MessageTopMargin = 0;
+            this.NotificacionCalendario.MinimumSize = new System.Drawing.Size(0, 0);
+            this.NotificacionCalendario.ShowBorders = false;
+            this.NotificacionCalendario.ShowCloseIcon = false;
+            this.NotificacionCalendario.ShowIcon = true;
+            this.NotificacionCalendario.ShowShadows = true;
+            this.NotificacionCalendario.SuccessOptions.ActionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.NotificacionCalendario.SuccessOptions.ActionBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.NotificacionCalendario.SuccessOptions.ActionBorderRadius = 1;
+            this.NotificacionCalendario.SuccessOptions.ActionFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.NotificacionCalendario.SuccessOptions.ActionForeColor = System.Drawing.Color.Black;
+            this.NotificacionCalendario.SuccessOptions.BackColor = System.Drawing.Color.White;
+            this.NotificacionCalendario.SuccessOptions.BorderColor = System.Drawing.Color.White;
+            this.NotificacionCalendario.SuccessOptions.CloseIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(255)))), ((int)(((byte)(237)))));
+            this.NotificacionCalendario.SuccessOptions.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.NotificacionCalendario.SuccessOptions.ForeColor = System.Drawing.Color.Black;
+            this.NotificacionCalendario.SuccessOptions.Icon = ((System.Drawing.Image)(resources.GetObject("resource.Icon2")));
+            this.NotificacionCalendario.SuccessOptions.IconLeftMargin = 12;
+            this.NotificacionCalendario.ViewsMargin = 7;
+            this.NotificacionCalendario.WarningOptions.ActionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.NotificacionCalendario.WarningOptions.ActionBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.NotificacionCalendario.WarningOptions.ActionBorderRadius = 1;
+            this.NotificacionCalendario.WarningOptions.ActionFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.NotificacionCalendario.WarningOptions.ActionForeColor = System.Drawing.Color.Black;
+            this.NotificacionCalendario.WarningOptions.BackColor = System.Drawing.Color.White;
+            this.NotificacionCalendario.WarningOptions.BorderColor = System.Drawing.Color.White;
+            this.NotificacionCalendario.WarningOptions.CloseIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(229)))), ((int)(((byte)(143)))));
+            this.NotificacionCalendario.WarningOptions.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.NotificacionCalendario.WarningOptions.ForeColor = System.Drawing.Color.Black;
+            this.NotificacionCalendario.WarningOptions.Icon = ((System.Drawing.Image)(resources.GetObject("resource.Icon3")));
+            this.NotificacionCalendario.WarningOptions.IconLeftMargin = 12;
+            this.NotificacionCalendario.ZoomCloseIcon = true;
             // 
             // CalendarioForm
             // 
@@ -491,5 +563,6 @@
         public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnAnterior;
         public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnVerCitas;
         public Bunifu.UI.WinForms.BunifuShadowPanel pnlSombraBoton;
+        public Bunifu.UI.WinForms.BunifuSnackbar NotificacionCalendario;
     }
 }

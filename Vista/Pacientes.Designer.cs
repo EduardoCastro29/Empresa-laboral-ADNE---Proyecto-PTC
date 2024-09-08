@@ -200,7 +200,7 @@
             this.bunifuShadowPanel3.ShadowTopLeftVisible = false;
             this.bunifuShadowPanel3.Size = new System.Drawing.Size(310, 80);
             this.bunifuShadowPanel3.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
-            this.bunifuShadowPanel3.TabIndex = 11;
+            this.bunifuShadowPanel3.TabIndex = 0;
             // 
             // pnlGradienteBoton2
             // 
@@ -303,7 +303,7 @@
             this.btnVerPaciente.OnPressedState.IconLeftImage = null;
             this.btnVerPaciente.OnPressedState.IconRightImage = null;
             this.btnVerPaciente.Size = new System.Drawing.Size(303, 72);
-            this.btnVerPaciente.TabIndex = 6;
+            this.btnVerPaciente.TabIndex = 1;
             this.btnVerPaciente.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnVerPaciente.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnVerPaciente.TextMarginLeft = 0;
@@ -331,7 +331,7 @@
             this.bunifuShadowPanel2.ShadowTopLeftVisible = false;
             this.bunifuShadowPanel2.Size = new System.Drawing.Size(310, 80);
             this.bunifuShadowPanel2.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
-            this.bunifuShadowPanel2.TabIndex = 10;
+            this.bunifuShadowPanel2.TabIndex = 0;
             // 
             // pnlGradienteBoton
             // 
@@ -434,7 +434,7 @@
             this.btnNuevoPaciente.OnPressedState.IconLeftImage = null;
             this.btnNuevoPaciente.OnPressedState.IconRightImage = null;
             this.btnNuevoPaciente.Size = new System.Drawing.Size(303, 72);
-            this.btnNuevoPaciente.TabIndex = 6;
+            this.btnNuevoPaciente.TabIndex = 0;
             this.btnNuevoPaciente.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnNuevoPaciente.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnNuevoPaciente.TextMarginLeft = 0;

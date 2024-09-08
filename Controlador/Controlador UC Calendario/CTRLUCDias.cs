@@ -11,22 +11,24 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador.Controlador_UC_Calenda
 {
     internal class CTRLUCDias
     {
+        CalendarioForm objCalendario = new CalendarioForm();
         readonly UCDias ObjUCDIAS;
         public static int static_day;
         public CTRLUCDias(UCDias Vista)
         {
             ObjUCDIAS = Vista;
 
-            ObjUCDIAS.MouseHover += new EventHandler(HoverUC);
-            ObjUCDIAS.MouseLeave += new EventHandler(NormalUC);
-            ObjUCDIAS.Click += new EventHandler(AgregarCita);
+        //    ObjUCDIAS.MouseHover += new EventHandler(HoverUC);
+        //    ObjUCDIAS.MouseLeave += new EventHandler(NormalUC);
+            ObjUCDIAS.btnCalendar.Click += new EventHandler(AgregarCita);
         }
         private void AgregarCita(object sender, EventArgs e)
         {
             static_day = int.Parse(ObjUCDIAS.lblDias.Text);
             if (static_day < DateTime.Now.Day)
             {
-                MessageBox.Show("No se puede elejir una fecha pasada a la fecha actual al agendar una cita", "Agendar Cita", MessageBoxButton.OK, MessageBoxImage.Warning);
+                objCalendario.NotificacionCalendario.Show(objCalendario, "No se puede elegir una fecha pasada a la fecha actual al agendar una cita", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error);
+                //MessageBox.Show("No se puede elegir una fecha pasada a la fecha actual al agendar una cita", "Agendar Cita", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
             else
             {
@@ -60,11 +62,14 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador.Controlador_UC_Calenda
                 CTRLCalendario.static_month == mesActual &&
                 CTRLCalendario.static_year == añoActual)
             {
-                ObjUCDIAS.BackColor = Color.FromArgb(176, 255, 242); // Mantener color para el día actual
+                ObjUCDIAS.btnCalendar.BackColor = Color.FromArgb(176, 255, 242); // Mantener color para el día actual
+                
             }
             else
             {
-                ObjUCDIAS.BackColor = Color.White; // Volver al color blanco para otros días
+                ObjUCDIAS.lblDias.ForeColor = Color.White; // Volver al color blanco para otros días
+  
+
             }
         }
     }

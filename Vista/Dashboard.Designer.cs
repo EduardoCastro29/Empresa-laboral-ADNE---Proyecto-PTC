@@ -109,7 +109,8 @@
             this.panelGeneralVistas.Name = "panelGeneralVistas";
             this.panelGeneralVistas.ShowBorders = true;
             this.panelGeneralVistas.Size = new System.Drawing.Size(971, 784);
-            this.panelGeneralVistas.TabIndex = 38;
+            this.panelGeneralVistas.TabIndex = 7;
+            this.panelGeneralVistas.TabStop = true;
             // 
             // panel1
             // 
@@ -212,7 +213,7 @@
             this.btnConfig.OnPressedState.IconLeftImage = null;
             this.btnConfig.OnPressedState.IconRightImage = null;
             this.btnConfig.Size = new System.Drawing.Size(285, 55);
-            this.btnConfig.TabIndex = 47;
+            this.btnConfig.TabIndex = 5;
             this.btnConfig.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnConfig.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnConfig.TextMarginLeft = 0;
@@ -302,7 +303,7 @@
             this.btnEquipo.OnPressedState.IconLeftImage = null;
             this.btnEquipo.OnPressedState.IconRightImage = null;
             this.btnEquipo.Size = new System.Drawing.Size(285, 55);
-            this.btnEquipo.TabIndex = 46;
+            this.btnEquipo.TabIndex = 4;
             this.btnEquipo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnEquipo.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnEquipo.TextMarginLeft = 0;
@@ -392,7 +393,7 @@
             this.btnCalendario.OnPressedState.IconLeftImage = null;
             this.btnCalendario.OnPressedState.IconRightImage = null;
             this.btnCalendario.Size = new System.Drawing.Size(285, 55);
-            this.btnCalendario.TabIndex = 45;
+            this.btnCalendario.TabIndex = 3;
             this.btnCalendario.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnCalendario.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnCalendario.TextMarginLeft = 0;
@@ -482,7 +483,7 @@
             this.btnCitas.OnPressedState.IconLeftImage = null;
             this.btnCitas.OnPressedState.IconRightImage = null;
             this.btnCitas.Size = new System.Drawing.Size(285, 55);
-            this.btnCitas.TabIndex = 44;
+            this.btnCitas.TabIndex = 2;
             this.btnCitas.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnCitas.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnCitas.TextMarginLeft = 0;
@@ -572,7 +573,7 @@
             this.btnPacientes.OnPressedState.IconLeftImage = null;
             this.btnPacientes.OnPressedState.IconRightImage = null;
             this.btnPacientes.Size = new System.Drawing.Size(285, 55);
-            this.btnPacientes.TabIndex = 43;
+            this.btnPacientes.TabIndex = 1;
             this.btnPacientes.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnPacientes.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnPacientes.TextMarginLeft = 0;
@@ -662,7 +663,7 @@
             this.btnMainPage.OnPressedState.IconLeftImage = null;
             this.btnMainPage.OnPressedState.IconRightImage = null;
             this.btnMainPage.Size = new System.Drawing.Size(285, 55);
-            this.btnMainPage.TabIndex = 42;
+            this.btnMainPage.TabIndex = 0;
             this.btnMainPage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnMainPage.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnMainPage.TextMarginLeft = 0;
@@ -682,7 +683,7 @@
             this.bunifuPanel4.Name = "bunifuPanel4";
             this.bunifuPanel4.ShowBorders = true;
             this.bunifuPanel4.Size = new System.Drawing.Size(300, 1);
-            this.bunifuPanel4.TabIndex = 41;
+            this.bunifuPanel4.TabIndex = 9;
             // 
             // flowLayoutPanel6
             // 
@@ -795,7 +796,7 @@
             this.btnCerrarS.OnPressedState.IconLeftImage = null;
             this.btnCerrarS.OnPressedState.IconRightImage = null;
             this.btnCerrarS.Size = new System.Drawing.Size(285, 55);
-            this.btnCerrarS.TabIndex = 18;
+            this.btnCerrarS.TabIndex = 6;
             this.btnCerrarS.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnCerrarS.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnCerrarS.TextMarginLeft = 0;
@@ -877,6 +878,7 @@
             this.lblUsuario.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblUsuario.Size = new System.Drawing.Size(86, 30);
             this.lblUsuario.TabIndex = 0;
+            this.lblUsuario.TabStop = false;
             this.lblUsuario.Text = "Usuario";
             this.lblUsuario.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lblUsuario.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
@@ -902,6 +904,7 @@
             this.lblIdUsuario.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblIdUsuario.Size = new System.Drawing.Size(128, 22);
             this.lblIdUsuario.TabIndex = 1;
+            this.lblIdUsuario.TabStop = false;
             this.lblIdUsuario.Text = "Rol de Usuario";
             this.lblIdUsuario.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lblIdUsuario.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;

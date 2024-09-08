@@ -118,7 +118,7 @@
             this.pnlFondoDashboard.Name = "pnlFondoDashboard";
             this.pnlFondoDashboard.Quality = 10;
             this.pnlFondoDashboard.Size = new System.Drawing.Size(986, 697);
-            this.pnlFondoDashboard.TabIndex = 1;
+            this.pnlFondoDashboard.TabIndex = 0;
             // 
             // pnlBienvenida
             // 
@@ -152,6 +152,7 @@
             this.lblFecha.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblFecha.Size = new System.Drawing.Size(98, 28);
             this.lblFecha.TabIndex = 10;
+            this.lblFecha.TabStop = false;
             this.lblFecha.Text = "9/9/2024";
             this.lblFecha.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lblFecha.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
@@ -170,6 +171,7 @@
             this.lblBienvenida.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblBienvenida.Size = new System.Drawing.Size(172, 38);
             this.lblBienvenida.TabIndex = 9;
+            this.lblBienvenida.TabStop = false;
             this.lblBienvenida.Text = "Bienvenido";
             this.lblBienvenida.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lblBienvenida.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
@@ -264,6 +266,7 @@
             this.lblCitasPerdidas.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblCitasPerdidas.Size = new System.Drawing.Size(39, 31);
             this.lblCitasPerdidas.TabIndex = 2;
+            this.lblCitasPerdidas.TabStop = false;
             this.lblCitasPerdidas.Text = "100";
             this.lblCitasPerdidas.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblCitasPerdidas.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
@@ -281,6 +284,7 @@
             this.lblPerdidas.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblPerdidas.Size = new System.Drawing.Size(88, 25);
             this.lblPerdidas.TabIndex = 13;
+            this.lblPerdidas.TabStop = false;
             this.lblPerdidas.Text = "Perdidas";
             this.lblPerdidas.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lblPerdidas.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
@@ -297,6 +301,7 @@
             this.lblCitasPendientes.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblCitasPendientes.Size = new System.Drawing.Size(39, 31);
             this.lblCitasPendientes.TabIndex = 1;
+            this.lblCitasPendientes.TabStop = false;
             this.lblCitasPendientes.Text = "100";
             this.lblCitasPendientes.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblCitasPendientes.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
@@ -313,6 +318,7 @@
             this.lblAtendidos.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblAtendidos.Size = new System.Drawing.Size(104, 25);
             this.lblAtendidos.TabIndex = 11;
+            this.lblAtendidos.TabStop = false;
             this.lblAtendidos.Text = "Atendidas";
             this.lblAtendidos.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lblAtendidos.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
@@ -330,6 +336,7 @@
             this.lblPendientes.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblPendientes.Size = new System.Drawing.Size(111, 25);
             this.lblPendientes.TabIndex = 12;
+            this.lblPendientes.TabStop = false;
             this.lblPendientes.Text = "Pendientes";
             this.lblPendientes.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lblPendientes.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
@@ -346,6 +353,7 @@
             this.lblCitasAtendidas.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblCitasAtendidas.Size = new System.Drawing.Size(39, 31);
             this.lblCitasAtendidas.TabIndex = 0;
+            this.lblCitasAtendidas.TabStop = false;
             this.lblCitasAtendidas.Text = "100";
             this.lblCitasAtendidas.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblCitasAtendidas.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
@@ -374,7 +382,7 @@
             this.pnlSombraPanelGrafico.ShadowTopLeftVisible = false;
             this.pnlSombraPanelGrafico.Size = new System.Drawing.Size(770, 307);
             this.pnlSombraPanelGrafico.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
-            this.pnlSombraPanelGrafico.TabIndex = 9;
+            this.pnlSombraPanelGrafico.TabIndex = 0;
             // 
             // pnlGrafico
             // 
@@ -412,7 +420,7 @@
             this.bunifuLabel2.Name = "bunifuLabel2";
             this.bunifuLabel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel2.Size = new System.Drawing.Size(53, 23);
-            this.bunifuLabel2.TabIndex = 19;
+            this.bunifuLabel2.TabIndex = 5;
             this.bunifuLabel2.Text = "Hasta";
             this.bunifuLabel2.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuLabel2.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
@@ -427,7 +435,7 @@
             this.bunifuLabel1.Name = "bunifuLabel1";
             this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel1.Size = new System.Drawing.Size(58, 23);
-            this.bunifuLabel1.TabIndex = 18;
+            this.bunifuLabel1.TabIndex = 3;
             this.bunifuLabel1.Text = "Desde";
             this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
@@ -458,6 +466,7 @@
             this.dtFechaFinal.Name = "dtFechaFinal";
             this.dtFechaFinal.Size = new System.Drawing.Size(273, 32);
             this.dtFechaFinal.TabIndex = 16;
+            this.dtFechaFinal.TabStop = false;
             // 
             // dtFechaInicio
             // 
@@ -485,6 +494,7 @@
             this.dtFechaInicio.Name = "dtFechaInicio";
             this.dtFechaInicio.Size = new System.Drawing.Size(273, 32);
             this.dtFechaInicio.TabIndex = 15;
+            this.dtFechaInicio.TabStop = false;
             // 
             // btnVerEsteMes
             // 
@@ -569,7 +579,7 @@
             this.btnVerEsteMes.OnPressedState.IconLeftImage = null;
             this.btnVerEsteMes.OnPressedState.IconRightImage = null;
             this.btnVerEsteMes.Size = new System.Drawing.Size(140, 40);
-            this.btnVerEsteMes.TabIndex = 14;
+            this.btnVerEsteMes.TabIndex = 2;
             this.btnVerEsteMes.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnVerEsteMes.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnVerEsteMes.TextMarginLeft = 0;
@@ -659,7 +669,7 @@
             this.btnVer30Dias.OnPressedState.IconLeftImage = null;
             this.btnVer30Dias.OnPressedState.IconRightImage = null;
             this.btnVer30Dias.Size = new System.Drawing.Size(140, 40);
-            this.btnVer30Dias.TabIndex = 11;
+            this.btnVer30Dias.TabIndex = 3;
             this.btnVer30Dias.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnVer30Dias.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnVer30Dias.TextMarginLeft = 0;
@@ -749,7 +759,7 @@
             this.btnOk.OnPressedState.IconLeftImage = null;
             this.btnOk.OnPressedState.IconRightImage = null;
             this.btnOk.Size = new System.Drawing.Size(137, 32);
-            this.btnOk.TabIndex = 7;
+            this.btnOk.TabIndex = 6;
             this.btnOk.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnOk.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnOk.TextMarginLeft = 0;
@@ -839,7 +849,7 @@
             this.btnVerPersonalizadoDia.OnPressedState.IconLeftImage = null;
             this.btnVerPersonalizadoDia.OnPressedState.IconRightImage = null;
             this.btnVerPersonalizadoDia.Size = new System.Drawing.Size(140, 50);
-            this.btnVerPersonalizadoDia.TabIndex = 8;
+            this.btnVerPersonalizadoDia.TabIndex = 1;
             this.btnVerPersonalizadoDia.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnVerPersonalizadoDia.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnVerPersonalizadoDia.TextMarginLeft = 0;
@@ -929,7 +939,7 @@
             this.btnVerEsteDia.OnPressedState.IconLeftImage = null;
             this.btnVerEsteDia.OnPressedState.IconRightImage = null;
             this.btnVerEsteDia.Size = new System.Drawing.Size(140, 40);
-            this.btnVerEsteDia.TabIndex = 9;
+            this.btnVerEsteDia.TabIndex = 5;
             this.btnVerEsteDia.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnVerEsteDia.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnVerEsteDia.TextMarginLeft = 0;
@@ -1019,7 +1029,7 @@
             this.btnVer7Dias.OnPressedState.IconLeftImage = null;
             this.btnVer7Dias.OnPressedState.IconRightImage = null;
             this.btnVer7Dias.Size = new System.Drawing.Size(140, 40);
-            this.btnVer7Dias.TabIndex = 10;
+            this.btnVer7Dias.TabIndex = 4;
             this.btnVer7Dias.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnVer7Dias.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnVer7Dias.TextMarginLeft = 0;
@@ -1061,6 +1071,7 @@
             this.GraficoCitas.Series.Add(series1);
             this.GraficoCitas.Size = new System.Drawing.Size(601, 211);
             this.GraficoCitas.TabIndex = 6;
+            this.GraficoCitas.TabStop = false;
             // 
             // pnlSombraSiguientePaciente
             // 
@@ -1085,7 +1096,7 @@
             this.pnlSombraSiguientePaciente.ShadowTopLeftVisible = false;
             this.pnlSombraSiguientePaciente.Size = new System.Drawing.Size(953, 225);
             this.pnlSombraSiguientePaciente.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
-            this.pnlSombraSiguientePaciente.TabIndex = 8;
+            this.pnlSombraSiguientePaciente.TabIndex = 1;
             // 
             // pnlSiguientePaciente
             // 
@@ -1122,6 +1133,7 @@
             this.lblHora.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblHora.Size = new System.Drawing.Size(79, 22);
             this.lblHora.TabIndex = 17;
+            this.lblHora.TabStop = false;
             this.lblHora.Text = "10:00pm";
             this.lblHora.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lblHora.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
@@ -1138,6 +1150,7 @@
             this.lblHoraCita.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblHoraCita.Size = new System.Drawing.Size(54, 25);
             this.lblHoraCita.TabIndex = 16;
+            this.lblHoraCita.TabStop = false;
             this.lblHoraCita.Text = "Hora:";
             this.lblHoraCita.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lblHoraCita.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
@@ -1154,6 +1167,7 @@
             this.lblLugar.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblLugar.Size = new System.Drawing.Size(91, 22);
             this.lblLugar.TabIndex = 15;
+            this.lblLugar.TabStop = false;
             this.lblLugar.Text = "Presencial";
             this.lblLugar.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lblLugar.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
@@ -1170,6 +1184,7 @@
             this.lblDia.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblDia.Size = new System.Drawing.Size(104, 22);
             this.lblDia.TabIndex = 14;
+            this.lblDia.TabStop = false;
             this.lblDia.Text = "26/12/2024";
             this.lblDia.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lblDia.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
@@ -1186,6 +1201,7 @@
             this.lblLugarCita.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblLugarCita.Size = new System.Drawing.Size(63, 25);
             this.lblLugarCita.TabIndex = 13;
+            this.lblLugarCita.TabStop = false;
             this.lblLugarCita.Text = "Lugar:";
             this.lblLugarCita.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lblLugarCita.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
@@ -1202,6 +1218,7 @@
             this.lblDiaCita.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblDiaCita.Size = new System.Drawing.Size(40, 25);
             this.lblDiaCita.TabIndex = 12;
+            this.lblDiaCita.TabStop = false;
             this.lblDiaCita.Text = "Día:";
             this.lblDiaCita.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lblDiaCita.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
@@ -1227,6 +1244,7 @@
             this.lblSiguiente.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblSiguiente.Size = new System.Drawing.Size(126, 32);
             this.lblSiguiente.TabIndex = 9;
+            this.lblSiguiente.TabStop = false;
             this.lblSiguiente.Text = "Siguiente:";
             this.lblSiguiente.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lblSiguiente.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
@@ -1254,7 +1272,7 @@
             this.pnlSombraHistorial.ShadowTopLeftVisible = false;
             this.pnlSombraHistorial.Size = new System.Drawing.Size(586, 143);
             this.pnlSombraHistorial.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
-            this.pnlSombraHistorial.TabIndex = 7;
+            this.pnlSombraHistorial.TabIndex = 4;
             // 
             // pnlHistorial
             // 
@@ -1271,7 +1289,7 @@
             this.pnlHistorial.Name = "pnlHistorial";
             this.pnlHistorial.ShowBorders = true;
             this.pnlHistorial.Size = new System.Drawing.Size(579, 136);
-            this.pnlHistorial.TabIndex = 6;
+            this.pnlHistorial.TabIndex = 0;
             // 
             // btnHistorial
             // 
@@ -1356,7 +1374,7 @@
             this.btnHistorial.OnPressedState.IconLeftImage = null;
             this.btnHistorial.OnPressedState.IconRightImage = null;
             this.btnHistorial.Size = new System.Drawing.Size(193, 46);
-            this.btnHistorial.TabIndex = 0;
+            this.btnHistorial.TabIndex = 1;
             this.btnHistorial.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnHistorial.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnHistorial.TextMarginLeft = 0;
@@ -1374,6 +1392,7 @@
             this.lblHistorial.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblHistorial.Size = new System.Drawing.Size(180, 28);
             this.lblHistorial.TabIndex = 11;
+            this.lblHistorial.TabStop = false;
             this.lblHistorial.Text = "Historial del día";
             this.lblHistorial.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lblHistorial.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;

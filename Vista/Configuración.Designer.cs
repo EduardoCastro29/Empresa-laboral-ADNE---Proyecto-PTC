@@ -36,9 +36,7 @@
             this.bunifuVScrollBar1 = new Bunifu.UI.WinForms.BunifuVScrollBar();
             this.pnl3Section = new Bunifu.UI.WinForms.BunifuGradientPanel();
             this.bunifuShadowPanel4 = new Bunifu.UI.WinForms.BunifuShadowPanel();
-            this.label6 = new System.Windows.Forms.Label();
             this.lblVersion = new Bunifu.UI.WinForms.BunifuLabel();
-            this.label1 = new System.Windows.Forms.Label();
             this.lblAcercaDe = new Bunifu.UI.WinForms.BunifuLabel();
             this.pnl2Section = new Bunifu.UI.WinForms.BunifuGradientPanel();
             this.bunifuShadowPanel3 = new Bunifu.UI.WinForms.BunifuShadowPanel();
@@ -47,10 +45,9 @@
             this.lblPersonalizacion = new Bunifu.UI.WinForms.BunifuLabel();
             this.pnl1Section = new Bunifu.UI.WinForms.BunifuGradientPanel();
             this.bunifuShadowPanel2 = new Bunifu.UI.WinForms.BunifuShadowPanel();
+            this.lblCorreo = new System.Windows.Forms.Label();
             this.btnCerrarSesion = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.lblDUI = new System.Windows.Forms.Label();
-            this.lblDUIIdentificacion = new System.Windows.Forms.Label();
-            this.lblCorreo = new System.Windows.Forms.Label();
             this.lblUsuario = new System.Windows.Forms.Label();
             this.lblNomprePersona = new System.Windows.Forms.Label();
             this.lblRolUsuario = new System.Windows.Forms.Label();
@@ -60,9 +57,12 @@
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.bunifuLabel5 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
-            this.lblCorreoUsuario = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblProfesional = new Bunifu.UI.WinForms.BunifuLabel();
+            this.lblUsuarioo = new Bunifu.UI.WinForms.BunifuLabel();
+            this.lblCorreoUsuario = new Bunifu.UI.WinForms.BunifuLabel();
+            this.bunifuLabel2 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.bunifuLabel3 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuShadowPanel1.SuspendLayout();
             this.pnlForms.SuspendLayout();
             this.pnl3Section.SuspendLayout();
@@ -99,7 +99,7 @@
             this.bunifuShadowPanel1.ShadowTopLeftVisible = false;
             this.bunifuShadowPanel1.Size = new System.Drawing.Size(991, 861);
             this.bunifuShadowPanel1.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Lowered;
-            this.bunifuShadowPanel1.TabIndex = 2;
+            this.bunifuShadowPanel1.TabIndex = 0;
             // 
             // pnlForms
             // 
@@ -140,7 +140,7 @@
             this.bunifuPanel2.Name = "bunifuPanel2";
             this.bunifuPanel2.ShowBorders = true;
             this.bunifuPanel2.Size = new System.Drawing.Size(976, 1);
-            this.bunifuPanel2.TabIndex = 20;
+            this.bunifuPanel2.TabIndex = 0;
             // 
             // bunifuVScrollBar1
             // 
@@ -207,9 +207,9 @@
             this.bunifuShadowPanel4.BorderColor = System.Drawing.Color.Transparent;
             this.bunifuShadowPanel4.BorderRadius = 1;
             this.bunifuShadowPanel4.BorderThickness = 1;
-            this.bunifuShadowPanel4.Controls.Add(this.label6);
+            this.bunifuShadowPanel4.Controls.Add(this.bunifuLabel3);
+            this.bunifuShadowPanel4.Controls.Add(this.bunifuLabel1);
             this.bunifuShadowPanel4.Controls.Add(this.lblVersion);
-            this.bunifuShadowPanel4.Controls.Add(this.label1);
             this.bunifuShadowPanel4.Controls.Add(this.lblAcercaDe);
             this.bunifuShadowPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bunifuShadowPanel4.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
@@ -227,20 +227,6 @@
             this.bunifuShadowPanel4.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
             this.bunifuShadowPanel4.TabIndex = 0;
             // 
-            // label6
-            // 
-            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(179)))), ((int)(((byte)(182)))));
-            this.label6.Location = new System.Drawing.Point(477, 155);
-            this.label6.Name = "label6";
-            this.label6.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label6.Size = new System.Drawing.Size(457, 24);
-            this.label6.TabIndex = 12;
-            this.label6.Text = "2024  © - Desarrollado por ADNE Dev Team ";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.BottomRight;
-            // 
             // lblVersion
             // 
             this.lblVersion.AllowParentOverrides = false;
@@ -254,20 +240,10 @@
             this.lblVersion.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblVersion.Size = new System.Drawing.Size(124, 28);
             this.lblVersion.TabIndex = 11;
+            this.lblVersion.TabStop = false;
             this.lblVersion.Text = "ADNE 2024";
             this.lblVersion.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lblVersion.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(179)))), ((int)(((byte)(182)))));
-            this.label1.Location = new System.Drawing.Point(70, 117);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(118, 24);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "Version 1.1";
             // 
             // lblAcercaDe
             // 
@@ -281,7 +257,8 @@
             this.lblAcercaDe.Name = "lblAcercaDe";
             this.lblAcercaDe.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblAcercaDe.Size = new System.Drawing.Size(152, 36);
-            this.lblAcercaDe.TabIndex = 9;
+            this.lblAcercaDe.TabIndex = 3;
+            this.lblAcercaDe.TabStop = false;
             this.lblAcercaDe.Text = "Acerca de";
             this.lblAcercaDe.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lblAcercaDe.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
@@ -345,7 +322,7 @@
             this.switchModo.Name = "switchModo";
             this.switchModo.OutlineThickness = 2;
             this.switchModo.Size = new System.Drawing.Size(80, 35);
-            this.switchModo.TabIndex = 13;
+            this.switchModo.TabIndex = 1;
             this.switchModo.UncheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(92)))), ((int)(((byte)(98)))));
             this.switchModo.UncheckedSwitchColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(213)))), ((int)(((byte)(213)))));
             this.switchModo.UncheckedSwitchStyle = Bunifu.UI.WinForms.BunifuToggleSwitch2.SwitchStyles.Fill;
@@ -363,6 +340,7 @@
             this.lblPerosnalizacionModo.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblPerosnalizacionModo.Size = new System.Drawing.Size(402, 33);
             this.lblPerosnalizacionModo.TabIndex = 12;
+            this.lblPerosnalizacionModo.TabStop = false;
             this.lblPerosnalizacionModo.Text = "Cambiar tema a modo oscuro";
             this.lblPerosnalizacionModo.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lblPerosnalizacionModo.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
@@ -380,6 +358,7 @@
             this.lblPersonalizacion.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblPersonalizacion.Size = new System.Drawing.Size(220, 36);
             this.lblPersonalizacion.TabIndex = 9;
+            this.lblPersonalizacion.TabStop = false;
             this.lblPersonalizacion.Text = "Personalización";
             this.lblPersonalizacion.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lblPersonalizacion.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
@@ -409,13 +388,13 @@
             this.bunifuShadowPanel2.BorderColor = System.Drawing.Color.Transparent;
             this.bunifuShadowPanel2.BorderRadius = 1;
             this.bunifuShadowPanel2.BorderThickness = 1;
-            this.bunifuShadowPanel2.Controls.Add(this.label3);
-            this.bunifuShadowPanel2.Controls.Add(this.label2);
+            this.bunifuShadowPanel2.Controls.Add(this.bunifuLabel2);
             this.bunifuShadowPanel2.Controls.Add(this.lblCorreoUsuario);
+            this.bunifuShadowPanel2.Controls.Add(this.lblUsuarioo);
+            this.bunifuShadowPanel2.Controls.Add(this.lblProfesional);
+            this.bunifuShadowPanel2.Controls.Add(this.lblCorreo);
             this.bunifuShadowPanel2.Controls.Add(this.btnCerrarSesion);
             this.bunifuShadowPanel2.Controls.Add(this.lblDUI);
-            this.bunifuShadowPanel2.Controls.Add(this.lblDUIIdentificacion);
-            this.bunifuShadowPanel2.Controls.Add(this.lblCorreo);
             this.bunifuShadowPanel2.Controls.Add(this.lblUsuario);
             this.bunifuShadowPanel2.Controls.Add(this.lblNomprePersona);
             this.bunifuShadowPanel2.Controls.Add(this.lblRolUsuario);
@@ -436,6 +415,18 @@
             this.bunifuShadowPanel2.Size = new System.Drawing.Size(937, 361);
             this.bunifuShadowPanel2.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
             this.bunifuShadowPanel2.TabIndex = 0;
+            // 
+            // lblCorreo
+            // 
+            this.lblCorreo.AutoSize = true;
+            this.lblCorreo.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCorreo.ForeColor = System.Drawing.Color.White;
+            this.lblCorreo.Location = new System.Drawing.Point(538, 170);
+            this.lblCorreo.Margin = new System.Windows.Forms.Padding(20, 0, 3, 20);
+            this.lblCorreo.Name = "lblCorreo";
+            this.lblCorreo.Size = new System.Drawing.Size(63, 24);
+            this.lblCorreo.TabIndex = 19;
+            this.lblCorreo.Text = "Email";
             // 
             // btnCerrarSesion
             // 
@@ -521,7 +512,7 @@
             this.btnCerrarSesion.OnPressedState.IconLeftImage = null;
             this.btnCerrarSesion.OnPressedState.IconRightImage = null;
             this.btnCerrarSesion.Size = new System.Drawing.Size(232, 48);
-            this.btnCerrarSesion.TabIndex = 18;
+            this.btnCerrarSesion.TabIndex = 0;
             this.btnCerrarSesion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnCerrarSesion.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnCerrarSesion.TextMarginLeft = 0;
@@ -537,34 +528,8 @@
             this.lblDUI.Margin = new System.Windows.Forms.Padding(20, 0, 3, 20);
             this.lblDUI.Name = "lblDUI";
             this.lblDUI.Size = new System.Drawing.Size(125, 24);
-            this.lblDUI.TabIndex = 17;
+            this.lblDUI.TabIndex = 6;
             this.lblDUI.Text = "12345678-9";
-            // 
-            // lblDUIIdentificacion
-            // 
-            this.lblDUIIdentificacion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblDUIIdentificacion.AutoSize = true;
-            this.lblDUIIdentificacion.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDUIIdentificacion.ForeColor = System.Drawing.Color.White;
-            this.lblDUIIdentificacion.Location = new System.Drawing.Point(329, 213);
-            this.lblDUIIdentificacion.Margin = new System.Windows.Forms.Padding(20, 0, 3, 20);
-            this.lblDUIIdentificacion.Name = "lblDUIIdentificacion";
-            this.lblDUIIdentificacion.Size = new System.Drawing.Size(315, 25);
-            this.lblDUIIdentificacion.TabIndex = 16;
-            this.lblDUIIdentificacion.Text = "Documento de Identificación:";
-            // 
-            // lblCorreo
-            // 
-            this.lblCorreo.AutoSize = true;
-            this.lblCorreo.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCorreo.ForeColor = System.Drawing.Color.White;
-            this.lblCorreo.Location = new System.Drawing.Point(329, 169);
-            this.lblCorreo.Margin = new System.Windows.Forms.Padding(20, 0, 3, 20);
-            this.lblCorreo.Name = "lblCorreo";
-            this.lblCorreo.Size = new System.Drawing.Size(205, 25);
-            this.lblCorreo.TabIndex = 15;
-            this.lblCorreo.Text = "Correo Electrónico:";
             // 
             // lblUsuario
             // 
@@ -635,6 +600,7 @@
             this.lblCuenta.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblCuenta.Size = new System.Drawing.Size(145, 36);
             this.lblCuenta.TabIndex = 9;
+            this.lblCuenta.TabStop = false;
             this.lblCuenta.Text = "Mi Cuenta";
             this.lblCuenta.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lblCuenta.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
@@ -675,6 +641,7 @@
             this.bunifuLabel5.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel5.Size = new System.Drawing.Size(219, 38);
             this.bunifuLabel5.TabIndex = 3;
+            this.bunifuLabel5.TabStop = false;
             this.bunifuLabel5.Text = "Configuración";
             this.bunifuLabel5.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuLabel5.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
@@ -695,41 +662,110 @@
             this.bunifuPanel1.Size = new System.Drawing.Size(991, 861);
             this.bunifuPanel1.TabIndex = 4;
             // 
+            // lblProfesional
+            // 
+            this.lblProfesional.AllowParentOverrides = false;
+            this.lblProfesional.AutoEllipsis = false;
+            this.lblProfesional.CursorType = System.Windows.Forms.Cursors.Default;
+            this.lblProfesional.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProfesional.ForeColor = System.Drawing.Color.White;
+            this.lblProfesional.Location = new System.Drawing.Point(334, 81);
+            this.lblProfesional.Name = "lblProfesional";
+            this.lblProfesional.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblProfesional.Size = new System.Drawing.Size(243, 25);
+            this.lblProfesional.TabIndex = 22;
+            this.lblProfesional.TabStop = false;
+            this.lblProfesional.Text = "Nombre del Profesional:";
+            this.lblProfesional.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lblProfesional.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // lblUsuarioo
+            // 
+            this.lblUsuarioo.AllowParentOverrides = false;
+            this.lblUsuarioo.AutoEllipsis = false;
+            this.lblUsuarioo.CursorType = null;
+            this.lblUsuarioo.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuarioo.ForeColor = System.Drawing.Color.White;
+            this.lblUsuarioo.Location = new System.Drawing.Point(334, 125);
+            this.lblUsuarioo.Name = "lblUsuarioo";
+            this.lblUsuarioo.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblUsuarioo.Size = new System.Drawing.Size(81, 25);
+            this.lblUsuarioo.TabIndex = 23;
+            this.lblUsuarioo.TabStop = false;
+            this.lblUsuarioo.Text = "Usuario:";
+            this.lblUsuarioo.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lblUsuarioo.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
             // lblCorreoUsuario
             // 
-            this.lblCorreoUsuario.AutoSize = true;
-            this.lblCorreoUsuario.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCorreoUsuario.AllowParentOverrides = false;
+            this.lblCorreoUsuario.AutoEllipsis = false;
+            this.lblCorreoUsuario.CursorType = null;
+            this.lblCorreoUsuario.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCorreoUsuario.ForeColor = System.Drawing.Color.White;
-            this.lblCorreoUsuario.Location = new System.Drawing.Point(538, 170);
-            this.lblCorreoUsuario.Margin = new System.Windows.Forms.Padding(20, 0, 3, 20);
+            this.lblCorreoUsuario.Location = new System.Drawing.Point(334, 169);
             this.lblCorreoUsuario.Name = "lblCorreoUsuario";
-            this.lblCorreoUsuario.Size = new System.Drawing.Size(63, 24);
-            this.lblCorreoUsuario.TabIndex = 19;
-            this.lblCorreoUsuario.Text = "Email";
+            this.lblCorreoUsuario.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblCorreoUsuario.Size = new System.Drawing.Size(193, 25);
+            this.lblCorreoUsuario.TabIndex = 24;
+            this.lblCorreoUsuario.TabStop = false;
+            this.lblCorreoUsuario.Text = "Correo Electrónico:";
+            this.lblCorreoUsuario.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lblCorreoUsuario.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
-            // label2
+            // bunifuLabel2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(330, 125);
-            this.label2.Margin = new System.Windows.Forms.Padding(20, 0, 3, 20);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(93, 25);
-            this.label2.TabIndex = 20;
-            this.label2.Text = "Usuario:";
+            this.bunifuLabel2.AllowParentOverrides = false;
+            this.bunifuLabel2.AutoEllipsis = false;
+            this.bunifuLabel2.CursorType = null;
+            this.bunifuLabel2.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuLabel2.ForeColor = System.Drawing.Color.White;
+            this.bunifuLabel2.Location = new System.Drawing.Point(334, 214);
+            this.bunifuLabel2.Name = "bunifuLabel2";
+            this.bunifuLabel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel2.Size = new System.Drawing.Size(303, 25);
+            this.bunifuLabel2.TabIndex = 25;
+            this.bunifuLabel2.TabStop = false;
+            this.bunifuLabel2.Text = "Documento de Identificación:";
+            this.bunifuLabel2.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel2.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
-            // label3
+            // bunifuLabel1
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(329, 81);
-            this.label3.Margin = new System.Windows.Forms.Padding(20, 0, 3, 20);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(255, 25);
-            this.label3.TabIndex = 21;
-            this.label3.Text = "Nombre del Profesional:";
+            this.bunifuLabel1.AllowParentOverrides = false;
+            this.bunifuLabel1.AutoEllipsis = false;
+            this.bunifuLabel1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel1.CursorType = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(179)))), ((int)(((byte)(182)))));
+            this.bunifuLabel1.Location = new System.Drawing.Point(67, 119);
+            this.bunifuLabel1.Name = "bunifuLabel1";
+            this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel1.Size = new System.Drawing.Size(108, 24);
+            this.bunifuLabel1.TabIndex = 13;
+            this.bunifuLabel1.TabStop = false;
+            this.bunifuLabel1.Text = "Version 1.1";
+            this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // bunifuLabel3
+            // 
+            this.bunifuLabel3.AllowParentOverrides = false;
+            this.bunifuLabel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.bunifuLabel3.AutoEllipsis = false;
+            this.bunifuLabel3.Cursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel3.CursorType = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel3.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(179)))), ((int)(((byte)(182)))));
+            this.bunifuLabel3.Location = new System.Drawing.Point(499, 152);
+            this.bunifuLabel3.Name = "bunifuLabel3";
+            this.bunifuLabel3.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel3.Size = new System.Drawing.Size(435, 24);
+            this.bunifuLabel3.TabIndex = 1;
+            this.bunifuLabel3.TabStop = false;
+            this.bunifuLabel3.Text = "Desarrollado por ADNE Dev Team - © 2024";
+            this.bunifuLabel3.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel3.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // ConfiguraciónForm
             // 
@@ -778,8 +814,6 @@
         public Bunifu.UI.WinForms.BunifuPictureBox picUsuario;
         public System.Windows.Forms.Label lblRolUsuario;
         public System.Windows.Forms.Label lblDUI;
-        public System.Windows.Forms.Label lblDUIIdentificacion;
-        public System.Windows.Forms.Label lblCorreo;
         public System.Windows.Forms.Label lblUsuario;
         public System.Windows.Forms.Label lblNomprePersona;
         public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnCerrarSesion;
@@ -791,13 +825,15 @@
         private Bunifu.UI.WinForms.BunifuLabel lblAcercaDe;
         private Bunifu.UI.WinForms.BunifuLabel lblPerosnalizacionModo;
         public Bunifu.UI.WinForms.BunifuToggleSwitch2 switchModo;
-        public System.Windows.Forms.Label label1;
         private Bunifu.UI.WinForms.BunifuLabel lblVersion;
-        public System.Windows.Forms.Label label6;
         public Bunifu.UI.WinForms.BunifuPanel bunifuPanel2;
         public Bunifu.UI.WinForms.BunifuVScrollBar bunifuVScrollBar1;
-        public System.Windows.Forms.Label lblCorreoUsuario;
-        public System.Windows.Forms.Label label2;
-        public System.Windows.Forms.Label label3;
+        public System.Windows.Forms.Label lblCorreo;
+        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel2;
+        private Bunifu.UI.WinForms.BunifuLabel lblCorreoUsuario;
+        private Bunifu.UI.WinForms.BunifuLabel lblUsuarioo;
+        private Bunifu.UI.WinForms.BunifuLabel lblProfesional;
+        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel3;
+        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
     }
 }
