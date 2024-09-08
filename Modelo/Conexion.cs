@@ -46,5 +46,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo
                 return null;
             }
         }
+
+        //Fue segun viendo las clases bv, así los fui demoninando
     }
 }

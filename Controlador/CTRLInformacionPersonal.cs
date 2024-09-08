@@ -47,28 +47,58 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
         #region Validaciones de Campos
         private void ComprobarFechaActual(object sender, EventArgs e)
         {
-            // Verificar si la fecha seleccionada es mayor que la fecha de hoy
+            //Verificamos si la fecha seleccionada es mayor que la fecha de hoy
             if (ObjInformacionPersonal.dtFechaNacimiento.Value.Date > DateTime.Today)
             {
-                // Mostrar un mensaje de advertencia
-                MessageBox.Show("La fecha de nacimiento no puede ser una fecha futura.", "Fecha no válida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                //En caso de error, mostramos un mensaje de error
+                MessageBox.Show("La fecha de nacimiento no puede ser una fecha futura", "Fecha no válida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
-                // Restablecer la fecha al valor anterior o a la fecha actual
+                //Restablecemos la fecha al valor anterior o a la fecha actual
                 ObjInformacionPersonal.dtFechaNacimiento.Value = DateTime.Today;
             }
             else
             {
-                // Calcular la edad
-                int edad = DateTime.Today.Year - ObjInformacionPersonal.dtFechaNacimiento.Value.Year;
+                //Calculamos la edad de la persona, en este caso para el textbox
+                int CalcularEdad = DateTime.Today.Year - ObjInformacionPersonal.dtFechaNacimiento.Value.Year;
 
-                // Ajustar la edad si la fecha de nacimiento aún no ha ocurrido este año
+                //En una sentencia if, ajustamos la edad si la fecha de nacimiento aún no ha ocurrido este año
                 if (DateTime.Today.DayOfYear < ObjInformacionPersonal.dtFechaNacimiento.Value.DayOfYear)
                 {
-                    edad--;
+                    //Calculamos la edad según los años recorridos
+                    CalcularEdad--;
                 }
 
-                // Actualizar el campo de texto con la edad calculada
-                ObjInformacionPersonal.txtEdad.Text = edad.ToString();
+                //Actualizamos la edad según la fecha actual del DateTimePicker
+                ObjInformacionPersonal.txtEdad.Text = CalcularEdad.ToString();
+
+                //Verificamos si la edad es menor a 2 años, por políticas de seguridad, la persona registrada no puede ser menor a 2 años
+                if (CalcularEdad < 2)
+                {
+                    //En caso de mostrarnos un error, mandamos un mensaje de error validando el ingreso correcto de la fecha propuesta
+                    MessageBox.Show("La edad mínima para registrar un paciente es de 2 años", "Edad no válida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                    //Restablecemos la fecha al valor anterior o a una fecha válida (hace 2 años)
+                    ObjInformacionPersonal.dtFechaNacimiento.Value = DateTime.Today.AddYears(-2);
+                }
+                else
+                {
+                    //Actualizamos el campo de la edad según la edad calculada
+                    ObjInformacionPersonal.txtEdad.Text = CalcularEdad.ToString();
+                }
+
+                //Verificamos si la edad es mayor a 158 años
+                if (CalcularEdad > 120)
+                {
+                    MessageBox.Show("La edad máxima permitida es de 120 años", "Edad no válida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                    //Restablecemos la fecha al valor máximo permitido (120 años)
+                    ObjInformacionPersonal.dtFechaNacimiento.Value = DateTime.Today.AddYears(-120);
+                }
+                else
+                {
+                    //Actualizamos el campo de la edad según la edad calculada
+                    ObjInformacionPersonal.txtEdad.Text = CalcularEdad.ToString();
+                }
             }
         }
         private void ValidarCampoTextBox(object sender, KeyPressEventArgs e)
