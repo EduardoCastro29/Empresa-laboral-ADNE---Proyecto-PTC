@@ -55,7 +55,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                 Conexion.Connection = Conectar();
 
                 //Iniciamos el tipo de comando
-                string consultaSQLLLenarDGVCitas = "SELECT * FROM vistaCitasAgendadas";
+                string consultaSQLLLenarDGVCitas = "SELECT * FROM vistaCitasAgendadas ORDER BY [Fecha de la Cita] ASC";
 
                 //Llenamos el comando
                 SqlCommand ObjComandoSQLServerDGVCitas = new SqlCommand(consultaSQLLLenarDGVCitas, Conexion.Connection);
