@@ -13,6 +13,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
 {
     internal class CTRLExpediente
     {
+        NuevoPacienteForm objNuevoPaciente = new NuevoPacienteForm();
         readonly ExpedienteMédicoForm ObjExpediente;
         //Empezamos la encapsulación de la clase Controlador Expediente
         //Esta tendrá como parámetros el formulario Expediente Médico haciendo referencia a la carpeta Vista
@@ -94,7 +95,8 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                     ObjExpediente.txtAtencionBrindada.Text.Length < 5)
                 {
                     //Si los datos no fueron ingresados correctamente, mostramos un mensaje de error
-                    MessageBox.Show("Error al guardar, verifique si todos los datos han sido ingresados correctamente o cumple con la cantidad mínima de caracteres", "Expediente", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    objNuevoPaciente.NotificacionNuevoPaciente.Show(objNuevoPaciente, "Error al guardar, verifique si todos los datos han sido ingresados correctamente o cumple con la cantidad mínima de caracteres", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error);
+                    //MessageBox.Show("Error al guardar, verifique si todos los datos han sido ingresados correctamente o cumple con la cantidad mínima de caracteres", "Expediente", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
@@ -121,18 +123,21 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
 
                     if (comprobar == true)
                     {
-                        MessageBox.Show("Los datos han sido insertado exitosamente",
-                                   "Proceso completado",
-                                   MessageBoxButtons.OK,
-                                   MessageBoxIcon.Information);
+                        //MessageBox.Show("Los datos han sido insertado exitosamente",
+                        //           "Proceso completado",
+                        //           MessageBoxButtons.OK,
+                        //           MessageBoxIcon.Information);
+                        objNuevoPaciente.NotificacionNuevoPaciente.Show(objNuevoPaciente, "Los datos han sido insertado exitosamente", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Success);
                         LimpiarCampos();
                     }
                     else
                     {
-                        MessageBox.Show("Los datos no pudieron ser insertados",
-                                    "Proceso interrumpido",
-                                    MessageBoxButtons.OK,
-                                    MessageBoxIcon.Error);
+                        //MessageBox.Show("Los datos no pudieron ser insertados",
+                        //            "Proceso interrumpido",
+                        //            MessageBoxButtons.OK,
+                        //            MessageBoxIcon.Error);
+                        objNuevoPaciente.NotificacionNuevoPaciente.Show(objNuevoPaciente, "Los datos no pudieron ser insertados. El proceso ha sido interrumpido", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error);
+
                     }
                 }
             }
@@ -163,7 +168,9 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                     ObjExpediente.txtAtencionBrindada.Text.Length < 5)
                 {
                     //Si los datos no fueron ingresados correctamente, mostramos un mensaje de error
-                    MessageBox.Show("Error al guardar, verifique si todos los datos han sido ingresados correctamente o cumple con la cantidad mínima de caracteres", "Expediente", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    //MessageBox.Show("Error al guardar, verifique si todos los datos han sido ingresados correctamente o cumple con la cantidad mínima de caracteres", "Expediente", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    objNuevoPaciente.NotificacionNuevoPaciente.Show(objNuevoPaciente, "Error al guardar, verifique si todos los datos han sido ingresados correctamente o cumple con la cantidad mínima de caracteres", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error);
+
                 }
                 else
                 {
@@ -189,18 +196,20 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                     bool comprobar = ObjDAOExpediente.ExpedienteActualizarDatos();
                     if (comprobar == true)
                     {
-                        MessageBox.Show("Los datos han sido actualizados exitosamente",
-                                   "Proceso completado",
-                                   MessageBoxButtons.OK,
-                                   MessageBoxIcon.Information);
+                        //MessageBox.Show("Los datos han sido actualizados exitosamente",
+                        //           "Proceso completado",
+                        //           MessageBoxButtons.OK,
+                        //           MessageBoxIcon.Information);
+                        objNuevoPaciente.NotificacionNuevoPaciente.Show(objNuevoPaciente, "Los datos han sido actualizados exitosamente", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Success);
                         LimpiarCampos();
                     }
                     else
                     {
-                        MessageBox.Show("Los datos no pudieron ser actualizados",
-                                   "Proceso interrumpido",
-                                   MessageBoxButtons.OK,
-                                   MessageBoxIcon.Error);
+                        //MessageBox.Show("Los datos no pudieron ser actualizados",
+                        //           "Proceso interrumpido",
+                        //           MessageBoxButtons.OK,
+                        //           MessageBoxIcon.Error);
+                        objNuevoPaciente.NotificacionNuevoPaciente.Show(objNuevoPaciente, "Los datos no pudieron ser actualizados", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error);
                     }
                 }
             }

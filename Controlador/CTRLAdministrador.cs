@@ -326,7 +326,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                     ObjRegistroForm.txtTelefono.Text.Length < 9 ||
                     ObjRegistroForm.picProfesional.Image == Properties.Resources.ProfesionalPic)
                 {
-                    MessageBox.Show("Error al registrarse, verifique si todos los datos han sido ingresados correctamente o si los datos han sido rellenados con éxito", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    ObjRegistroForm.Notificacion1.Show(ObjRegistroForm, "Error al registrarse, verifique si todos los datos han sido ingresados correctamente o si los datos han sido rellenados con éxito", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error);
                 }
                 else
                 {
@@ -376,11 +376,12 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                         //Evaluamos si la inserción se hizo correctamente
                         if (ObjDAORegistrarProfesional.AgregarEmpleadoUsuario() == false)
                         {
-                            MessageBox.Show("El Usuario no pudo ser registrado, verifique que los datos han sido ingresados correctamente", "Registrar Profesional", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            ObjRegistroForm.Notificacion1.Show(ObjRegistroForm, "El Usuario no pudo ser registrado, verifique que los datos han sido ingresados correctamente", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error);
                         }
                         else
                         {
-                            MessageBox.Show("El Profesional ha sido registrado exitosamente", "Registrar Profesional", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            ObjRegistroForm.Notificacion1.Show(ObjRegistroForm, "El Profesional ha sido registrado exitosamente", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Information);
+                            //MessageBox.Show("El Profesional ha sido registrado exitosamente", "Registrar Profesional", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                             RegistroEspecialidadesForm ObjAbrirRegistroEspecialidad = new RegistroEspecialidadesForm();
                             //Guardamos las variables de registro que se han hecho durante la inserción de la tabla profesional
@@ -395,7 +396,8 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                     }
                     else
                     {
-                        MessageBox.Show("El correo electrónico ingresado no posee una dirección de correo válida, verifique si contiene @ o dominio correcto", "Registrar Profesional", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        ObjRegistroForm.Notificacion1.Show(ObjRegistroForm, "El correo electrónico ingresado no posee una dirección de correo válida, verifique si contiene @ o dominio correcto", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error);
+                        //MessageBox.Show("El correo electrónico ingresado no posee una dirección de correo válida, verifique si contiene @ o dominio correcto", "Registrar Profesional", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
@@ -420,7 +422,8 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                     ObjRegistroForm.txtTelefono.Text.Length < 9 ||
                     ObjRegistroForm.picProfesional.Image == Properties.Resources.ProfesionalPic)
                 {
-                    MessageBox.Show("Error al registrarse, verifique si todos los datos han sido ingresados correctamente o si los datos han sido rellenados con éxito", "Actualizar Profesional", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    ObjRegistroForm.Notificacion1.Show(ObjRegistroForm, "Error al registrarse, verifique si todos los datos han sido ingresados correctamente o si los datos han sido rellenados con éxito", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error);
+                    //MessageBox.Show("Error al registrarse, verifique si todos los datos han sido ingresados correctamente o si los datos han sido rellenados con éxito", "Actualizar Profesional", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
                 else
                 {
@@ -468,18 +471,22 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                         //Finalmente, evaluamos si la actualización se hizo correctamente
                         if (ObjDAOActualizarProfesional.ActualizarUsuarioEmpleado() == false)
                         {
-                            MessageBox.Show("Error al actualizar el profesional, verifique si todos los datos han sido ingresados correctamente", "Actualizar Profesional", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            ObjRegistroForm.Notificacion1.Show(ObjRegistroForm, "Error al actualizar el profesional, verifique si todos los datos han sido ingresados correctamente", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error);
+                            //MessageBox.Show("Error al actualizar el profesional, verifique si todos los datos han sido ingresados correctamente", "Actualizar Profesional", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                         else
                         {
-                            MessageBox.Show("El profesional ha sido actualizado correctamente", "Actualizar Profesional", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            ObjRegistroForm.Notificacion1.Show(ObjRegistroForm, "El profesional ha sido actualizado correctamente", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Success);
+                            //MessageBox.Show("El profesional ha sido actualizado correctamente", "Actualizar Profesional", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            
                             //Ocultamos el formulario de Registro                            
                             ObjRegistroForm.Hide();
                         }
                     }
                     else
                     {
-                        MessageBox.Show("El correo electrónico ingresado no posee una dirección de correo válida, verifique si contiene @ o dominio correcto", "Actualizar Profesional", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        ObjRegistroForm.Notificacion1.Show(ObjRegistroForm, "El correo electrónico ingresado no posee una dirección de correo válida, verifique si contiene @ o dominio correcto", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error);
+                        //MessageBox.Show("El correo electrónico ingresado no posee una dirección de correo válida, verifique si contiene @ o dominio correcto", "Actualizar Profesional", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }

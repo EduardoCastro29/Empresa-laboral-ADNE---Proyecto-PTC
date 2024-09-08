@@ -50,7 +50,7 @@
             this.btnCerrarSesion = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.lblDUI = new System.Windows.Forms.Label();
             this.lblDUIIdentificacion = new System.Windows.Forms.Label();
-            this.lblCorreoUsuario = new System.Windows.Forms.Label();
+            this.lblCorreo = new System.Windows.Forms.Label();
             this.lblUsuario = new System.Windows.Forms.Label();
             this.lblNomprePersona = new System.Windows.Forms.Label();
             this.lblRolUsuario = new System.Windows.Forms.Label();
@@ -60,6 +60,9 @@
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.bunifuLabel5 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
+            this.lblCorreoUsuario = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.bunifuShadowPanel1.SuspendLayout();
             this.pnlForms.SuspendLayout();
             this.pnl3Section.SuspendLayout();
@@ -335,6 +338,7 @@
             this.switchModo.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(192)))), ((int)(((byte)(175)))));
             this.switchModo.CheckedSwitchColor = System.Drawing.Color.White;
             this.switchModo.CheckedSwitchStyle = Bunifu.UI.WinForms.BunifuToggleSwitch2.SwitchStyles.Fill;
+            this.switchModo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.switchModo.Location = new System.Drawing.Point(828, 108);
             this.switchModo.Margin = new System.Windows.Forms.Padding(3, 3, 40, 3);
             this.switchModo.MaximumSize = new System.Drawing.Size(110, 50);
@@ -405,10 +409,13 @@
             this.bunifuShadowPanel2.BorderColor = System.Drawing.Color.Transparent;
             this.bunifuShadowPanel2.BorderRadius = 1;
             this.bunifuShadowPanel2.BorderThickness = 1;
+            this.bunifuShadowPanel2.Controls.Add(this.label3);
+            this.bunifuShadowPanel2.Controls.Add(this.label2);
+            this.bunifuShadowPanel2.Controls.Add(this.lblCorreoUsuario);
             this.bunifuShadowPanel2.Controls.Add(this.btnCerrarSesion);
             this.bunifuShadowPanel2.Controls.Add(this.lblDUI);
             this.bunifuShadowPanel2.Controls.Add(this.lblDUIIdentificacion);
-            this.bunifuShadowPanel2.Controls.Add(this.lblCorreoUsuario);
+            this.bunifuShadowPanel2.Controls.Add(this.lblCorreo);
             this.bunifuShadowPanel2.Controls.Add(this.lblUsuario);
             this.bunifuShadowPanel2.Controls.Add(this.lblNomprePersona);
             this.bunifuShadowPanel2.Controls.Add(this.lblRolUsuario);
@@ -435,7 +442,7 @@
             this.btnCerrarSesion.AllowAnimations = true;
             this.btnCerrarSesion.AllowMouseEffects = true;
             this.btnCerrarSesion.AllowToggling = false;
-            this.btnCerrarSesion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCerrarSesion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCerrarSesion.AnimationSpeed = 200;
             this.btnCerrarSesion.AutoGenerateColors = false;
             this.btnCerrarSesion.AutoRoundBorders = false;
@@ -449,7 +456,7 @@
             this.btnCerrarSesion.ButtonTextMarginLeft = 0;
             this.btnCerrarSesion.ColorContrastOnClick = 45;
             this.btnCerrarSesion.ColorContrastOnHover = 45;
-            this.btnCerrarSesion.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnCerrarSesion.Cursor = System.Windows.Forms.Cursors.Hand;
             borderEdges1.BottomLeft = true;
             borderEdges1.BottomRight = true;
             borderEdges1.TopLeft = true;
@@ -523,8 +530,6 @@
             // 
             // lblDUI
             // 
-            this.lblDUI.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblDUI.AutoSize = true;
             this.lblDUI.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDUI.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -549,51 +554,44 @@
             this.lblDUIIdentificacion.TabIndex = 16;
             this.lblDUIIdentificacion.Text = "Documento de Identificación:";
             // 
-            // lblCorreoUsuario
+            // lblCorreo
             // 
-            this.lblCorreoUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblCorreoUsuario.AutoSize = true;
-            this.lblCorreoUsuario.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCorreoUsuario.ForeColor = System.Drawing.Color.White;
-            this.lblCorreoUsuario.Location = new System.Drawing.Point(329, 169);
-            this.lblCorreoUsuario.Margin = new System.Windows.Forms.Padding(20, 0, 3, 20);
-            this.lblCorreoUsuario.Name = "lblCorreoUsuario";
-            this.lblCorreoUsuario.Size = new System.Drawing.Size(64, 24);
-            this.lblCorreoUsuario.TabIndex = 15;
-            this.lblCorreoUsuario.Text = "Email";
+            this.lblCorreo.AutoSize = true;
+            this.lblCorreo.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCorreo.ForeColor = System.Drawing.Color.White;
+            this.lblCorreo.Location = new System.Drawing.Point(329, 169);
+            this.lblCorreo.Margin = new System.Windows.Forms.Padding(20, 0, 3, 20);
+            this.lblCorreo.Name = "lblCorreo";
+            this.lblCorreo.Size = new System.Drawing.Size(205, 25);
+            this.lblCorreo.TabIndex = 15;
+            this.lblCorreo.Text = "Correo Electrónico:";
             // 
             // lblUsuario
             // 
-            this.lblUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblUsuario.AutoSize = true;
-            this.lblUsuario.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuario.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsuario.ForeColor = System.Drawing.Color.White;
-            this.lblUsuario.Location = new System.Drawing.Point(329, 125);
+            this.lblUsuario.Location = new System.Drawing.Point(423, 125);
             this.lblUsuario.Margin = new System.Windows.Forms.Padding(20, 0, 3, 20);
             this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(81, 24);
+            this.lblUsuario.Size = new System.Drawing.Size(84, 24);
             this.lblUsuario.TabIndex = 14;
             this.lblUsuario.Text = "Usuario";
             // 
             // lblNomprePersona
             // 
-            this.lblNomprePersona.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblNomprePersona.AutoSize = true;
-            this.lblNomprePersona.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNomprePersona.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNomprePersona.ForeColor = System.Drawing.Color.White;
-            this.lblNomprePersona.Location = new System.Drawing.Point(329, 81);
+            this.lblNomprePersona.Location = new System.Drawing.Point(585, 82);
             this.lblNomprePersona.Margin = new System.Windows.Forms.Padding(20, 0, 3, 20);
             this.lblNomprePersona.Name = "lblNomprePersona";
-            this.lblNomprePersona.Size = new System.Drawing.Size(241, 24);
+            this.lblNomprePersona.Size = new System.Drawing.Size(92, 24);
             this.lblNomprePersona.TabIndex = 13;
-            this.lblNomprePersona.Text = "Nombre de la Persona";
+            this.lblNomprePersona.Text = "Nombre";
             // 
             // lblRolUsuario
             // 
-            this.lblRolUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblRolUsuario.AutoSize = true;
             this.lblRolUsuario.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRolUsuario.ForeColor = System.Drawing.Color.White;
@@ -697,6 +695,42 @@
             this.bunifuPanel1.Size = new System.Drawing.Size(991, 861);
             this.bunifuPanel1.TabIndex = 4;
             // 
+            // lblCorreoUsuario
+            // 
+            this.lblCorreoUsuario.AutoSize = true;
+            this.lblCorreoUsuario.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCorreoUsuario.ForeColor = System.Drawing.Color.White;
+            this.lblCorreoUsuario.Location = new System.Drawing.Point(538, 170);
+            this.lblCorreoUsuario.Margin = new System.Windows.Forms.Padding(20, 0, 3, 20);
+            this.lblCorreoUsuario.Name = "lblCorreoUsuario";
+            this.lblCorreoUsuario.Size = new System.Drawing.Size(63, 24);
+            this.lblCorreoUsuario.TabIndex = 19;
+            this.lblCorreoUsuario.Text = "Email";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(330, 125);
+            this.label2.Margin = new System.Windows.Forms.Padding(20, 0, 3, 20);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(93, 25);
+            this.label2.TabIndex = 20;
+            this.label2.Text = "Usuario:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(329, 81);
+            this.label3.Margin = new System.Windows.Forms.Padding(20, 0, 3, 20);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(255, 25);
+            this.label3.TabIndex = 21;
+            this.label3.Text = "Nombre del Profesional:";
+            // 
             // ConfiguraciónForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -745,7 +779,7 @@
         public System.Windows.Forms.Label lblRolUsuario;
         public System.Windows.Forms.Label lblDUI;
         public System.Windows.Forms.Label lblDUIIdentificacion;
-        public System.Windows.Forms.Label lblCorreoUsuario;
+        public System.Windows.Forms.Label lblCorreo;
         public System.Windows.Forms.Label lblUsuario;
         public System.Windows.Forms.Label lblNomprePersona;
         public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnCerrarSesion;
@@ -762,5 +796,8 @@
         public System.Windows.Forms.Label label6;
         public Bunifu.UI.WinForms.BunifuPanel bunifuPanel2;
         public Bunifu.UI.WinForms.BunifuVScrollBar bunifuVScrollBar1;
+        public System.Windows.Forms.Label lblCorreoUsuario;
+        public System.Windows.Forms.Label label2;
+        public System.Windows.Forms.Label label3;
     }
 }

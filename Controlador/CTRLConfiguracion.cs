@@ -27,7 +27,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
         {
             ObjConfiguracionForm.lblRolUsuario.Text = InicioSesion.Especialidad;
             ObjConfiguracionForm.lblNomprePersona.Text = InicioSesion.NombresApellidos;
-            ObjConfiguracionForm.lblCorreoUsuario.Text = InicioSesion.Correo;
+            ObjConfiguracionForm.lblCorreo.Text = InicioSesion.Correo;
             ObjConfiguracionForm.lblUsuario.Text = InicioSesion.Usuario;
             ObjConfiguracionForm.lblDUI.Text = InicioSesion.Dui;
             //ObjConfiguracionForm.picUsuario.Image = Image.FromFile(InicioSesion.Imagen);

@@ -50,6 +50,7 @@
             this.pnlSombreBoton = new Bunifu.UI.WinForms.BunifuShadowPanel();
             this.btnAñadirProfesional = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.dgvAdministrarProfesional = new Bunifu.UI.WinForms.BunifuDataGridView();
+            this.NotificacionAdmin = new Bunifu.UI.WinForms.BunifuSnackbar(this.components);
             this.cmsOpciones.SuspendLayout();
             this.pnlFondo.SuspendLayout();
             this.pnlSombraFondo.SuspendLayout();
@@ -428,6 +429,76 @@
             this.dgvAdministrarProfesional.TabIndex = 100;
             this.dgvAdministrarProfesional.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Teal;
             // 
+            // NotificacionAdmin
+            // 
+            this.NotificacionAdmin.AllowDragging = false;
+            this.NotificacionAdmin.AllowMultipleViews = true;
+            this.NotificacionAdmin.ClickToClose = true;
+            this.NotificacionAdmin.DoubleClickToClose = true;
+            this.NotificacionAdmin.DurationAfterIdle = 3000;
+            this.NotificacionAdmin.ErrorOptions.ActionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.NotificacionAdmin.ErrorOptions.ActionBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.NotificacionAdmin.ErrorOptions.ActionBorderRadius = 1;
+            this.NotificacionAdmin.ErrorOptions.ActionFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.NotificacionAdmin.ErrorOptions.ActionForeColor = System.Drawing.Color.Black;
+            this.NotificacionAdmin.ErrorOptions.BackColor = System.Drawing.Color.White;
+            this.NotificacionAdmin.ErrorOptions.BorderColor = System.Drawing.Color.White;
+            this.NotificacionAdmin.ErrorOptions.CloseIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(199)))));
+            this.NotificacionAdmin.ErrorOptions.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.NotificacionAdmin.ErrorOptions.ForeColor = System.Drawing.Color.Black;
+            this.NotificacionAdmin.ErrorOptions.Icon = ((System.Drawing.Image)(resources.GetObject("resource.Icon")));
+            this.NotificacionAdmin.ErrorOptions.IconLeftMargin = 12;
+            this.NotificacionAdmin.FadeCloseIcon = false;
+            this.NotificacionAdmin.Host = Bunifu.UI.WinForms.BunifuSnackbar.Hosts.FormOwner;
+            this.NotificacionAdmin.InformationOptions.ActionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.NotificacionAdmin.InformationOptions.ActionBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.NotificacionAdmin.InformationOptions.ActionBorderRadius = 1;
+            this.NotificacionAdmin.InformationOptions.ActionFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.NotificacionAdmin.InformationOptions.ActionForeColor = System.Drawing.Color.Black;
+            this.NotificacionAdmin.InformationOptions.BackColor = System.Drawing.Color.White;
+            this.NotificacionAdmin.InformationOptions.BorderColor = System.Drawing.Color.White;
+            this.NotificacionAdmin.InformationOptions.CloseIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(213)))), ((int)(((byte)(255)))));
+            this.NotificacionAdmin.InformationOptions.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.NotificacionAdmin.InformationOptions.ForeColor = System.Drawing.Color.Black;
+            this.NotificacionAdmin.InformationOptions.Icon = ((System.Drawing.Image)(resources.GetObject("resource.Icon1")));
+            this.NotificacionAdmin.InformationOptions.IconLeftMargin = 12;
+            this.NotificacionAdmin.Margin = 10;
+            this.NotificacionAdmin.MaximumSize = new System.Drawing.Size(0, 0);
+            this.NotificacionAdmin.MaximumViews = 1;
+            this.NotificacionAdmin.MessageRightMargin = 15;
+            this.NotificacionAdmin.MessageTopMargin = 0;
+            this.NotificacionAdmin.MinimumSize = new System.Drawing.Size(0, 0);
+            this.NotificacionAdmin.ShowBorders = false;
+            this.NotificacionAdmin.ShowCloseIcon = false;
+            this.NotificacionAdmin.ShowIcon = true;
+            this.NotificacionAdmin.ShowShadows = true;
+            this.NotificacionAdmin.SuccessOptions.ActionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.NotificacionAdmin.SuccessOptions.ActionBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.NotificacionAdmin.SuccessOptions.ActionBorderRadius = 1;
+            this.NotificacionAdmin.SuccessOptions.ActionFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.NotificacionAdmin.SuccessOptions.ActionForeColor = System.Drawing.Color.Black;
+            this.NotificacionAdmin.SuccessOptions.BackColor = System.Drawing.Color.White;
+            this.NotificacionAdmin.SuccessOptions.BorderColor = System.Drawing.Color.White;
+            this.NotificacionAdmin.SuccessOptions.CloseIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(255)))), ((int)(((byte)(237)))));
+            this.NotificacionAdmin.SuccessOptions.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.NotificacionAdmin.SuccessOptions.ForeColor = System.Drawing.Color.Black;
+            this.NotificacionAdmin.SuccessOptions.Icon = ((System.Drawing.Image)(resources.GetObject("resource.Icon2")));
+            this.NotificacionAdmin.SuccessOptions.IconLeftMargin = 12;
+            this.NotificacionAdmin.ViewsMargin = 7;
+            this.NotificacionAdmin.WarningOptions.ActionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.NotificacionAdmin.WarningOptions.ActionBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.NotificacionAdmin.WarningOptions.ActionBorderRadius = 1;
+            this.NotificacionAdmin.WarningOptions.ActionFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.NotificacionAdmin.WarningOptions.ActionForeColor = System.Drawing.Color.Black;
+            this.NotificacionAdmin.WarningOptions.BackColor = System.Drawing.Color.White;
+            this.NotificacionAdmin.WarningOptions.BorderColor = System.Drawing.Color.White;
+            this.NotificacionAdmin.WarningOptions.CloseIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(229)))), ((int)(((byte)(143)))));
+            this.NotificacionAdmin.WarningOptions.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.NotificacionAdmin.WarningOptions.ForeColor = System.Drawing.Color.Black;
+            this.NotificacionAdmin.WarningOptions.Icon = ((System.Drawing.Image)(resources.GetObject("resource.Icon3")));
+            this.NotificacionAdmin.WarningOptions.IconLeftMargin = 12;
+            this.NotificacionAdmin.ZoomCloseIcon = true;
+            // 
             // AdministradorForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -466,5 +537,6 @@
         public Bunifu.UI.WinForms.BunifuPanel pnlSombraBuscar;
         public Bunifu.UI.WinForms.BunifuTextBox txtBuscarEmpleado;
         public System.Windows.Forms.ToolStripMenuItem cmsVerEspecialidades;
+        public Bunifu.UI.WinForms.BunifuSnackbar NotificacionAdmin;
     }
 }

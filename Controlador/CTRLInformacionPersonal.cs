@@ -18,6 +18,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
 {
     internal class CTRLInformacionPersonal
     {
+        NuevoPacienteForm objNuevoPaciente = new NuevoPacienteForm();
         readonly InformaciónPersonalForm ObjInformacionPersonal;
         //Empezamos la encapsulación de la clase Controlador Login
         //Esta tendrá como parámetros el formulario Informacion Personal haciendo referencia a la carpeta Vista
@@ -51,7 +52,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             if (ObjInformacionPersonal.dtFechaNacimiento.Value.Date > DateTime.Today)
             {
                 //En caso de error, mostramos un mensaje de error
-                //objNuevoPaciente.NotificacionNuevoPaciente.Show(objNuevoPaciente, "La fecha de nacimiento no puede ser una fecha futura.", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Warning);
+                objNuevoPaciente.NotificacionNuevoPaciente.Show(objNuevoPaciente, "La fecha de nacimiento no puede ser una fecha futura.", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Warning);
 
                 //Restablecemos la fecha al valor anterior o a la fecha actual
                 ObjInformacionPersonal.dtFechaNacimiento.Value = DateTime.Today;
@@ -173,7 +174,8 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                     ObjInformacionPersonal.txtAspectosPreocupantes.Text.Length < 5)
                 {
                     //Si los datos no fueron ingresados correctamente, mostramos un mensaje de error
-                    MessageBox.Show("Error al registrar paciente, verifique si todos los datos han sido ingresados correctamente o cumplen con la regla mínima de carácteres", "Registrar paciente", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    objNuevoPaciente.NotificacionNuevoPaciente.Show(objNuevoPaciente, "Verifique si todos los datos han sido ingresados correctamente o cumplen con la regla mínima de carácteres", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error);
+                    //MessageBox.Show("Error al registrar paciente, verifique si todos los datos han sido ingresados correctamente o cumplen con la regla mínima de carácteres", "Registrar paciente", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
@@ -205,24 +207,26 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                         bool Comprobar = ObjDAOInformacionPersonal.InsertarInformacionPaciente();
                         if (Comprobar == true)
                         {
-                            MessageBox.Show("Los datos han sido registrados exitosamente",
-                                        "Proceso completado",
-                                        MessageBoxButtons.OK,
-                                        MessageBoxIcon.Information);
+                            //MessageBox.Show("Los datos han sido registrados exitosamente",
+                            //            "Proceso completado",
+                            //            MessageBoxButtons.OK,
+                            //            MessageBoxIcon.Information);
+                            objNuevoPaciente.NotificacionNuevoPaciente.Show(objNuevoPaciente, "Los datos han sido registrados exitosamente", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Success);
                             LimpiarCampos();
                         }
                         else
                         {
-                            MessageBox.Show("Los datos no pudieron ser registrados",
-                                       "Proceso interrumpido",
-                                       MessageBoxButtons.OK,
-                                       MessageBoxIcon.Error);
+                            //MessageBox.Show("Los datos no pudieron ser registrados",
+                            //           "Proceso interrumpido",
+                            //           MessageBoxButtons.OK,
+                            //           MessageBoxIcon.Error);
+                            objNuevoPaciente.NotificacionNuevoPaciente.Show(objNuevoPaciente, "Los datos no pudieron ser registrados", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error);
                         }
                     }
                     else
                     {
-                        MessageBox.Show("El correo electrónico ingresado no posee una dirección de correo válida, verifique si contiene @ o dominio correcto", "Información Personal", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
+                        //MessageBox.Show("El correo electrónico ingresado no posee una dirección de correo válida, verifique si contiene @ o dominio correcto", "Información Personal", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        objNuevoPaciente.NotificacionNuevoPaciente.Show(objNuevoPaciente, "El correo electrónico ingresado no posee una dirección de correo válida, verifique si contiene @ o dominio correcto", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error);
                     }
                 }
             }

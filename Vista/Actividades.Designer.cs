@@ -1056,7 +1056,7 @@
             series1.Color = System.Drawing.Color.LightSeaGreen;
             series1.Legend = "Legend1";
             series1.MarkerBorderColor = System.Drawing.Color.Transparent;
-            series1.Name = "Total Citas";
+            series1.Name = "Citas Agendadas";
             series1.YValuesPerPoint = 3;
             this.GraficoCitas.Series.Add(series1);
             this.GraficoCitas.Size = new System.Drawing.Size(601, 211);
