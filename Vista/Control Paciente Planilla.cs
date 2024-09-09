@@ -26,7 +26,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Vista
                 lblPacienteId.Text = objDAOCitas.PacienteId.ToString();
 
                 lblNombrePaciente.Text = objDAOCitas.Nombre;
-                lblDUI.Text = objDAOCitas.Fecha.Date.ToString("dd/MM/yyyy");
+                lblDUI.Text = objDAOCitas.DocumentoPaciente;
             }
             catch (Exception ex)
             {
