@@ -45,7 +45,6 @@
             this.txtNuevaContrasena = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bunifuGradientPanel3 = new Bunifu.UI.WinForms.BunifuGradientPanel();
             this.btnActualizarContrasena = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblConfirmarContrasena = new Bunifu.UI.WinForms.BunifuLabel();
             this.lblNuevaContrasena = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuGradientPanel2 = new Bunifu.UI.WinForms.BunifuGradientPanel();
@@ -54,11 +53,16 @@
             this.lblRestablecer = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuShadowPanel1 = new Bunifu.UI.WinForms.BunifuShadowPanel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblRequisitos = new Bunifu.UI.WinForms.BunifuLabel();
+            this.lblEspecificaciones = new Bunifu.UI.WinForms.BunifuLabel();
+            this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.bunifuLabel2 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.bunifuLabel3 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.bunifuLabel4 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuGradientPanel1.SuspendLayout();
             this.bunifuShadowPanel2.SuspendLayout();
             this.bunifuShadowPanel3.SuspendLayout();
             this.bunifuGradientPanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.bunifuGradientPanel2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -70,10 +74,15 @@
             this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
             this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuGradientPanel1.BorderRadius = 1;
+            this.bunifuGradientPanel1.Controls.Add(this.bunifuLabel4);
+            this.bunifuGradientPanel1.Controls.Add(this.bunifuLabel3);
+            this.bunifuGradientPanel1.Controls.Add(this.bunifuLabel2);
+            this.bunifuGradientPanel1.Controls.Add(this.bunifuLabel1);
+            this.bunifuGradientPanel1.Controls.Add(this.lblEspecificaciones);
+            this.bunifuGradientPanel1.Controls.Add(this.lblRequisitos);
             this.bunifuGradientPanel1.Controls.Add(this.bunifuShadowPanel2);
             this.bunifuGradientPanel1.Controls.Add(this.bunifuShadowPanel3);
             this.bunifuGradientPanel1.Controls.Add(this.bunifuGradientPanel3);
-            this.bunifuGradientPanel1.Controls.Add(this.pictureBox1);
             this.bunifuGradientPanel1.Controls.Add(this.lblConfirmarContrasena);
             this.bunifuGradientPanel1.Controls.Add(this.lblNuevaContrasena);
             this.bunifuGradientPanel1.Controls.Add(this.bunifuGradientPanel2);
@@ -302,7 +311,7 @@
             this.bunifuGradientPanel3.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(181)))), ((int)(((byte)(166)))));
             this.bunifuGradientPanel3.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(164)))), ((int)(((byte)(171)))));
             this.bunifuGradientPanel3.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(164)))), ((int)(((byte)(171)))));
-            this.bunifuGradientPanel3.Location = new System.Drawing.Point(668, 372);
+            this.bunifuGradientPanel3.Location = new System.Drawing.Point(647, 372);
             this.bunifuGradientPanel3.Name = "bunifuGradientPanel3";
             this.bunifuGradientPanel3.Quality = 10;
             this.bunifuGradientPanel3.Size = new System.Drawing.Size(286, 60);
@@ -397,16 +406,6 @@
             this.btnActualizarContrasena.TextMarginLeft = 0;
             this.btnActualizarContrasena.TextPadding = new System.Windows.Forms.Padding(0);
             this.btnActualizarContrasena.UseDefaultRadiusAndThickness = true;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Empresa_laboral_ADNE___Proyecto_PTC.Properties.Resources.ADNE_logo_sin_fondo;
-            this.pictureBox1.Location = new System.Drawing.Point(627, 130);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(327, 223);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 8;
-            this.pictureBox1.TabStop = false;
             // 
             // lblConfirmarContrasena
             // 
@@ -524,6 +523,109 @@
             this.panel1.Size = new System.Drawing.Size(995, 461);
             this.panel1.TabIndex = 3;
             // 
+            // lblRequisitos
+            // 
+            this.lblRequisitos.AllowParentOverrides = false;
+            this.lblRequisitos.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblRequisitos.AutoEllipsis = false;
+            this.lblRequisitos.Cursor = System.Windows.Forms.Cursors.Default;
+            this.lblRequisitos.CursorType = System.Windows.Forms.Cursors.Default;
+            this.lblRequisitos.Font = new System.Drawing.Font("Century Gothic", 20.25F);
+            this.lblRequisitos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(86)))), ((int)(((byte)(100)))));
+            this.lblRequisitos.Location = new System.Drawing.Point(717, 125);
+            this.lblRequisitos.Name = "lblRequisitos";
+            this.lblRequisitos.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblRequisitos.Size = new System.Drawing.Size(135, 33);
+            this.lblRequisitos.TabIndex = 14;
+            this.lblRequisitos.Text = "Requisitos:";
+            this.lblRequisitos.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lblRequisitos.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // lblEspecificaciones
+            // 
+            this.lblEspecificaciones.AllowParentOverrides = false;
+            this.lblEspecificaciones.AutoEllipsis = false;
+            this.lblEspecificaciones.Cursor = System.Windows.Forms.Cursors.Default;
+            this.lblEspecificaciones.CursorType = System.Windows.Forms.Cursors.Default;
+            this.lblEspecificaciones.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEspecificaciones.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(86)))), ((int)(((byte)(100)))));
+            this.lblEspecificaciones.Location = new System.Drawing.Point(600, 180);
+            this.lblEspecificaciones.Name = "lblEspecificaciones";
+            this.lblEspecificaciones.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblEspecificaciones.Size = new System.Drawing.Size(356, 22);
+            this.lblEspecificaciones.TabIndex = 16;
+            this.lblEspecificaciones.Text = "- Debe contener carácteres especiales";
+            this.lblEspecificaciones.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lblEspecificaciones.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // bunifuLabel1
+            // 
+            this.bunifuLabel1.AllowParentOverrides = false;
+            this.bunifuLabel1.AutoEllipsis = false;
+            this.bunifuLabel1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel1.CursorType = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuLabel1.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.bunifuLabel1.Location = new System.Drawing.Point(729, 208);
+            this.bunifuLabel1.Name = "bunifuLabel1";
+            this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel1.Size = new System.Drawing.Size(95, 22);
+            this.bunifuLabel1.TabIndex = 17;
+            this.bunifuLabel1.Text = "(@, $, #, _)";
+            this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // bunifuLabel2
+            // 
+            this.bunifuLabel2.AllowParentOverrides = false;
+            this.bunifuLabel2.AutoEllipsis = false;
+            this.bunifuLabel2.Cursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel2.CursorType = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(86)))), ((int)(((byte)(100)))));
+            this.bunifuLabel2.Location = new System.Drawing.Point(600, 238);
+            this.bunifuLabel2.Name = "bunifuLabel2";
+            this.bunifuLabel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel2.Size = new System.Drawing.Size(340, 22);
+            this.bunifuLabel2.TabIndex = 18;
+            this.bunifuLabel2.Text = "- Debe contener un número (mínimo)";
+            this.bunifuLabel2.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel2.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // bunifuLabel3
+            // 
+            this.bunifuLabel3.AllowParentOverrides = false;
+            this.bunifuLabel3.AutoEllipsis = false;
+            this.bunifuLabel3.Cursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel3.CursorType = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(86)))), ((int)(((byte)(100)))));
+            this.bunifuLabel3.Location = new System.Drawing.Point(600, 263);
+            this.bunifuLabel3.Name = "bunifuLabel3";
+            this.bunifuLabel3.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel3.Size = new System.Drawing.Size(207, 22);
+            this.bunifuLabel3.TabIndex = 19;
+            this.bunifuLabel3.Text = "- Mínimo 12 carácteres";
+            this.bunifuLabel3.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel3.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // bunifuLabel4
+            // 
+            this.bunifuLabel4.AllowParentOverrides = false;
+            this.bunifuLabel4.AutoEllipsis = false;
+            this.bunifuLabel4.Cursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel4.CursorType = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel4.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(86)))), ((int)(((byte)(100)))));
+            this.bunifuLabel4.Location = new System.Drawing.Point(600, 298);
+            this.bunifuLabel4.Name = "bunifuLabel4";
+            this.bunifuLabel4.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel4.Size = new System.Drawing.Size(383, 22);
+            this.bunifuLabel4.TabIndex = 20;
+            this.bunifuLabel4.Text = "- Debe contener mayúsculas y minúsculas";
+            this.bunifuLabel4.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel4.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
             // ActualizarContraseñaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -542,7 +644,6 @@
             this.bunifuShadowPanel2.ResumeLayout(false);
             this.bunifuShadowPanel3.ResumeLayout(false);
             this.bunifuGradientPanel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.bunifuGradientPanel2.ResumeLayout(false);
             this.bunifuGradientPanel2.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
@@ -557,7 +658,6 @@
         private Bunifu.UI.WinForms.BunifuGradientPanel bunifuGradientPanel1;
         private Bunifu.UI.WinForms.BunifuGradientPanel bunifuGradientPanel3;
         public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnActualizarContrasena;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private Bunifu.UI.WinForms.BunifuLabel lblConfirmarContrasena;
         private Bunifu.UI.WinForms.BunifuLabel lblNuevaContrasena;
         private Bunifu.UI.WinForms.BunifuGradientPanel bunifuGradientPanel2;
@@ -570,5 +670,11 @@
         public Bunifu.UI.WinForms.BunifuTextBox txtNuevaContrasena;
         private Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel2;
         public Bunifu.UI.WinForms.BunifuTextBox txtConfirmarContrasena;
+        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
+        private Bunifu.UI.WinForms.BunifuLabel lblEspecificaciones;
+        private Bunifu.UI.WinForms.BunifuLabel lblRequisitos;
+        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel4;
+        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel3;
+        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel2;
     }
 }
