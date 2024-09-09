@@ -210,7 +210,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                                                 SqlCommand ObjConsultaSQLUsuario = new SqlCommand(consultaSQLUsuario, Conexion.Connection);
 
                                                 //Añadimos los valores
-                                                ObjConsultaSQLUsuario.Parameters.AddWithValue("@nombreUsuario", DUIProfesional);
+                                                ObjConsultaSQLUsuario.Parameters.AddWithValue("@DUI", DUIProfesional);
                                                 ObjConsultaSQLUsuario.Parameters.AddWithValue("@nombreUsuario", UsuarioSolicitante);
 
                                                 SqlDataReader ObjFilasEncontradas5 = ObjConsultaSQLUsuario.ExecuteReader();
