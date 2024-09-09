@@ -96,7 +96,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
 
             //Indicamos que, en primeras instancias, no deseamos mostrar el DUI del profesional, tampoco el DUI del paciente
             //Para una mejor referencia y estética, será mejor mostrar los nombres de los representantes
-            ObjVerCitasDetalladas.pnlDUIProfesional.Visible = false;
+            //ObjVerCitasDetalladas.pnlDUIProfesional.Visible = false;
             ObjVerCitasDetalladas.txtDUIProfesional.Visible = false;
             //ObjVerCitasDetalladas.pnlDUIPaciente.Visible = false;
             ObjVerCitasDetalladas.txtDUIPaciente.Visible = false;

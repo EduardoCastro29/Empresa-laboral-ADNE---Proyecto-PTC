@@ -215,7 +215,7 @@
             this.txtDomicilio.SelectionLength = 0;
             this.txtDomicilio.SelectionStart = 0;
             this.txtDomicilio.ShortcutsEnabled = false;
-            this.txtDomicilio.Size = new System.Drawing.Size(700, 42);
+            this.txtDomicilio.Size = new System.Drawing.Size(683, 42);
             this.txtDomicilio.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtDomicilio.TabIndex = 9;
             this.txtDomicilio.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -251,7 +251,7 @@
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(396, 321);
+            this.label8.Location = new System.Drawing.Point(387, 321);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(63, 23);
             this.label8.TabIndex = 142;
@@ -287,7 +287,7 @@
             this.txtEdad.IconRight = null;
             this.txtEdad.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtEdad.Lines = new string[0];
-            this.txtEdad.Location = new System.Drawing.Point(465, 312);
+            this.txtEdad.Location = new System.Drawing.Point(456, 312);
             this.txtEdad.MaxLength = 3;
             this.txtEdad.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtEdad.Modified = false;
@@ -350,7 +350,7 @@
             this.label9.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(411, 164);
+            this.label9.Location = new System.Drawing.Point(402, 164);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(96, 23);
             this.label9.TabIndex = 144;
@@ -433,7 +433,7 @@
             this.txtComposicionFamiliar.SelectionLength = 0;
             this.txtComposicionFamiliar.SelectionStart = 0;
             this.txtComposicionFamiliar.ShortcutsEnabled = false;
-            this.txtComposicionFamiliar.Size = new System.Drawing.Size(700, 42);
+            this.txtComposicionFamiliar.Size = new System.Drawing.Size(683, 42);
             this.txtComposicionFamiliar.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtComposicionFamiliar.TabIndex = 10;
             this.txtComposicionFamiliar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -521,7 +521,7 @@
             this.txtMotivoIntervencion.SelectionLength = 0;
             this.txtMotivoIntervencion.SelectionStart = 0;
             this.txtMotivoIntervencion.ShortcutsEnabled = false;
-            this.txtMotivoIntervencion.Size = new System.Drawing.Size(700, 95);
+            this.txtMotivoIntervencion.Size = new System.Drawing.Size(683, 95);
             this.txtMotivoIntervencion.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtMotivoIntervencion.TabIndex = 11;
             this.txtMotivoIntervencion.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -609,7 +609,7 @@
             this.txtAntecedentes.SelectionLength = 0;
             this.txtAntecedentes.SelectionStart = 0;
             this.txtAntecedentes.ShortcutsEnabled = false;
-            this.txtAntecedentes.Size = new System.Drawing.Size(702, 95);
+            this.txtAntecedentes.Size = new System.Drawing.Size(685, 95);
             this.txtAntecedentes.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtAntecedentes.TabIndex = 12;
             this.txtAntecedentes.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -697,7 +697,7 @@
             this.txtDescripcion.SelectionLength = 0;
             this.txtDescripcion.SelectionStart = 0;
             this.txtDescripcion.ShortcutsEnabled = false;
-            this.txtDescripcion.Size = new System.Drawing.Size(702, 95);
+            this.txtDescripcion.Size = new System.Drawing.Size(685, 95);
             this.txtDescripcion.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtDescripcion.TabIndex = 13;
             this.txtDescripcion.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -785,7 +785,7 @@
             this.txtAspectosPreocupantes.SelectionLength = 0;
             this.txtAspectosPreocupantes.SelectionStart = 0;
             this.txtAspectosPreocupantes.ShortcutsEnabled = false;
-            this.txtAspectosPreocupantes.Size = new System.Drawing.Size(702, 95);
+            this.txtAspectosPreocupantes.Size = new System.Drawing.Size(685, 95);
             this.txtAspectosPreocupantes.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtAspectosPreocupantes.TabIndex = 14;
             this.txtAspectosPreocupantes.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -1044,7 +1044,7 @@
             this.txtProfesion.IconRight = null;
             this.txtProfesion.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtProfesion.Lines = new string[0];
-            this.txtProfesion.Location = new System.Drawing.Point(519, 154);
+            this.txtProfesion.Location = new System.Drawing.Point(510, 154);
             this.txtProfesion.MaxLength = 100;
             this.txtProfesion.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtProfesion.Modified = false;
@@ -1143,7 +1143,7 @@
             this.label17.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(413, 24);
+            this.label17.Location = new System.Drawing.Point(404, 24);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(225, 23);
             this.label17.TabIndex = 153;
@@ -1179,7 +1179,7 @@
             this.txtApellidoPaciente.IconRight = null;
             this.txtApellidoPaciente.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtApellidoPaciente.Lines = new string[0];
-            this.txtApellidoPaciente.Location = new System.Drawing.Point(415, 50);
+            this.txtApellidoPaciente.Location = new System.Drawing.Point(406, 50);
             this.txtApellidoPaciente.MaxLength = 65;
             this.txtApellidoPaciente.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtApellidoPaciente.Modified = false;
@@ -1256,7 +1256,7 @@
             this.txtNacionalidad.IconRight = null;
             this.txtNacionalidad.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtNacionalidad.Lines = new string[0];
-            this.txtNacionalidad.Location = new System.Drawing.Point(177, 98);
+            this.txtNacionalidad.Location = new System.Drawing.Point(168, 98);
             this.txtNacionalidad.MaxLength = 125;
             this.txtNacionalidad.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtNacionalidad.Modified = false;
@@ -1308,7 +1308,7 @@
             this.label18.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(413, 211);
+            this.label18.Location = new System.Drawing.Point(404, 211);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(200, 23);
             this.label18.TabIndex = 155;
@@ -1344,7 +1344,7 @@
             this.txtCorreoElectronico.IconRight = null;
             this.txtCorreoElectronico.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtCorreoElectronico.Lines = new string[0];
-            this.txtCorreoElectronico.Location = new System.Drawing.Point(415, 239);
+            this.txtCorreoElectronico.Location = new System.Drawing.Point(406, 239);
             this.txtCorreoElectronico.MaxLength = 125;
             this.txtCorreoElectronico.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtCorreoElectronico.Modified = false;
@@ -1541,7 +1541,7 @@
             this.txtTelefono1.IconRight = null;
             this.txtTelefono1.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtTelefono1.Lines = new string[0];
-            this.txtTelefono1.Location = new System.Drawing.Point(19, 241);
+            this.txtTelefono1.Location = new System.Drawing.Point(10, 241);
             this.txtTelefono1.MaxLength = 12;
             this.txtTelefono1.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtTelefono1.Modified = false;
@@ -1593,7 +1593,7 @@
             this.lblDocumento.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblDocumento.AutoSize = true;
             this.lblDocumento.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDocumento.Location = new System.Drawing.Point(411, 108);
+            this.lblDocumento.Location = new System.Drawing.Point(402, 108);
             this.lblDocumento.Name = "lblDocumento";
             this.lblDocumento.Size = new System.Drawing.Size(127, 23);
             this.lblDocumento.TabIndex = 140;
@@ -1629,7 +1629,7 @@
             this.txtDocumentoPresentad0.IconRight = null;
             this.txtDocumentoPresentad0.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtDocumentoPresentad0.Lines = new string[0];
-            this.txtDocumentoPresentad0.Location = new System.Drawing.Point(544, 98);
+            this.txtDocumentoPresentad0.Location = new System.Drawing.Point(535, 98);
             this.txtDocumentoPresentad0.MaxLength = 11;
             this.txtDocumentoPresentad0.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtDocumentoPresentad0.Modified = false;

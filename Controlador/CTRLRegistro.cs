@@ -42,7 +42,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             //Validaciones en los textbox 
             ObjRegistro.txtNombre.KeyPress += new KeyPressEventHandler(ValidarCampoLetra);
             ObjRegistro.txtApellido.KeyPress += new KeyPressEventHandler(ValidarCampoLetra);
-            ObjRegistro.txtDui.KeyPress += new KeyPressEventHandler(ValidarCampoNumero);
+            ObjRegistro.txtDui.KeyPress += new KeyPressEventHandler(ValidarCampoDocumento);
             ObjRegistro.txtTelefono.KeyPress += new KeyPressEventHandler(ValidarCampoNumero);
             ObjRegistro.txtUsuario.KeyPress += new KeyPressEventHandler(ValidarCampoUsuario);
             ObjRegistro.txtCorreo.KeyPress += new KeyPressEventHandler(ValidarCampoCorreo);
@@ -113,6 +113,27 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             //Indicamos que se creará el evento e.Char con todos los valores antes proporcionados, como un EventHandler
             e.Handled = true;
         }
+        private void ValidarCampoDocumento(object sender, KeyPressEventArgs e)
+        {
+            //La propiedad char.IsControl permite controles como BackSpace, Inicio, Fin, etc.
+            if (char.IsControl(e.KeyChar))
+            {
+                //Retornamos los valores e.KeyChar
+                return;
+            }
+            //Declaramos la variable de tipo char que recibirá los parámetros de las letras registradas por las variables e.KeyChar creadas anteriormente
+            char ch = e.KeyChar;
+
+            if ((ch >= '0' && ch <= '9') ||
+                (ch >= 'A' && ch <= 'Z') ||
+                (ch >= 'a' && ch <= 'z') ||
+                (ch == ' ') ||
+                (ch == '-'))
+            {
+                return;
+            }
+            e.Handled = true;
+        }
         private void ValidarCampoNumero(object sender, KeyPressEventArgs e)
         {
             //La propiedad char.IsControl permite controles como BackSpace, Inicio, Fin, etc.
@@ -121,8 +142,13 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                 //Retornamos los valores e.KeyChar
                 return;
             }
+            //Declaramos la variable de tipo char que recibirá los parámetros de las letras registradas por las variables e.KeyChar creadas anteriormente
+            char ch = e.KeyChar;
 
-            if (char.IsDigit(e.KeyChar))
+            if ((ch >= '0' && ch <= '9') ||
+                (ch == ' ') ||
+                (ch == '+') ||
+                (ch == '-'))
             {
                 return;
             }
@@ -154,7 +180,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                     ObjMetodosComunes.ValidarContrasena(ObjRegistro.txtContrasena.Text.Trim()) == false ||
                     ObjRegistro.txtCorreo.Text.Length < 10 ||
                     ObjRegistro.txtApellido.Text.Length < 2 ||
-                    ObjRegistro.txtDui.Text.Length < 10 ||
+                    ObjRegistro.txtDui.Text.Length < 9 ||
                     ObjRegistro.txtTelefono.Text.Length < 9 ||
                     ObjRegistro.picProfesional.Image == Properties.Resources.ProfesionalPic)
                 {
