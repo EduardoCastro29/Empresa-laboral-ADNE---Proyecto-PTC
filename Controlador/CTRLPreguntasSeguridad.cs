@@ -111,7 +111,8 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                 string.IsNullOrWhiteSpace(ObjPreguntasSForm.txtTerceraPregunta.Text) ||
                 string.IsNullOrWhiteSpace(ObjPreguntasSForm.txtCuartaPregunta.Text))
             {
-                MessageBox.Show("Debe de ingresar todas las respuestas de preguntas correspondientes", "Preguntas de Seguridad", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                ObjPreguntasSForm.NotificacionPreguntas.Show(ObjPreguntasSForm, "Debe de ingresar todas las respuestas de preguntas correspondientes", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error);
+                //MessageBox.Show("Debe de ingresar todas las respuestas de preguntas correspondientes", "Preguntas de Seguridad", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
@@ -134,11 +135,13 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
 
                 if (ObjRegistrarPreguntasS.RegistrarPreguntasSeguridad() == false)
                 {
-                    MessageBox.Show("Las preguntas no se han podido ingresar, verifique si existe algún dato faltante", "Preguntas de Seguridad", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    ObjPreguntasSForm.NotificacionPreguntas.Show(ObjPreguntasSForm, "Las preguntas no se han podido ingresar, verifique si existe algún dato faltante", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error);
+                    //MessageBox.Show("Las preguntas no se han podido ingresar, verifique si existe algún dato faltante", "Preguntas de Seguridad", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
-                    MessageBox.Show("Las preguntas han sido ingresadas con éxito", "Preguntas de Seguridad", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    ObjPreguntasSForm.NotificacionPreguntas.Show(ObjPreguntasSForm, "Las preguntas han sido ingresadas con éxito", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Success);
+                    //MessageBox.Show("Las preguntas han sido ingresadas con éxito", "Preguntas de Seguridad", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     ObjPreguntasSForm.Hide();
                 }
             }
@@ -167,11 +170,13 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
 
             if (ObjVerificarPreguntas.VerificarPreguntasSeguridad() == false)
             {
-                MessageBox.Show("Verifique si las preguntas seleccionadas con las respuestas han sido proporcionadas por el profesional correspondiente", "Preguntas de Seguridad", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ObjPreguntasSForm.NotificacionPreguntas.Show(ObjPreguntasSForm, "Verifique si las preguntas seleccionadas con las respuestas han sido proporcionadas por el profesional correspondiente", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Warning);
+                //MessageBox.Show("Verifique si las preguntas seleccionadas con las respuestas han sido proporcionadas por el profesional correspondiente", "Preguntas de Seguridad", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
-                MessageBox.Show("Las respuestas han sido verificadas exitosamente", "Preguntas de Seguridad", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                ObjPreguntasSForm.NotificacionPreguntas.Show(ObjPreguntasSForm, "Las respuestas han sido verificadas exitosamente", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Success);
+                //MessageBox.Show("Las respuestas han sido verificadas exitosamente", "Preguntas de Seguridad", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 ActualizarContraseñaForm ObjAbrirFormularioAC = new ActualizarContraseñaForm();
                 ObjAbrirFormularioAC.txtUsuarioID.Text = ObjPreguntasSForm.txtUsuario.Text;
                 ObjPreguntasSForm.Hide();

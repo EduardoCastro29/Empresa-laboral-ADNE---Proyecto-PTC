@@ -33,7 +33,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             ObjPrimerUsoSistema.dpCreacionEmpresa.ValueChanged += new EventHandler(ComprobarFechaActual);
             ObjPrimerUsoSistema.txtCorreoElectronico.KeyPress += new KeyPressEventHandler(ValidarCampoCorreo);
             ObjPrimerUsoSistema.txtDireccion.KeyPress += new KeyPressEventHandler(ValidarCampoTextBox);
-            ObjPrimerUsoSistema.txtNombreEmpresa.KeyPress += new KeyPressEventHandler(ValidarCampoTextBox);
+            ObjPrimerUsoSistema.txtNombreEmpresa.KeyPress += new KeyPressEventHandler(ValidarCampoNombre);
         }
         #region Validaciones de Campos
         private void ComprobarFechaActual(object sender, EventArgs e)
@@ -82,10 +82,39 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                 return;
             }
             //Declaramos la variable de tipo char que recibirá los parámetros de las letras registradas por las variables e.KeyChar creadas anteriormente
-            if (char.IsLetter(e.KeyChar) ||
-                e.KeyChar == ' ' ||
-                e.KeyChar == ',' ||
-                e.KeyChar == '.')
+            char ch = e.KeyChar;
+
+            if ((ch >= '0' && ch <= '9') ||
+                (ch >= 'A' && ch <= 'Z') ||
+                (ch >= 'a' && ch <= 'z') ||
+                ch == ' ' ||
+                ch == ',' ||
+                ch == '.' ||
+                ch == '#')
+            {
+                //Retornamos los valores e.KeyChar
+                return;
+            }
+            //Indicamos que se creará el evento e.Char con todos los valores antes proporcionados, como un EventHandler
+            e.Handled = true;
+        }
+        private void ValidarCampoNombre(object sender, KeyPressEventArgs e)
+        {
+            //La propiedad char.IsControl permite controles como BackSpace, Inicio, Fin, etc.
+            if (char.IsControl(e.KeyChar))
+            {
+                //Retornamos los valores e.KeyChar
+                return;
+            }
+            //Declaramos la variable de tipo char que recibirá los parámetros de las letras registradas por las variables e.KeyChar creadas anteriormente
+            char ch = e.KeyChar;
+
+            if ((ch >= 'A' && ch <= 'Z') ||
+                (ch >= 'a' && ch <= 'z') ||
+                ch == ' ' ||
+                ch == ',' ||
+                ch == '.' ||
+                ch == '#')
             {
                 //Retornamos los valores e.KeyChar
                 return;

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PreguntasdeSeguridadForm));
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
@@ -56,6 +57,8 @@
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties24 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             this.pnlGradiente = new Bunifu.UI.WinForms.BunifuGradientPanel();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.txtDUIProfesional = new System.Windows.Forms.ToolStripTextBox();
             this.pnlSombraFondo = new Bunifu.UI.WinForms.BunifuShadowPanel();
             this.lblIngreseCredenciales = new Bunifu.UI.WinForms.BunifuLabel();
             this.lblIndicacion = new Bunifu.UI.WinForms.BunifuLabel();
@@ -75,13 +78,12 @@
             this.pnlSombraBoton = new Bunifu.UI.WinForms.BunifuShadowPanel();
             this.btnRegistrar = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.lblTitulo = new Bunifu.UI.WinForms.BunifuLabel();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.txtDUIProfesional = new System.Windows.Forms.ToolStripTextBox();
+            this.NotificacionPreguntas = new Bunifu.UI.WinForms.BunifuSnackbar(this.components);
             this.pnlGradiente.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.pnlSombraFondo.SuspendLayout();
             this.pnlSombraBtn.SuspendLayout();
             this.pnlSombraBoton.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlGradiente
@@ -103,6 +105,24 @@
             this.pnlGradiente.Quality = 10;
             this.pnlGradiente.Size = new System.Drawing.Size(715, 874);
             this.pnlGradiente.TabIndex = 1;
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.txtDUIProfesional});
+            this.menuStrip1.Location = new System.Drawing.Point(30, 30);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(655, 27);
+            this.menuStrip1.TabIndex = 15;
+            this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.Visible = false;
+            // 
+            // txtDUIProfesional
+            // 
+            this.txtDUIProfesional.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtDUIProfesional.Name = "txtDUIProfesional";
+            this.txtDUIProfesional.Size = new System.Drawing.Size(116, 23);
             // 
             // pnlSombraFondo
             // 
@@ -152,7 +172,7 @@
             this.lblIngreseCredenciales.Location = new System.Drawing.Point(51, 126);
             this.lblIngreseCredenciales.Name = "lblIngreseCredenciales";
             this.lblIngreseCredenciales.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblIngreseCredenciales.Size = new System.Drawing.Size(562, 39);
+            this.lblIngreseCredenciales.Size = new System.Drawing.Size(320, 23);
             this.lblIngreseCredenciales.TabIndex = 19;
             this.lblIngreseCredenciales.Text = "Ingrese las siguientes credenciales";
             this.lblIngreseCredenciales.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -168,7 +188,7 @@
             this.lblIndicacion.Location = new System.Drawing.Point(51, 241);
             this.lblIndicacion.Name = "lblIndicacion";
             this.lblIndicacion.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblIndicacion.Size = new System.Drawing.Size(596, 39);
+            this.lblIndicacion.Size = new System.Drawing.Size(341, 23);
             this.lblIndicacion.TabIndex = 18;
             this.lblIndicacion.Text = "Seleccione las preguntas y responda";
             this.lblIndicacion.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -1075,23 +1095,75 @@
             this.lblTitulo.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lblTitulo.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
-            // menuStrip1
+            // NotificacionPreguntas
             // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.txtDUIProfesional});
-            this.menuStrip1.Location = new System.Drawing.Point(30, 30);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(655, 27);
-            this.menuStrip1.TabIndex = 15;
-            this.menuStrip1.Text = "menuStrip1";
-            this.menuStrip1.Visible = false;
-            // 
-            // txtDUIProfesional
-            // 
-            this.txtDUIProfesional.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtDUIProfesional.Name = "txtDUIProfesional";
-            this.txtDUIProfesional.Size = new System.Drawing.Size(116, 23);
+            this.NotificacionPreguntas.AllowDragging = false;
+            this.NotificacionPreguntas.AllowMultipleViews = true;
+            this.NotificacionPreguntas.ClickToClose = true;
+            this.NotificacionPreguntas.DoubleClickToClose = true;
+            this.NotificacionPreguntas.DurationAfterIdle = 3000;
+            this.NotificacionPreguntas.ErrorOptions.ActionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.NotificacionPreguntas.ErrorOptions.ActionBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.NotificacionPreguntas.ErrorOptions.ActionBorderRadius = 1;
+            this.NotificacionPreguntas.ErrorOptions.ActionFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.NotificacionPreguntas.ErrorOptions.ActionForeColor = System.Drawing.Color.Black;
+            this.NotificacionPreguntas.ErrorOptions.BackColor = System.Drawing.Color.White;
+            this.NotificacionPreguntas.ErrorOptions.BorderColor = System.Drawing.Color.White;
+            this.NotificacionPreguntas.ErrorOptions.CloseIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(199)))));
+            this.NotificacionPreguntas.ErrorOptions.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NotificacionPreguntas.ErrorOptions.ForeColor = System.Drawing.Color.Black;
+            this.NotificacionPreguntas.ErrorOptions.Icon = ((System.Drawing.Image)(resources.GetObject("resource.Icon")));
+            this.NotificacionPreguntas.ErrorOptions.IconLeftMargin = 12;
+            this.NotificacionPreguntas.FadeCloseIcon = false;
+            this.NotificacionPreguntas.Host = Bunifu.UI.WinForms.BunifuSnackbar.Hosts.FormOwner;
+            this.NotificacionPreguntas.InformationOptions.ActionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.NotificacionPreguntas.InformationOptions.ActionBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.NotificacionPreguntas.InformationOptions.ActionBorderRadius = 1;
+            this.NotificacionPreguntas.InformationOptions.ActionFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.NotificacionPreguntas.InformationOptions.ActionForeColor = System.Drawing.Color.Black;
+            this.NotificacionPreguntas.InformationOptions.BackColor = System.Drawing.Color.White;
+            this.NotificacionPreguntas.InformationOptions.BorderColor = System.Drawing.Color.White;
+            this.NotificacionPreguntas.InformationOptions.CloseIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(213)))), ((int)(((byte)(255)))));
+            this.NotificacionPreguntas.InformationOptions.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.NotificacionPreguntas.InformationOptions.ForeColor = System.Drawing.Color.Black;
+            this.NotificacionPreguntas.InformationOptions.Icon = ((System.Drawing.Image)(resources.GetObject("resource.Icon1")));
+            this.NotificacionPreguntas.InformationOptions.IconLeftMargin = 12;
+            this.NotificacionPreguntas.Margin = 10;
+            this.NotificacionPreguntas.MaximumSize = new System.Drawing.Size(0, 0);
+            this.NotificacionPreguntas.MaximumViews = 7;
+            this.NotificacionPreguntas.MessageRightMargin = 15;
+            this.NotificacionPreguntas.MessageTopMargin = 0;
+            this.NotificacionPreguntas.MinimumSize = new System.Drawing.Size(0, 0);
+            this.NotificacionPreguntas.ShowBorders = false;
+            this.NotificacionPreguntas.ShowCloseIcon = false;
+            this.NotificacionPreguntas.ShowIcon = true;
+            this.NotificacionPreguntas.ShowShadows = true;
+            this.NotificacionPreguntas.SuccessOptions.ActionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.NotificacionPreguntas.SuccessOptions.ActionBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.NotificacionPreguntas.SuccessOptions.ActionBorderRadius = 1;
+            this.NotificacionPreguntas.SuccessOptions.ActionFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.NotificacionPreguntas.SuccessOptions.ActionForeColor = System.Drawing.Color.Black;
+            this.NotificacionPreguntas.SuccessOptions.BackColor = System.Drawing.Color.White;
+            this.NotificacionPreguntas.SuccessOptions.BorderColor = System.Drawing.Color.White;
+            this.NotificacionPreguntas.SuccessOptions.CloseIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(255)))), ((int)(((byte)(237)))));
+            this.NotificacionPreguntas.SuccessOptions.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NotificacionPreguntas.SuccessOptions.ForeColor = System.Drawing.Color.Black;
+            this.NotificacionPreguntas.SuccessOptions.Icon = ((System.Drawing.Image)(resources.GetObject("resource.Icon2")));
+            this.NotificacionPreguntas.SuccessOptions.IconLeftMargin = 12;
+            this.NotificacionPreguntas.ViewsMargin = 7;
+            this.NotificacionPreguntas.WarningOptions.ActionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.NotificacionPreguntas.WarningOptions.ActionBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.NotificacionPreguntas.WarningOptions.ActionBorderRadius = 1;
+            this.NotificacionPreguntas.WarningOptions.ActionFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.NotificacionPreguntas.WarningOptions.ActionForeColor = System.Drawing.Color.Black;
+            this.NotificacionPreguntas.WarningOptions.BackColor = System.Drawing.Color.White;
+            this.NotificacionPreguntas.WarningOptions.BorderColor = System.Drawing.Color.White;
+            this.NotificacionPreguntas.WarningOptions.CloseIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(229)))), ((int)(((byte)(143)))));
+            this.NotificacionPreguntas.WarningOptions.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NotificacionPreguntas.WarningOptions.ForeColor = System.Drawing.Color.Black;
+            this.NotificacionPreguntas.WarningOptions.Icon = ((System.Drawing.Image)(resources.GetObject("resource.Icon3")));
+            this.NotificacionPreguntas.WarningOptions.IconLeftMargin = 12;
+            this.NotificacionPreguntas.ZoomCloseIcon = true;
             // 
             // PreguntasdeSeguridadForm
             // 
@@ -1107,12 +1179,12 @@
             this.Text = "Preguntas de Seguridad";
             this.pnlGradiente.ResumeLayout(false);
             this.pnlGradiente.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.pnlSombraFondo.ResumeLayout(false);
             this.pnlSombraFondo.PerformLayout();
             this.pnlSombraBtn.ResumeLayout(false);
             this.pnlSombraBoton.ResumeLayout(false);
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1141,5 +1213,6 @@
         public Bunifu.UI.WinForms.BunifuLabel lblIngreseCredenciales;
         private System.Windows.Forms.MenuStrip menuStrip1;
         public System.Windows.Forms.ToolStripTextBox txtDUIProfesional;
+        public Bunifu.UI.WinForms.BunifuSnackbar NotificacionPreguntas;
     }
 }
