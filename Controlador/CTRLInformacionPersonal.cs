@@ -141,23 +141,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             //Indicamos que se creará el evento e.Char con todos los valores antes proporcionados, como un EventHandler
             e.Handled = true;
         }
-        private void ValidarCampoNumero(object sender, KeyPressEventArgs e)
-        {
-            //La propiedad char.IsControl permite controles como BackSpace, Inicio, Fin, etc.
-            if (char.IsControl(e.KeyChar))
-            {
-                //Retornamos los valores e.KeyChar
-                return;
-            }
-            //Declaramos la variable de tipo char que recibirá los parámetros de las letras registradas por las variables e.KeyChar creadas anteriormente
-            char ch = e.KeyChar;
 
-            if ((ch >= '0' && ch <= '9') || ch == '+' || ch == '_' || ch == ' ')
-            {
-                return;
-            }
-            e.Handled = true;
-        }
         private void ValidarCampoDocumento(object sender, KeyPressEventArgs e)
         {
             //La propiedad char.IsControl permite controles como BackSpace, Inicio, Fin, etc.
@@ -173,7 +157,28 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                 (ch >= 'A' && ch <= 'Z') ||
                 (ch >= 'a' && ch <= 'z') ||
                 (ch == ' ') ||
-                (ch == '_'))
+                (ch == '-'))
+            {
+                return;
+            }
+            e.Handled = true;
+        }
+        private void ValidarCampoNumero(object sender, KeyPressEventArgs e)
+        {
+            //La propiedad char.IsControl permite controles como BackSpace, Inicio, Fin, etc.
+            if (char.IsControl(e.KeyChar))
+            {
+                //Retornamos los valores e.KeyChar
+                return;
+            }
+            //Declaramos la variable de tipo char que recibirá los parámetros de las letras registradas por las variables e.KeyChar creadas anteriormente
+            char ch = e.KeyChar;
+
+            if ((ch >= '0' && ch <= '9') ||
+
+                (ch == ' ') ||
+                 (ch == '+') ||
+                (ch == '-'))
             {
                 return;
             }
@@ -268,7 +273,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
         #region Limpiar campos después de cada realización en el Formulario
         private void LimpiarCampos()
         {
-            ObjInformacionPersonal.dtFechaNacimiento.Value = DateTime.Now;
+            ObjInformacionPersonal.dtFechaNacimiento.Value = DateTime.Today.AddYears(-2); ;
             ObjInformacionPersonal.txtNacionalidad.Clear();
             ObjInformacionPersonal.txtDocumentoPresentado.Clear();
             ObjInformacionPersonal.cmbGeneroId.SelectedIndex = -1;
