@@ -81,5 +81,44 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                 Conexion.Connection.Close();
             }
         }
+        public DataTable BuscarCitaC(string BuscarCita)
+        {
+            try
+            {
+                //Inicializamos la conexión
+                Conexion.Connection = Conectar();
+
+                //Declaramos la consulta
+                string consultaSQL = "SELECT * FROM vistaCitasAgendadas WHERE [Fecha de la Cita] LIKE @FechaCita OR [Nombre del Paciente] LIKE @NombrePaciente OR [Apellido del Paciente] LIKE @ApellidoPaciente OR [Profesional Encargado] LIKE @ProfesionalEncargado";
+
+                //Ejecutamos el comando
+                SqlCommand ObjCommandSQL = new SqlCommand(consultaSQL, Conexion.Connection);
+
+                ObjCommandSQL.Parameters.AddWithValue("@FechaCita", "%" + BuscarCita + "%");
+                ObjCommandSQL.Parameters.AddWithValue("@NombrePaciente", "%" + BuscarCita + "%");
+                ObjCommandSQL.Parameters.AddWithValue("@ApellidoPaciente", "%" + BuscarCita + "%");
+                ObjCommandSQL.Parameters.AddWithValue("@ProfesionalEncargado", "%" + BuscarCita + "%");
+
+                //Declaramos el adaptador SQL
+                SqlDataAdapter ObjAdaptador = new SqlDataAdapter(ObjCommandSQL);
+                //Declaramos el DataTable
+                DataTable ObjDT = new DataTable();
+                //Llenamos el DataTable
+                ObjAdaptador.Fill(ObjDT);
+                //Retornamos el DT
+                return ObjDT;
+            }
+            catch (Exception)
+            {
+                //Imprimimos un mensaje de error junto con el retorno nulo
+                MessageBox.Show("Ha ocurrido un error, ERR-005-3", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+            finally
+            {
+                //Cerramos la conexión
+                Conexion.Connection.Close();
+            }
+        }
     }
 }

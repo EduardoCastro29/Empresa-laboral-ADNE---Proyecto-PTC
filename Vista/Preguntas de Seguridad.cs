@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Empresa_laboral_ADNE___Proyecto_PTC.Controlador;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -28,6 +29,8 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Vista
             InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.None;
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 35, 35));
+
+            CTRLPreguntasSeguridad ControladorPreguntasS = new CTRLPreguntasSeguridad(this);
         }
     }
 }

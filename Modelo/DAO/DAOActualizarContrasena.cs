@@ -21,32 +21,64 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
         readonly string UsuarioCorreoSolicitud = CTRLDireccionGmail.CorreoUsuarioSLC;
         public bool ActualizarContrasenaCorreo()
         {
-            try
+            if (string.IsNullOrWhiteSpace(UsuarioCorreoSolicitud))
             {
-                Conexion.Connection = Conectar();
+                try
+                {
+                    Conexion.Connection = Conectar();
 
-                string comandoSQL = "UPDATE Usuario SET contraseña = @contraseña WHERE nombreUsuario = @nombreUsuario OR correoElectronico = @correoElectronico";
+                    string comandoSQL = "UPDATE Usuario SET contraseña = @contraseña WHERE nombreUsuario = @nombreUsuario";
 
-                SqlCommand ObjComandoSQLServer = new SqlCommand(comandoSQL, Conexion.Connection);
+                    SqlCommand ObjComandoSQLServer = new SqlCommand(comandoSQL, Conexion.Connection);
 
-                ObjComandoSQLServer.Parameters.AddWithValue("@contraseña", Contrasena);
-                ObjComandoSQLServer.Parameters.AddWithValue("@nombreUsuario", UsuarioCorreoSolicitud);
-                ObjComandoSQLServer.Parameters.AddWithValue("@correoElectronico", UsuarioCorreoSolicitud);
+                    ObjComandoSQLServer.Parameters.AddWithValue("@contraseña", Contrasena);
+                    ObjComandoSQLServer.Parameters.AddWithValue("@nombreUsuario", UsuarioSolicitantePS);
 
-                ObjComandoSQLServer.ExecuteNonQuery();
+                    ObjComandoSQLServer.ExecuteNonQuery();
 
-                if (ObjComandoSQLServer.ExecuteNonQuery() > 0)
-                    return true;
-                else return false;
+                    if (ObjComandoSQLServer.ExecuteNonQuery() > 0)
+                        return true;
+                    else return false;
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Ha ocurrido un error, ERR-003-1", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                }
+                finally
+                {
+                    Conexion.Connection.Close();
+                }
             }
-            catch (Exception)
+            else
             {
-                MessageBox.Show("Ha ocurrido un error, ERR-003-1", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
-            }
-            finally
-            {
-                Conexion.Connection.Close();
+                try
+                {
+                    Conexion.Connection = Conectar();
+
+                    string comandoSQL = "UPDATE Usuario SET contraseña = @contraseña WHERE nombreUsuario = @nombreUsuario OR correoElectronico = @correoElectronico";
+
+                    SqlCommand ObjComandoSQLServer = new SqlCommand(comandoSQL, Conexion.Connection);
+
+                    ObjComandoSQLServer.Parameters.AddWithValue("@contraseña", Contrasena);
+                    ObjComandoSQLServer.Parameters.AddWithValue("@nombreUsuario", UsuarioCorreoSolicitud);
+                    ObjComandoSQLServer.Parameters.AddWithValue("@correoElectronico", UsuarioCorreoSolicitud);
+
+                    ObjComandoSQLServer.ExecuteNonQuery();
+
+                    if (ObjComandoSQLServer.ExecuteNonQuery() > 0)
+                        return true;
+                    else return false;
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Ha ocurrido un error, ERR-003-1", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                }
+                finally
+                {
+                    Conexion.Connection.Close();
+                }
             }
         }
     }

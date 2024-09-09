@@ -18,11 +18,10 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
 {
     internal class CTRLInformacionPersonal
     {
-        NuevoPacienteForm objNuevoPaciente = new NuevoPacienteForm();
+        readonly NuevoPacienteForm objNuevoPaciente = new NuevoPacienteForm();
         readonly InformaciónPersonalForm ObjInformacionPersonal;
         //Empezamos la encapsulación de la clase Controlador Login
         //Esta tendrá como parámetros el formulario Informacion Personal haciendo referencia a la carpeta Vista
-
         public CTRLInformacionPersonal(InformaciónPersonalForm vista)
         {
             //Enlazando el objeto con la Vista dentro del constructor
@@ -41,7 +40,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             ObjInformacionPersonal.txtAntecedentes.KeyPress += new KeyPressEventHandler(ValidarCampoTextBox);
             ObjInformacionPersonal.txtDescripcion.KeyPress += new KeyPressEventHandler(ValidarCampoTextBox);
             ObjInformacionPersonal.txtAspectosPreocupantes.KeyPress += new KeyPressEventHandler(ValidarCampoTextBox);
-            ObjInformacionPersonal.txtDocumentoPresentado.KeyPress += new KeyPressEventHandler(ValidarCampoNumero);
+            ObjInformacionPersonal.txtDocumentoPresentado.KeyPress += new KeyPressEventHandler(ValidarCampoDocumento);
             ObjInformacionPersonal.txtTelefono1.KeyPress += new KeyPressEventHandler(ValidarCampoNumero);
             ObjInformacionPersonal.txtCorreoElectronico.KeyPress += new KeyPressEventHandler(ValidarCampoCorreo);
         }
@@ -144,7 +143,37 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
         }
         private void ValidarCampoNumero(object sender, KeyPressEventArgs e)
         {
-            if (char.IsDigit(e.KeyChar))
+            //La propiedad char.IsControl permite controles como BackSpace, Inicio, Fin, etc.
+            if (char.IsControl(e.KeyChar))
+            {
+                //Retornamos los valores e.KeyChar
+                return;
+            }
+            //Declaramos la variable de tipo char que recibirá los parámetros de las letras registradas por las variables e.KeyChar creadas anteriormente
+            char ch = e.KeyChar;
+
+            if ((ch >= '0' && ch <= '9') || ch == '+' || ch == '_' || ch == ' ')
+            {
+                return;
+            }
+            e.Handled = true;
+        }
+        private void ValidarCampoDocumento(object sender, KeyPressEventArgs e)
+        {
+            //La propiedad char.IsControl permite controles como BackSpace, Inicio, Fin, etc.
+            if (char.IsControl(e.KeyChar))
+            {
+                //Retornamos los valores e.KeyChar
+                return;
+            }
+            //Declaramos la variable de tipo char que recibirá los parámetros de las letras registradas por las variables e.KeyChar creadas anteriormente
+            char ch = e.KeyChar;
+
+            if ((ch >= '0' && ch <= '9') ||
+                (ch >= 'A' && ch <= 'Z') ||
+                (ch >= 'a' && ch <= 'z') ||
+                (ch == ' ') ||
+                (ch == '_'))
             {
                 return;
             }
@@ -158,7 +187,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             {
                 //Dado el objeto del DaoInformacionPersonal, evaluamos si los datos fueron ingresados correctamente dados sus métodos
                 if (ObjInformacionPersonal.txtNacionalidad.Text.Length < 3 ||
-                    ObjInformacionPersonal.txtDocumentoPresentado.Text.Length < 10 ||
+                    ObjInformacionPersonal.txtDocumentoPresentado.Text.Length < 9 ||
                     string.IsNullOrWhiteSpace(ObjInformacionPersonal.txtEdad.Text.Trim()) ||
                     ObjInformacionPersonal.txtTelefono1.Text.Length < 9 ||
                     ObjInformacionPersonal.txtProfesion.Text.Length < 3 ||
@@ -260,8 +289,16 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
         private void Modificar(object sender, EventArgs e)
         {
             ObjInformacionPersonal.txtEdad.Enabled = false;
-            ObjInformacionPersonal.btnGuardarPaciente.Enabled = true;
-            ObjInformacionPersonal.btnModificarPaciente.Enabled = false;
+            if (string.IsNullOrWhiteSpace(ObjInformacionPersonal.txtDocumentoPresentado.Text))
+            {
+                ObjInformacionPersonal.btnGuardarPaciente.Enabled = true;
+                ObjInformacionPersonal.btnModificarPaciente.Enabled = false;
+            }
+            else
+            {
+                ObjInformacionPersonal.btnModificarPaciente.Enabled = true;
+                ObjInformacionPersonal.btnGuardarPaciente.Enabled = false;
+            }
         }
         #region Validar el campo de Correo Electrónico
         //Creamos un método de tipo booleano, de esta forma nos permitirá retornar un valor (ya sea verdadero o falso)

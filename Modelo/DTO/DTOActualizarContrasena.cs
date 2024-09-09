@@ -13,7 +13,8 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DTO
     {
         //Getters y setters
         private string contrasena;
-
+        private string usuarioSolicitantePS;
         public string Contrasena { get => contrasena; set => contrasena = value; }
+        public string UsuarioSolicitantePS { get => usuarioSolicitantePS; set => usuarioSolicitantePS = value; }
     }
 }

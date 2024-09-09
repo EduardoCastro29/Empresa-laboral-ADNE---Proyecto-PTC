@@ -220,22 +220,30 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                         }
                         else
                         {
-                            //MessageBox.Show("Excelente", "Primer Usuario", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
                             RegistroEspecialidadesForm ObjAbrirRegistroEspecialidad = new RegistroEspecialidadesForm();
+                            PreguntasdeSeguridadForm ObjAbrirPreguntasS = new PreguntasdeSeguridadForm();
 
                             ObjAbrirRegistroEspecialidad.NotificacionEspecialidad.Show(ObjAbrirRegistroEspecialidad, "Registro realizado", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Success);
-
-
                             //Guardamos las variables de registro que se han hecho durante la inserción de la tabla profesional
                             ObjAbrirRegistroEspecialidad.txtDUIProfesional.Text = ObjRegistro.txtDui.Text.Trim();
                             //ObjAbrirRegistroEspecialidad.picProfesional.Image = Image.FromFile(ObjDAORegistro.Imagen);
                             ObjAbrirRegistroEspecialidad.lblNombreProfesional.Text = ObjDAORegistro.Nombres + " " + ObjDAORegistro.Apellidos;
-
                             ObjAbrirRegistroEspecialidad.ShowDialog();
+
+                            //Una vez terminada de ejecutar la acción, procedemos a abrir el formulario de preguntas de seguridad
+                            //De esta forma, el primer usuario ya tendrá preguntas asignadas y poder recuperar su contraseña de forma segura al ingresarse
+                            ObjAbrirPreguntasS.txtDUIProfesional.Text = ObjRegistro.txtDui.Text.Trim();
+                            ObjAbrirPreguntasS.btnVerificarPregunta.Enabled = false;
+                            ObjAbrirPreguntasS.lblIngreseCredenciales.Visible = false;
+                            ObjAbrirPreguntasS.txtUsuario.Visible = false;
+                            ObjAbrirPreguntasS.txtDocumento.Visible = false;
+                            ObjAbrirPreguntasS.pnlLineaDivisora.Visible = false;
+
+                            ObjAbrirPreguntasS.ShowDialog();
+                            //Ocultamos el formulario de registro y le daremos la bienvenida al Login
                             ObjRegistro.Hide();
 
-                            //Ocultamos el formulario de registro y le daremos la bienvenida al Login
+                            //Una vez terminada de ejecutar la acción, procedemos a abrir el formulario Login
                             LoginForm ObjMostrarLogin = new LoginForm();
                             ObjMostrarLogin.Show();
                         }

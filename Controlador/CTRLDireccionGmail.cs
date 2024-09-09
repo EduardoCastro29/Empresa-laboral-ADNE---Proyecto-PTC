@@ -71,7 +71,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             //Declaramos una variable de tipo string que tomará todos los datos del método UsuarioSolicitante de la clase DAOLogin
             //Y como parámetros el textbox donde el usuario ingresará el correo electrónico o usuario para el método de recuperarción
             //De la misma manera, envíamos la variable estática y la igualamos hacia el textbox el cuál envía el Ping de Acceso
-            string respuestaUsuarioSolicitante = ObjMensajeRecuperarContrasena.UsuarioSolicitante(CorreoUsuarioSLC = ObjDireccionGmailForm.txtIngresarEmail.Text.Trim());
+            string respuestaUsuarioSolicitante = ObjMensajeRecuperarContrasena.UsuarioSolicitante(ObjDireccionGmailForm.txtIngresarEmail.Text.Trim());
             //Evaluamos la respuesta del correo solicitante en un texto label, el cuál proporcionara una respuesta directa al usuario
             //Dentro del formulario, de esta forma se podrá saber con mayor certeza si realmente se ha enviado el correo o no
             ObjDireccionGmailForm.lblConfirmacion.Text = respuestaUsuarioSolicitante;
@@ -85,7 +85,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             if (ObjDireccionGmailForm.txtIngresarEmail.Text.Length < 10 ||
                 ObjVerificarCorreoUsuario.VerificarCorreoUsuario(ObjDireccionGmailForm.txtIngresarEmail.Text.Trim()) == null)
             {
-                MessageBox.Show("Por favor, ingrese un nombre de usuario/dirección de correo válida antes de seguir.", "Recuperación de Contraseña", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Por favor, ingrese un nombre de usuario/dirección de correo válida antes de seguir", "Recuperación de Contraseña", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {

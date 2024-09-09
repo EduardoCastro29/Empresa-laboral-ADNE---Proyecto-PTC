@@ -66,6 +66,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                 else
                 {
                     ObjDAOActualizarContrasena.Contrasena = ObjMetodosComunes.MetodoEncriptacionAES(ObjActualizarForm.txtConfirmarContrasena.Text.Trim());
+                    ObjDAOActualizarContrasena.UsuarioSolicitantePS = ObjActualizarForm.txtUsuarioID.Text.Trim();
 
                     if (ObjDAOActualizarContrasena.ActualizarContrasenaCorreo() == false)
                     {

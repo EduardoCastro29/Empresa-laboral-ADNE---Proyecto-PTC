@@ -323,12 +323,12 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador.ControladorUserControl
             try
             {
                 if (ObjInformacionPersonal.txtNacionalidad.Text.Length < 5 ||
-                    ObjInformacionPersonal.txtDocumentoPresentado.Text.Length < 10 ||
-                    ObjInformacionPersonal.txtEdad.Text.Length < 2 ||
+                    ObjInformacionPersonal.txtDocumentoPresentado.Text.Length < 9 ||
+                    string.IsNullOrEmpty(ObjInformacionPersonal.txtEdad.Text) ||
                     ObjInformacionPersonal.txtTelefono1.Text.Length < 9 ||
                     ObjInformacionPersonal.txtProfesion.Text.Length < 3 ||
-                    ObjInformacionPersonal.txtNombrePaciente.Text.Length < 3 ||
-                    ObjInformacionPersonal.txtApellidoPaciente.Text.Length < 5 ||
+                    ObjInformacionPersonal.txtNombrePaciente.Text.Length < 2 ||
+                    ObjInformacionPersonal.txtApellidoPaciente.Text.Length < 2 ||
                     ObjInformacionPersonal.txtDomicilio.Text.Length < 5 ||
                     ObjInformacionPersonal.txtCorreoElectronico.Text.Length < 10 ||
                     ObjInformacionPersonal.txtComposicionFamiliar.Text.Length < 3 ||

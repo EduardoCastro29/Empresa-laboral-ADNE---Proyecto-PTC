@@ -56,7 +56,17 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             {
                 if (ObjMetodosComunes.MetodoEncriptacionAES(contrasenaPredeterminada) == ObjDAOUsuario.Contrasena)
                 {
-                    MessageBox.Show($"Bienvenido {InicioSesion.Usuario}, por motivos de seguridad, se le redireccionará automáticamente a un nuevo formulario para que pueda actualizar su contraseña", "Ventana Emergente", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show($"Bienvenido {InicioSesion.Usuario}, por motivos de seguridad, se le redireccionará automáticamente a un nuevo formulario para que pueda completar los pasos de nuevo usuario", "Ventana Emergente", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                    PreguntasdeSeguridadForm ObjRedireccionarPreguntasSeguridad = new PreguntasdeSeguridadForm();
+                    ObjRedireccionarPreguntasSeguridad.txtDUIProfesional.Text = InicioSesion.Dui;
+                    ObjRedireccionarPreguntasSeguridad.btnVerificarPregunta.Enabled = false;
+                    ObjRedireccionarPreguntasSeguridad.lblIngreseCredenciales.Visible = false;
+                    ObjRedireccionarPreguntasSeguridad.txtUsuario.Visible = false;
+                    ObjRedireccionarPreguntasSeguridad.txtDocumento.Visible = false;
+                    ObjRedireccionarPreguntasSeguridad.pnlLineaDivisora.Visible = false;
+                    ObjRedireccionarPreguntasSeguridad.ShowDialog();
+
                     DirecciónGmailForm ObjRedireccionarUsuarioSolicitante = new DirecciónGmailForm();
                     ObjLogin.Hide();
                     ObjRedireccionarUsuarioSolicitante.Show();

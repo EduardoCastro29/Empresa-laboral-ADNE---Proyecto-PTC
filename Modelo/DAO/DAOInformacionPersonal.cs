@@ -67,13 +67,11 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                 //Abrimos la conexion 
                 conexion.Connection = Conectar();
                 // Se crea el query
-                string consultaSqlActualizarPaciente = "UPDATE Paciente SET\r\nfechaNacimiento\t\t= @fechaNacimiento,\r\nnombre\t\t\t\t= @nombre,\r\napellido\t\t\t= @apellido,\r\ndomicilio\t\t\t= @domicilio,\r\nnacionalidad\t\t= @nacionalidad,\r\ndocumentoPresentado\t= @documentoPresentado,\r\ncorreoElectronico\t= @correoElectronico,\r\ntelefono\t\t\t= @telefono,\r\nprofesion\t\t\t= @profesion,\r\nedad\t\t\t\t= @edad,\r\ncomposicionFamiliar\t= @composicionFamiliar,\r\nmotivo\t\t\t\t= @motivo,\r\nantecedente\t\t\t= @antecedente,\r\ndescripcionSituacion\t=@descripcionSituacion,\r\naspectosPreocupantes = @aspectosPreocupantes,\r\ngeneroId\t\t\t= @generoId\r\n\r\nWHERE\r\npacienteId = @pacienteId";
+                string consultaSqlActualizarPaciente = "UPDATE Paciente SET\r\nfechaNacimiento\t\t= @fechaNacimiento,\r\nnombre\t\t\t\t= @nombre,\r\napellido\t\t\t= @apellido,\r\ndomicilio\t\t\t= @domicilio,\r\nnacionalidad\t\t= @nacionalidad,\r\ncorreoElectronico\t= @correoElectronico,\r\ntelefono\t\t\t= @telefono,\r\nprofesion\t\t\t= @profesion,\r\nedad\t\t\t\t= @edad,\r\ncomposicionFamiliar\t= @composicionFamiliar,\r\nmotivo\t\t\t\t= @motivo,\r\nantecedente\t\t\t= @antecedente,\r\ndescripcionSituacion\t=@descripcionSituacion,\r\naspectosPreocupantes = @aspectosPreocupantes,\r\ngeneroId\t\t\t= @generoId\r\n\r\nWHERE\r\ndocumentoPresentado = @documentoPresentado";
                 //Le mandamos la consulta a SQL por medio de un comando
                 SqlCommand objConsultaActualizar = new SqlCommand(consultaSqlActualizarPaciente, conexion.Connection);
 
                 // Se añaden los valores 
-
-                objConsultaActualizar.Parameters.AddWithValue("@documentoPresentado", DocumentoPresentado);
                 objConsultaActualizar.Parameters.AddWithValue("@fechaNacimiento", FechaNacimiento);
                 objConsultaActualizar.Parameters.AddWithValue("@nombre", Nombre);
                 objConsultaActualizar.Parameters.AddWithValue("@apellido", Apellido);
@@ -89,6 +87,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                 objConsultaActualizar.Parameters.AddWithValue("@descripcionSituacion", Descripcion);
                 objConsultaActualizar.Parameters.AddWithValue("@aspectosPreocupantes", AspectosPreocupantes);
                 objConsultaActualizar.Parameters.AddWithValue("@generoId", GeneroId1);
+                objConsultaActualizar.Parameters.AddWithValue("@documentoPresentado", DocumentoPresentado);
 
                 //Si el número de filas afectadas fueron existosas, retornamos verdadero
                 if (objConsultaActualizar.ExecuteNonQuery() > 0)

@@ -25,8 +25,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             ObjVerCitasForm.cmsVerCita.Click += new EventHandler(VerCitaDetallada);
             ObjVerCitasForm.cmsActualizar.Click += new EventHandler(ActualizarCita);
             ObjVerCitasForm.cmsEliminarCita.Click += new EventHandler(EliminarCita);
-
-            //Validaciones de campos dentro de los TextBox
+            ObjVerCitasForm.txtBuscar.KeyPress += new KeyPressEventHandler(BuscarCita);
         }
         #region Eventos Iniciales al cargar el Formulario
         private void CargarDGVCitas()
@@ -108,7 +107,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             CargarDGVCitas();
         }
         #endregion
-        #region Actualización en el Formulario de Citas (CREATE)
+        #region Actualización en el Formulario de Citas (UPDATE)
         private void ActualizarCita(object sender, EventArgs e)
         {
             int PosicionFila = ObjVerCitasForm.dgvCitasAgendadas.CurrentRow.Index;
@@ -171,6 +170,14 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                     MessageBox.Show("La Cita no pudo ser eliminada, verifique si la cita ha sido seleccionada", "Eliminar Cita", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+        }
+        #endregion
+        #region Buscar una cita por sus denominaciones relevantes (SEARCH)
+        private void BuscarCita(object sender, KeyPressEventArgs e)
+        {
+            DAOVerCitas ObjDAOBuscarCitas = new DAOVerCitas();
+            DataTable ObjBuscar = ObjDAOBuscarCitas.BuscarCitaC(ObjVerCitasForm.txtBuscar.Text);
+            ObjVerCitasForm.dgvCitasAgendadas.DataSource = ObjBuscar;
         }
         #endregion
     }
