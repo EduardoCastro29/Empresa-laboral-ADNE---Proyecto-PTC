@@ -40,7 +40,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             ObjInformacionPersonal.txtAntecedentes.KeyPress += new KeyPressEventHandler(ValidarCampoTextBox);
             ObjInformacionPersonal.txtDescripcion.KeyPress += new KeyPressEventHandler(ValidarCampoTextBox);
             ObjInformacionPersonal.txtAspectosPreocupantes.KeyPress += new KeyPressEventHandler(ValidarCampoTextBox);
-            ObjInformacionPersonal.txtDocumentoPresentado.KeyPress += new KeyPressEventHandler(ValidarCampoDocumento);
+            ObjInformacionPersonal.txtDocumentoPresentad0.KeyPress += new KeyPressEventHandler(ValidarCampoDocumento);
             ObjInformacionPersonal.txtTelefono1.KeyPress += new KeyPressEventHandler(ValidarCampoNumero);
             ObjInformacionPersonal.txtCorreoElectronico.KeyPress += new KeyPressEventHandler(ValidarCampoCorreo);
         }
@@ -192,7 +192,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             {
                 //Dado el objeto del DaoInformacionPersonal, evaluamos si los datos fueron ingresados correctamente dados sus métodos
                 if (ObjInformacionPersonal.txtNacionalidad.Text.Length < 3 ||
-                    ObjInformacionPersonal.txtDocumentoPresentado.Text.Length < 9 ||
+                    ObjInformacionPersonal.txtDocumentoPresentad0.Text.Length < 9 ||
                     string.IsNullOrWhiteSpace(ObjInformacionPersonal.txtEdad.Text.Trim()) ||
                     ObjInformacionPersonal.txtTelefono1.Text.Length < 9 ||
                     ObjInformacionPersonal.txtProfesion.Text.Length < 3 ||
@@ -220,7 +220,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                     ObjDAOInformacionPersonal.FechaNacimiento = ObjInformacionPersonal.dtFechaNacimiento.Value.Date;
 
                     ObjDAOInformacionPersonal.Nacionalidad = ObjInformacionPersonal.txtNacionalidad.Text.Trim();
-                    ObjDAOInformacionPersonal.DocumentoPresentado = ObjInformacionPersonal.txtDocumentoPresentado.Text.Trim();
+                    ObjDAOInformacionPersonal.DocumentoPresentado = ObjInformacionPersonal.txtDocumentoPresentad0.Text.Trim();
                     ObjDAOInformacionPersonal.GeneroId1 = int.Parse(ObjInformacionPersonal.cmbGeneroId.SelectedValue.ToString());
                     ObjDAOInformacionPersonal.Edad = int.Parse(ObjInformacionPersonal.txtEdad.Text.Trim());
                     ObjDAOInformacionPersonal.Telefono = (ObjInformacionPersonal.txtTelefono1.Text.Trim());
@@ -275,7 +275,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
         {
             ObjInformacionPersonal.dtFechaNacimiento.Value = DateTime.Today.AddYears(-2); ;
             ObjInformacionPersonal.txtNacionalidad.Clear();
-            ObjInformacionPersonal.txtDocumentoPresentado.Clear();
+            ObjInformacionPersonal.txtDocumentoPresentad0.Clear();
             ObjInformacionPersonal.cmbGeneroId.SelectedIndex = -1;
             ObjInformacionPersonal.txtEdad.Clear();
             ObjInformacionPersonal.txtTelefono1.Clear();
@@ -294,7 +294,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
         private void Modificar(object sender, EventArgs e)
         {
             ObjInformacionPersonal.txtEdad.Enabled = false;
-            if (string.IsNullOrWhiteSpace(ObjInformacionPersonal.txtDocumentoPresentado.Text))
+            if (string.IsNullOrWhiteSpace(ObjInformacionPersonal.txtDocumentoPresentad0.Text))
             {
                 ObjInformacionPersonal.btnGuardarPaciente.Enabled = true;
                 ObjInformacionPersonal.btnModificarPaciente.Enabled = false;

@@ -51,7 +51,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador.ControladorUserControl
                         ObjVerInformacion.txtApellidoPaciente.Text = ObjDaoInformacionPersonal.Apellido;
                         ObjVerInformacion.txtDomicilio.Text = ObjDaoInformacionPersonal.Domicilio;
                         ObjVerInformacion.txtNacionalidad.Text = ObjDaoInformacionPersonal.Nacionalidad;
-                        ObjVerInformacion.txtDocumentoPresentado.Text = ObjDaoInformacionPersonal.DocumentoPresentado;
+                        ObjVerInformacion.txtDocumentoPresentad0.Text = ObjDaoInformacionPersonal.DocumentoPresentado;
                         ObjVerInformacion.txtCorreoElectronico.Text = ObjDaoInformacionPersonal.CorreoElectronico;
                         ObjVerInformacion.txtTelefono1.Text = ObjDaoInformacionPersonal.Telefono;
                         ObjVerInformacion.txtProfesion.Text = ObjDaoInformacionPersonal.Profesion;
@@ -209,8 +209,8 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador.ControladorUserControl
             ObjInformacionPersonal.txtAntecedentes.KeyPress += new KeyPressEventHandler(ValidarCampoTextBox);
             ObjInformacionPersonal.txtDescripcion.KeyPress += new KeyPressEventHandler(ValidarCampoTextBox);
             ObjInformacionPersonal.txtAspectosPreocupantes.KeyPress += new KeyPressEventHandler(ValidarCampoTextBox);
-            ObjInformacionPersonal.txtDocumentoPresentado.KeyPress += new KeyPressEventHandler(ValidarCampoNumero);
-            ObjInformacionPersonal.txtTelefono1.KeyPress += new KeyPressEventHandler(ValidarCampoNumero);
+            ObjInformacionPersonal.txtDocumentoPresentad0.KeyPress += new KeyPressEventHandler(ValidarCampoDocumentoPresentado);
+            ObjInformacionPersonal.txtTelefono1.KeyPress += new KeyPressEventHandler(ValidarCampoNumeroTelefono);
             ObjInformacionPersonal.txtCorreoElectronico.KeyPress += new KeyPressEventHandler(ValidarCampoCorreo);
         }
         #region Validaciones de Campos
@@ -285,7 +285,8 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador.ControladorUserControl
             //Indicamos que se creará el evento e.Char con todos los valores antes proporcionados, como un EventHandler
             e.Handled = true;
         }
-        private void ValidarCampoNumero(object sender, KeyPressEventArgs e)
+
+        private void ValidarCampoDocumentoPresentado(object sender, KeyPressEventArgs e)
         {
             //La propiedad char.IsControl permite controles como BackSpace, Inicio, Fin, etc.
             if (char.IsControl(e.KeyChar))
@@ -293,11 +294,42 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador.ControladorUserControl
                 //Retornamos los valores e.KeyChar
                 return;
             }
+            //Declaramos la variable de tipo char que recibirá los parámetros de las letras registradas por las variables e.KeyChar creadas anteriormente
+            char ch = e.KeyChar;
 
-            if (char.IsDigit(e.KeyChar))
+            //Declaramos lo valores que únicamente permitirá el textbox
+            if ((ch >= '0' && ch <= '9') ||
+                (ch >= 'A' && ch <= 'Z') ||
+                (ch >= 'a' && ch <= 'z') ||
+                 ch == '-')
             {
+                //Retornamos los valores e.KeyChar
                 return;
             }
+            //Indicamos que se creará el evento e.Char con todos los valores antes proporcionados, como un EventHandler
+            e.Handled = true;
+        }
+
+        private void ValidarCampoNumeroTelefono(object sender, KeyPressEventArgs e)
+        {
+            //La propiedad char.IsControl permite controles como BackSpace, Inicio, Fin, etc.
+            if (char.IsControl(e.KeyChar))
+            {
+                //Retornamos los valores e.KeyChar
+                return;
+            }
+            //Declaramos la variable de tipo char que recibirá los parámetros de las letras registradas por las variables e.KeyChar creadas anteriormente
+            char ch = e.KeyChar;
+
+            //Declaramos lo valores que únicamente permitirá el textbox
+            if ((ch >= '0' && ch <= '9') ||              
+                (ch == '+') ||
+                 ch == '-')
+            {
+                //Retornamos los valores e.KeyChar
+                return;
+            }
+            //Indicamos que se creará el evento e.Char con todos los valores antes proporcionados, como un EventHandler
             e.Handled = true;
         }
         #endregion
@@ -323,7 +355,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador.ControladorUserControl
             try
             {
                 if (ObjInformacionPersonal.txtNacionalidad.Text.Length < 5 ||
-                    ObjInformacionPersonal.txtDocumentoPresentado.Text.Length < 9 ||
+                    ObjInformacionPersonal.txtDocumentoPresentad0.Text.Length < 9 ||
                     string.IsNullOrEmpty(ObjInformacionPersonal.txtEdad.Text) ||
                     ObjInformacionPersonal.txtTelefono1.Text.Length < 9 ||
                     ObjInformacionPersonal.txtProfesion.Text.Length < 3 ||
@@ -350,7 +382,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador.ControladorUserControl
                     ObjDAOActualizarInformacionPersonal.FechaNacimiento = ObjInformacionPersonal.dtFechaNacimiento.Value.Date;
 
                     ObjDAOActualizarInformacionPersonal.Nacionalidad = ObjInformacionPersonal.txtNacionalidad.Text.Trim();
-                    ObjDAOActualizarInformacionPersonal.DocumentoPresentado = ObjInformacionPersonal.txtDocumentoPresentado.Text.Trim();
+                    ObjDAOActualizarInformacionPersonal.DocumentoPresentado = ObjInformacionPersonal.txtDocumentoPresentad0.Text.Trim();
                     ObjDAOActualizarInformacionPersonal.Edad = int.Parse(ObjInformacionPersonal.txtEdad.Text.Trim());
                     ObjDAOActualizarInformacionPersonal.Telefono = (ObjInformacionPersonal.txtTelefono1.Text.Trim());
                     ObjDAOActualizarInformacionPersonal.Profesion = ObjInformacionPersonal.txtProfesion.Text.Trim();
