@@ -240,7 +240,7 @@
             this.txtDocumento.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtDocumento.Lines = new string[0];
             this.txtDocumento.Location = new System.Drawing.Point(337, 165);
-            this.txtDocumento.MaxLength = 40;
+            this.txtDocumento.MaxLength = 11;
             this.txtDocumento.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtDocumento.Modified = false;
             this.txtDocumento.Multiline = false;
@@ -316,7 +316,7 @@
             this.txtUsuario.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtUsuario.Lines = new string[0];
             this.txtUsuario.Location = new System.Drawing.Point(60, 165);
-            this.txtUsuario.MaxLength = 40;
+            this.txtUsuario.MaxLength = 30;
             this.txtUsuario.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtUsuario.Modified = false;
             this.txtUsuario.Multiline = false;
