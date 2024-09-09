@@ -90,6 +90,10 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             // Obtener la fecha actual
             DateTime fechaActual = DateTime.Now;
 
+            ObjActividadesForm.GraficoCitas.ChartAreas[0].AxisY.Interval = 1;
+            ObjActividadesForm.GraficoCitas.ChartAreas[0].AxisY.LabelStyle.Format = "0";
+            ObjActividadesForm.GraficoCitas.ChartAreas[0].AxisY.IsStartedFromZero = true;
+
             // Formatear el nombre del día y el día del mes
             string diaYFecha = fechaActual.ToString("dd/MM/yyyy");
             ObjActividadesForm.lblFecha.Text = diaYFecha;

@@ -145,10 +145,13 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
         {
             try
             {
+                //Creamos un objeto de la clase CommonMethos para acceder a los métodos comúnes
+                CommonMethods ObjMetodosComunes = new CommonMethods();
+
                 //Dado el objeto del DAORegistro, evaluamos si los datos fueron ingresados correctamente dados sus métodos
                 if (ObjRegistro.txtUsuario.Text.Length < 2 ||
                     ObjRegistro.txtNombre.Text.Length < 2 ||
-                    ObjRegistro.txtContrasena.Text.Length < 12 ||
+                    ObjMetodosComunes.ValidarContrasena(ObjRegistro.txtContrasena.Text.Trim()) == false ||
                     ObjRegistro.txtCorreo.Text.Length < 10 ||
                     ObjRegistro.txtApellido.Text.Length < 2 ||
                     ObjRegistro.txtDui.Text.Length < 10 ||
@@ -164,9 +167,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
 
                     //Realizamos el proceso para capturar los datos ingresados por el usuario dado el DAORegistro
                     DAORegistro ObjDAORegistro = new DAORegistro();
-
-                    //Creamos un objeto de la clase CommonMethos para acceder a los métodos comúnes
-                    CommonMethods ObjMetodosComunes = new CommonMethods();
 
                     //Obtenemos datos del objeto ObjDAORegistro
                     ObjDAORegistro.Usuario = ObjRegistro.txtUsuario.Text.Trim();

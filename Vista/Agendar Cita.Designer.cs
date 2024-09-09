@@ -30,14 +30,16 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AgendarCitaForm));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges5 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges6 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties9 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties10 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties11 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties12 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            this.pnlDUIPaciente = new Bunifu.UI.WinForms.BunifuPanel();
-            this.txtDUIPaciente = new System.Windows.Forms.MaskedTextBox();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties5 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties6 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties7 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties8 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             this.txtDUIProfesional = new System.Windows.Forms.MaskedTextBox();
             this.pnlDUIProfesional = new Bunifu.UI.WinForms.BunifuPanel();
             this.pnlSombraGuardar = new Bunifu.UI.WinForms.BunifuShadowPanel();
@@ -67,7 +69,7 @@
             this.dtHoraInicio = new System.Windows.Forms.DateTimePicker();
             this.dtHoraFinal = new System.Windows.Forms.DateTimePicker();
             this.NotificacionCita = new Bunifu.UI.WinForms.BunifuSnackbar(this.components);
-            this.pnlDUIPaciente.SuspendLayout();
+            this.txtDUIPaciente = new Bunifu.UI.WinForms.BunifuTextBox();
             this.pnlDUIProfesional.SuspendLayout();
             this.pnlSombraGuardar.SuspendLayout();
             this.bgpModificar.SuspendLayout();
@@ -76,37 +78,6 @@
             this.menuStrip1.SuspendLayout();
             this.pnlEncabezado.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // pnlDUIPaciente
-            // 
-            this.pnlDUIPaciente.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pnlDUIPaciente.BackgroundColor = System.Drawing.Color.White;
-            this.pnlDUIPaciente.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlDUIPaciente.BackgroundImage")));
-            this.pnlDUIPaciente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pnlDUIPaciente.BorderColor = System.Drawing.Color.Silver;
-            this.pnlDUIPaciente.BorderRadius = 15;
-            this.pnlDUIPaciente.BorderThickness = 1;
-            this.pnlDUIPaciente.Controls.Add(this.txtDUIPaciente);
-            this.pnlDUIPaciente.Location = new System.Drawing.Point(32, 148);
-            this.pnlDUIPaciente.Name = "pnlDUIPaciente";
-            this.pnlDUIPaciente.ShowBorders = true;
-            this.pnlDUIPaciente.Size = new System.Drawing.Size(275, 44);
-            this.pnlDUIPaciente.TabIndex = 125;
-            // 
-            // txtDUIPaciente
-            // 
-            this.txtDUIPaciente.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtDUIPaciente.BackColor = System.Drawing.Color.White;
-            this.txtDUIPaciente.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtDUIPaciente.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDUIPaciente.ForeColor = System.Drawing.Color.DimGray;
-            this.txtDUIPaciente.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.txtDUIPaciente.Location = new System.Drawing.Point(12, 11);
-            this.txtDUIPaciente.Mask = "00000000-0";
-            this.txtDUIPaciente.Name = "txtDUIPaciente";
-            this.txtDUIPaciente.ShortcutsEnabled = false;
-            this.txtDUIPaciente.Size = new System.Drawing.Size(260, 20);
-            this.txtDUIPaciente.TabIndex = 2;
             // 
             // txtDUIProfesional
             // 
@@ -121,7 +92,7 @@
             this.txtDUIProfesional.Name = "txtDUIProfesional";
             this.txtDUIProfesional.ShortcutsEnabled = false;
             this.txtDUIProfesional.Size = new System.Drawing.Size(260, 20);
-            this.txtDUIProfesional.TabIndex = 2;
+            this.txtDUIProfesional.TabIndex = 1;
             // 
             // pnlDUIProfesional
             // 
@@ -199,11 +170,11 @@
             this.btnGuardar.ColorContrastOnClick = 45;
             this.btnGuardar.ColorContrastOnHover = 45;
             this.btnGuardar.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges5.BottomLeft = true;
-            borderEdges5.BottomRight = true;
-            borderEdges5.TopLeft = true;
-            borderEdges5.TopRight = true;
-            this.btnGuardar.CustomizableEdges = borderEdges5;
+            borderEdges1.BottomLeft = true;
+            borderEdges1.BottomRight = true;
+            borderEdges1.TopLeft = true;
+            borderEdges1.TopRight = true;
+            this.btnGuardar.CustomizableEdges = borderEdges1;
             this.btnGuardar.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnGuardar.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnGuardar.DisabledFillColor = System.Drawing.Color.Empty;
@@ -265,7 +236,7 @@
             this.btnGuardar.OnPressedState.IconLeftImage = null;
             this.btnGuardar.OnPressedState.IconRightImage = null;
             this.btnGuardar.Size = new System.Drawing.Size(209, 55);
-            this.btnGuardar.TabIndex = 0;
+            this.btnGuardar.TabIndex = 8;
             this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnGuardar.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnGuardar.TextMarginLeft = 0;
@@ -332,11 +303,11 @@
             this.btnModificar.ColorContrastOnClick = 45;
             this.btnModificar.ColorContrastOnHover = 45;
             this.btnModificar.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges6.BottomLeft = true;
-            borderEdges6.BottomRight = true;
-            borderEdges6.TopLeft = true;
-            borderEdges6.TopRight = true;
-            this.btnModificar.CustomizableEdges = borderEdges6;
+            borderEdges2.BottomLeft = true;
+            borderEdges2.BottomRight = true;
+            borderEdges2.TopLeft = true;
+            borderEdges2.TopRight = true;
+            this.btnModificar.CustomizableEdges = borderEdges2;
             this.btnModificar.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnModificar.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnModificar.DisabledFillColor = System.Drawing.Color.Empty;
@@ -398,7 +369,7 @@
             this.btnModificar.OnPressedState.IconLeftImage = null;
             this.btnModificar.OnPressedState.IconRightImage = null;
             this.btnModificar.Size = new System.Drawing.Size(209, 54);
-            this.btnModificar.TabIndex = 0;
+            this.btnModificar.TabIndex = 9;
             this.btnModificar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnModificar.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnModificar.TextMarginLeft = 0;
@@ -428,7 +399,7 @@
             this.dtFecha.MinimumSize = new System.Drawing.Size(4, 32);
             this.dtFecha.Name = "dtFecha";
             this.dtFecha.Size = new System.Drawing.Size(272, 32);
-            this.dtFecha.TabIndex = 120;
+            this.dtFecha.TabIndex = 4;
             this.dtFecha.Value = new System.DateTime(2024, 9, 1, 0, 0, 0, 0);
             // 
             // lblPaciente
@@ -492,7 +463,7 @@
             this.cmbEstado.Location = new System.Drawing.Point(35, 532);
             this.cmbEstado.Name = "cmbEstado";
             this.cmbEstado.Size = new System.Drawing.Size(210, 32);
-            this.cmbEstado.TabIndex = 116;
+            this.cmbEstado.TabIndex = 7;
             this.cmbEstado.Text = null;
             this.cmbEstado.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
             this.cmbEstado.TextLeftMargin = 5;
@@ -547,7 +518,7 @@
             this.cmbLugar.Location = new System.Drawing.Point(321, 314);
             this.cmbLugar.Name = "cmbLugar";
             this.cmbLugar.Size = new System.Drawing.Size(275, 32);
-            this.cmbLugar.TabIndex = 114;
+            this.cmbLugar.TabIndex = 5;
             this.cmbLugar.Text = null;
             this.cmbLugar.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
             this.cmbLugar.TextLeftMargin = 5;
@@ -643,26 +614,26 @@
             this.txtMotivoConsulta.Modified = false;
             this.txtMotivoConsulta.Multiline = true;
             this.txtMotivoConsulta.Name = "txtMotivoConsulta";
-            stateProperties9.BorderColor = System.Drawing.Color.Teal;
-            stateProperties9.FillColor = System.Drawing.Color.Empty;
-            stateProperties9.ForeColor = System.Drawing.Color.Empty;
-            stateProperties9.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtMotivoConsulta.OnActiveState = stateProperties9;
-            stateProperties10.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            stateProperties10.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties10.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.txtMotivoConsulta.OnDisabledState = stateProperties10;
-            stateProperties11.BorderColor = System.Drawing.Color.LightSeaGreen;
-            stateProperties11.FillColor = System.Drawing.Color.Empty;
-            stateProperties11.ForeColor = System.Drawing.Color.Empty;
-            stateProperties11.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtMotivoConsulta.OnHoverState = stateProperties11;
-            stateProperties12.BorderColor = System.Drawing.Color.Silver;
-            stateProperties12.FillColor = System.Drawing.Color.White;
-            stateProperties12.ForeColor = System.Drawing.Color.Empty;
-            stateProperties12.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtMotivoConsulta.OnIdleState = stateProperties12;
+            stateProperties1.BorderColor = System.Drawing.Color.Teal;
+            stateProperties1.FillColor = System.Drawing.Color.Empty;
+            stateProperties1.ForeColor = System.Drawing.Color.Empty;
+            stateProperties1.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtMotivoConsulta.OnActiveState = stateProperties1;
+            stateProperties2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties2.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.txtMotivoConsulta.OnDisabledState = stateProperties2;
+            stateProperties3.BorderColor = System.Drawing.Color.LightSeaGreen;
+            stateProperties3.FillColor = System.Drawing.Color.Empty;
+            stateProperties3.ForeColor = System.Drawing.Color.Empty;
+            stateProperties3.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtMotivoConsulta.OnHoverState = stateProperties3;
+            stateProperties4.BorderColor = System.Drawing.Color.Silver;
+            stateProperties4.FillColor = System.Drawing.Color.White;
+            stateProperties4.ForeColor = System.Drawing.Color.Empty;
+            stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtMotivoConsulta.OnIdleState = stateProperties4;
             this.txtMotivoConsulta.Padding = new System.Windows.Forms.Padding(3);
             this.txtMotivoConsulta.PasswordChar = '\0';
             this.txtMotivoConsulta.PlaceholderForeColor = System.Drawing.Color.Silver;
@@ -675,7 +646,7 @@
             this.txtMotivoConsulta.ShortcutsEnabled = false;
             this.txtMotivoConsulta.Size = new System.Drawing.Size(561, 95);
             this.txtMotivoConsulta.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.txtMotivoConsulta.TabIndex = 105;
+            this.txtMotivoConsulta.TabIndex = 6;
             this.txtMotivoConsulta.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtMotivoConsulta.TextMarginBottom = 0;
             this.txtMotivoConsulta.TextMarginLeft = 3;
@@ -764,7 +735,7 @@
             this.dtHoraInicio.Name = "dtHoraInicio";
             this.dtHoraInicio.ShowUpDown = true;
             this.dtHoraInicio.Size = new System.Drawing.Size(269, 27);
-            this.dtHoraInicio.TabIndex = 126;
+            this.dtHoraInicio.TabIndex = 2;
             // 
             // dtHoraFinal
             // 
@@ -777,7 +748,7 @@
             this.dtHoraFinal.Name = "dtHoraFinal";
             this.dtHoraFinal.ShowUpDown = true;
             this.dtHoraFinal.Size = new System.Drawing.Size(275, 27);
-            this.dtHoraFinal.TabIndex = 127;
+            this.dtHoraFinal.TabIndex = 3;
             // 
             // NotificacionCita
             // 
@@ -849,14 +820,91 @@
             this.NotificacionCita.WarningOptions.IconLeftMargin = 12;
             this.NotificacionCita.ZoomCloseIcon = true;
             // 
+            // txtDUIPaciente
+            // 
+            this.txtDUIPaciente.AcceptsReturn = false;
+            this.txtDUIPaciente.AcceptsTab = false;
+            this.txtDUIPaciente.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtDUIPaciente.AnimationSpeed = 200;
+            this.txtDUIPaciente.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.txtDUIPaciente.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.txtDUIPaciente.AutoSizeHeight = true;
+            this.txtDUIPaciente.BackColor = System.Drawing.Color.Transparent;
+            this.txtDUIPaciente.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txtDUIPaciente.BackgroundImage")));
+            this.txtDUIPaciente.BorderColorActive = System.Drawing.Color.Teal;
+            this.txtDUIPaciente.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.txtDUIPaciente.BorderColorHover = System.Drawing.Color.LightSeaGreen;
+            this.txtDUIPaciente.BorderColorIdle = System.Drawing.Color.Silver;
+            this.txtDUIPaciente.BorderRadius = 15;
+            this.txtDUIPaciente.BorderThickness = 1;
+            this.txtDUIPaciente.CharacterCase = Bunifu.UI.WinForms.BunifuTextBox.CharacterCases.Normal;
+            this.txtDUIPaciente.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.txtDUIPaciente.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtDUIPaciente.DefaultFont = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDUIPaciente.DefaultText = "";
+            this.txtDUIPaciente.FillColor = System.Drawing.Color.White;
+            this.txtDUIPaciente.HideSelection = true;
+            this.txtDUIPaciente.IconLeft = null;
+            this.txtDUIPaciente.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtDUIPaciente.IconPadding = 10;
+            this.txtDUIPaciente.IconRight = null;
+            this.txtDUIPaciente.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtDUIPaciente.Lines = new string[0];
+            this.txtDUIPaciente.Location = new System.Drawing.Point(32, 148);
+            this.txtDUIPaciente.MaxLength = 500;
+            this.txtDUIPaciente.MinimumSize = new System.Drawing.Size(1, 1);
+            this.txtDUIPaciente.Modified = false;
+            this.txtDUIPaciente.Multiline = true;
+            this.txtDUIPaciente.Name = "txtDUIPaciente";
+            stateProperties5.BorderColor = System.Drawing.Color.Teal;
+            stateProperties5.FillColor = System.Drawing.Color.Empty;
+            stateProperties5.ForeColor = System.Drawing.Color.Empty;
+            stateProperties5.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtDUIPaciente.OnActiveState = stateProperties5;
+            stateProperties6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties6.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.txtDUIPaciente.OnDisabledState = stateProperties6;
+            stateProperties7.BorderColor = System.Drawing.Color.LightSeaGreen;
+            stateProperties7.FillColor = System.Drawing.Color.Empty;
+            stateProperties7.ForeColor = System.Drawing.Color.Empty;
+            stateProperties7.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtDUIPaciente.OnHoverState = stateProperties7;
+            stateProperties8.BorderColor = System.Drawing.Color.Silver;
+            stateProperties8.FillColor = System.Drawing.Color.White;
+            stateProperties8.ForeColor = System.Drawing.Color.Empty;
+            stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtDUIPaciente.OnIdleState = stateProperties8;
+            this.txtDUIPaciente.Padding = new System.Windows.Forms.Padding(3);
+            this.txtDUIPaciente.PasswordChar = '\0';
+            this.txtDUIPaciente.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.txtDUIPaciente.PlaceholderText = "";
+            this.txtDUIPaciente.ReadOnly = false;
+            this.txtDUIPaciente.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtDUIPaciente.SelectedText = "";
+            this.txtDUIPaciente.SelectionLength = 0;
+            this.txtDUIPaciente.SelectionStart = 0;
+            this.txtDUIPaciente.ShortcutsEnabled = false;
+            this.txtDUIPaciente.Size = new System.Drawing.Size(275, 44);
+            this.txtDUIPaciente.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
+            this.txtDUIPaciente.TabIndex = 0;
+            this.txtDUIPaciente.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtDUIPaciente.TextMarginBottom = 0;
+            this.txtDUIPaciente.TextMarginLeft = 3;
+            this.txtDUIPaciente.TextMarginTop = 1;
+            this.txtDUIPaciente.TextPlaceholder = "";
+            this.txtDUIPaciente.UseSystemPasswordChar = false;
+            this.txtDUIPaciente.WordWrap = true;
+            // 
             // AgendarCitaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(638, 682);
+            this.Controls.Add(this.txtDUIPaciente);
             this.Controls.Add(this.dtHoraFinal);
             this.Controls.Add(this.dtHoraInicio);
-            this.Controls.Add(this.pnlDUIPaciente);
             this.Controls.Add(this.pnlDUIProfesional);
             this.Controls.Add(this.pnlSombraGuardar);
             this.Controls.Add(this.pnlSombraModificar);
@@ -880,8 +928,6 @@
             this.Name = "AgendarCitaForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AgendarCita";
-            this.pnlDUIPaciente.ResumeLayout(false);
-            this.pnlDUIPaciente.PerformLayout();
             this.pnlDUIProfesional.ResumeLayout(false);
             this.pnlDUIProfesional.PerformLayout();
             this.pnlSombraGuardar.ResumeLayout(false);
@@ -898,9 +944,6 @@
         }
 
         #endregion
-
-        public Bunifu.UI.WinForms.BunifuPanel pnlDUIPaciente;
-        public System.Windows.Forms.MaskedTextBox txtDUIPaciente;
         public System.Windows.Forms.MaskedTextBox txtDUIProfesional;
         public Bunifu.UI.WinForms.BunifuPanel pnlDUIProfesional;
         public Bunifu.UI.WinForms.BunifuShadowPanel pnlSombraGuardar;
@@ -930,5 +973,6 @@
         public System.Windows.Forms.DateTimePicker dtHoraInicio;
         public System.Windows.Forms.DateTimePicker dtHoraFinal;
         public Bunifu.UI.WinForms.BunifuSnackbar NotificacionCita;
+        public Bunifu.UI.WinForms.BunifuTextBox txtDUIPaciente;
     }
 }

@@ -98,7 +98,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             //Para una mejor referencia y estética, será mejor mostrar los nombres de los representantes
             ObjVerCitasDetalladas.pnlDUIProfesional.Visible = false;
             ObjVerCitasDetalladas.txtDUIProfesional.Visible = false;
-            ObjVerCitasDetalladas.pnlDUIPaciente.Visible = false;
+            //ObjVerCitasDetalladas.pnlDUIPaciente.Visible = false;
             ObjVerCitasDetalladas.txtDUIPaciente.Visible = false;
 
             ObjVerCitasDetalladas.ShowDialog();

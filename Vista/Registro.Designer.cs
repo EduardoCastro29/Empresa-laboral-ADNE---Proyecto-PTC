@@ -99,6 +99,7 @@
             this.ofdImagen = new System.Windows.Forms.OpenFileDialog();
             this.Notificacion1 = new Bunifu.UI.WinForms.BunifuSnackbar(this.components);
             this.NotificacionRegistro = new Bunifu.UI.WinForms.BunifuSnackbar(this.components);
+            this.TTContraseña = new Bunifu.UI.WinForms.BunifuToolTip(this.components);
             this.bunifuShadowPanel4.SuspendLayout();
             this.bunifuShadowPanel3.SuspendLayout();
             this.bunifuPanel1.SuspendLayout();
@@ -129,12 +130,15 @@
             this.lblTelefono.Location = new System.Drawing.Point(66, 348);
             this.lblTelefono.Name = "lblTelefono";
             this.lblTelefono.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblTelefono.Size = new System.Drawing.Size(144, 39);
+            this.lblTelefono.Size = new System.Drawing.Size(82, 23);
             this.lblTelefono.TabIndex = 31;
             this.lblTelefono.TabStop = false;
             this.lblTelefono.Text = "Teléfono:";
             this.lblTelefono.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lblTelefono.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.TTContraseña.SetToolTip(this.lblTelefono, "");
+            this.TTContraseña.SetToolTipIcon(this.lblTelefono, null);
+            this.TTContraseña.SetToolTipTitle(this.lblTelefono, "");
             // 
             // txtDui
             // 
@@ -148,6 +152,9 @@
             this.txtDui.ShortcutsEnabled = false;
             this.txtDui.Size = new System.Drawing.Size(264, 24);
             this.txtDui.TabIndex = 2;
+            this.TTContraseña.SetToolTip(this.txtDui, "");
+            this.TTContraseña.SetToolTipIcon(this.txtDui, null);
+            this.TTContraseña.SetToolTipTitle(this.txtDui, "");
             // 
             // bunifuShadowPanel4
             // 
@@ -171,6 +178,9 @@
             this.bunifuShadowPanel4.Size = new System.Drawing.Size(300, 57);
             this.bunifuShadowPanel4.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
             this.bunifuShadowPanel4.TabIndex = 3;
+            this.TTContraseña.SetToolTip(this.bunifuShadowPanel4, "");
+            this.TTContraseña.SetToolTipIcon(this.bunifuShadowPanel4, null);
+            this.TTContraseña.SetToolTipTitle(this.bunifuShadowPanel4, "");
             // 
             // txtUsuario
             // 
@@ -246,6 +256,9 @@
             this.txtUsuario.TextMarginLeft = 3;
             this.txtUsuario.TextMarginTop = 1;
             this.txtUsuario.TextPlaceholder = "Usuario";
+            this.TTContraseña.SetToolTip(this.txtUsuario, "");
+            this.TTContraseña.SetToolTipIcon(this.txtUsuario, null);
+            this.TTContraseña.SetToolTipTitle(this.txtUsuario, "");
             this.txtUsuario.UseSystemPasswordChar = false;
             this.txtUsuario.WordWrap = true;
             // 
@@ -259,12 +272,15 @@
             this.lblUsuario.Location = new System.Drawing.Point(421, 239);
             this.lblUsuario.Name = "lblUsuario";
             this.lblUsuario.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblUsuario.Size = new System.Drawing.Size(127, 39);
+            this.lblUsuario.Size = new System.Drawing.Size(73, 23);
             this.lblUsuario.TabIndex = 29;
             this.lblUsuario.TabStop = false;
             this.lblUsuario.Text = "Usuario:";
             this.lblUsuario.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lblUsuario.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.TTContraseña.SetToolTip(this.lblUsuario, "");
+            this.TTContraseña.SetToolTipIcon(this.lblUsuario, null);
+            this.TTContraseña.SetToolTipTitle(this.lblUsuario, "");
             // 
             // bunifuShadowPanel5
             // 
@@ -287,6 +303,9 @@
             this.bunifuShadowPanel5.Size = new System.Drawing.Size(300, 57);
             this.bunifuShadowPanel5.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
             this.bunifuShadowPanel5.TabIndex = 15;
+            this.TTContraseña.SetToolTip(this.bunifuShadowPanel5, "");
+            this.TTContraseña.SetToolTipIcon(this.bunifuShadowPanel5, null);
+            this.TTContraseña.SetToolTipTitle(this.bunifuShadowPanel5, "");
             // 
             // lblDocumento
             // 
@@ -298,12 +317,15 @@
             this.lblDocumento.Location = new System.Drawing.Point(66, 239);
             this.lblDocumento.Name = "lblDocumento";
             this.lblDocumento.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblDocumento.Size = new System.Drawing.Size(188, 39);
+            this.lblDocumento.Size = new System.Drawing.Size(107, 23);
             this.lblDocumento.TabIndex = 28;
             this.lblDocumento.TabStop = false;
             this.lblDocumento.Text = "Documento";
             this.lblDocumento.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lblDocumento.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.TTContraseña.SetToolTip(this.lblDocumento, "");
+            this.TTContraseña.SetToolTipIcon(this.lblDocumento, null);
+            this.TTContraseña.SetToolTipTitle(this.lblDocumento, "");
             // 
             // bunifuShadowPanel3
             // 
@@ -327,6 +349,9 @@
             this.bunifuShadowPanel3.Size = new System.Drawing.Size(300, 57);
             this.bunifuShadowPanel3.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
             this.bunifuShadowPanel3.TabIndex = 1;
+            this.TTContraseña.SetToolTip(this.bunifuShadowPanel3, "");
+            this.TTContraseña.SetToolTipIcon(this.bunifuShadowPanel3, null);
+            this.TTContraseña.SetToolTipTitle(this.bunifuShadowPanel3, "");
             // 
             // txtApellido
             // 
@@ -402,6 +427,9 @@
             this.txtApellido.TextMarginLeft = 3;
             this.txtApellido.TextMarginTop = 1;
             this.txtApellido.TextPlaceholder = "Apellidos";
+            this.TTContraseña.SetToolTip(this.txtApellido, "");
+            this.TTContraseña.SetToolTipIcon(this.txtApellido, null);
+            this.TTContraseña.SetToolTipTitle(this.txtApellido, "");
             this.txtApellido.UseSystemPasswordChar = false;
             this.txtApellido.WordWrap = true;
             // 
@@ -420,6 +448,9 @@
             this.bunifuPanel1.ShowBorders = true;
             this.bunifuPanel1.Size = new System.Drawing.Size(293, 51);
             this.bunifuPanel1.TabIndex = 3;
+            this.TTContraseña.SetToolTip(this.bunifuPanel1, "");
+            this.TTContraseña.SetToolTipIcon(this.bunifuPanel1, null);
+            this.TTContraseña.SetToolTipTitle(this.bunifuPanel1, "");
             // 
             // bunifuShadowPanel1
             // 
@@ -443,6 +474,9 @@
             this.bunifuShadowPanel1.Size = new System.Drawing.Size(300, 57);
             this.bunifuShadowPanel1.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
             this.bunifuShadowPanel1.TabIndex = 0;
+            this.TTContraseña.SetToolTip(this.bunifuShadowPanel1, "");
+            this.TTContraseña.SetToolTipIcon(this.bunifuShadowPanel1, null);
+            this.TTContraseña.SetToolTipTitle(this.bunifuShadowPanel1, "");
             // 
             // txtNombre
             // 
@@ -518,6 +552,9 @@
             this.txtNombre.TextMarginLeft = 3;
             this.txtNombre.TextMarginTop = 1;
             this.txtNombre.TextPlaceholder = "Nombres";
+            this.TTContraseña.SetToolTip(this.txtNombre, "");
+            this.TTContraseña.SetToolTipIcon(this.txtNombre, null);
+            this.TTContraseña.SetToolTipTitle(this.txtNombre, "");
             this.txtNombre.UseSystemPasswordChar = false;
             this.txtNombre.WordWrap = true;
             // 
@@ -531,12 +568,15 @@
             this.lblApellidos.Location = new System.Drawing.Point(421, 133);
             this.lblApellidos.Name = "lblApellidos";
             this.lblApellidos.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblApellidos.Size = new System.Drawing.Size(158, 39);
+            this.lblApellidos.Size = new System.Drawing.Size(92, 23);
             this.lblApellidos.TabIndex = 11;
             this.lblApellidos.TabStop = false;
             this.lblApellidos.Text = "Apellidos:";
             this.lblApellidos.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lblApellidos.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.TTContraseña.SetToolTip(this.lblApellidos, "");
+            this.TTContraseña.SetToolTipIcon(this.lblApellidos, null);
+            this.TTContraseña.SetToolTipTitle(this.lblApellidos, "");
             // 
             // lblNombres
             // 
@@ -549,12 +589,15 @@
             this.lblNombres.Location = new System.Drawing.Point(66, 133);
             this.lblNombres.Name = "lblNombres";
             this.lblNombres.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblNombres.Size = new System.Drawing.Size(154, 39);
+            this.lblNombres.Size = new System.Drawing.Size(88, 23);
             this.lblNombres.TabIndex = 12;
             this.lblNombres.TabStop = false;
             this.lblNombres.Text = "Nombres:";
             this.lblNombres.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lblNombres.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.TTContraseña.SetToolTip(this.lblNombres, "");
+            this.TTContraseña.SetToolTipIcon(this.lblNombres, null);
+            this.TTContraseña.SetToolTipTitle(this.lblNombres, "");
             // 
             // bunifuGradientPanel3
             // 
@@ -575,6 +618,9 @@
             this.bunifuGradientPanel3.Quality = 10;
             this.bunifuGradientPanel3.Size = new System.Drawing.Size(1280, 101);
             this.bunifuGradientPanel3.TabIndex = 0;
+            this.TTContraseña.SetToolTip(this.bunifuGradientPanel3, "");
+            this.TTContraseña.SetToolTipIcon(this.bunifuGradientPanel3, null);
+            this.TTContraseña.SetToolTipTitle(this.bunifuGradientPanel3, "");
             // 
             // menuStrip1
             // 
@@ -587,6 +633,9 @@
             this.menuStrip1.Size = new System.Drawing.Size(1280, 27);
             this.menuStrip1.TabIndex = 14;
             this.menuStrip1.Text = "menuStrip1";
+            this.TTContraseña.SetToolTip(this.menuStrip1, "");
+            this.TTContraseña.SetToolTipIcon(this.menuStrip1, null);
+            this.TTContraseña.SetToolTipTitle(this.menuStrip1, "");
             this.menuStrip1.Visible = false;
             // 
             // txtIDUsuario
@@ -615,6 +664,9 @@
             this.btnSalir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnSalir.TabIndex = 1;
             this.btnSalir.TabStop = false;
+            this.TTContraseña.SetToolTip(this.btnSalir, "");
+            this.TTContraseña.SetToolTipIcon(this.btnSalir, null);
+            this.TTContraseña.SetToolTipTitle(this.btnSalir, "");
             this.btnSalir.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Square;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
@@ -630,12 +682,15 @@
             this.Titulo_Registrar.Location = new System.Drawing.Point(51, 32);
             this.Titulo_Registrar.Name = "Titulo_Registrar";
             this.Titulo_Registrar.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.Titulo_Registrar.Size = new System.Drawing.Size(1313, 119);
+            this.Titulo_Registrar.Size = new System.Drawing.Size(387, 36);
             this.Titulo_Registrar.TabIndex = 0;
             this.Titulo_Registrar.TabStop = false;
             this.Titulo_Registrar.Text = "Registrar Nuevo Profesional";
             this.Titulo_Registrar.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.Titulo_Registrar.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.TTContraseña.SetToolTip(this.Titulo_Registrar, "");
+            this.TTContraseña.SetToolTipIcon(this.Titulo_Registrar, null);
+            this.TTContraseña.SetToolTipTitle(this.Titulo_Registrar, "");
             // 
             // bunifuShadowPanel2
             // 
@@ -659,6 +714,9 @@
             this.bunifuShadowPanel2.Size = new System.Drawing.Size(1280, 110);
             this.bunifuShadowPanel2.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
             this.bunifuShadowPanel2.TabIndex = 13;
+            this.TTContraseña.SetToolTip(this.bunifuShadowPanel2, "");
+            this.TTContraseña.SetToolTipIcon(this.bunifuShadowPanel2, null);
+            this.TTContraseña.SetToolTipTitle(this.bunifuShadowPanel2, "");
             // 
             // bunifuPanel3
             // 
@@ -675,6 +733,9 @@
             this.bunifuPanel3.ShowBorders = true;
             this.bunifuPanel3.Size = new System.Drawing.Size(221, 51);
             this.bunifuPanel3.TabIndex = 9;
+            this.TTContraseña.SetToolTip(this.bunifuPanel3, "");
+            this.TTContraseña.SetToolTipIcon(this.bunifuPanel3, null);
+            this.TTContraseña.SetToolTipTitle(this.bunifuPanel3, "");
             // 
             // btnEliminar
             // 
@@ -764,6 +825,9 @@
             this.btnEliminar.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnEliminar.TextMarginLeft = 0;
             this.btnEliminar.TextPadding = new System.Windows.Forms.Padding(0);
+            this.TTContraseña.SetToolTip(this.btnEliminar, "");
+            this.TTContraseña.SetToolTipIcon(this.btnEliminar, null);
+            this.TTContraseña.SetToolTipTitle(this.btnEliminar, "");
             this.btnEliminar.UseDefaultRadiusAndThickness = true;
             // 
             // btnRegistrar
@@ -853,6 +917,9 @@
             this.btnRegistrar.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnRegistrar.TextMarginLeft = 0;
             this.btnRegistrar.TextPadding = new System.Windows.Forms.Padding(0);
+            this.TTContraseña.SetToolTip(this.btnRegistrar, "");
+            this.TTContraseña.SetToolTipIcon(this.btnRegistrar, null);
+            this.TTContraseña.SetToolTipTitle(this.btnRegistrar, "");
             this.btnRegistrar.UseDefaultRadiusAndThickness = true;
             // 
             // txtTelefono
@@ -866,6 +933,9 @@
             this.txtTelefono.ShortcutsEnabled = false;
             this.txtTelefono.Size = new System.Drawing.Size(264, 25);
             this.txtTelefono.TabIndex = 0;
+            this.TTContraseña.SetToolTip(this.txtTelefono, "");
+            this.TTContraseña.SetToolTipIcon(this.txtTelefono, null);
+            this.TTContraseña.SetToolTipTitle(this.txtTelefono, "");
             // 
             // bunifuGradientPanel1
             // 
@@ -905,6 +975,9 @@
             this.bunifuGradientPanel1.Quality = 10;
             this.bunifuGradientPanel1.Size = new System.Drawing.Size(1280, 720);
             this.bunifuGradientPanel1.TabIndex = 0;
+            this.TTContraseña.SetToolTip(this.bunifuGradientPanel1, "");
+            this.TTContraseña.SetToolTipIcon(this.bunifuGradientPanel1, null);
+            this.TTContraseña.SetToolTipTitle(this.bunifuGradientPanel1, "");
             // 
             // cmbDesempeno
             // 
@@ -949,6 +1022,9 @@
             this.cmbDesempeno.Text = null;
             this.cmbDesempeno.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
             this.cmbDesempeno.TextLeftMargin = 5;
+            this.TTContraseña.SetToolTip(this.cmbDesempeno, "");
+            this.TTContraseña.SetToolTipIcon(this.cmbDesempeno, null);
+            this.TTContraseña.SetToolTipTitle(this.cmbDesempeno, "");
             // 
             // bpGuardar
             // 
@@ -966,6 +1042,9 @@
             this.bpGuardar.ShowBorders = true;
             this.bpGuardar.Size = new System.Drawing.Size(248, 76);
             this.bpGuardar.TabIndex = 48;
+            this.TTContraseña.SetToolTip(this.bpGuardar, "");
+            this.TTContraseña.SetToolTipIcon(this.bpGuardar, null);
+            this.TTContraseña.SetToolTipTitle(this.bpGuardar, "");
             // 
             // bpRegistrar
             // 
@@ -982,6 +1061,9 @@
             this.bpRegistrar.ShowBorders = true;
             this.bpRegistrar.Size = new System.Drawing.Size(248, 76);
             this.bpRegistrar.TabIndex = 0;
+            this.TTContraseña.SetToolTip(this.bpRegistrar, "");
+            this.TTContraseña.SetToolTipIcon(this.bpRegistrar, null);
+            this.TTContraseña.SetToolTipTitle(this.bpRegistrar, "");
             // 
             // btnGuardar
             // 
@@ -1070,6 +1152,9 @@
             this.btnGuardar.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnGuardar.TextMarginLeft = 0;
             this.btnGuardar.TextPadding = new System.Windows.Forms.Padding(0);
+            this.TTContraseña.SetToolTip(this.btnGuardar, "");
+            this.TTContraseña.SetToolTipIcon(this.btnGuardar, null);
+            this.TTContraseña.SetToolTipTitle(this.btnGuardar, "");
             this.btnGuardar.UseDefaultRadiusAndThickness = true;
             // 
             // bunifuPanel4
@@ -1087,6 +1172,9 @@
             this.bunifuPanel4.ShowBorders = true;
             this.bunifuPanel4.Size = new System.Drawing.Size(221, 50);
             this.bunifuPanel4.TabIndex = 8;
+            this.TTContraseña.SetToolTip(this.bunifuPanel4, "");
+            this.TTContraseña.SetToolTipIcon(this.bunifuPanel4, null);
+            this.TTContraseña.SetToolTipTitle(this.bunifuPanel4, "");
             // 
             // btnCargarImagen
             // 
@@ -1176,6 +1264,9 @@
             this.btnCargarImagen.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnCargarImagen.TextMarginLeft = 0;
             this.btnCargarImagen.TextPadding = new System.Windows.Forms.Padding(0);
+            this.TTContraseña.SetToolTip(this.btnCargarImagen, "");
+            this.TTContraseña.SetToolTipIcon(this.btnCargarImagen, null);
+            this.TTContraseña.SetToolTipTitle(this.btnCargarImagen, "");
             this.btnCargarImagen.UseDefaultRadiusAndThickness = true;
             // 
             // lblDesempeno1
@@ -1188,12 +1279,15 @@
             this.lblDesempeno1.Location = new System.Drawing.Point(67, 613);
             this.lblDesempeno1.Name = "lblDesempeno1";
             this.lblDesempeno1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblDesempeno1.Size = new System.Drawing.Size(204, 39);
+            this.lblDesempeno1.Size = new System.Drawing.Size(116, 23);
             this.lblDesempeno1.TabIndex = 44;
             this.lblDesempeno1.TabStop = false;
             this.lblDesempeno1.Text = "Desempeño:";
             this.lblDesempeno1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lblDesempeno1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.TTContraseña.SetToolTip(this.lblDesempeno1, "");
+            this.TTContraseña.SetToolTipIcon(this.lblDesempeno1, null);
+            this.TTContraseña.SetToolTipTitle(this.lblDesempeno1, "");
             // 
             // picProfesional
             // 
@@ -1209,6 +1303,9 @@
             this.picProfesional.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picProfesional.TabIndex = 36;
             this.picProfesional.TabStop = false;
+            this.TTContraseña.SetToolTip(this.picProfesional, "");
+            this.TTContraseña.SetToolTipIcon(this.picProfesional, null);
+            this.TTContraseña.SetToolTipTitle(this.picProfesional, "");
             this.picProfesional.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Custom;
             // 
             // bunifuShadowPanel8
@@ -1233,6 +1330,9 @@
             this.bunifuShadowPanel8.Size = new System.Drawing.Size(655, 57);
             this.bunifuShadowPanel8.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
             this.bunifuShadowPanel8.TabIndex = 6;
+            this.TTContraseña.SetToolTip(this.bunifuShadowPanel8, "");
+            this.TTContraseña.SetToolTipIcon(this.bunifuShadowPanel8, null);
+            this.TTContraseña.SetToolTipTitle(this.bunifuShadowPanel8, "");
             // 
             // txtCorreo
             // 
@@ -1308,6 +1408,9 @@
             this.txtCorreo.TextMarginLeft = 3;
             this.txtCorreo.TextMarginTop = 1;
             this.txtCorreo.TextPlaceholder = "Dirección de Correo";
+            this.TTContraseña.SetToolTip(this.txtCorreo, "");
+            this.TTContraseña.SetToolTipIcon(this.txtCorreo, null);
+            this.TTContraseña.SetToolTipTitle(this.txtCorreo, "");
             this.txtCorreo.UseSystemPasswordChar = false;
             this.txtCorreo.WordWrap = true;
             // 
@@ -1321,12 +1424,15 @@
             this.lblCorreo.Location = new System.Drawing.Point(66, 464);
             this.lblCorreo.Name = "lblCorreo";
             this.lblCorreo.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblCorreo.Size = new System.Drawing.Size(308, 39);
+            this.lblCorreo.Size = new System.Drawing.Size(176, 23);
             this.lblCorreo.TabIndex = 33;
             this.lblCorreo.TabStop = false;
             this.lblCorreo.Text = "Correo Electrónico:";
             this.lblCorreo.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lblCorreo.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.TTContraseña.SetToolTip(this.lblCorreo, "");
+            this.TTContraseña.SetToolTipIcon(this.lblCorreo, null);
+            this.TTContraseña.SetToolTipTitle(this.lblCorreo, "");
             // 
             // bsContrasena
             // 
@@ -1350,6 +1456,9 @@
             this.bsContrasena.Size = new System.Drawing.Size(300, 57);
             this.bsContrasena.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
             this.bsContrasena.TabIndex = 5;
+            this.TTContraseña.SetToolTip(this.bsContrasena, "");
+            this.TTContraseña.SetToolTipIcon(this.bsContrasena, null);
+            this.TTContraseña.SetToolTipTitle(this.bsContrasena, "");
             // 
             // txtContrasena
             // 
@@ -1425,6 +1534,10 @@
             this.txtContrasena.TextMarginLeft = 3;
             this.txtContrasena.TextMarginTop = 1;
             this.txtContrasena.TextPlaceholder = "Contraseña";
+            this.TTContraseña.SetToolTip(this.txtContrasena, "La contraseña debe contener mínimo:\r\n- Caracter especial (@, $, #, _)\r\n- Números\r" +
+        "\n- Longitud de 12 carácteres\r\n- Mayúsculas y minúsculas");
+            this.TTContraseña.SetToolTipIcon(this.txtContrasena, null);
+            this.TTContraseña.SetToolTipTitle(this.txtContrasena, "");
             this.txtContrasena.UseSystemPasswordChar = false;
             this.txtContrasena.WordWrap = true;
             // 
@@ -1438,12 +1551,15 @@
             this.lblContrasena.Location = new System.Drawing.Point(421, 348);
             this.lblContrasena.Name = "lblContrasena";
             this.lblContrasena.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblContrasena.Size = new System.Drawing.Size(197, 39);
+            this.lblContrasena.Size = new System.Drawing.Size(112, 23);
             this.lblContrasena.TabIndex = 32;
             this.lblContrasena.TabStop = false;
             this.lblContrasena.Text = "Contraseña:";
             this.lblContrasena.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lblContrasena.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.TTContraseña.SetToolTip(this.lblContrasena, "");
+            this.TTContraseña.SetToolTipIcon(this.lblContrasena, null);
+            this.TTContraseña.SetToolTipTitle(this.lblContrasena, "");
             // 
             // bunifuShadowPanel7
             // 
@@ -1467,6 +1583,9 @@
             this.bunifuShadowPanel7.Size = new System.Drawing.Size(300, 57);
             this.bunifuShadowPanel7.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
             this.bunifuShadowPanel7.TabIndex = 4;
+            this.TTContraseña.SetToolTip(this.bunifuShadowPanel7, "");
+            this.TTContraseña.SetToolTipIcon(this.bunifuShadowPanel7, null);
+            this.TTContraseña.SetToolTipTitle(this.bunifuShadowPanel7, "");
             // 
             // bunifuPanel2
             // 
@@ -1483,6 +1602,9 @@
             this.bunifuPanel2.ShowBorders = true;
             this.bunifuPanel2.Size = new System.Drawing.Size(297, 51);
             this.bunifuPanel2.TabIndex = 0;
+            this.TTContraseña.SetToolTip(this.bunifuPanel2, "");
+            this.TTContraseña.SetToolTipIcon(this.bunifuPanel2, null);
+            this.TTContraseña.SetToolTipTitle(this.bunifuPanel2, "");
             // 
             // ofdImagen
             // 
@@ -1628,6 +1750,41 @@
             this.NotificacionRegistro.WarningOptions.IconLeftMargin = 12;
             this.NotificacionRegistro.ZoomCloseIcon = true;
             // 
+            // TTContraseña
+            // 
+            this.TTContraseña.Active = true;
+            this.TTContraseña.AlignTextWithTitle = false;
+            this.TTContraseña.AllowAutoClose = false;
+            this.TTContraseña.AllowFading = true;
+            this.TTContraseña.AutoCloseDuration = 5000;
+            this.TTContraseña.BackColor = System.Drawing.SystemColors.Control;
+            this.TTContraseña.BorderColor = System.Drawing.Color.Gainsboro;
+            this.TTContraseña.ClickToShowDisplayControl = false;
+            this.TTContraseña.ConvertNewlinesToBreakTags = true;
+            this.TTContraseña.DisplayControl = null;
+            this.TTContraseña.EntryAnimationSpeed = 350;
+            this.TTContraseña.ExitAnimationSpeed = 200;
+            this.TTContraseña.GenerateAutoCloseDuration = false;
+            this.TTContraseña.IconMargin = 6;
+            this.TTContraseña.InitialDelay = 0;
+            this.TTContraseña.Name = "TTContraseña";
+            this.TTContraseña.Opacity = 1D;
+            this.TTContraseña.OverrideToolTipTitles = false;
+            this.TTContraseña.Padding = new System.Windows.Forms.Padding(10);
+            this.TTContraseña.ReshowDelay = 100;
+            this.TTContraseña.ShowAlways = true;
+            this.TTContraseña.ShowBorders = false;
+            this.TTContraseña.ShowIcons = true;
+            this.TTContraseña.ShowShadows = true;
+            this.TTContraseña.Tag = null;
+            this.TTContraseña.TextFont = new System.Drawing.Font("Segoe UI", 9F);
+            this.TTContraseña.TextForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.TTContraseña.TextMargin = 2;
+            this.TTContraseña.TitleFont = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.TTContraseña.TitleForeColor = System.Drawing.Color.Black;
+            this.TTContraseña.ToolTipPosition = new System.Drawing.Point(0, 0);
+            this.TTContraseña.ToolTipTitle = null;
+            // 
             // RegistroForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1713,5 +1870,6 @@
         public Bunifu.UI.WinForms.BunifuSnackbar Notificacion1;
         public Bunifu.UI.WinForms.BunifuSnackbar NotificacionRegistro;
         public Bunifu.UI.WinForms.BunifuTextBox txtApellido;
+        private Bunifu.UI.WinForms.BunifuToolTip TTContraseña;
     }
 }
