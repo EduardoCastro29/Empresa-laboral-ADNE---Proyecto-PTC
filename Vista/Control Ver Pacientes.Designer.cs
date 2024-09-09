@@ -304,6 +304,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.pnlFondoPacienteUC);
+            this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "ControlVerPacientesUC";
             this.Size = new System.Drawing.Size(914, 100);
             this.pnlFondoPacienteUC.ResumeLayout(false);

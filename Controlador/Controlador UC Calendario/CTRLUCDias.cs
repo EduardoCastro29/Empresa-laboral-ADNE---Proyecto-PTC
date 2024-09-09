@@ -48,7 +48,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador.Controlador_UC_Calenda
         //Cambio de color cuando el cursor se encuentra sobre el User control
         public void HoverUC(object sender, EventArgs e)
         {
-            ObjUCDIAS.BackColor = Color.PaleTurquoise;
+            ObjUCDIAS.btnCalendar.BackColor = Color.PaleTurquoise;
         }
         //Este método hace que el UC vuelva a la normalidad
         public void NormalUC(object sender, EventArgs e)
@@ -67,9 +67,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador.Controlador_UC_Calenda
             }
             else
             {
-                ObjUCDIAS.lblDias.ForeColor = Color.White; // Volver al color blanco para otros días
-  
-
+                ObjUCDIAS.btnCalendar.BackColor = Color.White; // Volver al color blanco para otros días
             }
         }
     }

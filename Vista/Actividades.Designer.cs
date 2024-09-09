@@ -68,13 +68,14 @@
             this.GraficoCitas = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.pnlSombraSiguientePaciente = new Bunifu.UI.WinForms.BunifuShadowPanel();
             this.pnlSiguientePaciente = new Bunifu.UI.WinForms.BunifuPanel();
+            this.plSiguientePaciente = new System.Windows.Forms.Panel();
+            this.bunifuLabel3 = new Bunifu.UI.WinForms.BunifuLabel();
             this.lblHora = new Bunifu.UI.WinForms.BunifuLabel();
             this.lblHoraCita = new Bunifu.UI.WinForms.BunifuLabel();
             this.lblLugar = new Bunifu.UI.WinForms.BunifuLabel();
             this.lblDia = new Bunifu.UI.WinForms.BunifuLabel();
             this.lblLugarCita = new Bunifu.UI.WinForms.BunifuLabel();
             this.lblDiaCita = new Bunifu.UI.WinForms.BunifuLabel();
-            this.flpSiguientePaciente = new System.Windows.Forms.FlowLayoutPanel();
             this.lblSiguiente = new Bunifu.UI.WinForms.BunifuLabel();
             this.pnlSombraHistorial = new Bunifu.UI.WinForms.BunifuShadowPanel();
             this.pnlHistorial = new Bunifu.UI.WinForms.BunifuPanel();
@@ -91,6 +92,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.GraficoCitas)).BeginInit();
             this.pnlSombraSiguientePaciente.SuspendLayout();
             this.pnlSiguientePaciente.SuspendLayout();
+            this.plSiguientePaciente.SuspendLayout();
             this.pnlSombraHistorial.SuspendLayout();
             this.pnlHistorial.SuspendLayout();
             this.pnlFondoBase.SuspendLayout();
@@ -416,7 +418,7 @@
             this.bunifuLabel2.AutoEllipsis = false;
             this.bunifuLabel2.CursorType = null;
             this.bunifuLabel2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuLabel2.Location = new System.Drawing.Point(214, 54);
+            this.bunifuLabel2.Location = new System.Drawing.Point(224, 54);
             this.bunifuLabel2.Name = "bunifuLabel2";
             this.bunifuLabel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel2.Size = new System.Drawing.Size(53, 23);
@@ -431,7 +433,7 @@
             this.bunifuLabel1.AutoEllipsis = false;
             this.bunifuLabel1.CursorType = null;
             this.bunifuLabel1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuLabel1.Location = new System.Drawing.Point(214, 20);
+            this.bunifuLabel1.Location = new System.Drawing.Point(224, 20);
             this.bunifuLabel1.Name = "bunifuLabel1";
             this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel1.Size = new System.Drawing.Size(58, 23);
@@ -461,10 +463,10 @@
             this.dtFechaFinal.IconColor = System.Drawing.Color.LightSeaGreen;
             this.dtFechaFinal.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
             this.dtFechaFinal.LeftTextMargin = 5;
-            this.dtFechaFinal.Location = new System.Drawing.Point(279, 51);
+            this.dtFechaFinal.Location = new System.Drawing.Point(289, 51);
             this.dtFechaFinal.MinimumSize = new System.Drawing.Size(4, 32);
             this.dtFechaFinal.Name = "dtFechaFinal";
-            this.dtFechaFinal.Size = new System.Drawing.Size(273, 32);
+            this.dtFechaFinal.Size = new System.Drawing.Size(289, 32);
             this.dtFechaFinal.TabIndex = 16;
             this.dtFechaFinal.TabStop = false;
             // 
@@ -489,10 +491,10 @@
             this.dtFechaInicio.IconColor = System.Drawing.Color.LightSeaGreen;
             this.dtFechaInicio.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
             this.dtFechaInicio.LeftTextMargin = 5;
-            this.dtFechaInicio.Location = new System.Drawing.Point(279, 16);
+            this.dtFechaInicio.Location = new System.Drawing.Point(289, 16);
             this.dtFechaInicio.MinimumSize = new System.Drawing.Size(4, 32);
             this.dtFechaInicio.Name = "dtFechaInicio";
-            this.dtFechaInicio.Size = new System.Drawing.Size(273, 32);
+            this.dtFechaInicio.Size = new System.Drawing.Size(289, 32);
             this.dtFechaInicio.TabIndex = 15;
             this.dtFechaInicio.TabStop = false;
             // 
@@ -544,7 +546,7 @@
             this.btnVerEsteMes.IdleIconLeftImage = null;
             this.btnVerEsteMes.IdleIconRightImage = null;
             this.btnVerEsteMes.IndicateFocus = false;
-            this.btnVerEsteMes.Location = new System.Drawing.Point(16, 91);
+            this.btnVerEsteMes.Location = new System.Drawing.Point(22, 90);
             this.btnVerEsteMes.Name = "btnVerEsteMes";
             this.btnVerEsteMes.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnVerEsteMes.OnDisabledState.BorderRadius = 10;
@@ -578,7 +580,7 @@
             this.btnVerEsteMes.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btnVerEsteMes.OnPressedState.IconLeftImage = null;
             this.btnVerEsteMes.OnPressedState.IconRightImage = null;
-            this.btnVerEsteMes.Size = new System.Drawing.Size(140, 40);
+            this.btnVerEsteMes.Size = new System.Drawing.Size(145, 40);
             this.btnVerEsteMes.TabIndex = 2;
             this.btnVerEsteMes.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnVerEsteMes.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -634,7 +636,7 @@
             this.btnVer30Dias.IdleIconLeftImage = null;
             this.btnVer30Dias.IdleIconRightImage = null;
             this.btnVer30Dias.IndicateFocus = false;
-            this.btnVer30Dias.Location = new System.Drawing.Point(16, 137);
+            this.btnVer30Dias.Location = new System.Drawing.Point(22, 136);
             this.btnVer30Dias.Name = "btnVer30Dias";
             this.btnVer30Dias.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnVer30Dias.OnDisabledState.BorderRadius = 10;
@@ -668,7 +670,7 @@
             this.btnVer30Dias.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btnVer30Dias.OnPressedState.IconLeftImage = null;
             this.btnVer30Dias.OnPressedState.IconRightImage = null;
-            this.btnVer30Dias.Size = new System.Drawing.Size(140, 40);
+            this.btnVer30Dias.Size = new System.Drawing.Size(145, 40);
             this.btnVer30Dias.TabIndex = 3;
             this.btnVer30Dias.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnVer30Dias.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -718,7 +720,7 @@
             this.btnOk.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
             this.btnOk.IconSize = 25;
             this.btnOk.IdleBorderColor = System.Drawing.Color.MediumTurquoise;
-            this.btnOk.IdleBorderRadius = 10;
+            this.btnOk.IdleBorderRadius = 15;
             this.btnOk.IdleBorderThickness = 1;
             this.btnOk.IdleFillColor = System.Drawing.Color.MediumTurquoise;
             this.btnOk.IdleIconLeftImage = null;
@@ -727,7 +729,7 @@
             this.btnOk.Location = new System.Drawing.Point(609, 51);
             this.btnOk.Name = "btnOk";
             this.btnOk.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.btnOk.OnDisabledState.BorderRadius = 10;
+            this.btnOk.OnDisabledState.BorderRadius = 15;
             this.btnOk.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.btnOk.OnDisabledState.BorderThickness = 1;
             this.btnOk.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -735,7 +737,7 @@
             this.btnOk.OnDisabledState.IconLeftImage = null;
             this.btnOk.OnDisabledState.IconRightImage = null;
             this.btnOk.onHoverState.BorderColor = System.Drawing.Color.Transparent;
-            this.btnOk.onHoverState.BorderRadius = 10;
+            this.btnOk.onHoverState.BorderRadius = 15;
             this.btnOk.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.btnOk.onHoverState.BorderThickness = 1;
             this.btnOk.onHoverState.FillColor = System.Drawing.Color.Turquoise;
@@ -743,7 +745,7 @@
             this.btnOk.onHoverState.IconLeftImage = null;
             this.btnOk.onHoverState.IconRightImage = null;
             this.btnOk.OnIdleState.BorderColor = System.Drawing.Color.MediumTurquoise;
-            this.btnOk.OnIdleState.BorderRadius = 10;
+            this.btnOk.OnIdleState.BorderRadius = 15;
             this.btnOk.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.btnOk.OnIdleState.BorderThickness = 1;
             this.btnOk.OnIdleState.FillColor = System.Drawing.Color.MediumTurquoise;
@@ -751,7 +753,7 @@
             this.btnOk.OnIdleState.IconLeftImage = null;
             this.btnOk.OnIdleState.IconRightImage = null;
             this.btnOk.OnPressedState.BorderColor = System.Drawing.Color.Transparent;
-            this.btnOk.OnPressedState.BorderRadius = 10;
+            this.btnOk.OnPressedState.BorderRadius = 15;
             this.btnOk.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.btnOk.OnPressedState.BorderThickness = 1;
             this.btnOk.OnPressedState.FillColor = System.Drawing.Color.LightSeaGreen;
@@ -814,7 +816,7 @@
             this.btnVerPersonalizadoDia.IdleIconLeftImage = null;
             this.btnVerPersonalizadoDia.IdleIconRightImage = null;
             this.btnVerPersonalizadoDia.IndicateFocus = false;
-            this.btnVerPersonalizadoDia.Location = new System.Drawing.Point(16, 20);
+            this.btnVerPersonalizadoDia.Location = new System.Drawing.Point(22, 23);
             this.btnVerPersonalizadoDia.Name = "btnVerPersonalizadoDia";
             this.btnVerPersonalizadoDia.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnVerPersonalizadoDia.OnDisabledState.BorderRadius = 10;
@@ -848,7 +850,7 @@
             this.btnVerPersonalizadoDia.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btnVerPersonalizadoDia.OnPressedState.IconLeftImage = null;
             this.btnVerPersonalizadoDia.OnPressedState.IconRightImage = null;
-            this.btnVerPersonalizadoDia.Size = new System.Drawing.Size(140, 50);
+            this.btnVerPersonalizadoDia.Size = new System.Drawing.Size(145, 50);
             this.btnVerPersonalizadoDia.TabIndex = 1;
             this.btnVerPersonalizadoDia.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnVerPersonalizadoDia.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -904,7 +906,7 @@
             this.btnVerEsteDia.IdleIconLeftImage = null;
             this.btnVerEsteDia.IdleIconRightImage = null;
             this.btnVerEsteDia.IndicateFocus = false;
-            this.btnVerEsteDia.Location = new System.Drawing.Point(16, 229);
+            this.btnVerEsteDia.Location = new System.Drawing.Point(22, 230);
             this.btnVerEsteDia.Name = "btnVerEsteDia";
             this.btnVerEsteDia.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnVerEsteDia.OnDisabledState.BorderRadius = 10;
@@ -938,7 +940,7 @@
             this.btnVerEsteDia.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btnVerEsteDia.OnPressedState.IconLeftImage = null;
             this.btnVerEsteDia.OnPressedState.IconRightImage = null;
-            this.btnVerEsteDia.Size = new System.Drawing.Size(140, 40);
+            this.btnVerEsteDia.Size = new System.Drawing.Size(145, 40);
             this.btnVerEsteDia.TabIndex = 5;
             this.btnVerEsteDia.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnVerEsteDia.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -994,7 +996,7 @@
             this.btnVer7Dias.IdleIconLeftImage = null;
             this.btnVer7Dias.IdleIconRightImage = null;
             this.btnVer7Dias.IndicateFocus = false;
-            this.btnVer7Dias.Location = new System.Drawing.Point(16, 183);
+            this.btnVer7Dias.Location = new System.Drawing.Point(22, 183);
             this.btnVer7Dias.Name = "btnVer7Dias";
             this.btnVer7Dias.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnVer7Dias.OnDisabledState.BorderRadius = 10;
@@ -1028,7 +1030,7 @@
             this.btnVer7Dias.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btnVer7Dias.OnPressedState.IconLeftImage = null;
             this.btnVer7Dias.OnPressedState.IconRightImage = null;
-            this.btnVer7Dias.Size = new System.Drawing.Size(140, 40);
+            this.btnVer7Dias.Size = new System.Drawing.Size(145, 40);
             this.btnVer7Dias.TabIndex = 4;
             this.btnVer7Dias.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnVer7Dias.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1041,7 +1043,9 @@
             this.GraficoCitas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.GraficoCitas.BackColor = System.Drawing.Color.Transparent;
             this.GraficoCitas.BorderlineColor = System.Drawing.Color.Transparent;
+            this.GraficoCitas.BorderlineWidth = 0;
             chartArea1.AxisX.IsMarginVisible = false;
             chartArea1.AxisX.MajorGrid.LineColor = System.Drawing.Color.DarkGray;
             chartArea1.AxisX.ScrollBar.Enabled = false;
@@ -1054,7 +1058,7 @@
             this.GraficoCitas.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.GraficoCitas.Legends.Add(legend1);
-            this.GraficoCitas.Location = new System.Drawing.Point(158, 86);
+            this.GraficoCitas.Location = new System.Drawing.Point(170, 87);
             this.GraficoCitas.Margin = new System.Windows.Forms.Padding(0);
             this.GraficoCitas.Name = "GraficoCitas";
             series1.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.LeftRight;
@@ -1069,7 +1073,7 @@
             series1.Name = "Citas Agendadas";
             series1.YValuesPerPoint = 3;
             this.GraficoCitas.Series.Add(series1);
-            this.GraficoCitas.Size = new System.Drawing.Size(601, 211);
+            this.GraficoCitas.Size = new System.Drawing.Size(589, 209);
             this.GraficoCitas.TabIndex = 6;
             this.GraficoCitas.TabStop = false;
             // 
@@ -1106,13 +1110,13 @@
             this.pnlSiguientePaciente.BorderColor = System.Drawing.Color.Transparent;
             this.pnlSiguientePaciente.BorderRadius = 25;
             this.pnlSiguientePaciente.BorderThickness = 1;
+            this.pnlSiguientePaciente.Controls.Add(this.plSiguientePaciente);
             this.pnlSiguientePaciente.Controls.Add(this.lblHora);
             this.pnlSiguientePaciente.Controls.Add(this.lblHoraCita);
             this.pnlSiguientePaciente.Controls.Add(this.lblLugar);
             this.pnlSiguientePaciente.Controls.Add(this.lblDia);
             this.pnlSiguientePaciente.Controls.Add(this.lblLugarCita);
             this.pnlSiguientePaciente.Controls.Add(this.lblDiaCita);
-            this.pnlSiguientePaciente.Controls.Add(this.flpSiguientePaciente);
             this.pnlSiguientePaciente.Controls.Add(this.lblSiguiente);
             this.pnlSiguientePaciente.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlSiguientePaciente.Location = new System.Drawing.Point(4, 2);
@@ -1120,6 +1124,35 @@
             this.pnlSiguientePaciente.ShowBorders = true;
             this.pnlSiguientePaciente.Size = new System.Drawing.Size(946, 219);
             this.pnlSiguientePaciente.TabIndex = 0;
+            // 
+            // plSiguientePaciente
+            // 
+            this.plSiguientePaciente.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.plSiguientePaciente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(98)))), ((int)(((byte)(204)))), ((int)(((byte)(192)))));
+            this.plSiguientePaciente.Controls.Add(this.bunifuLabel3);
+            this.plSiguientePaciente.Location = new System.Drawing.Point(21, 100);
+            this.plSiguientePaciente.Name = "plSiguientePaciente";
+            this.plSiguientePaciente.Size = new System.Drawing.Size(905, 100);
+            this.plSiguientePaciente.TabIndex = 18;
+            // 
+            // bunifuLabel3
+            // 
+            this.bunifuLabel3.AllowParentOverrides = false;
+            this.bunifuLabel3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bunifuLabel3.AutoEllipsis = false;
+            this.bunifuLabel3.CursorType = null;
+            this.bunifuLabel3.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(172)))), ((int)(((byte)(158)))));
+            this.bunifuLabel3.Location = new System.Drawing.Point(254, 36);
+            this.bunifuLabel3.Name = "bunifuLabel3";
+            this.bunifuLabel3.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel3.Size = new System.Drawing.Size(422, 28);
+            this.bunifuLabel3.TabIndex = 19;
+            this.bunifuLabel3.TabStop = false;
+            this.bunifuLabel3.Text = "Parece que no tienes citas próximas\r\n";
+            this.bunifuLabel3.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel3.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // lblHora
             // 
@@ -1137,6 +1170,7 @@
             this.lblHora.Text = "10:00pm";
             this.lblHora.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lblHora.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.lblHora.Visible = false;
             // 
             // lblHoraCita
             // 
@@ -1154,6 +1188,7 @@
             this.lblHoraCita.Text = "Hora:";
             this.lblHoraCita.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lblHoraCita.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.lblHoraCita.Visible = false;
             // 
             // lblLugar
             // 
@@ -1162,7 +1197,7 @@
             this.lblLugar.AutoEllipsis = false;
             this.lblLugar.CursorType = null;
             this.lblLugar.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLugar.Location = new System.Drawing.Point(807, 64);
+            this.lblLugar.Location = new System.Drawing.Point(807, 66);
             this.lblLugar.Name = "lblLugar";
             this.lblLugar.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblLugar.Size = new System.Drawing.Size(91, 22);
@@ -1171,6 +1206,7 @@
             this.lblLugar.Text = "Presencial";
             this.lblLugar.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lblLugar.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.lblLugar.Visible = false;
             // 
             // lblDia
             // 
@@ -1188,6 +1224,7 @@
             this.lblDia.Text = "26/12/2024";
             this.lblDia.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lblDia.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.lblDia.Visible = false;
             // 
             // lblLugarCita
             // 
@@ -1205,6 +1242,7 @@
             this.lblLugarCita.Text = "Lugar:";
             this.lblLugarCita.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lblLugarCita.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.lblLugarCita.Visible = false;
             // 
             // lblDiaCita
             // 
@@ -1222,15 +1260,7 @@
             this.lblDiaCita.Text = "Día:";
             this.lblDiaCita.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lblDiaCita.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // flpSiguientePaciente
-            // 
-            this.flpSiguientePaciente.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.flpSiguientePaciente.Location = new System.Drawing.Point(25, 98);
-            this.flpSiguientePaciente.Name = "flpSiguientePaciente";
-            this.flpSiguientePaciente.Size = new System.Drawing.Size(896, 105);
-            this.flpSiguientePaciente.TabIndex = 10;
+            this.lblDiaCita.Visible = false;
             // 
             // lblSiguiente
             // 
@@ -1239,7 +1269,7 @@
             this.lblSiguiente.Cursor = System.Windows.Forms.Cursors.Default;
             this.lblSiguiente.CursorType = System.Windows.Forms.Cursors.Default;
             this.lblSiguiente.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSiguiente.Location = new System.Drawing.Point(27, 26);
+            this.lblSiguiente.Location = new System.Drawing.Point(27, 25);
             this.lblSiguiente.Name = "lblSiguiente";
             this.lblSiguiente.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblSiguiente.Size = new System.Drawing.Size(126, 32);
@@ -1462,6 +1492,8 @@
             this.pnlSombraSiguientePaciente.ResumeLayout(false);
             this.pnlSiguientePaciente.ResumeLayout(false);
             this.pnlSiguientePaciente.PerformLayout();
+            this.plSiguientePaciente.ResumeLayout(false);
+            this.plSiguientePaciente.PerformLayout();
             this.pnlSombraHistorial.ResumeLayout(false);
             this.pnlHistorial.ResumeLayout(false);
             this.pnlHistorial.PerformLayout();
@@ -1484,7 +1516,6 @@
         public Bunifu.UI.WinForms.BunifuLabel lblHistorial;
         public Bunifu.UI.WinForms.BunifuShadowPanel pnlSombraSiguientePaciente;
         public Bunifu.UI.WinForms.BunifuPanel pnlSiguientePaciente;
-        public System.Windows.Forms.FlowLayoutPanel flpSiguientePaciente;
         public Bunifu.UI.WinForms.BunifuShadowPanel pnlSombraPanelGrafico;
         public Bunifu.UI.WinForms.BunifuPanel pnlGrafico;
         public Bunifu.UI.WinForms.BunifuShadowPanel pnlSombraCitas;
@@ -1515,5 +1546,7 @@
         public Bunifu.UI.WinForms.BunifuDatePicker dtFechaInicio;
         public Bunifu.UI.WinForms.BunifuLabel bunifuLabel2;
         public Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
+        public Bunifu.UI.WinForms.BunifuLabel bunifuLabel3;
+        public System.Windows.Forms.Panel plSiguientePaciente;
     }
 }

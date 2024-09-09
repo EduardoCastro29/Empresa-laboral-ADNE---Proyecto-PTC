@@ -82,7 +82,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
         {
             DAODireccionGmail ObjVerificarCorreoUsuario = new DAODireccionGmail();
 
-            if (ObjDireccionGmailForm.txtIngresarEmail.Text.Length < 10 ||
+            if (string.IsNullOrWhiteSpace(ObjDireccionGmailForm.txtIngresarEmail.Text.Trim()) ||
                 ObjVerificarCorreoUsuario.VerificarCorreoUsuario(ObjDireccionGmailForm.txtIngresarEmail.Text.Trim()) == null)
             {
                 MessageBox.Show("Por favor, ingrese un nombre de usuario/dirección de correo válida antes de seguir", "Recuperación de Contraseña", MessageBoxButtons.OK, MessageBoxIcon.Error);

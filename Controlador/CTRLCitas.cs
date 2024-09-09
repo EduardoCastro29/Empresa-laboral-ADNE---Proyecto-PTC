@@ -76,7 +76,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                 guardar.FileName = DateTime.Now.ToString("ddMMyyyy") + ".pdf";
 
                 DAODiagnosticos objCitasDAO = new DAODiagnosticos();
-                objCitasDAO.DocumentoPaciente = objUC.lblPacienteId.Text;
+                objCitasDAO.DocumentoPaciente = objUC.lblDUI.Text;
                 objCitasDAO.CitaId = int.Parse(objUC.lblCitaId.Text);
                 objCitasDAO.N_expediente = int.Parse(objUC.lblExpedienteId.Text);
 
@@ -139,10 +139,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                             pdfDoc.Close();
                             stream.Close();
                         }
-                    }
-                    else
-                    {
-                        MessageBox.Show("No se encontraron datos para el paciente seleccionado.", "Proceso interrumpido", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }

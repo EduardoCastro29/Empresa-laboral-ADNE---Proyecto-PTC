@@ -80,11 +80,11 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
             {
                 Conexion.Connection = Conectar();
 
-                string info = "SELECT * FROM vistaObtenerInformacionYExpediente WHERE [ID del Paciente] = @pacienteId " +
+                string info = "SELECT * FROM vistaObtenerInformacionYExpediente WHERE [Documento Presentado] = @documentoPresentado " +
                               "AND [ID del Expediente] = @expedienteId AND [ID de la Cita] = @citaId";
                 SqlCommand objComando = new SqlCommand(info, Conexion.Connection);
 
-                objComando.Parameters.AddWithValue("@pacienteId", DocumentoPaciente);
+                objComando.Parameters.AddWithValue("@documentoPresentado", DocumentoPaciente);
                 objComando.Parameters.AddWithValue("@expedienteId", N_expediente);
                 objComando.Parameters.AddWithValue("@citaId", CitaId);
 

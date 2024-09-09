@@ -154,7 +154,7 @@
             this.txtBuscarPaciente.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtBuscarPaciente.Lines = new string[0];
             this.txtBuscarPaciente.Location = new System.Drawing.Point(5, 2);
-            this.txtBuscarPaciente.MaxLength = 32767;
+            this.txtBuscarPaciente.MaxLength = 130;
             this.txtBuscarPaciente.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtBuscarPaciente.Modified = false;
             this.txtBuscarPaciente.Multiline = false;

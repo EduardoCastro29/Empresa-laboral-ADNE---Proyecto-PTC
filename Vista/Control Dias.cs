@@ -20,7 +20,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Vista
         }
         public void ModificarFondo(Color color)
         {
-            this.BackColor = color;
+            this.btnCalendar.BackColor = color;
         }
     }
 }

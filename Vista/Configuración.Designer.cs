@@ -460,7 +460,7 @@
             this.bunifuLabel2.CursorType = null;
             this.bunifuLabel2.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuLabel2.ForeColor = System.Drawing.Color.White;
-            this.bunifuLabel2.Location = new System.Drawing.Point(334, 209);
+            this.bunifuLabel2.Location = new System.Drawing.Point(318, 209);
             this.bunifuLabel2.Name = "bunifuLabel2";
             this.bunifuLabel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel2.Size = new System.Drawing.Size(303, 25);
@@ -477,7 +477,7 @@
             this.lblCorreoUsuario.CursorType = null;
             this.lblCorreoUsuario.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCorreoUsuario.ForeColor = System.Drawing.Color.White;
-            this.lblCorreoUsuario.Location = new System.Drawing.Point(334, 164);
+            this.lblCorreoUsuario.Location = new System.Drawing.Point(318, 164);
             this.lblCorreoUsuario.Name = "lblCorreoUsuario";
             this.lblCorreoUsuario.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblCorreoUsuario.Size = new System.Drawing.Size(193, 25);
@@ -494,7 +494,7 @@
             this.lblUsuarioo.CursorType = null;
             this.lblUsuarioo.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsuarioo.ForeColor = System.Drawing.Color.White;
-            this.lblUsuarioo.Location = new System.Drawing.Point(334, 120);
+            this.lblUsuarioo.Location = new System.Drawing.Point(318, 120);
             this.lblUsuarioo.Name = "lblUsuarioo";
             this.lblUsuarioo.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblUsuarioo.Size = new System.Drawing.Size(81, 25);
@@ -512,7 +512,7 @@
             this.lblProfesional.CursorType = System.Windows.Forms.Cursors.Default;
             this.lblProfesional.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProfesional.ForeColor = System.Drawing.Color.White;
-            this.lblProfesional.Location = new System.Drawing.Point(334, 76);
+            this.lblProfesional.Location = new System.Drawing.Point(318, 76);
             this.lblProfesional.Name = "lblProfesional";
             this.lblProfesional.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblProfesional.Size = new System.Drawing.Size(243, 25);
@@ -527,7 +527,7 @@
             this.lblCorreo.AutoSize = true;
             this.lblCorreo.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCorreo.ForeColor = System.Drawing.Color.White;
-            this.lblCorreo.Location = new System.Drawing.Point(538, 165);
+            this.lblCorreo.Location = new System.Drawing.Point(522, 165);
             this.lblCorreo.Margin = new System.Windows.Forms.Padding(20, 0, 3, 20);
             this.lblCorreo.Name = "lblCorreo";
             this.lblCorreo.Size = new System.Drawing.Size(63, 24);
@@ -630,7 +630,7 @@
             this.lblDUI.AutoSize = true;
             this.lblDUI.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDUI.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.lblDUI.Location = new System.Drawing.Point(642, 209);
+            this.lblDUI.Location = new System.Drawing.Point(626, 209);
             this.lblDUI.Margin = new System.Windows.Forms.Padding(20, 0, 3, 20);
             this.lblDUI.Name = "lblDUI";
             this.lblDUI.Size = new System.Drawing.Size(125, 24);
@@ -642,7 +642,7 @@
             this.lblUsuario.AutoSize = true;
             this.lblUsuario.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsuario.ForeColor = System.Drawing.Color.White;
-            this.lblUsuario.Location = new System.Drawing.Point(423, 120);
+            this.lblUsuario.Location = new System.Drawing.Point(407, 120);
             this.lblUsuario.Margin = new System.Windows.Forms.Padding(20, 0, 3, 20);
             this.lblUsuario.Name = "lblUsuario";
             this.lblUsuario.Size = new System.Drawing.Size(84, 24);
@@ -654,7 +654,7 @@
             this.lblNomprePersona.AutoSize = true;
             this.lblNomprePersona.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNomprePersona.ForeColor = System.Drawing.Color.White;
-            this.lblNomprePersona.Location = new System.Drawing.Point(585, 77);
+            this.lblNomprePersona.Location = new System.Drawing.Point(563, 77);
             this.lblNomprePersona.Margin = new System.Windows.Forms.Padding(20, 0, 3, 20);
             this.lblNomprePersona.Name = "lblNomprePersona";
             this.lblNomprePersona.Size = new System.Drawing.Size(92, 24);
@@ -666,7 +666,7 @@
             this.lblRolUsuario.AutoSize = true;
             this.lblRolUsuario.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRolUsuario.ForeColor = System.Drawing.Color.White;
-            this.lblRolUsuario.Location = new System.Drawing.Point(330, 228);
+            this.lblRolUsuario.Location = new System.Drawing.Point(314, 228);
             this.lblRolUsuario.Margin = new System.Windows.Forms.Padding(3, 10, 3, 0);
             this.lblRolUsuario.Name = "lblRolUsuario";
             this.lblRolUsuario.Padding = new System.Windows.Forms.Padding(0, 20, 10, 0);
