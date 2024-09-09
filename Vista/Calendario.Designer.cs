@@ -486,7 +486,7 @@
             this.NotificacionCalendario.InformationOptions.IconLeftMargin = 12;
             this.NotificacionCalendario.Margin = 10;
             this.NotificacionCalendario.MaximumSize = new System.Drawing.Size(0, 0);
-            this.NotificacionCalendario.MaximumViews = 7;
+            this.NotificacionCalendario.MaximumViews = 1;
             this.NotificacionCalendario.MessageRightMargin = 15;
             this.NotificacionCalendario.MessageTopMargin = 0;
             this.NotificacionCalendario.MinimumSize = new System.Drawing.Size(0, 0);

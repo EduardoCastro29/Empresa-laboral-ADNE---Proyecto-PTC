@@ -31,13 +31,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ControlPacientePlanillaUC));
             Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             this.pnlFondoUC = new Bunifu.UI.WinForms.BunifuGradientPanel();
+            this.pnlSeparador = new Bunifu.UI.WinForms.BunifuPanel();
             this.lblPacienteId = new System.Windows.Forms.Label();
             this.lblExpedienteId = new System.Windows.Forms.Label();
             this.lblCitaId = new Bunifu.UI.WinForms.BunifuLabel();
             this.btnDescargar = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.lblDUI = new Bunifu.UI.WinForms.BunifuLabel();
             this.lblNombrePaciente = new Bunifu.UI.WinForms.BunifuLabel();
-            this.pnlSeparador = new Bunifu.UI.WinForms.BunifuPanel();
             this.pnlFondoUC.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -66,6 +66,20 @@
             this.pnlFondoUC.Quality = 10;
             this.pnlFondoUC.Size = new System.Drawing.Size(955, 51);
             this.pnlFondoUC.TabIndex = 22;
+            // 
+            // pnlSeparador
+            // 
+            this.pnlSeparador.BackgroundColor = System.Drawing.Color.Gray;
+            this.pnlSeparador.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlSeparador.BackgroundImage")));
+            this.pnlSeparador.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnlSeparador.BorderColor = System.Drawing.Color.Transparent;
+            this.pnlSeparador.BorderRadius = 3;
+            this.pnlSeparador.BorderThickness = 1;
+            this.pnlSeparador.Location = new System.Drawing.Point(127, 10);
+            this.pnlSeparador.Name = "pnlSeparador";
+            this.pnlSeparador.ShowBorders = true;
+            this.pnlSeparador.Size = new System.Drawing.Size(4, 35);
+            this.pnlSeparador.TabIndex = 26;
             // 
             // lblPacienteId
             // 
@@ -227,25 +241,11 @@
             this.lblNombrePaciente.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lblNombrePaciente.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
-            // pnlSeparador
-            // 
-            this.pnlSeparador.BackgroundColor = System.Drawing.Color.Gray;
-            this.pnlSeparador.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlSeparador.BackgroundImage")));
-            this.pnlSeparador.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pnlSeparador.BorderColor = System.Drawing.Color.Transparent;
-            this.pnlSeparador.BorderRadius = 3;
-            this.pnlSeparador.BorderThickness = 1;
-            this.pnlSeparador.Location = new System.Drawing.Point(127, 10);
-            this.pnlSeparador.Name = "pnlSeparador";
-            this.pnlSeparador.ShowBorders = true;
-            this.pnlSeparador.Size = new System.Drawing.Size(4, 35);
-            this.pnlSeparador.TabIndex = 26;
-            // 
             // ControlPacientePlanillaUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.pnlFondoUC);
             this.Name = "ControlPacientePlanillaUC";
             this.Size = new System.Drawing.Size(955, 51);

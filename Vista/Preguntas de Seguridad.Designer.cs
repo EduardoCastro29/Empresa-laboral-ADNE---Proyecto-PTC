@@ -1130,7 +1130,7 @@
             this.NotificacionPreguntas.InformationOptions.IconLeftMargin = 12;
             this.NotificacionPreguntas.Margin = 10;
             this.NotificacionPreguntas.MaximumSize = new System.Drawing.Size(0, 0);
-            this.NotificacionPreguntas.MaximumViews = 7;
+            this.NotificacionPreguntas.MaximumViews = 1;
             this.NotificacionPreguntas.MessageRightMargin = 15;
             this.NotificacionPreguntas.MessageTopMargin = 0;
             this.NotificacionPreguntas.MinimumSize = new System.Drawing.Size(0, 0);

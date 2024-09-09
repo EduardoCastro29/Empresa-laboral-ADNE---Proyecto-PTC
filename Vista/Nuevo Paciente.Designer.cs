@@ -433,7 +433,7 @@
             this.NotificacionNuevoPaciente.InformationOptions.IconLeftMargin = 12;
             this.NotificacionNuevoPaciente.Margin = 10;
             this.NotificacionNuevoPaciente.MaximumSize = new System.Drawing.Size(0, 0);
-            this.NotificacionNuevoPaciente.MaximumViews = 2;
+            this.NotificacionNuevoPaciente.MaximumViews = 1;
             this.NotificacionNuevoPaciente.MessageRightMargin = 15;
             this.NotificacionNuevoPaciente.MessageTopMargin = 0;
             this.NotificacionNuevoPaciente.MinimumSize = new System.Drawing.Size(0, 0);
