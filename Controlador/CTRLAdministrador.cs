@@ -430,9 +430,9 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                     }
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show(ex.Message);
+                ObjRegistroForm.Notificacion1.Show(ObjRegistroForm, "El Usuario no pudo ser registrado, verifique que los datos han sido ingresados correctamente", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error);
             }
         }
         #endregion
@@ -476,21 +476,24 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                     //Llamamos al método para registrar la imagen del Usuario
                     if (ObjRegistroForm.picProfesional.Image != Properties.Resources.ProfesionalPic)
                     {
-                        string rutaImagen = ObjRegistroForm.ofdImagen.FileName;
-                        string escritorio = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-                        string carpetaDestino = Path.Combine(escritorio, "Imagenes");
-
-                        Directory.CreateDirectory(carpetaDestino);
-
-                        string imagenDestino = Path.Combine(carpetaDestino, Guid.NewGuid().ToString() + Path.GetExtension(rutaImagen));
-                        File.Copy(rutaImagen, imagenDestino);
-                        try
+                        if (ObjRegistroForm.ofdImagen.ShowDialog() == DialogResult.OK)
                         {
-                            ObjDAOActualizarProfesional.Imagen = imagenDestino;
-                        }
-                        catch (Exception ex)
-                        {
-                            MessageBox.Show(ex.Message);
+                            string rutaImagen = ObjRegistroForm.ofdImagen.FileName;
+                            string escritorio = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+                            string carpetaDestino = Path.Combine(escritorio, "Imagenes");
+
+                            Directory.CreateDirectory(carpetaDestino);
+
+                            string imagenDestino = Path.Combine(carpetaDestino, Guid.NewGuid().ToString() + Path.GetExtension(rutaImagen));
+                            File.Copy(rutaImagen, imagenDestino);
+                            try
+                            {
+                                ObjDAOActualizarProfesional.Imagen = imagenDestino;
+                            }
+                            catch (Exception ex)
+                            {
+                                MessageBox.Show(ex.Message);
+                            }
                         }
                     }
 
@@ -521,7 +524,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                ObjRegistroForm.Notificacion1.Show(ObjRegistroForm, "Error al actualizar el profesional, verifique si todos los datos han sido ingresados correctamente", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error);
             }
         }
         #endregion
@@ -587,23 +590,23 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                     {
                         IPHostEntry ObjIPEntrada = Dns.GetHostEntry(DominioHost);
                     }
-                    catch (SocketException SocketEx)
+                    catch (SocketException)
                     {
                         //En caso de error, mostranos el mensaje con su retorno falso
-                        MessageBox.Show(SocketEx.Message);
+                        ObjRegistroForm.Notificacion1.Show(ObjRegistroForm, "El correo electrónico ingresado no posee una dirección de correo válida, verifique si contiene @ o dominio correcto", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error);
                         return false;
                     }
                 }
-                catch (FormatException FormatEx)
+                catch (FormatException)
                 {
-                    MessageBox.Show(FormatEx.Message);
+                    ObjRegistroForm.Notificacion1.Show(ObjRegistroForm, "El correo electrónico ingresado no posee una dirección de correo válida, verifique si contiene @ o dominio correcto", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error);
                     return false;
                 }
             }
-            catch (AsposeException AsposeEx)
+            catch (AsposeException)
             {
                 //En caso de error, mostramos el mensaje con su retorno falso
-                MessageBox.Show(AsposeEx.Message);
+                ObjRegistroForm.Notificacion1.Show(ObjRegistroForm, "El correo electrónico ingresado no posee una dirección de correo válida, verifique si contiene @ o dominio correcto", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error);
                 return false;
             }
 

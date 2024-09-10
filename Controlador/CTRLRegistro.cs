@@ -347,24 +347,22 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                     {
                         IPHostEntry ObjIPEntrada = Dns.GetHostEntry(DominioHost);
                     }
-                    catch (SocketException SocketEx)
+                    catch (SocketException)
                     {
                         //En caso de error, mostranos el mensaje con su retorno falso
-                        MessageBox.Show(SocketEx.Message);
+                        ObjRegistro.Notificacion1.Show(ObjRegistro, "El correo electrónico ingresado no posee una dirección de correo válida, verifique si contiene @ o dominio correcto", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error);
                         return false;
                     }
                 }
-                catch (FormatException FormatEx)
+                catch (FormatException)
                 {
-                    MessageBox.Show(FormatEx.Message);
-                    return false;
+                    ObjRegistro.Notificacion1.Show(ObjRegistro, "El correo electrónico ingresado no posee una dirección de correo válida, verifique si contiene @ o dominio correcto", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error); return false;
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 //En caso de error, mostramos el mensaje con su retorno falso
-                MessageBox.Show(ex.Message);
-                return false;
+                ObjRegistro.Notificacion1.Show(ObjRegistro, "El correo electrónico ingresado no posee una dirección de correo válida, verifique si contiene @ o dominio correcto", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error); return false;
             }
 
             //Si todo salio bien, retornamos verdadero
