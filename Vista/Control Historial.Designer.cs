@@ -227,7 +227,7 @@
             // 
             this.lblDui.AutoSize = true;
             this.lblDui.Font = new System.Drawing.Font("Microsoft Sans Serif", 1.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDui.Location = new System.Drawing.Point(230, 0);
+            this.lblDui.Location = new System.Drawing.Point(230, 30);
             this.lblDui.Name = "lblDui";
             this.lblDui.Size = new System.Drawing.Size(6, 2);
             this.lblDui.TabIndex = 8;
@@ -263,6 +263,6 @@
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
         public Bunifu.UI.WinForms.BunifuLabel lblHoraFinal;
         public Bunifu.UI.WinForms.BunifuLabel lblNombrePaciente;
-        private System.Windows.Forms.Label lblDui;
+        public System.Windows.Forms.Label lblDui;
     }
 }

@@ -19,8 +19,8 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Vista
 
             try
             {
-                lblNombrePaciente.Text = DAOVerHistorial.Nombre;
-                lblHoraInicio.Text = DAOVerHistorial.HoraInicio.ToString();
+                lblNombrePaciente.Text = DAOVerHistorial.Nombre2;
+                lblHoraInicio.Text = DAOVerHistorial.HoraInicio2.ToString();
                 lblHoraFinal.Text = DAOVerHistorial.HoraFin.ToString();
                 lblDui.Text = DAOVerHistorial.DocumentoPresentado;
 

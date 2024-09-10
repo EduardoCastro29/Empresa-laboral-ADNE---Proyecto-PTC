@@ -32,8 +32,8 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             //Creamos un bucle foreach
             foreach (DataRow DataRow in ObjCargarUC.Rows)
             {
-                ObjDAOActividades.Nombre = (string)DataRow[0];
-                ObjDAOActividades.HoraInicio = (TimeSpan)DataRow[1];
+                ObjDAOActividades.Nombre2 = (string)DataRow[0];
+                ObjDAOActividades.HoraInicio2 = (TimeSpan)DataRow[1];
                 ObjDAOActividades.HoraFin = (TimeSpan)DataRow[2];
                 ObjDAOActividades.DocumentoPresentado = (string)DataRow[3];
 

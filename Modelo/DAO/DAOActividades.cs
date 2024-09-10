@@ -56,7 +56,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                 Conexion.Connection.Close();
             }
         }
-
         public int ContarIntervaloCitasPendiente()
         {
             try
@@ -77,7 +76,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                 Conexion.Connection.Close();
             }
         }
-
         public int ContarIntervaloCitasPerdida()
         {
             try
@@ -98,7 +96,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                 Conexion.Connection.Close();
             }
         }
-
         public int ObtenerDatosCitas()
         {
             try
@@ -129,7 +126,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                 this.FechaInicio1 = FechaInicio1;
                 this.FechaFinal1 = FechaFinal1;
                 this.NumeroDias = (FechaFinal1 - FechaInicio1).Days;
-
                 ObtenerDatosCitas();
                 RellenarGraficoCitas();  // Asegúrate de llamar a este método aquí para llenar los datos
                 return true;
@@ -144,17 +140,13 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
             try
             {
                 Conexion.Connection = Conectar();
-
                 // Suponiendo que tienes una consulta SQL que devuelve la fecha y el total de citas por fecha
                 string query = "SELECT fecha, COUNT(citaId) as TotalCitas FROM Cita WHERE fecha BETWEEN @fechaInicio AND @fechaFinal GROUP BY fecha";
                 SqlCommand ObjGraficoCitas = new SqlCommand(query, Conexion.Connection);
                 ObjGraficoCitas.Parameters.AddWithValue("@fechaInicio", FechaInicio1);
                 ObjGraficoCitas.Parameters.AddWithValue("@fechaFinal", FechaFinal1);
-
                 SqlDataReader ObjLecturaSQL = ObjGraficoCitas.ExecuteReader();
-
                 GraficoCitas = new List<revenueByDate>();
-
                 while (ObjLecturaSQL.Read())
                 {
                     GraficoCitas.Add(new revenueByDate
@@ -163,7 +155,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                         TotalCitas = Convert.ToInt32(ObjLecturaSQL["TotalCitas"])
                     });
                 }
-
                 ObjLecturaSQL.Close();
             }
             catch (Exception)
@@ -207,6 +198,5 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                 Conexion.Connection.Close();
             }
         }
-
     }
 }

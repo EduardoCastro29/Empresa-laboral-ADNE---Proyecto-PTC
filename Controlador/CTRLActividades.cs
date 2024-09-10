@@ -10,12 +10,10 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
     {
         readonly ActividadesForm ObjActividadesForm;
         HistorialForm ObjHistorialForm = null;
-
         public CTRLActividades(ActividadesForm Vista)
         {
             ObjActividadesForm = Vista;
             ObjActividadesForm.Load += new EventHandler(CargarInfo);
-
             // Al presionar el boton Ver este dia Se carga el metodo asignado
             ObjActividadesForm.btnHistorial.Click += new EventHandler(AbrirHistorial);
             ObjActividadesForm.btnVerEsteDia.Click += new EventHandler(CargarGraficoEsteDia);
@@ -90,11 +88,9 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
         {
             // Obtener la fecha actual
             DateTime fechaActual = DateTime.Now;
-
             ObjActividadesForm.GraficoCitas.ChartAreas[0].AxisY.Interval = 1;
             ObjActividadesForm.GraficoCitas.ChartAreas[0].AxisY.LabelStyle.Format = "0";
             ObjActividadesForm.GraficoCitas.ChartAreas[0].AxisY.IsStartedFromZero = true;
-
             // Formatear el nombre del día y el día del mes
             string diaYFecha = fechaActual.ToString("dd/MM/yyyy");
             ObjActividadesForm.lblFecha.Text = diaYFecha;
@@ -167,21 +163,16 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             try
             {
                 DAOActividades ObjCargarIntervaloCitas = new DAOActividades();
-
                 // Cargamos el intervalo de citas según lo que tenga la base de datos en la consulta
                 var refrescarData = ObjCargarIntervaloCitas.CargarDatos(ObjActividadesForm.dtFechaInicio.Value, ObjActividadesForm.dtFechaFinal.Value);
-
                 if (refrescarData)
                 {
                     ObjCargarIntervaloCitas.CitasAtendidas = ObjCargarIntervaloCitas.ContarIntervaloCitasAtendidas();
                     ObjActividadesForm.lblCitasAtendidas.Text = ObjCargarIntervaloCitas.CitasAtendidas.ToString();
-
                     ObjCargarIntervaloCitas.CitasPedientes = ObjCargarIntervaloCitas.ContarIntervaloCitasPendiente();
                     ObjActividadesForm.lblCitasPendientes.Text = ObjCargarIntervaloCitas.CitasPedientes.ToString();
-
                     ObjCargarIntervaloCitas.CitasPerdidas = ObjCargarIntervaloCitas.ContarIntervaloCitasPerdida();
                     ObjActividadesForm.lblCitasPerdidas.Text = ObjCargarIntervaloCitas.CitasPerdidas.ToString();
-
                     // Verificar si la lista de datos del gráfico no está vacía
                     if (ObjCargarIntervaloCitas.GraficoCitas != null && ObjCargarIntervaloCitas.GraficoCitas.Count > 0)
                     {
@@ -189,7 +180,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                         ObjActividadesForm.GraficoCitas.DataSource = ObjCargarIntervaloCitas.GraficoCitas;
                         ObjActividadesForm.GraficoCitas.Series[0].XValueMember = "Date";
                         ObjActividadesForm.GraficoCitas.Series[0].YValueMembers = "TotalCitas";
-
                         ObjActividadesForm.GraficoCitas.DataBind();
                     }
                 }
