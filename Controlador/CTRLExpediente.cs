@@ -8,6 +8,7 @@ using System.Data.SqlClient;
 using Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO;
 using Empresa_laboral_ADNE___Proyecto_PTC.Vista;
 using Empresa_laboral_ADNE___Proyecto_PTC.Controlador;
+using System.Runtime.Remoting;
 
 namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
 {
@@ -41,8 +42,31 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             ObjExpediente.txtRiesgoValorado.KeyPress += new KeyPressEventHandler(ValidarCampoTextBox);
             ObjExpediente.txtSomatizacion.KeyPress += new KeyPressEventHandler(ValidarCampoTextBox);
             ObjExpediente.txtVidaInterpersonal.KeyPress += new KeyPressEventHandler(ValidarCampoTextBox);
+            ObjExpediente.txtDocumentoPaciente.KeyPress += new KeyPressEventHandler(ValidarCampoDocumento);
         }
         #region Validaciones de Campos
+
+
+        private void ValidarCampoDocumento(object sender, KeyPressEventArgs e)
+        {
+            //La propiedad char.IsControl permite controles como BackSpace, Inicio, Fin, etc.
+            if (char.IsControl(e.KeyChar))
+            {
+                //Retornamos los valores e.KeyChar
+                return;
+            }
+            //Declaramos la variable de tipo char que recibirá los parámetros de las letras registradas por las variables e.KeyChar creadas anteriormente
+            char ch = e.KeyChar;
+
+            if ((ch >= '0' && ch <= '9') ||
+                (ch == ' ') ||
+                (ch == '+') ||
+                (ch == '-'))
+            {
+                return;
+            }
+            e.Handled = true;
+        }
         private void ValidarCampoTextBox(object sender, KeyPressEventArgs e)
         {
             //La propiedad char.IsControl permite controles como BackSpace, Inicio, Fin, etc.
@@ -55,7 +79,10 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             if (char.IsLetter(e.KeyChar) ||
                 e.KeyChar == ' ' ||
                 e.KeyChar == ',' ||
-                e.KeyChar == '.')
+                e.KeyChar == '.' ||
+                e.KeyChar == '"' ||
+                (e.KeyChar >= '0' && e.KeyChar <= '9')
+                );
             {
                 //Retornamos los valores e.KeyChar
                 return;
@@ -81,7 +108,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             try
             {
                 //Dado el objeto del DAOExpedienteMédico, evaluamos si los datos fueron ingresados correctamente dados sus métodos
-                if (ObjExpediente.txtPacienteId.Text.Length < 10 ||
+                if (ObjExpediente.txtDocumentoPaciente.Text.Length < 10 ||
                     ObjExpediente.txtEstadoAnimo.Text.Length < 5 ||
                     ObjExpediente.txtEstadoConductual.Text.Length < 5 ||
                     ObjExpediente.txtSomatizacion.Text.Length < 5 ||
@@ -105,7 +132,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                     DAOExpediente ObjDAOExpediente = new DAOExpediente();
 
                     //Obtenemos datos del objeto ObjDAOExpediente
-                    ObjDAOExpediente.DocumentoPresentado = ObjExpediente.txtPacienteId.Text.Trim();
+                    ObjDAOExpediente.DocumentoPresentado = ObjExpediente.txtDocumentoPaciente.Text.Trim();
                     ObjDAOExpediente.EstadoAnimo = ObjExpediente.txtEstadoAnimo.Text.Trim();
                     ObjDAOExpediente.EstadoConductual = ObjExpediente.txtEstadoConductual.Text.Trim();
                     ObjDAOExpediente.Somatizacion = ObjExpediente.txtSomatizacion.Text.Trim();
@@ -154,7 +181,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             try
             {
                 //Dado el objeto del DAOExpedienteMédico, evaluamos si los datos fueron ingresados correctamente dados sus métodos
-                if (ObjExpediente.txtPacienteId.Text.Length < 10 ||
+                if (ObjExpediente.txtDocumentoPaciente.Text.Length < 10 ||
                     ObjExpediente.txtEstadoAnimo.Text.Length < 5 ||
                     ObjExpediente.txtEstadoConductual.Text.Length < 5 ||
                     ObjExpediente.txtSomatizacion.Text.Length < 5 ||
@@ -179,7 +206,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                     DAOExpediente ObjDAOExpediente = new DAOExpediente();
 
                     //Obtenemos datos del objeto ObjDAOExpediente
-                    ObjDAOExpediente.DocumentoPresentado = ObjExpediente.txtPacienteId.Text.Trim();
+                    ObjDAOExpediente.DocumentoPresentado = ObjExpediente.txtDocumentoPaciente.Text.Trim();
                     ObjDAOExpediente.EstadoAnimo = ObjExpediente.txtEstadoAnimo.Text.Trim();
                     ObjDAOExpediente.EstadoConductual = ObjExpediente.txtEstadoConductual.Text.Trim();
                     ObjDAOExpediente.Somatizacion = ObjExpediente.txtSomatizacion.Text.Trim();
@@ -234,7 +261,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             ObjExpediente.txtAproximacionDiag.Clear();
             ObjExpediente.txtAtencionBrindada.Clear();
 
-            ObjExpediente.txtPacienteId.Clear();
+            ObjExpediente.txtDocumentoPaciente.Clear();
         }
         #endregion
     }

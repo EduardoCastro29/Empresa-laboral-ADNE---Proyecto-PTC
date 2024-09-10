@@ -116,11 +116,11 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador.ControladorUserControl
                         objExpedienteMedico.txtObservacion.Text = objDAOExpedienteMedico.Observacion;
                         objExpedienteMedico.txtAproximacionDiag.Text = objDAOExpedienteMedico.AproximacionDiag;
                         objExpedienteMedico.txtAtencionBrindada.Text = objDAOExpedienteMedico.AtencionBrindada;
-                        objExpedienteMedico.txtPacienteId.Text = objDAOExpedienteMedico.DocumentoPresentado;
+                        objExpedienteMedico.txtDocumentoPaciente.Text = objDAOExpedienteMedico.DocumentoPresentado;
 
                         objExpedienteMedico.btnGuardar.Enabled = false;
                         objExpedienteMedico.btnModificar.Enabled = true;
-                        objExpedienteMedico.txtPacienteId.Enabled = false;
+                        objExpedienteMedico.txtDocumentoPaciente.Enabled = false;
 
                         AbrirFormulario(objExpedienteMedico);
                     }
@@ -130,8 +130,8 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador.ControladorUserControl
                                         "Proceso interrumpido",
                                         MessageBoxButtons.OK,
                                         MessageBoxIcon.Error);
-                        objExpedienteMedico.txtPacienteId.Text  = objDAOExpedienteMedico.DocumentoPresentado;
-                        objExpedienteMedico.txtPacienteId.Enabled = false;
+                        objExpedienteMedico.txtDocumentoPaciente.Text  = objDAOExpedienteMedico.DocumentoPresentado;
+                        objExpedienteMedico.txtDocumentoPaciente.Enabled = false;
                         AbrirFormulario(objExpedienteMedico);
                     }
                 }
