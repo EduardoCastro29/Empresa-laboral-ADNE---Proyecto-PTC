@@ -175,5 +175,38 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                 Conexion.Connection.Close();
             }
         }
+        public DataTable CargarControlHistorial()
+        {
+            try
+            {
+                Conexion.Connection = Conectar();
+
+                //Inicializamos la cadena
+                string consultaSQLCargarHistorial = "SELECT * FROM vistaHistorial";
+
+                //Inicializamos el comando
+                SqlCommand ObjComandoSQLServerUC = new SqlCommand(consultaSQLCargarHistorial, Conexion.Connection);
+
+                //Creamos un SqlDataAdapter
+                SqlDataAdapter ObjAdaptador = new SqlDataAdapter(ObjComandoSQLServerUC);
+                //Instanciamos a la clase DataTable
+                DataTable ObjLlenarUC = new DataTable();
+
+                //Llenamos el DataTable
+                ObjAdaptador.Fill(ObjLlenarUC);
+                //Retornamos el DataTable
+                return ObjLlenarUC;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Ha ocurrido un error, ERR-002-2", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+            finally
+            {
+                Conexion.Connection.Close();
+            }
+        }
+
     }
 }

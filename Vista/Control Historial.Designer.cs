@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ControlHistorialUC));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             this.btnExpediente = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.lblPaciente = new Bunifu.UI.WinForms.BunifuLabel();
             this.lblFinal = new Bunifu.UI.WinForms.BunifuLabel();
@@ -37,6 +37,7 @@
             this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.lblHoraFinal = new Bunifu.UI.WinForms.BunifuLabel();
             this.lblNombrePaciente = new Bunifu.UI.WinForms.BunifuLabel();
+            this.lblDui = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnExpediente
@@ -59,15 +60,16 @@
             this.btnExpediente.ColorContrastOnClick = 45;
             this.btnExpediente.ColorContrastOnHover = 45;
             this.btnExpediente.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges2.BottomLeft = true;
-            borderEdges2.BottomRight = true;
-            borderEdges2.TopLeft = true;
-            borderEdges2.TopRight = true;
-            this.btnExpediente.CustomizableEdges = borderEdges2;
+            borderEdges1.BottomLeft = true;
+            borderEdges1.BottomRight = true;
+            borderEdges1.TopLeft = true;
+            borderEdges1.TopRight = true;
+            this.btnExpediente.CustomizableEdges = borderEdges1;
             this.btnExpediente.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnExpediente.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnExpediente.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.btnExpediente.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btnExpediente.Enabled = false;
             this.btnExpediente.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
             this.btnExpediente.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExpediente.ForeColor = System.Drawing.Color.WhiteSmoke;
@@ -128,11 +130,13 @@
             this.btnExpediente.TextMarginLeft = 0;
             this.btnExpediente.TextPadding = new System.Windows.Forms.Padding(0);
             this.btnExpediente.UseDefaultRadiusAndThickness = true;
+            this.btnExpediente.Visible = false;
             // 
             // lblPaciente
             // 
             this.lblPaciente.AllowParentOverrides = false;
             this.lblPaciente.AutoEllipsis = false;
+            this.lblPaciente.Cursor = System.Windows.Forms.Cursors.Default;
             this.lblPaciente.CursorType = System.Windows.Forms.Cursors.Default;
             this.lblPaciente.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPaciente.Location = new System.Drawing.Point(19, 17);
@@ -219,11 +223,23 @@
             this.lblNombrePaciente.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lblNombrePaciente.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
+            // lblDui
+            // 
+            this.lblDui.AutoSize = true;
+            this.lblDui.Font = new System.Drawing.Font("Microsoft Sans Serif", 1.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDui.Location = new System.Drawing.Point(230, 0);
+            this.lblDui.Name = "lblDui";
+            this.lblDui.Size = new System.Drawing.Size(6, 2);
+            this.lblDui.TabIndex = 8;
+            this.lblDui.Text = "label1";
+            this.lblDui.Visible = false;
+            // 
             // ControlHistorialUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.Controls.Add(this.lblDui);
             this.Controls.Add(this.lblNombrePaciente);
             this.Controls.Add(this.lblHoraFinal);
             this.Controls.Add(this.bunifuLabel1);
@@ -247,5 +263,6 @@
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
         public Bunifu.UI.WinForms.BunifuLabel lblHoraFinal;
         public Bunifu.UI.WinForms.BunifuLabel lblNombrePaciente;
+        private System.Windows.Forms.Label lblDui;
     }
 }
