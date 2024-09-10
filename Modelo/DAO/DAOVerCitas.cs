@@ -55,10 +55,12 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                 Conexion.Connection = Conectar();
 
                 //Iniciamos el tipo de comando
-                string consultaSQLLLenarDGVCitas = "SELECT * FROM vistaCitasAgendadas ORDER BY [Fecha de la Cita] ASC";
+                string consultaSQLLLenarDGVCitas = "SELECT * FROM vistaCitasAgendadas WHERE [ID del Profesional] = @docP ORDER BY [Fecha de la Cita] ASC";
 
                 //Llenamos el comando
                 SqlCommand ObjComandoSQLServerDGVCitas = new SqlCommand(consultaSQLLLenarDGVCitas, Conexion.Connection);
+
+                ObjComandoSQLServerDGVCitas.Parameters.AddWithValue("@docP", InicioSesion.Dui);
 
                 //Creamos las variables necesarias para el nuevo SqlDataAdapter
                 SqlDataAdapter ObjLlenarAdaptador = new SqlDataAdapter(ObjComandoSQLServerDGVCitas);
