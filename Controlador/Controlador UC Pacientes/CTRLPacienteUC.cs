@@ -101,9 +101,9 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador.ControladorUserControl
 
                     //Se asigna el ID del expediente que se desea cargar
                     bool Comprobar = objDAOExpedienteMedico.ObtenerExpedientePaciente();
+                    ExpedienteMédicoForm objExpedienteMedico = new ExpedienteMédicoForm();
                     if (Comprobar == true)
                     {
-                        ExpedienteMédicoForm objExpedienteMedico = new ExpedienteMédicoForm();
 
                         objExpedienteMedico.txtEstadoAnimo.Text = objDAOExpedienteMedico.EstadoAnimo;
                         objExpedienteMedico.txtEstadoConductual.Text = objDAOExpedienteMedico.EstadoConductual;
@@ -130,6 +130,9 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador.ControladorUserControl
                                         "Proceso interrumpido",
                                         MessageBoxButtons.OK,
                                         MessageBoxIcon.Error);
+                        objExpedienteMedico.txtPacienteId.Text  = objDAOExpedienteMedico.DocumentoPresentado;
+                        objExpedienteMedico.txtPacienteId.Enabled = false;
+                        AbrirFormulario(objExpedienteMedico);
                     }
                 }
                 catch (Exception ex)

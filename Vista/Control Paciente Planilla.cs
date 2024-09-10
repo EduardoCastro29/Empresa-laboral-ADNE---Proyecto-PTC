@@ -23,7 +23,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Vista
             {
                 lblCitaId.Text = objDAOCitas.CitaId.ToString();
                 lblExpedienteId.Text = objDAOCitas.N_expediente.ToString();
-                lblPacienteId.Text = objDAOCitas.PacienteId.ToString();
+                lblDUI.Text = objDAOCitas.DocumentoPaciente;
 
                 lblNombrePaciente.Text = objDAOCitas.Nombre;
                 lblDUI.Text = objDAOCitas.DocumentoPaciente;

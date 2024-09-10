@@ -1,4 +1,5 @@
-﻿using Empresa_laboral_ADNE___Proyecto_PTC.Controlador.ControladorUserControlPaciente;
+﻿using Empresa_laboral_ADNE___Proyecto_PTC.Controlador;
+using Empresa_laboral_ADNE___Proyecto_PTC.Controlador.ControladorUserControlPaciente;
 using Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO;
 using System;
 using System.Collections.Generic;
@@ -29,6 +30,46 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Vista
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+            }
+        }
+
+        internal ControlVerPacientesUC(DAOActividades daoActividades)
+        {
+            InitializeComponent();
+            this.ParentChanged += new EventHandler(ParentChangedActividades);
+            CTRLPacienteUC ObjVerInforme = new CTRLPacienteUC(this);
+
+            try
+            {
+                // Aquí puedes asignar los datos del objeto DAOActividades a los controles
+                lblNombrePaciente.Text = daoActividades.Nombre1 + " " + daoActividades.Apellido1;
+                lblPacienteId.Text = daoActividades.DUI1; // Asegúrate de tener esta propiedad en DAOActividades
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        private void ParentChangedActividades(object sender, EventArgs e)
+        {
+            if (this.Parent != null && this.Parent is Panel)
+            {
+                Panel flpEmpleadosControl = this.Parent as Panel;
+                flpEmpleadosControl.Resize += new EventHandler(PnlResponsive);
+            }
+        }
+        private void PnlResponsive(object sender, EventArgs e)
+        {
+            Panel p = sender as Panel;
+
+            if (p != null)
+            {
+                int anchop = p.Width;
+                this.Size = new Size(anchop, this.Height); // Ajusta solo el ancho
+
+                p.PerformLayout(); // Asegura que el layout se actualice
+                p.Invalidate();    // Fuerza un redibujado
+                p.Update();
             }
         }
         private void OnParentChanged(object sender, EventArgs e)

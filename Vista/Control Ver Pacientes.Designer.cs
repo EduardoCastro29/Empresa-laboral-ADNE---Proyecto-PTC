@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ControlVerPacientesUC));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges13 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges14 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             this.pnlFondoPacienteUC = new Bunifu.UI.WinForms.BunifuShadowPanel();
             this.btnVerExpediente = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.btnVerInformacion = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
@@ -43,8 +43,6 @@
             // 
             // pnlFondoPacienteUC
             // 
-            this.pnlFondoPacienteUC.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlFondoPacienteUC.BackColor = System.Drawing.Color.Transparent;
             this.pnlFondoPacienteUC.BorderColor = System.Drawing.Color.White;
             this.pnlFondoPacienteUC.BorderRadius = 5;
@@ -54,6 +52,7 @@
             this.pnlFondoPacienteUC.Controls.Add(this.lblPacienteId);
             this.pnlFondoPacienteUC.Controls.Add(this.lblNombrePaciente);
             this.pnlFondoPacienteUC.Controls.Add(this.pbPaciente);
+            this.pnlFondoPacienteUC.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlFondoPacienteUC.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
             this.pnlFondoPacienteUC.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.BackwardDiagonal;
             this.pnlFondoPacienteUC.Location = new System.Drawing.Point(0, 0);
@@ -61,9 +60,9 @@
             this.pnlFondoPacienteUC.Name = "pnlFondoPacienteUC";
             this.pnlFondoPacienteUC.PanelColor = System.Drawing.Color.White;
             this.pnlFondoPacienteUC.PanelColor2 = System.Drawing.Color.White;
-            this.pnlFondoPacienteUC.ShadowColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(217)))), ((int)(((byte)(198)))), ((int)(((byte)(198)))));
+            this.pnlFondoPacienteUC.ShadowColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(217)))), ((int)(((byte)(198)))), ((int)(((byte)(198)))));
             this.pnlFondoPacienteUC.ShadowDept = 2;
-            this.pnlFondoPacienteUC.ShadowDepth = 1;
+            this.pnlFondoPacienteUC.ShadowDepth = 2;
             this.pnlFondoPacienteUC.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Surrounded;
             this.pnlFondoPacienteUC.ShadowTopLeftVisible = false;
             this.pnlFondoPacienteUC.Size = new System.Drawing.Size(914, 100);
@@ -90,11 +89,11 @@
             this.btnVerExpediente.ColorContrastOnClick = 45;
             this.btnVerExpediente.ColorContrastOnHover = 45;
             this.btnVerExpediente.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges1.BottomLeft = true;
-            borderEdges1.BottomRight = true;
-            borderEdges1.TopLeft = true;
-            borderEdges1.TopRight = true;
-            this.btnVerExpediente.CustomizableEdges = borderEdges1;
+            borderEdges13.BottomLeft = true;
+            borderEdges13.BottomRight = true;
+            borderEdges13.TopLeft = true;
+            borderEdges13.TopRight = true;
+            this.btnVerExpediente.CustomizableEdges = borderEdges13;
             this.btnVerExpediente.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnVerExpediente.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnVerExpediente.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -180,11 +179,11 @@
             this.btnVerInformacion.ColorContrastOnClick = 45;
             this.btnVerInformacion.ColorContrastOnHover = 45;
             this.btnVerInformacion.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges2.BottomLeft = true;
-            borderEdges2.BottomRight = true;
-            borderEdges2.TopLeft = true;
-            borderEdges2.TopRight = true;
-            this.btnVerInformacion.CustomizableEdges = borderEdges2;
+            borderEdges14.BottomLeft = true;
+            borderEdges14.BottomRight = true;
+            borderEdges14.TopLeft = true;
+            borderEdges14.TopRight = true;
+            this.btnVerInformacion.CustomizableEdges = borderEdges14;
             this.btnVerInformacion.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnVerInformacion.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnVerInformacion.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -273,7 +272,7 @@
             this.lblNombrePaciente.AutoEllipsis = false;
             this.lblNombrePaciente.CursorType = null;
             this.lblNombrePaciente.Font = new System.Drawing.Font("Century Gothic", 18F);
-            this.lblNombrePaciente.Location = new System.Drawing.Point(114, 36);
+            this.lblNombrePaciente.Location = new System.Drawing.Point(111, 36);
             this.lblNombrePaciente.Name = "lblNombrePaciente";
             this.lblNombrePaciente.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblNombrePaciente.Size = new System.Drawing.Size(128, 30);
@@ -285,12 +284,12 @@
             // pbPaciente
             // 
             this.pbPaciente.AllowFocused = false;
-            this.pbPaciente.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pbPaciente.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.pbPaciente.AutoSizeHeight = true;
             this.pbPaciente.BorderRadius = 33;
             this.pbPaciente.Image = global::Empresa_laboral_ADNE___Proyecto_PTC.Properties.Resources.Foto_Ver_Paciente;
             this.pbPaciente.IsCircle = true;
-            this.pbPaciente.Location = new System.Drawing.Point(28, 19);
+            this.pbPaciente.Location = new System.Drawing.Point(32, 19);
             this.pbPaciente.Name = "pbPaciente";
             this.pbPaciente.Size = new System.Drawing.Size(66, 66);
             this.pbPaciente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

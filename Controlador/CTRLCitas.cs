@@ -42,9 +42,15 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             {
                 objCitaUC.CitaId = (int)dr[0];
                 objCitaUC.DocumentoPaciente = (string)dr[1];
-                objCitaUC.N_expediente = (int)dr[2];
                 objCitaUC.Nombre = (string)dr[3];
+                //objCitaUC.CitaId = (int)dr[3];
+                objCitaUC.N_expediente = (int)dr[2];
 
+                //objCitaUC.DocumentoPaciente = (string)dr[0];
+                //objCitaUC.Nombre = (string)dr[1];
+                ////objCitaUC.Min_cita = (int)dr[2];
+                //objCitaUC.CitaId = (int)dr[3];
+                //objCitaUC.N_expediente = (int)dr[4];
 
                 ControlPacientePlanillaUC PanelPaciente = new ControlPacientePlanillaUC(objCitaUC);
                 objCitasForm.flpCitas.Controls.Add(PanelPaciente);
@@ -59,10 +65,11 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
 
             foreach (DataRow dr in ds.Tables[0].Rows)
             {
+                objCitas.CitaId = (int)dr[0];
+                objCitas.DocumentoPaciente = (string)dr[1];
                 objCitas.Nombre = (string)dr[3];
-                objCitas.Fecha = (DateTime)dr[1];
-                objCitas.HoraInicio = (TimeSpan)dr[3];
-                objCitas.EstadoId = (string)dr[4];
+                //objCitaUC.CitaId = (int)dr[3];
+                objCitas.N_expediente = (int)dr[2];
 
                 ControlPacientePlanillaUC PanelPaciente = new ControlPacientePlanillaUC(objCitas);
                 objCitasForm.flpCitas.Controls.Add(PanelPaciente);

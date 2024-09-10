@@ -150,9 +150,9 @@
             this.pnlProfesional.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.pnlProfesional.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlProfesional.BackgroundImage")));
             this.pnlProfesional.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pnlProfesional.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.pnlProfesional.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.pnlProfesional.BorderRadius = 25;
-            this.pnlProfesional.BorderThickness = 5;
+            this.pnlProfesional.BorderThickness = 3;
             this.pnlProfesional.Controls.Add(this.lblEmail);
             this.pnlProfesional.Controls.Add(this.lblIdProfesional);
             this.pnlProfesional.Controls.Add(this.lblNombreProfesional);

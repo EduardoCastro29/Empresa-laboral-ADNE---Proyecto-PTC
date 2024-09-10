@@ -18,6 +18,8 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DTO
         private int pacienteId;
         private string documentoPaciente;
 
+        //private int min_cita;
+
         //Atributos para el expediente
         private int n_expediente;
         private string nombre_apellido_paciente;
@@ -84,5 +86,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DTO
         public string Lugar { get => lugar; set => lugar = value; }
         public string Desc_Cita { get => desc_Cita; set => desc_Cita = value; }
         public string DocumentoPaciente { get => documentoPaciente; set => documentoPaciente = value; }
+        //public int Min_cita { get => min_cita; set => min_cita = value; }
     }
 }

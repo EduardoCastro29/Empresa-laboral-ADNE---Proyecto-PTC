@@ -68,7 +68,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
         //ABRIR EXPEDIENTE
         private void CargarExpediente(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(ObjExpediente.txtPacienteId.Text))
+            if (string.IsNullOrWhiteSpace(ObjExpediente.txtObservacion.Text))
             {
                 ObjExpediente.btnModificar.Enabled = false;
             }

@@ -1,6 +1,7 @@
 ﻿using Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DTO;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 
@@ -9,7 +10,32 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
     internal class DAOActividades : DTOActividades
     {
         readonly SqlCommand Conexion = new SqlCommand();
+        public DataTable ObtenerSiguienteCita()
+        {
+            try
+            {
+                Conexion.Connection = Conectar();
 
+                //En la consulta se ordena los datos de la vista para pedir el siguiente paciente (El que se encuentra en el TOP 1)
+                string queryCita = "SELECT TOP 1 *  FROM vistaCitasAgendadas WHERE [Fecha de la Cita] >= CONVERT(date, GETDATE()) ORDER BY [Fecha de la Cita] ASC, [Hora de Inicio] ASC";
+                SqlCommand objSiguienteCita = new SqlCommand(queryCita, Conexion.Connection);
+
+                SqlDataAdapter adp = new SqlDataAdapter(objSiguienteCita);
+                DataTable dt = new DataTable();
+
+                adp.Fill(dt);
+                return dt;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Ha ocurrido un error, Error pendiente ERR-0", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+            finally
+            {
+                Conexion.Connection.Close();
+            }
+        }
         public int ContarIntervaloCitasAtendidas()
         {
             try

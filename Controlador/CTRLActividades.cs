@@ -1,6 +1,7 @@
 ﻿using Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO;
 using Empresa_laboral_ADNE___Proyecto_PTC.Vista;
 using System;
+using System.Data;
 using System.Windows.Forms;
 
 namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
@@ -101,7 +102,65 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             ObjActividadesForm.dtFechaInicio.Value = DateTime.Today.AddDays(-7);
             ObjActividadesForm.dtFechaFinal.Value = DateTime.Now;
             ObjActividadesForm.btnVer7Dias.Select();
+
+            CargarSiguientePaciente();
+
             CargarIntervaloCitas();
+        }
+        private void CargarSiguientePaciente()
+        {
+            DAOActividades objDAO = new DAOActividades();
+
+            if (objDAO.ObtenerSiguienteCita().Rows.Count != 0)
+            {
+                #region config
+                ObjActividadesForm.lblDiaCita.Visible = true;
+                ObjActividadesForm.lblLugarCita.Visible = true;
+                ObjActividadesForm.lblHoraCita.Visible = true;
+                ObjActividadesForm.lblHora.Visible = true;
+                ObjActividadesForm.lblDia.Visible = true;
+                ObjActividadesForm.lblLugar.Visible = true;
+
+                ObjActividadesForm.lblDefault.Visible = false;
+                ObjActividadesForm.plSiguientePaciente.BackColor = System.Drawing.Color.Transparent;
+                #endregion
+                DataTable dt = objDAO.ObtenerSiguienteCita();
+                foreach (DataRow dr in dt.Rows)
+                {
+                    objDAO.Nombre1 = (string)dr[9];
+                    objDAO.Apellido1 = (string)dr[10];
+                    objDAO.DUI1 = (string)dr[2];
+
+                    ControlVerPacientesUC ObjControlPaciente = new ControlVerPacientesUC(objDAO);
+                    ObjActividadesForm.plSiguientePaciente.Controls.Add(ObjControlPaciente);
+
+                    objDAO.Fecha1 = (DateTime)dr[4];
+                    objDAO.HoraInicio1 = (TimeSpan)dr[5];
+                    objDAO.Lugar1 = (string)dr[12];
+
+                    ObjActividadesForm.lblDia.Text = objDAO.Fecha1.ToString("yyyy-MM-dd");
+                    ObjActividadesForm.lblHora.Text = objDAO.HoraInicio1.ToString(@"hh\:mm");
+                    ObjActividadesForm.lblLugar.Text = objDAO.Lugar1;
+                }
+            }
+            else
+            {
+                CargarDefault();
+            }
+        }
+        private void CargarDefault()
+        {
+            #region Config Default
+            ObjActividadesForm.lblDiaCita.Visible = false;
+            ObjActividadesForm.lblLugarCita.Visible = false;
+            ObjActividadesForm.lblHoraCita.Visible = false;
+            ObjActividadesForm.lblHora.Visible = false;
+            ObjActividadesForm.lblDia.Visible = false;
+            ObjActividadesForm.lblLugar.Visible = false;
+
+            ObjActividadesForm.lblDefault.Visible = true;
+            ObjActividadesForm.plSiguientePaciente.BackColor = System.Drawing.Color.FromArgb(50, 98, 204, 192);
+            #endregion
         }
         private void CargarIntervaloCitas()
         {
