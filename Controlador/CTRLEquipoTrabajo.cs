@@ -32,7 +32,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                 case "Administrador":
                     break;
                 case "Empleado":
-                    ObjEquipoTrabajoForm.btnAdministrarEmpleado.Enabled = false;
+                    ObjEquipoTrabajoForm.btnAdministrarEmpleado.Visible = false;
                     break;
                 default:
                     break;

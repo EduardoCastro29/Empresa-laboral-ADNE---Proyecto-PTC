@@ -194,9 +194,9 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                     }
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Verifique si tiene campos vacios, la empresa no puede ser registrada sin datos faltantes o campos requeridos mínimos", "Regtistro de Empresa", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
         #endregion
