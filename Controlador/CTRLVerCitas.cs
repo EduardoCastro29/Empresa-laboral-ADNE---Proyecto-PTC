@@ -78,8 +78,8 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             ObjVerCitasDetalladas.dtHoraFinal.Text = FechaFinalCita.ToString(); //Nuevo dt en lugar del textbox
             ObjVerCitasDetalladas.cmbEstado.SelectedValue = EstadoCita;
             ObjVerCitasDetalladas.txtMotivoConsulta.Text = DescripcionCita;
-            //ObjVerCitasDetalladas.txtNombrePacienteCita.Text = NombrePaciente;
-            //ObjVerCitasDetalladas.txtNombreProfesionalCita.Text = NombreProfesional;
+            ObjVerCitasDetalladas.txtDUIPaciente.Text = NombrePaciente;
+            ObjVerCitasDetalladas.txtDUIProfesional.Text = NombreProfesional;
             ObjVerCitasDetalladas.cmbLugar.ValueMember = LugarCita;
 
             //Especificamos qué apartados no deben de mostrarse a la hora de la vista
@@ -88,18 +88,11 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             ObjVerCitasDetalladas.dtHoraFinal.Enabled = false; //Nuevo dt en lugar del textbox
             ObjVerCitasDetalladas.cmbEstado.Enabled = false;
             ObjVerCitasDetalladas.txtMotivoConsulta.Enabled = false;
-            //ObjVerCitasDetalladas.txtNombrePacienteCita.Enabled = false;
-            //ObjVerCitasDetalladas.txtNombreProfesionalCita.Enabled = false;
             ObjVerCitasDetalladas.cmbLugar.Enabled = false;
             ObjVerCitasDetalladas.btnModificar.Enabled = false;
             ObjVerCitasDetalladas.btnGuardar.Enabled = false;
-
-            //Indicamos que, en primeras instancias, no deseamos mostrar el DUI del profesional, tampoco el DUI del paciente
-            //Para una mejor referencia y estética, será mejor mostrar los nombres de los representantes
-            //ObjVerCitasDetalladas.pnlDUIProfesional.Visible = false;
-            ObjVerCitasDetalladas.txtDUIProfesional.Visible = false;
-            //ObjVerCitasDetalladas.pnlDUIPaciente.Visible = false;
-            ObjVerCitasDetalladas.txtDUIPaciente.Visible = false;
+            ObjVerCitasDetalladas.txtDUIPaciente.Enabled = false;
+            ObjVerCitasDetalladas.txtDUIProfesional.Enabled = false;
 
             ObjVerCitasDetalladas.ShowDialog();
 

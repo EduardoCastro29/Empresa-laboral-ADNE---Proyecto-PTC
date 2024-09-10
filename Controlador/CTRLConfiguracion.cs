@@ -30,7 +30,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             ObjConfiguracionForm.lblCorreo.Text = InicioSesion.Correo;
             ObjConfiguracionForm.lblUsuario.Text = InicioSesion.Usuario;
             ObjConfiguracionForm.lblDUI.Text = InicioSesion.Dui;
-            //ObjConfiguracionForm.picUsuario.Image = Image.FromFile(InicioSesion.Imagen);
+            ObjConfiguracionForm.picUsuario.Image = Image.FromFile(InicioSesion.Imagen);
         }
         private void CerrarSesionConfig(object sender, EventArgs e)
         {

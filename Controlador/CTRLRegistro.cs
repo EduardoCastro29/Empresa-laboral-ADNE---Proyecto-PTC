@@ -205,8 +205,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                     ObjDAORegistro.Apellidos = ObjRegistro.txtApellido.Text.Trim();
                     ObjDAORegistro.Telefono = ObjRegistro.txtTelefono.Text;
                     ObjDAORegistro.DesempenoId = 1;
-                    //ObjDAORegistro.Especialidad = int.Parse(ObjRegistro.cmbEspecialidad1.SelectedValue.ToString());
-                    //ObjDAORegistro.EspecialidadAlt = int.Parse(ObjRegistro.cmbEspecialidad2.SelectedValue.ToString());
 
                     //Guardar imagen
                     if (ObjRegistro.picProfesional.Image != Properties.Resources.ProfesionalPic)
@@ -252,7 +250,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                             ObjAbrirRegistroEspecialidad.NotificacionEspecialidad.Show(ObjAbrirRegistroEspecialidad, "Registro realizado", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Success);
                             //Guardamos las variables de registro que se han hecho durante la inserción de la tabla profesional
                             ObjAbrirRegistroEspecialidad.txtDUIProfesional.Text = ObjRegistro.txtDui.Text.Trim();
-                            //ObjAbrirRegistroEspecialidad.picProfesional.Image = Image.FromFile(ObjDAORegistro.Imagen);
+                            ObjAbrirRegistroEspecialidad.picProfesional.Image = Image.FromFile(ObjDAORegistro.Imagen);
                             ObjAbrirRegistroEspecialidad.lblNombreProfesional.Text = ObjDAORegistro.Nombres + " " + ObjDAORegistro.Apellidos;
                             ObjAbrirRegistroEspecialidad.ShowDialog();
 

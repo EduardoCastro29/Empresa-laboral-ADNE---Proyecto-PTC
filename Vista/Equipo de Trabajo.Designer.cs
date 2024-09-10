@@ -30,64 +30,18 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EquipodeTrabajoForm));
             Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
-            this.pnlFondo = new Bunifu.UI.WinForms.BunifuPanel();
-            this.pnlSombraFondo = new Bunifu.UI.WinForms.BunifuShadowPanel();
             this.pnlForms = new Bunifu.UI.WinForms.BunifuGradientPanel();
             this.pnlTituloGradiente = new Bunifu.UI.WinForms.BunifuGradientPanel();
             this.btnAdministrarEmpleado = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.bunifuPictureBox1 = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.lblTItulo = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuGradientPanel3 = new Bunifu.UI.WinForms.BunifuGradientPanel();
-            this.bunifuShadowPanel3 = new Bunifu.UI.WinForms.BunifuShadowPanel();
             this.flpEmpleadosControl = new System.Windows.Forms.FlowLayoutPanel();
-            this.pnlFondo.SuspendLayout();
-            this.pnlSombraFondo.SuspendLayout();
             this.pnlForms.SuspendLayout();
             this.pnlTituloGradiente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).BeginInit();
             this.bunifuGradientPanel3.SuspendLayout();
-            this.bunifuShadowPanel3.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // pnlFondo
-            // 
-            this.pnlFondo.BackgroundColor = System.Drawing.Color.Transparent;
-            this.pnlFondo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlFondo.BackgroundImage")));
-            this.pnlFondo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pnlFondo.BorderColor = System.Drawing.Color.Transparent;
-            this.pnlFondo.BorderRadius = 3;
-            this.pnlFondo.BorderThickness = 1;
-            this.pnlFondo.Controls.Add(this.pnlSombraFondo);
-            this.pnlFondo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlFondo.Location = new System.Drawing.Point(15, 10);
-            this.pnlFondo.Name = "pnlFondo";
-            this.pnlFondo.ShowBorders = true;
-            this.pnlFondo.Size = new System.Drawing.Size(991, 707);
-            this.pnlFondo.TabIndex = 4;
-            // 
-            // pnlSombraFondo
-            // 
-            this.pnlSombraFondo.BackColor = System.Drawing.Color.Transparent;
-            this.pnlSombraFondo.BorderColor = System.Drawing.Color.Transparent;
-            this.pnlSombraFondo.BorderRadius = 30;
-            this.pnlSombraFondo.BorderThickness = 10;
-            this.pnlSombraFondo.Controls.Add(this.pnlForms);
-            this.pnlSombraFondo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlSombraFondo.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
-            this.pnlSombraFondo.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Horizontal;
-            this.pnlSombraFondo.Location = new System.Drawing.Point(0, 0);
-            this.pnlSombraFondo.Name = "pnlSombraFondo";
-            this.pnlSombraFondo.Padding = new System.Windows.Forms.Padding(0, 3, 5, 7);
-            this.pnlSombraFondo.PanelColor = System.Drawing.Color.Transparent;
-            this.pnlSombraFondo.PanelColor2 = System.Drawing.Color.Transparent;
-            this.pnlSombraFondo.ShadowColor = System.Drawing.Color.Black;
-            this.pnlSombraFondo.ShadowDept = 2;
-            this.pnlSombraFondo.ShadowDepth = 250;
-            this.pnlSombraFondo.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Surrounded;
-            this.pnlSombraFondo.ShadowTopLeftVisible = false;
-            this.pnlSombraFondo.Size = new System.Drawing.Size(991, 707);
-            this.pnlSombraFondo.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Lowered;
-            this.pnlSombraFondo.TabIndex = 2;
             // 
             // pnlForms
             // 
@@ -102,13 +56,13 @@
             this.pnlForms.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(225)))), ((int)(((byte)(226)))));
             this.pnlForms.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
             this.pnlForms.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.pnlForms.Location = new System.Drawing.Point(0, 3);
+            this.pnlForms.Location = new System.Drawing.Point(15, 10);
             this.pnlForms.Margin = new System.Windows.Forms.Padding(0);
             this.pnlForms.Name = "pnlForms";
             this.pnlForms.Padding = new System.Windows.Forms.Padding(20);
             this.pnlForms.Quality = 10;
-            this.pnlForms.Size = new System.Drawing.Size(986, 697);
-            this.pnlForms.TabIndex = 1;
+            this.pnlForms.Size = new System.Drawing.Size(991, 707);
+            this.pnlForms.TabIndex = 3;
             // 
             // pnlTituloGradiente
             // 
@@ -128,7 +82,7 @@
             this.pnlTituloGradiente.Location = new System.Drawing.Point(23, 28);
             this.pnlTituloGradiente.Name = "pnlTituloGradiente";
             this.pnlTituloGradiente.Quality = 10;
-            this.pnlTituloGradiente.Size = new System.Drawing.Size(940, 104);
+            this.pnlTituloGradiente.Size = new System.Drawing.Size(945, 104);
             this.pnlTituloGradiente.TabIndex = 0;
             // 
             // btnAdministrarEmpleado
@@ -179,7 +133,7 @@
             this.btnAdministrarEmpleado.IdleIconLeftImage = null;
             this.btnAdministrarEmpleado.IdleIconRightImage = null;
             this.btnAdministrarEmpleado.IndicateFocus = false;
-            this.btnAdministrarEmpleado.Location = new System.Drawing.Point(639, 27);
+            this.btnAdministrarEmpleado.Location = new System.Drawing.Point(644, 27);
             this.btnAdministrarEmpleado.Name = "btnAdministrarEmpleado";
             this.btnAdministrarEmpleado.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnAdministrarEmpleado.OnDisabledState.BorderRadius = 15;
@@ -264,7 +218,7 @@
             this.bunifuGradientPanel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel3.BackgroundImage")));
             this.bunifuGradientPanel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuGradientPanel3.BorderRadius = 15;
-            this.bunifuGradientPanel3.Controls.Add(this.bunifuShadowPanel3);
+            this.bunifuGradientPanel3.Controls.Add(this.flpEmpleadosControl);
             this.bunifuGradientPanel3.GradientBottomLeft = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(244)))), ((int)(((byte)(242)))));
             this.bunifuGradientPanel3.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(244)))), ((int)(((byte)(241)))));
             this.bunifuGradientPanel3.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
@@ -273,34 +227,8 @@
             this.bunifuGradientPanel3.Name = "bunifuGradientPanel3";
             this.bunifuGradientPanel3.Padding = new System.Windows.Forms.Padding(15);
             this.bunifuGradientPanel3.Quality = 10;
-            this.bunifuGradientPanel3.Size = new System.Drawing.Size(940, 544);
+            this.bunifuGradientPanel3.Size = new System.Drawing.Size(945, 554);
             this.bunifuGradientPanel3.TabIndex = 0;
-            // 
-            // bunifuShadowPanel3
-            // 
-            this.bunifuShadowPanel3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.bunifuShadowPanel3.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuShadowPanel3.BorderColor = System.Drawing.Color.WhiteSmoke;
-            this.bunifuShadowPanel3.BorderRadius = 15;
-            this.bunifuShadowPanel3.BorderThickness = 1;
-            this.bunifuShadowPanel3.Controls.Add(this.flpEmpleadosControl);
-            this.bunifuShadowPanel3.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
-            this.bunifuShadowPanel3.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
-            this.bunifuShadowPanel3.Location = new System.Drawing.Point(18, 18);
-            this.bunifuShadowPanel3.Name = "bunifuShadowPanel3";
-            this.bunifuShadowPanel3.Padding = new System.Windows.Forms.Padding(20);
-            this.bunifuShadowPanel3.PanelColor = System.Drawing.Color.WhiteSmoke;
-            this.bunifuShadowPanel3.PanelColor2 = System.Drawing.Color.WhiteSmoke;
-            this.bunifuShadowPanel3.ShadowColor = System.Drawing.Color.DarkGray;
-            this.bunifuShadowPanel3.ShadowDept = 2;
-            this.bunifuShadowPanel3.ShadowDepth = 5;
-            this.bunifuShadowPanel3.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Surrounded;
-            this.bunifuShadowPanel3.ShadowTopLeftVisible = false;
-            this.bunifuShadowPanel3.Size = new System.Drawing.Size(904, 508);
-            this.bunifuShadowPanel3.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
-            this.bunifuShadowPanel3.TabIndex = 4;
             // 
             // flpEmpleadosControl
             // 
@@ -308,10 +236,10 @@
             this.flpEmpleadosControl.BackColor = System.Drawing.Color.Transparent;
             this.flpEmpleadosControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flpEmpleadosControl.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flpEmpleadosControl.Location = new System.Drawing.Point(20, 20);
+            this.flpEmpleadosControl.Location = new System.Drawing.Point(15, 15);
             this.flpEmpleadosControl.Name = "flpEmpleadosControl";
-            this.flpEmpleadosControl.Size = new System.Drawing.Size(864, 468);
-            this.flpEmpleadosControl.TabIndex = 5;
+            this.flpEmpleadosControl.Size = new System.Drawing.Size(915, 524);
+            this.flpEmpleadosControl.TabIndex = 6;
             // 
             // EquipodeTrabajoForm
             // 
@@ -319,35 +247,29 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(143)))), ((int)(((byte)(156)))));
             this.ClientSize = new System.Drawing.Size(1011, 720);
-            this.Controls.Add(this.pnlFondo);
+            this.Controls.Add(this.pnlForms);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "EquipodeTrabajoForm";
             this.Padding = new System.Windows.Forms.Padding(15, 10, 5, 3);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Equipo de Trabajo";
-            this.pnlFondo.ResumeLayout(false);
-            this.pnlSombraFondo.ResumeLayout(false);
             this.pnlForms.ResumeLayout(false);
             this.pnlTituloGradiente.ResumeLayout(false);
             this.pnlTituloGradiente.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).EndInit();
             this.bunifuGradientPanel3.ResumeLayout(false);
-            this.bunifuShadowPanel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        public Bunifu.UI.WinForms.BunifuPanel pnlFondo;
-        public Bunifu.UI.WinForms.BunifuShadowPanel pnlSombraFondo;
         public Bunifu.UI.WinForms.BunifuGradientPanel pnlForms;
-        public System.Windows.Forms.FlowLayoutPanel flpEmpleadosControl;
-        public Bunifu.UI.WinForms.BunifuGradientPanel bunifuGradientPanel3;
-        public Bunifu.UI.WinForms.BunifuLabel lblTItulo;
         public Bunifu.UI.WinForms.BunifuGradientPanel pnlTituloGradiente;
-        public Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel3;
-        private Bunifu.UI.WinForms.BunifuPictureBox bunifuPictureBox1;
         public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnAdministrarEmpleado;
+        private Bunifu.UI.WinForms.BunifuPictureBox bunifuPictureBox1;
+        public Bunifu.UI.WinForms.BunifuLabel lblTItulo;
+        public Bunifu.UI.WinForms.BunifuGradientPanel bunifuGradientPanel3;
+        public System.Windows.Forms.FlowLayoutPanel flpEmpleadosControl;
     }
 }

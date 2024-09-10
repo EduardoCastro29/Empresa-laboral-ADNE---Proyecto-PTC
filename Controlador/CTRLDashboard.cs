@@ -48,7 +48,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             //Indicamos los valores que se pondrán dentro del inicio de sesión del usuario
             ObjDashboard.lblUsuario.Text = InicioSesion.Usuario;
             ObjDashboard.lblIdUsuario.Text = InicioSesion.DesempenoId;
-            //ObjDashboard.picUsuario.Image = Image.FromFile(InicioSesion.Imagen);
+            ObjDashboard.picUsuario.Image = Image.FromFile(InicioSesion.Imagen);
         }
         private void CerrarPrograma(object sender, FormClosingEventArgs e)
         {

@@ -98,8 +98,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             string ImagenProfesional = ObjAdministradorForm.dgvAdministrarProfesional[6, PosicionFila].Value.ToString();
             string DesempenoProfesional = ObjAdministradorForm.dgvAdministrarProfesional[7, PosicionFila].Value.ToString();
             string NombreUsuario = ObjAdministradorForm.dgvAdministrarProfesional[8, PosicionFila].Value.ToString();
-            //string Especialidad = ObjAdministradorForm.dgvAdministrarProfesional[9, PosicionFila].Value.ToString();
-            //string EspecialidadAlt = ObjAdministradorForm.dgvAdministrarProfesional[10, PosicionFila].Value.ToString();
 
             //Ahora, procedemos a usar la instancia antes establecida para mostrar los valores de las filas encontradas            
             ObjActualizarProfesional.txtIDUsuario.Text = IDUsuario.ToString();
@@ -108,11 +106,9 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             ObjActualizarProfesional.txtNombre.Text = NombreProfesional;
             ObjActualizarProfesional.txtApellido.Text = ApellidosProfesional;
             ObjActualizarProfesional.txtCorreo.Text = CorreoProfesional;
-            //ObjActualizarProfesional.picProfesional.Image = Image.FromFile(ImagenProfesional);
+            ObjActualizarProfesional.picProfesional.Image = Image.FromFile(ImagenProfesional);
             ObjActualizarProfesional.cmbDesempeno.SelectedValue = DesempenoProfesional;
             ObjActualizarProfesional.txtUsuario.Text = NombreUsuario;
-            //ObjActualizarProfesional.cmbEspecialidad1.SelectedValue = Especialidad;
-            //ObjActualizarProfesional.cmbEspecialidad2.SelectedValue = EspecialidadAlt;
 
             //Especificamos qué apartados no deben de mostrarse a la hora del Update
             ObjActualizarProfesional.btnRegistrar.Visible = false;
@@ -147,7 +143,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             //Llenamos los valores respectivos para la vista de las especialidades específicas de cada profesional
             ObjVerEspecialidadesForm.txtDUIProfesional.Text = DUIProfesional;
             ObjVerEspecialidadesForm.lblNombreProfesional.Text = NombreProfesional;
-            //ObjVerEspecialidadesForm.picProfesional.Image = Image.FromFile(ImagenProfesional);
+            ObjVerEspecialidadesForm.picProfesional.Image = Image.FromFile(ImagenProfesional);
 
             //Procedemos a abrir el formulario de agregar nuevo profesional
             ObjVerEspecialidadesForm.ShowDialog();

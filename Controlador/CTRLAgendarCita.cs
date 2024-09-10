@@ -78,8 +78,13 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
         {
             try
             {
+                TimeSpan horaInicioMinima = new TimeSpan(7, 0, 0);
+                TimeSpan horaFinalMaxima = new TimeSpan(18, 0, 0);
+
                 if (ObjAgendarCitaForm.txtDUIProfesional.Text.Length < 10   ||
                     ObjAgendarCitaForm.txtDUIPaciente.Text.Length < 10      ||
+                    ObjAgendarCitaForm.dtHoraInicio.Value.TimeOfDay < horaInicioMinima || 
+                    ObjAgendarCitaForm.dtHoraFinal.Value.TimeOfDay < horaFinalMaxima ||
                     ObjAgendarCitaForm.dtHoraInicio.Value.TimeOfDay >= ObjAgendarCitaForm.dtHoraFinal.Value.TimeOfDay ||
                     ObjAgendarCitaForm.txtMotivoConsulta.Text.Length < 5)
                 {
@@ -124,10 +129,14 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
         {
             try
             {
-                if (ObjAgendarCitaForm.txtDUIProfesional.Text.Length < 10   ||
-                    ObjAgendarCitaForm.txtDUIPaciente.Text.Length < 10      ||
-                    ObjAgendarCitaForm.dtHoraInicio.Text.Length < 3         || // Verificar esta validación
-                    ObjAgendarCitaForm.dtHoraFinal.Text.Length < 3          || // Verificar esta validación
+                TimeSpan horaInicioMinima = new TimeSpan(7, 0, 0);
+                TimeSpan horaFinalMaxima = new TimeSpan(18, 0, 0);
+
+                if (ObjAgendarCitaForm.txtDUIProfesional.Text.Length < 10 ||
+                    ObjAgendarCitaForm.txtDUIPaciente.Text.Length < 10 ||
+                    ObjAgendarCitaForm.dtHoraInicio.Value.TimeOfDay < horaInicioMinima ||
+                    ObjAgendarCitaForm.dtHoraFinal.Value.TimeOfDay < horaFinalMaxima ||
+                    ObjAgendarCitaForm.dtHoraInicio.Value.TimeOfDay >= ObjAgendarCitaForm.dtHoraFinal.Value.TimeOfDay ||
                     ObjAgendarCitaForm.txtMotivoConsulta.Text.Length < 5)
                 {
                     ObjAgendarCitaForm.NotificacionCita.Show(ObjAgendarCitaForm, "Existen campos vacíos o los campos son demasiado cortos en el listado, verifique si existe algún campo faltante", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error);

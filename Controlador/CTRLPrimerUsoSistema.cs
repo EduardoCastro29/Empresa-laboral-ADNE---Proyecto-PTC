@@ -30,6 +30,8 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             ObjPrimerUsoSistema.btnAgregarLogo.Click += new EventHandler(MostrarLogoEmpresa);
 
             //Validaciones de Campos
+            ObjPrimerUsoSistema.dpCreacionEmpresa.Value = DateTime.Now;
+            ObjPrimerUsoSistema.dpCreacionEmpresa.Enabled = false;
             ObjPrimerUsoSistema.dpCreacionEmpresa.ValueChanged += new EventHandler(ComprobarFechaActual);
             ObjPrimerUsoSistema.txtCorreoElectronico.KeyPress += new KeyPressEventHandler(ValidarCampoCorreo);
             ObjPrimerUsoSistema.txtDireccion.KeyPress += new KeyPressEventHandler(ValidarCampoTextBox);
@@ -39,10 +41,10 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
         private void ComprobarFechaActual(object sender, EventArgs e)
         {
             // Verificar si la fecha seleccionada es mayor que la fecha de hoy
-            if (ObjPrimerUsoSistema.dpCreacionEmpresa.Value.Date > DateTime.Today)
+            if (ObjPrimerUsoSistema.dpCreacionEmpresa.Value.Date > DateTime.Today || ObjPrimerUsoSistema.dpCreacionEmpresa.Value.Date < DateTime.Today)
             {
                 // Mostrar un mensaje de advertencia
-                MessageBox.Show("La fecha de la creación de la empresa no puede ser una fecha futura", "Registro de Empresa", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("La fecha de la creación de la empresa no puede ser una fecha futura o pasada", "Registro de Empresa", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
                 // Restablecer la fecha al valor anterior o a la fecha actual
                 ObjPrimerUsoSistema.dpCreacionEmpresa.Value = DateTime.Today;
@@ -106,15 +108,9 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                 //Retornamos los valores e.KeyChar
                 return;
             }
-            //Declaramos la variable de tipo char que recibirá los parámetros de las letras registradas por las variables e.KeyChar creadas anteriormente
-            char ch = e.KeyChar;
 
-            if ((ch >= 'A' && ch <= 'Z') ||
-                (ch >= 'a' && ch <= 'z') ||
-                ch == ' ' ||
-                ch == ',' ||
-                ch == '.' ||
-                ch == '#')
+            if (char.IsLetter(e.KeyChar) ||
+                e.KeyChar == ' ')
             {
                 //Retornamos los valores e.KeyChar
                 return;
