@@ -22,6 +22,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
 
             ObjConfiguracionForm.Load += new EventHandler(CargarDatosUsuario);
             ObjConfiguracionForm.btnCerrarSesion.Click += new EventHandler(CerrarSesionConfig);
+            ObjConfiguracionForm.switchModo.Click += new EventHandler(ModoOscuro);
         }
         private void CargarDatosUsuario(object sender, EventArgs e)
         {
@@ -36,9 +37,17 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
         {
             if (MessageBox.Show("¿Desea cerrar sesión automáticamente? Considere que al accionase, el programa cerrará consecuentemente", "Cerrar Sesión", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                Application.Exit();
+                Environment.Exit(0);
             }
         }
+        private void ModoOscuro(object sender, EventArgs e)
+        {
+            if (ObjConfiguracionForm.switchModo.Checked == true)
+            {
+                DTOConfiguracion.ModoOscuro = true;
+            }
+        }
+
         //private void LimpiarVariablesInicioSesion()
         //{
         //    InicioSesion.UsuarioId = 0;
