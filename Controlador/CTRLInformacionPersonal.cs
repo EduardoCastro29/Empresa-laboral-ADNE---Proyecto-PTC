@@ -31,10 +31,10 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
 
             //Validaciones de Campos
             ObjInformacionPersonal.dtFechaNacimiento.ValueChanged += new EventHandler(ComprobarFechaActual);
-            ObjInformacionPersonal.txtNacionalidad.KeyPress += new KeyPressEventHandler(ValidarCampoTextBox);
-            ObjInformacionPersonal.txtProfesion.KeyPress += new KeyPressEventHandler(ValidarCampoTextBox);
-            ObjInformacionPersonal.txtNombrePaciente.KeyPress += new KeyPressEventHandler(ValidarCampoTextBox);
-            ObjInformacionPersonal.txtApellidoPaciente.KeyPress += new KeyPressEventHandler(ValidarCampoTextBox);
+            ObjInformacionPersonal.txtNacionalidad.KeyPress += new KeyPressEventHandler(ValidarCampoNombres);
+            ObjInformacionPersonal.txtProfesion.KeyPress += new KeyPressEventHandler(ValidarCampoNombres);
+            ObjInformacionPersonal.txtNombrePaciente.KeyPress += new KeyPressEventHandler(ValidarCampoNombres);
+            ObjInformacionPersonal.txtApellidoPaciente.KeyPress += new KeyPressEventHandler(ValidarCampoNombres);
             ObjInformacionPersonal.txtComposicionFamiliar.KeyPress += new KeyPressEventHandler(ValidarCampoTextBox);
             ObjInformacionPersonal.txtMotivoIntervencion.KeyPress += new KeyPressEventHandler(ValidarCampoTextBox);
             ObjInformacionPersonal.txtAntecedentes.KeyPress += new KeyPressEventHandler(ValidarCampoTextBox);
@@ -96,7 +96,26 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                 }
             }
         }
-        private void ValidarCampoTextBox(object sender, KeyPressEventArgs e)
+        private void ValidarCampoNombres(object sender, KeyPressEventArgs e)
+        {
+
+            //La propiedad char.IsControl permite controles como BackSpace, Inicio, Fin, etc.
+            if (char.IsControl(e.KeyChar))
+            {
+                //Retornamos los valores e.KeyChar
+                return;
+            }
+            //Declaramos la variable de tipo char que recibirá los parámetros de las letras registradas por las variables e.KeyChar creadas anteriormente
+            if (char.IsLetter(e.KeyChar) || e.KeyChar == ' ')
+            {
+                //Retornamos los valores e.KeyChar
+                return;
+            }
+            //Indicamos que se creará el evento e.Char con todos los valores antes proporcionados, como un EventHandler
+            e.Handled = true;
+        }
+        
+    private void ValidarCampoTextBox(object sender, KeyPressEventArgs e)
         {
             //La propiedad char.IsControl permite controles como BackSpace, Inicio, Fin, etc.
             if (char.IsControl(e.KeyChar))
@@ -171,11 +190,18 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                 //Retornamos los valores e.KeyChar
                 return;
             }
-            //Declaramos la variable de tipo char que recibirá los parámetros de las letras registradas por las variables e.KeyChar creadas anteriormente
-            char ch = e.KeyChar;
 
-            if ((ch >= '0' && ch <= '9') ||
-                (ch == ' ') ||
+            // Si el textbox está vacío, permitimos solo los caracteres 6, 7 o 2
+            if (ObjInformacionPersonal.txtTelefono1.Text.Length == 0)
+            {
+                if (e.KeyChar != '6' && e.KeyChar != '7' && e.KeyChar != '2')
+                {
+                    e.Handled = true; // Cancela la entrada si no es válida
+                }
+            }
+                //Declaramos la variable de tipo char que recibirá los parámetros de las letras registradas por las variables e.KeyChar creadas anteriormente
+                char ch = e.KeyChar;
+            if ((ch >= '0' && ch <= '9') ||               
                 (ch == '+') ||
                 (ch == '-'))
             {

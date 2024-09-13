@@ -142,11 +142,18 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                 //Retornamos los valores e.KeyChar
                 return;
             }
+
+            // Si el textbox está vacío, permitimos solo los caracteres 6, 7 o 2
+            if (ObjRegistro.txtTelefono.Text.Length == 0)
+            {
+                if (e.KeyChar != '6' && e.KeyChar != '7' && e.KeyChar != '2')
+                {
+                    e.Handled = true; // Cancela la entrada si no es válida
+                }
+            }
             //Declaramos la variable de tipo char que recibirá los parámetros de las letras registradas por las variables e.KeyChar creadas anteriormente
             char ch = e.KeyChar;
-
             if ((ch >= '0' && ch <= '9') ||
-                (ch == ' ') ||
                 (ch == '+') ||
                 (ch == '-'))
             {
