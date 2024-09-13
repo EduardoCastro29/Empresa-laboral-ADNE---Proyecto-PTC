@@ -18,7 +18,10 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
         {
             ObjPreguntasSForm = Vista;
 
-            ObjPreguntasSForm.Load += new EventHandler(CargarCombosPreguntasYBTN);
+            ObjPreguntasSForm.txtPrimeraPregunta.Load += new EventHandler(CargarCombosPreguntasYBTN); 
+            ObjPreguntasSForm.txtPrimeraPregunta.Leave += new EventHandler(PreguntaDos); 
+            ObjPreguntasSForm.txtSegundaPregunta.Leave += new EventHandler(PreguntaTres);
+            ObjPreguntasSForm.txtTerceraPregunta.Leave += new EventHandler(PreguntaCuatro);
             ObjPreguntasSForm.btnRegistrar.Click += new EventHandler(RegistrarPreguntasS);
             ObjPreguntasSForm.btnVerificarPregunta.Click += new EventHandler(VerificarPreguntasS);
         }
@@ -28,78 +31,64 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             if (string.IsNullOrWhiteSpace(ObjPreguntasSForm.txtDUIProfesional.Text.Trim()))
             {
                 ObjPreguntasSForm.btnRegistrar.Enabled = false;
+                return; // Si el DUI está vacío, no continuar.
             }
-
             DAOPreguntasSeguridad ObjDAOCargarCMB = new DAOPreguntasSeguridad();
-            //Procedemos a cargar los combobox correspondientes
+            // Cargar el primer ComboBox
             ObjPreguntasSForm.cmbPrimeraPregunta.DataSource = ObjDAOCargarCMB.CargarPregunta1();
             ObjPreguntasSForm.cmbPrimeraPregunta.ValueMember = "preguntasId";
             ObjPreguntasSForm.cmbPrimeraPregunta.DisplayMember = "nombrePreguntas";
+        }
 
-            //Declaramos que pregunta no se quiere mostrar 
-            //Indicamos el valor selecccionado del combobox INDEX
-            //De esta forma especificamos que preguntas o que valores del ID no queremos mostrar, la variable += actualiza periodicamente el combobox seleccionado
-            ObjPreguntasSForm.cmbPrimeraPregunta.SelectedIndexChanged += (senderIndex, eventIndex) =>
-            {
-                //Indicamos si, el valor de la primera pregunta fue diferente de null, cargamos la pregunta 2
-                if (ObjPreguntasSForm.cmbPrimeraPregunta.SelectedValue != null)
-                {
-                    //Declaramos una variable de tipo entero que nos permitirá verificar si la conversión puede realizarse correctamente en un SelectedValue
-                    int VerificarConversionCMB;
-                    //En caso de ser cierto, cargamos las demás preguntas
-                    if (int.TryParse(ObjPreguntasSForm.cmbPrimeraPregunta.SelectedValue.ToString(), out VerificarConversionCMB))
-                    {
-                        //Indicamos que pregunta no queremos que se muestre en el siguiente combobox
-                        ObjDAOCargarCMB.PreguntaNotIn1 = VerificarConversionCMB;
-                        //Cargamos el combobox con el parámetro establecido
-                        ObjPreguntasSForm.cmbSegundaPregunta.DataSource = ObjDAOCargarCMB.CargarPregunta2();
-                        ObjPreguntasSForm.cmbSegundaPregunta.ValueMember = "preguntasId";
-                        ObjPreguntasSForm.cmbSegundaPregunta.DisplayMember = "nombrePreguntas";
-                    }
-                }
-            };
+        private void PreguntaDos(object sender, EventArgs e)
+        {
+            DAOPreguntasSeguridad ObjDaoCargarCMB = new DAOPreguntasSeguridad();
 
-            //Declaramos que pregunta no se quiere mostrar 
-            //Indicamos el valor selecccionado del combobox INDEX
-            ObjPreguntasSForm.cmbSegundaPregunta.SelectedIndexChanged += (senderIndex, eventIndex) =>
+            if (ObjPreguntasSForm.cmbPrimeraPregunta.SelectedValue != null)
             {
-                if (ObjPreguntasSForm.cmbSegundaPregunta.SelectedValue != null)
+                int VerificarConversionCMB;
+                if (int.TryParse(ObjPreguntasSForm.cmbPrimeraPregunta.SelectedValue.ToString(), out VerificarConversionCMB))
                 {
-                    //Declaramos una variable de tipo entero que nos permitirá verificar si la conversión puede realizarse correctamente en un SelectedValue
-                    int VerificarConversionCMB;
-                    //En caso de ser cierto, cargamos las demás preguntas
-                    if (int.TryParse(ObjPreguntasSForm.cmbSegundaPregunta.SelectedValue.ToString(), out VerificarConversionCMB))
-                    {
-                        //Indicamos que pregunta no queremos que se muestre en el siguiente combobox
-                        ObjDAOCargarCMB.PreguntaNotIn2 = VerificarConversionCMB;
-                        //Cargamos el combobox con el parámetro establecido
-                        ObjPreguntasSForm.cmbTerceraPregunta.DataSource = ObjDAOCargarCMB.CargarPregunta3();
-                        ObjPreguntasSForm.cmbTerceraPregunta.ValueMember = "preguntasId";
-                        ObjPreguntasSForm.cmbTerceraPregunta.DisplayMember = "nombrePreguntas";
-                    }
+                    ObjDaoCargarCMB.PreguntaNotIn1 = VerificarConversionCMB;
+                    ObjPreguntasSForm.cmbSegundaPregunta.DataSource = ObjDaoCargarCMB.CargarPregunta2();
+                    ObjPreguntasSForm.cmbSegundaPregunta.ValueMember = "preguntasId";
+                    ObjPreguntasSForm.cmbSegundaPregunta.DisplayMember = "nombrePreguntas";
                 }
-            };
+            }
+        }
 
-            //Declaramos que pregunta no se quiere mostrar 
-            //Indicamos el valor selecccionado del combobox INDEX
-            ObjPreguntasSForm.cmbTerceraPregunta.SelectedIndexChanged += (senderIndex, eventIndex) =>
+        private void PreguntaTres(object sender, EventArgs e)
+        {
+            DAOPreguntasSeguridad ObjDAOCargarCMB = new DAOPreguntasSeguridad();
+
+            if (ObjPreguntasSForm.cmbSegundaPregunta.SelectedValue != null)
             {
-                if (ObjPreguntasSForm.cmbTerceraPregunta.SelectedValue != null)
+                int VerificarConversionCMB;
+                if (int.TryParse(ObjPreguntasSForm.cmbSegundaPregunta.SelectedValue.ToString(), out VerificarConversionCMB))
                 {
-                    //Declaramos una variable de tipo entero que nos permitirá verificar si la conversión puede realizarse correctamente en un SelectedValue
-                    int VerificarConversionCMB;
-                    //En caso de ser cierto, cargamos las demás preguntas
-                    if (int.TryParse(ObjPreguntasSForm.cmbTerceraPregunta.SelectedValue.ToString(), out VerificarConversionCMB))
-                    {
-                        //Indicamos que pregunta no queremos que se muestre en el siguiente combobox
-                        ObjDAOCargarCMB.PreguntaNotIn3 = VerificarConversionCMB;
-                        //Cargamos el combobox con el parámetro establecido
-                        ObjPreguntasSForm.cmbCuartaPregunta.DataSource = ObjDAOCargarCMB.CargarPregunta4();
-                        ObjPreguntasSForm.cmbCuartaPregunta.ValueMember = "preguntasId";
-                        ObjPreguntasSForm.cmbCuartaPregunta.DisplayMember = "nombrePreguntas";
-                    }
+                    ObjDAOCargarCMB.PreguntaNotIn2 = VerificarConversionCMB;
+                    ObjPreguntasSForm.cmbTerceraPregunta.DataSource = ObjDAOCargarCMB.CargarPregunta3();
+                    ObjPreguntasSForm.cmbTerceraPregunta.ValueMember = "preguntasId";
+                    ObjPreguntasSForm.cmbTerceraPregunta.DisplayMember = "nombrePreguntas";
                 }
-            };
+            }
+        }
+
+        private void PreguntaCuatro(object sender, EventArgs e)
+        {
+            DAOPreguntasSeguridad ObjDAOCargarCMB = new DAOPreguntasSeguridad();
+
+            if (ObjPreguntasSForm.cmbTerceraPregunta.SelectedValue != null)
+            {
+                int VerificarConversionCMB;
+                if (int.TryParse(ObjPreguntasSForm.cmbTerceraPregunta.SelectedValue.ToString(), out VerificarConversionCMB))
+                {
+                    ObjDAOCargarCMB.PreguntaNotIn3 = VerificarConversionCMB;
+                    ObjPreguntasSForm.cmbCuartaPregunta.DataSource = ObjDAOCargarCMB.CargarPregunta4();
+                    ObjPreguntasSForm.cmbCuartaPregunta.ValueMember = "preguntasId";
+                    ObjPreguntasSForm.cmbCuartaPregunta.DisplayMember = "nombrePreguntas";
+                }
+            }
         }
         #endregion
         #region Inserción de preguntas de Seguridad (INSERT)
