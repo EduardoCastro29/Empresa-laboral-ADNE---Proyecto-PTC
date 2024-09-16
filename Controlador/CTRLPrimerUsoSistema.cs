@@ -40,7 +40,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             ObjPrimerUsoSistema.txtPBX.KeyPress += new KeyPressEventHandler(ValidarCampoNumero);
         }
         #region Validaciones de Campos
-
         private void ValidarCampoNumero(object sender, KeyPressEventArgs e )
         {
             //La propiedad char.IsControl permite controles como BackSpace, Inicio, Fin, etc.
@@ -51,7 +50,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             }
 
             // Si el textbox está vacío, permitimos solo los caracteres 6, 7 o 2
-            if (ObjPrimerUsoSistema.txtTelefono.Text.Length == 0)
+            if (ObjPrimerUsoSistema.txtTelefono.Text.Length == 0 || ObjPrimerUsoSistema.txtPBX.Text.Length == 0)
             {
                 if (e.KeyChar != '6' && e.KeyChar != '7' && e.KeyChar != '2')
                 {

@@ -46,7 +46,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
             {
                 Conexion.Connection = Conectar();
 
-                string consulta = "SELECT * FROM VistaPaciente WHERE [Nombre de Paciente] LIKE @nombrePaciente";
+                string consulta = "SELECT * FROM vistaPaciente WHERE [Nombre de Paciente] LIKE @nombrePaciente";
 
                 SqlCommand objComando = new SqlCommand(consulta, Conexion.Connection);
 
@@ -55,7 +55,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                 SqlDataAdapter adapter = new SqlDataAdapter(objComando);
                 DataSet dt = new DataSet();
 
-                adapter.Fill(dt, "VistaPaciente");
+                adapter.Fill(dt, "vistaPaciente");
                 return dt;
             }
             catch (Exception)

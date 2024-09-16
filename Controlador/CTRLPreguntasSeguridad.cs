@@ -31,15 +31,14 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             if (string.IsNullOrWhiteSpace(ObjPreguntasSForm.txtDUIProfesional.Text.Trim()))
             {
                 ObjPreguntasSForm.btnRegistrar.Enabled = false;
-                return; // Si el DUI está vacío, no continuar.
             }
+
             DAOPreguntasSeguridad ObjDAOCargarCMB = new DAOPreguntasSeguridad();
             // Cargar el primer ComboBox
             ObjPreguntasSForm.cmbPrimeraPregunta.DataSource = ObjDAOCargarCMB.CargarPregunta1();
             ObjPreguntasSForm.cmbPrimeraPregunta.ValueMember = "preguntasId";
             ObjPreguntasSForm.cmbPrimeraPregunta.DisplayMember = "nombrePreguntas";
         }
-
         private void PreguntaDos(object sender, EventArgs e)
         {
             DAOPreguntasSeguridad ObjDaoCargarCMB = new DAOPreguntasSeguridad();
@@ -56,7 +55,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                 }
             }
         }
-
         private void PreguntaTres(object sender, EventArgs e)
         {
             DAOPreguntasSeguridad ObjDAOCargarCMB = new DAOPreguntasSeguridad();
@@ -73,7 +71,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                 }
             }
         }
-
         private void PreguntaCuatro(object sender, EventArgs e)
         {
             DAOPreguntasSeguridad ObjDAOCargarCMB = new DAOPreguntasSeguridad();

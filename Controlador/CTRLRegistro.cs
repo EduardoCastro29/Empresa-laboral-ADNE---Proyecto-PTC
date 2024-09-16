@@ -43,6 +43,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             ObjRegistro.txtNombre.KeyPress += new KeyPressEventHandler(ValidarCampoLetra);
             ObjRegistro.txtApellido.KeyPress += new KeyPressEventHandler(ValidarCampoLetra);
             ObjRegistro.txtDui.KeyPress += new KeyPressEventHandler(ValidarCampoDocumento);
+            ObjRegistro.txtDui.TextChange += new EventHandler(EnmascararCampoDocumento);
             ObjRegistro.txtTelefono.KeyPress += new KeyPressEventHandler(ValidarCampoNumero);
             ObjRegistro.txtUsuario.KeyPress += new KeyPressEventHandler(ValidarCampoUsuario);
             ObjRegistro.txtCorreo.KeyPress += new KeyPressEventHandler(ValidarCampoCorreo);
@@ -133,6 +134,32 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                 return;
             }
             e.Handled = true;
+        }
+        private void EnmascararCampoDocumento(object sender, EventArgs e)
+        {
+            //Obtenemos la longitud actual del textbox para evaluar si es necesario el remplazo por guión (en este caso el DUI) o número
+            string EnmascararDUI = ObjRegistro.txtDui.Text.Replace("-", "");
+
+            //Limitamos el textbox para que solo obtenga 9 caracteres
+            if (EnmascararDUI.Length > 9)
+            {
+                EnmascararDUI = EnmascararDUI.Substring(0, 9);
+            }
+
+            //Una vez llegada a la longitud deseada, en este caso 8 pone un guión automáticamente para enmascarar el DUI
+            if (EnmascararDUI.Length > 8)
+            {
+                //Indicamos en qué posición se pondrá el guión y que símbolo tomará
+                ObjRegistro.txtDui.Text = EnmascararDUI.Insert(8, "-");
+            }
+            else
+            {
+                //Caso contrario, no realizamos ningun cambio (no se inserta el guión)
+                ObjRegistro.txtDui.Text = EnmascararDUI;
+            }
+
+            //Indicamos que la posición inicial del cursor, será al inicio del textbox
+            ObjRegistro.txtDui.SelectionStart = ObjRegistro.txtDui.Text.Length;
         }
         private void ValidarCampoNumero(object sender, KeyPressEventArgs e)
         {

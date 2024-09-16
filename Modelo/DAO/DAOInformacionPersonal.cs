@@ -14,17 +14,17 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
 {
     internal class DAOInformacionPersonal : DTOInformacionPersonal
     {
-        readonly SqlCommand conexion = new SqlCommand();
+        readonly SqlCommand Conexion = new SqlCommand();
         public bool InsertarInformacionPaciente()
         {
             try
             {
-                //Abrimos la conexion 
-                conexion.Connection = Conectar();
+                //Abrimos la Conexion 
+                Conexion.Connection = Conectar();
                 // Se crea el query 
                 string consultaSqlPaciente = "INSERT INTO Paciente(documentoPresentado, fechaNacimiento, nombre, apellido, domicilio, nacionalidad, correoElectronico, telefono, profesion, edad, composicionFamiliar, motivo, antecedente, descripcionSituacion, aspectosPreocupantes, generoId)\r\nVALUES\r\n(@documentoPresentado, @fechaNacimiento, @nombre, @apellido, @domicilio, @nacionalidad, @correoElectronico, @telefono, @profesion, @edad, @composicionFamiliar, @motivo, @antecedente, @descripcionSituacion, @aspectosPreocupantes, @generoId)";
                 //Le mandamos la consulta a SQL por medio de un comando
-                SqlCommand objConsultaSql = new SqlCommand(consultaSqlPaciente, conexion.Connection);
+                SqlCommand objConsultaSql = new SqlCommand(consultaSqlPaciente, Conexion.Connection);
 
                 // Se añaden los valores
                 objConsultaSql.Parameters.AddWithValue("@documentoPresentado", DocumentoPresentado);
@@ -44,10 +44,35 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                 objConsultaSql.Parameters.AddWithValue("@aspectosPreocupantes", AspectosPreocupantes);
                 objConsultaSql.Parameters.AddWithValue("@generoId", GeneroId1);
 
-                //Si el número de filas afectadas fueron existosas, retornamos verdadero
+                //Si el número de filas afectadas fueron existosas, insertamos los valores para que el profesional pueda ver sus propios pacientes
                 if (objConsultaSql.ExecuteNonQuery() > 0)
-                    return true;
-                else return false;
+                {
+                    try
+                    {
+                        //Inicializamos el comando
+                        string consultaSQLPacientePR = "INSERT INTO PacienteProfesionalENC (documentoPresentado, DUI) VALUES (@documentoPresentado, @DUI)";
+
+                        //Declaramos el comando
+                        SqlCommand ObjConsultaSQL = new SqlCommand(consultaSQLPacientePR, Conexion.Connection);
+
+                        //Insertamos los valores
+                        ObjConsultaSQL.Parameters.AddWithValue("@documentoPresentado", DocumentoPresentado);
+                        ObjConsultaSQL.Parameters.AddWithValue("@DUI", InicioSesion.Dui);
+
+                        if (ObjConsultaSQL.ExecuteNonQuery() > 0)
+                            return true;
+                        else return false;
+                    }
+                    catch (Exception)
+                    {
+                        MessageBox.Show("Ha ocurrido un error, ERR-001-4", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return false;
+                    }
+                }
+                else
+                {
+                    return false;
+                }
             }
             catch (Exception)
             {
@@ -57,7 +82,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
             finally
             {
                 //Independientemente se haga o no el proceso cerramos la conexión
-                conexion.Connection.Close();
+                Conexion.Connection.Close();
             }
         }
         public bool ActualizarInformacionPaciente()
@@ -65,11 +90,30 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
             try
             {
                 //Abrimos la conexion 
-                conexion.Connection = Conectar();
+                Conexion.Connection = Conectar();
                 // Se crea el query
-                string consultaSqlActualizarPaciente = "UPDATE Paciente SET\r\nfechaNacimiento\t\t= @fechaNacimiento,\r\nnombre\t\t\t\t= @nombre,\r\napellido\t\t\t= @apellido,\r\ndomicilio\t\t\t= @domicilio,\r\nnacionalidad\t\t= @nacionalidad,\r\ncorreoElectronico\t= @correoElectronico,\r\ntelefono\t\t\t= @telefono,\r\nprofesion\t\t\t= @profesion,\r\nedad\t\t\t\t= @edad,\r\ncomposicionFamiliar\t= @composicionFamiliar,\r\nmotivo\t\t\t\t= @motivo,\r\nantecedente\t\t\t= @antecedente,\r\ndescripcionSituacion\t=@descripcionSituacion,\r\naspectosPreocupantes = @aspectosPreocupantes,\r\ngeneroId\t\t\t= @generoId\r\n\r\nWHERE\r\ndocumentoPresentado = @documentoPresentado";
+                string consultaSqlActualizarPaciente = "UPDATE Paciente SET " +
+                                                       "fechaNacimiento     = @fechaNacimiento, " +
+                                                       "nombre              = @nombre, " +
+                                                       "apellido            = @apellido, " +
+                                                       "domicilio           = @domicilio, " +
+                                                       "nacionalidad        = @nacionalidad, " +
+                                                       "correoElectronico   = @correoElectronico, " +
+                                                       "telefono            = @telefono, " +
+                                                       "profesion           = @profesion, " +
+                                                       "edad                = @edad, " +
+                                                       "composicionFamiliar = @composicionFamiliar, " +
+                                                       "motivo              = @motivo, " +
+                                                       "antecedente         = @antecedente, " +
+                                                       "descripcionSituacion = @descripcionSituacion, " +
+                                                       "aspectosPreocupantes = @aspectosPreocupantes, " +
+                                                       "generoId            = @generoId " +
+
+                                                       "WHERE " +
+                                                       "documentoPresentado = @documentoPresentado";
+
                 //Le mandamos la consulta a SQL por medio de un comando
-                SqlCommand objConsultaActualizar = new SqlCommand(consultaSqlActualizarPaciente, conexion.Connection);
+                SqlCommand objConsultaActualizar = new SqlCommand(consultaSqlActualizarPaciente, Conexion.Connection);
 
                 // Se añaden los valores 
                 objConsultaActualizar.Parameters.AddWithValue("@fechaNacimiento", FechaNacimiento);
@@ -93,6 +137,32 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                 if (objConsultaActualizar.ExecuteNonQuery() > 0)
                 {
                     return true;
+                    //try
+                    //{
+                    //    //Inicializamos el comando
+                    //    string consultaSQLPacientePR = "UPDATE PacienteProfesionalENC SET " +
+                    //                                   "documentoPresentado     = @documentoPresentado, " +
+                    //                                   "DUI                     = @DUI " +
+
+                    //                                   "WHERE " +
+                    //                                   "profesionalPAId = @profesion alPAId";
+
+                    //    //Declaramos el comando
+                    //    SqlCommand ObjConsultaSQL = new SqlCommand(consultaSQLPacientePR, Conexion.Connection);
+
+                    //    //Insertamos los valores
+                    //    ObjConsultaSQL.Parameters.AddWithValue("@documentoPresentado", DocumentoPresentado);
+                    //    ObjConsultaSQL.Parameters.AddWithValue("@DUI", InicioSesion.Dui);
+
+                    //    if (ObjConsultaSQL.ExecuteNonQuery() > 0)
+                    //        return true;
+                    //    else return false;
+                    //}
+                    //catch (Exception)
+                    //{
+                    //    MessageBox.Show("Ha ocurrido un error, ERR-003-5", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    //    return false;
+                    //}
                 }
                 else
                 {
@@ -108,7 +178,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
             finally
             {
                 //Independientemente se haga o no el proceso cerramos la conexión
-                conexion.Connection.Close();
+                Conexion.Connection.Close();
             }
         }
         public bool ObtenerInformacionPaciente()
@@ -116,19 +186,15 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
             try
             {
                 //Abrimos la conexion 
-                conexion.Connection = Conectar();
+                Conexion.Connection = Conectar();
                 // Se crea el query
                 string consultaSqlActualizarPaciente = "SELECT * FROM Paciente WHERE documentoPresentado = @documentoPresentado";
 
                 //Le mandamos la consulta a SQL por medio de un comando
-                SqlCommand objConsultaActualizar = new SqlCommand(consultaSqlActualizarPaciente, conexion.Connection);
+                SqlCommand objConsultaActualizar = new SqlCommand(consultaSqlActualizarPaciente, Conexion.Connection);
 
-                // Se añaden los valores 
-
+                //Se añaden los valores 
                 objConsultaActualizar.Parameters.AddWithValue("@documentoPresentado", DocumentoPresentado);
-
-                //Si el número de filas afectadas fueron existosas, retornamos verdadero
-                objConsultaActualizar.CommandType = CommandType.Text;
 
                 //SQL lee los datos y los ejecuta
                 SqlDataReader ObjFilasEncontradas = objConsultaActualizar.ExecuteReader();
@@ -161,16 +227,16 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
             finally
             {
                 //Independientemente se haga o no el proceso cerramos la conexión
-                conexion.Connection.Close();
+                Conexion.Connection.Close();
             }
         }
         public DataTable AgregarCMBGenero()
         {
             try
             {
-                conexion.Connection = Conectar();
+                Conexion.Connection = Conectar();
                 string consultaSQL = "SELECT * FROM Genero";
-                SqlDataAdapter ObjLlenarCombobox = new SqlDataAdapter(consultaSQL, conexion.Connection);
+                SqlDataAdapter ObjLlenarCombobox = new SqlDataAdapter(consultaSQL, Conexion.Connection);
                 DataTable ObjllenarDT = new DataTable();
                 ObjLlenarCombobox.Fill(ObjllenarDT);
                 return ObjllenarDT;
@@ -182,7 +248,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
             }
             finally
             {
-                conexion.Connection.Close();
+                Conexion.Connection.Close();
             }
         }
     }

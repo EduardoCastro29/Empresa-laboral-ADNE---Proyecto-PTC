@@ -22,5 +22,10 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Vista
         {
             this.btnCalendar.BackColor = color;
         }
+
+        private void UCDias_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UCDias));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges5 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             this.lblDias = new System.Windows.Forms.Label();
             this.btnCalendar = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.SuspendLayout();
@@ -65,11 +65,11 @@
             this.btnCalendar.ColorContrastOnClick = 45;
             this.btnCalendar.ColorContrastOnHover = 45;
             this.btnCalendar.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges5.BottomLeft = true;
-            borderEdges5.BottomRight = true;
-            borderEdges5.TopLeft = true;
-            borderEdges5.TopRight = true;
-            this.btnCalendar.CustomizableEdges = borderEdges5;
+            borderEdges1.BottomLeft = true;
+            borderEdges1.BottomRight = true;
+            borderEdges1.TopLeft = true;
+            borderEdges1.TopRight = true;
+            this.btnCalendar.CustomizableEdges = borderEdges1;
             this.btnCalendar.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnCalendar.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnCalendar.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -148,6 +148,7 @@
             this.Name = "UCDias";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Size = new System.Drawing.Size(133, 85);
+            this.Load += new System.EventHandler(this.UCDias_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
