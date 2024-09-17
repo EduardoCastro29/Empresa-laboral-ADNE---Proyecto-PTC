@@ -20,8 +20,10 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
             try
             {
                 Conexion.Connection = Conectar();
-                string ConsultaSqlVerPaciente = "SELECT * FROM vistaPaciente";
+                string ConsultaSqlVerPaciente = "SELECT * FROM vistaPaciente WHERE DUI = @DUI";
                 SqlCommand ObjConsultaSql = new SqlCommand(ConsultaSqlVerPaciente, Conexion.Connection);
+
+                ObjConsultaSql.Parameters.AddWithValue("@DUI", InicioSesion.Dui);
 
                 SqlDataAdapter ad = new SqlDataAdapter(ObjConsultaSql);
                 DataTable dt = new DataTable();
@@ -39,7 +41,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                 Conexion.Connection.Close();
             }
         }
-
         public DataSet BuscarPaciente(string BuscarPacienteP)
         {
             try

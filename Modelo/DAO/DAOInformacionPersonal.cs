@@ -93,21 +93,21 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                 Conexion.Connection = Conectar();
                 // Se crea el query
                 string consultaSqlActualizarPaciente = "UPDATE Paciente SET " +
-                                                       "fechaNacimiento     = @fechaNacimiento, " +
-                                                       "nombre              = @nombre, " +
-                                                       "apellido            = @apellido, " +
-                                                       "domicilio           = @domicilio, " +
-                                                       "nacionalidad        = @nacionalidad, " +
-                                                       "correoElectronico   = @correoElectronico, " +
-                                                       "telefono            = @telefono, " +
-                                                       "profesion           = @profesion, " +
-                                                       "edad                = @edad, " +
-                                                       "composicionFamiliar = @composicionFamiliar, " +
-                                                       "motivo              = @motivo, " +
-                                                       "antecedente         = @antecedente, " +
-                                                       "descripcionSituacion = @descripcionSituacion, " +
-                                                       "aspectosPreocupantes = @aspectosPreocupantes, " +
-                                                       "generoId            = @generoId " +
+                                                       "fechaNacimiento         = @fechaNacimiento, " +
+                                                       "nombre                  = @nombre, " +
+                                                       "apellido                = @apellido, " +
+                                                       "domicilio               = @domicilio, " +
+                                                       "nacionalidad            = @nacionalidad, " +
+                                                       "correoElectronico       = @correoElectronico, " +
+                                                       "telefono                = @telefono, " +
+                                                       "profesion               = @profesion, " +
+                                                       "edad                    = @edad, " +
+                                                       "composicionFamiliar     = @composicionFamiliar, " +
+                                                       "motivo                  = @motivo, " +
+                                                       "antecedente             = @antecedente, " +
+                                                       "descripcionSituacion    = @descripcionSituacion, " +
+                                                       "aspectosPreocupantes    = @aspectosPreocupantes, " +
+                                                       "generoId                = @generoId " +
 
                                                        "WHERE " +
                                                        "documentoPresentado = @documentoPresentado";

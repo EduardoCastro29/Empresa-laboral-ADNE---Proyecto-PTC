@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Empresa_laboral_ADNE___Proyecto_PTC.Vista
 {
-    public partial class Información_encargado : Form
+    public partial class InformaciónEncargadoForm : Form
     {
-        public Información_encargado()
+        public InformaciónEncargadoForm()
         {
             InitializeComponent();
         }

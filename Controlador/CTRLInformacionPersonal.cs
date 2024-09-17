@@ -40,7 +40,8 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             ObjInformacionPersonal.txtAntecedentes.KeyPress += new KeyPressEventHandler(ValidarCampoTextBox);
             ObjInformacionPersonal.txtDescripcion.KeyPress += new KeyPressEventHandler(ValidarCampoTextBox);
             ObjInformacionPersonal.txtAspectosPreocupantes.KeyPress += new KeyPressEventHandler(ValidarCampoTextBox);
-            ObjInformacionPersonal.txtDocumentoPresentad0.KeyPress += new KeyPressEventHandler(ValidarCampoDocumento);
+            ObjInformacionPersonal.txtDocumentoPresentado.KeyPress += new KeyPressEventHandler(ValidarCampoDocumento);
+            ObjInformacionPersonal.txtDocumentoPresentado.TextChange += new EventHandler(EnmascararCampoDocumento);
             ObjInformacionPersonal.txtTelefono1.KeyPress += new KeyPressEventHandler(ValidarCampoNumero);
             ObjInformacionPersonal.txtCorreoElectronico.KeyPress += new KeyPressEventHandler(ValidarCampoCorreo);
         }
@@ -114,8 +115,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             //Indicamos que se creará el evento e.Char con todos los valores antes proporcionados, como un EventHandler
             e.Handled = true;
         }
-        
-    private void ValidarCampoTextBox(object sender, KeyPressEventArgs e)
+        private void ValidarCampoTextBox(object sender, KeyPressEventArgs e)
         {
             //La propiedad char.IsControl permite controles como BackSpace, Inicio, Fin, etc.
             if (char.IsControl(e.KeyChar))
@@ -160,7 +160,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             //Indicamos que se creará el evento e.Char con todos los valores antes proporcionados, como un EventHandler
             e.Handled = true;
         }
-
         private void ValidarCampoDocumento(object sender, KeyPressEventArgs e)
         {
             //La propiedad char.IsControl permite controles como BackSpace, Inicio, Fin, etc.
@@ -182,6 +181,32 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             }
             e.Handled = true;
         }
+        private void EnmascararCampoDocumento(object sender, EventArgs e)
+        {
+            //Obtenemos la longitud actual del textbox para evaluar si es necesario el remplazo por guión (en este caso el DUI) o número
+            string EnmascararDUI = ObjInformacionPersonal.txtDocumentoPresentado.Text.Replace("-", "");
+
+            //Limitamos el textbox para que solo obtenga 9 caracteres
+            if (EnmascararDUI.Length > 9)
+            {
+                EnmascararDUI = EnmascararDUI.Substring(0, 9);
+            }
+
+            //Una vez llegada a la longitud deseada, en este caso 8 pone un guión automáticamente para enmascarar el DUI
+            if (EnmascararDUI.Length > 8)
+            {
+                //Indicamos en qué posición se pondrá el guión y que símbolo tomará
+                ObjInformacionPersonal.txtDocumentoPresentado.Text = EnmascararDUI.Insert(8, "-");
+            }
+            else
+            {
+                //Caso contrario, no realizamos ningun cambio (no se inserta el guión)
+                ObjInformacionPersonal.txtDocumentoPresentado.Text = EnmascararDUI;
+            }
+
+            //Indicamos que la posición inicial del cursor, será al inicio del textbox
+            ObjInformacionPersonal.txtDocumentoPresentado.SelectionStart = ObjInformacionPersonal.txtDocumentoPresentado.Text.Length;
+        }
         private void ValidarCampoNumero(object sender, KeyPressEventArgs e)
         {
             //La propiedad char.IsControl permite controles como BackSpace, Inicio, Fin, etc.
@@ -191,18 +216,17 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                 return;
             }
 
-            // Si el textbox está vacío, permitimos solo los caracteres 6, 7 o 2
+            //Si el textbox está vacío, permitimos solo los caracteres 6, 7 o 2
             if (ObjInformacionPersonal.txtTelefono1.Text.Length == 0)
             {
                 if (e.KeyChar != '6' && e.KeyChar != '7' && e.KeyChar != '2')
                 {
-                    e.Handled = true; // Cancela la entrada si no es válida
+                    e.Handled = true;
                 }
             }
-                //Declaramos la variable de tipo char que recibirá los parámetros de las letras registradas por las variables e.KeyChar creadas anteriormente
-                char ch = e.KeyChar;
-            if ((ch >= '0' && ch <= '9') ||               
-                (ch == '+') ||
+            //Declaramos la variable de tipo char que recibirá los parámetros de las letras registradas por las variables e.KeyChar creadas anteriormente
+            char ch = e.KeyChar;
+            if ((ch >= '0' && ch <= '9') ||
                 (ch == '-'))
             {
                 return;
@@ -217,13 +241,12 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             {
                 //Dado el objeto del DaoInformacionPersonal, evaluamos si los datos fueron ingresados correctamente dados sus métodos
                 if (ObjInformacionPersonal.txtNacionalidad.Text.Length < 3 ||
-                    ObjInformacionPersonal.txtDocumentoPresentad0.Text.Length < 9 ||
+                    ObjInformacionPersonal.txtDocumentoPresentado.Text.Length < 9 ||
                     string.IsNullOrWhiteSpace(ObjInformacionPersonal.txtEdad.Text.Trim()) ||
                     ObjInformacionPersonal.txtTelefono1.Text.Length < 9 ||
                     ObjInformacionPersonal.txtProfesion.Text.Length < 3 ||
                     ObjInformacionPersonal.txtNombrePaciente.Text.Length < 2 ||
                     ObjInformacionPersonal.txtApellidoPaciente.Text.Length < 2 ||
-                    ObjInformacionPersonal.txtDomicilio.Text.Length < 5 ||
                     ObjInformacionPersonal.txtCorreoElectronico.Text.Length < 10 ||
                     ObjInformacionPersonal.txtComposicionFamiliar.Text.Length < 3 ||
                     ObjInformacionPersonal.txtMotivoIntervencion.Text.Length < 5 ||
@@ -245,7 +268,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                     ObjDAOInformacionPersonal.FechaNacimiento = ObjInformacionPersonal.dtFechaNacimiento.Value.Date;
 
                     ObjDAOInformacionPersonal.Nacionalidad = ObjInformacionPersonal.txtNacionalidad.Text.Trim();
-                    ObjDAOInformacionPersonal.DocumentoPresentado = ObjInformacionPersonal.txtDocumentoPresentad0.Text.Trim();
+                    ObjDAOInformacionPersonal.DocumentoPresentado = ObjInformacionPersonal.txtDocumentoPresentado.Text.Trim();
                     ObjDAOInformacionPersonal.GeneroId1 = int.Parse(ObjInformacionPersonal.cmbGeneroId.SelectedValue.ToString());
                     ObjDAOInformacionPersonal.Edad = int.Parse(ObjInformacionPersonal.txtEdad.Text.Trim());
                     ObjDAOInformacionPersonal.Telefono = (ObjInformacionPersonal.txtTelefono1.Text.Trim());
@@ -300,8 +323,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
         {
             ObjInformacionPersonal.dtFechaNacimiento.Value = DateTime.Today.AddYears(-2); ;
             ObjInformacionPersonal.txtNacionalidad.Clear();
-            ObjInformacionPersonal.txtDocumentoPresentad0.Clear();
-            ObjInformacionPersonal.cmbGeneroId.SelectedIndex = -1;
+            ObjInformacionPersonal.txtDocumentoPresentado.Clear();
             ObjInformacionPersonal.txtEdad.Clear();
             ObjInformacionPersonal.txtTelefono1.Clear();
             ObjInformacionPersonal.txtProfesion.Clear();
@@ -319,7 +341,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
         private void Modificar(object sender, EventArgs e)
         {
             ObjInformacionPersonal.txtEdad.Enabled = false;
-            if (string.IsNullOrWhiteSpace(ObjInformacionPersonal.txtDocumentoPresentad0.Text))
+            if (string.IsNullOrWhiteSpace(ObjInformacionPersonal.txtDocumentoPresentado.Text))
             {
                 ObjInformacionPersonal.btnGuardarPaciente.Enabled = true;
                 ObjInformacionPersonal.btnModificarPaciente.Enabled = false;

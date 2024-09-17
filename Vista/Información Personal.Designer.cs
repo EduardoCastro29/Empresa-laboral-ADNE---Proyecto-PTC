@@ -123,7 +123,7 @@
             this.cmbGeneroId = new Bunifu.UI.WinForms.BunifuDropdown();
             this.txtTelefono1 = new Bunifu.UI.WinForms.BunifuTextBox();
             this.lblDocumento = new System.Windows.Forms.Label();
-            this.txtDocumentoPresentad0 = new Bunifu.UI.WinForms.BunifuTextBox();
+            this.txtDocumentoPresentado = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bunifuGradientPanel2.SuspendLayout();
             this.bunifuGradientPanel3.SuspendLayout();
             this.SuspendLayout();
@@ -132,7 +132,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(62, 291);
+            this.label6.Location = new System.Drawing.Point(58, 286);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(223, 23);
             this.label6.TabIndex = 137;
@@ -142,7 +142,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(62, 361);
+            this.label1.Location = new System.Drawing.Point(58, 356);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(97, 23);
             this.label1.TabIndex = 138;
@@ -179,7 +179,7 @@
             this.txtDomicilio.IconRight = null;
             this.txtDomicilio.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtDomicilio.Lines = new string[0];
-            this.txtDomicilio.Location = new System.Drawing.Point(63, 387);
+            this.txtDomicilio.Location = new System.Drawing.Point(59, 382);
             this.txtDomicilio.MaxLength = 300;
             this.txtDomicilio.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtDomicilio.Modified = false;
@@ -215,7 +215,7 @@
             this.txtDomicilio.SelectionLength = 0;
             this.txtDomicilio.SelectionStart = 0;
             this.txtDomicilio.ShortcutsEnabled = false;
-            this.txtDomicilio.Size = new System.Drawing.Size(666, 42);
+            this.txtDomicilio.Size = new System.Drawing.Size(861, 42);
             this.txtDomicilio.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtDomicilio.TabIndex = 9;
             this.txtDomicilio.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -230,7 +230,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(64, 108);
+            this.label2.Location = new System.Drawing.Point(58, 108);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(144, 23);
             this.label2.TabIndex = 139;
@@ -240,7 +240,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(62, 210);
+            this.label7.Location = new System.Drawing.Point(58, 205);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(209, 23);
             this.label7.TabIndex = 141;
@@ -251,7 +251,7 @@
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(378, 321);
+            this.label8.Location = new System.Drawing.Point(467, 316);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(63, 23);
             this.label8.TabIndex = 142;
@@ -287,7 +287,7 @@
             this.txtEdad.IconRight = null;
             this.txtEdad.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtEdad.Lines = new string[0];
-            this.txtEdad.Location = new System.Drawing.Point(447, 312);
+            this.txtEdad.Location = new System.Drawing.Point(536, 307);
             this.txtEdad.MaxLength = 3;
             this.txtEdad.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtEdad.Modified = false;
@@ -323,7 +323,7 @@
             this.txtEdad.SelectionLength = 0;
             this.txtEdad.SelectionStart = 0;
             this.txtEdad.ShortcutsEnabled = false;
-            this.txtEdad.Size = new System.Drawing.Size(339, 42);
+            this.txtEdad.Size = new System.Drawing.Size(375, 42);
             this.txtEdad.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtEdad.TabIndex = 23;
             this.txtEdad.TabStop = false;
@@ -339,7 +339,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(62, 164);
+            this.label10.Location = new System.Drawing.Point(58, 160);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(84, 23);
             this.label10.TabIndex = 143;
@@ -350,7 +350,7 @@
             this.label9.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(393, 164);
+            this.label9.Location = new System.Drawing.Point(464, 161);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(96, 23);
             this.label9.TabIndex = 144;
@@ -360,7 +360,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(59, 434);
+            this.label11.Location = new System.Drawing.Point(60, 429);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(217, 23);
             this.label11.TabIndex = 145;
@@ -397,7 +397,7 @@
             this.txtComposicionFamiliar.IconRight = null;
             this.txtComposicionFamiliar.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtComposicionFamiliar.Lines = new string[0];
-            this.txtComposicionFamiliar.Location = new System.Drawing.Point(63, 460);
+            this.txtComposicionFamiliar.Location = new System.Drawing.Point(59, 455);
             this.txtComposicionFamiliar.MaxLength = 125;
             this.txtComposicionFamiliar.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtComposicionFamiliar.Modified = false;
@@ -433,7 +433,7 @@
             this.txtComposicionFamiliar.SelectionLength = 0;
             this.txtComposicionFamiliar.SelectionStart = 0;
             this.txtComposicionFamiliar.ShortcutsEnabled = false;
-            this.txtComposicionFamiliar.Size = new System.Drawing.Size(666, 42);
+            this.txtComposicionFamiliar.Size = new System.Drawing.Size(861, 42);
             this.txtComposicionFamiliar.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtComposicionFamiliar.TabIndex = 10;
             this.txtComposicionFamiliar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -448,7 +448,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(62, 513);
+            this.label12.Location = new System.Drawing.Point(60, 508);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(378, 23);
             this.label12.TabIndex = 146;
@@ -485,7 +485,7 @@
             this.txtMotivoIntervencion.IconRight = null;
             this.txtMotivoIntervencion.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtMotivoIntervencion.Lines = new string[0];
-            this.txtMotivoIntervencion.Location = new System.Drawing.Point(63, 539);
+            this.txtMotivoIntervencion.Location = new System.Drawing.Point(59, 534);
             this.txtMotivoIntervencion.MaxLength = 300;
             this.txtMotivoIntervencion.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtMotivoIntervencion.Modified = false;
@@ -521,7 +521,7 @@
             this.txtMotivoIntervencion.SelectionLength = 0;
             this.txtMotivoIntervencion.SelectionStart = 0;
             this.txtMotivoIntervencion.ShortcutsEnabled = false;
-            this.txtMotivoIntervencion.Size = new System.Drawing.Size(666, 95);
+            this.txtMotivoIntervencion.Size = new System.Drawing.Size(861, 95);
             this.txtMotivoIntervencion.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtMotivoIntervencion.TabIndex = 11;
             this.txtMotivoIntervencion.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -536,7 +536,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(62, 640);
+            this.label13.Location = new System.Drawing.Point(60, 635);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(260, 23);
             this.label13.TabIndex = 147;
@@ -573,7 +573,7 @@
             this.txtAntecedentes.IconRight = null;
             this.txtAntecedentes.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtAntecedentes.Lines = new string[0];
-            this.txtAntecedentes.Location = new System.Drawing.Point(61, 666);
+            this.txtAntecedentes.Location = new System.Drawing.Point(57, 661);
             this.txtAntecedentes.MaxLength = 300;
             this.txtAntecedentes.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtAntecedentes.Modified = false;
@@ -609,7 +609,7 @@
             this.txtAntecedentes.SelectionLength = 0;
             this.txtAntecedentes.SelectionStart = 0;
             this.txtAntecedentes.ShortcutsEnabled = false;
-            this.txtAntecedentes.Size = new System.Drawing.Size(668, 95);
+            this.txtAntecedentes.Size = new System.Drawing.Size(863, 95);
             this.txtAntecedentes.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtAntecedentes.TabIndex = 12;
             this.txtAntecedentes.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -624,7 +624,7 @@
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(62, 764);
+            this.label16.Location = new System.Drawing.Point(60, 759);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(393, 23);
             this.label16.TabIndex = 148;
@@ -661,7 +661,7 @@
             this.txtDescripcion.IconRight = null;
             this.txtDescripcion.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtDescripcion.Lines = new string[0];
-            this.txtDescripcion.Location = new System.Drawing.Point(61, 790);
+            this.txtDescripcion.Location = new System.Drawing.Point(57, 785);
             this.txtDescripcion.MaxLength = 300;
             this.txtDescripcion.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtDescripcion.Modified = false;
@@ -697,7 +697,7 @@
             this.txtDescripcion.SelectionLength = 0;
             this.txtDescripcion.SelectionStart = 0;
             this.txtDescripcion.ShortcutsEnabled = false;
-            this.txtDescripcion.Size = new System.Drawing.Size(668, 95);
+            this.txtDescripcion.Size = new System.Drawing.Size(863, 95);
             this.txtDescripcion.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtDescripcion.TabIndex = 13;
             this.txtDescripcion.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -712,7 +712,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(62, 888);
+            this.label15.Location = new System.Drawing.Point(60, 883);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(441, 23);
             this.label15.TabIndex = 149;
@@ -749,7 +749,7 @@
             this.txtAspectosPreocupantes.IconRight = null;
             this.txtAspectosPreocupantes.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtAspectosPreocupantes.Lines = new string[0];
-            this.txtAspectosPreocupantes.Location = new System.Drawing.Point(61, 914);
+            this.txtAspectosPreocupantes.Location = new System.Drawing.Point(57, 909);
             this.txtAspectosPreocupantes.MaxLength = 300;
             this.txtAspectosPreocupantes.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtAspectosPreocupantes.Modified = false;
@@ -785,7 +785,7 @@
             this.txtAspectosPreocupantes.SelectionLength = 0;
             this.txtAspectosPreocupantes.SelectionStart = 0;
             this.txtAspectosPreocupantes.ShortcutsEnabled = false;
-            this.txtAspectosPreocupantes.Size = new System.Drawing.Size(668, 95);
+            this.txtAspectosPreocupantes.Size = new System.Drawing.Size(863, 95);
             this.txtAspectosPreocupantes.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtAspectosPreocupantes.TabIndex = 14;
             this.txtAspectosPreocupantes.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -807,7 +807,7 @@
             this.bunifuGradientPanel2.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(179)))), ((int)(((byte)(166)))));
             this.bunifuGradientPanel2.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(199)))), ((int)(((byte)(187)))));
             this.bunifuGradientPanel2.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(179)))), ((int)(((byte)(166)))));
-            this.bunifuGradientPanel2.Location = new System.Drawing.Point(392, 1016);
+            this.bunifuGradientPanel2.Location = new System.Drawing.Point(490, 1016);
             this.bunifuGradientPanel2.Name = "bunifuGradientPanel2";
             this.bunifuGradientPanel2.Quality = 10;
             this.bunifuGradientPanel2.Size = new System.Drawing.Size(212, 47);
@@ -916,7 +916,7 @@
             this.bunifuGradientPanel3.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(179)))), ((int)(((byte)(166)))));
             this.bunifuGradientPanel3.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(199)))), ((int)(((byte)(187)))));
             this.bunifuGradientPanel3.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(179)))), ((int)(((byte)(166)))));
-            this.bunifuGradientPanel3.Location = new System.Drawing.Point(610, 1016);
+            this.bunifuGradientPanel3.Location = new System.Drawing.Point(708, 1016);
             this.bunifuGradientPanel3.Name = "bunifuGradientPanel3";
             this.bunifuGradientPanel3.Quality = 10;
             this.bunifuGradientPanel3.Size = new System.Drawing.Size(212, 47);
@@ -1044,7 +1044,7 @@
             this.txtProfesion.IconRight = null;
             this.txtProfesion.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtProfesion.Lines = new string[0];
-            this.txtProfesion.Location = new System.Drawing.Point(501, 154);
+            this.txtProfesion.Location = new System.Drawing.Point(566, 150);
             this.txtProfesion.MaxLength = 100;
             this.txtProfesion.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtProfesion.Modified = false;
@@ -1080,7 +1080,7 @@
             this.txtProfesion.SelectionLength = 0;
             this.txtProfesion.SelectionStart = 0;
             this.txtProfesion.ShortcutsEnabled = false;
-            this.txtProfesion.Size = new System.Drawing.Size(285, 42);
+            this.txtProfesion.Size = new System.Drawing.Size(345, 42);
             this.txtProfesion.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtProfesion.TabIndex = 5;
             this.txtProfesion.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -1112,17 +1112,17 @@
             this.dtFechaNacimiento.IconColor = System.Drawing.Color.Teal;
             this.dtFechaNacimiento.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
             this.dtFechaNacimiento.LeftTextMargin = 5;
-            this.dtFechaNacimiento.Location = new System.Drawing.Point(66, 321);
+            this.dtFechaNacimiento.Location = new System.Drawing.Point(59, 317);
             this.dtFechaNacimiento.MinimumSize = new System.Drawing.Size(4, 32);
             this.dtFechaNacimiento.Name = "dtFechaNacimiento";
-            this.dtFechaNacimiento.Size = new System.Drawing.Size(348, 32);
+            this.dtFechaNacimiento.Size = new System.Drawing.Size(389, 32);
             this.dtFechaNacimiento.TabIndex = 8;
             this.dtFechaNacimiento.Value = new System.DateTime(2024, 8, 7, 15, 33, 0, 0);
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(222, 1063);
+            this.label14.Location = new System.Drawing.Point(293, 1078);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(13, 13);
             this.label14.TabIndex = 152;
@@ -1132,22 +1132,22 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(64, 24);
+            this.label3.Location = new System.Drawing.Point(58, 19);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(229, 23);
+            this.label3.Size = new System.Drawing.Size(237, 23);
             this.label3.TabIndex = 154;
-            this.label3.Text = "Nombre del paciente ";
+            this.label3.Text = "Nombres del paciente ";
             // 
             // label17
             // 
             this.label17.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(395, 24);
+            this.label17.Location = new System.Drawing.Point(467, 19);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(225, 23);
+            this.label17.Size = new System.Drawing.Size(233, 23);
             this.label17.TabIndex = 153;
-            this.label17.Text = "Apellido del paciente";
+            this.label17.Text = "Apellidos del paciente";
             // 
             // txtApellidoPaciente
             // 
@@ -1179,7 +1179,7 @@
             this.txtApellidoPaciente.IconRight = null;
             this.txtApellidoPaciente.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtApellidoPaciente.Lines = new string[0];
-            this.txtApellidoPaciente.Location = new System.Drawing.Point(397, 50);
+            this.txtApellidoPaciente.Location = new System.Drawing.Point(471, 45);
             this.txtApellidoPaciente.MaxLength = 65;
             this.txtApellidoPaciente.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtApellidoPaciente.Modified = false;
@@ -1215,7 +1215,7 @@
             this.txtApellidoPaciente.SelectionLength = 0;
             this.txtApellidoPaciente.SelectionStart = 0;
             this.txtApellidoPaciente.ShortcutsEnabled = false;
-            this.txtApellidoPaciente.Size = new System.Drawing.Size(389, 42);
+            this.txtApellidoPaciente.Size = new System.Drawing.Size(440, 42);
             this.txtApellidoPaciente.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtApellidoPaciente.TabIndex = 1;
             this.txtApellidoPaciente.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -1256,7 +1256,7 @@
             this.txtNacionalidad.IconRight = null;
             this.txtNacionalidad.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtNacionalidad.Lines = new string[0];
-            this.txtNacionalidad.Location = new System.Drawing.Point(159, 98);
+            this.txtNacionalidad.Location = new System.Drawing.Point(214, 98);
             this.txtNacionalidad.MaxLength = 125;
             this.txtNacionalidad.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtNacionalidad.Modified = false;
@@ -1292,7 +1292,7 @@
             this.txtNacionalidad.SelectionLength = 0;
             this.txtNacionalidad.SelectionStart = 0;
             this.txtNacionalidad.ShortcutsEnabled = false;
-            this.txtNacionalidad.Size = new System.Drawing.Size(222, 42);
+            this.txtNacionalidad.Size = new System.Drawing.Size(244, 42);
             this.txtNacionalidad.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtNacionalidad.TabIndex = 2;
             this.txtNacionalidad.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -1308,7 +1308,7 @@
             this.label18.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(395, 211);
+            this.label18.Location = new System.Drawing.Point(464, 205);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(200, 23);
             this.label18.TabIndex = 155;
@@ -1344,7 +1344,7 @@
             this.txtCorreoElectronico.IconRight = null;
             this.txtCorreoElectronico.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtCorreoElectronico.Lines = new string[0];
-            this.txtCorreoElectronico.Location = new System.Drawing.Point(397, 239);
+            this.txtCorreoElectronico.Location = new System.Drawing.Point(468, 231);
             this.txtCorreoElectronico.MaxLength = 125;
             this.txtCorreoElectronico.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtCorreoElectronico.Modified = false;
@@ -1380,7 +1380,7 @@
             this.txtCorreoElectronico.SelectionLength = 0;
             this.txtCorreoElectronico.SelectionStart = 0;
             this.txtCorreoElectronico.ShortcutsEnabled = false;
-            this.txtCorreoElectronico.Size = new System.Drawing.Size(389, 44);
+            this.txtCorreoElectronico.Size = new System.Drawing.Size(443, 44);
             this.txtCorreoElectronico.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtCorreoElectronico.TabIndex = 7;
             this.txtCorreoElectronico.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -1420,7 +1420,7 @@
             this.txtNombrePaciente.IconRight = null;
             this.txtNombrePaciente.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtNombrePaciente.Lines = new string[0];
-            this.txtNombrePaciente.Location = new System.Drawing.Point(66, 50);
+            this.txtNombrePaciente.Location = new System.Drawing.Point(62, 45);
             this.txtNombrePaciente.MaxLength = 65;
             this.txtNombrePaciente.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtNombrePaciente.Modified = false;
@@ -1456,7 +1456,7 @@
             this.txtNombrePaciente.SelectionLength = 0;
             this.txtNombrePaciente.SelectionStart = 0;
             this.txtNombrePaciente.ShortcutsEnabled = false;
-            this.txtNombrePaciente.Size = new System.Drawing.Size(369, 42);
+            this.txtNombrePaciente.Size = new System.Drawing.Size(386, 42);
             this.txtNombrePaciente.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtNombrePaciente.TabIndex = 0;
             this.txtNombrePaciente.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -1503,9 +1503,9 @@
             this.cmbGeneroId.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
             this.cmbGeneroId.ItemHighLightForeColor = System.Drawing.Color.White;
             this.cmbGeneroId.ItemTopMargin = 3;
-            this.cmbGeneroId.Location = new System.Drawing.Point(160, 160);
+            this.cmbGeneroId.Location = new System.Drawing.Point(151, 160);
             this.cmbGeneroId.Name = "cmbGeneroId";
-            this.cmbGeneroId.Size = new System.Drawing.Size(254, 32);
+            this.cmbGeneroId.Size = new System.Drawing.Size(294, 32);
             this.cmbGeneroId.TabIndex = 4;
             this.cmbGeneroId.Text = null;
             this.cmbGeneroId.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
@@ -1541,7 +1541,7 @@
             this.txtTelefono1.IconRight = null;
             this.txtTelefono1.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtTelefono1.Lines = new string[0];
-            this.txtTelefono1.Location = new System.Drawing.Point(1, 241);
+            this.txtTelefono1.Location = new System.Drawing.Point(59, 231);
             this.txtTelefono1.MaxLength = 12;
             this.txtTelefono1.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtTelefono1.Modified = false;
@@ -1577,7 +1577,7 @@
             this.txtTelefono1.SelectionLength = 0;
             this.txtTelefono1.SelectionStart = 0;
             this.txtTelefono1.ShortcutsEnabled = false;
-            this.txtTelefono1.Size = new System.Drawing.Size(348, 42);
+            this.txtTelefono1.Size = new System.Drawing.Size(386, 42);
             this.txtTelefono1.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtTelefono1.TabIndex = 6;
             this.txtTelefono1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -1593,96 +1593,96 @@
             this.lblDocumento.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblDocumento.AutoSize = true;
             this.lblDocumento.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDocumento.Location = new System.Drawing.Point(393, 108);
+            this.lblDocumento.Location = new System.Drawing.Point(464, 108);
             this.lblDocumento.Name = "lblDocumento";
             this.lblDocumento.Size = new System.Drawing.Size(127, 23);
             this.lblDocumento.TabIndex = 140;
             this.lblDocumento.Text = "Documento";
             // 
-            // txtDocumentoPresentad0
+            // txtDocumentoPresentado
             // 
-            this.txtDocumentoPresentad0.AcceptsReturn = false;
-            this.txtDocumentoPresentad0.AcceptsTab = false;
-            this.txtDocumentoPresentad0.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtDocumentoPresentad0.AnimationSpeed = 200;
-            this.txtDocumentoPresentad0.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.txtDocumentoPresentad0.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.txtDocumentoPresentad0.AutoSizeHeight = true;
-            this.txtDocumentoPresentad0.BackColor = System.Drawing.Color.Transparent;
-            this.txtDocumentoPresentad0.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txtDocumentoPresentad0.BackgroundImage")));
-            this.txtDocumentoPresentad0.BorderColorActive = System.Drawing.Color.Teal;
-            this.txtDocumentoPresentad0.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.txtDocumentoPresentad0.BorderColorHover = System.Drawing.Color.LightSeaGreen;
-            this.txtDocumentoPresentad0.BorderColorIdle = System.Drawing.Color.Silver;
-            this.txtDocumentoPresentad0.BorderRadius = 15;
-            this.txtDocumentoPresentad0.BorderThickness = 1;
-            this.txtDocumentoPresentad0.CharacterCase = Bunifu.UI.WinForms.BunifuTextBox.CharacterCases.Normal;
-            this.txtDocumentoPresentad0.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.txtDocumentoPresentad0.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtDocumentoPresentad0.DefaultFont = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDocumentoPresentad0.DefaultText = "";
-            this.txtDocumentoPresentad0.FillColor = System.Drawing.Color.White;
-            this.txtDocumentoPresentad0.HideSelection = true;
-            this.txtDocumentoPresentad0.IconLeft = null;
-            this.txtDocumentoPresentad0.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtDocumentoPresentad0.IconPadding = 10;
-            this.txtDocumentoPresentad0.IconRight = null;
-            this.txtDocumentoPresentad0.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtDocumentoPresentad0.Lines = new string[0];
-            this.txtDocumentoPresentad0.Location = new System.Drawing.Point(526, 98);
-            this.txtDocumentoPresentad0.MaxLength = 11;
-            this.txtDocumentoPresentad0.MinimumSize = new System.Drawing.Size(1, 1);
-            this.txtDocumentoPresentad0.Modified = false;
-            this.txtDocumentoPresentad0.Multiline = false;
-            this.txtDocumentoPresentad0.Name = "txtDocumentoPresentad0";
+            this.txtDocumentoPresentado.AcceptsReturn = false;
+            this.txtDocumentoPresentado.AcceptsTab = false;
+            this.txtDocumentoPresentado.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtDocumentoPresentado.AnimationSpeed = 200;
+            this.txtDocumentoPresentado.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.txtDocumentoPresentado.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.txtDocumentoPresentado.AutoSizeHeight = true;
+            this.txtDocumentoPresentado.BackColor = System.Drawing.Color.Transparent;
+            this.txtDocumentoPresentado.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txtDocumentoPresentado.BackgroundImage")));
+            this.txtDocumentoPresentado.BorderColorActive = System.Drawing.Color.Teal;
+            this.txtDocumentoPresentado.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.txtDocumentoPresentado.BorderColorHover = System.Drawing.Color.LightSeaGreen;
+            this.txtDocumentoPresentado.BorderColorIdle = System.Drawing.Color.Silver;
+            this.txtDocumentoPresentado.BorderRadius = 15;
+            this.txtDocumentoPresentado.BorderThickness = 1;
+            this.txtDocumentoPresentado.CharacterCase = Bunifu.UI.WinForms.BunifuTextBox.CharacterCases.Normal;
+            this.txtDocumentoPresentado.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.txtDocumentoPresentado.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtDocumentoPresentado.DefaultFont = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDocumentoPresentado.DefaultText = "";
+            this.txtDocumentoPresentado.FillColor = System.Drawing.Color.White;
+            this.txtDocumentoPresentado.HideSelection = true;
+            this.txtDocumentoPresentado.IconLeft = null;
+            this.txtDocumentoPresentado.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtDocumentoPresentado.IconPadding = 10;
+            this.txtDocumentoPresentado.IconRight = null;
+            this.txtDocumentoPresentado.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtDocumentoPresentado.Lines = new string[0];
+            this.txtDocumentoPresentado.Location = new System.Drawing.Point(597, 98);
+            this.txtDocumentoPresentado.MaxLength = 11;
+            this.txtDocumentoPresentado.MinimumSize = new System.Drawing.Size(1, 1);
+            this.txtDocumentoPresentado.Modified = false;
+            this.txtDocumentoPresentado.Multiline = false;
+            this.txtDocumentoPresentado.Name = "txtDocumentoPresentado";
             stateProperties53.BorderColor = System.Drawing.Color.Teal;
             stateProperties53.FillColor = System.Drawing.Color.Empty;
             stateProperties53.ForeColor = System.Drawing.Color.Empty;
             stateProperties53.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtDocumentoPresentad0.OnActiveState = stateProperties53;
+            this.txtDocumentoPresentado.OnActiveState = stateProperties53;
             stateProperties54.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             stateProperties54.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             stateProperties54.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             stateProperties54.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.txtDocumentoPresentad0.OnDisabledState = stateProperties54;
+            this.txtDocumentoPresentado.OnDisabledState = stateProperties54;
             stateProperties55.BorderColor = System.Drawing.Color.LightSeaGreen;
             stateProperties55.FillColor = System.Drawing.Color.Empty;
             stateProperties55.ForeColor = System.Drawing.Color.Empty;
             stateProperties55.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtDocumentoPresentad0.OnHoverState = stateProperties55;
+            this.txtDocumentoPresentado.OnHoverState = stateProperties55;
             stateProperties56.BorderColor = System.Drawing.Color.Silver;
             stateProperties56.FillColor = System.Drawing.Color.White;
             stateProperties56.ForeColor = System.Drawing.Color.Empty;
             stateProperties56.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtDocumentoPresentad0.OnIdleState = stateProperties56;
-            this.txtDocumentoPresentad0.Padding = new System.Windows.Forms.Padding(3);
-            this.txtDocumentoPresentad0.PasswordChar = '\0';
-            this.txtDocumentoPresentad0.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txtDocumentoPresentad0.PlaceholderText = "Documento";
-            this.txtDocumentoPresentad0.ReadOnly = false;
-            this.txtDocumentoPresentad0.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtDocumentoPresentad0.SelectedText = "";
-            this.txtDocumentoPresentad0.SelectionLength = 0;
-            this.txtDocumentoPresentad0.SelectionStart = 0;
-            this.txtDocumentoPresentad0.ShortcutsEnabled = false;
-            this.txtDocumentoPresentad0.Size = new System.Drawing.Size(260, 42);
-            this.txtDocumentoPresentad0.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.txtDocumentoPresentad0.TabIndex = 3;
-            this.txtDocumentoPresentad0.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtDocumentoPresentad0.TextMarginBottom = 0;
-            this.txtDocumentoPresentad0.TextMarginLeft = 3;
-            this.txtDocumentoPresentad0.TextMarginTop = 1;
-            this.txtDocumentoPresentad0.TextPlaceholder = "Documento";
-            this.txtDocumentoPresentad0.UseSystemPasswordChar = false;
-            this.txtDocumentoPresentad0.WordWrap = true;
+            this.txtDocumentoPresentado.OnIdleState = stateProperties56;
+            this.txtDocumentoPresentado.Padding = new System.Windows.Forms.Padding(3);
+            this.txtDocumentoPresentado.PasswordChar = '\0';
+            this.txtDocumentoPresentado.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.txtDocumentoPresentado.PlaceholderText = "Documento";
+            this.txtDocumentoPresentado.ReadOnly = false;
+            this.txtDocumentoPresentado.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtDocumentoPresentado.SelectedText = "";
+            this.txtDocumentoPresentado.SelectionLength = 0;
+            this.txtDocumentoPresentado.SelectionStart = 0;
+            this.txtDocumentoPresentado.ShortcutsEnabled = false;
+            this.txtDocumentoPresentado.Size = new System.Drawing.Size(314, 42);
+            this.txtDocumentoPresentado.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
+            this.txtDocumentoPresentado.TabIndex = 3;
+            this.txtDocumentoPresentado.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtDocumentoPresentado.TextMarginBottom = 0;
+            this.txtDocumentoPresentado.TextMarginLeft = 3;
+            this.txtDocumentoPresentado.TextMarginTop = 1;
+            this.txtDocumentoPresentado.TextPlaceholder = "Documento";
+            this.txtDocumentoPresentado.UseSystemPasswordChar = false;
+            this.txtDocumentoPresentado.WordWrap = true;
             // 
             // InformaciónPersonalForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(904, 788);
-            this.Controls.Add(this.txtDocumentoPresentad0);
+            this.ClientSize = new System.Drawing.Size(990, 788);
+            this.Controls.Add(this.txtDocumentoPresentado);
             this.Controls.Add(this.txtTelefono1);
             this.Controls.Add(this.cmbGeneroId);
             this.Controls.Add(this.txtNombrePaciente);
@@ -1765,6 +1765,6 @@
         public Bunifu.UI.WinForms.BunifuDropdown cmbGeneroId;
         public Bunifu.UI.WinForms.BunifuTextBox txtTelefono1;
         public System.Windows.Forms.Label lblDocumento;
-        public Bunifu.UI.WinForms.BunifuTextBox txtDocumentoPresentad0;
+        public Bunifu.UI.WinForms.BunifuTextBox txtDocumentoPresentado;
     }
 }

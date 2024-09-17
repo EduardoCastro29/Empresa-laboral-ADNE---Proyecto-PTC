@@ -46,6 +46,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             ObjRegistro.txtDui.TextChange += new EventHandler(EnmascararCampoDocumento);
             ObjRegistro.txtTelefono.KeyPress += new KeyPressEventHandler(ValidarCampoNumero);
             ObjRegistro.txtUsuario.KeyPress += new KeyPressEventHandler(ValidarCampoUsuario);
+            ObjRegistro.txtContrasena.KeyPress += new KeyPressEventHandler(ValidarCampoContrasena);
             ObjRegistro.txtCorreo.KeyPress += new KeyPressEventHandler(ValidarCampoCorreo);
         }
         #region Validaciones de Campos
@@ -90,6 +91,28 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             if ((ch >= '0' && ch <= '9') ||
                 (ch >= 'A' && ch <= 'Z') ||
                 (ch >= 'a' && ch <= 'z'))
+            {
+                //Retornamos los valores e.KeyChar
+                return;
+            }
+            //Indicamos que se creará el evento e.Char con todos los valores antes proporcionados, como un EventHandler
+            e.Handled = true;
+        }
+        private void ValidarCampoContrasena(object sender, KeyPressEventArgs e)
+        {
+            //La propiedad char.IsControl permite controles como BackSpace, Inicio, Fin, etc.
+            if (char.IsControl(e.KeyChar))
+            {
+                //Retornamos los valores e.KeyChar
+                return;
+            }
+            //Declaramos la variable de tipo char que recibirá los parámetros de las letras y números registrados por las variables e.KeyChar creadas anteriormente
+            if (char.IsLetter(e.KeyChar) ||
+                char.IsDigit(e.KeyChar) ||
+                e.KeyChar == '@' ||
+                e.KeyChar == '$' ||
+                e.KeyChar == '#' ||
+                e.KeyChar == '_')
             {
                 //Retornamos los valores e.KeyChar
                 return;
@@ -170,18 +193,17 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                 return;
             }
 
-            // Si el textbox está vacío, permitimos solo los caracteres 6, 7 o 2
+            //Si el textbox está vacío, permitimos solo los caracteres 6, 7 o 2
             if (ObjRegistro.txtTelefono.Text.Length == 0)
             {
                 if (e.KeyChar != '6' && e.KeyChar != '7' && e.KeyChar != '2')
                 {
-                    e.Handled = true; // Cancela la entrada si no es válida
+                    e.Handled = true;
                 }
             }
             //Declaramos la variable de tipo char que recibirá los parámetros de las letras registradas por las variables e.KeyChar creadas anteriormente
             char ch = e.KeyChar;
             if ((ch >= '0' && ch <= '9') ||
-                (ch == '+') ||
                 (ch == '-'))
             {
                 return;

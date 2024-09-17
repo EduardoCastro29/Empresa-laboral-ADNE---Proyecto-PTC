@@ -1,6 +1,6 @@
 ﻿namespace Empresa_laboral_ADNE___Proyecto_PTC.Vista
 {
-    partial class Información_encargado
+    partial class InformaciónEncargadoForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Información_encargado));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InformaciónEncargadoForm));
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
@@ -136,7 +136,7 @@
             this.bunifuLabel1.Location = new System.Drawing.Point(385, 394);
             this.bunifuLabel1.Name = "bunifuLabel1";
             this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel1.Size = new System.Drawing.Size(229, 22);
+            this.bunifuLabel1.Size = new System.Drawing.Size(403, 40);
             this.bunifuLabel1.TabIndex = 25;
             this.bunifuLabel1.Text = "Relación con el paciente";
             this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -182,6 +182,7 @@
             this.cmbRelacionPaciente.Name = "cmbRelacionPaciente";
             this.cmbRelacionPaciente.Size = new System.Drawing.Size(296, 32);
             this.cmbRelacionPaciente.TabIndex = 24;
+            this.cmbRelacionPaciente.Text = null;
             this.cmbRelacionPaciente.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
             this.cmbRelacionPaciente.TextLeftMargin = 5;
             // 
@@ -194,7 +195,7 @@
             this.lblFechaNacimiento.Location = new System.Drawing.Point(58, 309);
             this.lblFechaNacimiento.Name = "lblFechaNacimiento";
             this.lblFechaNacimiento.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblFechaNacimiento.Size = new System.Drawing.Size(198, 22);
+            this.lblFechaNacimiento.Size = new System.Drawing.Size(348, 40);
             this.lblFechaNacimiento.TabIndex = 23;
             this.lblFechaNacimiento.Text = "Fecha de Nacimiento";
             this.lblFechaNacimiento.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -212,6 +213,7 @@
             this.bunifuDatePicker1.DisabledColor = System.Drawing.Color.Gray;
             this.bunifuDatePicker1.DisplayWeekNumbers = false;
             this.bunifuDatePicker1.DPHeight = 0;
+            this.bunifuDatePicker1.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
             this.bunifuDatePicker1.FillDatePicker = false;
             this.bunifuDatePicker1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuDatePicker1.ForeColor = System.Drawing.Color.Black;
@@ -220,7 +222,7 @@
             this.bunifuDatePicker1.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
             this.bunifuDatePicker1.LeftTextMargin = 5;
             this.bunifuDatePicker1.Location = new System.Drawing.Point(53, 345);
-            this.bunifuDatePicker1.MinimumSize = new System.Drawing.Size(0, 32);
+            this.bunifuDatePicker1.MinimumSize = new System.Drawing.Size(4, 32);
             this.bunifuDatePicker1.Name = "bunifuDatePicker1";
             this.bunifuDatePicker1.Size = new System.Drawing.Size(300, 32);
             this.bunifuDatePicker1.TabIndex = 22;
@@ -234,7 +236,7 @@
             this.lblEdad.Location = new System.Drawing.Point(390, 309);
             this.lblEdad.Name = "lblEdad";
             this.lblEdad.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblEdad.Size = new System.Drawing.Size(49, 22);
+            this.lblEdad.Size = new System.Drawing.Size(87, 40);
             this.lblEdad.TabIndex = 21;
             this.lblEdad.Text = "Edad";
             this.lblEdad.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -326,7 +328,7 @@
             this.lblDomicilio.Location = new System.Drawing.Point(58, 588);
             this.lblDomicilio.Name = "lblDomicilio";
             this.lblDomicilio.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblDomicilio.Size = new System.Drawing.Size(79, 22);
+            this.lblDomicilio.Size = new System.Drawing.Size(147, 40);
             this.lblDomicilio.TabIndex = 18;
             this.lblDomicilio.Text = "Domicilio";
             this.lblDomicilio.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -509,7 +511,7 @@
             this.lblEmail.Location = new System.Drawing.Point(58, 492);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblEmail.Size = new System.Drawing.Size(290, 22);
+            this.lblEmail.Size = new System.Drawing.Size(515, 40);
             this.lblEmail.TabIndex = 15;
             this.lblEmail.Text = "Dirección de Correo Electrónico";
             this.lblEmail.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -524,7 +526,7 @@
             this.lblTelefono.Location = new System.Drawing.Point(58, 394);
             this.lblTelefono.Name = "lblTelefono";
             this.lblTelefono.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblTelefono.Size = new System.Drawing.Size(77, 22);
+            this.lblTelefono.Size = new System.Drawing.Size(135, 40);
             this.lblTelefono.TabIndex = 14;
             this.lblTelefono.Text = "Teléfono";
             this.lblTelefono.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -763,7 +765,7 @@
             this.lblDocumentoEncargado.Location = new System.Drawing.Point(58, 109);
             this.lblDocumentoEncargado.Name = "lblDocumentoEncargado";
             this.lblDocumentoEncargado.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblDocumentoEncargado.Size = new System.Drawing.Size(110, 22);
+            this.lblDocumentoEncargado.Size = new System.Drawing.Size(191, 40);
             this.lblDocumentoEncargado.TabIndex = 7;
             this.lblDocumentoEncargado.Text = "Documento";
             this.lblDocumentoEncargado.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -855,7 +857,7 @@
             this.lblApellidosEncargado.Location = new System.Drawing.Point(390, 212);
             this.lblApellidosEncargado.Name = "lblApellidosEncargado";
             this.lblApellidosEncargado.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblApellidosEncargado.Size = new System.Drawing.Size(81, 22);
+            this.lblApellidosEncargado.Size = new System.Drawing.Size(144, 40);
             this.lblApellidosEncargado.TabIndex = 5;
             this.lblApellidosEncargado.Text = "Apellidos";
             this.lblApellidosEncargado.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -885,7 +887,7 @@
             this.lblNombresEncargado.Location = new System.Drawing.Point(58, 213);
             this.lblNombresEncargado.Name = "lblNombresEncargado";
             this.lblNombresEncargado.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblNombresEncargado.Size = new System.Drawing.Size(81, 22);
+            this.lblNombresEncargado.Size = new System.Drawing.Size(143, 40);
             this.lblNombresEncargado.TabIndex = 3;
             this.lblNombresEncargado.Text = "Nombres";
             this.lblNombresEncargado.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -1044,15 +1046,16 @@
             this.txtNombresEncargado.UseSystemPasswordChar = false;
             this.txtNombresEncargado.WordWrap = true;
             // 
-            // Información_encargado
+            // InformaciónEncargadoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(750, 827);
             this.Controls.Add(this.pnlGradienteFondo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Información_encargado";
-            this.Text = "Información_encargado";
+            this.Name = "InformaciónEncargadoForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Información del Encargado";
             this.pnlGradienteFondo.ResumeLayout(false);
             this.pnlGradienteFondo.PerformLayout();
             this.ResumeLayout(false);

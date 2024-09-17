@@ -20,11 +20,11 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             ObjActualizarForm.btnActualizarContrasena.Click += new EventHandler(ActualizarContrasena);
 
             //Validaciones de campos
-            ObjActualizarForm.txtNuevaContrasena.KeyPress += new KeyPressEventHandler(ValidarCampoTextBox);
-            ObjActualizarForm.txtConfirmarContrasena.KeyPress += new KeyPressEventHandler(ValidarCampoTextBox);
+            ObjActualizarForm.txtNuevaContrasena.KeyPress += new KeyPressEventHandler(ValidarCampoContrasena);
+            ObjActualizarForm.txtConfirmarContrasena.KeyPress += new KeyPressEventHandler(ValidarCampoContrasena);
         }
         #region Validaciones de Campos
-        private void ValidarCampoTextBox(object sender, KeyPressEventArgs e)
+        private void ValidarCampoContrasena(object sender, KeyPressEventArgs e)
         {
             //La propiedad char.IsControl permite controles como BackSpace, Inicio, Fin, etc.
             if (char.IsControl(e.KeyChar))

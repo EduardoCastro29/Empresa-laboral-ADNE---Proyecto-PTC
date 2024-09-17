@@ -290,11 +290,11 @@
     <Compile Include="Vista\Calendario.Designer.cs">
       <DependentUpon>Calendario.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vista\Información encargado.cs">
+    <Compile Include="Vista\Información Encargado.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vista\Información encargado.Designer.cs">
-      <DependentUpon>Información encargado.cs</DependentUpon>
+    <Compile Include="Vista\Información Encargado.Designer.cs">
+      <DependentUpon>Información Encargado.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\Pin de Acceso.cs">
       <SubType>Form</SubType>
@@ -445,8 +445,8 @@
     <EmbeddedResource Include="Vista\Calendario.resx">
       <DependentUpon>Calendario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vista\Información encargado.resx">
-      <DependentUpon>Información encargado.cs</DependentUpon>
+    <EmbeddedResource Include="Vista\Información Encargado.resx">
+      <DependentUpon>Información Encargado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\Pin de Acceso.resx">
       <DependentUpon>Pin de Acceso.cs</DependentUpon>

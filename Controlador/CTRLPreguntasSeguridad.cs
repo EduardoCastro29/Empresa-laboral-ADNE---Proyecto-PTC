@@ -18,7 +18,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
         {
             ObjPreguntasSForm = Vista;
 
-            ObjPreguntasSForm.txtPrimeraPregunta.Load += new EventHandler(CargarCombosPreguntasYBTN); 
+            ObjPreguntasSForm.Load += new EventHandler(CargarCombosPreguntasYBTN); 
             ObjPreguntasSForm.txtPrimeraPregunta.Leave += new EventHandler(PreguntaDos); 
             ObjPreguntasSForm.txtSegundaPregunta.Leave += new EventHandler(PreguntaTres);
             ObjPreguntasSForm.txtTerceraPregunta.Leave += new EventHandler(PreguntaCuatro);
@@ -41,19 +41,33 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
         }
         private void PreguntaDos(object sender, EventArgs e)
         {
-            DAOPreguntasSeguridad ObjDaoCargarCMB = new DAOPreguntasSeguridad();
+            DAOPreguntasSeguridad ObjDAOCargarCMB = new DAOPreguntasSeguridad();
 
             if (ObjPreguntasSForm.cmbPrimeraPregunta.SelectedValue != null)
             {
-                int VerificarConversionCMB;
-                if (int.TryParse(ObjPreguntasSForm.cmbPrimeraPregunta.SelectedValue.ToString(), out VerificarConversionCMB))
+                if (int.TryParse(ObjPreguntasSForm.cmbPrimeraPregunta.SelectedValue.ToString(), out _))
                 {
-                    ObjDaoCargarCMB.PreguntaNotIn1 = VerificarConversionCMB;
-                    ObjPreguntasSForm.cmbSegundaPregunta.DataSource = ObjDaoCargarCMB.CargarPregunta2();
+                    ObjDAOCargarCMB.PreguntaNotIn1 = int.Parse(ObjPreguntasSForm.cmbPrimeraPregunta.SelectedValue.ToString());
+                    ObjPreguntasSForm.cmbSegundaPregunta.DataSource = ObjDAOCargarCMB.CargarPregunta2();
                     ObjPreguntasSForm.cmbSegundaPregunta.ValueMember = "preguntasId";
                     ObjPreguntasSForm.cmbSegundaPregunta.DisplayMember = "nombrePreguntas";
                 }
             }
+
+            //Estos son los eventos que, al cambiar de valor cualquier combobox, cambiaran su valor consecuentemente
+            ObjPreguntasSForm.cmbPrimeraPregunta.SelectedIndexChanged += (cmbSender, cmbEvent) =>
+            {
+                if (ObjPreguntasSForm.cmbPrimeraPregunta.SelectedValue != null)
+                {
+                    if (int.TryParse(ObjPreguntasSForm.cmbPrimeraPregunta.SelectedValue.ToString(), out _))
+                    {
+                        ObjDAOCargarCMB.PreguntaNotIn1 = int.Parse(ObjPreguntasSForm.cmbPrimeraPregunta.SelectedValue.ToString());
+                        ObjPreguntasSForm.cmbSegundaPregunta.DataSource = ObjDAOCargarCMB.CargarPregunta2();
+                        ObjPreguntasSForm.cmbSegundaPregunta.ValueMember = "preguntasId";
+                        ObjPreguntasSForm.cmbSegundaPregunta.DisplayMember = "nombrePreguntas";
+                    }
+                }
+            };
         }
         private void PreguntaTres(object sender, EventArgs e)
         {
@@ -61,15 +75,29 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
 
             if (ObjPreguntasSForm.cmbSegundaPregunta.SelectedValue != null)
             {
-                int VerificarConversionCMB;
-                if (int.TryParse(ObjPreguntasSForm.cmbSegundaPregunta.SelectedValue.ToString(), out VerificarConversionCMB))
+                if (int.TryParse(ObjPreguntasSForm.cmbSegundaPregunta.SelectedValue.ToString(), out _))
                 {
-                    ObjDAOCargarCMB.PreguntaNotIn2 = VerificarConversionCMB;
+                    ObjDAOCargarCMB.PreguntaNotIn1 = int.Parse(ObjPreguntasSForm.cmbPrimeraPregunta.SelectedValue.ToString());
+                    ObjDAOCargarCMB.PreguntaNotIn2 = int.Parse(ObjPreguntasSForm.cmbSegundaPregunta.SelectedValue.ToString());
                     ObjPreguntasSForm.cmbTerceraPregunta.DataSource = ObjDAOCargarCMB.CargarPregunta3();
                     ObjPreguntasSForm.cmbTerceraPregunta.ValueMember = "preguntasId";
                     ObjPreguntasSForm.cmbTerceraPregunta.DisplayMember = "nombrePreguntas";
                 }
             }
+
+            ObjPreguntasSForm.cmbSegundaPregunta.SelectedIndexChanged += (cmbSender, cmbEvent) =>
+            {
+                if (ObjPreguntasSForm.cmbSegundaPregunta.SelectedValue != null)
+                {
+                    if (int.TryParse(ObjPreguntasSForm.cmbSegundaPregunta.SelectedValue.ToString(), out _))
+                    {
+                        ObjDAOCargarCMB.PreguntaNotIn2 = int.Parse(ObjPreguntasSForm.cmbSegundaPregunta.SelectedValue.ToString());
+                        ObjPreguntasSForm.cmbTerceraPregunta.DataSource = ObjDAOCargarCMB.CargarPregunta3();
+                        ObjPreguntasSForm.cmbTerceraPregunta.ValueMember = "preguntasId";
+                        ObjPreguntasSForm.cmbTerceraPregunta.DisplayMember = "nombrePreguntas";
+                    }
+                }
+            };
         }
         private void PreguntaCuatro(object sender, EventArgs e)
         {
@@ -77,15 +105,30 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
 
             if (ObjPreguntasSForm.cmbTerceraPregunta.SelectedValue != null)
             {
-                int VerificarConversionCMB;
-                if (int.TryParse(ObjPreguntasSForm.cmbTerceraPregunta.SelectedValue.ToString(), out VerificarConversionCMB))
+                if (int.TryParse(ObjPreguntasSForm.cmbTerceraPregunta.SelectedValue.ToString(), out _))
                 {
-                    ObjDAOCargarCMB.PreguntaNotIn3 = VerificarConversionCMB;
+                    ObjDAOCargarCMB.PreguntaNotIn1 = int.Parse(ObjPreguntasSForm.cmbPrimeraPregunta.SelectedValue.ToString());
+                    ObjDAOCargarCMB.PreguntaNotIn2 = int.Parse(ObjPreguntasSForm.cmbSegundaPregunta.SelectedValue.ToString());
+                    ObjDAOCargarCMB.PreguntaNotIn3 = int.Parse(ObjPreguntasSForm.cmbTerceraPregunta.SelectedValue.ToString());
                     ObjPreguntasSForm.cmbCuartaPregunta.DataSource = ObjDAOCargarCMB.CargarPregunta4();
                     ObjPreguntasSForm.cmbCuartaPregunta.ValueMember = "preguntasId";
                     ObjPreguntasSForm.cmbCuartaPregunta.DisplayMember = "nombrePreguntas";
                 }
             }
+
+            ObjPreguntasSForm.cmbTerceraPregunta.SelectedIndexChanged += (cmbSender, cmbEvent) =>
+            {
+                if (ObjPreguntasSForm.cmbTerceraPregunta.SelectedValue != null)
+                {
+                    if (int.TryParse(ObjPreguntasSForm.cmbTerceraPregunta.SelectedValue.ToString(), out _))
+                    {
+                        ObjDAOCargarCMB.PreguntaNotIn3 = int.Parse(ObjPreguntasSForm.cmbTerceraPregunta.SelectedValue.ToString());
+                        ObjPreguntasSForm.cmbCuartaPregunta.DataSource = ObjDAOCargarCMB.CargarPregunta4();
+                        ObjPreguntasSForm.cmbCuartaPregunta.ValueMember = "preguntasId";
+                        ObjPreguntasSForm.cmbCuartaPregunta.DisplayMember = "nombrePreguntas";
+                    }
+                }
+            };
         }
         #endregion
         #region Inserción de preguntas de Seguridad (INSERT)
