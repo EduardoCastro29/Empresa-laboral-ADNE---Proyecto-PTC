@@ -29,25 +29,23 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConfiguraciónForm));
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
-            this.bunifuShadowPanel1 = new Bunifu.UI.WinForms.BunifuShadowPanel();
+            this.pnlSombraFondo = new Bunifu.UI.WinForms.BunifuShadowPanel();
             this.pnlForms = new Bunifu.UI.WinForms.BunifuGradientPanel();
-            this.bunifuPanel2 = new Bunifu.UI.WinForms.BunifuPanel();
+            this.pnlGradienteConexion = new Bunifu.UI.WinForms.BunifuGradientPanel();
+            this.lblADNE_Devs = new Bunifu.UI.WinForms.BunifuLabel();
+            this.lblConfiguraTuDB = new Bunifu.UI.WinForms.BunifuLabel();
+            this.lblTituloAgregarConexion = new Bunifu.UI.WinForms.BunifuLabel();
+            this.btnAgregarConfiguracion = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.bunifuVScrollBar1 = new Bunifu.UI.WinForms.BunifuVScrollBar();
-            this.pnl3Section = new Bunifu.UI.WinForms.BunifuGradientPanel();
-            this.bunifuShadowPanel4 = new Bunifu.UI.WinForms.BunifuShadowPanel();
-            this.bunifuLabel3 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.lblVersion = new Bunifu.UI.WinForms.BunifuLabel();
-            this.lblAcercaDe = new Bunifu.UI.WinForms.BunifuLabel();
-            this.pnl2Section = new Bunifu.UI.WinForms.BunifuGradientPanel();
-            this.bunifuShadowPanel3 = new Bunifu.UI.WinForms.BunifuShadowPanel();
+            this.pnlAparienciaGradiente = new Bunifu.UI.WinForms.BunifuGradientPanel();
             this.switchModo = new Bunifu.UI.WinForms.BunifuToggleSwitch2();
+            this.lblTituloApariencia = new Bunifu.UI.WinForms.BunifuLabel();
             this.lblPerosnalizacionModo = new Bunifu.UI.WinForms.BunifuLabel();
-            this.lblPersonalizacion = new Bunifu.UI.WinForms.BunifuLabel();
-            this.pnl1Section = new Bunifu.UI.WinForms.BunifuGradientPanel();
-            this.bunifuShadowPanel2 = new Bunifu.UI.WinForms.BunifuShadowPanel();
-            this.bunifuLabel2 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.pnlMiCuentaGradiente = new Bunifu.UI.WinForms.BunifuGradientPanel();
+            this.lblDocumentoTitulo = new Bunifu.UI.WinForms.BunifuLabel();
             this.lblCorreoUsuario = new Bunifu.UI.WinForms.BunifuLabel();
             this.lblUsuarioo = new Bunifu.UI.WinForms.BunifuLabel();
             this.lblProfesional = new Bunifu.UI.WinForms.BunifuLabel();
@@ -60,46 +58,48 @@
             this.picUsuario = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.lblCuenta = new Bunifu.UI.WinForms.BunifuLabel();
             this.pictureADNE = new System.Windows.Forms.PictureBox();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.bunifuLabel5 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
-            this.bunifuShadowPanel1.SuspendLayout();
+            this.flpTopTitulo = new System.Windows.Forms.FlowLayoutPanel();
+            this.lblConfiguracionTitulo = new Bunifu.UI.WinForms.BunifuLabel();
+            this.pnlFondo = new Bunifu.UI.WinForms.BunifuPanel();
+            this.bunifuGradientPanel1 = new Bunifu.UI.WinForms.BunifuGradientPanel();
+            this.lblCambiarContrasena = new Bunifu.UI.WinForms.BunifuLabel();
+            this.lblTituloCambiarContrasena = new Bunifu.UI.WinForms.BunifuLabel();
+            this.btnNuevaContrasena = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
+            this.pnlSombraFondo.SuspendLayout();
             this.pnlForms.SuspendLayout();
-            this.pnl3Section.SuspendLayout();
-            this.bunifuShadowPanel4.SuspendLayout();
-            this.pnl2Section.SuspendLayout();
-            this.bunifuShadowPanel3.SuspendLayout();
-            this.pnl1Section.SuspendLayout();
-            this.bunifuShadowPanel2.SuspendLayout();
+            this.pnlGradienteConexion.SuspendLayout();
+            this.pnlAparienciaGradiente.SuspendLayout();
+            this.pnlMiCuentaGradiente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picUsuario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureADNE)).BeginInit();
-            this.flowLayoutPanel1.SuspendLayout();
-            this.bunifuPanel1.SuspendLayout();
+            this.flpTopTitulo.SuspendLayout();
+            this.pnlFondo.SuspendLayout();
+            this.bunifuGradientPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // bunifuShadowPanel1
+            // pnlSombraFondo
             // 
-            this.bunifuShadowPanel1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuShadowPanel1.BorderColor = System.Drawing.Color.Transparent;
-            this.bunifuShadowPanel1.BorderRadius = 30;
-            this.bunifuShadowPanel1.BorderThickness = 10;
-            this.bunifuShadowPanel1.Controls.Add(this.pnlForms);
-            this.bunifuShadowPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bunifuShadowPanel1.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
-            this.bunifuShadowPanel1.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Horizontal;
-            this.bunifuShadowPanel1.Location = new System.Drawing.Point(0, 0);
-            this.bunifuShadowPanel1.Name = "bunifuShadowPanel1";
-            this.bunifuShadowPanel1.Padding = new System.Windows.Forms.Padding(0, 3, 5, 7);
-            this.bunifuShadowPanel1.PanelColor = System.Drawing.Color.Transparent;
-            this.bunifuShadowPanel1.PanelColor2 = System.Drawing.Color.Transparent;
-            this.bunifuShadowPanel1.ShadowColor = System.Drawing.Color.Black;
-            this.bunifuShadowPanel1.ShadowDept = 2;
-            this.bunifuShadowPanel1.ShadowDepth = 250;
-            this.bunifuShadowPanel1.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Surrounded;
-            this.bunifuShadowPanel1.ShadowTopLeftVisible = false;
-            this.bunifuShadowPanel1.Size = new System.Drawing.Size(991, 861);
-            this.bunifuShadowPanel1.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Lowered;
-            this.bunifuShadowPanel1.TabIndex = 0;
+            this.pnlSombraFondo.BackColor = System.Drawing.Color.Transparent;
+            this.pnlSombraFondo.BorderColor = System.Drawing.Color.Transparent;
+            this.pnlSombraFondo.BorderRadius = 30;
+            this.pnlSombraFondo.BorderThickness = 10;
+            this.pnlSombraFondo.Controls.Add(this.pnlForms);
+            this.pnlSombraFondo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlSombraFondo.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
+            this.pnlSombraFondo.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Horizontal;
+            this.pnlSombraFondo.Location = new System.Drawing.Point(0, 0);
+            this.pnlSombraFondo.Name = "pnlSombraFondo";
+            this.pnlSombraFondo.Padding = new System.Windows.Forms.Padding(0, 3, 5, 7);
+            this.pnlSombraFondo.PanelColor = System.Drawing.Color.Transparent;
+            this.pnlSombraFondo.PanelColor2 = System.Drawing.Color.Transparent;
+            this.pnlSombraFondo.ShadowColor = System.Drawing.Color.Black;
+            this.pnlSombraFondo.ShadowDept = 2;
+            this.pnlSombraFondo.ShadowDepth = 250;
+            this.pnlSombraFondo.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Surrounded;
+            this.pnlSombraFondo.ShadowTopLeftVisible = false;
+            this.pnlSombraFondo.Size = new System.Drawing.Size(991, 1087);
+            this.pnlSombraFondo.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Lowered;
+            this.pnlSombraFondo.TabIndex = 0;
             // 
             // pnlForms
             // 
@@ -107,13 +107,13 @@
             this.pnlForms.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlForms.BackgroundImage")));
             this.pnlForms.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pnlForms.BorderRadius = 60;
-            this.pnlForms.Controls.Add(this.bunifuPanel2);
+            this.pnlForms.Controls.Add(this.bunifuGradientPanel1);
+            this.pnlForms.Controls.Add(this.pnlGradienteConexion);
             this.pnlForms.Controls.Add(this.bunifuVScrollBar1);
-            this.pnlForms.Controls.Add(this.pnl3Section);
-            this.pnlForms.Controls.Add(this.pnl2Section);
-            this.pnlForms.Controls.Add(this.pnl1Section);
+            this.pnlForms.Controls.Add(this.pnlAparienciaGradiente);
+            this.pnlForms.Controls.Add(this.pnlMiCuentaGradiente);
             this.pnlForms.Controls.Add(this.pictureADNE);
-            this.pnlForms.Controls.Add(this.flowLayoutPanel1);
+            this.pnlForms.Controls.Add(this.flpTopTitulo);
             this.pnlForms.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlForms.GradientBottomLeft = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(94)))), ((int)(((byte)(100)))));
             this.pnlForms.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(94)))), ((int)(((byte)(100)))));
@@ -123,24 +123,177 @@
             this.pnlForms.Margin = new System.Windows.Forms.Padding(0);
             this.pnlForms.Name = "pnlForms";
             this.pnlForms.Quality = 10;
-            this.pnlForms.Size = new System.Drawing.Size(986, 851);
+            this.pnlForms.Size = new System.Drawing.Size(986, 1077);
             this.pnlForms.TabIndex = 1;
             // 
-            // bunifuPanel2
+            // pnlGradienteConexion
             // 
-            this.bunifuPanel2.BackgroundColor = System.Drawing.Color.White;
-            this.bunifuPanel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuPanel2.BackgroundImage")));
-            this.bunifuPanel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuPanel2.BorderColor = System.Drawing.Color.White;
-            this.bunifuPanel2.BorderRadius = 3;
-            this.bunifuPanel2.BorderThickness = 1;
-            this.bunifuPanel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.bunifuPanel2.Location = new System.Drawing.Point(0, 82);
-            this.bunifuPanel2.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);
-            this.bunifuPanel2.Name = "bunifuPanel2";
-            this.bunifuPanel2.ShowBorders = true;
-            this.bunifuPanel2.Size = new System.Drawing.Size(976, 1);
-            this.bunifuPanel2.TabIndex = 0;
+            this.pnlGradienteConexion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlGradienteConexion.BackColor = System.Drawing.Color.Transparent;
+            this.pnlGradienteConexion.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlGradienteConexion.BackgroundImage")));
+            this.pnlGradienteConexion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnlGradienteConexion.BorderRadius = 15;
+            this.pnlGradienteConexion.Controls.Add(this.lblADNE_Devs);
+            this.pnlGradienteConexion.Controls.Add(this.lblConfiguraTuDB);
+            this.pnlGradienteConexion.Controls.Add(this.lblTituloAgregarConexion);
+            this.pnlGradienteConexion.Controls.Add(this.btnAgregarConfiguracion);
+            this.pnlGradienteConexion.GradientBottomLeft = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(84)))), ((int)(((byte)(88)))));
+            this.pnlGradienteConexion.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(130)))), ((int)(((byte)(123)))));
+            this.pnlGradienteConexion.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(84)))), ((int)(((byte)(88)))));
+            this.pnlGradienteConexion.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(130)))), ((int)(((byte)(123)))));
+            this.pnlGradienteConexion.Location = new System.Drawing.Point(22, 865);
+            this.pnlGradienteConexion.Name = "pnlGradienteConexion";
+            this.pnlGradienteConexion.Quality = 10;
+            this.pnlGradienteConexion.Size = new System.Drawing.Size(937, 195);
+            this.pnlGradienteConexion.TabIndex = 14;
+            // 
+            // lblADNE_Devs
+            // 
+            this.lblADNE_Devs.AllowParentOverrides = false;
+            this.lblADNE_Devs.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblADNE_Devs.AutoEllipsis = false;
+            this.lblADNE_Devs.Cursor = System.Windows.Forms.Cursors.Default;
+            this.lblADNE_Devs.CursorType = System.Windows.Forms.Cursors.Default;
+            this.lblADNE_Devs.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblADNE_Devs.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(179)))), ((int)(((byte)(182)))));
+            this.lblADNE_Devs.Location = new System.Drawing.Point(473, 162);
+            this.lblADNE_Devs.Name = "lblADNE_Devs";
+            this.lblADNE_Devs.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblADNE_Devs.Size = new System.Drawing.Size(435, 24);
+            this.lblADNE_Devs.TabIndex = 1;
+            this.lblADNE_Devs.TabStop = false;
+            this.lblADNE_Devs.Text = "Desarrollado por ADNE Dev Team - © 2024";
+            this.lblADNE_Devs.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lblADNE_Devs.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // lblConfiguraTuDB
+            // 
+            this.lblConfiguraTuDB.AllowParentOverrides = false;
+            this.lblConfiguraTuDB.AutoEllipsis = false;
+            this.lblConfiguraTuDB.Cursor = System.Windows.Forms.Cursors.Default;
+            this.lblConfiguraTuDB.CursorType = System.Windows.Forms.Cursors.Default;
+            this.lblConfiguraTuDB.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblConfiguraTuDB.ForeColor = System.Drawing.Color.White;
+            this.lblConfiguraTuDB.Location = new System.Drawing.Point(60, 89);
+            this.lblConfiguraTuDB.Name = "lblConfiguraTuDB";
+            this.lblConfiguraTuDB.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblConfiguraTuDB.Size = new System.Drawing.Size(360, 33);
+            this.lblConfiguraTuDB.TabIndex = 12;
+            this.lblConfiguraTuDB.TabStop = false;
+            this.lblConfiguraTuDB.Text = "Configura tu base de datos";
+            this.lblConfiguraTuDB.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lblConfiguraTuDB.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // lblTituloAgregarConexion
+            // 
+            this.lblTituloAgregarConexion.AllowParentOverrides = false;
+            this.lblTituloAgregarConexion.AutoEllipsis = false;
+            this.lblTituloAgregarConexion.Cursor = System.Windows.Forms.Cursors.Default;
+            this.lblTituloAgregarConexion.CursorType = System.Windows.Forms.Cursors.Default;
+            this.lblTituloAgregarConexion.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTituloAgregarConexion.ForeColor = System.Drawing.Color.White;
+            this.lblTituloAgregarConexion.Location = new System.Drawing.Point(28, 22);
+            this.lblTituloAgregarConexion.Name = "lblTituloAgregarConexion";
+            this.lblTituloAgregarConexion.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblTituloAgregarConexion.Size = new System.Drawing.Size(260, 36);
+            this.lblTituloAgregarConexion.TabIndex = 9;
+            this.lblTituloAgregarConexion.TabStop = false;
+            this.lblTituloAgregarConexion.Text = "Agregar Conexión";
+            this.lblTituloAgregarConexion.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lblTituloAgregarConexion.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // btnAgregarConfiguracion
+            // 
+            this.btnAgregarConfiguracion.AllowAnimations = true;
+            this.btnAgregarConfiguracion.AllowMouseEffects = true;
+            this.btnAgregarConfiguracion.AllowToggling = false;
+            this.btnAgregarConfiguracion.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAgregarConfiguracion.AnimationSpeed = 200;
+            this.btnAgregarConfiguracion.AutoGenerateColors = false;
+            this.btnAgregarConfiguracion.AutoRoundBorders = false;
+            this.btnAgregarConfiguracion.AutoSizeLeftIcon = true;
+            this.btnAgregarConfiguracion.AutoSizeRightIcon = true;
+            this.btnAgregarConfiguracion.BackColor = System.Drawing.Color.Transparent;
+            this.btnAgregarConfiguracion.BackColor1 = System.Drawing.Color.Transparent;
+            this.btnAgregarConfiguracion.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAgregarConfiguracion.BackgroundImage")));
+            this.btnAgregarConfiguracion.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btnAgregarConfiguracion.ButtonText = ">";
+            this.btnAgregarConfiguracion.ButtonTextMarginLeft = 0;
+            this.btnAgregarConfiguracion.ColorContrastOnClick = 45;
+            this.btnAgregarConfiguracion.ColorContrastOnHover = 45;
+            this.btnAgregarConfiguracion.Cursor = System.Windows.Forms.Cursors.Hand;
+            borderEdges2.BottomLeft = true;
+            borderEdges2.BottomRight = true;
+            borderEdges2.TopLeft = true;
+            borderEdges2.TopRight = true;
+            this.btnAgregarConfiguracion.CustomizableEdges = borderEdges2;
+            this.btnAgregarConfiguracion.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnAgregarConfiguracion.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btnAgregarConfiguracion.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btnAgregarConfiguracion.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btnAgregarConfiguracion.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
+            this.btnAgregarConfiguracion.Font = new System.Drawing.Font("Segoe UI Emoji", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarConfiguracion.ForeColor = System.Drawing.Color.White;
+            this.btnAgregarConfiguracion.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAgregarConfiguracion.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.btnAgregarConfiguracion.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
+            this.btnAgregarConfiguracion.IconMarginLeft = 11;
+            this.btnAgregarConfiguracion.IconPadding = 10;
+            this.btnAgregarConfiguracion.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAgregarConfiguracion.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.btnAgregarConfiguracion.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
+            this.btnAgregarConfiguracion.IconSize = 25;
+            this.btnAgregarConfiguracion.IdleBorderColor = System.Drawing.Color.Transparent;
+            this.btnAgregarConfiguracion.IdleBorderRadius = 15;
+            this.btnAgregarConfiguracion.IdleBorderThickness = 1;
+            this.btnAgregarConfiguracion.IdleFillColor = System.Drawing.Color.Transparent;
+            this.btnAgregarConfiguracion.IdleIconLeftImage = null;
+            this.btnAgregarConfiguracion.IdleIconRightImage = null;
+            this.btnAgregarConfiguracion.IndicateFocus = false;
+            this.btnAgregarConfiguracion.Location = new System.Drawing.Point(0, 0);
+            this.btnAgregarConfiguracion.Name = "btnAgregarConfiguracion";
+            this.btnAgregarConfiguracion.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btnAgregarConfiguracion.OnDisabledState.BorderRadius = 15;
+            this.btnAgregarConfiguracion.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btnAgregarConfiguracion.OnDisabledState.BorderThickness = 1;
+            this.btnAgregarConfiguracion.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btnAgregarConfiguracion.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btnAgregarConfiguracion.OnDisabledState.IconLeftImage = null;
+            this.btnAgregarConfiguracion.OnDisabledState.IconRightImage = null;
+            this.btnAgregarConfiguracion.onHoverState.BorderColor = System.Drawing.Color.Transparent;
+            this.btnAgregarConfiguracion.onHoverState.BorderRadius = 15;
+            this.btnAgregarConfiguracion.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btnAgregarConfiguracion.onHoverState.BorderThickness = 1;
+            this.btnAgregarConfiguracion.onHoverState.FillColor = System.Drawing.Color.Transparent;
+            this.btnAgregarConfiguracion.onHoverState.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.btnAgregarConfiguracion.onHoverState.IconLeftImage = null;
+            this.btnAgregarConfiguracion.onHoverState.IconRightImage = null;
+            this.btnAgregarConfiguracion.OnIdleState.BorderColor = System.Drawing.Color.Transparent;
+            this.btnAgregarConfiguracion.OnIdleState.BorderRadius = 15;
+            this.btnAgregarConfiguracion.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btnAgregarConfiguracion.OnIdleState.BorderThickness = 1;
+            this.btnAgregarConfiguracion.OnIdleState.FillColor = System.Drawing.Color.Transparent;
+            this.btnAgregarConfiguracion.OnIdleState.ForeColor = System.Drawing.Color.White;
+            this.btnAgregarConfiguracion.OnIdleState.IconLeftImage = null;
+            this.btnAgregarConfiguracion.OnIdleState.IconRightImage = null;
+            this.btnAgregarConfiguracion.OnPressedState.BorderColor = System.Drawing.Color.Transparent;
+            this.btnAgregarConfiguracion.OnPressedState.BorderRadius = 15;
+            this.btnAgregarConfiguracion.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btnAgregarConfiguracion.OnPressedState.BorderThickness = 1;
+            this.btnAgregarConfiguracion.OnPressedState.FillColor = System.Drawing.Color.Transparent;
+            this.btnAgregarConfiguracion.OnPressedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(151)))), ((int)(((byte)(166)))));
+            this.btnAgregarConfiguracion.OnPressedState.IconLeftImage = null;
+            this.btnAgregarConfiguracion.OnPressedState.IconRightImage = null;
+            this.btnAgregarConfiguracion.Size = new System.Drawing.Size(916, 192);
+            this.btnAgregarConfiguracion.TabIndex = 13;
+            this.btnAgregarConfiguracion.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAgregarConfiguracion.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnAgregarConfiguracion.TextMarginLeft = 0;
+            this.btnAgregarConfiguracion.TextPadding = new System.Windows.Forms.Padding(0);
+            this.btnAgregarConfiguracion.UseDefaultRadiusAndThickness = true;
             // 
             // bunifuVScrollBar1
             // 
@@ -173,176 +326,35 @@
             this.bunifuVScrollBar1.ScrollBarBorderColor = System.Drawing.Color.Transparent;
             this.bunifuVScrollBar1.ScrollBarColor = System.Drawing.Color.Transparent;
             this.bunifuVScrollBar1.ShrinkSizeLimit = 3;
-            this.bunifuVScrollBar1.Size = new System.Drawing.Size(10, 769);
+            this.bunifuVScrollBar1.Size = new System.Drawing.Size(10, 995);
             this.bunifuVScrollBar1.SmallChange = 1;
             this.bunifuVScrollBar1.TabIndex = 13;
             this.bunifuVScrollBar1.ThumbColor = System.Drawing.Color.Gainsboro;
-            this.bunifuVScrollBar1.ThumbLength = 76;
+            this.bunifuVScrollBar1.ThumbLength = 98;
             this.bunifuVScrollBar1.ThumbMargin = 1;
             this.bunifuVScrollBar1.ThumbStyle = Bunifu.UI.WinForms.BunifuVScrollBar.ThumbStyles.Proportional;
             this.bunifuVScrollBar1.Value = 0;
             // 
-            // pnl3Section
+            // pnlAparienciaGradiente
             // 
-            this.pnl3Section.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.pnlAparienciaGradiente.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnl3Section.BackColor = System.Drawing.Color.Transparent;
-            this.pnl3Section.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnl3Section.BackgroundImage")));
-            this.pnl3Section.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pnl3Section.BorderRadius = 13;
-            this.pnl3Section.Controls.Add(this.bunifuShadowPanel4);
-            this.pnl3Section.GradientBottomLeft = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(84)))), ((int)(((byte)(88)))));
-            this.pnl3Section.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(130)))), ((int)(((byte)(123)))));
-            this.pnl3Section.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(84)))), ((int)(((byte)(88)))));
-            this.pnl3Section.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(130)))), ((int)(((byte)(123)))));
-            this.pnl3Section.Location = new System.Drawing.Point(22, 661);
-            this.pnl3Section.Name = "pnl3Section";
-            this.pnl3Section.Quality = 10;
-            this.pnl3Section.Size = new System.Drawing.Size(937, 179);
-            this.pnl3Section.TabIndex = 12;
-            // 
-            // bunifuShadowPanel4
-            // 
-            this.bunifuShadowPanel4.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuShadowPanel4.BorderColor = System.Drawing.Color.Transparent;
-            this.bunifuShadowPanel4.BorderRadius = 1;
-            this.bunifuShadowPanel4.BorderThickness = 1;
-            this.bunifuShadowPanel4.Controls.Add(this.bunifuLabel3);
-            this.bunifuShadowPanel4.Controls.Add(this.bunifuLabel1);
-            this.bunifuShadowPanel4.Controls.Add(this.lblVersion);
-            this.bunifuShadowPanel4.Controls.Add(this.lblAcercaDe);
-            this.bunifuShadowPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bunifuShadowPanel4.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
-            this.bunifuShadowPanel4.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
-            this.bunifuShadowPanel4.Location = new System.Drawing.Point(0, 0);
-            this.bunifuShadowPanel4.Name = "bunifuShadowPanel4";
-            this.bunifuShadowPanel4.PanelColor = System.Drawing.Color.Transparent;
-            this.bunifuShadowPanel4.PanelColor2 = System.Drawing.Color.Transparent;
-            this.bunifuShadowPanel4.ShadowColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(22)))), ((int)(((byte)(77)))), ((int)(((byte)(81)))));
-            this.bunifuShadowPanel4.ShadowDept = 2;
-            this.bunifuShadowPanel4.ShadowDepth = 5;
-            this.bunifuShadowPanel4.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Surrounded;
-            this.bunifuShadowPanel4.ShadowTopLeftVisible = false;
-            this.bunifuShadowPanel4.Size = new System.Drawing.Size(937, 179);
-            this.bunifuShadowPanel4.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
-            this.bunifuShadowPanel4.TabIndex = 0;
-            // 
-            // bunifuLabel3
-            // 
-            this.bunifuLabel3.AllowParentOverrides = false;
-            this.bunifuLabel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.bunifuLabel3.AutoEllipsis = false;
-            this.bunifuLabel3.Cursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel3.CursorType = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel3.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(179)))), ((int)(((byte)(182)))));
-            this.bunifuLabel3.Location = new System.Drawing.Point(499, 152);
-            this.bunifuLabel3.Name = "bunifuLabel3";
-            this.bunifuLabel3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel3.Size = new System.Drawing.Size(435, 24);
-            this.bunifuLabel3.TabIndex = 1;
-            this.bunifuLabel3.TabStop = false;
-            this.bunifuLabel3.Text = "Desarrollado por ADNE Dev Team - © 2024";
-            this.bunifuLabel3.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel3.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // bunifuLabel1
-            // 
-            this.bunifuLabel1.AllowParentOverrides = false;
-            this.bunifuLabel1.AutoEllipsis = false;
-            this.bunifuLabel1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel1.CursorType = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(179)))), ((int)(((byte)(182)))));
-            this.bunifuLabel1.Location = new System.Drawing.Point(67, 119);
-            this.bunifuLabel1.Name = "bunifuLabel1";
-            this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel1.Size = new System.Drawing.Size(108, 24);
-            this.bunifuLabel1.TabIndex = 13;
-            this.bunifuLabel1.TabStop = false;
-            this.bunifuLabel1.Text = "Version 1.1";
-            this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // lblVersion
-            // 
-            this.lblVersion.AllowParentOverrides = false;
-            this.lblVersion.AutoEllipsis = false;
-            this.lblVersion.Cursor = System.Windows.Forms.Cursors.Default;
-            this.lblVersion.CursorType = System.Windows.Forms.Cursors.Default;
-            this.lblVersion.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblVersion.ForeColor = System.Drawing.Color.White;
-            this.lblVersion.Location = new System.Drawing.Point(64, 86);
-            this.lblVersion.Name = "lblVersion";
-            this.lblVersion.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblVersion.Size = new System.Drawing.Size(124, 28);
-            this.lblVersion.TabIndex = 11;
-            this.lblVersion.TabStop = false;
-            this.lblVersion.Text = "ADNE 2024";
-            this.lblVersion.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.lblVersion.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // lblAcercaDe
-            // 
-            this.lblAcercaDe.AllowParentOverrides = false;
-            this.lblAcercaDe.AutoEllipsis = false;
-            this.lblAcercaDe.Cursor = System.Windows.Forms.Cursors.Default;
-            this.lblAcercaDe.CursorType = System.Windows.Forms.Cursors.Default;
-            this.lblAcercaDe.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAcercaDe.ForeColor = System.Drawing.Color.White;
-            this.lblAcercaDe.Location = new System.Drawing.Point(30, 23);
-            this.lblAcercaDe.Name = "lblAcercaDe";
-            this.lblAcercaDe.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblAcercaDe.Size = new System.Drawing.Size(152, 36);
-            this.lblAcercaDe.TabIndex = 3;
-            this.lblAcercaDe.TabStop = false;
-            this.lblAcercaDe.Text = "Acerca de";
-            this.lblAcercaDe.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.lblAcercaDe.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // pnl2Section
-            // 
-            this.pnl2Section.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnl2Section.BackColor = System.Drawing.Color.Transparent;
-            this.pnl2Section.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnl2Section.BackgroundImage")));
-            this.pnl2Section.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pnl2Section.BorderRadius = 13;
-            this.pnl2Section.Controls.Add(this.bunifuShadowPanel3);
-            this.pnl2Section.GradientBottomLeft = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(84)))), ((int)(((byte)(88)))));
-            this.pnl2Section.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(130)))), ((int)(((byte)(123)))));
-            this.pnl2Section.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(84)))), ((int)(((byte)(88)))));
-            this.pnl2Section.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(130)))), ((int)(((byte)(123)))));
-            this.pnl2Section.Location = new System.Drawing.Point(22, 466);
-            this.pnl2Section.Name = "pnl2Section";
-            this.pnl2Section.Quality = 10;
-            this.pnl2Section.Size = new System.Drawing.Size(937, 189);
-            this.pnl2Section.TabIndex = 11;
-            // 
-            // bunifuShadowPanel3
-            // 
-            this.bunifuShadowPanel3.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuShadowPanel3.BorderColor = System.Drawing.Color.Transparent;
-            this.bunifuShadowPanel3.BorderRadius = 1;
-            this.bunifuShadowPanel3.BorderThickness = 1;
-            this.bunifuShadowPanel3.Controls.Add(this.switchModo);
-            this.bunifuShadowPanel3.Controls.Add(this.lblPerosnalizacionModo);
-            this.bunifuShadowPanel3.Controls.Add(this.lblPersonalizacion);
-            this.bunifuShadowPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bunifuShadowPanel3.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
-            this.bunifuShadowPanel3.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
-            this.bunifuShadowPanel3.Location = new System.Drawing.Point(0, 0);
-            this.bunifuShadowPanel3.Name = "bunifuShadowPanel3";
-            this.bunifuShadowPanel3.PanelColor = System.Drawing.Color.Transparent;
-            this.bunifuShadowPanel3.PanelColor2 = System.Drawing.Color.Transparent;
-            this.bunifuShadowPanel3.ShadowColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(22)))), ((int)(((byte)(77)))), ((int)(((byte)(81)))));
-            this.bunifuShadowPanel3.ShadowDept = 2;
-            this.bunifuShadowPanel3.ShadowDepth = 5;
-            this.bunifuShadowPanel3.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Surrounded;
-            this.bunifuShadowPanel3.ShadowTopLeftVisible = false;
-            this.bunifuShadowPanel3.Size = new System.Drawing.Size(937, 189);
-            this.bunifuShadowPanel3.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
-            this.bunifuShadowPanel3.TabIndex = 0;
+            this.pnlAparienciaGradiente.BackColor = System.Drawing.Color.Transparent;
+            this.pnlAparienciaGradiente.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlAparienciaGradiente.BackgroundImage")));
+            this.pnlAparienciaGradiente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnlAparienciaGradiente.BorderRadius = 15;
+            this.pnlAparienciaGradiente.Controls.Add(this.switchModo);
+            this.pnlAparienciaGradiente.Controls.Add(this.lblTituloApariencia);
+            this.pnlAparienciaGradiente.Controls.Add(this.lblPerosnalizacionModo);
+            this.pnlAparienciaGradiente.GradientBottomLeft = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(84)))), ((int)(((byte)(88)))));
+            this.pnlAparienciaGradiente.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(130)))), ((int)(((byte)(123)))));
+            this.pnlAparienciaGradiente.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(84)))), ((int)(((byte)(88)))));
+            this.pnlAparienciaGradiente.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(130)))), ((int)(((byte)(123)))));
+            this.pnlAparienciaGradiente.Location = new System.Drawing.Point(22, 679);
+            this.pnlAparienciaGradiente.Name = "pnlAparienciaGradiente";
+            this.pnlAparienciaGradiente.Quality = 10;
+            this.pnlAparienciaGradiente.Size = new System.Drawing.Size(937, 180);
+            this.pnlAparienciaGradiente.TabIndex = 11;
             // 
             // switchModo
             // 
@@ -353,7 +365,7 @@
             this.switchModo.CheckedSwitchColor = System.Drawing.Color.White;
             this.switchModo.CheckedSwitchStyle = Bunifu.UI.WinForms.BunifuToggleSwitch2.SwitchStyles.Fill;
             this.switchModo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.switchModo.Location = new System.Drawing.Point(828, 108);
+            this.switchModo.Location = new System.Drawing.Point(817, 95);
             this.switchModo.Margin = new System.Windows.Forms.Padding(3, 3, 40, 3);
             this.switchModo.MaximumSize = new System.Drawing.Size(110, 50);
             this.switchModo.Name = "switchModo";
@@ -364,6 +376,24 @@
             this.switchModo.UncheckedSwitchColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(213)))), ((int)(((byte)(213)))));
             this.switchModo.UncheckedSwitchStyle = Bunifu.UI.WinForms.BunifuToggleSwitch2.SwitchStyles.Fill;
             // 
+            // lblTituloApariencia
+            // 
+            this.lblTituloApariencia.AllowParentOverrides = false;
+            this.lblTituloApariencia.AutoEllipsis = false;
+            this.lblTituloApariencia.Cursor = System.Windows.Forms.Cursors.Default;
+            this.lblTituloApariencia.CursorType = System.Windows.Forms.Cursors.Default;
+            this.lblTituloApariencia.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTituloApariencia.ForeColor = System.Drawing.Color.White;
+            this.lblTituloApariencia.Location = new System.Drawing.Point(28, 27);
+            this.lblTituloApariencia.Name = "lblTituloApariencia";
+            this.lblTituloApariencia.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblTituloApariencia.Size = new System.Drawing.Size(156, 36);
+            this.lblTituloApariencia.TabIndex = 9;
+            this.lblTituloApariencia.TabStop = false;
+            this.lblTituloApariencia.Text = "Apariencia";
+            this.lblTituloApariencia.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lblTituloApariencia.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
             // lblPerosnalizacionModo
             // 
             this.lblPerosnalizacionModo.AllowParentOverrides = false;
@@ -372,7 +402,7 @@
             this.lblPerosnalizacionModo.CursorType = System.Windows.Forms.Cursors.Default;
             this.lblPerosnalizacionModo.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPerosnalizacionModo.ForeColor = System.Drawing.Color.White;
-            this.lblPerosnalizacionModo.Location = new System.Drawing.Point(60, 108);
+            this.lblPerosnalizacionModo.Location = new System.Drawing.Point(60, 93);
             this.lblPerosnalizacionModo.Name = "lblPerosnalizacionModo";
             this.lblPerosnalizacionModo.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblPerosnalizacionModo.Size = new System.Drawing.Size(402, 33);
@@ -382,93 +412,52 @@
             this.lblPerosnalizacionModo.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lblPerosnalizacionModo.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
-            // lblPersonalizacion
+            // pnlMiCuentaGradiente
             // 
-            this.lblPersonalizacion.AllowParentOverrides = false;
-            this.lblPersonalizacion.AutoEllipsis = false;
-            this.lblPersonalizacion.Cursor = System.Windows.Forms.Cursors.Default;
-            this.lblPersonalizacion.CursorType = System.Windows.Forms.Cursors.Default;
-            this.lblPersonalizacion.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPersonalizacion.ForeColor = System.Drawing.Color.White;
-            this.lblPersonalizacion.Location = new System.Drawing.Point(28, 22);
-            this.lblPersonalizacion.Name = "lblPersonalizacion";
-            this.lblPersonalizacion.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblPersonalizacion.Size = new System.Drawing.Size(220, 36);
-            this.lblPersonalizacion.TabIndex = 9;
-            this.lblPersonalizacion.TabStop = false;
-            this.lblPersonalizacion.Text = "Personalización";
-            this.lblPersonalizacion.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.lblPersonalizacion.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // pnl1Section
-            // 
-            this.pnl1Section.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.pnlMiCuentaGradiente.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnl1Section.BackColor = System.Drawing.Color.Transparent;
-            this.pnl1Section.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnl1Section.BackgroundImage")));
-            this.pnl1Section.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pnl1Section.BorderRadius = 13;
-            this.pnl1Section.Controls.Add(this.bunifuShadowPanel2);
-            this.pnl1Section.GradientBottomLeft = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(84)))), ((int)(((byte)(88)))));
-            this.pnl1Section.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(130)))), ((int)(((byte)(123)))));
-            this.pnl1Section.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(84)))), ((int)(((byte)(88)))));
-            this.pnl1Section.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(130)))), ((int)(((byte)(123)))));
-            this.pnl1Section.Location = new System.Drawing.Point(22, 99);
-            this.pnl1Section.Name = "pnl1Section";
-            this.pnl1Section.Quality = 10;
-            this.pnl1Section.Size = new System.Drawing.Size(937, 361);
-            this.pnl1Section.TabIndex = 10;
+            this.pnlMiCuentaGradiente.BackColor = System.Drawing.Color.Transparent;
+            this.pnlMiCuentaGradiente.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlMiCuentaGradiente.BackgroundImage")));
+            this.pnlMiCuentaGradiente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnlMiCuentaGradiente.BorderRadius = 13;
+            this.pnlMiCuentaGradiente.Controls.Add(this.picUsuario);
+            this.pnlMiCuentaGradiente.Controls.Add(this.btnCerrarSesion);
+            this.pnlMiCuentaGradiente.Controls.Add(this.lblDocumentoTitulo);
+            this.pnlMiCuentaGradiente.Controls.Add(this.lblCuenta);
+            this.pnlMiCuentaGradiente.Controls.Add(this.lblCorreoUsuario);
+            this.pnlMiCuentaGradiente.Controls.Add(this.lblProfesional);
+            this.pnlMiCuentaGradiente.Controls.Add(this.lblUsuarioo);
+            this.pnlMiCuentaGradiente.Controls.Add(this.lblRolUsuario);
+            this.pnlMiCuentaGradiente.Controls.Add(this.lblNomprePersona);
+            this.pnlMiCuentaGradiente.Controls.Add(this.lblCorreo);
+            this.pnlMiCuentaGradiente.Controls.Add(this.lblUsuario);
+            this.pnlMiCuentaGradiente.Controls.Add(this.lblDUI);
+            this.pnlMiCuentaGradiente.GradientBottomLeft = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(84)))), ((int)(((byte)(88)))));
+            this.pnlMiCuentaGradiente.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(130)))), ((int)(((byte)(123)))));
+            this.pnlMiCuentaGradiente.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(84)))), ((int)(((byte)(88)))));
+            this.pnlMiCuentaGradiente.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(130)))), ((int)(((byte)(123)))));
+            this.pnlMiCuentaGradiente.Location = new System.Drawing.Point(22, 92);
+            this.pnlMiCuentaGradiente.Name = "pnlMiCuentaGradiente";
+            this.pnlMiCuentaGradiente.Quality = 10;
+            this.pnlMiCuentaGradiente.Size = new System.Drawing.Size(937, 379);
+            this.pnlMiCuentaGradiente.TabIndex = 10;
             // 
-            // bunifuShadowPanel2
+            // lblDocumentoTitulo
             // 
-            this.bunifuShadowPanel2.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuShadowPanel2.BorderColor = System.Drawing.Color.Transparent;
-            this.bunifuShadowPanel2.BorderRadius = 1;
-            this.bunifuShadowPanel2.BorderThickness = 1;
-            this.bunifuShadowPanel2.Controls.Add(this.bunifuLabel2);
-            this.bunifuShadowPanel2.Controls.Add(this.lblCorreoUsuario);
-            this.bunifuShadowPanel2.Controls.Add(this.lblUsuarioo);
-            this.bunifuShadowPanel2.Controls.Add(this.lblProfesional);
-            this.bunifuShadowPanel2.Controls.Add(this.lblCorreo);
-            this.bunifuShadowPanel2.Controls.Add(this.btnCerrarSesion);
-            this.bunifuShadowPanel2.Controls.Add(this.lblDUI);
-            this.bunifuShadowPanel2.Controls.Add(this.lblUsuario);
-            this.bunifuShadowPanel2.Controls.Add(this.lblNomprePersona);
-            this.bunifuShadowPanel2.Controls.Add(this.lblRolUsuario);
-            this.bunifuShadowPanel2.Controls.Add(this.picUsuario);
-            this.bunifuShadowPanel2.Controls.Add(this.lblCuenta);
-            this.bunifuShadowPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bunifuShadowPanel2.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
-            this.bunifuShadowPanel2.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
-            this.bunifuShadowPanel2.Location = new System.Drawing.Point(0, 0);
-            this.bunifuShadowPanel2.Name = "bunifuShadowPanel2";
-            this.bunifuShadowPanel2.PanelColor = System.Drawing.Color.Transparent;
-            this.bunifuShadowPanel2.PanelColor2 = System.Drawing.Color.Transparent;
-            this.bunifuShadowPanel2.ShadowColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(22)))), ((int)(((byte)(77)))), ((int)(((byte)(81)))));
-            this.bunifuShadowPanel2.ShadowDept = 2;
-            this.bunifuShadowPanel2.ShadowDepth = 5;
-            this.bunifuShadowPanel2.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Surrounded;
-            this.bunifuShadowPanel2.ShadowTopLeftVisible = false;
-            this.bunifuShadowPanel2.Size = new System.Drawing.Size(937, 361);
-            this.bunifuShadowPanel2.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
-            this.bunifuShadowPanel2.TabIndex = 0;
-            // 
-            // bunifuLabel2
-            // 
-            this.bunifuLabel2.AllowParentOverrides = false;
-            this.bunifuLabel2.AutoEllipsis = false;
-            this.bunifuLabel2.CursorType = null;
-            this.bunifuLabel2.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuLabel2.ForeColor = System.Drawing.Color.White;
-            this.bunifuLabel2.Location = new System.Drawing.Point(318, 209);
-            this.bunifuLabel2.Name = "bunifuLabel2";
-            this.bunifuLabel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel2.Size = new System.Drawing.Size(303, 25);
-            this.bunifuLabel2.TabIndex = 25;
-            this.bunifuLabel2.TabStop = false;
-            this.bunifuLabel2.Text = "Documento de Identificación:";
-            this.bunifuLabel2.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel2.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.lblDocumentoTitulo.AllowParentOverrides = false;
+            this.lblDocumentoTitulo.AutoEllipsis = false;
+            this.lblDocumentoTitulo.CursorType = null;
+            this.lblDocumentoTitulo.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDocumentoTitulo.ForeColor = System.Drawing.Color.White;
+            this.lblDocumentoTitulo.Location = new System.Drawing.Point(349, 222);
+            this.lblDocumentoTitulo.Name = "lblDocumentoTitulo";
+            this.lblDocumentoTitulo.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblDocumentoTitulo.Size = new System.Drawing.Size(303, 25);
+            this.lblDocumentoTitulo.TabIndex = 25;
+            this.lblDocumentoTitulo.TabStop = false;
+            this.lblDocumentoTitulo.Text = "Documento de Identificación:";
+            this.lblDocumentoTitulo.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lblDocumentoTitulo.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // lblCorreoUsuario
             // 
@@ -477,7 +466,7 @@
             this.lblCorreoUsuario.CursorType = null;
             this.lblCorreoUsuario.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCorreoUsuario.ForeColor = System.Drawing.Color.White;
-            this.lblCorreoUsuario.Location = new System.Drawing.Point(318, 164);
+            this.lblCorreoUsuario.Location = new System.Drawing.Point(349, 177);
             this.lblCorreoUsuario.Name = "lblCorreoUsuario";
             this.lblCorreoUsuario.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblCorreoUsuario.Size = new System.Drawing.Size(193, 25);
@@ -494,7 +483,7 @@
             this.lblUsuarioo.CursorType = null;
             this.lblUsuarioo.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsuarioo.ForeColor = System.Drawing.Color.White;
-            this.lblUsuarioo.Location = new System.Drawing.Point(318, 120);
+            this.lblUsuarioo.Location = new System.Drawing.Point(349, 133);
             this.lblUsuarioo.Name = "lblUsuarioo";
             this.lblUsuarioo.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblUsuarioo.Size = new System.Drawing.Size(81, 25);
@@ -512,7 +501,7 @@
             this.lblProfesional.CursorType = System.Windows.Forms.Cursors.Default;
             this.lblProfesional.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProfesional.ForeColor = System.Drawing.Color.White;
-            this.lblProfesional.Location = new System.Drawing.Point(318, 76);
+            this.lblProfesional.Location = new System.Drawing.Point(349, 89);
             this.lblProfesional.Name = "lblProfesional";
             this.lblProfesional.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblProfesional.Size = new System.Drawing.Size(243, 25);
@@ -527,7 +516,7 @@
             this.lblCorreo.AutoSize = true;
             this.lblCorreo.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCorreo.ForeColor = System.Drawing.Color.White;
-            this.lblCorreo.Location = new System.Drawing.Point(522, 165);
+            this.lblCorreo.Location = new System.Drawing.Point(553, 178);
             this.lblCorreo.Margin = new System.Windows.Forms.Padding(20, 0, 3, 20);
             this.lblCorreo.Name = "lblCorreo";
             this.lblCorreo.Size = new System.Drawing.Size(63, 24);
@@ -546,7 +535,7 @@
             this.btnCerrarSesion.AutoSizeLeftIcon = true;
             this.btnCerrarSesion.AutoSizeRightIcon = true;
             this.btnCerrarSesion.BackColor = System.Drawing.Color.Transparent;
-            this.btnCerrarSesion.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(174)))), ((int)(((byte)(147)))), ((int)(((byte)(142)))));
+            this.btnCerrarSesion.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(174)))), ((int)(((byte)(147)))), ((int)(((byte)(142)))));
             this.btnCerrarSesion.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCerrarSesion.BackgroundImage")));
             this.btnCerrarSesion.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.btnCerrarSesion.ButtonText = "Cerrar sesión";
@@ -554,11 +543,11 @@
             this.btnCerrarSesion.ColorContrastOnClick = 45;
             this.btnCerrarSesion.ColorContrastOnHover = 45;
             this.btnCerrarSesion.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges1.BottomLeft = true;
-            borderEdges1.BottomRight = true;
-            borderEdges1.TopLeft = true;
-            borderEdges1.TopRight = true;
-            this.btnCerrarSesion.CustomizableEdges = borderEdges1;
+            borderEdges3.BottomLeft = true;
+            borderEdges3.BottomRight = true;
+            borderEdges3.TopLeft = true;
+            borderEdges3.TopRight = true;
+            this.btnCerrarSesion.CustomizableEdges = borderEdges3;
             this.btnCerrarSesion.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnCerrarSesion.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnCerrarSesion.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -570,19 +559,19 @@
             this.btnCerrarSesion.IconLeftCursor = System.Windows.Forms.Cursors.Default;
             this.btnCerrarSesion.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
             this.btnCerrarSesion.IconMarginLeft = 11;
-            this.btnCerrarSesion.IconPadding = 10;
+            this.btnCerrarSesion.IconPadding = 11;
             this.btnCerrarSesion.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCerrarSesion.IconRightCursor = System.Windows.Forms.Cursors.Default;
             this.btnCerrarSesion.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
-            this.btnCerrarSesion.IconSize = 20;
+            this.btnCerrarSesion.IconSize = 17;
             this.btnCerrarSesion.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(174)))), ((int)(((byte)(147)))), ((int)(((byte)(142)))));
             this.btnCerrarSesion.IdleBorderRadius = 25;
             this.btnCerrarSesion.IdleBorderThickness = 1;
-            this.btnCerrarSesion.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(174)))), ((int)(((byte)(147)))), ((int)(((byte)(142)))));
+            this.btnCerrarSesion.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(174)))), ((int)(((byte)(147)))), ((int)(((byte)(142)))));
             this.btnCerrarSesion.IdleIconLeftImage = global::Empresa_laboral_ADNE___Proyecto_PTC.Properties.Resources.Cerrar_sesion_confg;
             this.btnCerrarSesion.IdleIconRightImage = null;
             this.btnCerrarSesion.IndicateFocus = false;
-            this.btnCerrarSesion.Location = new System.Drawing.Point(676, 294);
+            this.btnCerrarSesion.Location = new System.Drawing.Point(680, 310);
             this.btnCerrarSesion.MaximumSize = new System.Drawing.Size(232, 48);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
             this.btnCerrarSesion.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
@@ -605,7 +594,7 @@
             this.btnCerrarSesion.OnIdleState.BorderRadius = 25;
             this.btnCerrarSesion.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.btnCerrarSesion.OnIdleState.BorderThickness = 1;
-            this.btnCerrarSesion.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(174)))), ((int)(((byte)(147)))), ((int)(((byte)(142)))));
+            this.btnCerrarSesion.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(174)))), ((int)(((byte)(147)))), ((int)(((byte)(142)))));
             this.btnCerrarSesion.OnIdleState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
             this.btnCerrarSesion.OnIdleState.IconLeftImage = global::Empresa_laboral_ADNE___Proyecto_PTC.Properties.Resources.Cerrar_sesion_confg;
             this.btnCerrarSesion.OnIdleState.IconRightImage = null;
@@ -630,7 +619,7 @@
             this.lblDUI.AutoSize = true;
             this.lblDUI.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDUI.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.lblDUI.Location = new System.Drawing.Point(626, 209);
+            this.lblDUI.Location = new System.Drawing.Point(657, 222);
             this.lblDUI.Margin = new System.Windows.Forms.Padding(20, 0, 3, 20);
             this.lblDUI.Name = "lblDUI";
             this.lblDUI.Size = new System.Drawing.Size(125, 24);
@@ -642,7 +631,7 @@
             this.lblUsuario.AutoSize = true;
             this.lblUsuario.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsuario.ForeColor = System.Drawing.Color.White;
-            this.lblUsuario.Location = new System.Drawing.Point(407, 120);
+            this.lblUsuario.Location = new System.Drawing.Point(438, 133);
             this.lblUsuario.Margin = new System.Windows.Forms.Padding(20, 0, 3, 20);
             this.lblUsuario.Name = "lblUsuario";
             this.lblUsuario.Size = new System.Drawing.Size(84, 24);
@@ -654,7 +643,7 @@
             this.lblNomprePersona.AutoSize = true;
             this.lblNomprePersona.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNomprePersona.ForeColor = System.Drawing.Color.White;
-            this.lblNomprePersona.Location = new System.Drawing.Point(563, 77);
+            this.lblNomprePersona.Location = new System.Drawing.Point(594, 90);
             this.lblNomprePersona.Margin = new System.Windows.Forms.Padding(20, 0, 3, 20);
             this.lblNomprePersona.Name = "lblNomprePersona";
             this.lblNomprePersona.Size = new System.Drawing.Size(92, 24);
@@ -666,7 +655,7 @@
             this.lblRolUsuario.AutoSize = true;
             this.lblRolUsuario.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRolUsuario.ForeColor = System.Drawing.Color.White;
-            this.lblRolUsuario.Location = new System.Drawing.Point(314, 228);
+            this.lblRolUsuario.Location = new System.Drawing.Point(345, 241);
             this.lblRolUsuario.Margin = new System.Windows.Forms.Padding(3, 10, 3, 0);
             this.lblRolUsuario.Name = "lblRolUsuario";
             this.lblRolUsuario.Padding = new System.Windows.Forms.Padding(0, 20, 10, 0);
@@ -684,10 +673,10 @@
             this.picUsuario.BorderRadius = 0;
             this.picUsuario.Image = global::Empresa_laboral_ADNE___Proyecto_PTC.Properties.Resources.Foto_configuración;
             this.picUsuario.IsCircle = false;
-            this.picUsuario.Location = new System.Drawing.Point(30, 81);
+            this.picUsuario.Location = new System.Drawing.Point(51, 86);
             this.picUsuario.Margin = new System.Windows.Forms.Padding(30, 3, 3, 3);
             this.picUsuario.Name = "picUsuario";
-            this.picUsuario.Size = new System.Drawing.Size(259, 259);
+            this.picUsuario.Size = new System.Drawing.Size(250, 250);
             this.picUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picUsuario.TabIndex = 10;
             this.picUsuario.TabStop = false;
@@ -701,7 +690,7 @@
             this.lblCuenta.CursorType = System.Windows.Forms.Cursors.Default;
             this.lblCuenta.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCuenta.ForeColor = System.Drawing.Color.White;
-            this.lblCuenta.Location = new System.Drawing.Point(28, 21);
+            this.lblCuenta.Location = new System.Drawing.Point(28, 22);
             this.lblCuenta.Name = "lblCuenta";
             this.lblCuenta.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblCuenta.Size = new System.Drawing.Size(145, 36);
@@ -717,56 +706,205 @@
             this.pictureADNE.Image = ((System.Drawing.Image)(resources.GetObject("pictureADNE.Image")));
             this.pictureADNE.Location = new System.Drawing.Point(0, 82);
             this.pictureADNE.Name = "pictureADNE";
-            this.pictureADNE.Size = new System.Drawing.Size(986, 769);
+            this.pictureADNE.Size = new System.Drawing.Size(986, 995);
             this.pictureADNE.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureADNE.TabIndex = 1;
             this.pictureADNE.TabStop = false;
             // 
-            // flowLayoutPanel1
+            // flpTopTitulo
             // 
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
-            this.flowLayoutPanel1.Controls.Add(this.bunifuLabel5);
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(986, 82);
-            this.flowLayoutPanel1.TabIndex = 0;
+            this.flpTopTitulo.BackColor = System.Drawing.Color.Transparent;
+            this.flpTopTitulo.Controls.Add(this.lblConfiguracionTitulo);
+            this.flpTopTitulo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.flpTopTitulo.Location = new System.Drawing.Point(0, 0);
+            this.flpTopTitulo.Name = "flpTopTitulo";
+            this.flpTopTitulo.Size = new System.Drawing.Size(986, 82);
+            this.flpTopTitulo.TabIndex = 0;
             // 
-            // bunifuLabel5
+            // lblConfiguracionTitulo
             // 
-            this.bunifuLabel5.AllowParentOverrides = false;
-            this.bunifuLabel5.AutoEllipsis = false;
-            this.bunifuLabel5.Cursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel5.CursorType = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel5.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.bunifuLabel5.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuLabel5.ForeColor = System.Drawing.Color.White;
-            this.bunifuLabel5.Location = new System.Drawing.Point(30, 30);
-            this.bunifuLabel5.Margin = new System.Windows.Forms.Padding(30, 30, 3, 3);
-            this.bunifuLabel5.Name = "bunifuLabel5";
-            this.bunifuLabel5.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel5.Size = new System.Drawing.Size(219, 38);
-            this.bunifuLabel5.TabIndex = 3;
-            this.bunifuLabel5.TabStop = false;
-            this.bunifuLabel5.Text = "Configuración";
-            this.bunifuLabel5.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel5.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.lblConfiguracionTitulo.AllowParentOverrides = false;
+            this.lblConfiguracionTitulo.AutoEllipsis = false;
+            this.lblConfiguracionTitulo.Cursor = System.Windows.Forms.Cursors.Default;
+            this.lblConfiguracionTitulo.CursorType = System.Windows.Forms.Cursors.Default;
+            this.lblConfiguracionTitulo.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.lblConfiguracionTitulo.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblConfiguracionTitulo.ForeColor = System.Drawing.Color.White;
+            this.lblConfiguracionTitulo.Location = new System.Drawing.Point(30, 30);
+            this.lblConfiguracionTitulo.Margin = new System.Windows.Forms.Padding(30, 30, 3, 3);
+            this.lblConfiguracionTitulo.Name = "lblConfiguracionTitulo";
+            this.lblConfiguracionTitulo.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblConfiguracionTitulo.Size = new System.Drawing.Size(219, 38);
+            this.lblConfiguracionTitulo.TabIndex = 3;
+            this.lblConfiguracionTitulo.TabStop = false;
+            this.lblConfiguracionTitulo.Text = "Configuración";
+            this.lblConfiguracionTitulo.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lblConfiguracionTitulo.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
-            // bunifuPanel1
+            // pnlFondo
             // 
-            this.bunifuPanel1.BackgroundColor = System.Drawing.Color.Transparent;
-            this.bunifuPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuPanel1.BackgroundImage")));
-            this.bunifuPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuPanel1.BorderColor = System.Drawing.Color.Transparent;
-            this.bunifuPanel1.BorderRadius = 3;
-            this.bunifuPanel1.BorderThickness = 1;
-            this.bunifuPanel1.Controls.Add(this.bunifuShadowPanel1);
-            this.bunifuPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bunifuPanel1.Location = new System.Drawing.Point(15, 10);
-            this.bunifuPanel1.Name = "bunifuPanel1";
-            this.bunifuPanel1.ShowBorders = true;
-            this.bunifuPanel1.Size = new System.Drawing.Size(991, 861);
-            this.bunifuPanel1.TabIndex = 4;
+            this.pnlFondo.BackgroundColor = System.Drawing.Color.Transparent;
+            this.pnlFondo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlFondo.BackgroundImage")));
+            this.pnlFondo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnlFondo.BorderColor = System.Drawing.Color.Transparent;
+            this.pnlFondo.BorderRadius = 3;
+            this.pnlFondo.BorderThickness = 1;
+            this.pnlFondo.Controls.Add(this.pnlSombraFondo);
+            this.pnlFondo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlFondo.Location = new System.Drawing.Point(15, 10);
+            this.pnlFondo.Name = "pnlFondo";
+            this.pnlFondo.ShowBorders = true;
+            this.pnlFondo.Size = new System.Drawing.Size(991, 1087);
+            this.pnlFondo.TabIndex = 4;
+            // 
+            // bunifuGradientPanel1
+            // 
+            this.bunifuGradientPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.bunifuGradientPanel1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
+            this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuGradientPanel1.BorderRadius = 15;
+            this.bunifuGradientPanel1.Controls.Add(this.lblCambiarContrasena);
+            this.bunifuGradientPanel1.Controls.Add(this.lblTituloCambiarContrasena);
+            this.bunifuGradientPanel1.Controls.Add(this.btnNuevaContrasena);
+            this.bunifuGradientPanel1.GradientBottomLeft = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(84)))), ((int)(((byte)(88)))));
+            this.bunifuGradientPanel1.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(130)))), ((int)(((byte)(123)))));
+            this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(84)))), ((int)(((byte)(88)))));
+            this.bunifuGradientPanel1.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(130)))), ((int)(((byte)(123)))));
+            this.bunifuGradientPanel1.Location = new System.Drawing.Point(22, 477);
+            this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
+            this.bunifuGradientPanel1.Quality = 10;
+            this.bunifuGradientPanel1.Size = new System.Drawing.Size(937, 196);
+            this.bunifuGradientPanel1.TabIndex = 15;
+            // 
+            // lblCambiarContrasena
+            // 
+            this.lblCambiarContrasena.AllowParentOverrides = false;
+            this.lblCambiarContrasena.AutoEllipsis = false;
+            this.lblCambiarContrasena.Cursor = System.Windows.Forms.Cursors.Default;
+            this.lblCambiarContrasena.CursorType = System.Windows.Forms.Cursors.Default;
+            this.lblCambiarContrasena.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCambiarContrasena.ForeColor = System.Drawing.Color.White;
+            this.lblCambiarContrasena.Location = new System.Drawing.Point(60, 88);
+            this.lblCambiarContrasena.Name = "lblCambiarContrasena";
+            this.lblCambiarContrasena.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblCambiarContrasena.Size = new System.Drawing.Size(438, 33);
+            this.lblCambiarContrasena.TabIndex = 12;
+            this.lblCambiarContrasena.TabStop = false;
+            this.lblCambiarContrasena.Text = "Cambia a una nueva contraseña";
+            this.lblCambiarContrasena.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lblCambiarContrasena.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // lblTituloCambiarContrasena
+            // 
+            this.lblTituloCambiarContrasena.AllowParentOverrides = false;
+            this.lblTituloCambiarContrasena.AutoEllipsis = false;
+            this.lblTituloCambiarContrasena.Cursor = System.Windows.Forms.Cursors.Default;
+            this.lblTituloCambiarContrasena.CursorType = System.Windows.Forms.Cursors.Default;
+            this.lblTituloCambiarContrasena.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTituloCambiarContrasena.ForeColor = System.Drawing.Color.White;
+            this.lblTituloCambiarContrasena.Location = new System.Drawing.Point(28, 26);
+            this.lblTituloCambiarContrasena.Name = "lblTituloCambiarContrasena";
+            this.lblTituloCambiarContrasena.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblTituloCambiarContrasena.Size = new System.Drawing.Size(295, 36);
+            this.lblTituloCambiarContrasena.TabIndex = 9;
+            this.lblTituloCambiarContrasena.TabStop = false;
+            this.lblTituloCambiarContrasena.Text = "Cambiar Contraseña";
+            this.lblTituloCambiarContrasena.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lblTituloCambiarContrasena.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // btnNuevaContrasena
+            // 
+            this.btnNuevaContrasena.AllowAnimations = true;
+            this.btnNuevaContrasena.AllowMouseEffects = true;
+            this.btnNuevaContrasena.AllowToggling = false;
+            this.btnNuevaContrasena.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnNuevaContrasena.AnimationSpeed = 200;
+            this.btnNuevaContrasena.AutoGenerateColors = false;
+            this.btnNuevaContrasena.AutoRoundBorders = false;
+            this.btnNuevaContrasena.AutoSizeLeftIcon = true;
+            this.btnNuevaContrasena.AutoSizeRightIcon = true;
+            this.btnNuevaContrasena.BackColor = System.Drawing.Color.Transparent;
+            this.btnNuevaContrasena.BackColor1 = System.Drawing.Color.Transparent;
+            this.btnNuevaContrasena.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnNuevaContrasena.BackgroundImage")));
+            this.btnNuevaContrasena.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btnNuevaContrasena.ButtonText = ">";
+            this.btnNuevaContrasena.ButtonTextMarginLeft = 0;
+            this.btnNuevaContrasena.ColorContrastOnClick = 45;
+            this.btnNuevaContrasena.ColorContrastOnHover = 45;
+            this.btnNuevaContrasena.Cursor = System.Windows.Forms.Cursors.Hand;
+            borderEdges1.BottomLeft = true;
+            borderEdges1.BottomRight = true;
+            borderEdges1.TopLeft = true;
+            borderEdges1.TopRight = true;
+            this.btnNuevaContrasena.CustomizableEdges = borderEdges1;
+            this.btnNuevaContrasena.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnNuevaContrasena.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btnNuevaContrasena.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btnNuevaContrasena.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btnNuevaContrasena.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
+            this.btnNuevaContrasena.Font = new System.Drawing.Font("Segoe UI Emoji", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNuevaContrasena.ForeColor = System.Drawing.Color.White;
+            this.btnNuevaContrasena.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNuevaContrasena.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.btnNuevaContrasena.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
+            this.btnNuevaContrasena.IconMarginLeft = 11;
+            this.btnNuevaContrasena.IconPadding = 10;
+            this.btnNuevaContrasena.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnNuevaContrasena.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.btnNuevaContrasena.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
+            this.btnNuevaContrasena.IconSize = 25;
+            this.btnNuevaContrasena.IdleBorderColor = System.Drawing.Color.Transparent;
+            this.btnNuevaContrasena.IdleBorderRadius = 15;
+            this.btnNuevaContrasena.IdleBorderThickness = 1;
+            this.btnNuevaContrasena.IdleFillColor = System.Drawing.Color.Transparent;
+            this.btnNuevaContrasena.IdleIconLeftImage = null;
+            this.btnNuevaContrasena.IdleIconRightImage = null;
+            this.btnNuevaContrasena.IndicateFocus = false;
+            this.btnNuevaContrasena.Location = new System.Drawing.Point(0, 0);
+            this.btnNuevaContrasena.Name = "btnNuevaContrasena";
+            this.btnNuevaContrasena.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btnNuevaContrasena.OnDisabledState.BorderRadius = 15;
+            this.btnNuevaContrasena.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btnNuevaContrasena.OnDisabledState.BorderThickness = 1;
+            this.btnNuevaContrasena.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btnNuevaContrasena.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btnNuevaContrasena.OnDisabledState.IconLeftImage = null;
+            this.btnNuevaContrasena.OnDisabledState.IconRightImage = null;
+            this.btnNuevaContrasena.onHoverState.BorderColor = System.Drawing.Color.Transparent;
+            this.btnNuevaContrasena.onHoverState.BorderRadius = 15;
+            this.btnNuevaContrasena.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btnNuevaContrasena.onHoverState.BorderThickness = 1;
+            this.btnNuevaContrasena.onHoverState.FillColor = System.Drawing.Color.Transparent;
+            this.btnNuevaContrasena.onHoverState.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.btnNuevaContrasena.onHoverState.IconLeftImage = null;
+            this.btnNuevaContrasena.onHoverState.IconRightImage = null;
+            this.btnNuevaContrasena.OnIdleState.BorderColor = System.Drawing.Color.Transparent;
+            this.btnNuevaContrasena.OnIdleState.BorderRadius = 15;
+            this.btnNuevaContrasena.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btnNuevaContrasena.OnIdleState.BorderThickness = 1;
+            this.btnNuevaContrasena.OnIdleState.FillColor = System.Drawing.Color.Transparent;
+            this.btnNuevaContrasena.OnIdleState.ForeColor = System.Drawing.Color.White;
+            this.btnNuevaContrasena.OnIdleState.IconLeftImage = null;
+            this.btnNuevaContrasena.OnIdleState.IconRightImage = null;
+            this.btnNuevaContrasena.OnPressedState.BorderColor = System.Drawing.Color.Transparent;
+            this.btnNuevaContrasena.OnPressedState.BorderRadius = 15;
+            this.btnNuevaContrasena.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btnNuevaContrasena.OnPressedState.BorderThickness = 1;
+            this.btnNuevaContrasena.OnPressedState.FillColor = System.Drawing.Color.Transparent;
+            this.btnNuevaContrasena.OnPressedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(151)))), ((int)(((byte)(166)))));
+            this.btnNuevaContrasena.OnPressedState.IconLeftImage = null;
+            this.btnNuevaContrasena.OnPressedState.IconRightImage = null;
+            this.btnNuevaContrasena.Size = new System.Drawing.Size(916, 193);
+            this.btnNuevaContrasena.TabIndex = 13;
+            this.btnNuevaContrasena.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnNuevaContrasena.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnNuevaContrasena.TextMarginLeft = 0;
+            this.btnNuevaContrasena.TextPadding = new System.Windows.Forms.Padding(0);
+            this.btnNuevaContrasena.UseDefaultRadiusAndThickness = true;
             // 
             // ConfiguraciónForm
             // 
@@ -774,67 +912,66 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(143)))), ((int)(((byte)(156)))));
-            this.ClientSize = new System.Drawing.Size(1011, 874);
-            this.Controls.Add(this.bunifuPanel1);
+            this.ClientSize = new System.Drawing.Size(1011, 1100);
+            this.Controls.Add(this.pnlFondo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ConfiguraciónForm";
             this.Padding = new System.Windows.Forms.Padding(15, 10, 5, 3);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Configuración";
-            this.bunifuShadowPanel1.ResumeLayout(false);
+            this.pnlSombraFondo.ResumeLayout(false);
             this.pnlForms.ResumeLayout(false);
-            this.pnl3Section.ResumeLayout(false);
-            this.bunifuShadowPanel4.ResumeLayout(false);
-            this.bunifuShadowPanel4.PerformLayout();
-            this.pnl2Section.ResumeLayout(false);
-            this.bunifuShadowPanel3.ResumeLayout(false);
-            this.bunifuShadowPanel3.PerformLayout();
-            this.pnl1Section.ResumeLayout(false);
-            this.bunifuShadowPanel2.ResumeLayout(false);
-            this.bunifuShadowPanel2.PerformLayout();
+            this.pnlGradienteConexion.ResumeLayout(false);
+            this.pnlGradienteConexion.PerformLayout();
+            this.pnlAparienciaGradiente.ResumeLayout(false);
+            this.pnlAparienciaGradiente.PerformLayout();
+            this.pnlMiCuentaGradiente.ResumeLayout(false);
+            this.pnlMiCuentaGradiente.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picUsuario)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureADNE)).EndInit();
-            this.flowLayoutPanel1.ResumeLayout(false);
-            this.flowLayoutPanel1.PerformLayout();
-            this.bunifuPanel1.ResumeLayout(false);
+            this.flpTopTitulo.ResumeLayout(false);
+            this.flpTopTitulo.PerformLayout();
+            this.pnlFondo.ResumeLayout(false);
+            this.bunifuGradientPanel1.ResumeLayout(false);
+            this.bunifuGradientPanel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        public Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel1;
+        public Bunifu.UI.WinForms.BunifuShadowPanel pnlSombraFondo;
         public Bunifu.UI.WinForms.BunifuGradientPanel pnlForms;
-        public Bunifu.UI.WinForms.BunifuPanel bunifuPanel1;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel5;
+        public Bunifu.UI.WinForms.BunifuPanel pnlFondo;
+        private System.Windows.Forms.FlowLayoutPanel flpTopTitulo;
         private System.Windows.Forms.PictureBox pictureADNE;
-        private Bunifu.UI.WinForms.BunifuLabel lblCuenta;
-        private Bunifu.UI.WinForms.BunifuGradientPanel pnl1Section;
-        private Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel2;
         public Bunifu.UI.WinForms.BunifuPictureBox picUsuario;
         public System.Windows.Forms.Label lblRolUsuario;
         public System.Windows.Forms.Label lblDUI;
         public System.Windows.Forms.Label lblUsuario;
         public System.Windows.Forms.Label lblNomprePersona;
         public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnCerrarSesion;
-        private Bunifu.UI.WinForms.BunifuGradientPanel pnl2Section;
-        private Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel3;
-        private Bunifu.UI.WinForms.BunifuLabel lblPersonalizacion;
-        private Bunifu.UI.WinForms.BunifuGradientPanel pnl3Section;
-        private Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel4;
-        private Bunifu.UI.WinForms.BunifuLabel lblAcercaDe;
+        private Bunifu.UI.WinForms.BunifuGradientPanel pnlAparienciaGradiente;
         private Bunifu.UI.WinForms.BunifuLabel lblPerosnalizacionModo;
         public Bunifu.UI.WinForms.BunifuToggleSwitch2 switchModo;
-        private Bunifu.UI.WinForms.BunifuLabel lblVersion;
-        public Bunifu.UI.WinForms.BunifuPanel bunifuPanel2;
         public Bunifu.UI.WinForms.BunifuVScrollBar bunifuVScrollBar1;
         public System.Windows.Forms.Label lblCorreo;
-        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel2;
-        private Bunifu.UI.WinForms.BunifuLabel lblCorreoUsuario;
-        private Bunifu.UI.WinForms.BunifuLabel lblUsuarioo;
-        private Bunifu.UI.WinForms.BunifuLabel lblProfesional;
-        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel3;
-        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
+        public Bunifu.UI.WinForms.BunifuLabel lblDocumentoTitulo;
+        public Bunifu.UI.WinForms.BunifuLabel lblCorreoUsuario;
+        public Bunifu.UI.WinForms.BunifuLabel lblUsuarioo;
+        public Bunifu.UI.WinForms.BunifuLabel lblProfesional;
+        public Bunifu.UI.WinForms.BunifuLabel lblTituloApariencia;
+        public Bunifu.UI.WinForms.BunifuGradientPanel pnlGradienteConexion;
+        private Bunifu.UI.WinForms.BunifuLabel lblADNE_Devs;
+        public Bunifu.UI.WinForms.BunifuLabel lblTituloAgregarConexion;
+        public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnAgregarConfiguracion;
+        public Bunifu.UI.WinForms.BunifuLabel lblConfiguraTuDB;
+        public Bunifu.UI.WinForms.BunifuGradientPanel pnlMiCuentaGradiente;
+        public Bunifu.UI.WinForms.BunifuLabel lblConfiguracionTitulo;
+        public Bunifu.UI.WinForms.BunifuLabel lblCuenta;
+        public Bunifu.UI.WinForms.BunifuGradientPanel bunifuGradientPanel1;
+        public Bunifu.UI.WinForms.BunifuLabel lblCambiarContrasena;
+        public Bunifu.UI.WinForms.BunifuLabel lblTituloCambiarContrasena;
+        public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnNuevaContrasena;
     }
 }

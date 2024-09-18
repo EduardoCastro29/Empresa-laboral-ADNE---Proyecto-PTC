@@ -633,5 +633,11 @@
   <ItemGroup>
     <None Include="Resources\Frame 34 %282%29.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flechas-izquierda.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\compartir.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

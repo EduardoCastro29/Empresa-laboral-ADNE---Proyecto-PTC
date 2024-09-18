@@ -193,6 +193,16 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap compartir {
+            get {
+                object obj = ResourceManager.GetObject("compartir", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Configuracion {
             get {
                 object obj = ResourceManager.GetObject("Configuracion", resourceCulture);
@@ -287,6 +297,16 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Properties {
         internal static string Expediente__Psicosocial {
             get {
                 return ResourceManager.GetString("Expediente__Psicosocial", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap flechas_izquierda {
+            get {
+                object obj = ResourceManager.GetObject("flechas-izquierda", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
