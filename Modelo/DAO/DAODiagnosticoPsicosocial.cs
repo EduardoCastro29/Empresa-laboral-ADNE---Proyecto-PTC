@@ -17,7 +17,7 @@ using Org.BouncyCastle.Utilities.Collections;
 
 namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
 {
-    internal class DAOExpediente : DTOExpediente
+    internal class DAODiagnosticoPsicosocial : DTODiagnosticoPsicosocial
     {
         readonly SqlCommand Conexion = new SqlCommand();
         public bool ExpedienteInsertarDatos()

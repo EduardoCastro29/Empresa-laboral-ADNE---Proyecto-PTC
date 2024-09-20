@@ -85,7 +85,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
             }
         }
         //Este es el método común para actualizar los datos del usuario asociado Y EMPLEADO
-        public bool ActualizarUsuarioEmpleado()
+        public bool ActualizarRestablecerContra()
         {
             try
             {
@@ -93,55 +93,16 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                 Conexion.Connection = Conectar();
 
                 //Inicializamos la consulta
-                string consultaSQLProfesional = "UPDATE Profesional SET " +
-                                                "telefono           = @telefono, " +
-                                                "nombre             = @nombre, " +
-                                                "apellido           = @apellido, " +
-                                                "correoElectronico  = @correoElectronico, " +
-                                                "foto               = @foto, " +
-                                                "desempenoId        = @desempenoId " +
+                string consultaSQLUsuario = "UPDATE Usuario SET contraseña = @contraseña WHERE usuarioId = @usuarioId";
 
-                                                "WHERE " +
-                                                "DUI = @DUI";
-                //Inicializamos el comando
-                SqlCommand ObjComandoSQLServerProfesional = new SqlCommand(consultaSQLProfesional, Conexion.Connection);
+                SqlCommand ObjComandoSQLServerUsuario = new SqlCommand(consultaSQLUsuario, Conexion.Connection);
 
-                //Añadimos los valores
-                ObjComandoSQLServerProfesional.Parameters.AddWithValue("@telefono", Telefono);
-                ObjComandoSQLServerProfesional.Parameters.AddWithValue("@nombre", Nombres);
-                ObjComandoSQLServerProfesional.Parameters.AddWithValue("@apellido", Apellidos);
-                ObjComandoSQLServerProfesional.Parameters.AddWithValue("@correoElectronico", Correo);
-                ObjComandoSQLServerProfesional.Parameters.AddWithValue("@foto", Imagen);
-                ObjComandoSQLServerProfesional.Parameters.AddWithValue("@desempenoId", DesempenoId);
-                ObjComandoSQLServerProfesional.Parameters.AddWithValue("@DUI", Dui);
+                ObjComandoSQLServerUsuario.Parameters.AddWithValue("@contraseña", Contraseña);
+                ObjComandoSQLServerUsuario.Parameters.AddWithValue("@usuarioId", UsuarioId);
 
-                if (ObjComandoSQLServerProfesional.ExecuteNonQuery() > 0)
-                {
-                    try
-                    {
-                        string consultaSQLUsuario = "UPDATE Usuario SET nombreUsuario = @nombreUsuario, contraseña = @contraseña, correoElectronico = @correoElectronico WHERE usuarioId = @usuarioId";
-
-                        SqlCommand ObjComandoSQLServerUsuario = new SqlCommand(consultaSQLUsuario, Conexion.Connection);
-
-                        ObjComandoSQLServerUsuario.Parameters.AddWithValue("@nombreUsuario", Usuario);
-                        ObjComandoSQLServerUsuario.Parameters.AddWithValue("@contraseña", Contraseña);
-                        ObjComandoSQLServerUsuario.Parameters.AddWithValue("@correoElectronico", Correo);
-                        ObjComandoSQLServerUsuario.Parameters.AddWithValue("@usuarioId", UsuarioId);
-
-                        if (ObjComandoSQLServerUsuario.ExecuteNonQuery() > 0)
-                            return true;
-                        else return false;
-                    }
-                    catch (Exception)
-                    {
-                        MessageBox.Show("Ha ocurrido un error, ERR-003-2", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        return false;
-                    }
-                }
-                else
-                {
-                    return false;
-                }
+                if (ObjComandoSQLServerUsuario.ExecuteNonQuery() > 0)
+                    return true;
+                else return false;
             }
             catch (Exception)
             {
@@ -152,6 +113,71 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
             {
                 Conexion.Connection.Close();
             }
+            //try
+            //{
+            //    //Inicializamos la conexión
+            //    Conexion.Connection = Conectar();
+
+            //    //Inicializamos la consulta
+            //    string consultaSQLProfesional = "UPDATE Profesional SET " +
+            //                                    "telefono           = @telefono, " +
+            //                                    "nombre             = @nombre, " +
+            //                                    "apellido           = @apellido, " +
+            //                                    "correoElectronico  = @correoElectronico, " +
+            //                                    "foto               = @foto, " +
+            //                                    "desempenoId        = @desempenoId " +
+
+            //                                    "WHERE " +
+            //                                    "DUI = @DUI";
+            //    //Inicializamos el comando
+            //    SqlCommand ObjComandoSQLServerProfesional = new SqlCommand(consultaSQLProfesional, Conexion.Connection);
+
+            //    //Añadimos los valores
+            //    ObjComandoSQLServerProfesional.Parameters.AddWithValue("@telefono", Telefono);
+            //    ObjComandoSQLServerProfesional.Parameters.AddWithValue("@nombre", Nombres);
+            //    ObjComandoSQLServerProfesional.Parameters.AddWithValue("@apellido", Apellidos);
+            //    ObjComandoSQLServerProfesional.Parameters.AddWithValue("@correoElectronico", Correo);
+            //    ObjComandoSQLServerProfesional.Parameters.AddWithValue("@foto", Imagen);
+            //    ObjComandoSQLServerProfesional.Parameters.AddWithValue("@desempenoId", DesempenoId);
+            //    ObjComandoSQLServerProfesional.Parameters.AddWithValue("@DUI", Dui);
+
+            //    if (ObjComandoSQLServerProfesional.ExecuteNonQuery() > 0)
+            //    {
+            //        try
+            //        {
+            //            string consultaSQLUsuario = "UPDATE Usuario SET nombreUsuario = @nombreUsuario, contraseña = @contraseña, correoElectronico = @correoElectronico WHERE usuarioId = @usuarioId";
+
+            //            SqlCommand ObjComandoSQLServerUsuario = new SqlCommand(consultaSQLUsuario, Conexion.Connection);
+
+            //            ObjComandoSQLServerUsuario.Parameters.AddWithValue("@nombreUsuario", Usuario);
+            //            ObjComandoSQLServerUsuario.Parameters.AddWithValue("@contraseña", Contraseña);
+            //            ObjComandoSQLServerUsuario.Parameters.AddWithValue("@correoElectronico", Correo);
+            //            ObjComandoSQLServerUsuario.Parameters.AddWithValue("@usuarioId", UsuarioId);
+
+            //            if (ObjComandoSQLServerUsuario.ExecuteNonQuery() > 0)
+            //                return true;
+            //            else return false;
+            //        }
+            //        catch (Exception)
+            //        {
+            //            MessageBox.Show("Ha ocurrido un error, ERR-003-2", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //            return false;
+            //        }
+            //    }
+            //    else
+            //    {
+            //        return false;
+            //    }
+            //}
+            //catch (Exception)
+            //{
+            //    MessageBox.Show("Ha ocurrido un error, ERR-003-2", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //    return false;
+            //}
+            //finally
+            //{
+            //    Conexion.Connection.Close();
+            //}
         }
         //Este es el método común para eliminar los datos del usuario asociado Y EMPLEADO
         //Es importante saber que, si se elimina el usuario, se elimina el empleado asociado

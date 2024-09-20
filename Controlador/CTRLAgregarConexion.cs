@@ -15,8 +15,8 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
 {
     internal class CTRLAgregarConexion : DTOAgregarConexion
     {
-        readonly AgregarConexion ObjAgregarConexion;
-        public CTRLAgregarConexion(AgregarConexion vista)
+        readonly AgregarConexionForm ObjAgregarConexion;
+        public CTRLAgregarConexion(AgregarConexionForm vista)
         {
             ObjAgregarConexion = vista;
             ObjAgregarConexion.rbDesabilitar.CheckedChanged += new EventHandler(DesabilitarAutenticacionConexion);

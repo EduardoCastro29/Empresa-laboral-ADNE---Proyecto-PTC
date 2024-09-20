@@ -11,7 +11,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DTO
 {
     internal class DTOInformacionPersonal : Conexion
     {
-        // Atributos del paciente
+        //Atributos del paciente
         private DateTime fechaNacimiento;
         private string nombre;
         private string apellido;

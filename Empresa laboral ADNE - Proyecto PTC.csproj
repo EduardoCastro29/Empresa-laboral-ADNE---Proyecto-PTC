@@ -116,6 +116,7 @@
     <Compile Include="Controlador\Controlador UC Calendario\CTRLUCDias.cs" />
     <Compile Include="Controlador\Controlador UC Pacientes\CTRLPacienteUC.cs" />
     <Compile Include="Controlador\CTRLAgregarConexion.cs" />
+    <Compile Include="Controlador\CTRLInformacionEncargado.cs" />
     <Compile Include="Controlador\CTRLPreguntasSeguridad.cs" />
     <Compile Include="Controlador\CTRLPrimerUsoSistema.cs" />
     <Compile Include="Controlador\CTRLActividades.cs" />
@@ -129,7 +130,7 @@
     <Compile Include="Controlador\CTRLDashboard.cs" />
     <Compile Include="Controlador\CTRLDireccionGmail.cs" />
     <Compile Include="Controlador\CTRLEquipoTrabajo.cs" />
-    <Compile Include="Controlador\CTRLExpediente.cs" />
+    <Compile Include="Controlador\CTRLDiagnosticoPsicosocial.cs" />
     <Compile Include="Controlador\CTRLHistorial.cs" />
     <Compile Include="Controlador\CTRLInformacionPersonal.cs" />
     <Compile Include="Controlador\CTRLLogin.cs" />
@@ -153,8 +154,9 @@
     <Compile Include="Modelo\DAO\DAODireccionGmail.cs" />
     <Compile Include="Modelo\DAO\DAOEnviarMails.cs" />
     <Compile Include="Modelo\DAO\DAOEquipoTrabajo.cs" />
-    <Compile Include="Modelo\DAO\DAOExpediente.cs" />
+    <Compile Include="Modelo\DAO\DAODiagnosticoPsicosocial.cs" />
     <Compile Include="Modelo\DAO\DAOHistorial.cs" />
+    <Compile Include="Modelo\DAO\DAOInformacionEncargado.cs" />
     <Compile Include="Modelo\DAO\DAOInformacionPersonal.cs" />
     <Compile Include="Modelo\DAO\DAOLogin.cs" />
     <Compile Include="Modelo\DAO\DAONuevoPaciente.cs" />
@@ -178,8 +180,9 @@
     <Compile Include="Modelo\DTO\DTODashboard.cs" />
     <Compile Include="Modelo\DTO\DTOEnviarMails.cs" />
     <Compile Include="Modelo\DTO\DTOEquipoTrabajo.cs" />
-    <Compile Include="Modelo\DTO\DTOExpediente.cs" />
+    <Compile Include="Modelo\DTO\DTODiagnosticoPsicosocial.cs" />
     <Compile Include="Modelo\DTO\DTOHistorial.cs" />
+    <Compile Include="Modelo\DTO\DTOInformacionEncargado.cs" />
     <Compile Include="Modelo\DTO\DTOInformacionPersonal.cs" />
     <Compile Include="Modelo\DTO\DTOLogin.cs" />
     <Compile Include="Modelo\DTO\DTONuevoPaciente.cs" />
@@ -212,11 +215,11 @@
     <Compile Include="Vista\Administrador.Designer.cs">
       <DependentUpon>Administrador.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vista\AgregarConexion.cs">
+    <Compile Include="Vista\Agregar Conexion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vista\AgregarConexion.Designer.cs">
-      <DependentUpon>AgregarConexion.cs</DependentUpon>
+    <Compile Include="Vista\Agregar Conexion.Designer.cs">
+      <DependentUpon>Agregar Conexion.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\Citas.cs">
       <SubType>Form</SubType>
@@ -405,8 +408,8 @@
     <EmbeddedResource Include="Vista\Administrador.resx">
       <DependentUpon>Administrador.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vista\AgregarConexion.resx">
-      <DependentUpon>AgregarConexion.cs</DependentUpon>
+    <EmbeddedResource Include="Vista\Agregar Conexion.resx">
+      <DependentUpon>Agregar Conexion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\Citas.resx">
       <DependentUpon>Citas.cs</DependentUpon>
@@ -638,6 +641,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\compartir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ver Profesional.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ver Profesional P.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

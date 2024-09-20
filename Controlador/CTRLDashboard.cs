@@ -10,6 +10,7 @@ using System.Drawing;
 using Empresa_laboral_ADNE___Proyecto_PTC.Vista;
 using Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DTO;
 using System.Security.Cryptography;
+using System.IO;
 
 namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
 {
@@ -48,13 +49,16 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             //Indicamos los valores que se pondrán dentro del inicio de sesión del usuario
             ObjDashboard.lblUsuario.Text = InicioSesion.Usuario;
             ObjDashboard.lblIdUsuario.Text = InicioSesion.DesempenoId;
-            //ObjDashboard.picUsuario.Image = Image.FromFile(InicioSesion.Imagen);
+
+            //Convertimos la Imagen en un archivo de memoria
+            MemoryStream ObjArchivoMemoriaIMG = new MemoryStream(InicioSesion.Imagen);
+            ObjDashboard.picUsuario.Image = Image.FromStream(ObjArchivoMemoriaIMG);
         }
         private void CerrarPrograma(object sender, FormClosingEventArgs e)
         {
             if (MessageBox.Show("Desea cerrar el programa de forma autmática? Al cerrarse, cerrará la sesión de forma automática", "Cerrar el Programa", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                Application.Exit();
+                Environment.Exit(0);
             }
         }
         private void CerrarSesion(object sender, EventArgs e)
@@ -76,7 +80,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             InicioSesion.Dui = string.Empty;
             InicioSesion.NombresApellidos = string.Empty;
             InicioSesion.Telefono = string.Empty;
-            InicioSesion.Imagen = string.Empty;
+            InicioSesion.Imagen = null;
             InicioSesion.Especialidad = string.Empty;
             InicioSesion.DesempenoId = string.Empty;
         }

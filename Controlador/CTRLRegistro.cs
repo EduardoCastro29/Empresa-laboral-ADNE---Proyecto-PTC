@@ -262,75 +262,81 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                     ObjDAORegistro.Telefono = ObjRegistro.txtTelefono.Text;
                     ObjDAORegistro.DesempenoId = 1;
 
-                    //Guardar imagen
-                    if (ObjRegistro.picProfesional.Image != Properties.Resources.ProfesionalPic)
+                    //Este es el método común para guardar imágenes dentro de la base de datos en forma de BYTES
+                    //Declaramos un objeto del tipo Imagen
+                    Image ObjImagenProfesional = ObjRegistro.picProfesional.Image;
+                    //Declaramos un arreglo de bytes
+                    byte[] ImagenProfesional;
+                    //Si la imagen escogida por el profesional es igual a null, mandamos un mensaje de error
+                    if(ObjImagenProfesional == null)
                     {
-                        string rutaImagen = ObjRegistro.ofdImagen.FileName;
-                        string escritorio = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-                        string carpetaDestino = Path.Combine(escritorio, "Imagenes");
-
-                        Directory.CreateDirectory(carpetaDestino);
-
-                        string imagenDestino = Path.Combine(carpetaDestino, Guid.NewGuid().ToString() + Path.GetExtension(rutaImagen));
-                        File.Copy(rutaImagen, imagenDestino);
-                        try
-                        {
-                            ObjDAORegistro.Imagen = imagenDestino; //Terminamos de guardar imagen
-                        }
-                        catch (Exception ex)
-                        {
-                            MessageBox.Show(ex.Message);
-                        }
+                        ObjRegistro.Notificacion1.Show(ObjRegistro, "Verifique si todos los campos han sido ingresados correctamente", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error);
                     }
                     else
                     {
-                        ObjDAORegistro.Imagen = Properties.Resources.ProfesionalPic.ToString(); //Terminamos de guardar imagen
-                    }
+                        //Caso contrario, procedemos a guardar la imagen
+                        //Creamos un archivo de memoria que nos servirá para guardar la Imagen en bytes
+                        MemoryStream ObjArchivoMemoria = new MemoryStream();
+                        //Indicamos en qué formato en específico se requiere la Imagen a la hora de mostrarla
+                        ObjImagenProfesional.Save(ObjArchivoMemoria, ImageFormat.Bmp);
+                        //Convertimos la imagen en archivo de bytes
+                        ImagenProfesional = ObjArchivoMemoria.ToArray();
 
-                    //Llamamos al método de verificación de correo electrónico
-                    //De esta forma, nos aseguramos de ingresar una dirección de correo válida
-                    //Caso contrario, llegase a retornar null, la inserción no se ejecuta y nos mandará un mensaje de error
-                    if (VerificarCorreoUsuario(ObjRegistro.txtCorreo.Text.Trim()) == true)
-                    {
-                        ObjDAORegistro.Correo = ObjRegistro.txtCorreo.Text.Trim();
-                        //Llamamos a los métodos para verificar si la inserción se hizo correctamente 
-                        if (ObjDAORegistro.RegistroInsertarUsuarioProfesional() == false)
+                        //Guardamos la Imagen
+                        ObjDAORegistro.Imagen = ImagenProfesional;
+
+                        //Llamamos al método de verificación de correo electrónico
+                        //De esta forma, nos aseguramos de ingresar una dirección de correo válida
+                        //Caso contrario, llegase a retornar null, la inserción no se ejecuta y nos mandará un mensaje de error
+                        if (VerificarCorreoUsuario(ObjRegistro.txtCorreo.Text.Trim()) == true)
                         {
-                            ObjRegistro.Notificacion1.Show(ObjRegistro, "Oops!, Algo salió mal, verifique si todas las credenciales han sido ingresadas correctamente");
+                            ObjDAORegistro.Correo = ObjRegistro.txtCorreo.Text.Trim();
+                            //Llamamos a los métodos para verificar si la inserción se hizo correctamente 
+                            if (ObjDAORegistro.RegistroInsertarUsuarioProfesional() == false)
+                            {
+                                ObjRegistro.Notificacion1.Show(ObjRegistro, "Oops!, Algo salió mal, verifique si todas las credenciales han sido ingresadas correctamente");
+                            }
+                            else
+                            {
+                                RegistroEspecialidadesForm ObjAbrirRegistroEspecialidad = new RegistroEspecialidadesForm();
+                                PreguntasdeSeguridadForm ObjAbrirPreguntasS = new PreguntasdeSeguridadForm();
+
+                                //Este es el método común para mostrar Imágenes partiendo de un arreglo de bytes
+                                //Recuperamos la Imagen en un arreglo de bytes
+                                byte[] RCImagenProfesional = ObjDAORegistro.Imagen;
+                                //Convertimos la Imagen en un archivo de memoria
+                                MemoryStream ObjRecuperarImagen = new MemoryStream(RCImagenProfesional);
+
+                                ObjAbrirRegistroEspecialidad.NotificacionEspecialidad.Show(ObjAbrirRegistroEspecialidad, "Registro realizado", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Success);
+                                //Guardamos las variables de registro que se han hecho durante la inserción de la tabla profesional
+                                ObjAbrirRegistroEspecialidad.txtDUIProfesional.Text = ObjRegistro.txtDui.Text.Trim();
+                                //Mostramos la Imagen
+                                ObjAbrirRegistroEspecialidad.picProfesional.Image = Image.FromStream(ObjRecuperarImagen);
+                                ObjAbrirRegistroEspecialidad.lblNombreProfesional.Text = ObjDAORegistro.Nombres + " " + ObjDAORegistro.Apellidos;
+                                ObjAbrirRegistroEspecialidad.ShowDialog();
+
+                                //Una vez terminada de ejecutar la acción, procedemos a abrir el formulario de preguntas de seguridad
+                                //De esta forma, el primer usuario ya tendrá preguntas asignadas y poder recuperar su contraseña de forma segura al ingresarse
+                                ObjAbrirPreguntasS.txtDUIProfesional.Text = ObjRegistro.txtDui.Text.Trim();
+                                ObjAbrirPreguntasS.btnVerificarPregunta.Enabled = false;
+                                ObjAbrirPreguntasS.lblIngreseCredenciales.Visible = false;
+                                ObjAbrirPreguntasS.txtUsuario.Visible = false;
+                                ObjAbrirPreguntasS.txtDocumento.Visible = false;
+                                ObjAbrirPreguntasS.pnlLineaDivisora.Visible = false;
+
+                                ObjAbrirPreguntasS.ShowDialog();
+                                //Ocultamos el formulario de registro y le daremos la bienvenida al Login
+                                ObjRegistro.Hide();
+
+                                //Una vez terminada de ejecutar la acción, procedemos a abrir el formulario Login
+                                LoginForm ObjMostrarLogin = new LoginForm();
+                                ObjMostrarLogin.Show();
+                            }
                         }
                         else
                         {
-                            RegistroEspecialidadesForm ObjAbrirRegistroEspecialidad = new RegistroEspecialidadesForm();
-                            PreguntasdeSeguridadForm ObjAbrirPreguntasS = new PreguntasdeSeguridadForm();
-
-                            ObjAbrirRegistroEspecialidad.NotificacionEspecialidad.Show(ObjAbrirRegistroEspecialidad, "Registro realizado", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Success);
-                            //Guardamos las variables de registro que se han hecho durante la inserción de la tabla profesional
-                            ObjAbrirRegistroEspecialidad.txtDUIProfesional.Text = ObjRegistro.txtDui.Text.Trim();
-                            ObjAbrirRegistroEspecialidad.picProfesional.Image = Image.FromFile(ObjDAORegistro.Imagen);
-                            ObjAbrirRegistroEspecialidad.lblNombreProfesional.Text = ObjDAORegistro.Nombres + " " + ObjDAORegistro.Apellidos;
-                            ObjAbrirRegistroEspecialidad.ShowDialog();
-
-                            //Una vez terminada de ejecutar la acción, procedemos a abrir el formulario de preguntas de seguridad
-                            //De esta forma, el primer usuario ya tendrá preguntas asignadas y poder recuperar su contraseña de forma segura al ingresarse
-                            ObjAbrirPreguntasS.txtDUIProfesional.Text = ObjRegistro.txtDui.Text.Trim();
-                            ObjAbrirPreguntasS.btnVerificarPregunta.Enabled = false;
-                            ObjAbrirPreguntasS.lblIngreseCredenciales.Visible = false;
-                            ObjAbrirPreguntasS.txtUsuario.Visible = false;
-                            ObjAbrirPreguntasS.txtDocumento.Visible = false;
-                            ObjAbrirPreguntasS.pnlLineaDivisora.Visible = false;
-
-                            ObjAbrirPreguntasS.ShowDialog();
-                            //Ocultamos el formulario de registro y le daremos la bienvenida al Login
-                            ObjRegistro.Hide();
-
-                            //Una vez terminada de ejecutar la acción, procedemos a abrir el formulario Login
-                            LoginForm ObjMostrarLogin = new LoginForm();
-                            ObjMostrarLogin.Show();
+                            ObjRegistro.Notificacion1.Show(ObjRegistro, "El correo electrónico ingresado no posee una dirección de correo válida, verifique si contiene @ o dominio correcto", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error);
                         }
-                    }
-                    else
-                    {
-                        ObjRegistro.Notificacion1.Show(ObjRegistro, "El correo electrónico ingresado no posee una dirección de correo válida, verifique si contiene @ o dominio correcto", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error);
                     }
                 }
             }

@@ -107,7 +107,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                     InicioSesion.Dui = ObjFilasEncontradas.GetString(0);
                     InicioSesion.Telefono = ObjFilasEncontradas.GetString(1);
                     InicioSesion.NombresApellidos = ObjFilasEncontradas.GetString(2);
-                    InicioSesion.Imagen = ObjFilasEncontradas.GetString(3);
+                    InicioSesion.Imagen = (byte[])ObjFilasEncontradas.GetSqlBinary(3);
                     InicioSesion.DesempenoId = ObjFilasEncontradas.GetString(4);
                     InicioSesion.Usuario = ObjFilasEncontradas.GetString(5);
                     InicioSesion.Especialidad = ObjFilasEncontradas.GetString(6);
@@ -153,6 +153,42 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                     //En caso contrario, se retorna falso
                     return false;
                 }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Ha ocurrido un error, ERR-002-7", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            finally
+            {
+                //Independientemente se haya echo el proceso o no, cerramos la conexión
+                Conexion.Connection.Close();
+            }
+        }
+        //Creamos un método para verificar el usuario relacionado tiene pregunatas asignadas
+        //De esta forma, se verifica para que el mismo profesional no ingrese más preguntas de las que obtiene
+        public bool VerificarPreguntas()
+        {
+            try
+            {
+                //Abrimos la conexión a la base de datos
+                Conexion.Connection = Conectar();
+
+                //Creamos la consulta a SQLServer que nos indicará si hay usuarios registrados en la base de datos
+                string consultaSQLUsuario = "SELECT * FROM PreguntasSeguridadProfesionales WHERE DUI = @DUI";
+
+                //Creamos el comando SQL
+                SqlCommand ObjComandoSQLServer = new SqlCommand(consultaSQLUsuario, Conexion.Connection);
+
+                ObjComandoSQLServer.Parameters.AddWithValue("@DUI", InicioSesion.Dui);
+
+                //Creamos el lector de SQL
+                SqlDataReader ObjFilasEncontradas = ObjComandoSQLServer.ExecuteReader();
+
+                if (ObjFilasEncontradas.Read() == true)
+                    //Si SQLServer encontró usuarios dentro de la base de datos, se retorna verdadero
+                    return true;
+                else return false;
             }
             catch (Exception)
             {

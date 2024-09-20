@@ -9,6 +9,7 @@ using Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO;
 using System.Drawing;
 using Empresa_laboral_ADNE___Proyecto_PTC.Vista;
 using Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DTO;
+using System.IO;
 
 namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
 {
@@ -31,7 +32,10 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             ObjConfiguracionForm.lblCorreo.Text = InicioSesion.Correo;
             ObjConfiguracionForm.lblUsuario.Text = InicioSesion.Usuario;
             ObjConfiguracionForm.lblDUI.Text = InicioSesion.Dui;
-            ObjConfiguracionForm.picUsuario.Image = Image.FromFile(InicioSesion.Imagen);
+
+            //Convertimos la Imagen en un archivo de memoria
+            MemoryStream ObjArchivoMemoriaIMG = new MemoryStream(InicioSesion.Imagen);
+            ObjConfiguracionForm.picUsuario.Image = Image.FromStream(ObjArchivoMemoriaIMG);
         }
         private void CerrarSesionConfig(object sender, EventArgs e)
         {

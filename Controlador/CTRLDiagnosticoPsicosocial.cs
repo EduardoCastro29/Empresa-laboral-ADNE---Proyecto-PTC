@@ -12,7 +12,7 @@ using System.Runtime.Remoting;
 
 namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
 {
-    internal class CTRLExpediente
+    internal class CTRLDiagnosticoPsicosocial
     {
         NuevoPacienteForm objNuevoPaciente = new NuevoPacienteForm();
         readonly ExpedienteMédicoForm ObjExpediente;
@@ -20,7 +20,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
         //Esta tendrá como parámetros el formulario Expediente Médico haciendo referencia a la carpeta Vista
 
         //Primer controlador de la Vista de ExpedienteMedicoForms
-        public CTRLExpediente(ExpedienteMédicoForm Vista)
+        public CTRLDiagnosticoPsicosocial(ExpedienteMédicoForm Vista)
         {
             //Enlazando el objeto con la Vista dentro del constructor
             ObjExpediente = Vista;
@@ -129,7 +129,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                 {
                     //En caso contrario, realizamos el proceso de inserción de los datos a la DB
                     //Realizamos el proceso para capturar los datos ingresados por el usuario dado el DAORegistro
-                    DAOExpediente ObjDAOExpediente = new DAOExpediente();
+                    DAODiagnosticoPsicosocial ObjDAOExpediente = new DAODiagnosticoPsicosocial();
 
                     //Obtenemos datos del objeto ObjDAOExpediente
                     ObjDAOExpediente.DocumentoPresentado = ObjExpediente.txtDocumentoPaciente.Text.Trim();
@@ -203,7 +203,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                 {
                     //En caso contrario, realizamos el proceso de inserción de los datos a la DB
                     //Realizamos el proceso para capturar los datos ingresados por el usuario dado el DAORegistro
-                    DAOExpediente ObjDAOExpediente = new DAOExpediente();
+                    DAODiagnosticoPsicosocial ObjDAOExpediente = new DAODiagnosticoPsicosocial();
 
                     //Obtenemos datos del objeto ObjDAOExpediente
                     ObjDAOExpediente.DocumentoPresentado = ObjExpediente.txtDocumentoPaciente.Text.Trim();

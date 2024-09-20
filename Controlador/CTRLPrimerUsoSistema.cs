@@ -15,6 +15,7 @@ using Aspose.Email;
 using System.Net.Sockets;
 using System.Net;
 using System.Text.RegularExpressions;
+using System.Drawing.Imaging;
 
 namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
 {
@@ -178,8 +179,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
         {
             try
             {
-
-                if (ObjPrimerUsoSistema.txtNombreEmpresa.Text.Length < 5 ||
+                if (ObjPrimerUsoSistema.txtNombreEmpresa.Text.Length < 4 ||
                     ObjPrimerUsoSistema.txtDireccion.Text.Length < 5 ||
                     ObjPrimerUsoSistema.txtCorreoElectronico.Text.Length < 10 ||
                     ObjPrimerUsoSistema.txtTelefono.Text.Length < 9 ||
@@ -198,49 +198,46 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                     ObjRegistrarEmpresa.NumeroPBX = ObjPrimerUsoSistema.txtPBX.Text.Trim();
                     ObjRegistrarEmpresa.FeghaCreacionE = ObjPrimerUsoSistema.dpCreacionEmpresa.Value;
 
-                    //Guardar imagen
-                    if (ObjPrimerUsoSistema.pbLogo.Image != null)
+                    //Declaramos un objeto del tipo Imagen
+                    Image ObjImagenEmpresa = ObjPrimerUsoSistema.pbLogo.Image;
+                    //Declaramos un arreglo de bytes
+                    byte[] ImagenProfesional;
+                    //Si la imagen escogida por el profesional es igual a null, mandamos un mensaje de error
+                    if (ObjImagenEmpresa == null)
                     {
-                        string rutaImagen = ObjPrimerUsoSistema.ofdImagen.FileName;
-                        string escritorio = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-                        string carpetaDestino = Path.Combine(escritorio, "Imagenes");
-
-                        Directory.CreateDirectory(carpetaDestino);
-
-                        string imagenDestino = Path.Combine(carpetaDestino, Guid.NewGuid().ToString() + Path.GetExtension(rutaImagen));
-                        File.Copy(rutaImagen, imagenDestino);
-                        try
-                        {
-                            ObjRegistrarEmpresa.FotoEmpresa = imagenDestino; //Terminamos de guardar imagen
-                        }
-                        catch (Exception ex)
-                        {
-                            MessageBox.Show(ex.Message);
-                        }
+                        MessageBox.Show("Verifique si tiene campos vacios, la empresa no puede ser registrada sin datos faltantes o campos requeridos mínimos", "Regtistro de Empresa", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                     else
                     {
-                        ObjRegistrarEmpresa.FotoEmpresa = ""; //Terminamos de guardar imagen
-                    }
+                        //Creamos un archivo de memoria que nos servirá para guardar la Imagen en bytes
+                        MemoryStream ObjArchivoMemoria = new MemoryStream();
+                        //Indicamos en qué formato en específico se requiere la Imagen a la hora de mostrarla
+                        ObjImagenEmpresa.Save(ObjArchivoMemoria, ImageFormat.Bmp);
+                        //Convertimos la imagen en archivo de bytes
+                        ImagenProfesional = ObjArchivoMemoria.ToArray();
 
-                    if (VerificarCorreoUsuario(ObjPrimerUsoSistema.txtCorreoElectronico.Text) == true)
-                    {
-                        ObjRegistrarEmpresa.CorreoElectronicoE = ObjPrimerUsoSistema.txtCorreoElectronico.Text.Trim();
-                        if (ObjRegistrarEmpresa.RegistrarEmpresa() == true)
+                        //Guardamos la Imagen
+                        ObjRegistrarEmpresa.FotoEmpresa = ImagenProfesional;
+
+                        if (VerificarCorreoUsuario(ObjPrimerUsoSistema.txtCorreoElectronico.Text) == true)
                         {
-                            MessageBox.Show("El registro de la empresa ha sido existoso, ahora procederemos a crear el primer usuario", "Regtistro de Empresa", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            RegistroForm ObjRegistrarPrimerUsuario = new RegistroForm();
-                            ObjPrimerUsoSistema.Hide();
-                            ObjRegistrarPrimerUsuario.Show();
+                            ObjRegistrarEmpresa.CorreoElectronicoE = ObjPrimerUsoSistema.txtCorreoElectronico.Text.Trim();
+                            if (ObjRegistrarEmpresa.RegistrarEmpresa() == true)
+                            {
+                                MessageBox.Show("El registro de la empresa ha sido existoso, ahora procederemos a crear el primer usuario", "Regtistro de Empresa", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                RegistroForm ObjRegistrarPrimerUsuario = new RegistroForm();
+                                ObjPrimerUsoSistema.Hide();
+                                ObjRegistrarPrimerUsuario.Show();
+                            }
+                            else
+                            {
+                                MessageBox.Show("No se pudo registrar la empresa, verifique si todos los campos han sido ingresados correctamente", "Regtistro de Empresa", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
                         }
                         else
                         {
-                            MessageBox.Show("No se pudo registrar la empresa, verifique si todos los campos han sido ingresados correctamente", "Regtistro de Empresa", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show("El correo electrónico ingresado no posee una dirección de correo válida, verifique si contiene @ o dominio correcto", "Primer Usuario", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
-                    }
-                    else
-                    {
-                        MessageBox.Show("El correo electrónico ingresado no posee una dirección de correo válida, verifique si contiene @ o dominio correcto", "Primer Usuario", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }

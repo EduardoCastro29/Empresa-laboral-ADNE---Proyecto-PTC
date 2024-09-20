@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace Empresa_laboral_ADNE___Proyecto_PTC.Vista
 {
-    public partial class AgregarConexion : Form
+    public partial class AgregarConexionForm : Form
     {
-        public AgregarConexion()
+        public AgregarConexionForm()
         {
             InitializeComponent();
             CTRLAgregarConexion ObjCTRLConexion = new CTRLAgregarConexion(this);

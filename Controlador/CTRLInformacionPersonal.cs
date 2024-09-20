@@ -49,7 +49,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
         private void ComprobarFechaActual(object sender, EventArgs e)
         {
             //Verificamos si la fecha seleccionada es mayor que la fecha de hoy
-            if (ObjInformacionPersonal.dtFechaNacimiento.Value.Date > DateTime.Today)
+            if (ObjInformacionPersonal.dtFechaNacimiento.Value.DayOfYear > DateTime.Today.Year)
             {
                 //En caso de error, mostramos un mensaje de error
                 objNuevoPaciente.NotificacionNuevoPaciente.Show(objNuevoPaciente, "La fecha de nacimiento no puede ser una fecha futura.", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Warning);
@@ -81,6 +81,22 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                     //Restablecemos la fecha al valor anterior o a una fecha válida (hace 2 años)
                     ObjInformacionPersonal.dtFechaNacimiento.Value = DateTime.Today.AddYears(-2);
                 }
+                if (CalcularEdad < 18)
+                {
+                    //En el caso de que la persona sea menor a 18 años, mostramos un mensaje especificando si desea establecer un ecargado al paciente registrado
+                    if (MessageBox.Show("La edad de la persona ingresada es menor a 18 años, desea agregarle un encargado al paciente registrado?", "Agregar Encargado", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        InformaciónEncargadoForm ObjAbrirInformacionEncargado = new InformaciónEncargadoForm();
+                        string CapturarDUIPaciente = ObjInformacionPersonal.txtDocumentoPresentado.Text.Trim();
+                        ObjAbrirInformacionEncargado.txtDocumentoPaciente.Text = CapturarDUIPaciente;
+                        ObjAbrirInformacionEncargado.ShowDialog();
+                    }
+                    else
+                    {
+                        //Si la respuesta al DialogueResult fuese que no, restablecemos la fecha a 18 años
+                        ObjInformacionPersonal.dtFechaNacimiento.Value = DateTime.Today.AddYears(-18);
+                    }
+                }
                 //Verificamos si la edad es mayor a 120 años, por políticas de seguridad, la persona registrada no puede ser mayor a 120 años
                 else if (CalcularEdad > 120)
                 {
@@ -99,7 +115,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
         }
         private void ValidarCampoNombres(object sender, KeyPressEventArgs e)
         {
-
             //La propiedad char.IsControl permite controles como BackSpace, Inicio, Fin, etc.
             if (char.IsControl(e.KeyChar))
             {
@@ -234,7 +249,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             e.Handled = true;
         }
         #endregion
-        #region Inserción en el Formulario de Información Personal
+        #region Inserción en el Formulario de Información Personal (INSERT)
         private void GuardarInformacionPersonal(object sender, EventArgs e)
         {
             try

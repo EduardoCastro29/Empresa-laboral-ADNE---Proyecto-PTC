@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="lblTelefono.BaseStylesheet" xml:space="preserve">
-    <value>#bunifu-label { padding: 0px; font-family: 'Century Gothic'; font-size: 14.25pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(0, 0, 0); text-align: left; }</value>
+    <value>#bunifu-label { padding: 0px; font-family: 'Century Gothic'; font-size: 14,25pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(0, 0, 0); text-align: left; }</value>
   </data>
   <metadata name="TTContraseña.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>547, 18</value>
@@ -137,7 +137,7 @@
 </value>
   </data>
   <data name="lblUsuario.BaseStylesheet" xml:space="preserve">
-    <value>#bunifu-label { padding: 0px; font-family: 'Century Gothic'; font-size: 14.25pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(0, 0, 0); text-align: left; }</value>
+    <value>#bunifu-label { padding: 0px; font-family: 'Century Gothic'; font-size: 14,25pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(0, 0, 0); text-align: left; }</value>
   </data>
   <data name="txtDui.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -152,7 +152,7 @@
 </value>
   </data>
   <data name="lblDocumento.BaseStylesheet" xml:space="preserve">
-    <value>#bunifu-label { padding: 0px; font-family: 'Century Gothic'; font-size: 14.25pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(0, 0, 0); text-align: left; }</value>
+    <value>#bunifu-label { padding: 0px; font-family: 'Century Gothic'; font-size: 14,25pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(0, 0, 0); text-align: left; }</value>
   </data>
   <data name="txtApellido.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -179,10 +179,10 @@
 </value>
   </data>
   <data name="lblApellidos.BaseStylesheet" xml:space="preserve">
-    <value>#bunifu-label { padding: 0px; font-family: 'Century Gothic'; font-size: 14.25pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(0, 0, 0); text-align: left; }</value>
+    <value>#bunifu-label { padding: 0px; font-family: 'Century Gothic'; font-size: 14,25pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(0, 0, 0); text-align: left; }</value>
   </data>
   <data name="lblNombres.BaseStylesheet" xml:space="preserve">
-    <value>#bunifu-label { padding: 0px; font-family: 'Century Gothic'; font-size: 14.25pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(0, 0, 0); text-align: left; }</value>
+    <value>#bunifu-label { padding: 0px; font-family: 'Century Gothic'; font-size: 14,25pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(0, 0, 0); text-align: left; }</value>
   </data>
   <data name="bunifuGradientPanel3.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -313,7 +313,7 @@
     <value>132, 17</value>
   </metadata>
   <data name="Titulo_Registrar.BaseStylesheet" xml:space="preserve">
-    <value>#bunifu-label { padding: 0px; font-family: 'Century Gothic'; font-size: 21.75pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(42, 86, 100); text-align: left; }</value>
+    <value>#bunifu-label { padding: 0px; font-family: 'Century Gothic'; font-size: 21,75pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(42, 86, 100); text-align: left; }</value>
   </data>
   <data name="bunifuPanel3.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1842,19 +1842,6 @@
         S1N8S1J8S2Pou+X79hTe0hT0lnn5z/8/cTJ47dH7zm8AAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="bpGuardar.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAPgAAABMCAYAAABAinpoAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGWSURBVHhe7dlNSwMxFIbRoaVFF4qiKCLoRhBFqfj/f5w3
-        Aw7FRnHZvJwLZ5NJlg/zNf0x63JW7oCj1RrdlH/PVXkrn8Aw3stt+XXaHfup9A4DY3gu23Iw4oYML2VV
-        lrkuvY3AmO7LMrvS2wSMq712z8/rvYvA2NoX9ulibwHIcVPmf2m9i8DYWtsCh1ACh2ACh2ACh2ACh2AC
-        h2ACh2ACh2ACh2ACh2ACh2ACh2ACh2ACh2ACh2ACh2ACh2ACh2ACh2ACh2ACh2ACh2ACh2ACh2ACh2AC
-        h2ACh2ACh2ACh2ACh2ACh2ACh2ACh2ACh2ACh2ACh2ACh2ACh2ACh2ACh2ACh2ACh2ACh2ACh2ACh2AC
-        h2ACh2ACh2ACh2ACh2ACh2ACh2ACh2ACh2ACh2ACh2ACh2ACh2ACh2Bz4Fd7C0CO2zKd7i0AOS7KPB+l
-        twEY16bM81B6G4AxPZVlVuW19DYCY3kvy937e9q7eLvQOwCMYVfOS3fW5bH0DgLHrT2WH9y5e7Mt7Qtc
-        +48GHLfLclJ+zDR9AbMBGNT+QwqbAAAAAElFTkSuQmCC
-</value>
-  </data>
   <data name="bpRegistrar.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAPgAAABMCAYAAABAinpoAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -1866,21 +1853,6 @@
         h2ACh2ACh2ACh2ACh2ACh2ACh2ACh2ACh2ACh2ACh2ACh2ACh2ACh2Bz4Fd7C0CO2zKd7i0AOS7KPB+l
         twEY16bM81B6G4AxPZVlVuW19DYCY3kvy937e9q7eLvQOwCMYVfOS3fW5bH0DgLHrT2WH9y5e7Mt7Qtc
         +48GHLfLclJ+zDR9AbMBGNT+QwqbAAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="btnGuardar.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAPgAAABMCAYAAABAinpoAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIXSURBVHhe7dmvctRQGMbhuLrKujocdjfQOtw6XB0SV4fj
-        DnBcQzbtbjZIZg0Oh6usw+11kNMN/6ZhsM07zzfzqD0rf/PlJNW/pl7vTxdNf/mi3b0DnqbS6EXTnI3Z
-        /n+Wt/1Vve6/1W13ONoBT9ax00W7u6ub7nrM+PGUjV03/Y2oYa5K6NvPi83mfMz69xzjnvoTMCvr3ZfV
-        fn8ypj3E3X56Y3NDiqHlm/79mHcJfHs/fRCYpyHy4dpdled12xvSDPfxpr+slk23Ejik6Q7LtntblW9p
-        0weAOSttCxxCCRyCCRyCCRyCCRyCCRyCCRyCCRyCCRyCCRyCCRyCCRyCCRyCCRyCCRyCCRyCCRyCCRyC
-        CRyCCRyCCRyCCRyCCRyCCRyCCRyCCRyCCRyCCRyCCRyCCRyCCRyCCRyCCRyCCRyCCRyCCRyCCRyCCRyC
-        CRyCCRyCCRyCCRyCCRyCCRyCCRyCCRyCCRyCCRyCCRyCCRyCCRyCCRyCCRyCCRyCCRyCCRyCCRyCCRyC
-        CRyCPQS+vO2v6rabPADM1dB0012XwJ8LHNJ0h2XTraoyi/Xu+/QhYJ66w0XTnI2Bdx9scQjS9DcPcZdZ
-        7fcni7b7OnkQmJVFu7v7tb1/TrmLlx9scpiz7f3g1Zj131Ov96fLdvvxGLnQYR7GXofH8kebe2oWm815
-        eQNXvqMBT1vd9q9fNt2zMd8/pqp+AGI5JKcnYiUEAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="bunifuPanel4.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -1910,7 +1882,7 @@
 </value>
   </data>
   <data name="lblDesempeno1.BaseStylesheet" xml:space="preserve">
-    <value>#bunifu-label { padding: 0px; font-family: 'Century Gothic'; font-size: 14.25pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(0, 0, 0); text-align: left; }</value>
+    <value>#bunifu-label { padding: 0px; font-family: 'Century Gothic'; font-size: 14,25pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(0, 0, 0); text-align: left; }</value>
   </data>
   <data name="txtCorreo.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1927,7 +1899,7 @@
 </value>
   </data>
   <data name="lblCorreo.BaseStylesheet" xml:space="preserve">
-    <value>#bunifu-label { padding: 0px; font-family: 'Century Gothic'; font-size: 14.25pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(0, 0, 0); text-align: left; }</value>
+    <value>#bunifu-label { padding: 0px; font-family: 'Century Gothic'; font-size: 14,25pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(0, 0, 0); text-align: left; }</value>
   </data>
   <data name="txtContrasena.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1942,7 +1914,7 @@
 </value>
   </data>
   <data name="lblContrasena.BaseStylesheet" xml:space="preserve">
-    <value>#bunifu-label { padding: 0px; font-family: 'Century Gothic'; font-size: 14.25pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(0, 0, 0); text-align: left; }</value>
+    <value>#bunifu-label { padding: 0px; font-family: 'Century Gothic'; font-size: 14,25pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(0, 0, 0); text-align: left; }</value>
   </data>
   <data name="txtTelefono.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

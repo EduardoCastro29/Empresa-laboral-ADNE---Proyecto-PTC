@@ -39,7 +39,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.cmsOpciones = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.cmsActualizar = new System.Windows.Forms.ToolStripMenuItem();
+            this.cmsVerProfesional = new System.Windows.Forms.ToolStripMenuItem();
+            this.cmsRestablecerProfesional = new System.Windows.Forms.ToolStripMenuItem();
             this.cmsEliminarProfesional = new System.Windows.Forms.ToolStripMenuItem();
             this.cmsVerEspecialidades = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlFondo = new Bunifu.UI.WinForms.BunifuPanel();
@@ -51,6 +52,7 @@
             this.btnAñadirProfesional = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.dgvAdministrarProfesional = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.NotificacionAdmin = new Bunifu.UI.WinForms.BunifuSnackbar(this.components);
+            this.Notificacion1 = new Bunifu.UI.WinForms.BunifuSnackbar(this.components);
             this.cmsOpciones.SuspendLayout();
             this.pnlFondo.SuspendLayout();
             this.pnlSombraFondo.SuspendLayout();
@@ -63,31 +65,39 @@
             // cmsOpciones
             // 
             this.cmsOpciones.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cmsActualizar,
+            this.cmsVerProfesional,
+            this.cmsRestablecerProfesional,
             this.cmsEliminarProfesional,
             this.cmsVerEspecialidades});
             this.cmsOpciones.Name = "cmsOpciones";
-            this.cmsOpciones.Size = new System.Drawing.Size(189, 70);
+            this.cmsOpciones.Size = new System.Drawing.Size(197, 92);
             // 
-            // cmsActualizar
+            // cmsVerProfesional
             // 
-            this.cmsActualizar.Image = global::Empresa_laboral_ADNE___Proyecto_PTC.Properties.Resources.ActualizarCMS;
-            this.cmsActualizar.Name = "cmsActualizar";
-            this.cmsActualizar.Size = new System.Drawing.Size(188, 22);
-            this.cmsActualizar.Text = "Actualizar Profesional";
+            this.cmsVerProfesional.Image = global::Empresa_laboral_ADNE___Proyecto_PTC.Properties.Resources.Ver_Profesional_P;
+            this.cmsVerProfesional.Name = "cmsVerProfesional";
+            this.cmsVerProfesional.Size = new System.Drawing.Size(196, 22);
+            this.cmsVerProfesional.Text = "Ver Profesional";
+            // 
+            // cmsRestablecerProfesional
+            // 
+            this.cmsRestablecerProfesional.Image = global::Empresa_laboral_ADNE___Proyecto_PTC.Properties.Resources.ActualizarCMS;
+            this.cmsRestablecerProfesional.Name = "cmsRestablecerProfesional";
+            this.cmsRestablecerProfesional.Size = new System.Drawing.Size(196, 22);
+            this.cmsRestablecerProfesional.Text = "Restablecer Profesional";
             // 
             // cmsEliminarProfesional
             // 
             this.cmsEliminarProfesional.Image = global::Empresa_laboral_ADNE___Proyecto_PTC.Properties.Resources.EliminarCMS;
             this.cmsEliminarProfesional.Name = "cmsEliminarProfesional";
-            this.cmsEliminarProfesional.Size = new System.Drawing.Size(188, 22);
+            this.cmsEliminarProfesional.Size = new System.Drawing.Size(196, 22);
             this.cmsEliminarProfesional.Text = "Eliminar Profesional";
             // 
             // cmsVerEspecialidades
             // 
             this.cmsVerEspecialidades.Image = global::Empresa_laboral_ADNE___Proyecto_PTC.Properties.Resources.Ver_Especialidades;
             this.cmsVerEspecialidades.Name = "cmsVerEspecialidades";
-            this.cmsVerEspecialidades.Size = new System.Drawing.Size(188, 22);
+            this.cmsVerEspecialidades.Size = new System.Drawing.Size(196, 22);
             this.cmsVerEspecialidades.Text = "Ver Especialidades";
             // 
             // pnlFondo
@@ -499,6 +509,76 @@
             this.NotificacionAdmin.WarningOptions.IconLeftMargin = 12;
             this.NotificacionAdmin.ZoomCloseIcon = true;
             // 
+            // Notificacion1
+            // 
+            this.Notificacion1.AllowDragging = false;
+            this.Notificacion1.AllowMultipleViews = true;
+            this.Notificacion1.ClickToClose = true;
+            this.Notificacion1.DoubleClickToClose = true;
+            this.Notificacion1.DurationAfterIdle = 3000;
+            this.Notificacion1.ErrorOptions.ActionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.Notificacion1.ErrorOptions.ActionBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.Notificacion1.ErrorOptions.ActionBorderRadius = 1;
+            this.Notificacion1.ErrorOptions.ActionFont = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Notificacion1.ErrorOptions.ActionForeColor = System.Drawing.Color.Black;
+            this.Notificacion1.ErrorOptions.BackColor = System.Drawing.Color.White;
+            this.Notificacion1.ErrorOptions.BorderColor = System.Drawing.Color.White;
+            this.Notificacion1.ErrorOptions.CloseIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(199)))));
+            this.Notificacion1.ErrorOptions.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.Notificacion1.ErrorOptions.ForeColor = System.Drawing.Color.Black;
+            this.Notificacion1.ErrorOptions.Icon = ((System.Drawing.Image)(resources.GetObject("resource.Icon4")));
+            this.Notificacion1.ErrorOptions.IconLeftMargin = 12;
+            this.Notificacion1.FadeCloseIcon = false;
+            this.Notificacion1.Host = Bunifu.UI.WinForms.BunifuSnackbar.Hosts.FormOwner;
+            this.Notificacion1.InformationOptions.ActionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.Notificacion1.InformationOptions.ActionBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.Notificacion1.InformationOptions.ActionBorderRadius = 1;
+            this.Notificacion1.InformationOptions.ActionFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.Notificacion1.InformationOptions.ActionForeColor = System.Drawing.Color.Black;
+            this.Notificacion1.InformationOptions.BackColor = System.Drawing.Color.White;
+            this.Notificacion1.InformationOptions.BorderColor = System.Drawing.Color.White;
+            this.Notificacion1.InformationOptions.CloseIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(213)))), ((int)(((byte)(255)))));
+            this.Notificacion1.InformationOptions.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Notificacion1.InformationOptions.ForeColor = System.Drawing.Color.Black;
+            this.Notificacion1.InformationOptions.Icon = ((System.Drawing.Image)(resources.GetObject("resource.Icon5")));
+            this.Notificacion1.InformationOptions.IconLeftMargin = 12;
+            this.Notificacion1.Margin = 10;
+            this.Notificacion1.MaximumSize = new System.Drawing.Size(0, 0);
+            this.Notificacion1.MaximumViews = 1;
+            this.Notificacion1.MessageRightMargin = 15;
+            this.Notificacion1.MessageTopMargin = 0;
+            this.Notificacion1.MinimumSize = new System.Drawing.Size(0, 0);
+            this.Notificacion1.ShowBorders = false;
+            this.Notificacion1.ShowCloseIcon = false;
+            this.Notificacion1.ShowIcon = true;
+            this.Notificacion1.ShowShadows = true;
+            this.Notificacion1.SuccessOptions.ActionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.Notificacion1.SuccessOptions.ActionBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.Notificacion1.SuccessOptions.ActionBorderRadius = 1;
+            this.Notificacion1.SuccessOptions.ActionFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.Notificacion1.SuccessOptions.ActionForeColor = System.Drawing.Color.Black;
+            this.Notificacion1.SuccessOptions.BackColor = System.Drawing.Color.White;
+            this.Notificacion1.SuccessOptions.BorderColor = System.Drawing.Color.White;
+            this.Notificacion1.SuccessOptions.CloseIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(255)))), ((int)(((byte)(237)))));
+            this.Notificacion1.SuccessOptions.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.Notificacion1.SuccessOptions.ForeColor = System.Drawing.Color.Black;
+            this.Notificacion1.SuccessOptions.Icon = ((System.Drawing.Image)(resources.GetObject("resource.Icon6")));
+            this.Notificacion1.SuccessOptions.IconLeftMargin = 12;
+            this.Notificacion1.ViewsMargin = 7;
+            this.Notificacion1.WarningOptions.ActionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.Notificacion1.WarningOptions.ActionBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.Notificacion1.WarningOptions.ActionBorderRadius = 1;
+            this.Notificacion1.WarningOptions.ActionFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.Notificacion1.WarningOptions.ActionForeColor = System.Drawing.Color.Black;
+            this.Notificacion1.WarningOptions.BackColor = System.Drawing.Color.White;
+            this.Notificacion1.WarningOptions.BorderColor = System.Drawing.Color.White;
+            this.Notificacion1.WarningOptions.CloseIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(229)))), ((int)(((byte)(143)))));
+            this.Notificacion1.WarningOptions.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.Notificacion1.WarningOptions.ForeColor = System.Drawing.Color.Black;
+            this.Notificacion1.WarningOptions.Icon = ((System.Drawing.Image)(resources.GetObject("resource.Icon7")));
+            this.Notificacion1.WarningOptions.IconLeftMargin = 12;
+            this.Notificacion1.ZoomCloseIcon = true;
+            // 
             // AdministradorForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -526,7 +606,7 @@
 
         #endregion
         public System.Windows.Forms.ContextMenuStrip cmsOpciones;
-        public System.Windows.Forms.ToolStripMenuItem cmsActualizar;
+        public System.Windows.Forms.ToolStripMenuItem cmsRestablecerProfesional;
         public System.Windows.Forms.ToolStripMenuItem cmsEliminarProfesional;
         public Bunifu.UI.WinForms.BunifuPanel pnlFondo;
         public Bunifu.UI.WinForms.BunifuShadowPanel pnlSombraFondo;
@@ -538,5 +618,7 @@
         public Bunifu.UI.WinForms.BunifuTextBox txtBuscarEmpleado;
         public System.Windows.Forms.ToolStripMenuItem cmsVerEspecialidades;
         public Bunifu.UI.WinForms.BunifuSnackbar NotificacionAdmin;
+        public System.Windows.Forms.ToolStripMenuItem cmsVerProfesional;
+        public Bunifu.UI.WinForms.BunifuSnackbar Notificacion1;
     }
 }

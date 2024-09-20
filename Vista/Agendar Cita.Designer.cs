@@ -795,7 +795,6 @@
             // 
             this.txtDUIPaciente.AcceptsReturn = false;
             this.txtDUIPaciente.AcceptsTab = false;
-            this.txtDUIPaciente.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtDUIPaciente.AnimationSpeed = 200;
             this.txtDUIPaciente.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
             this.txtDUIPaciente.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
@@ -872,7 +871,6 @@
             // 
             this.txtDUIProfesional.AcceptsReturn = false;
             this.txtDUIProfesional.AcceptsTab = false;
-            this.txtDUIProfesional.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtDUIProfesional.AnimationSpeed = 200;
             this.txtDUIProfesional.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
             this.txtDUIProfesional.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;

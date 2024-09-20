@@ -58,18 +58,32 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                 {
                     MessageBox.Show($"Bienvenido {InicioSesion.Usuario}, por motivos de seguridad, se le redireccionará automáticamente a un nuevo formulario para que pueda completar los pasos de nuevo usuario", "Ventana Emergente", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
-                    PreguntasdeSeguridadForm ObjRedireccionarPreguntasSeguridad = new PreguntasdeSeguridadForm();
-                    ObjRedireccionarPreguntasSeguridad.txtDUIProfesional.Text = InicioSesion.Dui;
-                    ObjRedireccionarPreguntasSeguridad.btnVerificarPregunta.Enabled = false;
-                    ObjRedireccionarPreguntasSeguridad.lblIngreseCredenciales.Visible = false;
-                    ObjRedireccionarPreguntasSeguridad.txtUsuario.Visible = false;
-                    ObjRedireccionarPreguntasSeguridad.txtDocumento.Visible = false;
-                    ObjRedireccionarPreguntasSeguridad.pnlLineaDivisora.Visible = false;
-                    ObjRedireccionarPreguntasSeguridad.ShowDialog();
-
+                    //Instanciamos a los formularios que deseamos abrir según la acción a realizar
                     DirecciónGmailForm ObjRedireccionarUsuarioSolicitante = new DirecciónGmailForm();
-                    ObjLogin.Hide();
-                    ObjRedireccionarUsuarioSolicitante.Show();
+                    PreguntasdeSeguridadForm ObjRedireccionarPreguntasSeguridad = new PreguntasdeSeguridadForm();
+
+                    //Si el usuario ya posee preguntas
+                    //Se procede a actualizar solo la contraseña del mismo
+                    if (ObjDAOUsuario.VerificarPreguntas() == true)
+                    {
+                        ObjLogin.Hide();
+                        ObjRedireccionarUsuarioSolicitante.Show();
+                    }
+                    else
+                    {
+                        //Caso contrario, el usuario es nuevo en la aplicación
+                        //Insertamos sus preguntas y restablecemos la contraseña
+                        ObjRedireccionarPreguntasSeguridad.txtDUIProfesional.Text = InicioSesion.Dui;
+                        ObjRedireccionarPreguntasSeguridad.btnVerificarPregunta.Enabled = false;
+                        ObjRedireccionarPreguntasSeguridad.lblIngreseCredenciales.Visible = false;
+                        ObjRedireccionarPreguntasSeguridad.txtUsuario.Visible = false;
+                        ObjRedireccionarPreguntasSeguridad.txtDocumento.Visible = false;
+                        ObjRedireccionarPreguntasSeguridad.pnlLineaDivisora.Visible = false;
+                        ObjRedireccionarPreguntasSeguridad.ShowDialog();
+
+                        ObjLogin.Hide();
+                        ObjRedireccionarUsuarioSolicitante.Show();
+                    }
                 }
                 else
                 {

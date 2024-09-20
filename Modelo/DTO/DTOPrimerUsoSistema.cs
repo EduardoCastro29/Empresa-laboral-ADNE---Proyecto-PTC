@@ -18,7 +18,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DTO
         private string numeroTelefono;
         private string numeroPBX;
         private DateTime feghaCreacionE;
-        private string fotoEmpresa;
+        private byte[] fotoEmpresa;
 
         public string NombreEmpresa { get => nombreEmpresa; set => nombreEmpresa = value; }
         public string DireccionEmpresa { get => direccionEmpresa; set => direccionEmpresa = value; }
@@ -26,6 +26,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DTO
         public string NumeroTelefono { get => numeroTelefono; set => numeroTelefono = value; }
         public string NumeroPBX { get => numeroPBX; set => numeroPBX = value; }
         public DateTime FeghaCreacionE { get => feghaCreacionE; set => feghaCreacionE = value; }
-        public string FotoEmpresa { get => fotoEmpresa; set => fotoEmpresa = value; }
+        public byte[] FotoEmpresa { get => fotoEmpresa; set => fotoEmpresa = value; }
     }
 }
