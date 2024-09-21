@@ -234,6 +234,12 @@
     <Compile Include="Vista\Configuración.Designer.cs">
       <DependentUpon>Configuración.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\Configuración_De_Usuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Configuración_De_Usuario.Designer.cs">
+      <DependentUpon>Configuración_De_Usuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\Control Dias.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -418,6 +424,9 @@
     <EmbeddedResource Include="Vista\Configuración.resx">
       <DependentUpon>Configuración.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Configuración_De_Usuario.resx">
+      <DependentUpon>Configuración_De_Usuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\Control Dias.resx">
       <DependentUpon>Control Dias.cs</DependentUpon>
