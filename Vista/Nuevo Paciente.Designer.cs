@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NuevoPacienteForm));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.panelElement = new System.Windows.Forms.Panel();
             this.BarraSeparadora = new Bunifu.UI.WinForms.BunifuGradientPanel();
             this.btnExpedienteGradient = new Bunifu.UI.WinForms.BunifuGradientPanel();
@@ -57,7 +57,7 @@
             this.panelElement.AutoScroll = true;
             this.panelElement.BackColor = System.Drawing.Color.Transparent;
             this.panelElement.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelElement.Location = new System.Drawing.Point(0, 188);
+            this.panelElement.Location = new System.Drawing.Point(0, 167);
             this.panelElement.Name = "panelElement";
             this.panelElement.Size = new System.Drawing.Size(991, 564);
             this.panelElement.TabIndex = 4;
@@ -73,7 +73,7 @@
             this.BarraSeparadora.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(187)))), ((int)(((byte)(171)))));
             this.BarraSeparadora.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(187)))), ((int)(((byte)(171)))));
             this.BarraSeparadora.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(187)))), ((int)(((byte)(171)))));
-            this.BarraSeparadora.Location = new System.Drawing.Point(0, 185);
+            this.BarraSeparadora.Location = new System.Drawing.Point(0, 164);
             this.BarraSeparadora.Name = "BarraSeparadora";
             this.BarraSeparadora.Quality = 10;
             this.BarraSeparadora.Size = new System.Drawing.Size(991, 3);
@@ -91,7 +91,7 @@
             this.btnExpedienteGradient.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(179)))), ((int)(((byte)(166)))));
             this.btnExpedienteGradient.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(199)))), ((int)(((byte)(187)))));
             this.btnExpedienteGradient.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(179)))), ((int)(((byte)(166)))));
-            this.btnExpedienteGradient.Location = new System.Drawing.Point(504, 107);
+            this.btnExpedienteGradient.Location = new System.Drawing.Point(504, 96);
             this.btnExpedienteGradient.Name = "btnExpedienteGradient";
             this.btnExpedienteGradient.Quality = 10;
             this.btnExpedienteGradient.Size = new System.Drawing.Size(281, 63);
@@ -117,11 +117,11 @@
             this.btnExpediente.ColorContrastOnClick = 45;
             this.btnExpediente.ColorContrastOnHover = 45;
             this.btnExpediente.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges3.BottomLeft = true;
-            borderEdges3.BottomRight = true;
-            borderEdges3.TopLeft = true;
-            borderEdges3.TopRight = true;
-            this.btnExpediente.CustomizableEdges = borderEdges3;
+            borderEdges1.BottomLeft = true;
+            borderEdges1.BottomRight = true;
+            borderEdges1.TopLeft = true;
+            borderEdges1.TopRight = true;
+            this.btnExpediente.CustomizableEdges = borderEdges1;
             this.btnExpediente.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnExpediente.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnExpediente.DisabledFillColor = System.Drawing.Color.Empty;
@@ -201,7 +201,7 @@
             this.btnDatosIdentificacionGradient.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(179)))), ((int)(((byte)(166)))));
             this.btnDatosIdentificacionGradient.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(199)))), ((int)(((byte)(187)))));
             this.btnDatosIdentificacionGradient.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(179)))), ((int)(((byte)(166)))));
-            this.btnDatosIdentificacionGradient.Location = new System.Drawing.Point(214, 107);
+            this.btnDatosIdentificacionGradient.Location = new System.Drawing.Point(214, 96);
             this.btnDatosIdentificacionGradient.Name = "btnDatosIdentificacionGradient";
             this.btnDatosIdentificacionGradient.Quality = 10;
             this.btnDatosIdentificacionGradient.Size = new System.Drawing.Size(281, 63);
@@ -226,11 +226,11 @@
             this.btnDatosIdentificacion.ColorContrastOnClick = 45;
             this.btnDatosIdentificacion.ColorContrastOnHover = 45;
             this.btnDatosIdentificacion.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges4.BottomLeft = true;
-            borderEdges4.BottomRight = true;
-            borderEdges4.TopLeft = true;
-            borderEdges4.TopRight = true;
-            this.btnDatosIdentificacion.CustomizableEdges = borderEdges4;
+            borderEdges2.BottomLeft = true;
+            borderEdges2.BottomRight = true;
+            borderEdges2.TopLeft = true;
+            borderEdges2.TopRight = true;
+            this.btnDatosIdentificacion.CustomizableEdges = borderEdges2;
             this.btnDatosIdentificacion.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnDatosIdentificacion.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnDatosIdentificacion.DisabledFillColor = System.Drawing.Color.Empty;
@@ -377,7 +377,7 @@
             this.bunifuPanel1.BorderColor = System.Drawing.Color.Transparent;
             this.bunifuPanel1.BorderRadius = 15;
             this.bunifuPanel1.BorderThickness = 0;
-            this.bunifuPanel1.Location = new System.Drawing.Point(507, 115);
+            this.bunifuPanel1.Location = new System.Drawing.Point(507, 104);
             this.bunifuPanel1.Name = "bunifuPanel1";
             this.bunifuPanel1.ShowBorders = true;
             this.bunifuPanel1.Size = new System.Drawing.Size(275, 58);
@@ -392,7 +392,7 @@
             this.bunifuPanel2.BorderColor = System.Drawing.Color.Transparent;
             this.bunifuPanel2.BorderRadius = 15;
             this.bunifuPanel2.BorderThickness = 0;
-            this.bunifuPanel2.Location = new System.Drawing.Point(218, 115);
+            this.bunifuPanel2.Location = new System.Drawing.Point(218, 104);
             this.bunifuPanel2.Name = "bunifuPanel2";
             this.bunifuPanel2.ShowBorders = true;
             this.bunifuPanel2.Size = new System.Drawing.Size(273, 58);
@@ -472,7 +472,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(991, 752);
+            this.ClientSize = new System.Drawing.Size(991, 731);
             this.Controls.Add(this.btnExpedienteGradient);
             this.Controls.Add(this.btnDatosIdentificacionGradient);
             this.Controls.Add(this.bunifuPanel2);
@@ -481,8 +481,8 @@
             this.Controls.Add(this.panelElement);
             this.Controls.Add(this.bunifuShadowPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.MaximumSize = new System.Drawing.Size(1007, 791);
-            this.MinimumSize = new System.Drawing.Size(1007, 791);
+            this.MaximumSize = new System.Drawing.Size(1007, 770);
+            this.MinimumSize = new System.Drawing.Size(1007, 770);
             this.Name = "NuevoPacienteForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nuevo Paciente";

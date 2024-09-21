@@ -47,7 +47,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC
                 Application.Run(new LoginForm());
             }
         }
-         static void LeerIni(ConfiguraciónForm ObjConfiguracionForm)
+        static void LeerIni(ConfiguraciónForm ObjConfiguracionForm)
         {
             Config objConfig = new Config();
             objConfig.LeerIni();
@@ -62,7 +62,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC
                 ObjConfiguracionForm.switchModo.Checked = false;
                 ObjConfiguracionForm.BackColor = Color.FromArgb(14, 143, 156);
             }
-
         }
     }
 }

@@ -32,9 +32,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC
         public StringBuilder sbTema;
 
         public DTOConfiguracion objDTOConfig = new DTOConfiguracion();
-            
-        
-
         public void LeerIni()
         {
             int resultado;
@@ -43,7 +40,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC
 
             objDTOConfig.ModoOscuro = sbTema.ToString();
         }
-
         public void EscribirIni(string seccion, string clave, string value)
         {
             WritePrivateProfileString(seccion, clave, value, iniRuta);
