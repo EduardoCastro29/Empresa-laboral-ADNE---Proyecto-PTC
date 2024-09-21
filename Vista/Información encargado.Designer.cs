@@ -136,7 +136,7 @@
             this.pnlGradienteFondo.Location = new System.Drawing.Point(0, 0);
             this.pnlGradienteFondo.Name = "pnlGradienteFondo";
             this.pnlGradienteFondo.Quality = 10;
-            this.pnlGradienteFondo.Size = new System.Drawing.Size(750, 788);
+            this.pnlGradienteFondo.Size = new System.Drawing.Size(750, 770);
             this.pnlGradienteFondo.TabIndex = 1;
             // 
             // menuStrip1
@@ -205,7 +205,7 @@
             this.btnEliminarEncargado.IdleIconLeftImage = null;
             this.btnEliminarEncargado.IdleIconRightImage = null;
             this.btnEliminarEncargado.IndicateFocus = false;
-            this.btnEliminarEncargado.Location = new System.Drawing.Point(58, 693);
+            this.btnEliminarEncargado.Location = new System.Drawing.Point(53, 679);
             this.btnEliminarEncargado.Name = "btnEliminarEncargado";
             this.btnEliminarEncargado.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnEliminarEncargado.OnDisabledState.BorderRadius = 25;
@@ -295,7 +295,7 @@
             this.btnActualizarEncargado.IdleIconLeftImage = null;
             this.btnActualizarEncargado.IdleIconRightImage = null;
             this.btnActualizarEncargado.IndicateFocus = false;
-            this.btnActualizarEncargado.Location = new System.Drawing.Point(272, 693);
+            this.btnActualizarEncargado.Location = new System.Drawing.Point(270, 679);
             this.btnActualizarEncargado.Name = "btnActualizarEncargado";
             this.btnActualizarEncargado.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnActualizarEncargado.OnDisabledState.BorderRadius = 25;
@@ -670,7 +670,7 @@
             this.btnRegistrarEncargado.IdleIconLeftImage = null;
             this.btnRegistrarEncargado.IdleIconRightImage = null;
             this.btnRegistrarEncargado.IndicateFocus = false;
-            this.btnRegistrarEncargado.Location = new System.Drawing.Point(485, 693);
+            this.btnRegistrarEncargado.Location = new System.Drawing.Point(485, 679);
             this.btnRegistrarEncargado.Name = "btnRegistrarEncargado";
             this.btnRegistrarEncargado.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnRegistrarEncargado.OnDisabledState.BorderRadius = 25;
@@ -1330,7 +1330,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(750, 788);
+            this.ClientSize = new System.Drawing.Size(750, 770);
             this.Controls.Add(this.pnlGradienteFondo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "InformaciónEncargadoForm";

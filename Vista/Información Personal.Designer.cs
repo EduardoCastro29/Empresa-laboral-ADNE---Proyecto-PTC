@@ -1256,7 +1256,7 @@
             this.txtNacionalidad.IconRight = null;
             this.txtNacionalidad.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtNacionalidad.Lines = new string[0];
-            this.txtNacionalidad.Location = new System.Drawing.Point(209, 98);
+            this.txtNacionalidad.Location = new System.Drawing.Point(225, 98);
             this.txtNacionalidad.MaxLength = 125;
             this.txtNacionalidad.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtNacionalidad.Modified = false;
@@ -1541,7 +1541,7 @@
             this.txtTelefono1.IconRight = null;
             this.txtTelefono1.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtTelefono1.Lines = new string[0];
-            this.txtTelefono1.Location = new System.Drawing.Point(59, 231);
+            this.txtTelefono1.Location = new System.Drawing.Point(75, 231);
             this.txtTelefono1.MaxLength = 12;
             this.txtTelefono1.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtTelefono1.Modified = false;
