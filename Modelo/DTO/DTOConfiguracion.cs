@@ -11,6 +11,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DTO
 {
     internal class DTOConfiguracion : Conexion
     {
+        //Get Set del modo oscuro
         public  string modoOscuro;
         public  string ModoOscuro { get => modoOscuro; set => modoOscuro = value; }
     }

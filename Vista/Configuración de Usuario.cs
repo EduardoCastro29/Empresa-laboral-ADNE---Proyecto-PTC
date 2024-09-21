@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Empresa_laboral_ADNE___Proyecto_PTC.Vista
 {
-    public partial class Configuración_De_Usuario : Form
+    public partial class ConfiguraciónDeUsuarioForm : Form
     {
-        public Configuración_De_Usuario()
+        public ConfiguraciónDeUsuarioForm()
         {
             InitializeComponent();
         }

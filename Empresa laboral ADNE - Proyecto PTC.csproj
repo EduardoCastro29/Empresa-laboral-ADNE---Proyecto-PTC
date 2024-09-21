@@ -117,6 +117,7 @@
     <Compile Include="Controlador\Controlador UC Calendario\CTRLUCDias.cs" />
     <Compile Include="Controlador\Controlador UC Pacientes\CTRLPacienteUC.cs" />
     <Compile Include="Controlador\CTRLAgregarConexion.cs" />
+    <Compile Include="Controlador\CTRLConfiguracionUsuario.cs" />
     <Compile Include="Controlador\CTRLInformacionEncargado.cs" />
     <Compile Include="Controlador\CTRLPreguntasSeguridad.cs" />
     <Compile Include="Controlador\CTRLPrimerUsoSistema.cs" />
@@ -149,6 +150,7 @@
     <Compile Include="Modelo\DAO\DAOAdministrador.cs" />
     <Compile Include="Modelo\DAO\DAOAgendarCita.cs" />
     <Compile Include="Modelo\DAO\DAOCalendario.cs" />
+    <Compile Include="Modelo\DAO\DAOConfiguracionUsuario.cs" />
     <Compile Include="Modelo\DAO\DAODiagnosticos.cs" />
     <Compile Include="Modelo\DAO\DAOConfiguracion.cs" />
     <Compile Include="Modelo\DAO\DAODashboard.cs" />
@@ -178,6 +180,7 @@
     <Compile Include="Modelo\DTO\DTOCalendario.cs" />
     <Compile Include="Modelo\DTO\DTOCitas.cs" />
     <Compile Include="Modelo\DTO\DTOConfiguracion.cs" />
+    <Compile Include="Modelo\DTO\DTOConfiguracionUsuario.cs" />
     <Compile Include="Modelo\DTO\DTODashboard.cs" />
     <Compile Include="Modelo\DTO\DTOEnviarMails.cs" />
     <Compile Include="Modelo\DTO\DTOEquipoTrabajo.cs" />
@@ -234,11 +237,11 @@
     <Compile Include="Vista\Configuración.Designer.cs">
       <DependentUpon>Configuración.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vista\Configuración_De_Usuario.cs">
+    <Compile Include="Vista\Configuración de Usuario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vista\Configuración_De_Usuario.Designer.cs">
-      <DependentUpon>Configuración_De_Usuario.cs</DependentUpon>
+    <Compile Include="Vista\Configuración de Usuario.Designer.cs">
+      <DependentUpon>Configuración de Usuario.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\Control Dias.cs">
       <SubType>UserControl</SubType>
@@ -425,8 +428,8 @@
       <DependentUpon>Configuración.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vista\Configuración_De_Usuario.resx">
-      <DependentUpon>Configuración_De_Usuario.cs</DependentUpon>
+    <EmbeddedResource Include="Vista\Configuración de Usuario.resx">
+      <DependentUpon>Configuración de Usuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\Control Dias.resx">
       <DependentUpon>Control Dias.cs</DependentUpon>

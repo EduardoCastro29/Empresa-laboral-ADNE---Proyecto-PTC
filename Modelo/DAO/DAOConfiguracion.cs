@@ -7,6 +7,8 @@
 //using System.Data.SqlClient;
 //using Empresa_laboral_ADNE___Proyecto_PTC.Controlador;
 //using Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DTO;
+//using System.Diagnostics.Eventing.Reader;
+//using System.Windows.Forms;
 
 //namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
 //{
