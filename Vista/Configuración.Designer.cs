@@ -45,7 +45,6 @@
             this.btnAgregarConfiguracion = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.bunifuVScrollBar1 = new Bunifu.UI.WinForms.BunifuVScrollBar();
             this.pnlAparienciaGradiente = new Bunifu.UI.WinForms.BunifuGradientPanel();
-            this.switchModo = new Bunifu.UI.WinForms.BunifuToggleSwitch2();
             this.lblTituloApariencia = new Bunifu.UI.WinForms.BunifuLabel();
             this.lblPerosnalizacionModo = new Bunifu.UI.WinForms.BunifuLabel();
             this.pnlMiCuentaGradiente = new Bunifu.UI.WinForms.BunifuGradientPanel();
@@ -65,6 +64,7 @@
             this.flpTopTitulo = new System.Windows.Forms.FlowLayoutPanel();
             this.lblConfiguracionTitulo = new Bunifu.UI.WinForms.BunifuLabel();
             this.pnlFondo = new Bunifu.UI.WinForms.BunifuPanel();
+            this.switchModo = new Bunifu.UI.WinForms.BunifuToggleSwitch2();
             this.pnlSombraFondo.SuspendLayout();
             this.pnlForms.SuspendLayout();
             this.bunifuGradientPanel1.SuspendLayout();
@@ -158,7 +158,7 @@
             this.lblCambiarContrasena.Location = new System.Drawing.Point(60, 88);
             this.lblCambiarContrasena.Name = "lblCambiarContrasena";
             this.lblCambiarContrasena.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblCambiarContrasena.Size = new System.Drawing.Size(541, 40);
+            this.lblCambiarContrasena.Size = new System.Drawing.Size(438, 33);
             this.lblCambiarContrasena.TabIndex = 12;
             this.lblCambiarContrasena.TabStop = false;
             this.lblCambiarContrasena.Text = "Cambia a una nueva contraseña";
@@ -176,7 +176,7 @@
             this.lblTituloCambiarContrasena.Location = new System.Drawing.Point(28, 26);
             this.lblTituloCambiarContrasena.Name = "lblTituloCambiarContrasena";
             this.lblTituloCambiarContrasena.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblTituloCambiarContrasena.Size = new System.Drawing.Size(1018, 117);
+            this.lblTituloCambiarContrasena.Size = new System.Drawing.Size(295, 36);
             this.lblTituloCambiarContrasena.TabIndex = 9;
             this.lblTituloCambiarContrasena.TabStop = false;
             this.lblTituloCambiarContrasena.Text = "Cambiar Contraseña";
@@ -309,7 +309,7 @@
             this.lblADNE_Devs.Location = new System.Drawing.Point(473, 162);
             this.lblADNE_Devs.Name = "lblADNE_Devs";
             this.lblADNE_Devs.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblADNE_Devs.Size = new System.Drawing.Size(2044, 119);
+            this.lblADNE_Devs.Size = new System.Drawing.Size(435, 24);
             this.lblADNE_Devs.TabIndex = 1;
             this.lblADNE_Devs.TabStop = false;
             this.lblADNE_Devs.Text = "Desarrollado por ADNE Dev Team - © 2024";
@@ -327,7 +327,7 @@
             this.lblConfiguraTuDB.Location = new System.Drawing.Point(60, 89);
             this.lblConfiguraTuDB.Name = "lblConfiguraTuDB";
             this.lblConfiguraTuDB.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblConfiguraTuDB.Size = new System.Drawing.Size(442, 40);
+            this.lblConfiguraTuDB.Size = new System.Drawing.Size(360, 33);
             this.lblConfiguraTuDB.TabIndex = 12;
             this.lblConfiguraTuDB.TabStop = false;
             this.lblConfiguraTuDB.Text = "Configura tu base de datos";
@@ -345,7 +345,7 @@
             this.lblTituloAgregarConexion.Location = new System.Drawing.Point(28, 22);
             this.lblTituloAgregarConexion.Name = "lblTituloAgregarConexion";
             this.lblTituloAgregarConexion.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblTituloAgregarConexion.Size = new System.Drawing.Size(898, 117);
+            this.lblTituloAgregarConexion.Size = new System.Drawing.Size(260, 36);
             this.lblTituloAgregarConexion.TabIndex = 9;
             this.lblTituloAgregarConexion.TabStop = false;
             this.lblTituloAgregarConexion.Text = "Agregar Conexión";
@@ -505,26 +505,6 @@
             this.pnlAparienciaGradiente.Size = new System.Drawing.Size(937, 180);
             this.pnlAparienciaGradiente.TabIndex = 11;
             // 
-            // switchModo
-            // 
-            this.switchModo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.switchModo.BackColor = System.Drawing.Color.Transparent;
-            this.switchModo.Checked = false;
-            this.switchModo.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(192)))), ((int)(((byte)(175)))));
-            this.switchModo.CheckedSwitchColor = System.Drawing.Color.White;
-            this.switchModo.CheckedSwitchStyle = Bunifu.UI.WinForms.BunifuToggleSwitch2.SwitchStyles.Fill;
-            this.switchModo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.switchModo.Location = new System.Drawing.Point(817, 95);
-            this.switchModo.Margin = new System.Windows.Forms.Padding(3, 3, 40, 3);
-            this.switchModo.MaximumSize = new System.Drawing.Size(110, 50);
-            this.switchModo.Name = "switchModo";
-            this.switchModo.OutlineThickness = 2;
-            this.switchModo.Size = new System.Drawing.Size(80, 35);
-            this.switchModo.TabIndex = 1;
-            this.switchModo.UncheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(92)))), ((int)(((byte)(98)))));
-            this.switchModo.UncheckedSwitchColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(213)))), ((int)(((byte)(213)))));
-            this.switchModo.UncheckedSwitchStyle = Bunifu.UI.WinForms.BunifuToggleSwitch2.SwitchStyles.Fill;
-            // 
             // lblTituloApariencia
             // 
             this.lblTituloApariencia.AllowParentOverrides = false;
@@ -536,7 +516,7 @@
             this.lblTituloApariencia.Location = new System.Drawing.Point(28, 27);
             this.lblTituloApariencia.Name = "lblTituloApariencia";
             this.lblTituloApariencia.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblTituloApariencia.Size = new System.Drawing.Size(540, 117);
+            this.lblTituloApariencia.Size = new System.Drawing.Size(156, 36);
             this.lblTituloApariencia.TabIndex = 9;
             this.lblTituloApariencia.TabStop = false;
             this.lblTituloApariencia.Text = "Apariencia";
@@ -554,7 +534,7 @@
             this.lblPerosnalizacionModo.Location = new System.Drawing.Point(60, 93);
             this.lblPerosnalizacionModo.Name = "lblPerosnalizacionModo";
             this.lblPerosnalizacionModo.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblPerosnalizacionModo.Size = new System.Drawing.Size(491, 40);
+            this.lblPerosnalizacionModo.Size = new System.Drawing.Size(402, 33);
             this.lblPerosnalizacionModo.TabIndex = 12;
             this.lblPerosnalizacionModo.TabStop = false;
             this.lblPerosnalizacionModo.Text = "Cambiar tema a modo oscuro";
@@ -710,7 +690,7 @@
             this.lblDocumentoTitulo.Location = new System.Drawing.Point(349, 222);
             this.lblDocumentoTitulo.Name = "lblDocumentoTitulo";
             this.lblDocumentoTitulo.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblDocumentoTitulo.Size = new System.Drawing.Size(1450, 117);
+            this.lblDocumentoTitulo.Size = new System.Drawing.Size(303, 25);
             this.lblDocumentoTitulo.TabIndex = 25;
             this.lblDocumentoTitulo.TabStop = false;
             this.lblDocumentoTitulo.Text = "Documento de Identificación:";
@@ -728,7 +708,7 @@
             this.lblCuenta.Location = new System.Drawing.Point(28, 22);
             this.lblCuenta.Name = "lblCuenta";
             this.lblCuenta.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblCuenta.Size = new System.Drawing.Size(500, 117);
+            this.lblCuenta.Size = new System.Drawing.Size(145, 36);
             this.lblCuenta.TabIndex = 9;
             this.lblCuenta.TabStop = false;
             this.lblCuenta.Text = "Mi Cuenta";
@@ -745,7 +725,7 @@
             this.lblCorreoUsuario.Location = new System.Drawing.Point(349, 177);
             this.lblCorreoUsuario.Name = "lblCorreoUsuario";
             this.lblCorreoUsuario.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblCorreoUsuario.Size = new System.Drawing.Size(932, 117);
+            this.lblCorreoUsuario.Size = new System.Drawing.Size(193, 25);
             this.lblCorreoUsuario.TabIndex = 24;
             this.lblCorreoUsuario.TabStop = false;
             this.lblCorreoUsuario.Text = "Correo Electrónico:";
@@ -763,7 +743,7 @@
             this.lblProfesional.Location = new System.Drawing.Point(349, 89);
             this.lblProfesional.Name = "lblProfesional";
             this.lblProfesional.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblProfesional.Size = new System.Drawing.Size(1158, 117);
+            this.lblProfesional.Size = new System.Drawing.Size(243, 25);
             this.lblProfesional.TabIndex = 22;
             this.lblProfesional.TabStop = false;
             this.lblProfesional.Text = "Nombre del Profesional:";
@@ -780,7 +760,7 @@
             this.lblUsuarioo.Location = new System.Drawing.Point(349, 133);
             this.lblUsuarioo.Name = "lblUsuarioo";
             this.lblUsuarioo.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblUsuarioo.Size = new System.Drawing.Size(382, 117);
+            this.lblUsuarioo.Size = new System.Drawing.Size(81, 25);
             this.lblUsuarioo.TabIndex = 23;
             this.lblUsuarioo.TabStop = false;
             this.lblUsuarioo.Text = "Usuario:";
@@ -906,6 +886,26 @@
             this.pnlFondo.Size = new System.Drawing.Size(991, 1087);
             this.pnlFondo.TabIndex = 4;
             // 
+            // switchModo
+            // 
+            this.switchModo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.switchModo.BackColor = System.Drawing.Color.Transparent;
+            this.switchModo.Checked = false;
+            this.switchModo.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(192)))), ((int)(((byte)(175)))));
+            this.switchModo.CheckedSwitchColor = System.Drawing.Color.White;
+            this.switchModo.CheckedSwitchStyle = Bunifu.UI.WinForms.BunifuToggleSwitch2.SwitchStyles.Fill;
+            this.switchModo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.switchModo.Location = new System.Drawing.Point(828, 93);
+            this.switchModo.Margin = new System.Windows.Forms.Padding(3, 3, 40, 3);
+            this.switchModo.MaximumSize = new System.Drawing.Size(110, 50);
+            this.switchModo.Name = "switchModo";
+            this.switchModo.OutlineThickness = 2;
+            this.switchModo.Size = new System.Drawing.Size(80, 35);
+            this.switchModo.TabIndex = 1;
+            this.switchModo.UncheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(92)))), ((int)(((byte)(98)))));
+            this.switchModo.UncheckedSwitchColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(213)))), ((int)(((byte)(213)))));
+            this.switchModo.UncheckedSwitchStyle = Bunifu.UI.WinForms.BunifuToggleSwitch2.SwitchStyles.Fill;
+            // 
             // ConfiguraciónForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -953,7 +953,6 @@
         public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnCerrarSesion;
         private Bunifu.UI.WinForms.BunifuGradientPanel pnlAparienciaGradiente;
         private Bunifu.UI.WinForms.BunifuLabel lblPerosnalizacionModo;
-        public Bunifu.UI.WinForms.BunifuToggleSwitch2 switchModo;
         public Bunifu.UI.WinForms.BunifuVScrollBar bunifuVScrollBar1;
         public System.Windows.Forms.Label lblCorreo;
         public Bunifu.UI.WinForms.BunifuLabel lblDocumentoTitulo;
@@ -973,5 +972,6 @@
         public Bunifu.UI.WinForms.BunifuLabel lblCambiarContrasena;
         public Bunifu.UI.WinForms.BunifuLabel lblTituloCambiarContrasena;
         public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnNuevaContrasena;
+        public Bunifu.UI.WinForms.BunifuToggleSwitch2 switchModo;
     }
 }

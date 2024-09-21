@@ -10,20 +10,21 @@ using System.Drawing;
 using Empresa_laboral_ADNE___Proyecto_PTC.Vista;
 using Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DTO;
 using System.IO;
+using System.Windows.Media.TextFormatting;
 
 namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
 {
     internal class CTRLConfiguracion
     {
         readonly ConfiguraciónForm ObjConfiguracionForm;
-
+        DashboardForm ObjDashboardForm = new DashboardForm();
         public CTRLConfiguracion(ConfiguraciónForm Vista)
         {
             ObjConfiguracionForm = Vista;
 
             ObjConfiguracionForm.Load += new EventHandler(CargarDatosUsuario);
             ObjConfiguracionForm.btnCerrarSesion.Click += new EventHandler(CerrarSesionConfig);
-            ObjConfiguracionForm.switchModo.Click += new EventHandler(ModoOscuro);
+            ObjConfiguracionForm.switchModo.CheckedChanged += new EventHandler(modoOscuro);
         }
         private void CargarDatosUsuario(object sender, EventArgs e)
         {
@@ -44,13 +45,31 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                 Environment.Exit(0);
             }
         }
-        private void ModoOscuro(object sender, EventArgs e)
+       // private void ModoOscuro(object sender, EventArgs e)
+       //{
+       //     if (ObjConfiguracionForm.switchModo.Checked == true)
+       //     {
+       //         
+       //     }
+       //}
+       
+        //Creamos el método para instanciar la lectura del archivo ini desde la clase Config.cs
+        
+        private void modoOscuro(object sender, EventArgs e)
         {
+            Config objConfig = new Config();
             if (ObjConfiguracionForm.switchModo.Checked == true)
             {
-                DTOConfiguracion.ModoOscuro = true;
+                objConfig.EscribirIni("SECTION", "key", "dark");
+                ObjConfiguracionForm.BackColor = Color.FromArgb(30, 92, 98);
+            }
+            else
+            {
+                objConfig.EscribirIni("SECTION", "key", "light");
+                ObjConfiguracionForm.BackColor = Color.FromArgb(14, 143, 156);
             }
         }
+
 
         //private void LimpiarVariablesInicioSesion()
         //{

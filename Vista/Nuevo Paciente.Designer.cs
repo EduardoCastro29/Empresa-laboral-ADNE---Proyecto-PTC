@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NuevoPacienteForm));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.panelElement = new System.Windows.Forms.Panel();
             this.BarraSeparadora = new Bunifu.UI.WinForms.BunifuGradientPanel();
             this.btnExpedienteGradient = new Bunifu.UI.WinForms.BunifuGradientPanel();
@@ -117,11 +117,11 @@
             this.btnExpediente.ColorContrastOnClick = 45;
             this.btnExpediente.ColorContrastOnHover = 45;
             this.btnExpediente.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges1.BottomLeft = true;
-            borderEdges1.BottomRight = true;
-            borderEdges1.TopLeft = true;
-            borderEdges1.TopRight = true;
-            this.btnExpediente.CustomizableEdges = borderEdges1;
+            borderEdges3.BottomLeft = true;
+            borderEdges3.BottomRight = true;
+            borderEdges3.TopLeft = true;
+            borderEdges3.TopRight = true;
+            this.btnExpediente.CustomizableEdges = borderEdges3;
             this.btnExpediente.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnExpediente.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnExpediente.DisabledFillColor = System.Drawing.Color.Empty;
@@ -226,11 +226,11 @@
             this.btnDatosIdentificacion.ColorContrastOnClick = 45;
             this.btnDatosIdentificacion.ColorContrastOnHover = 45;
             this.btnDatosIdentificacion.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges2.BottomLeft = true;
-            borderEdges2.BottomRight = true;
-            borderEdges2.TopLeft = true;
-            borderEdges2.TopRight = true;
-            this.btnDatosIdentificacion.CustomizableEdges = borderEdges2;
+            borderEdges4.BottomLeft = true;
+            borderEdges4.BottomRight = true;
+            borderEdges4.TopLeft = true;
+            borderEdges4.TopRight = true;
+            this.btnDatosIdentificacion.CustomizableEdges = borderEdges4;
             this.btnDatosIdentificacion.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnDatosIdentificacion.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnDatosIdentificacion.DisabledFillColor = System.Drawing.Color.Empty;

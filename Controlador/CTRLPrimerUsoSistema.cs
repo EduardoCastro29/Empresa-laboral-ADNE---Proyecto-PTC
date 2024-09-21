@@ -122,7 +122,8 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                 (ch >= 'a' && ch <= 'z') ||
                  ch == '.' ||
                  ch == '@' ||
-                 ch == '_')
+                 ch == '_' ||
+                 ch == 'ñ')
             {
                 //Retornamos los valores e.KeyChar
                 return;
@@ -147,7 +148,8 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                 ch == ' ' ||
                 ch == ',' ||
                 ch == '.' ||
-                ch == '#')
+                ch == '#' ||
+                ch == 'ñ')
             {
                 //Retornamos los valores e.KeyChar
                 return;

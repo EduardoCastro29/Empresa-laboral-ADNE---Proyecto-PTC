@@ -27,10 +27,34 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Vista
         public PacientesForm()
         {
             InitializeComponent();
+            leerIni();
             //this.FormBorderStyle = FormBorderStyle.None;
             //Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 40, 40));
 
             CTRLPacientes ObjPacientesControlador = new CTRLPacientes(this);
+        }
+
+        private void leerIni()
+        {
+            Config objConfig = new Config();
+            objConfig.LeerIni();
+
+            if (objConfig.objDTOConfig.modoOscuro == "dark")
+            {
+                this.BackColor = Color.FromArgb(30, 92, 98);
+                this.pnlForms.GradientTopLeft = Color.FromArgb(40, 157, 163);
+                this.pnlForms.GradientTopRight = Color.FromArgb(34, 135, 140);
+                this.pnlForms.GradientBottomLeft = Color.FromArgb(40, 157, 163);
+                this.pnlForms.GradientBottomRight = Color.FromArgb(29, 112, 117);
+                this.bunifuPanel2.BackgroundColor = Color.FromArgb(53, 109, 127);
+                this.bunifuPanel3.BackgroundColor = Color.FromArgb(53, 109, 127);
+                this.bunifuShadowPanel2.ShadowColor = Color.FromArgb(28, 111, 114);
+                this.bunifuShadowPanel3.ShadowColor = Color.FromArgb(28, 111, 114);
+                this.bunifuPictureBox1.Image = Properties.Resources.IconUSER;
+                this.bunifuPictureBox2.Image = Properties.Resources.userPLUS__;
+                this.bunifuPictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
+
+            }
         }
     }
 }

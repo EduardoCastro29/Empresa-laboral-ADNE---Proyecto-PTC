@@ -11,7 +11,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DTO
 {
     internal class DTOConfiguracion : Conexion
     {
-        private static bool modoOscuro;
-        public static bool ModoOscuro { get => modoOscuro; set => modoOscuro = value; }
+        public  string modoOscuro;
+        public  string ModoOscuro { get => modoOscuro; set => modoOscuro = value; }
     }
 }

@@ -31,14 +31,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RecuperarContraseñaOPCForm));
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.pnlGradienteFondo = new Bunifu.UI.WinForms.BunifuGradientPanel();
             this.bunifuGradientPanel1 = new Bunifu.UI.WinForms.BunifuGradientPanel();
             this.bunifuShadowPanel4 = new Bunifu.UI.WinForms.BunifuShadowPanel();
             this.btnPreguntasAutenticacion = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.lblOlvidasteContrasena = new Bunifu.UI.WinForms.BunifuLabel();
-            this.bunifuShadowPanel3 = new Bunifu.UI.WinForms.BunifuShadowPanel();
-            this.btnSoporteAdmin = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.lblOpciones = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuShadowPanel2 = new Bunifu.UI.WinForms.BunifuShadowPanel();
             this.btnCorreoElectronico = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
@@ -47,7 +44,6 @@
             this.pnlGradienteFondo.SuspendLayout();
             this.bunifuGradientPanel1.SuspendLayout();
             this.bunifuShadowPanel4.SuspendLayout();
-            this.bunifuShadowPanel3.SuspendLayout();
             this.bunifuShadowPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -78,7 +74,6 @@
             this.bunifuGradientPanel1.BorderRadius = 12;
             this.bunifuGradientPanel1.Controls.Add(this.bunifuShadowPanel4);
             this.bunifuGradientPanel1.Controls.Add(this.lblOlvidasteContrasena);
-            this.bunifuGradientPanel1.Controls.Add(this.bunifuShadowPanel3);
             this.bunifuGradientPanel1.Controls.Add(this.lblOpciones);
             this.bunifuGradientPanel1.Controls.Add(this.bunifuShadowPanel2);
             this.bunifuGradientPanel1.GradientBottomLeft = System.Drawing.Color.WhiteSmoke;
@@ -101,7 +96,7 @@
             this.bunifuShadowPanel4.Controls.Add(this.btnPreguntasAutenticacion);
             this.bunifuShadowPanel4.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
             this.bunifuShadowPanel4.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
-            this.bunifuShadowPanel4.Location = new System.Drawing.Point(54, 320);
+            this.bunifuShadowPanel4.Location = new System.Drawing.Point(54, 253);
             this.bunifuShadowPanel4.Name = "bunifuShadowPanel4";
             this.bunifuShadowPanel4.PanelColor = System.Drawing.Color.White;
             this.bunifuShadowPanel4.PanelColor2 = System.Drawing.Color.White;
@@ -225,121 +220,6 @@
             this.lblOlvidasteContrasena.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lblOlvidasteContrasena.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
-            // bunifuShadowPanel3
-            // 
-            this.bunifuShadowPanel3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.bunifuShadowPanel3.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuShadowPanel3.BorderColor = System.Drawing.Color.WhiteSmoke;
-            this.bunifuShadowPanel3.BorderRadius = 12;
-            this.bunifuShadowPanel3.BorderThickness = 1;
-            this.bunifuShadowPanel3.Controls.Add(this.btnSoporteAdmin);
-            this.bunifuShadowPanel3.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
-            this.bunifuShadowPanel3.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
-            this.bunifuShadowPanel3.Location = new System.Drawing.Point(54, 248);
-            this.bunifuShadowPanel3.Name = "bunifuShadowPanel3";
-            this.bunifuShadowPanel3.PanelColor = System.Drawing.Color.White;
-            this.bunifuShadowPanel3.PanelColor2 = System.Drawing.Color.White;
-            this.bunifuShadowPanel3.ShadowColor = System.Drawing.Color.DarkGray;
-            this.bunifuShadowPanel3.ShadowDept = 2;
-            this.bunifuShadowPanel3.ShadowDepth = 5;
-            this.bunifuShadowPanel3.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Surrounded;
-            this.bunifuShadowPanel3.ShadowTopLeftVisible = false;
-            this.bunifuShadowPanel3.Size = new System.Drawing.Size(675, 62);
-            this.bunifuShadowPanel3.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
-            this.bunifuShadowPanel3.TabIndex = 4;
-            // 
-            // btnSoporteAdmin
-            // 
-            this.btnSoporteAdmin.AllowAnimations = true;
-            this.btnSoporteAdmin.AllowMouseEffects = true;
-            this.btnSoporteAdmin.AllowToggling = false;
-            this.btnSoporteAdmin.AnimationSpeed = 200;
-            this.btnSoporteAdmin.AutoGenerateColors = false;
-            this.btnSoporteAdmin.AutoRoundBorders = false;
-            this.btnSoporteAdmin.AutoSizeLeftIcon = true;
-            this.btnSoporteAdmin.AutoSizeRightIcon = true;
-            this.btnSoporteAdmin.BackColor = System.Drawing.Color.Transparent;
-            this.btnSoporteAdmin.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
-            this.btnSoporteAdmin.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSoporteAdmin.BackgroundImage")));
-            this.btnSoporteAdmin.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnSoporteAdmin.ButtonText = "Soporte Administrativo";
-            this.btnSoporteAdmin.ButtonTextMarginLeft = 0;
-            this.btnSoporteAdmin.ColorContrastOnClick = 45;
-            this.btnSoporteAdmin.ColorContrastOnHover = 45;
-            this.btnSoporteAdmin.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges2.BottomLeft = true;
-            borderEdges2.BottomRight = true;
-            borderEdges2.TopLeft = true;
-            borderEdges2.TopRight = true;
-            this.btnSoporteAdmin.CustomizableEdges = borderEdges2;
-            this.btnSoporteAdmin.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnSoporteAdmin.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.btnSoporteAdmin.DisabledFillColor = System.Drawing.Color.Empty;
-            this.btnSoporteAdmin.DisabledForecolor = System.Drawing.Color.Empty;
-            this.btnSoporteAdmin.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
-            this.btnSoporteAdmin.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSoporteAdmin.ForeColor = System.Drawing.Color.Black;
-            this.btnSoporteAdmin.IconLeft = global::Empresa_laboral_ADNE___Proyecto_PTC.Properties.Resources.authorization;
-            this.btnSoporteAdmin.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSoporteAdmin.IconLeftCursor = System.Windows.Forms.Cursors.Default;
-            this.btnSoporteAdmin.IconLeftPadding = new System.Windows.Forms.Padding(18, 1, 3, 1);
-            this.btnSoporteAdmin.IconMarginLeft = 11;
-            this.btnSoporteAdmin.IconPadding = 11;
-            this.btnSoporteAdmin.IconRight = null;
-            this.btnSoporteAdmin.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSoporteAdmin.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.btnSoporteAdmin.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 0, 3);
-            this.btnSoporteAdmin.IconSize = 20;
-            this.btnSoporteAdmin.IdleBorderColor = System.Drawing.Color.Empty;
-            this.btnSoporteAdmin.IdleBorderRadius = 0;
-            this.btnSoporteAdmin.IdleBorderThickness = 0;
-            this.btnSoporteAdmin.IdleFillColor = System.Drawing.Color.Empty;
-            this.btnSoporteAdmin.IdleIconLeftImage = global::Empresa_laboral_ADNE___Proyecto_PTC.Properties.Resources.authorization;
-            this.btnSoporteAdmin.IdleIconRightImage = null;
-            this.btnSoporteAdmin.IndicateFocus = false;
-            this.btnSoporteAdmin.Location = new System.Drawing.Point(3, 2);
-            this.btnSoporteAdmin.Margin = new System.Windows.Forms.Padding(5, 3, 3, 3);
-            this.btnSoporteAdmin.Name = "btnSoporteAdmin";
-            this.btnSoporteAdmin.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.btnSoporteAdmin.OnDisabledState.BorderRadius = 12;
-            this.btnSoporteAdmin.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnSoporteAdmin.OnDisabledState.BorderThickness = 1;
-            this.btnSoporteAdmin.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.btnSoporteAdmin.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.btnSoporteAdmin.OnDisabledState.IconLeftImage = null;
-            this.btnSoporteAdmin.OnDisabledState.IconRightImage = null;
-            this.btnSoporteAdmin.onHoverState.BorderColor = System.Drawing.Color.Transparent;
-            this.btnSoporteAdmin.onHoverState.BorderRadius = 12;
-            this.btnSoporteAdmin.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnSoporteAdmin.onHoverState.BorderThickness = 1;
-            this.btnSoporteAdmin.onHoverState.FillColor = System.Drawing.Color.White;
-            this.btnSoporteAdmin.onHoverState.ForeColor = System.Drawing.Color.Black;
-            this.btnSoporteAdmin.onHoverState.IconLeftImage = null;
-            this.btnSoporteAdmin.onHoverState.IconRightImage = null;
-            this.btnSoporteAdmin.OnIdleState.BorderColor = System.Drawing.Color.Transparent;
-            this.btnSoporteAdmin.OnIdleState.BorderRadius = 12;
-            this.btnSoporteAdmin.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnSoporteAdmin.OnIdleState.BorderThickness = 1;
-            this.btnSoporteAdmin.OnIdleState.FillColor = System.Drawing.Color.WhiteSmoke;
-            this.btnSoporteAdmin.OnIdleState.ForeColor = System.Drawing.Color.Black;
-            this.btnSoporteAdmin.OnIdleState.IconLeftImage = global::Empresa_laboral_ADNE___Proyecto_PTC.Properties.Resources.authorization;
-            this.btnSoporteAdmin.OnIdleState.IconRightImage = null;
-            this.btnSoporteAdmin.OnPressedState.BorderColor = System.Drawing.Color.Transparent;
-            this.btnSoporteAdmin.OnPressedState.BorderRadius = 12;
-            this.btnSoporteAdmin.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnSoporteAdmin.OnPressedState.BorderThickness = 1;
-            this.btnSoporteAdmin.OnPressedState.FillColor = System.Drawing.Color.Gainsboro;
-            this.btnSoporteAdmin.OnPressedState.ForeColor = System.Drawing.Color.Black;
-            this.btnSoporteAdmin.OnPressedState.IconLeftImage = null;
-            this.btnSoporteAdmin.OnPressedState.IconRightImage = null;
-            this.btnSoporteAdmin.Size = new System.Drawing.Size(667, 57);
-            this.btnSoporteAdmin.TabIndex = 0;
-            this.btnSoporteAdmin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnSoporteAdmin.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btnSoporteAdmin.TextMarginLeft = 0;
-            this.btnSoporteAdmin.TextPadding = new System.Windows.Forms.Padding(0);
-            this.btnSoporteAdmin.UseDefaultRadiusAndThickness = true;
-            // 
             // lblOpciones
             // 
             this.lblOpciones.AllowParentOverrides = false;
@@ -400,11 +280,11 @@
             this.btnCorreoElectronico.ColorContrastOnClick = 45;
             this.btnCorreoElectronico.ColorContrastOnHover = 45;
             this.btnCorreoElectronico.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges3.BottomLeft = true;
-            borderEdges3.BottomRight = true;
-            borderEdges3.TopLeft = true;
-            borderEdges3.TopRight = true;
-            this.btnCorreoElectronico.CustomizableEdges = borderEdges3;
+            borderEdges2.BottomLeft = true;
+            borderEdges2.BottomRight = true;
+            borderEdges2.TopLeft = true;
+            borderEdges2.TopRight = true;
+            this.btnCorreoElectronico.CustomizableEdges = borderEdges2;
             this.btnCorreoElectronico.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnCorreoElectronico.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnCorreoElectronico.DisabledFillColor = System.Drawing.Color.Empty;
@@ -520,7 +400,6 @@
             this.bunifuGradientPanel1.ResumeLayout(false);
             this.bunifuGradientPanel1.PerformLayout();
             this.bunifuShadowPanel4.ResumeLayout(false);
-            this.bunifuShadowPanel3.ResumeLayout(false);
             this.bunifuShadowPanel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -528,8 +407,6 @@
 
         #endregion
         private Bunifu.UI.WinForms.BunifuLabel lblOpciones;
-        private Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel3;
-        public Bunifu.UI.WinForms.BunifuButton.BunifuButton btnSoporteAdmin;
         private Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel2;
         public Bunifu.UI.WinForms.BunifuButton.BunifuButton btnCorreoElectronico;
         private Bunifu.UI.WinForms.BunifuLabel lblOlvidasteContrasena;

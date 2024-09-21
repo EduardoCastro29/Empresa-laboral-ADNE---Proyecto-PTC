@@ -114,6 +114,7 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.Controls.Add(this.btnConfig);
             this.panel1.Controls.Add(this.btnEquipo);
             this.panel1.Controls.Add(this.btnCalendario);
@@ -1024,7 +1025,6 @@
         private System.Windows.Forms.ToolStripButton toolStripButton3;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnEquipo;
         public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnCalendario;
@@ -1045,5 +1045,6 @@
         public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnConfig;
         public Bunifu.UI.WinForms.BunifuPanel panelGeneralVistas;
         public System.Windows.Forms.FlowLayoutPanel flowLayoutPanel6;
+        public System.Windows.Forms.Panel panel1;
     }
 }

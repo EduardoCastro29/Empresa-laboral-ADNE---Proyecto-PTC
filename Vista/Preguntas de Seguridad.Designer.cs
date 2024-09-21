@@ -103,7 +103,7 @@
             this.pnlGradiente.Name = "pnlGradiente";
             this.pnlGradiente.Padding = new System.Windows.Forms.Padding(30);
             this.pnlGradiente.Quality = 10;
-            this.pnlGradiente.Size = new System.Drawing.Size(715, 874);
+            this.pnlGradiente.Size = new System.Drawing.Size(715, 788);
             this.pnlGradiente.TabIndex = 1;
             // 
             // menuStrip1
@@ -159,7 +159,7 @@
             this.pnlSombraFondo.ShadowDepth = 5;
             this.pnlSombraFondo.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Surrounded;
             this.pnlSombraFondo.ShadowTopLeftVisible = false;
-            this.pnlSombraFondo.Size = new System.Drawing.Size(655, 814);
+            this.pnlSombraFondo.Size = new System.Drawing.Size(655, 728);
             this.pnlSombraFondo.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
             this.pnlSombraFondo.TabIndex = 0;
             // 
@@ -169,7 +169,7 @@
             this.lblIngreseCredenciales.AutoEllipsis = false;
             this.lblIngreseCredenciales.CursorType = null;
             this.lblIngreseCredenciales.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIngreseCredenciales.Location = new System.Drawing.Point(51, 126);
+            this.lblIngreseCredenciales.Location = new System.Drawing.Point(51, 73);
             this.lblIngreseCredenciales.Name = "lblIngreseCredenciales";
             this.lblIngreseCredenciales.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblIngreseCredenciales.Size = new System.Drawing.Size(320, 23);
@@ -185,7 +185,7 @@
             this.lblIndicacion.Cursor = System.Windows.Forms.Cursors.Default;
             this.lblIndicacion.CursorType = System.Windows.Forms.Cursors.Default;
             this.lblIndicacion.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIndicacion.Location = new System.Drawing.Point(51, 241);
+            this.lblIndicacion.Location = new System.Drawing.Point(51, 190);
             this.lblIndicacion.Name = "lblIndicacion";
             this.lblIndicacion.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblIndicacion.Size = new System.Drawing.Size(341, 23);
@@ -204,7 +204,7 @@
             this.pnlLineaDivisora.BorderColor = System.Drawing.Color.Transparent;
             this.pnlLineaDivisora.BorderRadius = 3;
             this.pnlLineaDivisora.BorderThickness = 1;
-            this.pnlLineaDivisora.Location = new System.Drawing.Point(60, 224);
+            this.pnlLineaDivisora.Location = new System.Drawing.Point(60, 171);
             this.pnlLineaDivisora.Name = "pnlLineaDivisora";
             this.pnlLineaDivisora.ShowBorders = true;
             this.pnlLineaDivisora.Size = new System.Drawing.Size(549, 4);
@@ -239,7 +239,7 @@
             this.txtDocumento.IconRight = null;
             this.txtDocumento.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtDocumento.Lines = new string[0];
-            this.txtDocumento.Location = new System.Drawing.Point(337, 165);
+            this.txtDocumento.Location = new System.Drawing.Point(337, 112);
             this.txtDocumento.MaxLength = 11;
             this.txtDocumento.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtDocumento.Modified = false;
@@ -315,7 +315,7 @@
             this.txtUsuario.IconRight = null;
             this.txtUsuario.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtUsuario.Lines = new string[0];
-            this.txtUsuario.Location = new System.Drawing.Point(60, 165);
+            this.txtUsuario.Location = new System.Drawing.Point(60, 112);
             this.txtUsuario.MaxLength = 30;
             this.txtUsuario.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtUsuario.Modified = false;
@@ -372,7 +372,7 @@
             this.pnlSombraBtn.Controls.Add(this.btnVerificarPregunta);
             this.pnlSombraBtn.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
             this.pnlSombraBtn.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
-            this.pnlSombraBtn.Location = new System.Drawing.Point(279, 709);
+            this.pnlSombraBtn.Location = new System.Drawing.Point(279, 623);
             this.pnlSombraBtn.Name = "pnlSombraBtn";
             this.pnlSombraBtn.Padding = new System.Windows.Forms.Padding(1, 1, 3, 3);
             this.pnlSombraBtn.PanelColor = System.Drawing.Color.Transparent;
@@ -507,7 +507,7 @@
             this.txtCuartaPregunta.IconRight = null;
             this.txtCuartaPregunta.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtCuartaPregunta.Lines = new string[0];
-            this.txtCuartaPregunta.Location = new System.Drawing.Point(60, 627);
+            this.txtCuartaPregunta.Location = new System.Drawing.Point(60, 567);
             this.txtCuartaPregunta.MaxLength = 40;
             this.txtCuartaPregunta.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtCuartaPregunta.Modified = false;
@@ -585,7 +585,7 @@
             this.txtTerceraPregunta.IconRight = null;
             this.txtTerceraPregunta.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtTerceraPregunta.Lines = new string[0];
-            this.txtTerceraPregunta.Location = new System.Drawing.Point(60, 523);
+            this.txtTerceraPregunta.Location = new System.Drawing.Point(60, 475);
             this.txtTerceraPregunta.MaxLength = 40;
             this.txtTerceraPregunta.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtTerceraPregunta.Modified = false;
@@ -663,7 +663,7 @@
             this.txtSegundaPregunta.IconRight = null;
             this.txtSegundaPregunta.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtSegundaPregunta.Lines = new string[0];
-            this.txtSegundaPregunta.Location = new System.Drawing.Point(60, 420);
+            this.txtSegundaPregunta.Location = new System.Drawing.Point(60, 372);
             this.txtSegundaPregunta.MaxLength = 40;
             this.txtSegundaPregunta.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtSegundaPregunta.Modified = false;
@@ -741,7 +741,7 @@
             this.txtPrimeraPregunta.IconRight = null;
             this.txtPrimeraPregunta.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtPrimeraPregunta.Lines = new string[0];
-            this.txtPrimeraPregunta.Location = new System.Drawing.Point(60, 316);
+            this.txtPrimeraPregunta.Location = new System.Drawing.Point(60, 268);
             this.txtPrimeraPregunta.MaxLength = 40;
             this.txtPrimeraPregunta.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtPrimeraPregunta.Modified = false;
@@ -824,7 +824,7 @@
             this.cmbCuartaPregunta.ItemHighLightColor = System.Drawing.Color.DarkTurquoise;
             this.cmbCuartaPregunta.ItemHighLightForeColor = System.Drawing.Color.White;
             this.cmbCuartaPregunta.ItemTopMargin = 3;
-            this.cmbCuartaPregunta.Location = new System.Drawing.Point(60, 589);
+            this.cmbCuartaPregunta.Location = new System.Drawing.Point(60, 529);
             this.cmbCuartaPregunta.Name = "cmbCuartaPregunta";
             this.cmbCuartaPregunta.Size = new System.Drawing.Size(545, 32);
             this.cmbCuartaPregunta.TabIndex = 10;
@@ -868,7 +868,7 @@
             this.cmbTerceraPregunta.ItemHighLightColor = System.Drawing.Color.DarkTurquoise;
             this.cmbTerceraPregunta.ItemHighLightForeColor = System.Drawing.Color.White;
             this.cmbTerceraPregunta.ItemTopMargin = 3;
-            this.cmbTerceraPregunta.Location = new System.Drawing.Point(60, 485);
+            this.cmbTerceraPregunta.Location = new System.Drawing.Point(60, 437);
             this.cmbTerceraPregunta.Name = "cmbTerceraPregunta";
             this.cmbTerceraPregunta.Size = new System.Drawing.Size(545, 32);
             this.cmbTerceraPregunta.TabIndex = 9;
@@ -912,7 +912,7 @@
             this.cmbSegundaPregunta.ItemHighLightColor = System.Drawing.Color.DarkTurquoise;
             this.cmbSegundaPregunta.ItemHighLightForeColor = System.Drawing.Color.White;
             this.cmbSegundaPregunta.ItemTopMargin = 3;
-            this.cmbSegundaPregunta.Location = new System.Drawing.Point(60, 382);
+            this.cmbSegundaPregunta.Location = new System.Drawing.Point(60, 334);
             this.cmbSegundaPregunta.Name = "cmbSegundaPregunta";
             this.cmbSegundaPregunta.Size = new System.Drawing.Size(545, 32);
             this.cmbSegundaPregunta.TabIndex = 8;
@@ -956,7 +956,7 @@
             this.cmbPrimeraPregunta.ItemHighLightColor = System.Drawing.Color.DarkTurquoise;
             this.cmbPrimeraPregunta.ItemHighLightForeColor = System.Drawing.Color.White;
             this.cmbPrimeraPregunta.ItemTopMargin = 3;
-            this.cmbPrimeraPregunta.Location = new System.Drawing.Point(60, 278);
+            this.cmbPrimeraPregunta.Location = new System.Drawing.Point(60, 230);
             this.cmbPrimeraPregunta.Name = "cmbPrimeraPregunta";
             this.cmbPrimeraPregunta.Size = new System.Drawing.Size(545, 32);
             this.cmbPrimeraPregunta.TabIndex = 7;
@@ -974,7 +974,7 @@
             this.pnlSombraBoton.Controls.Add(this.btnRegistrar);
             this.pnlSombraBoton.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
             this.pnlSombraBoton.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
-            this.pnlSombraBoton.Location = new System.Drawing.Point(448, 708);
+            this.pnlSombraBoton.Location = new System.Drawing.Point(448, 622);
             this.pnlSombraBoton.Name = "pnlSombraBoton";
             this.pnlSombraBoton.Padding = new System.Windows.Forms.Padding(1, 1, 3, 3);
             this.pnlSombraBoton.PanelColor = System.Drawing.Color.Transparent;
@@ -1086,7 +1086,7 @@
             this.lblTitulo.CursorType = System.Windows.Forms.Cursors.Default;
             this.lblTitulo.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.ForeColor = System.Drawing.Color.Black;
-            this.lblTitulo.Location = new System.Drawing.Point(48, 54);
+            this.lblTitulo.Location = new System.Drawing.Point(48, 31);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblTitulo.Size = new System.Drawing.Size(278, 28);
@@ -1169,11 +1169,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(715, 874);
+            this.ClientSize = new System.Drawing.Size(715, 788);
             this.Controls.Add(this.pnlGradiente);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.MaximumSize = new System.Drawing.Size(715, 874);
-            this.MinimumSize = new System.Drawing.Size(715, 874);
+            this.MaximumSize = new System.Drawing.Size(750, 788);
+            this.MinimumSize = new System.Drawing.Size(715, 788);
             this.Name = "PreguntasdeSeguridadForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Preguntas de Seguridad";

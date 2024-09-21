@@ -721,21 +721,6 @@
   <data name="lblOlvidasteContrasena.BaseStylesheet" xml:space="preserve">
     <value>#bunifu-label { padding: 0px; font-family: 'Century Gothic'; font-size: 21.75pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(42, 86, 100); text-align: left; }</value>
   </data>
-  <data name="btnSoporteAdmin.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAApsAAAA5CAYAAAB52eCoAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHxSURBVHhe7dwhbhtBFMfhhYGFOUKgYWGO0CMEBgYGmvUI
-        hTmGj9CjFK60M1bhdjYd0LrTVvbqz74nfTJ4z/yn1drTaJZleai1Pp3P5yMAAPzL1o3Noafk36cH5tys
-        AABwjVLK99aTrz0tf592cLr8AgAAXKtF59d1Xe96Zr6H5vPlEQAA7PC5p+Y0bY88BwcAAHCzWuv99p7m
-        YbQEAICdPm1PNV8GCwAA2Ou4va+5/WR9tAQAgD3EJgAAMWITAIAYsQkAQIzYBAAgRmwCABAjNgEAiBGb
-        AADEiE0AAGLEJgAAMWITAIAYsQkAQIzYBAAgRmwCABAjNgEAiBGbAADEiE0AAGLEJgAAMWITAIAYsQkA
-        QIzYBAAgRmwCABAjNgEAiBGbAADEiE0AAGLEJgAAMWITAIAYsQkAQIzYBAAgRmwCABAjNgEAiBGbAADE
-        iE0AAGLEJgAAMWITAIAYsQkAQIzYBAAgRmwCABAjNgEAiBGbAADEiE0AAGLEJgAAMWITAICY41RrfR0s
-        AABgr+NUSnkcLAAAYJda69O0ruvdaAkAAHssy/IwbVNK+TI6AACAG53eQ3Ob/nTz28UBAADcYq613vfU
-        /DnzPH9oi7eLQwAAuMbpj9D8ddry0I6em+0vkQAA4L9KKS/t82NPyj7T9ANX+RcxkiblygAAAABJRU5E
-        rkJggg==
-</value>
-  </data>
   <data name="lblOpciones.BaseStylesheet" xml:space="preserve">
     <value>#bunifu-label { padding: 0px; font-family: 'Century Gothic'; font-size: 15pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(42, 86, 100); text-align: left; }</value>
   </data>

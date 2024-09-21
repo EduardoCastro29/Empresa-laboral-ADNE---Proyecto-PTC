@@ -27,6 +27,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Vista
         public ConfiguraciónForm()
         {
             InitializeComponent();
+            leerIni();
             //this.FormBorderStyle = FormBorderStyle.None;
             //Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 40, 40));
 
@@ -34,5 +35,16 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Vista
         }
 
 
+        private void leerIni()
+        {
+            Config objConfig = new Config();
+            objConfig.LeerIni();
+
+            if (objConfig.objDTOConfig.modoOscuro == "dark")
+            {
+                this.switchModo.Checked = true;
+                this.BackColor = Color.FromArgb(30, 92, 98);
+            }
+        }
     }
 }
