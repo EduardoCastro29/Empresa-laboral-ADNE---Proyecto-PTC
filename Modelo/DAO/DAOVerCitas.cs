@@ -55,12 +55,12 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                 Conexion.Connection = Conectar();
 
                 //Iniciamos el tipo de comando
-                string consultaSQLLLenarDGVCitas = "SELECT * FROM vistaCitasAgendadas WHERE [ID del Profesional] = @docP ORDER BY [Fecha de la Cita] ASC";
+                string consultaSQLLLenarDGVCitas = "SELECT * FROM vistaCitasAgendadas WHERE [ID del Profesional] = @DUI ORDER BY [Fecha de la Cita] ASC";
 
                 //Llenamos el comando
                 SqlCommand ObjComandoSQLServerDGVCitas = new SqlCommand(consultaSQLLLenarDGVCitas, Conexion.Connection);
 
-                ObjComandoSQLServerDGVCitas.Parameters.AddWithValue("@docP", InicioSesion.Dui);
+                ObjComandoSQLServerDGVCitas.Parameters.AddWithValue("@DUI", InicioSesion.Dui);
 
                 //Creamos las variables necesarias para el nuevo SqlDataAdapter
                 SqlDataAdapter ObjLlenarAdaptador = new SqlDataAdapter(ObjComandoSQLServerDGVCitas);
@@ -91,7 +91,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                 Conexion.Connection = Conectar();
 
                 //Declaramos la consulta
-                string consultaSQL = "SELECT * FROM vistaCitasAgendadas WHERE [Fecha de la Cita] LIKE @FechaCita OR [Nombre del Paciente] LIKE @NombrePaciente OR [Apellido del Paciente] LIKE @ApellidoPaciente OR [Profesional Encargado] LIKE @ProfesionalEncargado";
+                string consultaSQL = "SELECT * FROM vistaCitasAgendadas WHERE [Fecha de la Cita] LIKE @FechaCita OR [Nombre del Paciente] LIKE @NombrePaciente OR [Apellido del Paciente] LIKE @ApellidoPaciente";
 
                 //Ejecutamos el comando
                 SqlCommand ObjCommandSQL = new SqlCommand(consultaSQL, Conexion.Connection);
@@ -99,7 +99,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                 ObjCommandSQL.Parameters.AddWithValue("@FechaCita", "%" + BuscarCita + "%");
                 ObjCommandSQL.Parameters.AddWithValue("@NombrePaciente", "%" + BuscarCita + "%");
                 ObjCommandSQL.Parameters.AddWithValue("@ApellidoPaciente", "%" + BuscarCita + "%");
-                ObjCommandSQL.Parameters.AddWithValue("@ProfesionalEncargado", "%" + BuscarCita + "%");
 
                 //Declaramos el adaptador SQL
                 SqlDataAdapter ObjAdaptador = new SqlDataAdapter(ObjCommandSQL);

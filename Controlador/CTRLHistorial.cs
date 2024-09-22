@@ -21,7 +21,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
 
             ObjHistorial.Load += new EventHandler(CargarHistorialUC);
         }
-
         private void CargarHistorialUC(object sender, EventArgs e)
         {
             //Creamos una instancia de la clase DAO
@@ -36,8 +35,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                 ObjDAOActividades.HoraInicio2 = (TimeSpan)DataRow[1];
                 ObjDAOActividades.HoraFin = (TimeSpan)DataRow[2];
                 ObjDAOActividades.DocumentoPresentado = (string)DataRow[3];
-
-
 
                 //Instanciamos a la clase UCEmpleado que necesitamos recrear
                 ControlHistorialUC ObjControlHistorial = new ControlHistorialUC(ObjDAOActividades);

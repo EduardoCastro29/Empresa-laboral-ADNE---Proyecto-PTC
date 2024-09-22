@@ -33,12 +33,14 @@
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             this.pnlFondo = new Bunifu.UI.WinForms.BunifuPanel();
             this.pnlSombraFondo = new Bunifu.UI.WinForms.BunifuShadowPanel();
             this.pnlForms = new Bunifu.UI.WinForms.BunifuGradientPanel();
             this.pnlSombraBuscar = new Bunifu.UI.WinForms.BunifuPanel();
             this.txtBuscarPaciente = new Bunifu.UI.WinForms.BunifuTextBox();
             this.flpVerPacientes = new System.Windows.Forms.FlowLayoutPanel();
+            this.btnVerPacientesSinProfesional = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.pnlFondo.SuspendLayout();
             this.pnlSombraFondo.SuspendLayout();
             this.pnlForms.SuspendLayout();
@@ -58,7 +60,7 @@
             this.pnlFondo.Location = new System.Drawing.Point(15, 10);
             this.pnlFondo.Name = "pnlFondo";
             this.pnlFondo.ShowBorders = true;
-            this.pnlFondo.Size = new System.Drawing.Size(991, 707);
+            this.pnlFondo.Size = new System.Drawing.Size(991, 718);
             this.pnlFondo.TabIndex = 4;
             // 
             // pnlSombraFondo
@@ -81,7 +83,7 @@
             this.pnlSombraFondo.ShadowDepth = 250;
             this.pnlSombraFondo.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Surrounded;
             this.pnlSombraFondo.ShadowTopLeftVisible = false;
-            this.pnlSombraFondo.Size = new System.Drawing.Size(991, 707);
+            this.pnlSombraFondo.Size = new System.Drawing.Size(991, 718);
             this.pnlSombraFondo.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Lowered;
             this.pnlSombraFondo.TabIndex = 2;
             // 
@@ -91,6 +93,7 @@
             this.pnlForms.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlForms.BackgroundImage")));
             this.pnlForms.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pnlForms.BorderRadius = 60;
+            this.pnlForms.Controls.Add(this.btnVerPacientesSinProfesional);
             this.pnlForms.Controls.Add(this.pnlSombraBuscar);
             this.pnlForms.Controls.Add(this.flpVerPacientes);
             this.pnlForms.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -102,7 +105,7 @@
             this.pnlForms.Margin = new System.Windows.Forms.Padding(0);
             this.pnlForms.Name = "pnlForms";
             this.pnlForms.Quality = 10;
-            this.pnlForms.Size = new System.Drawing.Size(986, 697);
+            this.pnlForms.Size = new System.Drawing.Size(986, 708);
             this.pnlForms.TabIndex = 1;
             // 
             // pnlSombraBuscar
@@ -116,7 +119,7 @@
             this.pnlSombraBuscar.BorderRadius = 60;
             this.pnlSombraBuscar.BorderThickness = 1;
             this.pnlSombraBuscar.Controls.Add(this.txtBuscarPaciente);
-            this.pnlSombraBuscar.Location = new System.Drawing.Point(155, 41);
+            this.pnlSombraBuscar.Location = new System.Drawing.Point(155, 28);
             this.pnlSombraBuscar.Name = "pnlSombraBuscar";
             this.pnlSombraBuscar.Padding = new System.Windows.Forms.Padding(5, 2, 1, 6);
             this.pnlSombraBuscar.ShowBorders = true;
@@ -206,22 +209,111 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.flpVerPacientes.AutoScroll = true;
-            this.flpVerPacientes.Location = new System.Drawing.Point(25, 158);
+            this.flpVerPacientes.Location = new System.Drawing.Point(25, 121);
             this.flpVerPacientes.Name = "flpVerPacientes";
             this.flpVerPacientes.Size = new System.Drawing.Size(937, 511);
             this.flpVerPacientes.TabIndex = 2;
             this.flpVerPacientes.TabStop = true;
+            // 
+            // btnVerPacientesSinProfesional
+            // 
+            this.btnVerPacientesSinProfesional.AllowAnimations = true;
+            this.btnVerPacientesSinProfesional.AllowMouseEffects = true;
+            this.btnVerPacientesSinProfesional.AllowToggling = false;
+            this.btnVerPacientesSinProfesional.AnimationSpeed = 200;
+            this.btnVerPacientesSinProfesional.AutoGenerateColors = false;
+            this.btnVerPacientesSinProfesional.AutoRoundBorders = false;
+            this.btnVerPacientesSinProfesional.AutoSizeLeftIcon = true;
+            this.btnVerPacientesSinProfesional.AutoSizeRightIcon = true;
+            this.btnVerPacientesSinProfesional.BackColor = System.Drawing.Color.Transparent;
+            this.btnVerPacientesSinProfesional.BackColor1 = System.Drawing.Color.LightSeaGreen;
+            this.btnVerPacientesSinProfesional.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnVerPacientesSinProfesional.BackgroundImage")));
+            this.btnVerPacientesSinProfesional.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btnVerPacientesSinProfesional.ButtonText = "Pacientes sin profesional";
+            this.btnVerPacientesSinProfesional.ButtonTextMarginLeft = 0;
+            this.btnVerPacientesSinProfesional.ColorContrastOnClick = 45;
+            this.btnVerPacientesSinProfesional.ColorContrastOnHover = 45;
+            this.btnVerPacientesSinProfesional.Cursor = System.Windows.Forms.Cursors.Hand;
+            borderEdges1.BottomLeft = true;
+            borderEdges1.BottomRight = true;
+            borderEdges1.TopLeft = true;
+            borderEdges1.TopRight = true;
+            this.btnVerPacientesSinProfesional.CustomizableEdges = borderEdges1;
+            this.btnVerPacientesSinProfesional.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnVerPacientesSinProfesional.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btnVerPacientesSinProfesional.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btnVerPacientesSinProfesional.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btnVerPacientesSinProfesional.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
+            this.btnVerPacientesSinProfesional.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVerPacientesSinProfesional.ForeColor = System.Drawing.Color.White;
+            this.btnVerPacientesSinProfesional.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnVerPacientesSinProfesional.IconLeftCursor = System.Windows.Forms.Cursors.Hand;
+            this.btnVerPacientesSinProfesional.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
+            this.btnVerPacientesSinProfesional.IconMarginLeft = 11;
+            this.btnVerPacientesSinProfesional.IconPadding = 10;
+            this.btnVerPacientesSinProfesional.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnVerPacientesSinProfesional.IconRightCursor = System.Windows.Forms.Cursors.Hand;
+            this.btnVerPacientesSinProfesional.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
+            this.btnVerPacientesSinProfesional.IconSize = 25;
+            this.btnVerPacientesSinProfesional.IdleBorderColor = System.Drawing.Color.Transparent;
+            this.btnVerPacientesSinProfesional.IdleBorderRadius = 15;
+            this.btnVerPacientesSinProfesional.IdleBorderThickness = 1;
+            this.btnVerPacientesSinProfesional.IdleFillColor = System.Drawing.Color.LightSeaGreen;
+            this.btnVerPacientesSinProfesional.IdleIconLeftImage = null;
+            this.btnVerPacientesSinProfesional.IdleIconRightImage = null;
+            this.btnVerPacientesSinProfesional.IndicateFocus = false;
+            this.btnVerPacientesSinProfesional.Location = new System.Drawing.Point(681, 638);
+            this.btnVerPacientesSinProfesional.Name = "btnVerPacientesSinProfesional";
+            this.btnVerPacientesSinProfesional.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btnVerPacientesSinProfesional.OnDisabledState.BorderRadius = 15;
+            this.btnVerPacientesSinProfesional.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btnVerPacientesSinProfesional.OnDisabledState.BorderThickness = 1;
+            this.btnVerPacientesSinProfesional.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btnVerPacientesSinProfesional.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btnVerPacientesSinProfesional.OnDisabledState.IconLeftImage = null;
+            this.btnVerPacientesSinProfesional.OnDisabledState.IconRightImage = null;
+            this.btnVerPacientesSinProfesional.onHoverState.BorderColor = System.Drawing.Color.Transparent;
+            this.btnVerPacientesSinProfesional.onHoverState.BorderRadius = 15;
+            this.btnVerPacientesSinProfesional.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btnVerPacientesSinProfesional.onHoverState.BorderThickness = 1;
+            this.btnVerPacientesSinProfesional.onHoverState.FillColor = System.Drawing.Color.MediumTurquoise;
+            this.btnVerPacientesSinProfesional.onHoverState.ForeColor = System.Drawing.Color.White;
+            this.btnVerPacientesSinProfesional.onHoverState.IconLeftImage = null;
+            this.btnVerPacientesSinProfesional.onHoverState.IconRightImage = null;
+            this.btnVerPacientesSinProfesional.OnIdleState.BorderColor = System.Drawing.Color.Transparent;
+            this.btnVerPacientesSinProfesional.OnIdleState.BorderRadius = 15;
+            this.btnVerPacientesSinProfesional.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btnVerPacientesSinProfesional.OnIdleState.BorderThickness = 1;
+            this.btnVerPacientesSinProfesional.OnIdleState.FillColor = System.Drawing.Color.LightSeaGreen;
+            this.btnVerPacientesSinProfesional.OnIdleState.ForeColor = System.Drawing.Color.White;
+            this.btnVerPacientesSinProfesional.OnIdleState.IconLeftImage = null;
+            this.btnVerPacientesSinProfesional.OnIdleState.IconRightImage = null;
+            this.btnVerPacientesSinProfesional.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(166)))), ((int)(((byte)(158)))));
+            this.btnVerPacientesSinProfesional.OnPressedState.BorderRadius = 15;
+            this.btnVerPacientesSinProfesional.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btnVerPacientesSinProfesional.OnPressedState.BorderThickness = 1;
+            this.btnVerPacientesSinProfesional.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(166)))), ((int)(((byte)(158)))));
+            this.btnVerPacientesSinProfesional.OnPressedState.ForeColor = System.Drawing.Color.White;
+            this.btnVerPacientesSinProfesional.OnPressedState.IconLeftImage = null;
+            this.btnVerPacientesSinProfesional.OnPressedState.IconRightImage = null;
+            this.btnVerPacientesSinProfesional.Size = new System.Drawing.Size(281, 51);
+            this.btnVerPacientesSinProfesional.TabIndex = 27;
+            this.btnVerPacientesSinProfesional.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnVerPacientesSinProfesional.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnVerPacientesSinProfesional.TextMarginLeft = 0;
+            this.btnVerPacientesSinProfesional.TextPadding = new System.Windows.Forms.Padding(0);
+            this.btnVerPacientesSinProfesional.UseDefaultRadiusAndThickness = true;
             // 
             // VerPacientesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(143)))), ((int)(((byte)(156)))));
-            this.ClientSize = new System.Drawing.Size(1011, 720);
+            this.ClientSize = new System.Drawing.Size(1011, 731);
             this.Controls.Add(this.pnlFondo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.MaximumSize = new System.Drawing.Size(1027, 759);
-            this.MinimumSize = new System.Drawing.Size(1027, 759);
+            this.MaximumSize = new System.Drawing.Size(1027, 770);
+            this.MinimumSize = new System.Drawing.Size(1027, 770);
             this.Name = "VerPacientesForm";
             this.Padding = new System.Windows.Forms.Padding(15, 10, 5, 3);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -242,5 +334,6 @@
         public System.Windows.Forms.FlowLayoutPanel flpVerPacientes;
         public Bunifu.UI.WinForms.BunifuPanel pnlSombraBuscar;
         public Bunifu.UI.WinForms.BunifuTextBox txtBuscarPaciente;
+        public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnVerPacientesSinProfesional;
     }
 }

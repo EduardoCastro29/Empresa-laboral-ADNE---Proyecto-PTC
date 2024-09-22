@@ -6,14 +6,15 @@
 //using System.Windows.Forms;
 //using System.Data.SqlClient;
 //using Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO;
+//using Empresa_laboral_ADNE___Proyecto_PTC.Modelo;
 //using Empresa_laboral_ADNE___Proyecto_PTC.Vista;
 
 //namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
 //{
-//    internal class CTRLConexion 
+//    internal class CTRLConexion
 //    {
 //        //Creando un objeto del formulario login
-//        LoginForm ObjConexion;
+//        readonly LoginForm ObjConexion;
 //        public CTRLConexion(LoginForm Vista)
 //        {
 //            //Enlazando el objeto con la Vista dentro del constructor

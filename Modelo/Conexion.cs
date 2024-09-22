@@ -25,7 +25,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo
                 string DBNombre = "db_aacf96_adne2024"; //Este es el nombre de la base de datos proporcionado por ASP.NET (credenciales por defecto + el nombre de la base)
                 string IDUsuario = "db_aacf96_adne2024_admin"; //Este es el nombre del usuario el cuál maneja todo el funcionamiento por ASP.NET (Es el propietario de la DB)
                 string Contraseña = "ADNE2024C#"; //Esta es la contraseña del usuario proporcionado por la misma persona (La que creo la DB y su respectivo usuario)
-
+                
                 /*
                 string nombreServidor = DTOAgregarConexion.Server; //Este es el nombre del servidor proporcionado por ASP.NET a la hora de crearse
                 string DBNombre = DTOAgregarConexion.Database; //Este es el nombre de la base de datos proporcionado por ASP.NET (credenciales por defecto + el nombre de la base)

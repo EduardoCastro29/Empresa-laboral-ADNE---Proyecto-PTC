@@ -22,12 +22,32 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                 Conexion.Connection = Conectar();
                 string ConsultaSqlVerPaciente = "SELECT * FROM vistaPaciente WHERE DUI = @DUI";
                 SqlCommand ObjConsultaSql = new SqlCommand(ConsultaSqlVerPaciente, Conexion.Connection);
-
                 ObjConsultaSql.Parameters.AddWithValue("@DUI", InicioSesion.Dui);
-
                 SqlDataAdapter ad = new SqlDataAdapter(ObjConsultaSql);
                 DataTable dt = new DataTable();
-
+                ad.Fill(dt);
+                return dt;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Ha ocurrido un error, ERR-011-7", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+            finally
+            {
+                Conexion.Connection.Close();
+            }
+        }
+        //Este es el método común para ver pacientes que como tal, no tienen un profesional asignado por ser elimnado dentro del sistema
+        public DataTable VerPacientesSinProfesional()
+        {
+            try
+            {
+                Conexion.Connection = Conectar();
+                string ConsultaSqlVerPacienteSinPR = "SELECT * FROM vistaPaciente WHERE DUI IS NULL";
+                SqlCommand ObjConsultaSql = new SqlCommand(ConsultaSqlVerPacienteSinPR, Conexion.Connection);
+                SqlDataAdapter ad = new SqlDataAdapter(ObjConsultaSql);
+                DataTable dt = new DataTable();
                 ad.Fill(dt);
                 return dt;
             }

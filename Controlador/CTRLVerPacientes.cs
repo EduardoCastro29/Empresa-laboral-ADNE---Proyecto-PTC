@@ -17,16 +17,46 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
     internal class CTRLVerPacientes
     {
         readonly VerPacientesForm ObjVerPaciente;
-        public CTRLVerPacientes(VerPacientesForm vista)
+        public CTRLVerPacientes(VerPacientesForm Vista)
         {
-            ObjVerPaciente = vista;
-            ObjVerPaciente.Load += new EventHandler(CargarPacientes);
+            ObjVerPaciente = Vista;
+
+            ObjVerPaciente.Load += new EventHandler(CargarPacientesYPermisoUsuario);
+
+            ObjVerPaciente.btnVerPacientesSinProfesional.Click += new EventHandler(CargarPacientesSinProfesional);
             ObjVerPaciente.txtBuscarPaciente.KeyPress += new KeyPressEventHandler(BuscarNombrePaciente);
         }
-        private void CargarPacientes(object sender, EventArgs e)
+        private void CargarPacientesYPermisoUsuario(object sender, EventArgs e)
         {
+            //Indicamos dado la variable de Inicio de Sesión qué botones son los que se accionarán dado el nivel de Usuario
+            switch (InicioSesion.DesempenoId)
+            {
+                case "Administrador":
+                    break;
+                case "Empleado":
+                    ObjVerPaciente.btnVerPacientesSinProfesional.Visible = false;
+                    break;
+                default:
+                    break;
+            }
+
             DAOVerPacientes ObjDaoPacientes = new DAOVerPacientes();
             DataTable dt = ObjDaoPacientes.VerPacientes();
+            foreach (DataRow dr in dt.Rows)
+            {
+                ObjDaoPacientes.NombreApellido = (string)dr[0];
+                ObjDaoPacientes.DocumentoPresentado = (string)dr[1];
+
+                ControlVerPacientesUC ObjControlPaciente = new ControlVerPacientesUC(ObjDaoPacientes);
+                ObjVerPaciente.flpVerPacientes.Controls.Add(ObjControlPaciente);
+            }
+        }
+        private void CargarPacientesSinProfesional(object sender, EventArgs e)
+        {
+            //Limpiamos los controles que posee el FlowLayoutPanel para cargar los nuevos controles de usuario
+            ObjVerPaciente.flpVerPacientes.Controls.Clear();
+            DAOVerPacientes ObjDaoPacientes = new DAOVerPacientes();
+            DataTable dt = ObjDaoPacientes.VerPacientesSinProfesional();
             foreach (DataRow dr in dt.Rows)
             {
                 ObjDaoPacientes.NombreApellido = (string)dr[0];

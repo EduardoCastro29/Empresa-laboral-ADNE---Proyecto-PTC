@@ -17,9 +17,9 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                 Conexion.Connection = Conectar();
 
                 //En la consulta se ordena los datos de la vista para pedir el siguiente paciente (El que se encuentra en el TOP 1)
-                string queryCita = "SELECT TOP 1 *  FROM vistaCitasAgendadas WHERE [Fecha de la Cita] >= CONVERT(date, GETDATE()) ORDER BY [Fecha de la Cita] ASC, [Hora de Inicio] ASC";
+                string queryCita = "SELECT TOP 1 * FROM vistaHistorial WHERE DUI = @DUI AND [Fecha de la cita ] = CONVERT(date, GETDATE()) ORDER BY [Fecha de la cita ] ASC";
                 SqlCommand objSiguienteCita = new SqlCommand(queryCita, Conexion.Connection);
-
+                objSiguienteCita.Parameters.AddWithValue("@DUI", InicioSesion.Dui);
                 SqlDataAdapter adp = new SqlDataAdapter(objSiguienteCita);
                 DataTable dt = new DataTable();
 
@@ -127,7 +127,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                 this.FechaFinal1 = FechaFinal1;
                 this.NumeroDias = (FechaFinal1 - FechaInicio1).Days;
                 ObtenerDatosCitas();
-                RellenarGraficoCitas();  // Asegúrate de llamar a este método aquí para llenar los datos
+                RellenarGraficoCitas();
                 return true;
             }
             else
@@ -173,10 +173,13 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                 Conexion.Connection = Conectar();
 
                 //Inicializamos la cadena
-                string consultaSQLCargarHistorial = "SELECT * FROM vistaHistorial";
+                string consultaSQLCargarHistorial = "SELECT * FROM vistaHistorial WHERE DUI = @DUI";
 
                 //Inicializamos el comando
                 SqlCommand ObjComandoSQLServerUC = new SqlCommand(consultaSQLCargarHistorial, Conexion.Connection);
+
+                //Añadimos los valores
+                ObjComandoSQLServerUC.Parameters.AddWithValue("@DUI", InicioSesion.Dui);
 
                 //Creamos un SqlDataAdapter
                 SqlDataAdapter ObjAdaptador = new SqlDataAdapter(ObjComandoSQLServerUC);

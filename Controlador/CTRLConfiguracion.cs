@@ -25,10 +25,24 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
 
             ObjConfiguracionForm.btnActualizarPerfil.Click += new EventHandler(AbrirActualizarUsuario);
             ObjConfiguracionForm.btnCerrarSesion.Click += new EventHandler(CerrarSesionConfig);
+            ObjConfiguracionForm.btnAgregarConfiguracion.Click += new EventHandler(AbrirConfiguracionServidor);
             ObjConfiguracionForm.switchModo.CheckedChanged += new EventHandler(modoOscuro);
         }
+        #region Eventos iniciales al cargar el Formulario
         private void CargarDatosUsuario(object sender, EventArgs e)
         {
+            //Indicamos dado la variable de Inicio de Sesión qué botones son los que se accionarán dado el nivel de Usuario
+            switch (InicioSesion.DesempenoId)
+            {
+                case "Administrador":
+                    break;
+                case "Empleado":
+                    ObjConfiguracionForm.btnAgregarConfiguracion.Enabled = false;
+                    break;
+                default:
+                    break;
+            }
+
             ObjConfiguracionForm.lblRolUsuario.Text = InicioSesion.Especialidad;
             ObjConfiguracionForm.lblNomprePersona.Text = InicioSesion.Nombres + " " + InicioSesion.Apellidos;
             ObjConfiguracionForm.lblCorreo.Text = InicioSesion.Correo;
@@ -39,20 +53,39 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             MemoryStream ObjArchivoMemoriaIMG = new MemoryStream(InicioSesion.Imagen);
             ObjConfiguracionForm.picUsuario.Image = Image.FromStream(ObjArchivoMemoriaIMG);
         }
+        #endregion
+        #region Abrir el formulario de Actualizar Perfil dentro del Formulario de configuración (UPDATE)
         private void AbrirActualizarUsuario(object sender, EventArgs e)
         {
             //Abrimos el formulario de Actualización del usuario
             ConfiguraciónDeUsuarioForm ObjAbrirFormularioAC = new ConfiguraciónDeUsuarioForm();
             ObjAbrirFormularioAC.ShowDialog();
         }
+        #endregion
+        #region Abrir el formulario de conexión de servidor dentro de Configuración (SQL Server)
+        //Este es el método común cargando todas las variables de conexión dentro del fomulario de agregar conexión
+        private void AbrirConfiguracionServidor(object sender, EventArgs e)
+        {
+            //Instanciamos a al formulario de conexión
+            AgregarConexionForm ObjAbrirFMRConexion = new AgregarConexionForm();
+            ObjAbrirFMRConexion.txtServidorURL.Text = DTOAgregarConexion.Server;
+            ObjAbrirFMRConexion.txtBaseDeDatos.Text = DTOAgregarConexion.Database;
+            ObjAbrirFMRConexion.txtAutenticacion.Text = DTOAgregarConexion.User;
+            ObjAbrirFMRConexion.txtContrasena.Text = DTOAgregarConexion.Password;
+
+            //Abrimos el formulario
+            ObjAbrirFMRConexion.ShowDialog();
+        }
+        #endregion
+        #region Método para cerrar sesión accionando el botón dentro de configuración
         private void CerrarSesionConfig(object sender, EventArgs e)
         {
             if (MessageBox.Show("¿Desea cerrar sesión automáticamente? Considere que al accionase, el programa cerrará consecuentemente", "Cerrar Sesión", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 Environment.Exit(0);
             }
-        }       
-
+        }
+        #endregion
         //Creamos el método para instanciar la lectura del archivo ini desde la clase Config.cs
         private void modoOscuro(object sender, EventArgs e)
         {

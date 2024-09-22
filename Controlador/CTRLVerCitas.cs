@@ -157,6 +157,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                 if (ObjDAOEliminarCita.EliminarCitaYConsulta() == true)
                 {
                     MessageBox.Show("La Cita ha sido eliminada correctamente", "Eliminar Cita", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    CargarDGVCitas();
                 }
                 else
                 {

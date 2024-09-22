@@ -30,7 +30,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC
 
             if (ObjVerificarDocumentoXML.LeerArchivoXMLConexion() == false)
             {
-                Application.Run(new AgregarConexion());
+                Application.Run(new AgregarConexionForm());
             }
             //Indicamos que formularios se abriran según la consulta SQL
             else */if (ObjVerificarEmpresa.VerificarEmpresa() == false)
