@@ -17,9 +17,9 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                 Conexion.Connection = Conectar();
 
                 //En la consulta se ordena los datos de la vista para pedir el siguiente paciente (El que se encuentra en el TOP 1)
-                string queryCita = "SELECT TOP 1 * FROM vistaHistorial WHERE DUI = @DUI AND [Fecha de la cita ] = CONVERT(date, GETDATE()) ORDER BY [Fecha de la cita ] ASC";
+                string queryCita = "SELECT TOP 1 * FROM vistaCitasAgendadas WHERE [ID del Profesional] = '01234567-8' AND estadoId = 2 AND [Fecha de la Cita] >= CONVERT(date, GETDATE()) ORDER BY [Fecha de la Cita] ASC";
                 SqlCommand objSiguienteCita = new SqlCommand(queryCita, Conexion.Connection);
-                objSiguienteCita.Parameters.AddWithValue("@DUI", InicioSesion.Dui);
+                objSiguienteCita.Parameters.AddWithValue("@DUIProfesional", InicioSesion.Dui);
                 SqlDataAdapter adp = new SqlDataAdapter(objSiguienteCita);
                 DataTable dt = new DataTable();
 
@@ -173,7 +173,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                 Conexion.Connection = Conectar();
 
                 //Inicializamos la cadena
-                string consultaSQLCargarHistorial = "SELECT * FROM vistaHistorial WHERE DUI = @DUI";
+                string consultaSQLCargarHistorial = "SELECT * FROM vistaHistorial WHERE DUI = @DUI AND estadoId = 2 AND CAST([Fecha de la cita] AS DATE) = CAST(GETDATE() AS DATE) ORDER BY horaInicio ASC";
 
                 //Inicializamos el comando
                 SqlCommand ObjComandoSQLServerUC = new SqlCommand(consultaSQLCargarHistorial, Conexion.Connection);

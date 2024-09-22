@@ -23,8 +23,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Vista
                 lblHoraInicio.Text = DAOVerHistorial.HoraInicio2.ToString();
                 lblHoraFinal.Text = DAOVerHistorial.HoraFin.ToString();
                 lblDui.Text = DAOVerHistorial.DocumentoPresentado;
-
-
             }
             catch (Exception ex)
             {
