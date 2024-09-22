@@ -32,6 +32,7 @@
             Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             this.pnlSombraFondo = new Bunifu.UI.WinForms.BunifuShadowPanel();
             this.pnlForms = new Bunifu.UI.WinForms.BunifuGradientPanel();
             this.bunifuGradientPanel1 = new Bunifu.UI.WinForms.BunifuGradientPanel();
@@ -45,9 +46,11 @@
             this.btnAgregarConfiguracion = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.bunifuVScrollBar1 = new Bunifu.UI.WinForms.BunifuVScrollBar();
             this.pnlAparienciaGradiente = new Bunifu.UI.WinForms.BunifuGradientPanel();
+            this.switchModo = new Bunifu.UI.WinForms.BunifuToggleSwitch2();
             this.lblTituloApariencia = new Bunifu.UI.WinForms.BunifuLabel();
             this.lblPerosnalizacionModo = new Bunifu.UI.WinForms.BunifuLabel();
             this.pnlMiCuentaGradiente = new Bunifu.UI.WinForms.BunifuGradientPanel();
+            this.btnActualizarPerfil = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.picUsuario = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.btnCerrarSesion = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.lblDocumentoTitulo = new Bunifu.UI.WinForms.BunifuLabel();
@@ -64,7 +67,6 @@
             this.flpTopTitulo = new System.Windows.Forms.FlowLayoutPanel();
             this.lblConfiguracionTitulo = new Bunifu.UI.WinForms.BunifuLabel();
             this.pnlFondo = new Bunifu.UI.WinForms.BunifuPanel();
-            this.switchModo = new Bunifu.UI.WinForms.BunifuToggleSwitch2();
             this.pnlSombraFondo.SuspendLayout();
             this.pnlForms.SuspendLayout();
             this.bunifuGradientPanel1.SuspendLayout();
@@ -158,7 +160,7 @@
             this.lblCambiarContrasena.Location = new System.Drawing.Point(60, 88);
             this.lblCambiarContrasena.Name = "lblCambiarContrasena";
             this.lblCambiarContrasena.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblCambiarContrasena.Size = new System.Drawing.Size(438, 33);
+            this.lblCambiarContrasena.Size = new System.Drawing.Size(541, 40);
             this.lblCambiarContrasena.TabIndex = 12;
             this.lblCambiarContrasena.TabStop = false;
             this.lblCambiarContrasena.Text = "Cambia a una nueva contraseña";
@@ -176,7 +178,7 @@
             this.lblTituloCambiarContrasena.Location = new System.Drawing.Point(28, 26);
             this.lblTituloCambiarContrasena.Name = "lblTituloCambiarContrasena";
             this.lblTituloCambiarContrasena.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblTituloCambiarContrasena.Size = new System.Drawing.Size(295, 36);
+            this.lblTituloCambiarContrasena.Size = new System.Drawing.Size(1018, 117);
             this.lblTituloCambiarContrasena.TabIndex = 9;
             this.lblTituloCambiarContrasena.TabStop = false;
             this.lblTituloCambiarContrasena.Text = "Cambiar Contraseña";
@@ -309,7 +311,7 @@
             this.lblADNE_Devs.Location = new System.Drawing.Point(473, 162);
             this.lblADNE_Devs.Name = "lblADNE_Devs";
             this.lblADNE_Devs.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblADNE_Devs.Size = new System.Drawing.Size(435, 24);
+            this.lblADNE_Devs.Size = new System.Drawing.Size(2044, 119);
             this.lblADNE_Devs.TabIndex = 1;
             this.lblADNE_Devs.TabStop = false;
             this.lblADNE_Devs.Text = "Desarrollado por ADNE Dev Team - © 2024";
@@ -327,7 +329,7 @@
             this.lblConfiguraTuDB.Location = new System.Drawing.Point(60, 89);
             this.lblConfiguraTuDB.Name = "lblConfiguraTuDB";
             this.lblConfiguraTuDB.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblConfiguraTuDB.Size = new System.Drawing.Size(360, 33);
+            this.lblConfiguraTuDB.Size = new System.Drawing.Size(442, 40);
             this.lblConfiguraTuDB.TabIndex = 12;
             this.lblConfiguraTuDB.TabStop = false;
             this.lblConfiguraTuDB.Text = "Configura tu base de datos";
@@ -345,7 +347,7 @@
             this.lblTituloAgregarConexion.Location = new System.Drawing.Point(28, 22);
             this.lblTituloAgregarConexion.Name = "lblTituloAgregarConexion";
             this.lblTituloAgregarConexion.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblTituloAgregarConexion.Size = new System.Drawing.Size(260, 36);
+            this.lblTituloAgregarConexion.Size = new System.Drawing.Size(898, 117);
             this.lblTituloAgregarConexion.TabIndex = 9;
             this.lblTituloAgregarConexion.TabStop = false;
             this.lblTituloAgregarConexion.Text = "Agregar Conexión";
@@ -505,6 +507,26 @@
             this.pnlAparienciaGradiente.Size = new System.Drawing.Size(937, 180);
             this.pnlAparienciaGradiente.TabIndex = 11;
             // 
+            // switchModo
+            // 
+            this.switchModo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.switchModo.BackColor = System.Drawing.Color.Transparent;
+            this.switchModo.Checked = false;
+            this.switchModo.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(192)))), ((int)(((byte)(175)))));
+            this.switchModo.CheckedSwitchColor = System.Drawing.Color.White;
+            this.switchModo.CheckedSwitchStyle = Bunifu.UI.WinForms.BunifuToggleSwitch2.SwitchStyles.Fill;
+            this.switchModo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.switchModo.Location = new System.Drawing.Point(828, 93);
+            this.switchModo.Margin = new System.Windows.Forms.Padding(3, 3, 40, 3);
+            this.switchModo.MaximumSize = new System.Drawing.Size(110, 50);
+            this.switchModo.Name = "switchModo";
+            this.switchModo.OutlineThickness = 2;
+            this.switchModo.Size = new System.Drawing.Size(80, 35);
+            this.switchModo.TabIndex = 1;
+            this.switchModo.UncheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(92)))), ((int)(((byte)(98)))));
+            this.switchModo.UncheckedSwitchColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(213)))), ((int)(((byte)(213)))));
+            this.switchModo.UncheckedSwitchStyle = Bunifu.UI.WinForms.BunifuToggleSwitch2.SwitchStyles.Fill;
+            // 
             // lblTituloApariencia
             // 
             this.lblTituloApariencia.AllowParentOverrides = false;
@@ -516,7 +538,7 @@
             this.lblTituloApariencia.Location = new System.Drawing.Point(28, 27);
             this.lblTituloApariencia.Name = "lblTituloApariencia";
             this.lblTituloApariencia.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblTituloApariencia.Size = new System.Drawing.Size(156, 36);
+            this.lblTituloApariencia.Size = new System.Drawing.Size(540, 117);
             this.lblTituloApariencia.TabIndex = 9;
             this.lblTituloApariencia.TabStop = false;
             this.lblTituloApariencia.Text = "Apariencia";
@@ -534,7 +556,7 @@
             this.lblPerosnalizacionModo.Location = new System.Drawing.Point(60, 93);
             this.lblPerosnalizacionModo.Name = "lblPerosnalizacionModo";
             this.lblPerosnalizacionModo.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblPerosnalizacionModo.Size = new System.Drawing.Size(402, 33);
+            this.lblPerosnalizacionModo.Size = new System.Drawing.Size(491, 40);
             this.lblPerosnalizacionModo.TabIndex = 12;
             this.lblPerosnalizacionModo.TabStop = false;
             this.lblPerosnalizacionModo.Text = "Cambiar tema a modo oscuro";
@@ -549,6 +571,7 @@
             this.pnlMiCuentaGradiente.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlMiCuentaGradiente.BackgroundImage")));
             this.pnlMiCuentaGradiente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pnlMiCuentaGradiente.BorderRadius = 13;
+            this.pnlMiCuentaGradiente.Controls.Add(this.btnActualizarPerfil);
             this.pnlMiCuentaGradiente.Controls.Add(this.picUsuario);
             this.pnlMiCuentaGradiente.Controls.Add(this.btnCerrarSesion);
             this.pnlMiCuentaGradiente.Controls.Add(this.lblDocumentoTitulo);
@@ -570,6 +593,97 @@
             this.pnlMiCuentaGradiente.Quality = 10;
             this.pnlMiCuentaGradiente.Size = new System.Drawing.Size(937, 379);
             this.pnlMiCuentaGradiente.TabIndex = 10;
+            // 
+            // btnActualizarPerfil
+            // 
+            this.btnActualizarPerfil.AllowAnimations = true;
+            this.btnActualizarPerfil.AllowMouseEffects = true;
+            this.btnActualizarPerfil.AllowToggling = false;
+            this.btnActualizarPerfil.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnActualizarPerfil.AnimationSpeed = 200;
+            this.btnActualizarPerfil.AutoGenerateColors = false;
+            this.btnActualizarPerfil.AutoRoundBorders = false;
+            this.btnActualizarPerfil.AutoSizeLeftIcon = true;
+            this.btnActualizarPerfil.AutoSizeRightIcon = true;
+            this.btnActualizarPerfil.BackColor = System.Drawing.Color.Transparent;
+            this.btnActualizarPerfil.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(140)))), ((int)(((byte)(147)))), ((int)(((byte)(142)))));
+            this.btnActualizarPerfil.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnActualizarPerfil.BackgroundImage")));
+            this.btnActualizarPerfil.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btnActualizarPerfil.ButtonText = "Actualizar perfil";
+            this.btnActualizarPerfil.ButtonTextMarginLeft = 0;
+            this.btnActualizarPerfil.ColorContrastOnClick = 45;
+            this.btnActualizarPerfil.ColorContrastOnHover = 45;
+            this.btnActualizarPerfil.Cursor = System.Windows.Forms.Cursors.Hand;
+            borderEdges3.BottomLeft = true;
+            borderEdges3.BottomRight = true;
+            borderEdges3.TopLeft = true;
+            borderEdges3.TopRight = true;
+            this.btnActualizarPerfil.CustomizableEdges = borderEdges3;
+            this.btnActualizarPerfil.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnActualizarPerfil.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(140)))), ((int)(((byte)(147)))), ((int)(((byte)(142)))));
+            this.btnActualizarPerfil.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(140)))), ((int)(((byte)(147)))), ((int)(((byte)(142)))));
+            this.btnActualizarPerfil.DisabledForecolor = System.Drawing.Color.DarkGreen;
+            this.btnActualizarPerfil.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
+            this.btnActualizarPerfil.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActualizarPerfil.ForeColor = System.Drawing.Color.DarkGreen;
+            this.btnActualizarPerfil.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnActualizarPerfil.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.btnActualizarPerfil.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
+            this.btnActualizarPerfil.IconMarginLeft = 11;
+            this.btnActualizarPerfil.IconPadding = 11;
+            this.btnActualizarPerfil.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnActualizarPerfil.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.btnActualizarPerfil.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
+            this.btnActualizarPerfil.IconSize = 17;
+            this.btnActualizarPerfil.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(140)))), ((int)(((byte)(147)))), ((int)(((byte)(142)))));
+            this.btnActualizarPerfil.IdleBorderRadius = 25;
+            this.btnActualizarPerfil.IdleBorderThickness = 1;
+            this.btnActualizarPerfil.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(140)))), ((int)(((byte)(147)))), ((int)(((byte)(142)))));
+            this.btnActualizarPerfil.IdleIconLeftImage = global::Empresa_laboral_ADNE___Proyecto_PTC.Properties.Resources.UsuarioConfig;
+            this.btnActualizarPerfil.IdleIconRightImage = null;
+            this.btnActualizarPerfil.IndicateFocus = false;
+            this.btnActualizarPerfil.Location = new System.Drawing.Point(442, 310);
+            this.btnActualizarPerfil.MaximumSize = new System.Drawing.Size(232, 48);
+            this.btnActualizarPerfil.Name = "btnActualizarPerfil";
+            this.btnActualizarPerfil.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(140)))), ((int)(((byte)(147)))), ((int)(((byte)(142)))));
+            this.btnActualizarPerfil.OnDisabledState.BorderRadius = 25;
+            this.btnActualizarPerfil.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btnActualizarPerfil.OnDisabledState.BorderThickness = 1;
+            this.btnActualizarPerfil.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(140)))), ((int)(((byte)(147)))), ((int)(((byte)(142)))));
+            this.btnActualizarPerfil.OnDisabledState.ForeColor = System.Drawing.Color.DarkGreen;
+            this.btnActualizarPerfil.OnDisabledState.IconLeftImage = null;
+            this.btnActualizarPerfil.OnDisabledState.IconRightImage = null;
+            this.btnActualizarPerfil.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(147)))), ((int)(((byte)(142)))));
+            this.btnActualizarPerfil.onHoverState.BorderRadius = 25;
+            this.btnActualizarPerfil.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btnActualizarPerfil.onHoverState.BorderThickness = 1;
+            this.btnActualizarPerfil.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(147)))), ((int)(((byte)(142)))));
+            this.btnActualizarPerfil.onHoverState.ForeColor = System.Drawing.Color.SeaGreen;
+            this.btnActualizarPerfil.onHoverState.IconLeftImage = null;
+            this.btnActualizarPerfil.onHoverState.IconRightImage = null;
+            this.btnActualizarPerfil.OnIdleState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(140)))), ((int)(((byte)(147)))), ((int)(((byte)(142)))));
+            this.btnActualizarPerfil.OnIdleState.BorderRadius = 25;
+            this.btnActualizarPerfil.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btnActualizarPerfil.OnIdleState.BorderThickness = 1;
+            this.btnActualizarPerfil.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(140)))), ((int)(((byte)(147)))), ((int)(((byte)(142)))));
+            this.btnActualizarPerfil.OnIdleState.ForeColor = System.Drawing.Color.DarkGreen;
+            this.btnActualizarPerfil.OnIdleState.IconLeftImage = global::Empresa_laboral_ADNE___Proyecto_PTC.Properties.Resources.UsuarioConfig;
+            this.btnActualizarPerfil.OnIdleState.IconRightImage = null;
+            this.btnActualizarPerfil.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(147)))), ((int)(((byte)(142)))));
+            this.btnActualizarPerfil.OnPressedState.BorderRadius = 25;
+            this.btnActualizarPerfil.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btnActualizarPerfil.OnPressedState.BorderThickness = 1;
+            this.btnActualizarPerfil.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(147)))), ((int)(((byte)(142)))));
+            this.btnActualizarPerfil.OnPressedState.ForeColor = System.Drawing.Color.SeaGreen;
+            this.btnActualizarPerfil.OnPressedState.IconLeftImage = null;
+            this.btnActualizarPerfil.OnPressedState.IconRightImage = null;
+            this.btnActualizarPerfil.Size = new System.Drawing.Size(232, 48);
+            this.btnActualizarPerfil.TabIndex = 26;
+            this.btnActualizarPerfil.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnActualizarPerfil.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnActualizarPerfil.TextMarginLeft = 0;
+            this.btnActualizarPerfil.TextPadding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnActualizarPerfil.UseDefaultRadiusAndThickness = true;
             // 
             // picUsuario
             // 
@@ -609,15 +723,15 @@
             this.btnCerrarSesion.ColorContrastOnClick = 45;
             this.btnCerrarSesion.ColorContrastOnHover = 45;
             this.btnCerrarSesion.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges3.BottomLeft = true;
-            borderEdges3.BottomRight = true;
-            borderEdges3.TopLeft = true;
-            borderEdges3.TopRight = true;
-            this.btnCerrarSesion.CustomizableEdges = borderEdges3;
+            borderEdges4.BottomLeft = true;
+            borderEdges4.BottomRight = true;
+            borderEdges4.TopLeft = true;
+            borderEdges4.TopRight = true;
+            this.btnCerrarSesion.CustomizableEdges = borderEdges4;
             this.btnCerrarSesion.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnCerrarSesion.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.btnCerrarSesion.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.btnCerrarSesion.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btnCerrarSesion.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(147)))), ((int)(((byte)(142)))));
+            this.btnCerrarSesion.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(174)))), ((int)(((byte)(147)))), ((int)(((byte)(142)))));
+            this.btnCerrarSesion.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
             this.btnCerrarSesion.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
             this.btnCerrarSesion.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCerrarSesion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
@@ -640,12 +754,12 @@
             this.btnCerrarSesion.Location = new System.Drawing.Point(680, 310);
             this.btnCerrarSesion.MaximumSize = new System.Drawing.Size(232, 48);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
-            this.btnCerrarSesion.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btnCerrarSesion.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(147)))), ((int)(((byte)(142)))));
             this.btnCerrarSesion.OnDisabledState.BorderRadius = 25;
             this.btnCerrarSesion.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.btnCerrarSesion.OnDisabledState.BorderThickness = 1;
-            this.btnCerrarSesion.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.btnCerrarSesion.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btnCerrarSesion.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(174)))), ((int)(((byte)(147)))), ((int)(((byte)(142)))));
+            this.btnCerrarSesion.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
             this.btnCerrarSesion.OnDisabledState.IconLeftImage = null;
             this.btnCerrarSesion.OnDisabledState.IconRightImage = null;
             this.btnCerrarSesion.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(147)))), ((int)(((byte)(142)))));
@@ -690,7 +804,7 @@
             this.lblDocumentoTitulo.Location = new System.Drawing.Point(349, 222);
             this.lblDocumentoTitulo.Name = "lblDocumentoTitulo";
             this.lblDocumentoTitulo.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblDocumentoTitulo.Size = new System.Drawing.Size(303, 25);
+            this.lblDocumentoTitulo.Size = new System.Drawing.Size(1450, 117);
             this.lblDocumentoTitulo.TabIndex = 25;
             this.lblDocumentoTitulo.TabStop = false;
             this.lblDocumentoTitulo.Text = "Documento de Identificación:";
@@ -708,7 +822,7 @@
             this.lblCuenta.Location = new System.Drawing.Point(28, 22);
             this.lblCuenta.Name = "lblCuenta";
             this.lblCuenta.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblCuenta.Size = new System.Drawing.Size(145, 36);
+            this.lblCuenta.Size = new System.Drawing.Size(500, 117);
             this.lblCuenta.TabIndex = 9;
             this.lblCuenta.TabStop = false;
             this.lblCuenta.Text = "Mi Cuenta";
@@ -725,7 +839,7 @@
             this.lblCorreoUsuario.Location = new System.Drawing.Point(349, 177);
             this.lblCorreoUsuario.Name = "lblCorreoUsuario";
             this.lblCorreoUsuario.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblCorreoUsuario.Size = new System.Drawing.Size(193, 25);
+            this.lblCorreoUsuario.Size = new System.Drawing.Size(932, 117);
             this.lblCorreoUsuario.TabIndex = 24;
             this.lblCorreoUsuario.TabStop = false;
             this.lblCorreoUsuario.Text = "Correo Electrónico:";
@@ -743,7 +857,7 @@
             this.lblProfesional.Location = new System.Drawing.Point(349, 89);
             this.lblProfesional.Name = "lblProfesional";
             this.lblProfesional.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblProfesional.Size = new System.Drawing.Size(243, 25);
+            this.lblProfesional.Size = new System.Drawing.Size(1158, 117);
             this.lblProfesional.TabIndex = 22;
             this.lblProfesional.TabStop = false;
             this.lblProfesional.Text = "Nombre del Profesional:";
@@ -760,7 +874,7 @@
             this.lblUsuarioo.Location = new System.Drawing.Point(349, 133);
             this.lblUsuarioo.Name = "lblUsuarioo";
             this.lblUsuarioo.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblUsuarioo.Size = new System.Drawing.Size(81, 25);
+            this.lblUsuarioo.Size = new System.Drawing.Size(382, 117);
             this.lblUsuarioo.TabIndex = 23;
             this.lblUsuarioo.TabStop = false;
             this.lblUsuarioo.Text = "Usuario:";
@@ -886,26 +1000,6 @@
             this.pnlFondo.Size = new System.Drawing.Size(991, 1087);
             this.pnlFondo.TabIndex = 4;
             // 
-            // switchModo
-            // 
-            this.switchModo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.switchModo.BackColor = System.Drawing.Color.Transparent;
-            this.switchModo.Checked = false;
-            this.switchModo.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(192)))), ((int)(((byte)(175)))));
-            this.switchModo.CheckedSwitchColor = System.Drawing.Color.White;
-            this.switchModo.CheckedSwitchStyle = Bunifu.UI.WinForms.BunifuToggleSwitch2.SwitchStyles.Fill;
-            this.switchModo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.switchModo.Location = new System.Drawing.Point(828, 93);
-            this.switchModo.Margin = new System.Windows.Forms.Padding(3, 3, 40, 3);
-            this.switchModo.MaximumSize = new System.Drawing.Size(110, 50);
-            this.switchModo.Name = "switchModo";
-            this.switchModo.OutlineThickness = 2;
-            this.switchModo.Size = new System.Drawing.Size(80, 35);
-            this.switchModo.TabIndex = 1;
-            this.switchModo.UncheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(92)))), ((int)(((byte)(98)))));
-            this.switchModo.UncheckedSwitchColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(213)))), ((int)(((byte)(213)))));
-            this.switchModo.UncheckedSwitchStyle = Bunifu.UI.WinForms.BunifuToggleSwitch2.SwitchStyles.Fill;
-            // 
             // ConfiguraciónForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -973,5 +1067,6 @@
         public Bunifu.UI.WinForms.BunifuLabel lblTituloCambiarContrasena;
         public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnNuevaContrasena;
         public Bunifu.UI.WinForms.BunifuToggleSwitch2 switchModo;
+        public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnActualizarPerfil;
     }
 }

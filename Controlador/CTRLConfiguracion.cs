@@ -17,19 +17,20 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
     internal class CTRLConfiguracion
     {
         readonly ConfiguraciónForm ObjConfiguracionForm;
-        DashboardForm ObjDashboardForm = new DashboardForm();
         public CTRLConfiguracion(ConfiguraciónForm Vista)
         {
             ObjConfiguracionForm = Vista;
 
             ObjConfiguracionForm.Load += new EventHandler(CargarDatosUsuario);
+
+            ObjConfiguracionForm.btnActualizarPerfil.Click += new EventHandler(AbrirActualizarUsuario);
             ObjConfiguracionForm.btnCerrarSesion.Click += new EventHandler(CerrarSesionConfig);
             ObjConfiguracionForm.switchModo.CheckedChanged += new EventHandler(modoOscuro);
         }
         private void CargarDatosUsuario(object sender, EventArgs e)
         {
             ObjConfiguracionForm.lblRolUsuario.Text = InicioSesion.Especialidad;
-            ObjConfiguracionForm.lblNomprePersona.Text = InicioSesion.NombresApellidos;
+            ObjConfiguracionForm.lblNomprePersona.Text = InicioSesion.Nombres + " " + InicioSesion.Apellidos;
             ObjConfiguracionForm.lblCorreo.Text = InicioSesion.Correo;
             ObjConfiguracionForm.lblUsuario.Text = InicioSesion.Usuario;
             ObjConfiguracionForm.lblDUI.Text = InicioSesion.Dui;
@@ -38,23 +39,21 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             MemoryStream ObjArchivoMemoriaIMG = new MemoryStream(InicioSesion.Imagen);
             ObjConfiguracionForm.picUsuario.Image = Image.FromStream(ObjArchivoMemoriaIMG);
         }
+        private void AbrirActualizarUsuario(object sender, EventArgs e)
+        {
+            //Abrimos el formulario de Actualización del usuario
+            ConfiguraciónDeUsuarioForm ObjAbrirFormularioAC = new ConfiguraciónDeUsuarioForm();
+            ObjAbrirFormularioAC.ShowDialog();
+        }
         private void CerrarSesionConfig(object sender, EventArgs e)
         {
             if (MessageBox.Show("¿Desea cerrar sesión automáticamente? Considere que al accionase, el programa cerrará consecuentemente", "Cerrar Sesión", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 Environment.Exit(0);
             }
-        }
-       // private void ModoOscuro(object sender, EventArgs e)
-       //{
-       //     if (ObjConfiguracionForm.switchModo.Checked == true)
-       //     {
-       //         
-       //     }
-       //}
-       
+        }       
+
         //Creamos el método para instanciar la lectura del archivo ini desde la clase Config.cs
-        
         private void modoOscuro(object sender, EventArgs e)
         {
             Config objConfig = new Config();
@@ -69,8 +68,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                 ObjConfiguracionForm.BackColor = Color.FromArgb(14, 143, 156);
             }
         }
-
-
         //private void LimpiarVariablesInicioSesion()
         //{
         //    InicioSesion.UsuarioId = 0;

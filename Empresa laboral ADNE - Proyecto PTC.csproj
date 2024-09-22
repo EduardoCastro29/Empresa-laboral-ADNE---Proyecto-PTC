@@ -679,5 +679,14 @@
   <ItemGroup>
     <None Include="Resources\userPLUS_.SSpng.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Actualizar Usuario Config.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Actualizar User Config.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UsuarioConfig.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

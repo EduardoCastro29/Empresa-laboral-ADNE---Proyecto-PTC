@@ -106,11 +106,12 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                     //El DUI se encuentra en la posición 0
                     InicioSesion.Dui = ObjFilasEncontradas.GetString(0);
                     InicioSesion.Telefono = ObjFilasEncontradas.GetString(1);
-                    InicioSesion.NombresApellidos = ObjFilasEncontradas.GetString(2);
-                    InicioSesion.Imagen = (byte[])ObjFilasEncontradas.GetSqlBinary(3);
-                    InicioSesion.DesempenoId = ObjFilasEncontradas.GetString(4);
-                    InicioSesion.Usuario = ObjFilasEncontradas.GetString(5);
-                    InicioSesion.Especialidad = ObjFilasEncontradas.GetString(6);
+                    InicioSesion.Nombres = ObjFilasEncontradas.GetString(2);
+                    InicioSesion.Apellidos = ObjFilasEncontradas.GetString(3);
+                    InicioSesion.Imagen = (byte[])ObjFilasEncontradas.GetSqlBinary(4);
+                    InicioSesion.DesempenoId = ObjFilasEncontradas.GetString(5);
+                    InicioSesion.Usuario = ObjFilasEncontradas.GetString(6);
+                    InicioSesion.Especialidad = ObjFilasEncontradas.GetString(7);
                 }
 
                 //Retornamos las filas encontradas por SQLServer

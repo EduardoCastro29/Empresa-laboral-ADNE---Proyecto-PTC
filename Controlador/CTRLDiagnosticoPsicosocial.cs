@@ -81,8 +81,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                 e.KeyChar == ',' ||
                 e.KeyChar == '.' ||
                 e.KeyChar == '"' ||
-                (e.KeyChar >= '0' && e.KeyChar <= '9')
-                );
+                (e.KeyChar >= '0' && e.KeyChar <= '9'))
             {
                 //Retornamos los valores e.KeyChar
                 return;

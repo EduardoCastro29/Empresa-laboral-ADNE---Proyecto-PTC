@@ -260,6 +260,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             ObjRegistroForm.txtNombre.KeyPress += new KeyPressEventHandler(ValidarCampoLetra);
             ObjRegistroForm.txtApellido.KeyPress += new KeyPressEventHandler(ValidarCampoLetra);
             ObjRegistroForm.txtDui.KeyPress += new KeyPressEventHandler(ValidarCampoDocumento);
+            ObjRegistroForm.txtDui.TextChange += new EventHandler(EnmascararCampoDocumento);
             ObjRegistroForm.txtTelefono.KeyPress += new KeyPressEventHandler(ValidarCampoNumero);
             ObjRegistroForm.txtUsuario.KeyPress += new KeyPressEventHandler(ValidarCampoUsuario);
             ObjRegistroForm.txtCorreo.KeyPress += new KeyPressEventHandler(ValidarCampoCorreo);
@@ -350,6 +351,32 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                 return;
             }
             e.Handled = true;
+        }
+        private void EnmascararCampoDocumento(object sender, EventArgs e)
+        {
+            //Obtenemos la longitud actual del textbox para evaluar si es necesario el remplazo por guión (en este caso el DUI) o número
+            string EnmascararDUI = ObjRegistroForm.txtDui.Text.Replace("-", "");
+
+            //Limitamos el textbox para que solo obtenga 9 caracteres
+            if (EnmascararDUI.Length > 9)
+            {
+                EnmascararDUI = EnmascararDUI.Substring(0, 9);
+            }
+
+            //Una vez llegada a la longitud deseada, en este caso 8 pone un guión automáticamente para enmascarar el DUI
+            if (EnmascararDUI.Length > 8)
+            {
+                //Indicamos en qué posición se pondrá el guión y que símbolo tomará
+                ObjRegistroForm.txtDui.Text = EnmascararDUI.Insert(8, "-");
+            }
+            else
+            {
+                //Caso contrario, no realizamos ningun cambio (no se inserta el guión)
+                ObjRegistroForm.txtDui.Text = EnmascararDUI;
+            }
+
+            //Indicamos que la posición inicial del cursor, será al inicio del textbox
+            ObjRegistroForm.txtDui.SelectionStart = ObjRegistroForm.txtDui.Text.Length;
         }
         private void ValidarCampoNumero(object sender, KeyPressEventArgs e)
         {
@@ -493,82 +520,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             }
         }
         #endregion
-        #region Actualización al Formulario del Profesional (UPDATE)
-        //private void ActualizarRegistroProfesional(object sender, EventArgs e)
-        //{
-        //    //Empezamos el bloque de código con un try catch, esto para verificar si hubo algún error, identificar la línea respectiva
-        //    try
-        //    {
-        //        //Evaluamos si existen campos vacios dentro del formulario
-        //        if (ObjRegistroForm.txtUsuario.Text.Length < 2 ||
-        //            ObjRegistroForm.txtNombre.Text.Length < 2 ||
-        //            ObjRegistroForm.txtCorreo.Text.Length < 10 ||
-        //            ObjRegistroForm.txtApellido.Text.Length < 2 ||
-        //            ObjRegistroForm.txtDui.Text.Length < 10 ||
-        //            ObjRegistroForm.txtTelefono.Text.Length < 9 ||
-        //            ObjRegistroForm.picProfesional.Image == Properties.Resources.ProfesionalPic)
-        //        {
-        //            ObjRegistroForm.Notificacion1.Show(ObjRegistroForm, "Error al registrarse, verifique si todos los datos han sido ingresados correctamente o si los datos han sido rellenados con éxito", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error);
-        //            //MessageBox.Show("Error al registrarse, verifique si todos los datos han sido ingresados correctamente o si los datos han sido rellenados con éxito", "Actualizar Profesional", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-        //        }
-        //        else
-        //        {
-        //            //Creamos las clases que usaremos para la actualización del PROFESIONAL y USUARIO
-        //            DAOAdministrador ObjDAOActualizarProfesional = new DAOAdministrador();
-        //            CommonMethods ObjMetodosComunes = new CommonMethods();
-
-        //            //Obtenemos datos del objeto ObjDAOActualizarProfesional
-        //            ObjDAOActualizarProfesional.UsuarioId = int.Parse(ObjRegistroForm.txtIDUsuario.Text.Trim());
-        //            //Mandamos a llamar el método MetodoEncriptacionAES para encriptarla y enviarla a la base de datos
-        //            //De igual forma, al actualizar el Usuario del Profesional, se actualizará la contraseña del mismo
-        //            //De esta forma, el reseteo de contraseña vía administrador se hace presente
-        //            ObjDAOActualizarProfesional.Contraseña = ObjMetodosComunes.MetodoEncriptacionAES(ObjRegistroForm.txtUsuario.Text.Trim() + "ADNE2024");
-        //            ObjDAOActualizarProfesional.Dui = ObjRegistroForm.txtDui.Text;
-        //            ObjDAOActualizarProfesional.Nombres = ObjRegistroForm.txtNombre.Text.Trim();
-        //            ObjDAOActualizarProfesional.Apellidos = ObjRegistroForm.txtApellido.Text.Trim();
-        //            ObjDAOActualizarProfesional.Telefono = ObjRegistroForm.txtTelefono.Text;
-        //            ObjDAOActualizarProfesional.DesempenoId = int.Parse(ObjRegistroForm.cmbDesempeno.SelectedValue.ToString());
-
-        //            //if (ObjRegistroForm.ofdImagen.ShowDialog() == DialogResult.OK)
-        //            //{
-        //            //    //Declaramos un objeto del tipo Imagen
-        //            //    Image ObjImagenProfesional = ObjRegistroForm.picProfesional.Image;
-        //            //    //Declaramos un arreglo de bytes
-        //            //    byte[] ImagenProfesional;
-
-        //            //}
-
-        //            if (VerificarCorreoUsuario(ObjRegistroForm.txtCorreo.Text.Trim()) == true)
-        //            {
-        //                ObjDAOActualizarProfesional.Correo = ObjRegistroForm.txtCorreo.Text.Trim();
-        //                //Finalmente, evaluamos si la actualización se hizo correctamente
-        //                if (ObjDAOActualizarProfesional.ActualizarRestablecerContra() == false)
-        //                {
-        //                    ObjRegistroForm.Notificacion1.Show(ObjRegistroForm, "Error al actualizar el profesional, verifique si todos los datos han sido ingresados correctamente", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error);
-        //                    //MessageBox.Show("Error al actualizar el profesional, verifique si todos los datos han sido ingresados correctamente", "Actualizar Profesional", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        //                }
-        //                else
-        //                {
-        //                    ObjRegistroForm.Notificacion1.Show(ObjRegistroForm, "El profesional ha sido actualizado correctamente", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Success);
-        //                    //MessageBox.Show("El profesional ha sido actualizado correctamente", "Actualizar Profesional", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-        //                    //Ocultamos el formulario de Registro                            
-        //                    ObjRegistroForm.Hide();
-        //                }
-        //            }
-        //            else
-        //            {
-        //                ObjRegistroForm.Notificacion1.Show(ObjRegistroForm, "El correo electrónico ingresado no posee una dirección de correo válida, verifique si contiene @ o dominio correcto", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error);
-        //                //MessageBox.Show("El correo electrónico ingresado no posee una dirección de correo válida, verifique si contiene @ o dominio correcto", "Actualizar Profesional", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        //            }
-        //        }
-        //    }
-        //    catch (Exception)
-        //    {
-        //        ObjRegistroForm.Notificacion1.Show(ObjRegistroForm, "Error al actualizar el profesional, verifique si todos los datos han sido ingresados correctamente", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error);
-        //    }
-        //}
-        #endregion //Pendiente de lo de Edwinaso
         #region Métodos para cargar, mostrar y eliminar la imagen en el PictureBox
         private void CargarImagenProfesional(object sender, EventArgs e)
         {

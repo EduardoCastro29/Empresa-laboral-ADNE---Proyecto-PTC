@@ -14,15 +14,12 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Vista
 {
     public partial class DashboardForm : Form
     {
-        ConfiguraciónForm objConfigForm;
-
         public DashboardForm()
         {
             InitializeComponent();
             leerIni();
             CTRLDashboard ObjDashboardControlador = new CTRLDashboard(this);
         }
-
         private void leerIni()
         {
             Config objConfig = new Config();

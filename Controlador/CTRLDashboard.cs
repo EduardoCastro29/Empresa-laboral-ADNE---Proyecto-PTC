@@ -78,7 +78,8 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             InicioSesion.Contraseña = string.Empty;
             InicioSesion.Correo = string.Empty;
             InicioSesion.Dui = string.Empty;
-            InicioSesion.NombresApellidos = string.Empty;
+            InicioSesion.Nombres = string.Empty;
+            InicioSesion.Apellidos = string.Empty;
             InicioSesion.Telefono = string.Empty;
             InicioSesion.Imagen = null;
             InicioSesion.Especialidad = string.Empty;
