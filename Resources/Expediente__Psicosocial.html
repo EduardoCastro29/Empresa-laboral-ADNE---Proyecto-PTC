@@ -1,38 +1,55 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    
     <title>Expediente Psicosocial</title>
     <style>
-        table, th, td { 
+        table, th, td {
             border: 1px solid black;
             border-collapse: collapse;
         }
+
         body {
             margin: 50px;
-            font-family:Calibri, 'Trebuchet MS', sans-serif;
+            font-family: Calibri, 'Trebuchet MS', sans-serif;
         }
+
         table {
             width: 100%;
         }
-        .seguimiento{
+
+        .seguimiento {
             display: flex;
             align-items: center;
             flex-direction: column;
         }
-        h1{
+
+        h1 {
             font-size: 25px;
             font-family: sans-serif;
             text-align: center;
             margin-bottom: 45px;
         }
-        h2{
+
+        h2 {
             font-size: 20px;
         }
     </style>
 </head>
 <body>
     <header>
+        <table>
+            <tr>
+                <td>
+                </td>
+                <td style="width: 65%;" align="center">
+                    <h2 style="font-size: 18px;">Empresa: @NOMBREEMPRESA</h2>
+                    <H2 style="font-size: 18px;">Teléfono: @TELEFONOEMPRESA</H2>
+                    <h2 style="font-size: 18px;">Ubicación: @UBICACION</h2>
+                    <h2 style="font-size: 18px;">Dirección de correo: @CORREOEMPRESA</h2>
+                </td>
+            </tr>
+        </table>
+        <br>
         <h1>FICHA PARA EXPEDIENTE PSICOSOCIAL</h1>
     </header>
     <main>
@@ -51,17 +68,21 @@
                     <td colspan="3" style="height: 24px;">Nombre del familiar: @NOMBRECOMPLETO</td>
                 </tr>
 
+
                 <tr>
-                    <td style="height: 24px; width: 30%;">Nacionalidad: </td>
-                    <td style="height: 24px; width: 30%;">Documento presentado: </td>
-                    <td style="height: 24px; width: 30%;">Profesión: </td>
+                    <td style="height: 24px; width: 30%;">
+                        Nacionalidad: <br>
+                        @NACIONALIDAD
+                    </td>
+                    <td style="height: 24px; width: 30%;">
+                        Documento presentado: <br>
+                        @DOCUMENTOPRESENTADO
+                    </td>
+                    <td style="height: 24px; width: 30%;">
+                        Profesión: <br>
+                        @PROFESION
+                    </td>
                 </tr>
-                <tr>
-                    <td style="height: 24px; width: 30%;">@NACIONALIDAD</td>
-                    <td style="height: 24px; width: 30%;">@DOCUMENTOPRESENTADO</td>
-                    <td style="height: 24px; width: 30%;">@PROFESION</td>
-                </tr>
-            
                 <tr>
                     <td style="height: 24px;">Edad: @EDAD</td>
                     <td style="height: 24px;">Género: @GENERO</td>
@@ -85,44 +106,45 @@
                 </tr>
             </table>
         </div>
+        <br>
         <div>
             <h2>II. IMPACTO PSICOSOCIAL</h2>
             <table>
                 <tr>
                     <td style="height: 24px; width: 20%;">Afectividad sintomatología del estado de ánimo</td>
-                    <td style="height: 24px;">@ESTADOANIMO</td>
+                    <td style="height: 24px; width: 80%;">@ESTADOANIMO</td>
                 </tr>
                 <tr>
                     <td style="height: 24px; width: 20%;">Estado Conductual</td>
-                    <td style="height: 24px;">@ESTADOCONDUCTUAL</td>
+                    <td style="height: 24px; width: 80%;">@ESTADOCONDUCTUAL</td>
                 </tr>
                 <tr>
                     <td style="height: 24px; width: 20%;">Somatizaciones, Salud</td>
-                    <td style="height: 24px;">@SOMATIZACION</td>
+                    <td style="height: 24px; width: 80%;">@SOMATIZACION</td>
                 </tr>
                 <tr>
                     <td style="height: 24px; width: 20%;">Interpersonal, Cambios y manejo en la vida familiar y social.</td>
-                    <td style="height: 24px;">@VIDAINTERPERSONAL</td>
+                    <td style="height: 24px; width: 80%;">@VIDAINTERPERSONAL</td>
                 </tr>
                 <tr>
                     <td style="height: 24px; width: 20%;">Cogniciones, pensamientos y creencias</td>
-                    <td style="height: 24px;">@COGNICION</td>
+                    <td style="height: 24px; width: 80%;">@COGNICION</td>
                 </tr>
                 <tr>
                     <td style="height: 24px; width: 20%;">Redes sociales de apoyo</td>
-                    <td style="height: 24px;">@REDSOCIAL</td>
+                    <td style="height: 24px; width: 80%;">@REDSOCIAL</td>
                 </tr>
                 <tr>
                     <td style="height: 24px; width: 20%;">Pautas de afrontamiento, Recursos personales</td>
-                    <td style="height: 24px;">@PAUTA</td>
+                    <td style="height: 24px; width: 80%;">@PAUTA</td>
                 </tr>
                 <tr>
                     <td style="height: 24px; width: 20%;">Valoración del riesgo</td>
-                    <td style="height: 24px;">@RIESGOVALORADO</td>
+                    <td style="height: 24px; width: 80%;">@RIESGOVALORADO</td>
                 </tr>
             </table>
         </div>
-
+        <br>
         <div>
             <h2>III. OBSERVACIONES GENERALES</h2>
             <table>
@@ -131,7 +153,7 @@
                 </tr>
             </table>
         </div>
-        
+        <br>
         <div>
             <h2>IV. APROXIMACIONES DIAGNÓSTICAS</h2>
             <table>
@@ -140,6 +162,7 @@
                 </tr>
             </table>
         </div>
+        <br>
         <div>
             <h2>V. ATENCIÓN BRINDADA</h2>
             <table>
@@ -148,13 +171,17 @@
                 </tr>
             </table>
         </div>
-        
+        <br>
+        <hr>
         <div>
             <div class="seguimiento">
                 <h2 style="margin-top: 30px;">SESIONES DE SEGUIMIENTO</h2>
+                <br>
                 <h3>Fecha: @FECHA</h3>
                 <h3>Hora: @HORAINICIO</h3>
                 <h3>Lugar: @LUGAR</h3>
+                <br>
+
             </div>
             <table>
                 <tr>
