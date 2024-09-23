@@ -56,7 +56,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
             }
             catch (Exception)
             {
-                MessageBox.Show("Ha ocurrido un error, ERR-041-1 - Error al conectarse con una red de Internet o el correo ha sido mal proporcionado, verifique su conexión a Internet. [Consulte el Manual Técnico]", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Ha ocurrido un error, ERR-012-1 - Error al conectarse con una red de Internet o el correo ha sido mal proporcionado, verifique su conexión a Internet. [Consulte el Manual Técnico]", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
