@@ -133,6 +133,9 @@
   <data name="userPLUS_.SSpng" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\userPLUS_.SSpng.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Registro_Modo_Oscuro" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Registro_Modo_Oscuro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="mail" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\mail.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -148,6 +151,9 @@
   <data name="ADNE logo sin fondo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ADNE logo sin fondo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Imagen usuario" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Imagen usuario.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Menu" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Menu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -159,9 +165,6 @@
   </data>
   <data name="Frame 34 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Frame 34 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="userPLUS__" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\userPLUS__.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Pagina principal" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Pagina principal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -211,20 +214,23 @@
   <data name="Lupa" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Lupa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Descargar documentos" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Descargar documentos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="authorization" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\authorization.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="email" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\email.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Personal" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Personal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Equipo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Equipo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Imagen usuario" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Imagen usuario.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Ver pacientes" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Ver pacientes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Ver Profesional" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Ver Profesional.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Foto configuración" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Foto configuración.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -259,8 +265,8 @@
   <data name="fluent_minimize-12-filled" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fluent_minimize-12-filled1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Ver pacientes" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Ver pacientes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="userPLUS__" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\userPLUS__.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="picture_12236752" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\picture_12236752.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -292,10 +298,10 @@
   <data name="Frame 9" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Frame 91.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Ver Profesional" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Ver Profesional.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Personal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Personal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Descargar documentos" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Descargar documentos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Pacientes_Modo_Oscuro" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Pacientes_Modo_Oscuro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -17,6 +17,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Vista
         internal ControlPacientePlanillaUC(DAODiagnosticos objDAOCitas)
         {
             InitializeComponent();
+            leerIni();
             this.ParentChanged += new EventHandler(OnParentChanged);
             CTRLCitas objUCCitas = new CTRLCitas(this);
             try
@@ -53,6 +54,29 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Vista
                 flp.PerformLayout(); // Asegura que el layout se actualice
                 flp.Invalidate();    // Fuerza un redibujado
                 flp.Update();
+            }
+        }
+        private void leerIni()
+        {
+            Config objConfig = new Config();
+            objConfig.LeerIni();
+
+            if (objConfig.objDTOConfig.modoOscuro == "dark")
+            {
+                this.pnlFondoUC.GradientTopLeft = Color.FromArgb(38, 102, 119);
+                this.pnlFondoUC.GradientTopRight = Color.FromArgb(38, 102, 119);
+                this.pnlFondoUC.GradientBottomLeft = Color.FromArgb(39, 102, 119);
+                this.pnlFondoUC.GradientBottomRight = Color.FromArgb(39, 102, 119);
+
+                this.pnlSeparador.BackgroundColor = Color.WhiteSmoke;
+
+                this.lblNombrePaciente.ForeColor = Color.White;
+                this.lblDUI.ForeColor = Color.White;
+
+                this.btnDescargar.onHoverState.FillColor = Color.FromArgb(33, 184, 177);
+                this.btnDescargar.IdleFillColor = Color.FromArgb(28, 148, 143);
+                this.btnDescargar.OnPressedState.ForeColor = Color.WhiteSmoke;
+                this.btnDescargar.OnPressedState.FillColor = Color.FromArgb(22, 117, 113);
             }
         }
     }

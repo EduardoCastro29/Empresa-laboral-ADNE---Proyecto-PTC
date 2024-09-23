@@ -16,11 +16,25 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Vista
         public UCDias()
         {
             InitializeComponent();
+            leerIni();
             CTRLUCDias ObjUCControladorDias = new CTRLUCDias(this);
         }
-        public void ModificarFondo(Color color)
+        //public void ModificarFondo(Color color)
+        //{
+        //    this.btnCalendar.BackColor = color;
+        //}
+        private void leerIni()
         {
-            this.btnCalendar.BackColor = color;
+            Config objConfig = new Config();
+            objConfig.LeerIni();
+
+            if (objConfig.objDTOConfig.modoOscuro == "dark")
+            {
+                this.btnCalendar.IdleFillColor = Color.FromArgb(2, 135, 135);
+                this.btnCalendar.IdleBorderColor = Color.FromArgb(2, 135, 135);
+                this.lblDias.ForeColor = Color.FromArgb(207, 227, 227);
+                this.lblDias.BackColor = Color.FromArgb(2, 135, 135);
+            }
         }
 
         private void UCDias_Load(object sender, EventArgs e)

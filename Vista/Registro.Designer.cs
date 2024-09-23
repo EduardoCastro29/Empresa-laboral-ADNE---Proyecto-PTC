@@ -85,8 +85,8 @@
             this.btnEliminar = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.btnRegistrar = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.bunifuGradientPanel1 = new Bunifu.UI.WinForms.BunifuGradientPanel();
-            this.cmbDesempeno = new Bunifu.UI.WinForms.BunifuDropdown();
             this.bpRegistrar = new Bunifu.UI.WinForms.BunifuPanel();
+            this.cmbDesempeno = new Bunifu.UI.WinForms.BunifuDropdown();
             this.bunifuPanel4 = new Bunifu.UI.WinForms.BunifuPanel();
             this.btnCargarImagen = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.lblDesempeno1 = new Bunifu.UI.WinForms.BunifuLabel();
@@ -131,7 +131,7 @@
             this.lblTelefono.Location = new System.Drawing.Point(66, 348);
             this.lblTelefono.Name = "lblTelefono";
             this.lblTelefono.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblTelefono.Size = new System.Drawing.Size(144, 39);
+            this.lblTelefono.Size = new System.Drawing.Size(82, 23);
             this.lblTelefono.TabIndex = 31;
             this.lblTelefono.TabStop = false;
             this.lblTelefono.Text = "Teléfono:";
@@ -257,7 +257,7 @@
             this.lblUsuario.Location = new System.Drawing.Point(421, 239);
             this.lblUsuario.Name = "lblUsuario";
             this.lblUsuario.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblUsuario.Size = new System.Drawing.Size(127, 39);
+            this.lblUsuario.Size = new System.Drawing.Size(73, 23);
             this.lblUsuario.TabIndex = 29;
             this.lblUsuario.TabStop = false;
             this.lblUsuario.Text = "Usuario:";
@@ -383,7 +383,7 @@
             this.lblDocumento.Location = new System.Drawing.Point(66, 239);
             this.lblDocumento.Name = "lblDocumento";
             this.lblDocumento.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblDocumento.Size = new System.Drawing.Size(188, 39);
+            this.lblDocumento.Size = new System.Drawing.Size(107, 23);
             this.lblDocumento.TabIndex = 28;
             this.lblDocumento.TabStop = false;
             this.lblDocumento.Text = "Documento";
@@ -615,7 +615,7 @@
             this.lblApellidos.Location = new System.Drawing.Point(421, 133);
             this.lblApellidos.Name = "lblApellidos";
             this.lblApellidos.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblApellidos.Size = new System.Drawing.Size(158, 39);
+            this.lblApellidos.Size = new System.Drawing.Size(92, 23);
             this.lblApellidos.TabIndex = 11;
             this.lblApellidos.TabStop = false;
             this.lblApellidos.Text = "Apellidos:";
@@ -636,7 +636,7 @@
             this.lblNombres.Location = new System.Drawing.Point(66, 133);
             this.lblNombres.Name = "lblNombres";
             this.lblNombres.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblNombres.Size = new System.Drawing.Size(154, 39);
+            this.lblNombres.Size = new System.Drawing.Size(88, 23);
             this.lblNombres.TabIndex = 12;
             this.lblNombres.TabStop = false;
             this.lblNombres.Text = "Nombres:";
@@ -729,7 +729,7 @@
             this.Titulo_Registrar.Location = new System.Drawing.Point(51, 32);
             this.Titulo_Registrar.Name = "Titulo_Registrar";
             this.Titulo_Registrar.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.Titulo_Registrar.Size = new System.Drawing.Size(1313, 119);
+            this.Titulo_Registrar.Size = new System.Drawing.Size(387, 36);
             this.Titulo_Registrar.TabIndex = 0;
             this.Titulo_Registrar.TabStop = false;
             this.Titulo_Registrar.Text = "Registrar Nuevo Profesional";
@@ -1011,6 +1011,25 @@
             this.TTContraseña.SetToolTipIcon(this.bunifuGradientPanel1, null);
             this.TTContraseña.SetToolTipTitle(this.bunifuGradientPanel1, "");
             // 
+            // bpRegistrar
+            // 
+            this.bpRegistrar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bpRegistrar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.bpRegistrar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bpRegistrar.BackgroundImage")));
+            this.bpRegistrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bpRegistrar.BorderColor = System.Drawing.Color.Transparent;
+            this.bpRegistrar.BorderRadius = 15;
+            this.bpRegistrar.BorderThickness = 0;
+            this.bpRegistrar.Controls.Add(this.btnRegistrar);
+            this.bpRegistrar.Location = new System.Drawing.Point(970, 609);
+            this.bpRegistrar.Name = "bpRegistrar";
+            this.bpRegistrar.ShowBorders = true;
+            this.bpRegistrar.Size = new System.Drawing.Size(248, 76);
+            this.bpRegistrar.TabIndex = 0;
+            this.TTContraseña.SetToolTip(this.bpRegistrar, "");
+            this.TTContraseña.SetToolTipIcon(this.bpRegistrar, null);
+            this.TTContraseña.SetToolTipTitle(this.bpRegistrar, "");
+            // 
             // cmbDesempeno
             // 
             this.cmbDesempeno.BackColor = System.Drawing.Color.Transparent;
@@ -1057,25 +1076,6 @@
             this.TTContraseña.SetToolTip(this.cmbDesempeno, "");
             this.TTContraseña.SetToolTipIcon(this.cmbDesempeno, null);
             this.TTContraseña.SetToolTipTitle(this.cmbDesempeno, "");
-            // 
-            // bpRegistrar
-            // 
-            this.bpRegistrar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.bpRegistrar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.bpRegistrar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bpRegistrar.BackgroundImage")));
-            this.bpRegistrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bpRegistrar.BorderColor = System.Drawing.Color.Transparent;
-            this.bpRegistrar.BorderRadius = 15;
-            this.bpRegistrar.BorderThickness = 0;
-            this.bpRegistrar.Controls.Add(this.btnRegistrar);
-            this.bpRegistrar.Location = new System.Drawing.Point(970, 609);
-            this.bpRegistrar.Name = "bpRegistrar";
-            this.bpRegistrar.ShowBorders = true;
-            this.bpRegistrar.Size = new System.Drawing.Size(248, 76);
-            this.bpRegistrar.TabIndex = 0;
-            this.TTContraseña.SetToolTip(this.bpRegistrar, "");
-            this.TTContraseña.SetToolTipIcon(this.bpRegistrar, null);
-            this.TTContraseña.SetToolTipTitle(this.bpRegistrar, "");
             // 
             // bunifuPanel4
             // 
@@ -1199,7 +1199,7 @@
             this.lblDesempeno1.Location = new System.Drawing.Point(67, 613);
             this.lblDesempeno1.Name = "lblDesempeno1";
             this.lblDesempeno1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblDesempeno1.Size = new System.Drawing.Size(204, 39);
+            this.lblDesempeno1.Size = new System.Drawing.Size(116, 23);
             this.lblDesempeno1.TabIndex = 44;
             this.lblDesempeno1.TabStop = false;
             this.lblDesempeno1.Text = "Desempeño:";
@@ -1344,7 +1344,7 @@
             this.lblCorreo.Location = new System.Drawing.Point(66, 464);
             this.lblCorreo.Name = "lblCorreo";
             this.lblCorreo.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblCorreo.Size = new System.Drawing.Size(308, 39);
+            this.lblCorreo.Size = new System.Drawing.Size(176, 23);
             this.lblCorreo.TabIndex = 33;
             this.lblCorreo.TabStop = false;
             this.lblCorreo.Text = "Correo Electrónico:";
@@ -1471,7 +1471,7 @@
             this.lblContrasena.Location = new System.Drawing.Point(421, 348);
             this.lblContrasena.Name = "lblContrasena";
             this.lblContrasena.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblContrasena.Size = new System.Drawing.Size(197, 39);
+            this.lblContrasena.Size = new System.Drawing.Size(112, 23);
             this.lblContrasena.TabIndex = 32;
             this.lblContrasena.TabStop = false;
             this.lblContrasena.Text = "Contraseña:";

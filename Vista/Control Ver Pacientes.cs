@@ -1,6 +1,7 @@
 ﻿using Empresa_laboral_ADNE___Proyecto_PTC.Controlador;
 using Empresa_laboral_ADNE___Proyecto_PTC.Controlador.ControladorUserControlPaciente;
 using Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO;
+using Empresa_laboral_ADNE___Proyecto_PTC.Properties;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,6 +19,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Vista
         internal ControlVerPacientesUC(DAOVerPacientes DaoVerPaciente)
         {
             InitializeComponent();
+            leerIni();
             this.ParentChanged += new EventHandler(OnParentChanged);
 
             // Aca hacemos referencia al controlador de paciente de user control con los parametros de ControlVerPacientesUC vista
@@ -36,6 +38,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Vista
         internal ControlVerPacientesUC(DAOActividades daoActividades)
         {
             InitializeComponent();
+            leerIniDashboard();
             this.ParentChanged += new EventHandler(ParentChangedActividades);
             CTRLPacienteUC ObjVerInforme = new CTRLPacienteUC(this);
 
@@ -92,6 +95,55 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Vista
                 flp.PerformLayout(); // Asegura que el layout se actualice
                 flp.Invalidate();    // Fuerza un redibujado
                 flp.Update();
+            }
+        }
+        private void leerIni()
+        {
+            Config objConfig = new Config();
+            objConfig.LeerIni();
+
+            if (objConfig.objDTOConfig.modoOscuro == "dark")
+            {
+                this.pnlFondoPacienteUC.PanelColor = Color.FromArgb(69, 113, 130);
+
+                this.pbPaciente.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Custom;
+
+                this.lblNombrePaciente.ForeColor = Color.FromArgb(245, 245, 245);
+
+                this.btnVerInformacion.IdleFillColor = Color.FromArgb(34, 143, 131);
+                this.btnVerInformacion.IdleBorderColor = Color.FromArgb(34, 143, 131);
+                this.btnVerInformacion.onHoverState.BorderColor = Color.FromArgb(42, 172, 158);
+                this.btnVerInformacion.onHoverState.FillColor = Color.FromArgb(42, 172, 158);
+
+                this.btnVerExpediente.IdleFillColor = Color.FromArgb(34, 143, 131);
+                this.btnVerExpediente.IdleBorderColor = Color.FromArgb(34, 143, 131);
+                this.btnVerExpediente.onHoverState.BorderColor = Color.FromArgb(42, 172, 158);
+                this.btnVerExpediente.onHoverState.FillColor = Color.FromArgb(42, 172, 158);
+            }
+        }
+        private void leerIniDashboard()
+        {
+            Config objConfig = new Config();
+            objConfig.LeerIni();
+
+            if (objConfig.objDTOConfig.modoOscuro == "dark")
+            {
+                this.pnlFondoPacienteUC.PanelColor = Color.FromArgb(43, 122, 121);
+
+                this.pbPaciente.Image = Resources.Pacientes_Modo_Oscuro;
+                this.pbPaciente.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Custom;
+
+                this.lblNombrePaciente.ForeColor = Color.FromArgb(245, 245, 245);
+
+                this.btnVerInformacion.IdleFillColor = Color.FromArgb(34, 143, 131);
+                this.btnVerInformacion.IdleBorderColor = Color.FromArgb(34, 143, 131);
+                this.btnVerInformacion.onHoverState.BorderColor = Color.FromArgb(42, 172, 158);
+                this.btnVerInformacion.onHoverState.FillColor = Color.FromArgb(42, 172, 158);
+
+                this.btnVerExpediente.IdleFillColor = Color.FromArgb(34, 143, 131);
+                this.btnVerExpediente.IdleBorderColor = Color.FromArgb(34, 143, 131);
+                this.btnVerExpediente.onHoverState.BorderColor = Color.FromArgb(42, 172, 158);
+                this.btnVerExpediente.onHoverState.FillColor = Color.FromArgb(42, 172, 158);
             }
         }
     }

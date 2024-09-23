@@ -19,6 +19,8 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador.Controlador_UC_Calenda
             ObjUCDIAS = Vista;
 
             ObjUCDIAS.btnCalendar.Click += new EventHandler(AgregarCita);
+            ObjUCDIAS.btnCalendar.MouseHover += new EventHandler(HoverUC);
+            ObjUCDIAS.btnCalendar.MouseLeave += new EventHandler(Normal);
         }
         private void AgregarCita(object sender, EventArgs e)
         {
@@ -45,27 +47,23 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador.Controlador_UC_Calenda
         //Cambio de color cuando el cursor se encuentra sobre el User control
         public void HoverUC(object sender, EventArgs e)
         {
-            ObjUCDIAS.btnCalendar.BackColor = Color.PaleTurquoise;
+            ObjUCDIAS.lblDias.BackColor = Color.FromArgb(135, 224, 210);
+            ObjUCDIAS.btnCalendar.BackColor = Color.FromArgb(135, 224, 210);
         }
-        //Este método hace que el UC vuelva a la normalidad
-        //public void NormalUC(object sender, EventArgs e)
-        //{
-        //    int diaActual = DateTime.Now.Day;
-        //    int mesActual = DateTime.Now.Month;
-        //    int añoActual = DateTime.Now.Year;
+        public void Normal(object sender, EventArgs e)
+        {
+            Config objConfig = new Config();
+            objConfig.LeerIni();
 
-        //    // Si es el día actual, mantenemos el color LightBlue
-        //    if (ObjUCDIAS.lblDias.Text == diaActual.ToString() &&
-        //        CTRLCalendario.static_month == mesActual &&
-        //        CTRLCalendario.static_year == añoActual)
-        //    {
-        //        ObjUCDIAS.btnCalendar.BackColor = Color.FromArgb(176, 255, 242); // Mantener color para el día actual
-
-        //    }
-        //    else
-        //    {
-        //        ObjUCDIAS.btnCalendar.BackColor = Color.White;
-        //    }
-        //}
+            if (objConfig.objDTOConfig.modoOscuro == "dark")
+            {
+                ObjUCDIAS.lblDias.BackColor = Color.FromArgb(2, 135, 135);
+            }
+            else
+            {
+                ObjUCDIAS.lblDias.BackColor = Color.White;
+                ObjUCDIAS.btnCalendar.BackColor = Color.White;
+            }
+        }
     }
 }

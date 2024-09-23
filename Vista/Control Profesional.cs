@@ -16,6 +16,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Vista
         internal Control_Profesional(DAOEquipoTrabajo DAOProfesional)
         {
             InitializeComponent();
+            leerIni();
             this.ParentChanged += new EventHandler(OnParentChanged);
             try
             {
@@ -49,6 +50,23 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Vista
                 flp.PerformLayout(); // Asegura que el layout se actualice
                 flp.Invalidate();    // Fuerza un redibujado
                 flp.Update();
+            }
+        }
+        private void leerIni()
+        {
+            Config objConfig = new Config();
+            objConfig.LeerIni();
+
+            if (objConfig.objDTOConfig.modoOscuro == "dark")
+            {
+                this.pnlProfesional.BackgroundColor = Color.FromArgb(4, 125, 125);
+                this.lblIdProfesional.ForeColor = Color.White;
+
+                this.lblNombreProfesional.ForeColor = Color.Gainsboro;
+                this.lblEmail.ForeColor = Color.Gainsboro;
+                this.lblCorreo.ForeColor = Color.Gainsboro;
+                this.lblEspecialidad.ForeColor = Color.Gainsboro;
+                this.lblEspecialidades.ForeColor = Color.Gainsboro;
             }
         }
     }

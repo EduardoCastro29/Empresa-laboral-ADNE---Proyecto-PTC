@@ -57,7 +57,7 @@
             this.btnCalendar.AutoSizeLeftIcon = true;
             this.btnCalendar.AutoSizeRightIcon = true;
             this.btnCalendar.BackColor = System.Drawing.Color.Transparent;
-            this.btnCalendar.BackColor1 = System.Drawing.Color.White;
+            this.btnCalendar.BackColor1 = System.Drawing.Color.Transparent;
             this.btnCalendar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCalendar.BackgroundImage")));
             this.btnCalendar.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.btnCalendar.ButtonText = "";
@@ -77,7 +77,7 @@
             this.btnCalendar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnCalendar.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
             this.btnCalendar.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnCalendar.ForeColor = System.Drawing.Color.White;
+            this.btnCalendar.ForeColor = System.Drawing.Color.Transparent;
             this.btnCalendar.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCalendar.IconLeftCursor = System.Windows.Forms.Cursors.Default;
             this.btnCalendar.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
@@ -87,10 +87,10 @@
             this.btnCalendar.IconRightCursor = System.Windows.Forms.Cursors.Default;
             this.btnCalendar.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
             this.btnCalendar.IconSize = 25;
-            this.btnCalendar.IdleBorderColor = System.Drawing.Color.White;
+            this.btnCalendar.IdleBorderColor = System.Drawing.Color.Transparent;
             this.btnCalendar.IdleBorderRadius = 1;
             this.btnCalendar.IdleBorderThickness = 1;
-            this.btnCalendar.IdleFillColor = System.Drawing.Color.White;
+            this.btnCalendar.IdleFillColor = System.Drawing.Color.Transparent;
             this.btnCalendar.IdleIconLeftImage = null;
             this.btnCalendar.IdleIconRightImage = null;
             this.btnCalendar.IndicateFocus = false;
@@ -112,12 +112,12 @@
             this.btnCalendar.onHoverState.ForeColor = System.Drawing.Color.White;
             this.btnCalendar.onHoverState.IconLeftImage = null;
             this.btnCalendar.onHoverState.IconRightImage = null;
-            this.btnCalendar.OnIdleState.BorderColor = System.Drawing.Color.White;
+            this.btnCalendar.OnIdleState.BorderColor = System.Drawing.Color.Transparent;
             this.btnCalendar.OnIdleState.BorderRadius = 1;
             this.btnCalendar.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.btnCalendar.OnIdleState.BorderThickness = 1;
-            this.btnCalendar.OnIdleState.FillColor = System.Drawing.Color.White;
-            this.btnCalendar.OnIdleState.ForeColor = System.Drawing.Color.White;
+            this.btnCalendar.OnIdleState.FillColor = System.Drawing.Color.Transparent;
+            this.btnCalendar.OnIdleState.ForeColor = System.Drawing.Color.Transparent;
             this.btnCalendar.OnIdleState.IconLeftImage = null;
             this.btnCalendar.OnIdleState.IconRightImage = null;
             this.btnCalendar.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(255)))), ((int)(((byte)(242)))));

@@ -15,6 +15,17 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Vista
         public UCEspacio()
         {
             InitializeComponent();
+            leerIni();
+        }
+        private void leerIni()
+        {
+            Config objConfig = new Config();
+            objConfig.LeerIni();
+
+            if (objConfig.objDTOConfig.modoOscuro == "dark")
+            {
+                this.BackColor = Color.FromArgb(4, 125, 125);
+            }
         }
     }
 }

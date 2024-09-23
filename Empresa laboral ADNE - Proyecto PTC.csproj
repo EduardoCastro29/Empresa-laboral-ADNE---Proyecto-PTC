@@ -691,5 +691,11 @@
   <ItemGroup>
     <None Include="Resources\Descargar documentos.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Registro_Modo_Oscuro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pacientes_Modo_Oscuro.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

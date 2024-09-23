@@ -41,7 +41,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Vista
 
             if (objConfig.objDTOConfig.modoOscuro == "dark")
             {
-                this.BackColor = Color.FromArgb(30, 92, 98);
+                this.BackColor = Color.FromArgb(28, 104, 108);
                 this.pnlForms.GradientTopLeft = Color.FromArgb(40, 157, 163);
                 this.pnlForms.GradientTopRight = Color.FromArgb(34, 135, 140);
                 this.pnlForms.GradientBottomLeft = Color.FromArgb(40, 157, 163);

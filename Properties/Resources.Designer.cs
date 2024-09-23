@@ -523,6 +523,16 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Pacientes_Modo_Oscuro {
+            get {
+                object obj = ResourceManager.GetObject("Pacientes_Modo_Oscuro", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Pagina_principal {
             get {
                 object obj = ResourceManager.GetObject("Pagina principal", resourceCulture);
@@ -566,6 +576,16 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Properties {
         internal static System.Drawing.Bitmap proteger {
             get {
                 object obj = ResourceManager.GetObject("proteger", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Registro_Modo_Oscuro {
+            get {
+                object obj = ResourceManager.GetObject("Registro_Modo_Oscuro", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

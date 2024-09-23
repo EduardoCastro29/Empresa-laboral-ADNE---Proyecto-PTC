@@ -73,10 +73,10 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                 CTRLUCDias ObjDias = new CTRLUCDias(ObjUCDias);
                 ObjDias.days(i);
 
-                if (Año == DateTime.Now.Year && Mes == DateTime.Now.Month && i == DateTime.Now.Day)
-                {
-                    ObjUCDias.ModificarFondo(Color.FromArgb(176, 255, 242)); // Cambia el color de fondo
-                }
+                //if (Año == DateTime.Now.Year && Mes == DateTime.Now.Month && i == DateTime.Now.Day)
+                //{
+                //    ObjUCDias.ModificarFondo(Color.FromArgb(176, 255, 242)); // Cambia el color de fondo
+                //}
 
                 ObjCalendario.daycontainer.Controls.Add(ObjUCDias);
             }
@@ -134,10 +134,10 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                 CTRLUCDias ObjDias = new CTRLUCDias(ObjUCDias);
                 ObjDias.days(i);
 
-                if (Año == DateTime.Now.Year && Mes == DateTime.Now.Month && i == DateTime.Now.Day)
-                {
-                    ObjUCDias.ModificarFondo(Color.FromArgb(176, 255, 242)); // Cambia el color de fondo
-                }
+                //if (Año == DateTime.Now.Year && Mes == DateTime.Now.Month && i == DateTime.Now.Day)
+                //{
+                //    ObjUCDias.ModificarFondo(Color.FromArgb(176, 255, 242)); // Cambia el color de fondo
+                //}
 
                 ObjCalendario.daycontainer.Controls.Add(ObjUCDias);
             }
@@ -186,10 +186,10 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                 CTRLUCDias ObjDias = new CTRLUCDias(ObjUCDias);
                 ObjDias.days(i);
 
-                if (Año == DateTime.Now.Year && Mes == DateTime.Now.Month && i == DateTime.Now.Day)
-                {
-                    ObjUCDias.ModificarFondo(Color.FromArgb(176, 255, 242)); // Cambia el color de fondo
-                }
+                //if (Año == DateTime.Now.Year && Mes == DateTime.Now.Month && i == DateTime.Now.Day)
+                //{
+                //    ObjUCDias.ModificarFondo(Color.FromArgb(176, 255, 242)); // Cambia el color de fondo
+                //}
 
                 ObjCalendario.daycontainer.Controls.Add(ObjUCDias);
             }

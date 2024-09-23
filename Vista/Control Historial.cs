@@ -16,7 +16,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Vista
         internal ControlHistorialUC(DAOActividades DAOVerHistorial)
         {
             InitializeComponent();
-
+            leerIni();
             try
             {
                 lblNombrePaciente.Text = DAOVerHistorial.Nombre2;
@@ -27,6 +27,26 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Vista
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+            }
+        }
+        private void leerIni()
+        {
+            Config objConfig = new Config();
+            objConfig.LeerIni();
+
+            if (objConfig.objDTOConfig.modoOscuro == "dark")
+            {
+                this.BackColor = Color.FromArgb(38, 102, 119);
+
+                this.lblNombrePaciente.ForeColor = Color.White;
+                this.lblPaciente.ForeColor = Color.White;
+                this.lblHoraInicio.ForeColor = Color.White;
+                this.lblHoraFinal.ForeColor = Color.White;
+                this.lblFinal.ForeColor = Color.White;
+                this.lblDui.ForeColor = Color.White;
+                this.bunifuLabel1.ForeColor = Color.White;
+
+                this.btnExpediente.IdleFillColor = Color.DarkCyan;
             }
         }
     }
