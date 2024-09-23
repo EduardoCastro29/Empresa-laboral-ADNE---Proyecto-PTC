@@ -18,7 +18,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador.ControladorUserControl
         readonly InformaciónPersonalForm ObjInformacionPersonal;
         NuevoPacienteForm ObjVerDatosPaciente = null;
         Form FormActual;
-
+        public static string VerificarTextBox;
         // Primer Controlador de la vista del user control
         public CTRLPacienteUC(ControlVerPacientesUC vista) // Controlador de la vista del User control
         {
@@ -38,11 +38,13 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador.ControladorUserControl
                 try
                 {
                     DAOInformacionPersonal ObjDaoInformacionPersonal = new DAOInformacionPersonal();
-                    ObjDaoInformacionPersonal.DocumentoPresentado = ObjVerPacienteUS.lblPacienteId.Text; // Asigna el ID del paciente que deseas cargar
+                    ObjDaoInformacionPersonal.DocumentoPresentado = ObjVerPacienteUS.lblPacienteId.Text;
 
                     bool Comprobar = ObjDaoInformacionPersonal.ObtenerInformacionPaciente();
                     if (Comprobar)
                     {
+                        VerificarTextBox = ObjVerPacienteUS.lblPacienteId.Text;
+
                         InformaciónPersonalForm ObjVerInformacion = new InformaciónPersonalForm();
 
                         // Pasar datos al formulario
@@ -104,7 +106,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador.ControladorUserControl
                     ExpedienteMédicoForm objExpedienteMedico = new ExpedienteMédicoForm();
                     if (Comprobar == true)
                     {
-
                         objExpedienteMedico.txtEstadoAnimo.Text = objDAOExpedienteMedico.EstadoAnimo;
                         objExpedienteMedico.txtEstadoConductual.Text = objDAOExpedienteMedico.EstadoConductual;
                         objExpedienteMedico.txtSomatizacion.Text = objDAOExpedienteMedico.Somatizacion;
@@ -199,20 +200,22 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador.ControladorUserControl
             ObjInformacionPersonal.Load += new EventHandler(DesactivarAgregarPaciente);
             // Metodo para actualizar la Informacion del Paciente presionando el boton de Modificar 
             ObjInformacionPersonal.btnModificarPaciente.Click += new EventHandler(ActualizarInformacionPaciente);
+            ObjInformacionPersonal.btnVerEncargado.Click += new EventHandler(VerEncargadoPaciente);
             ObjInformacionPersonal.Load += new EventHandler(CargarCMB);
 
             //Validaciones de Campos
             ObjInformacionPersonal.dtFechaNacimiento.ValueChanged += new EventHandler(ComprobarFechaActual);
             ObjInformacionPersonal.txtNacionalidad.KeyPress += new KeyPressEventHandler(ValidarCampoTextBox);
             ObjInformacionPersonal.txtProfesion.KeyPress += new KeyPressEventHandler(ValidarCampoTextBox);
-            ObjInformacionPersonal.txtNombrePaciente.KeyPress += new KeyPressEventHandler(ValidarCampoTextBox);
-            ObjInformacionPersonal.txtApellidoPaciente.KeyPress += new KeyPressEventHandler(ValidarCampoTextBox);
+            ObjInformacionPersonal.txtNombrePaciente.KeyPress += new KeyPressEventHandler(ValidarCampoNombres);
+            ObjInformacionPersonal.txtApellidoPaciente.KeyPress += new KeyPressEventHandler(ValidarCampoNombres);
             ObjInformacionPersonal.txtComposicionFamiliar.KeyPress += new KeyPressEventHandler(ValidarCampoTextBox);
             ObjInformacionPersonal.txtMotivoIntervencion.KeyPress += new KeyPressEventHandler(ValidarCampoTextBox);
             ObjInformacionPersonal.txtAntecedentes.KeyPress += new KeyPressEventHandler(ValidarCampoTextBox);
             ObjInformacionPersonal.txtDescripcion.KeyPress += new KeyPressEventHandler(ValidarCampoTextBox);
             ObjInformacionPersonal.txtAspectosPreocupantes.KeyPress += new KeyPressEventHandler(ValidarCampoTextBox);
-            ObjInformacionPersonal.txtDocumentoPresentado.KeyPress += new KeyPressEventHandler(ValidarCampoDocumentoPresentado);
+            ObjInformacionPersonal.txtDocumentoPresentado.KeyPress += new KeyPressEventHandler(ValidarCampoDocumento);
+            ObjInformacionPersonal.txtDocumentoPresentado.TextChange += new EventHandler(EnmascararCampoDocumento);
             ObjInformacionPersonal.txtTelefono1.KeyPress += new KeyPressEventHandler(ValidarCampoNumero);
             ObjInformacionPersonal.txtCorreoElectronico.KeyPress += new KeyPressEventHandler(ValidarCampoCorreo);
         }
@@ -242,6 +245,23 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador.ControladorUserControl
                 // Actualizar el campo de texto con la edad calculada
                 ObjInformacionPersonal.txtEdad.Text = edad.ToString();
             }
+        }
+        private void ValidarCampoNombres(object sender, KeyPressEventArgs e)
+        {
+            //La propiedad char.IsControl permite controles como BackSpace, Inicio, Fin, etc.
+            if (char.IsControl(e.KeyChar))
+            {
+                //Retornamos los valores e.KeyChar
+                return;
+            }
+            //Declaramos la variable de tipo char que recibirá los parámetros de las letras registradas por las variables e.KeyChar creadas anteriormente
+            if (char.IsLetter(e.KeyChar) || e.KeyChar == ' ')
+            {
+                //Retornamos los valores e.KeyChar
+                return;
+            }
+            //Indicamos que se creará el evento e.Char con todos los valores antes proporcionados, como un EventHandler
+            e.Handled = true;
         }
         private void ValidarCampoTextBox(object sender, KeyPressEventArgs e)
         {
@@ -288,8 +308,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador.ControladorUserControl
             //Indicamos que se creará el evento e.Char con todos los valores antes proporcionados, como un EventHandler
             e.Handled = true;
         }
-
-        private void ValidarCampoDocumentoPresentado(object sender, KeyPressEventArgs e)
+        private void ValidarCampoDocumento(object sender, KeyPressEventArgs e)
         {
             //La propiedad char.IsControl permite controles como BackSpace, Inicio, Fin, etc.
             if (char.IsControl(e.KeyChar))
@@ -300,17 +319,41 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador.ControladorUserControl
             //Declaramos la variable de tipo char que recibirá los parámetros de las letras registradas por las variables e.KeyChar creadas anteriormente
             char ch = e.KeyChar;
 
-            //Declaramos lo valores que únicamente permitirá el textbox
             if ((ch >= '0' && ch <= '9') ||
                 (ch >= 'A' && ch <= 'Z') ||
                 (ch >= 'a' && ch <= 'z') ||
-                 ch == '-')
+                (ch == ' ') ||
+                (ch == '-'))
             {
-                //Retornamos los valores e.KeyChar
                 return;
             }
-            //Indicamos que se creará el evento e.Char con todos los valores antes proporcionados, como un EventHandler
             e.Handled = true;
+        }
+        private void EnmascararCampoDocumento(object sender, EventArgs e)
+        {
+            //Obtenemos la longitud actual del textbox para evaluar si es necesario el remplazo por guión (en este caso el DUI) o número
+            string EnmascararDUI = ObjInformacionPersonal.txtDocumentoPresentado.Text.Replace("-", "");
+
+            //Limitamos el textbox para que solo obtenga 9 caracteres
+            if (EnmascararDUI.Length > 9)
+            {
+                EnmascararDUI = EnmascararDUI.Substring(0, 9);
+            }
+
+            //Una vez llegada a la longitud deseada, en este caso 8 pone un guión automáticamente para enmascarar el DUI
+            if (EnmascararDUI.Length > 8)
+            {
+                //Indicamos en qué posición se pondrá el guión y que símbolo tomará
+                ObjInformacionPersonal.txtDocumentoPresentado.Text = EnmascararDUI.Insert(8, "-");
+            }
+            else
+            {
+                //Caso contrario, no realizamos ningun cambio (no se inserta el guión)
+                ObjInformacionPersonal.txtDocumentoPresentado.Text = EnmascararDUI;
+            }
+
+            //Indicamos que la posición inicial del cursor, será al inicio del textbox
+            ObjInformacionPersonal.txtDocumentoPresentado.SelectionStart = ObjInformacionPersonal.txtDocumentoPresentado.Text.Length;
         }
         private void ValidarCampoNumero(object sender, KeyPressEventArgs e)
         {
@@ -350,11 +393,12 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador.ControladorUserControl
         // Instrucciones que se haran en el metodo DesactivarAgregarPaciente para desactivar el boton de agregar Paciente 
         private void DesactivarAgregarPaciente(object sender, EventArgs e)  // Todo el proceso para desactivar el boton de Guardar Paciente
         {
+            ObjInformacionPersonal.txtEdad.Enabled = false;
             ObjInformacionPersonal.btnModificarPaciente.Enabled = true;
             ObjInformacionPersonal.btnGuardarPaciente.Enabled = false;
         }
         #endregion
-        #region Actualización en el Formulario de Información Personal
+        #region Actualización en el Formulario de Información Personal (UPDATE)
         // Metodo para Actualizar la Informacion del Paciente
         private void ActualizarInformacionPaciente(object sender, EventArgs e)
         {
@@ -422,13 +466,46 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador.ControladorUserControl
                     }
                     else
                     {
-                        MessageBox.Show("El correo electrónico ingresado no posee una dirección de correo válida, verifique si contiene @ o dominio correcto", "Primer Usuario", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("El correo electrónico ingresado no posee una dirección de correo válida, verifique si contiene @ o dominio correcto", "Registro de Paciente", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+            }
+        }
+        #endregion
+        #region Ver encargado relacionado con el Paciente (READ)
+        private void VerEncargadoPaciente(object sender, EventArgs e)
+        {
+            //Instanciamos a la clase DAOEncargado
+            DAOInformacionEncargado ObjMostrarDatosEncargado = new DAOInformacionEncargado();
+
+            //Cargamos el valor del DTO
+            ObjMostrarDatosEncargado.DocumentoPresentadoP = ObjInformacionPersonal.txtDocumentoPresentado.Text;
+
+            //Cargamos el método junto a su valor
+            if (ObjMostrarDatosEncargado.VerEncargado() == true)
+            {
+                //Instanciamos al formulario Encargado junto con sus valores
+                InformaciónEncargadoForm ObjMostrarEncargado = new InformaciónEncargadoForm();
+
+                ObjMostrarEncargado.txtDocumentoEncargado.Text = ObjMostrarDatosEncargado.DocumentoPresentado;
+                ObjMostrarEncargado.txtNombresEncargado.Text = ObjMostrarDatosEncargado.Nombre;
+                ObjMostrarEncargado.txtApellidosEncargado.Text = ObjMostrarDatosEncargado.Apellido;
+                ObjMostrarEncargado.dtFechaNacimiento.Value = ObjMostrarDatosEncargado.FechaNacimiento;
+                ObjMostrarEncargado.txtEdadEncargado.Text = ObjMostrarDatosEncargado.Edad.ToString();
+                ObjMostrarEncargado.txtTelefono.Text = ObjMostrarDatosEncargado.Telefono;
+                ObjMostrarEncargado.txtCorreoEncargado.Text = ObjMostrarDatosEncargado.CorreoElectronico;
+                ObjMostrarEncargado.txtDomicilio.Text = ObjMostrarDatosEncargado.Domicilio;
+
+                ObjMostrarEncargado.btnRegistrarEncargado.Enabled = false;
+                ObjMostrarEncargado.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("El paciente relacionado no posee un encargado", "Encargado del Paciente", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
         #endregion

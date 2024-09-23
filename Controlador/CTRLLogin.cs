@@ -54,64 +54,71 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
 
             try
             {
-                if (ObjMetodosComunes.MetodoEncriptacionAES(contrasenaPredeterminada) == ObjDAOUsuario.Contrasena)
+                if (ValidarLoginUsuario == true && ValidarLoginEmpleado == true)
                 {
-                    MessageBox.Show($"Bienvenido {InicioSesion.Usuario}, por motivos de seguridad, se le redireccionará automáticamente a un nuevo formulario para que pueda completar los pasos de nuevo usuario", "Ventana Emergente", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-
-                    //Instanciamos a los formularios que deseamos abrir según la acción a realizar
-                    DirecciónGmailForm ObjRedireccionarUsuarioSolicitante = new DirecciónGmailForm();
-                    PreguntasdeSeguridadForm ObjRedireccionarPreguntasSeguridad = new PreguntasdeSeguridadForm();
-
-                    //Si el usuario ya posee preguntas
-                    //Se procede a actualizar solo la contraseña del mismo
-                    if (ObjDAOUsuario.VerificarPreguntas() == true)
+                    if (ObjMetodosComunes.MetodoEncriptacionAES(contrasenaPredeterminada) == ObjDAOUsuario.Contrasena)
                     {
-                        ObjLogin.Hide();
-                        ObjRedireccionarUsuarioSolicitante.Show();
+                        MessageBox.Show($"Bienvenido {InicioSesion.Usuario}, por motivos de seguridad, se le redireccionará automáticamente a un nuevo formulario para que pueda completar los pasos de nuevo usuario", "Ventana Emergente", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                        //Instanciamos a los formularios que deseamos abrir según la acción a realizar
+                        DirecciónGmailForm ObjRedireccionarUsuarioSolicitante = new DirecciónGmailForm();
+                        PreguntasdeSeguridadForm ObjRedireccionarPreguntasSeguridad = new PreguntasdeSeguridadForm();
+
+                        //Si el usuario ya posee preguntas
+                        //Se procede a actualizar solo la contraseña del mismo
+                        if (ObjDAOUsuario.VerificarPreguntas() == true)
+                        {
+                            ObjLogin.Hide();
+                            ObjRedireccionarUsuarioSolicitante.Show();
+                        }
+                        else
+                        {
+                            //Caso contrario, el usuario es nuevo en la aplicación
+                            //Insertamos sus preguntas y restablecemos la contraseña
+                            ObjRedireccionarPreguntasSeguridad.txtDUIProfesional.Text = InicioSesion.Dui;
+                            ObjRedireccionarPreguntasSeguridad.btnVerificarPregunta.Enabled = false;
+                            ObjRedireccionarPreguntasSeguridad.lblIngreseCredenciales.Visible = false;
+                            ObjRedireccionarPreguntasSeguridad.txtUsuario.Visible = false;
+                            ObjRedireccionarPreguntasSeguridad.txtDocumento.Visible = false;
+                            ObjRedireccionarPreguntasSeguridad.pnlLineaDivisora.Visible = false;
+                            ObjRedireccionarPreguntasSeguridad.ShowDialog();
+
+                            ObjLogin.Hide();
+                            ObjRedireccionarUsuarioSolicitante.Show();
+                        }
                     }
                     else
                     {
-                        //Caso contrario, el usuario es nuevo en la aplicación
-                        //Insertamos sus preguntas y restablecemos la contraseña
-                        ObjRedireccionarPreguntasSeguridad.txtDUIProfesional.Text = InicioSesion.Dui;
-                        ObjRedireccionarPreguntasSeguridad.btnVerificarPregunta.Enabled = false;
-                        ObjRedireccionarPreguntasSeguridad.lblIngreseCredenciales.Visible = false;
-                        ObjRedireccionarPreguntasSeguridad.txtUsuario.Visible = false;
-                        ObjRedireccionarPreguntasSeguridad.txtDocumento.Visible = false;
-                        ObjRedireccionarPreguntasSeguridad.pnlLineaDivisora.Visible = false;
-                        ObjRedireccionarPreguntasSeguridad.ShowDialog();
+                        if (ValidarLoginUsuario == true && ValidarLoginEmpleado == true)
+                        {
+                            if (ObjLogin.cbRecuerdame.Checked == true)
+                            {
+                                //string usuario = ObjDAOUsuario.Usuario;
+                                Properties.Settings.Default.Usuario = ObjLogin.txtUsuario.Text;
+                                Properties.Settings.Default.Contrasena = ObjLogin.txtContraseña.Text;
+                                Properties.Settings.Default.Save();
+                            }
+                            else
+                            {
+                                //string usuario = ObjDAOUsuario.Usuario;
+                                Properties.Settings.Default.Usuario = "";
+                                Properties.Settings.Default.Contrasena = "";
+                                Properties.Settings.Default.Save();
+                            }
 
-                        ObjLogin.Hide();
-                        ObjRedireccionarUsuarioSolicitante.Show();
+                            DashboardForm ObjMostrarDashboard = new DashboardForm();
+                            ObjLogin.Hide();
+                            ObjMostrarDashboard.Show();
+                        }
+                        else
+                        {
+                            ObjLogin.NotificacionLogin.Show(ObjLogin, "El usuario o contraseña son incorrectos", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error);
+                        }
                     }
                 }
                 else
                 {
-                    if (ValidarLoginUsuario == true && ValidarLoginEmpleado == true)
-                    {
-                        if (ObjLogin.cbRecuerdame.Checked == true)
-                        {
-                            //string usuario = ObjDAOUsuario.Usuario;
-                            Properties.Settings.Default.Usuario = ObjLogin.txtUsuario.Text;
-                            Properties.Settings.Default.Contrasena = ObjLogin.txtContraseña.Text;
-                            Properties.Settings.Default.Save();
-                        }
-                        else
-                        {
-                            //string usuario = ObjDAOUsuario.Usuario;
-                            Properties.Settings.Default.Usuario = "";
-                            Properties.Settings.Default.Contrasena = "";
-                            Properties.Settings.Default.Save();
-                        }
-
-                        DashboardForm ObjMostrarDashboard = new DashboardForm();
-                        ObjLogin.Hide();
-                        ObjMostrarDashboard.Show();
-                    }
-                    else
-                    {
-                        ObjLogin.NotificacionLogin.Show(ObjLogin, "El usuario o contraseña son incorrectos", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error);
-                    }
+                    ObjLogin.NotificacionLogin.Show(ObjLogin, "El usuario o contraseña son incorrectos", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error);
                 }
             }
             catch (Exception ex)

@@ -57,9 +57,9 @@
             this.panelElement.AutoScroll = true;
             this.panelElement.BackColor = System.Drawing.Color.Transparent;
             this.panelElement.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelElement.Location = new System.Drawing.Point(0, 167);
+            this.panelElement.Location = new System.Drawing.Point(0, 173);
             this.panelElement.Name = "panelElement";
-            this.panelElement.Size = new System.Drawing.Size(991, 564);
+            this.panelElement.Size = new System.Drawing.Size(991, 558);
             this.panelElement.TabIndex = 4;
             // 
             // BarraSeparadora
@@ -73,7 +73,7 @@
             this.BarraSeparadora.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(187)))), ((int)(((byte)(171)))));
             this.BarraSeparadora.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(187)))), ((int)(((byte)(171)))));
             this.BarraSeparadora.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(187)))), ((int)(((byte)(171)))));
-            this.BarraSeparadora.Location = new System.Drawing.Point(0, 164);
+            this.BarraSeparadora.Location = new System.Drawing.Point(0, 170);
             this.BarraSeparadora.Name = "BarraSeparadora";
             this.BarraSeparadora.Quality = 10;
             this.BarraSeparadora.Size = new System.Drawing.Size(991, 3);
@@ -486,6 +486,7 @@
             this.Name = "NuevoPacienteForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nuevo Paciente";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.NuevoPacienteForm_FormClosing);
             this.btnExpedienteGradient.ResumeLayout(false);
             this.btnDatosIdentificacionGradient.ResumeLayout(false);
             this.bunifuGradientPanel1.ResumeLayout(false);

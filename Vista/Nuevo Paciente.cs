@@ -1,4 +1,6 @@
 ﻿using Empresa_laboral_ADNE___Proyecto_PTC.Controlador;
+using Empresa_laboral_ADNE___Proyecto_PTC.Controlador.ControladorUserControlPaciente;
+using Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,11 +21,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Vista
             InitializeComponent();
             leerIni();
             CTRLNuevoPaciente ObjNuevoPacienteControlador = new CTRLNuevoPaciente(this);
-        }
-            
-        private void btnSalir_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
 
         private void leerIni()
@@ -47,6 +44,10 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Vista
             }
         }
 
-
+        private void NuevoPacienteForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DAOInformacionEncargado.DocumentoEncargado = null;
+            CTRLPacienteUC.VerificarTextBox = null;
+        }
     }
 }

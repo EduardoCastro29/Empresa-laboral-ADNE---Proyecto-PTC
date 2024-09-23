@@ -14,17 +14,22 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Vista
 {
     public partial class InformaciónPersonalForm : Form
     {
-        ConfiguraciónForm objConfigForm = new ConfiguraciónForm();
+        readonly ConfiguraciónForm objConfigForm = new ConfiguraciónForm();
         public InformaciónPersonalForm()
         {
             InitializeComponent();
             leerIni();
 
             // Aca hacemos referencia al controlador de paciente de user control con los parametros de InformaciónPersonalForm vista
-            CTRLPacienteUC ObjControladorInformacionPersonalUC = new CTRLPacienteUC(this);
-            CTRLInformacionPersonal ObjControladorInformacionPersonal = new CTRLInformacionPersonal(this);
+            if (string.IsNullOrWhiteSpace(CTRLPacienteUC.VerificarTextBox))
+            {
+                CTRLInformacionPersonal ObjControladorInformacionPersonal = new CTRLInformacionPersonal(this);
+            }
+            else
+            {
+                CTRLPacienteUC ObjControladorInformacionPersonalUC = new CTRLPacienteUC(this);
+            }
         }
-
 
         private void leerIni()
         {
@@ -93,7 +98,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Vista
                 this.txtDescripcion.ForeColor = Color.White;
                 this.txtAspectosPreocupantes.FillColor = Color.FromArgb(19, 63, 76);
                 this.txtAspectosPreocupantes.ForeColor = Color.White;
-
             }
         }
     }

@@ -87,6 +87,7 @@
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties54 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties55 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties56 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             this.lblNacimiento = new System.Windows.Forms.Label();
             this.lblDomicilio = new System.Windows.Forms.Label();
             this.txtDomicilio = new Bunifu.UI.WinForms.BunifuTextBox();
@@ -124,6 +125,7 @@
             this.txtTelefono1 = new Bunifu.UI.WinForms.BunifuTextBox();
             this.lblDocumento = new System.Windows.Forms.Label();
             this.txtDocumentoPresentado = new Bunifu.UI.WinForms.BunifuTextBox();
+            this.btnVerEncargado = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.bunifuGradientPanel2.SuspendLayout();
             this.bunifuGradientPanel3.SuspendLayout();
             this.SuspendLayout();
@@ -152,8 +154,7 @@
             // 
             this.txtDomicilio.AcceptsReturn = false;
             this.txtDomicilio.AcceptsTab = false;
-            this.txtDomicilio.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtDomicilio.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtDomicilio.AnimationSpeed = 200;
             this.txtDomicilio.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
             this.txtDomicilio.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
@@ -179,7 +180,7 @@
             this.txtDomicilio.IconRight = null;
             this.txtDomicilio.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtDomicilio.Lines = new string[0];
-            this.txtDomicilio.Location = new System.Drawing.Point(59, 382);
+            this.txtDomicilio.Location = new System.Drawing.Point(43, 382);
             this.txtDomicilio.MaxLength = 300;
             this.txtDomicilio.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtDomicilio.Modified = false;
@@ -248,10 +249,9 @@
             // 
             // lblEdad
             // 
-            this.lblEdad.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblEdad.AutoSize = true;
             this.lblEdad.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEdad.Location = new System.Drawing.Point(482, 316);
+            this.lblEdad.Location = new System.Drawing.Point(492, 317);
             this.lblEdad.Name = "lblEdad";
             this.lblEdad.Size = new System.Drawing.Size(63, 23);
             this.lblEdad.TabIndex = 142;
@@ -287,7 +287,7 @@
             this.txtEdad.IconRight = null;
             this.txtEdad.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtEdad.Lines = new string[0];
-            this.txtEdad.Location = new System.Drawing.Point(551, 307);
+            this.txtEdad.Location = new System.Drawing.Point(549, 307);
             this.txtEdad.MaxLength = 3;
             this.txtEdad.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtEdad.Modified = false;
@@ -323,7 +323,7 @@
             this.txtEdad.SelectionLength = 0;
             this.txtEdad.SelectionStart = 0;
             this.txtEdad.ShortcutsEnabled = false;
-            this.txtEdad.Size = new System.Drawing.Size(375, 42);
+            this.txtEdad.Size = new System.Drawing.Size(361, 42);
             this.txtEdad.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtEdad.TabIndex = 23;
             this.txtEdad.TabStop = false;
@@ -347,10 +347,9 @@
             // 
             // lblProfesion
             // 
-            this.lblProfesion.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblProfesion.AutoSize = true;
             this.lblProfesion.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProfesion.Location = new System.Drawing.Point(479, 161);
+            this.lblProfesion.Location = new System.Drawing.Point(492, 160);
             this.lblProfesion.Name = "lblProfesion";
             this.lblProfesion.Size = new System.Drawing.Size(96, 23);
             this.lblProfesion.TabIndex = 144;
@@ -370,8 +369,7 @@
             // 
             this.txtComposicionFamiliar.AcceptsReturn = false;
             this.txtComposicionFamiliar.AcceptsTab = false;
-            this.txtComposicionFamiliar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtComposicionFamiliar.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtComposicionFamiliar.AnimationSpeed = 200;
             this.txtComposicionFamiliar.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
             this.txtComposicionFamiliar.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
@@ -397,7 +395,7 @@
             this.txtComposicionFamiliar.IconRight = null;
             this.txtComposicionFamiliar.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtComposicionFamiliar.Lines = new string[0];
-            this.txtComposicionFamiliar.Location = new System.Drawing.Point(59, 455);
+            this.txtComposicionFamiliar.Location = new System.Drawing.Point(43, 455);
             this.txtComposicionFamiliar.MaxLength = 125;
             this.txtComposicionFamiliar.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtComposicionFamiliar.Modified = false;
@@ -458,8 +456,7 @@
             // 
             this.txtMotivoIntervencion.AcceptsReturn = false;
             this.txtMotivoIntervencion.AcceptsTab = false;
-            this.txtMotivoIntervencion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtMotivoIntervencion.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtMotivoIntervencion.AnimationSpeed = 200;
             this.txtMotivoIntervencion.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
             this.txtMotivoIntervencion.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
@@ -485,7 +482,7 @@
             this.txtMotivoIntervencion.IconRight = null;
             this.txtMotivoIntervencion.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtMotivoIntervencion.Lines = new string[0];
-            this.txtMotivoIntervencion.Location = new System.Drawing.Point(59, 534);
+            this.txtMotivoIntervencion.Location = new System.Drawing.Point(43, 534);
             this.txtMotivoIntervencion.MaxLength = 300;
             this.txtMotivoIntervencion.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtMotivoIntervencion.Modified = false;
@@ -546,8 +543,7 @@
             // 
             this.txtAntecedentes.AcceptsReturn = false;
             this.txtAntecedentes.AcceptsTab = false;
-            this.txtAntecedentes.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtAntecedentes.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtAntecedentes.AnimationSpeed = 200;
             this.txtAntecedentes.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
             this.txtAntecedentes.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
@@ -573,7 +569,7 @@
             this.txtAntecedentes.IconRight = null;
             this.txtAntecedentes.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtAntecedentes.Lines = new string[0];
-            this.txtAntecedentes.Location = new System.Drawing.Point(57, 661);
+            this.txtAntecedentes.Location = new System.Drawing.Point(41, 661);
             this.txtAntecedentes.MaxLength = 300;
             this.txtAntecedentes.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtAntecedentes.Modified = false;
@@ -634,8 +630,7 @@
             // 
             this.txtDescripcion.AcceptsReturn = false;
             this.txtDescripcion.AcceptsTab = false;
-            this.txtDescripcion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtDescripcion.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtDescripcion.AnimationSpeed = 200;
             this.txtDescripcion.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
             this.txtDescripcion.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
@@ -661,7 +656,7 @@
             this.txtDescripcion.IconRight = null;
             this.txtDescripcion.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtDescripcion.Lines = new string[0];
-            this.txtDescripcion.Location = new System.Drawing.Point(57, 785);
+            this.txtDescripcion.Location = new System.Drawing.Point(41, 785);
             this.txtDescripcion.MaxLength = 300;
             this.txtDescripcion.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtDescripcion.Modified = false;
@@ -722,8 +717,7 @@
             // 
             this.txtAspectosPreocupantes.AcceptsReturn = false;
             this.txtAspectosPreocupantes.AcceptsTab = false;
-            this.txtAspectosPreocupantes.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtAspectosPreocupantes.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtAspectosPreocupantes.AnimationSpeed = 200;
             this.txtAspectosPreocupantes.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
             this.txtAspectosPreocupantes.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
@@ -749,7 +743,7 @@
             this.txtAspectosPreocupantes.IconRight = null;
             this.txtAspectosPreocupantes.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtAspectosPreocupantes.Lines = new string[0];
-            this.txtAspectosPreocupantes.Location = new System.Drawing.Point(57, 909);
+            this.txtAspectosPreocupantes.Location = new System.Drawing.Point(41, 909);
             this.txtAspectosPreocupantes.MaxLength = 300;
             this.txtAspectosPreocupantes.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtAspectosPreocupantes.Modified = false;
@@ -1044,7 +1038,7 @@
             this.txtProfesion.IconRight = null;
             this.txtProfesion.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtProfesion.Lines = new string[0];
-            this.txtProfesion.Location = new System.Drawing.Point(581, 150);
+            this.txtProfesion.Location = new System.Drawing.Point(586, 150);
             this.txtProfesion.MaxLength = 100;
             this.txtProfesion.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtProfesion.Modified = false;
@@ -1080,7 +1074,7 @@
             this.txtProfesion.SelectionLength = 0;
             this.txtProfesion.SelectionStart = 0;
             this.txtProfesion.ShortcutsEnabled = false;
-            this.txtProfesion.Size = new System.Drawing.Size(345, 42);
+            this.txtProfesion.Size = new System.Drawing.Size(324, 42);
             this.txtProfesion.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtProfesion.TabIndex = 5;
             this.txtProfesion.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -1093,6 +1087,7 @@
             // 
             // dtFechaNacimiento
             // 
+            this.dtFechaNacimiento.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dtFechaNacimiento.BackColor = System.Drawing.Color.White;
             this.dtFechaNacimiento.BorderColor = System.Drawing.Color.LightGray;
             this.dtFechaNacimiento.BorderRadius = 5;
@@ -1112,10 +1107,10 @@
             this.dtFechaNacimiento.IconColor = System.Drawing.Color.Teal;
             this.dtFechaNacimiento.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
             this.dtFechaNacimiento.LeftTextMargin = 5;
-            this.dtFechaNacimiento.Location = new System.Drawing.Point(59, 317);
+            this.dtFechaNacimiento.Location = new System.Drawing.Point(43, 317);
             this.dtFechaNacimiento.MinimumSize = new System.Drawing.Size(4, 32);
             this.dtFechaNacimiento.Name = "dtFechaNacimiento";
-            this.dtFechaNacimiento.Size = new System.Drawing.Size(389, 32);
+            this.dtFechaNacimiento.Size = new System.Drawing.Size(410, 32);
             this.dtFechaNacimiento.TabIndex = 8;
             this.dtFechaNacimiento.Value = new System.DateTime(2024, 8, 7, 15, 33, 0, 0);
             // 
@@ -1140,10 +1135,9 @@
             // 
             // lblApellidos
             // 
-            this.lblApellidos.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblApellidos.AutoSize = true;
             this.lblApellidos.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblApellidos.Location = new System.Drawing.Point(482, 19);
+            this.lblApellidos.Location = new System.Drawing.Point(492, 19);
             this.lblApellidos.Name = "lblApellidos";
             this.lblApellidos.Size = new System.Drawing.Size(233, 23);
             this.lblApellidos.TabIndex = 153;
@@ -1179,7 +1173,7 @@
             this.txtApellidoPaciente.IconRight = null;
             this.txtApellidoPaciente.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtApellidoPaciente.Lines = new string[0];
-            this.txtApellidoPaciente.Location = new System.Drawing.Point(486, 45);
+            this.txtApellidoPaciente.Location = new System.Drawing.Point(480, 45);
             this.txtApellidoPaciente.MaxLength = 65;
             this.txtApellidoPaciente.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtApellidoPaciente.Modified = false;
@@ -1215,7 +1209,7 @@
             this.txtApellidoPaciente.SelectionLength = 0;
             this.txtApellidoPaciente.SelectionStart = 0;
             this.txtApellidoPaciente.ShortcutsEnabled = false;
-            this.txtApellidoPaciente.Size = new System.Drawing.Size(440, 42);
+            this.txtApellidoPaciente.Size = new System.Drawing.Size(430, 42);
             this.txtApellidoPaciente.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtApellidoPaciente.TabIndex = 1;
             this.txtApellidoPaciente.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -1256,7 +1250,7 @@
             this.txtNacionalidad.IconRight = null;
             this.txtNacionalidad.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtNacionalidad.Lines = new string[0];
-            this.txtNacionalidad.Location = new System.Drawing.Point(225, 98);
+            this.txtNacionalidad.Location = new System.Drawing.Point(200, 98);
             this.txtNacionalidad.MaxLength = 125;
             this.txtNacionalidad.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtNacionalidad.Modified = false;
@@ -1292,7 +1286,7 @@
             this.txtNacionalidad.SelectionLength = 0;
             this.txtNacionalidad.SelectionStart = 0;
             this.txtNacionalidad.ShortcutsEnabled = false;
-            this.txtNacionalidad.Size = new System.Drawing.Size(239, 42);
+            this.txtNacionalidad.Size = new System.Drawing.Size(253, 42);
             this.txtNacionalidad.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtNacionalidad.TabIndex = 2;
             this.txtNacionalidad.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -1305,10 +1299,9 @@
             // 
             // lblCorreo
             // 
-            this.lblCorreo.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblCorreo.AutoSize = true;
             this.lblCorreo.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCorreo.Location = new System.Drawing.Point(479, 205);
+            this.lblCorreo.Location = new System.Drawing.Point(492, 205);
             this.lblCorreo.Name = "lblCorreo";
             this.lblCorreo.Size = new System.Drawing.Size(200, 23);
             this.lblCorreo.TabIndex = 155;
@@ -1344,7 +1337,7 @@
             this.txtCorreoElectronico.IconRight = null;
             this.txtCorreoElectronico.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtCorreoElectronico.Lines = new string[0];
-            this.txtCorreoElectronico.Location = new System.Drawing.Point(483, 231);
+            this.txtCorreoElectronico.Location = new System.Drawing.Point(480, 231);
             this.txtCorreoElectronico.MaxLength = 125;
             this.txtCorreoElectronico.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtCorreoElectronico.Modified = false;
@@ -1380,7 +1373,7 @@
             this.txtCorreoElectronico.SelectionLength = 0;
             this.txtCorreoElectronico.SelectionStart = 0;
             this.txtCorreoElectronico.ShortcutsEnabled = false;
-            this.txtCorreoElectronico.Size = new System.Drawing.Size(443, 44);
+            this.txtCorreoElectronico.Size = new System.Drawing.Size(430, 44);
             this.txtCorreoElectronico.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtCorreoElectronico.TabIndex = 7;
             this.txtCorreoElectronico.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -1395,6 +1388,7 @@
             // 
             this.txtNombrePaciente.AcceptsReturn = false;
             this.txtNombrePaciente.AcceptsTab = false;
+            this.txtNombrePaciente.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtNombrePaciente.AnimationSpeed = 200;
             this.txtNombrePaciente.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
             this.txtNombrePaciente.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
@@ -1420,7 +1414,7 @@
             this.txtNombrePaciente.IconRight = null;
             this.txtNombrePaciente.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtNombrePaciente.Lines = new string[0];
-            this.txtNombrePaciente.Location = new System.Drawing.Point(59, 45);
+            this.txtNombrePaciente.Location = new System.Drawing.Point(43, 45);
             this.txtNombrePaciente.MaxLength = 65;
             this.txtNombrePaciente.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtNombrePaciente.Modified = false;
@@ -1456,7 +1450,7 @@
             this.txtNombrePaciente.SelectionLength = 0;
             this.txtNombrePaciente.SelectionStart = 0;
             this.txtNombrePaciente.ShortcutsEnabled = false;
-            this.txtNombrePaciente.Size = new System.Drawing.Size(389, 42);
+            this.txtNombrePaciente.Size = new System.Drawing.Size(410, 42);
             this.txtNombrePaciente.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtNombrePaciente.TabIndex = 0;
             this.txtNombrePaciente.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -1469,6 +1463,7 @@
             // 
             // cmbGeneroId
             // 
+            this.cmbGeneroId.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cmbGeneroId.BackColor = System.Drawing.Color.Transparent;
             this.cmbGeneroId.BackgroundColor = System.Drawing.Color.White;
             this.cmbGeneroId.BorderColor = System.Drawing.Color.Silver;
@@ -1503,9 +1498,9 @@
             this.cmbGeneroId.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
             this.cmbGeneroId.ItemHighLightForeColor = System.Drawing.Color.White;
             this.cmbGeneroId.ItemTopMargin = 3;
-            this.cmbGeneroId.Location = new System.Drawing.Point(159, 156);
+            this.cmbGeneroId.Location = new System.Drawing.Point(142, 156);
             this.cmbGeneroId.Name = "cmbGeneroId";
-            this.cmbGeneroId.Size = new System.Drawing.Size(289, 32);
+            this.cmbGeneroId.Size = new System.Drawing.Size(311, 32);
             this.cmbGeneroId.TabIndex = 4;
             this.cmbGeneroId.Text = null;
             this.cmbGeneroId.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
@@ -1541,7 +1536,7 @@
             this.txtTelefono1.IconRight = null;
             this.txtTelefono1.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtTelefono1.Lines = new string[0];
-            this.txtTelefono1.Location = new System.Drawing.Point(75, 231);
+            this.txtTelefono1.Location = new System.Drawing.Point(43, 231);
             this.txtTelefono1.MaxLength = 12;
             this.txtTelefono1.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtTelefono1.Modified = false;
@@ -1577,7 +1572,7 @@
             this.txtTelefono1.SelectionLength = 0;
             this.txtTelefono1.SelectionStart = 0;
             this.txtTelefono1.ShortcutsEnabled = false;
-            this.txtTelefono1.Size = new System.Drawing.Size(389, 42);
+            this.txtTelefono1.Size = new System.Drawing.Size(410, 42);
             this.txtTelefono1.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtTelefono1.TabIndex = 6;
             this.txtTelefono1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -1590,10 +1585,9 @@
             // 
             // lblDocumento
             // 
-            this.lblDocumento.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblDocumento.AutoSize = true;
             this.lblDocumento.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDocumento.Location = new System.Drawing.Point(479, 108);
+            this.lblDocumento.Location = new System.Drawing.Point(492, 108);
             this.lblDocumento.Name = "lblDocumento";
             this.lblDocumento.Size = new System.Drawing.Size(127, 23);
             this.lblDocumento.TabIndex = 140;
@@ -1629,7 +1623,7 @@
             this.txtDocumentoPresentado.IconRight = null;
             this.txtDocumentoPresentado.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtDocumentoPresentado.Lines = new string[0];
-            this.txtDocumentoPresentado.Location = new System.Drawing.Point(612, 98);
+            this.txtDocumentoPresentado.Location = new System.Drawing.Point(617, 98);
             this.txtDocumentoPresentado.MaxLength = 11;
             this.txtDocumentoPresentado.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtDocumentoPresentado.Modified = false;
@@ -1665,7 +1659,7 @@
             this.txtDocumentoPresentado.SelectionLength = 0;
             this.txtDocumentoPresentado.SelectionStart = 0;
             this.txtDocumentoPresentado.ShortcutsEnabled = false;
-            this.txtDocumentoPresentado.Size = new System.Drawing.Size(314, 42);
+            this.txtDocumentoPresentado.Size = new System.Drawing.Size(293, 42);
             this.txtDocumentoPresentado.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtDocumentoPresentado.TabIndex = 3;
             this.txtDocumentoPresentado.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -1676,6 +1670,95 @@
             this.txtDocumentoPresentado.UseSystemPasswordChar = false;
             this.txtDocumentoPresentado.WordWrap = true;
             // 
+            // btnVerEncargado
+            // 
+            this.btnVerEncargado.AllowAnimations = true;
+            this.btnVerEncargado.AllowMouseEffects = true;
+            this.btnVerEncargado.AllowToggling = false;
+            this.btnVerEncargado.AnimationSpeed = 200;
+            this.btnVerEncargado.AutoGenerateColors = false;
+            this.btnVerEncargado.AutoRoundBorders = false;
+            this.btnVerEncargado.AutoSizeLeftIcon = true;
+            this.btnVerEncargado.AutoSizeRightIcon = true;
+            this.btnVerEncargado.BackColor = System.Drawing.Color.Transparent;
+            this.btnVerEncargado.BackColor1 = System.Drawing.Color.LightSeaGreen;
+            this.btnVerEncargado.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnVerEncargado.BackgroundImage")));
+            this.btnVerEncargado.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btnVerEncargado.ButtonText = "Ver Encargado";
+            this.btnVerEncargado.ButtonTextMarginLeft = 0;
+            this.btnVerEncargado.ColorContrastOnClick = 45;
+            this.btnVerEncargado.ColorContrastOnHover = 45;
+            this.btnVerEncargado.Cursor = System.Windows.Forms.Cursors.Hand;
+            borderEdges3.BottomLeft = true;
+            borderEdges3.BottomRight = true;
+            borderEdges3.TopLeft = true;
+            borderEdges3.TopRight = true;
+            this.btnVerEncargado.CustomizableEdges = borderEdges3;
+            this.btnVerEncargado.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnVerEncargado.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btnVerEncargado.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btnVerEncargado.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btnVerEncargado.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
+            this.btnVerEncargado.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVerEncargado.ForeColor = System.Drawing.Color.White;
+            this.btnVerEncargado.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnVerEncargado.IconLeftCursor = System.Windows.Forms.Cursors.Hand;
+            this.btnVerEncargado.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
+            this.btnVerEncargado.IconMarginLeft = 11;
+            this.btnVerEncargado.IconPadding = 10;
+            this.btnVerEncargado.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnVerEncargado.IconRightCursor = System.Windows.Forms.Cursors.Hand;
+            this.btnVerEncargado.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
+            this.btnVerEncargado.IconSize = 25;
+            this.btnVerEncargado.IdleBorderColor = System.Drawing.Color.Transparent;
+            this.btnVerEncargado.IdleBorderRadius = 15;
+            this.btnVerEncargado.IdleBorderThickness = 1;
+            this.btnVerEncargado.IdleFillColor = System.Drawing.Color.LightSeaGreen;
+            this.btnVerEncargado.IdleIconLeftImage = null;
+            this.btnVerEncargado.IdleIconRightImage = null;
+            this.btnVerEncargado.IndicateFocus = false;
+            this.btnVerEncargado.Location = new System.Drawing.Point(57, 1016);
+            this.btnVerEncargado.Name = "btnVerEncargado";
+            this.btnVerEncargado.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btnVerEncargado.OnDisabledState.BorderRadius = 15;
+            this.btnVerEncargado.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btnVerEncargado.OnDisabledState.BorderThickness = 1;
+            this.btnVerEncargado.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btnVerEncargado.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btnVerEncargado.OnDisabledState.IconLeftImage = null;
+            this.btnVerEncargado.OnDisabledState.IconRightImage = null;
+            this.btnVerEncargado.onHoverState.BorderColor = System.Drawing.Color.Transparent;
+            this.btnVerEncargado.onHoverState.BorderRadius = 15;
+            this.btnVerEncargado.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btnVerEncargado.onHoverState.BorderThickness = 1;
+            this.btnVerEncargado.onHoverState.FillColor = System.Drawing.Color.MediumTurquoise;
+            this.btnVerEncargado.onHoverState.ForeColor = System.Drawing.Color.White;
+            this.btnVerEncargado.onHoverState.IconLeftImage = null;
+            this.btnVerEncargado.onHoverState.IconRightImage = null;
+            this.btnVerEncargado.OnIdleState.BorderColor = System.Drawing.Color.Transparent;
+            this.btnVerEncargado.OnIdleState.BorderRadius = 15;
+            this.btnVerEncargado.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btnVerEncargado.OnIdleState.BorderThickness = 1;
+            this.btnVerEncargado.OnIdleState.FillColor = System.Drawing.Color.LightSeaGreen;
+            this.btnVerEncargado.OnIdleState.ForeColor = System.Drawing.Color.White;
+            this.btnVerEncargado.OnIdleState.IconLeftImage = null;
+            this.btnVerEncargado.OnIdleState.IconRightImage = null;
+            this.btnVerEncargado.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(166)))), ((int)(((byte)(158)))));
+            this.btnVerEncargado.OnPressedState.BorderRadius = 15;
+            this.btnVerEncargado.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btnVerEncargado.OnPressedState.BorderThickness = 1;
+            this.btnVerEncargado.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(166)))), ((int)(((byte)(158)))));
+            this.btnVerEncargado.OnPressedState.ForeColor = System.Drawing.Color.White;
+            this.btnVerEncargado.OnPressedState.IconLeftImage = null;
+            this.btnVerEncargado.OnPressedState.IconRightImage = null;
+            this.btnVerEncargado.Size = new System.Drawing.Size(202, 51);
+            this.btnVerEncargado.TabIndex = 156;
+            this.btnVerEncargado.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnVerEncargado.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnVerEncargado.TextMarginLeft = 0;
+            this.btnVerEncargado.TextPadding = new System.Windows.Forms.Padding(0);
+            this.btnVerEncargado.UseDefaultRadiusAndThickness = true;
+            // 
             // InformaciónPersonalForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1683,6 +1766,7 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1007, 788);
+            this.Controls.Add(this.btnVerEncargado);
             this.Controls.Add(this.txtDocumentoPresentado);
             this.Controls.Add(this.txtTelefono1);
             this.Controls.Add(this.cmbGeneroId);
@@ -1767,5 +1851,6 @@
         public Bunifu.UI.WinForms.BunifuTextBox txtTelefono1;
         public System.Windows.Forms.Label lblDocumento;
         public Bunifu.UI.WinForms.BunifuTextBox txtDocumentoPresentado;
+        public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnVerEncargado;
     }
 }

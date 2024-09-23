@@ -315,7 +315,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                     ObjRegistrarEncargado.CorreoElectronico = ObjInformacionENCForm.txtCorreoEncargado.Text.Trim();
 
                     //Llamamos al método para registrar el encargado
-                    if (ObjRegistrarEncargado.RegistrarEncargado() == false)
+                    if (ObjRegistrarEncargado.RegistrarEncargado() == true)
                     {
                         ObjInformacionENCForm.NotificacionNuevoEncargado.Show(ObjInformacionENCForm, "Los datos han sido registrados exitosamente", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Success);
                         ObjInformacionENCForm.Hide();

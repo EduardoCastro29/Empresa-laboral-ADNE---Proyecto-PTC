@@ -91,8 +91,10 @@
             this.txtApellidosEncargado = new Bunifu.UI.WinForms.BunifuTextBox();
             this.txtNombresEncargado = new Bunifu.UI.WinForms.BunifuTextBox();
             this.NotificacionNuevoEncargado = new Bunifu.UI.WinForms.BunifuSnackbar(this.components);
+            this.btnSalir = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.pnlGradienteFondo.SuspendLayout();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlGradienteFondo
@@ -101,6 +103,7 @@
             this.pnlGradienteFondo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlGradienteFondo.BackgroundImage")));
             this.pnlGradienteFondo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pnlGradienteFondo.BorderRadius = 1;
+            this.pnlGradienteFondo.Controls.Add(this.btnSalir);
             this.pnlGradienteFondo.Controls.Add(this.menuStrip1);
             this.pnlGradienteFondo.Controls.Add(this.btnEliminarEncargado);
             this.pnlGradienteFondo.Controls.Add(this.btnActualizarEncargado);
@@ -246,6 +249,7 @@
             this.btnEliminarEncargado.TextMarginLeft = 0;
             this.btnEliminarEncargado.TextPadding = new System.Windows.Forms.Padding(0);
             this.btnEliminarEncargado.UseDefaultRadiusAndThickness = true;
+            this.btnEliminarEncargado.Visible = false;
             // 
             // btnActualizarEncargado
             // 
@@ -336,6 +340,7 @@
             this.btnActualizarEncargado.TextMarginLeft = 0;
             this.btnActualizarEncargado.TextPadding = new System.Windows.Forms.Padding(0);
             this.btnActualizarEncargado.UseDefaultRadiusAndThickness = true;
+            this.btnActualizarEncargado.Visible = false;
             // 
             // bunifuLabel1
             // 
@@ -1326,6 +1331,24 @@
             this.NotificacionNuevoEncargado.WarningOptions.IconLeftMargin = 12;
             this.NotificacionNuevoEncargado.ZoomCloseIcon = true;
             // 
+            // btnSalir
+            // 
+            this.btnSalir.AllowFocused = false;
+            this.btnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSalir.AutoSizeHeight = true;
+            this.btnSalir.BorderRadius = 0;
+            this.btnSalir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSalir.Image = global::Empresa_laboral_ADNE___Proyecto_PTC.Properties.Resources.Cerrar_Login;
+            this.btnSalir.IsCircle = true;
+            this.btnSalir.Location = new System.Drawing.Point(703, 18);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(27, 27);
+            this.btnSalir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnSalir.TabIndex = 30;
+            this.btnSalir.TabStop = false;
+            this.btnSalir.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Square;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
             // InformaciónEncargadoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1340,6 +1363,7 @@
             this.pnlGradienteFondo.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1376,5 +1400,6 @@
         public Bunifu.UI.WinForms.BunifuSnackbar NotificacionNuevoEncargado;
         private System.Windows.Forms.MenuStrip menuStrip1;
         public System.Windows.Forms.ToolStripTextBox txtDocumentoPaciente;
+        public Bunifu.UI.WinForms.BunifuPictureBox btnSalir;
     }
 }

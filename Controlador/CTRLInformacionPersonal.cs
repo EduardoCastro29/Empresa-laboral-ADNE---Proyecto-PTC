@@ -81,7 +81,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                     //Restablecemos la fecha al valor anterior o a una fecha válida (hace 2 años)
                     ObjInformacionPersonal.dtFechaNacimiento.Value = DateTime.Today.AddYears(-2);
                 }
-                if (CalcularEdad < 18)
+                if (CalcularEdad < 18 && DAOInformacionEncargado.DocumentoEncargado == null)
                 {
                     //En el caso de que la persona sea menor a 18 años, mostramos un mensaje especificando si desea establecer un ecargado al paciente registrado
                     if (MessageBox.Show("La edad de la persona ingresada es menor a 18 años, desea agregarle un encargado al paciente registrado?", "Agregar Encargado", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
@@ -336,7 +336,8 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
         #region Limpiar campos después de cada realización en el Formulario
         private void LimpiarCampos()
         {
-            ObjInformacionPersonal.dtFechaNacimiento.Value = DateTime.Today.AddYears(-2); ;
+            ObjInformacionPersonal.dtFechaNacimiento.Value = DateTime.Today.AddYears(-18);
+            DAOInformacionEncargado.DocumentoEncargado = null;
             ObjInformacionPersonal.txtNacionalidad.Clear();
             ObjInformacionPersonal.txtDocumentoPresentado.Clear();
             ObjInformacionPersonal.txtEdad.Clear();
@@ -355,11 +356,17 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
         #endregion
         private void Modificar(object sender, EventArgs e)
         {
+            DAOInformacionPersonal ObjDaoCargarCMB = new DAOInformacionPersonal();
+            ObjInformacionPersonal.cmbGeneroId.DataSource = ObjDaoCargarCMB.AgregarCMBGenero();
+            ObjInformacionPersonal.cmbGeneroId.ValueMember = "generoId";
+            ObjInformacionPersonal.cmbGeneroId.DisplayMember = "genero";
+
             ObjInformacionPersonal.txtEdad.Enabled = false;
             if (string.IsNullOrWhiteSpace(ObjInformacionPersonal.txtDocumentoPresentado.Text))
             {
                 ObjInformacionPersonal.btnGuardarPaciente.Enabled = true;
                 ObjInformacionPersonal.btnModificarPaciente.Enabled = false;
+                ObjInformacionPersonal.btnVerEncargado.Visible = false;
             }
             else
             {
