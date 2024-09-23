@@ -65,7 +65,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                     }
                     catch (Exception)
                     {
-                        MessageBox.Show("Ha ocurrido un error, ERR-001-1", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Ha ocurrido un error, ERR-001-1 - Error al registrar el profesional y usuario, verifique si el registro del documento/usuario o correo han sido repetidos. [Consulte el Manual Técnico]", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return false;
                     }
                 }
@@ -76,7 +76,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
             }
             catch (Exception)
             {
-                MessageBox.Show("Ha ocurrido un error, ERR-001-1", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Ha ocurrido un error, ERR-001-1 - Error al registrar el profesional y usuario, verifique si el registro del documento/usuario o correo han sido repetidos. [Consulte el Manual Técnico]", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             finally
@@ -106,7 +106,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
             }
             catch (Exception)
             {
-                MessageBox.Show("Ha ocurrido un error, ERR-003-2", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Ha ocurrido un error, ERR-003-2 - Error al restablecer la contraseña del profesional. [Consulte el Manual Técnico]", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             finally
@@ -139,7 +139,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
             }
             catch (Exception)
             {
-                MessageBox.Show("Ha ocurrido un error, ERR-004-1", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Ha ocurrido un error, ERR-004-1 - Error al eliminar el profesional y usuario, verifique si no tiene registros asociados como citas o pacientes. [Consulte el Manual Técnico]", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             finally
@@ -174,7 +174,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
             }
             catch (Exception)
             {
-                MessageBox.Show("Ha ocurrido un error, ERR-011-1", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Ha ocurrido un error, ERR-011-1 - Error al cargar los profesionales registrados. [Consulte el Manual Técnico]", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return null;
             }
             finally
@@ -214,7 +214,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
             catch (Exception)
             {
                 //Imprimimos un mensaje de error junto con el retorno nulo
-                MessageBox.Show("Ha ocurrido un error, ERR-005-1", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Ha ocurrido un error, ERR-005-1 - Error al buscar un profesional/usuario o por su documento de identidad. [Consulte el Manual Técnico]", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return null;
             }
             finally

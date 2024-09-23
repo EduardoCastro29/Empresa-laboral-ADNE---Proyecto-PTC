@@ -46,6 +46,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                 ObjVerCitasForm.dgvCitasAgendadas.Columns[2].Visible = false;
                 ObjVerCitasForm.dgvCitasAgendadas.Columns[3].Visible = false;
                 ObjVerCitasForm.dgvCitasAgendadas.Columns[8].Visible = false;
+                ObjVerCitasForm.dgvCitasAgendadas.Columns[13].Visible = false;
             }
             catch (Exception ex)
             {

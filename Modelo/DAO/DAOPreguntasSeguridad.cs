@@ -85,7 +85,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                                     }
                                     catch (Exception)
                                     {
-                                        MessageBox.Show("Ha ocurrido un error, ERR-001-8", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                        MessageBox.Show("Ha ocurrido un error, ERR-001-8 - Error al registrar las preguntas de seguridad, verifique si el profesional tiene pregunas asignadas. [Consulte el Manual Técnico]", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                         return false;
                                     }
                                 }
@@ -96,7 +96,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                             }
                             catch (Exception)
                             {
-                                MessageBox.Show("Ha ocurrido un error, ERR-001-8", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                MessageBox.Show("Ha ocurrido un error, ERR-001-8 - Error al registrar las preguntas de seguridad, verifique si el profesional tiene pregunas asignadas. [Consulte el Manual Técnico]", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                 return false;
                             }
                         }
@@ -107,7 +107,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                     }
                     catch (Exception)
                     {
-                        MessageBox.Show("Ha ocurrido un error, ERR-001-8", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Ha ocurrido un error, ERR-001-8 - Error al registrar las preguntas de seguridad, verifique si el profesional tiene pregunas asignadas. [Consulte el Manual Técnico]", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return false;
                     }
                 }
@@ -118,7 +118,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
             }
             catch (Exception)
             {
-                MessageBox.Show("Ha ocurrido un error, ERR-001-8", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Ha ocurrido un error, ERR-001-8 - Error al registrar las preguntas de seguridad, verifique si el profesional tiene pregunas asignadas. [Consulte el Manual Técnico]", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             finally
@@ -221,7 +221,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                                             }
                                             catch (Exception)
                                             {
-                                                MessageBox.Show("Ha ocurrido un error, ERR-002-10", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                                MessageBox.Show("Ha ocurrido un error, ERR-002-10 - Error al verificar las preguntas de seguridad del profesional, verifique si el profesional tiene pregunas asignadas. [Consulte el Manual Técnico]", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                                 return false;
                                             }
                                         }
@@ -232,7 +232,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                                     }
                                     catch (Exception)
                                     {
-                                        MessageBox.Show("Ha ocurrido un error, ERR-002-10", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                        MessageBox.Show("Ha ocurrido un error, ERR-002-10 - Error al verificar las preguntas de seguridad del profesional, verifique si el profesional tiene pregunas asignadas. [Consulte el Manual Técnico]", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                         return false;
                                     }
                                 }
@@ -243,7 +243,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                             }
                             catch (Exception)
                             {
-                                MessageBox.Show("Ha ocurrido un error, ERR-002-10", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                MessageBox.Show("Ha ocurrido un error, ERR-002-10 - Error al verificar las preguntas de seguridad del profesional, verifique si el profesional tiene pregunas asignadas. [Consulte el Manual Técnico]", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                 return false;
                             }
                         }
@@ -254,7 +254,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                     }
                     catch (Exception)
                     {
-                        MessageBox.Show("Ha ocurrido un error, ERR-002-10", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Ha ocurrido un error, ERR-002-10 - Error al verificar las preguntas de seguridad del profesional, verifique si el profesional tiene pregunas asignadas. [Consulte el Manual Técnico]", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return false;
                     }
                 }
@@ -265,7 +265,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
             }
             catch (Exception)
             {
-                MessageBox.Show("Ha ocurrido un error, ERR-002-10", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Ha ocurrido un error, ERR-002-10 - Error al verificar las preguntas de seguridad del profesional, verifique si el profesional tiene pregunas asignadas. [Consulte el Manual Técnico]", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             finally
@@ -289,7 +289,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
             }
             catch (Exception)
             {
-                MessageBox.Show("Ha ocurrido un error, ERR-008-6", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Ha ocurrido un error, ERR-008-6 - Error al cargar las opciones de preguntas. [Consulte el Manual Técnico]", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return null;
             }
             finally
@@ -316,7 +316,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
             }
             catch (Exception)
             {
-                MessageBox.Show("Ha ocurrido un error, ERR-008-6", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Ha ocurrido un error, ERR-008-6 - Error al cargar las opciones de preguntas. [Consulte el Manual Técnico]", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return null;
             }
             finally
@@ -344,7 +344,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
             }
             catch (Exception)
             {
-                MessageBox.Show("Ha ocurrido un error, ERR-008-6", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Ha ocurrido un error, ERR-008-6 - Error al cargar las opciones de preguntas. [Consulte el Manual Técnico]", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return null;
             }
             finally
@@ -373,7 +373,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
             }
             catch (Exception)
             {
-                MessageBox.Show("Ha ocurrido un error, ERR-008-6", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Ha ocurrido un error, ERR-008-6 - Error al cargar las opciones de preguntas. [Consulte el Manual Técnico]", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return null;
             }
             finally

@@ -38,7 +38,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
             }
             catch (Exception)
             {
-                MessageBox.Show("Ha ocurrido un error, ERR-004-3", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Ha ocurrido un error, ERR-004-3 - Error al eliminar la cita asociada con el paciente. [Consulte el Manual Técnico]", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             finally
@@ -75,7 +75,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
             }
             catch (Exception)
             {
-                MessageBox.Show("Ha ocurrido un error, ERR-011-6", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Ha ocurrido un error, ERR-011-6 - Error al mostrar los datos de las citas, verifique si tiene citas registradas. [Consulte el Manual Técnico]", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return null;
             }
             finally
@@ -112,7 +112,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
             catch (Exception)
             {
                 //Imprimimos un mensaje de error junto con el retorno nulo
-                MessageBox.Show("Ha ocurrido un error, ERR-005-3", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Ha ocurrido un error, ERR-005-3 - Error al buscar citas por su identificador (nombre del paciente, apellido o fecha). [Consulte el Manual Técnico]", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return null;
             }
             finally

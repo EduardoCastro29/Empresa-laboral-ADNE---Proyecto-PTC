@@ -51,16 +51,16 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                 ObjMensajeMail.Body = CuerpoMail;
                 //Declaramos como prioridad normal, de esta forma se envía a recibidos
                 ObjMensajeMail.Priority = MailPriority.Normal;
-                //Enviando el correo
+                //Enviamos el correo
                 ObjSMTPClient.Send(ObjMensajeMail);
             }
             catch (Exception)
             {
-                MessageBox.Show("Ha ocurrido un error, ERR-041-1", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Ha ocurrido un error, ERR-041-1 - Error al conectarse con una red de Internet o el correo ha sido mal proporcionado, verifique su conexión a Internet. [Consulte el Manual Técnico]", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
-                //Finalmente, liberamos todos los campos del envío de correo (Dispose), liberando sobrecargas
+                //Finalmente, liberamos todos los campos del envío de correo (Dispose), desechar los objetos
                 ObjMensajeMail.Dispose();
                 ObjSMTPClient.Dispose();
             }

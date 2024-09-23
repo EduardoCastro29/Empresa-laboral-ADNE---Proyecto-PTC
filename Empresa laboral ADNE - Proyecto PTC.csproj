@@ -688,5 +688,8 @@
   <ItemGroup>
     <None Include="Resources\UsuarioConfig.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Descargar documentos.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -68,7 +68,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                     }
                     catch (Exception)
                     {
-                        MessageBox.Show("Ha ocurrido un error, ERR-003-6", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Ha ocurrido un error, ERR-003-6 - Error al actualizar la información del profesional, verifique si existen datos duplicados (Documento, Usuario o Correo). [Consulte el Manual Técnico]", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return false;
                     }
                 }
@@ -79,7 +79,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
             }
             catch (Exception)
             {
-                MessageBox.Show("Ha ocurrido un error, ERR-003-6", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Ha ocurrido un error, ERR-003-6 - Error al actualizar la información del profesional, verifique si existen datos duplicados (Documento, Usuario o Correo). [Consulte el Manual Técnico]", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             finally

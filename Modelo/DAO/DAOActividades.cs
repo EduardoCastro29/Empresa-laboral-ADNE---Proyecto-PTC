@@ -17,7 +17,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                 Conexion.Connection = Conectar();
 
                 //En la consulta se ordena los datos de la vista para pedir el siguiente paciente (El que se encuentra en el TOP 1)
-                string queryCita = "SELECT TOP 1 * FROM vistaCitasAgendadas WHERE [ID del Profesional] = '01234567-8' AND estadoId = 2 AND [Fecha de la Cita] >= CONVERT(date, GETDATE()) ORDER BY [Fecha de la Cita] ASC";
+                string queryCita = "SELECT TOP 1 * FROM vistaCitasAgendadas WHERE [ID del Profesional] = @DUIProfesional AND estadoId = 2 AND [Fecha de la Cita] >= CONVERT(date, GETDATE()) ORDER BY [Fecha de la Cita] ASC";
                 SqlCommand objSiguienteCita = new SqlCommand(queryCita, Conexion.Connection);
                 objSiguienteCita.Parameters.AddWithValue("@DUIProfesional", InicioSesion.Dui);
                 SqlDataAdapter adp = new SqlDataAdapter(objSiguienteCita);
@@ -28,7 +28,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
             }
             catch (Exception)
             {
-                MessageBox.Show("Ha ocurrido un error, Error pendiente ERR-0", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Ha ocurrido un error, ERR-006-0 - Error al cargar la siguiente cita. [Consulte el Manual Técnico]", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return null;
             }
             finally
@@ -48,7 +48,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
             }
             catch (Exception)
             {
-                MessageBox.Show("Ha ocurrido un error, ERR-006-1", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Ha ocurrido un error, ERR-006-1 - Error al cargar el intervalo de citas atentidas. [Consulte el Manual Técnico]", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return -1;
             }
             finally
@@ -68,7 +68,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
             }
             catch (Exception)
             {
-                MessageBox.Show("Ha ocurrido un error, ERR-006-2", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Ha ocurrido un error, ERR-006-2 - Error al cargar el intervalo de citas pendientes. [Consulte el Manual Técnico]", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return -1;
             }
             finally
@@ -88,7 +88,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
             }
             catch (Exception)
             {
-                MessageBox.Show("Ha ocurrido un error, ERR-006-3", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Ha ocurrido un error, ERR-006-3 - Error al cargar el intervalo de citas perdidas. [Consulte el Manual Técnico]", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return -1;
             }
             finally
@@ -110,7 +110,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
             }
             catch (Exception)
             {
-                MessageBox.Show("Ha ocurrido un error, ERR-006-4", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Ha ocurrido un error, ERR-006-4 - Error al cargar el intervalo de fechas de las citas. [Consulte el Manual Técnico]", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return -1;
             }
             finally
@@ -140,7 +140,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
             try
             {
                 Conexion.Connection = Conectar();
-                // Suponiendo que tienes una consulta SQL que devuelve la fecha y el total de citas por fecha
                 string query = "SELECT fecha, COUNT(citaId) as TotalCitas FROM Cita WHERE fecha BETWEEN @fechaInicio AND @fechaFinal GROUP BY fecha";
                 SqlCommand ObjGraficoCitas = new SqlCommand(query, Conexion.Connection);
                 ObjGraficoCitas.Parameters.AddWithValue("@fechaInicio", FechaInicio1);
@@ -159,7 +158,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
             }
             catch (Exception)
             {
-                MessageBox.Show("Ha ocurrido un error, no se encontraron datos para cargar el gráfico, ERR-007", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Ha ocurrido un error, ERR-007-1 - No se encontraron datos para cargar el gráfico. [Consulte el Manual Técnico]", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
@@ -193,7 +192,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
             }
             catch (Exception)
             {
-                MessageBox.Show("Ha ocurrido un error, ERR-002-2", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Ha ocurrido un error, ERR-011-3 - Error al cargar los registros dentro del historial de citas. [Consulte el Manual Técnico]", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return null;
             }
             finally

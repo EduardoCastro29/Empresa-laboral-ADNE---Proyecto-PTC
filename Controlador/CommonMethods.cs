@@ -67,9 +67,9 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                 return null;
             }
         }
-        //Este método no lo descomentemos aún XD, es para desencriptar el pin de acceso del Usuario de la base
-        //Se enviará desencriptado bv
 
+        //Este método no lo descomentemos aún XD, es para desencriptar el documento XML de la conexión SQL Server
+        //Las variables van a ser desencriptadas bv
         public string MetodoDesencriptacionAES(string textoEncriptado)
         {
             //Creamos una variable de tipo string para el texto a desencriptar

@@ -65,7 +65,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                     }
                     catch (Exception)
                     {
-                        MessageBox.Show("Ha ocurrido un error, ERR-001-4", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Ha ocurrido un error, ERR-001-4 - Error al registrar el paciente, verifique si el paciente ya existe o existen valores repeditos (Documento o Correo). [Consulte el Manual Técnico]", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return false;
                     }
                 }
@@ -76,7 +76,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
             }
             catch (Exception)
             {
-                MessageBox.Show("Ha ocurrido un error, ERR-001-4", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Ha ocurrido un error, ERR-001-4 - Error al registrar el paciente, verifique si el paciente ya existe o existen valores repeditos (Documento o Correo)", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             finally
@@ -137,32 +137,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                 if (objConsultaActualizar.ExecuteNonQuery() > 0)
                 {
                     return true;
-                    //try
-                    //{
-                    //    //Inicializamos el comando
-                    //    string consultaSQLPacientePR = "UPDATE PacienteProfesionalENC SET " +
-                    //                                   "documentoPresentado     = @documentoPresentado, " +
-                    //                                   "DUI                     = @DUI " +
-
-                    //                                   "WHERE " +
-                    //                                   "profesionalPAId = @profesion alPAId";
-
-                    //    //Declaramos el comando
-                    //    SqlCommand ObjConsultaSQL = new SqlCommand(consultaSQLPacientePR, Conexion.Connection);
-
-                    //    //Insertamos los valores
-                    //    ObjConsultaSQL.Parameters.AddWithValue("@documentoPresentado", DocumentoPresentado);
-                    //    ObjConsultaSQL.Parameters.AddWithValue("@DUI", InicioSesion.Dui);
-
-                    //    if (ObjConsultaSQL.ExecuteNonQuery() > 0)
-                    //        return true;
-                    //    else return false;
-                    //}
-                    //catch (Exception)
-                    //{
-                    //    MessageBox.Show("Ha ocurrido un error, ERR-003-5", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    //    return false;
-                    //}
                 }
                 else
                 {
@@ -172,7 +146,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
             }
             catch (Exception)
             {
-                MessageBox.Show("Ha ocurrido un error, ERR-003-5", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Ha ocurrido un error, ERR-003-5 - Error al actualizar el paciente, verifique si existen valores repeditos (Documento o Correo)", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             finally
@@ -221,7 +195,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
             }
             catch (Exception)
             {
-                MessageBox.Show("Ha ocurrido un error, ERR-002-5", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Ha ocurrido un error, ERR-002-5 - Error al cargar los valores con el registro del paciente. [Consulte el Manual Técnico]", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             finally
@@ -243,7 +217,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
             }
             catch (Exception)
             {
-                MessageBox.Show("Ha ocurrido un error, ERR-008-3", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Ha ocurrido un error, ERR-008-3 - Error al cargar las opciones de género. [Consulte el Manual Técnico]", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return null;
             }
             finally

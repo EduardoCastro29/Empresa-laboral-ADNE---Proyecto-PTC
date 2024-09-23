@@ -42,7 +42,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                 }
                 catch (Exception)
                 {
-                    MessageBox.Show("Ha ocurrido un error, ERR-003-1", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Ha ocurrido un error, ERR-003-1 - Error al actualizar la contraseña. [Consulte el Manual Técnico]", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return false;
                 }
                 finally
@@ -72,7 +72,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                 }
                 catch (Exception)
                 {
-                    MessageBox.Show("Ha ocurrido un error, ERR-003-1", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Ha ocurrido un error, ERR-003-1 - Error al actualizar la contraseña. [Consulte el Manual Técnico]", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return false;
                 }
                 finally
