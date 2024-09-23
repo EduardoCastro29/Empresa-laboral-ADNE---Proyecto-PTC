@@ -80,7 +80,9 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             try
             {
                 SaveFileDialog guardar = new SaveFileDialog();
-                guardar.FileName = DateTime.Now.ToString("ddMMyyyy") + ".pdf";
+                guardar.FileName = DateTime.Now.ToString("ddMMyyyy");
+                guardar.FileName += ".pdf";
+                guardar.Filter = "PDF file (*.pdf)|*.pdf";
 
                 DAODiagnosticos objCitasDAO = new DAODiagnosticos();
                 objCitasDAO.DocumentoPaciente = objUC.lblDUI.Text;

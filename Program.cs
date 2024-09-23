@@ -26,14 +26,14 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC
             //Creamos las instancias de las clases respectivas para la verificación de formularios
             DAOLogin ObjVerificarUsuarios = new DAOLogin();
             DAOPrimerUsoSistema ObjVerificarEmpresa = new DAOPrimerUsoSistema();
-            /*CommonMethods ObjVerificarDocumentoXML = new CommonMethods();
+            CommonMethods ObjVerificarDocumentoXML = new CommonMethods();
 
             if (ObjVerificarDocumentoXML.LeerArchivoXMLConexion() == false)
             {
                 Application.Run(new AgregarConexionForm());
             }
             //Indicamos que formularios se abriran según la consulta SQL
-            else */if (ObjVerificarEmpresa.VerificarEmpresa() == false)
+            else if (ObjVerificarEmpresa.VerificarEmpresa() == false)
             {
                 Application.Run(new PrimerUsoSistemaForm());
             }

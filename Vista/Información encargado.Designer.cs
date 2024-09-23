@@ -62,6 +62,7 @@
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties27 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties28 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             this.pnlGradienteFondo = new Bunifu.UI.WinForms.BunifuGradientPanel();
+            this.btnSalir = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.txtDocumentoPaciente = new System.Windows.Forms.ToolStripTextBox();
             this.btnEliminarEncargado = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
@@ -91,10 +92,9 @@
             this.txtApellidosEncargado = new Bunifu.UI.WinForms.BunifuTextBox();
             this.txtNombresEncargado = new Bunifu.UI.WinForms.BunifuTextBox();
             this.NotificacionNuevoEncargado = new Bunifu.UI.WinForms.BunifuSnackbar(this.components);
-            this.btnSalir = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.pnlGradienteFondo.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlGradienteFondo
@@ -141,6 +141,24 @@
             this.pnlGradienteFondo.Quality = 10;
             this.pnlGradienteFondo.Size = new System.Drawing.Size(750, 770);
             this.pnlGradienteFondo.TabIndex = 1;
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.AllowFocused = false;
+            this.btnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSalir.AutoSizeHeight = true;
+            this.btnSalir.BorderRadius = 0;
+            this.btnSalir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSalir.Image = global::Empresa_laboral_ADNE___Proyecto_PTC.Properties.Resources.Cerrar_Login;
+            this.btnSalir.IsCircle = true;
+            this.btnSalir.Location = new System.Drawing.Point(703, 18);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(27, 27);
+            this.btnSalir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnSalir.TabIndex = 30;
+            this.btnSalir.TabStop = false;
+            this.btnSalir.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Square;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // menuStrip1
             // 
@@ -244,6 +262,7 @@
             this.btnEliminarEncargado.OnPressedState.IconRightImage = null;
             this.btnEliminarEncargado.Size = new System.Drawing.Size(201, 62);
             this.btnEliminarEncargado.TabIndex = 28;
+            this.btnEliminarEncargado.TabStop = false;
             this.btnEliminarEncargado.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnEliminarEncargado.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnEliminarEncargado.TextMarginLeft = 0;
@@ -335,6 +354,7 @@
             this.btnActualizarEncargado.OnPressedState.IconRightImage = null;
             this.btnActualizarEncargado.Size = new System.Drawing.Size(201, 62);
             this.btnActualizarEncargado.TabIndex = 27;
+            this.btnActualizarEncargado.TabStop = false;
             this.btnActualizarEncargado.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnActualizarEncargado.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnActualizarEncargado.TextMarginLeft = 0;
@@ -351,7 +371,7 @@
             this.bunifuLabel1.Location = new System.Drawing.Point(385, 380);
             this.bunifuLabel1.Name = "bunifuLabel1";
             this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel1.Size = new System.Drawing.Size(403, 40);
+            this.bunifuLabel1.Size = new System.Drawing.Size(229, 22);
             this.bunifuLabel1.TabIndex = 25;
             this.bunifuLabel1.Text = "Relación con el paciente";
             this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -397,6 +417,7 @@
             this.cmbRelacionPaciente.Name = "cmbRelacionPaciente";
             this.cmbRelacionPaciente.Size = new System.Drawing.Size(296, 32);
             this.cmbRelacionPaciente.TabIndex = 24;
+            this.cmbRelacionPaciente.TabStop = false;
             this.cmbRelacionPaciente.Text = null;
             this.cmbRelacionPaciente.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
             this.cmbRelacionPaciente.TextLeftMargin = 5;
@@ -410,7 +431,7 @@
             this.lblFechaNacimiento.Location = new System.Drawing.Point(58, 295);
             this.lblFechaNacimiento.Name = "lblFechaNacimiento";
             this.lblFechaNacimiento.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblFechaNacimiento.Size = new System.Drawing.Size(348, 40);
+            this.lblFechaNacimiento.Size = new System.Drawing.Size(198, 22);
             this.lblFechaNacimiento.TabIndex = 23;
             this.lblFechaNacimiento.Text = "Fecha de Nacimiento";
             this.lblFechaNacimiento.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -440,7 +461,7 @@
             this.dtFechaNacimiento.MinimumSize = new System.Drawing.Size(4, 32);
             this.dtFechaNacimiento.Name = "dtFechaNacimiento";
             this.dtFechaNacimiento.Size = new System.Drawing.Size(300, 32);
-            this.dtFechaNacimiento.TabIndex = 22;
+            this.dtFechaNacimiento.TabIndex = 3;
             // 
             // lblEdad
             // 
@@ -451,7 +472,7 @@
             this.lblEdad.Location = new System.Drawing.Point(390, 295);
             this.lblEdad.Name = "lblEdad";
             this.lblEdad.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblEdad.Size = new System.Drawing.Size(87, 40);
+            this.lblEdad.Size = new System.Drawing.Size(49, 22);
             this.lblEdad.TabIndex = 21;
             this.lblEdad.Text = "Edad";
             this.lblEdad.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -525,7 +546,8 @@
             this.txtEdadEncargado.ShortcutsEnabled = true;
             this.txtEdadEncargado.Size = new System.Drawing.Size(301, 41);
             this.txtEdadEncargado.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.txtEdadEncargado.TabIndex = 20;
+            this.txtEdadEncargado.TabIndex = 19;
+            this.txtEdadEncargado.TabStop = false;
             this.txtEdadEncargado.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtEdadEncargado.TextMarginBottom = 0;
             this.txtEdadEncargado.TextMarginLeft = 3;
@@ -543,7 +565,7 @@
             this.lblDomicilio.Location = new System.Drawing.Point(58, 574);
             this.lblDomicilio.Name = "lblDomicilio";
             this.lblDomicilio.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblDomicilio.Size = new System.Drawing.Size(147, 40);
+            this.lblDomicilio.Size = new System.Drawing.Size(79, 22);
             this.lblDomicilio.TabIndex = 18;
             this.lblDomicilio.Text = "Domicilio";
             this.lblDomicilio.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -615,10 +637,10 @@
             this.txtDomicilio.SelectedText = "";
             this.txtDomicilio.SelectionLength = 0;
             this.txtDomicilio.SelectionStart = 0;
-            this.txtDomicilio.ShortcutsEnabled = true;
+            this.txtDomicilio.ShortcutsEnabled = false;
             this.txtDomicilio.Size = new System.Drawing.Size(633, 58);
             this.txtDomicilio.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.txtDomicilio.TabIndex = 17;
+            this.txtDomicilio.TabIndex = 6;
             this.txtDomicilio.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtDomicilio.TextMarginBottom = 0;
             this.txtDomicilio.TextMarginLeft = 3;
@@ -710,7 +732,7 @@
             this.btnRegistrarEncargado.OnPressedState.IconLeftImage = null;
             this.btnRegistrarEncargado.OnPressedState.IconRightImage = null;
             this.btnRegistrarEncargado.Size = new System.Drawing.Size(201, 62);
-            this.btnRegistrarEncargado.TabIndex = 16;
+            this.btnRegistrarEncargado.TabIndex = 7;
             this.btnRegistrarEncargado.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnRegistrarEncargado.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnRegistrarEncargado.TextMarginLeft = 0;
@@ -726,7 +748,7 @@
             this.lblEmail.Location = new System.Drawing.Point(58, 478);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblEmail.Size = new System.Drawing.Size(515, 40);
+            this.lblEmail.Size = new System.Drawing.Size(290, 22);
             this.lblEmail.TabIndex = 15;
             this.lblEmail.Text = "Dirección de Correo Electrónico";
             this.lblEmail.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -741,7 +763,7 @@
             this.lblTelefono.Location = new System.Drawing.Point(58, 380);
             this.lblTelefono.Name = "lblTelefono";
             this.lblTelefono.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblTelefono.Size = new System.Drawing.Size(135, 40);
+            this.lblTelefono.Size = new System.Drawing.Size(77, 22);
             this.lblTelefono.TabIndex = 14;
             this.lblTelefono.Text = "Teléfono";
             this.lblTelefono.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -813,10 +835,10 @@
             this.txtCorreoEncargado.SelectedText = "";
             this.txtCorreoEncargado.SelectionLength = 0;
             this.txtCorreoEncargado.SelectionStart = 0;
-            this.txtCorreoEncargado.ShortcutsEnabled = true;
+            this.txtCorreoEncargado.ShortcutsEnabled = false;
             this.txtCorreoEncargado.Size = new System.Drawing.Size(633, 51);
             this.txtCorreoEncargado.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.txtCorreoEncargado.TabIndex = 13;
+            this.txtCorreoEncargado.TabIndex = 5;
             this.txtCorreoEncargado.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtCorreoEncargado.TextMarginBottom = 0;
             this.txtCorreoEncargado.TextMarginLeft = 3;
@@ -889,10 +911,10 @@
             this.txtTelefono.SelectedText = "";
             this.txtTelefono.SelectionLength = 0;
             this.txtTelefono.SelectionStart = 0;
-            this.txtTelefono.ShortcutsEnabled = true;
+            this.txtTelefono.ShortcutsEnabled = false;
             this.txtTelefono.Size = new System.Drawing.Size(301, 49);
             this.txtTelefono.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.txtTelefono.TabIndex = 12;
+            this.txtTelefono.TabIndex = 4;
             this.txtTelefono.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtTelefono.TextMarginBottom = 0;
             this.txtTelefono.TextMarginLeft = 3;
@@ -980,7 +1002,7 @@
             this.lblDocumentoEncargado.Location = new System.Drawing.Point(58, 95);
             this.lblDocumentoEncargado.Name = "lblDocumentoEncargado";
             this.lblDocumentoEncargado.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblDocumentoEncargado.Size = new System.Drawing.Size(191, 40);
+            this.lblDocumentoEncargado.Size = new System.Drawing.Size(110, 22);
             this.lblDocumentoEncargado.TabIndex = 7;
             this.lblDocumentoEncargado.Text = "Documento";
             this.lblDocumentoEncargado.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -1050,10 +1072,10 @@
             this.txtDocumentoEncargado.SelectedText = "";
             this.txtDocumentoEncargado.SelectionLength = 0;
             this.txtDocumentoEncargado.SelectionStart = 0;
-            this.txtDocumentoEncargado.ShortcutsEnabled = true;
+            this.txtDocumentoEncargado.ShortcutsEnabled = false;
             this.txtDocumentoEncargado.Size = new System.Drawing.Size(301, 49);
             this.txtDocumentoEncargado.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.txtDocumentoEncargado.TabIndex = 6;
+            this.txtDocumentoEncargado.TabIndex = 0;
             this.txtDocumentoEncargado.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtDocumentoEncargado.TextMarginBottom = 0;
             this.txtDocumentoEncargado.TextMarginLeft = 3;
@@ -1072,7 +1094,7 @@
             this.lblApellidosEncargado.Location = new System.Drawing.Point(390, 198);
             this.lblApellidosEncargado.Name = "lblApellidosEncargado";
             this.lblApellidosEncargado.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblApellidosEncargado.Size = new System.Drawing.Size(144, 40);
+            this.lblApellidosEncargado.Size = new System.Drawing.Size(81, 22);
             this.lblApellidosEncargado.TabIndex = 5;
             this.lblApellidosEncargado.Text = "Apellidos";
             this.lblApellidosEncargado.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -1089,6 +1111,7 @@
             this.lblTituloForm.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblTituloForm.Size = new System.Drawing.Size(329, 28);
             this.lblTituloForm.TabIndex = 4;
+            this.lblTituloForm.TabStop = false;
             this.lblTituloForm.Text = "Información del encargado:";
             this.lblTituloForm.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lblTituloForm.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
@@ -1102,7 +1125,7 @@
             this.lblNombresEncargado.Location = new System.Drawing.Point(58, 199);
             this.lblNombresEncargado.Name = "lblNombresEncargado";
             this.lblNombresEncargado.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblNombresEncargado.Size = new System.Drawing.Size(143, 40);
+            this.lblNombresEncargado.Size = new System.Drawing.Size(81, 22);
             this.lblNombresEncargado.TabIndex = 3;
             this.lblNombresEncargado.Text = "Nombres";
             this.lblNombresEncargado.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -1173,10 +1196,10 @@
             this.txtApellidosEncargado.SelectedText = "";
             this.txtApellidosEncargado.SelectionLength = 0;
             this.txtApellidosEncargado.SelectionStart = 0;
-            this.txtApellidosEncargado.ShortcutsEnabled = true;
+            this.txtApellidosEncargado.ShortcutsEnabled = false;
             this.txtApellidosEncargado.Size = new System.Drawing.Size(301, 49);
             this.txtApellidosEncargado.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.txtApellidosEncargado.TabIndex = 1;
+            this.txtApellidosEncargado.TabIndex = 2;
             this.txtApellidosEncargado.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtApellidosEncargado.TextMarginBottom = 0;
             this.txtApellidosEncargado.TextMarginLeft = 3;
@@ -1249,10 +1272,10 @@
             this.txtNombresEncargado.SelectedText = "";
             this.txtNombresEncargado.SelectionLength = 0;
             this.txtNombresEncargado.SelectionStart = 0;
-            this.txtNombresEncargado.ShortcutsEnabled = true;
+            this.txtNombresEncargado.ShortcutsEnabled = false;
             this.txtNombresEncargado.Size = new System.Drawing.Size(301, 49);
             this.txtNombresEncargado.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.txtNombresEncargado.TabIndex = 0;
+            this.txtNombresEncargado.TabIndex = 1;
             this.txtNombresEncargado.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtNombresEncargado.TextMarginBottom = 0;
             this.txtNombresEncargado.TextMarginLeft = 3;
@@ -1331,24 +1354,6 @@
             this.NotificacionNuevoEncargado.WarningOptions.IconLeftMargin = 12;
             this.NotificacionNuevoEncargado.ZoomCloseIcon = true;
             // 
-            // btnSalir
-            // 
-            this.btnSalir.AllowFocused = false;
-            this.btnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSalir.AutoSizeHeight = true;
-            this.btnSalir.BorderRadius = 0;
-            this.btnSalir.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSalir.Image = global::Empresa_laboral_ADNE___Proyecto_PTC.Properties.Resources.Cerrar_Login;
-            this.btnSalir.IsCircle = true;
-            this.btnSalir.Location = new System.Drawing.Point(703, 18);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(27, 27);
-            this.btnSalir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnSalir.TabIndex = 30;
-            this.btnSalir.TabStop = false;
-            this.btnSalir.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Square;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
-            // 
             // InformaciónEncargadoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1361,9 +1366,9 @@
             this.Text = "Información del Encargado";
             this.pnlGradienteFondo.ResumeLayout(false);
             this.pnlGradienteFondo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).EndInit();
             this.ResumeLayout(false);
 
         }
