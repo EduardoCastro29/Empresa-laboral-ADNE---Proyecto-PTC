@@ -18,8 +18,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DTO
         private int pacienteId;
         private string documentoPaciente;
 
-        //private int min_cita;
-
         //Atributos para el expediente
         private int n_expediente;
         private string nombre_apellido_paciente;
@@ -49,6 +47,15 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DTO
         private DateTime fecha_Cita;
         private string lugar;
         private string desc_Cita;
+
+        //Atributos de los datos de la empresa
+        private string nombreEmpresa;
+        private string direccionEmpresa;
+        private string correoElectronicoE;
+        private string numeroTelefono;
+        private string numeroPBX;
+        private DateTime feghaCreacionE;
+        private byte[] fotoEmpresa;
 
         public string Nombre { get => nombre; set => nombre = value; }
         public int CitaId { get => citaId; set => citaId = value; }
@@ -86,6 +93,12 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DTO
         public string Lugar { get => lugar; set => lugar = value; }
         public string Desc_Cita { get => desc_Cita; set => desc_Cita = value; }
         public string DocumentoPaciente { get => documentoPaciente; set => documentoPaciente = value; }
-        //public int Min_cita { get => min_cita; set => min_cita = value; }
+        public string NombreEmpresa { get => nombreEmpresa; set => nombreEmpresa = value; }
+        public string DireccionEmpresa { get => direccionEmpresa; set => direccionEmpresa = value; }
+        public string CorreoElectronicoE { get => correoElectronicoE; set => correoElectronicoE = value; }
+        public string NumeroTelefono { get => numeroTelefono; set => numeroTelefono = value; }
+        public string NumeroPBX { get => numeroPBX; set => numeroPBX = value; }
+        public DateTime FeghaCreacionE { get => feghaCreacionE; set => feghaCreacionE = value; }
+        public byte[] FotoEmpresa { get => fotoEmpresa; set => fotoEmpresa = value; }
     }
 }

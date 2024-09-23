@@ -129,22 +129,31 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                     pag = pag.Replace("@DESCRIPCION", objCitasDAO.Desc_Cita);
                     #endregion
 
-                    if (guardar.ShowDialog() == DialogResult.OK)
+                    if (objCitasDAO.ObtenerDatosSistema() == true)
                     {
-                        using (FileStream stream = new FileStream(guardar.FileName, FileMode.Create))
+                        //Información del Sistema
+                        pag = pag.Replace("@NOMBREEMPRESA", objCitasDAO.NombreEmpresa);
+                        pag = pag.Replace("@TELEFONOEMPRESA", objCitasDAO.NumeroTelefono + " / " + objCitasDAO.NumeroPBX);
+                        pag = pag.Replace("@UBICACION", objCitasDAO.DireccionEmpresa);
+                        pag = pag.Replace("@CORREOEMPRESA", objCitasDAO.CorreoElectronicoE);
+
+                        if (guardar.ShowDialog() == DialogResult.OK)
                         {
-                            Document pdfDoc = new Document(PageSize.A4, 25, 25, 25, 25);
-                            PdfWriter writer = PdfWriter.GetInstance(pdfDoc, stream);
-                            pdfDoc.Open();
-                            pdfDoc.Add(new Phrase(""));
-
-                            using (StringReader sr = new StringReader(pag))
+                            using (FileStream stream = new FileStream(guardar.FileName, FileMode.Create))
                             {
-                                XMLWorkerHelper.GetInstance().ParseXHtml(writer, pdfDoc, sr);
-                            }
+                                Document pdfDoc = new Document(PageSize.A4, 25, 25, 25, 25);
+                                PdfWriter writer = PdfWriter.GetInstance(pdfDoc, stream);
+                                pdfDoc.Open();
+                                pdfDoc.Add(new Phrase(""));
 
-                            pdfDoc.Close();
-                            stream.Close();
+                                using (StringReader sr = new StringReader(pag))
+                                {
+                                    XMLWorkerHelper.GetInstance().ParseXHtml(writer, pdfDoc, sr);
+                                }
+
+                                pdfDoc.Close();
+                                stream.Close();
+                            }
                         }
                     }
                 }

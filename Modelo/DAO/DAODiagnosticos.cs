@@ -118,9 +118,43 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                     Observacion = lectura.GetString(22);
                     AproximacionDiag = lectura.GetString(23);
                     AtencionBrindada = lectura.GetString(24);
-                    Fecha_Cita = lectura.GetDateTime(25);
+                    Fecha_Cita = (DateTime)lectura.GetValue(25);
                     Lugar = lectura.GetString(26);
                     Desc_Cita = lectura.GetString(27);
+                }
+                return lectura.HasRows;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Ha ocurrido un error, ERR-002-1 - Error al cargar el documento PDF con los datos el expediente del paciente. [Consulte el Manual Técnico]", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            finally
+            {
+                Conexion.Connection.Close();
+            }
+        }
+        public bool ObtenerDatosSistema()
+        {
+            try
+            {
+                Conexion.Connection = Conectar();
+
+                string queryVerificarEmpresa = "SELECT * FROM DatosDelSistema";
+
+                SqlCommand ObjComandoVerificarEmpresa = new SqlCommand(queryVerificarEmpresa, Conexion.Connection);
+
+                SqlDataReader lectura = ObjComandoVerificarEmpresa.ExecuteReader();
+                while (lectura.Read())
+                {
+                    //Obtengo los valores de la tabla
+                    NombreEmpresa = lectura.GetString(0);
+                    DireccionEmpresa = lectura.GetString(1);
+                    CorreoElectronicoE = lectura.GetString(2);
+                    NumeroTelefono = lectura.GetString(3);
+                    NumeroPBX = lectura.GetString(4);
+                    Fecha = (DateTime)lectura.GetValue(5);
+                    FotoEmpresa = (byte[])lectura.GetSqlBinary(6);
                 }
                 return lectura.HasRows;
             }
