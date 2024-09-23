@@ -17,18 +17,20 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
     internal class CTRLConfiguracion
     {
         readonly ConfiguraciónForm ObjConfiguracionForm;
+        ActualizarContraseñaForm ObjActualizarContrasena = new ActualizarContraseñaForm();
         public CTRLConfiguracion(ConfiguraciónForm Vista)
         {
             ObjConfiguracionForm = Vista;
 
             ObjConfiguracionForm.Load += new EventHandler(CargarDatosUsuario);
 
-            //ObjConfiguracionForm.btnDescargarManualUsuario.Click += new EventHandler(DescargarPDFManualUsuario);
-            //ObjConfiguracionForm.btnDescargarManualTecnico.Click += new EventHandler(DescargarPDFManualTecnico);
+            ObjConfiguracionForm.btnDescargarManualUsuario.Click += new EventHandler(DescargarPDFManualUsuario);
+            ObjConfiguracionForm.btnDescargarManualTecnico.Click += new EventHandler(DescargarPDFManualTecnico);
             ObjConfiguracionForm.btnActualizarPerfil.Click += new EventHandler(AbrirActualizarUsuario);
             ObjConfiguracionForm.btnCerrarSesion.Click += new EventHandler(CerrarSesionConfig);
             ObjConfiguracionForm.btnAgregarConfiguracion.Click += new EventHandler(AbrirConfiguracionServidor);
             ObjConfiguracionForm.switchModo.CheckedChanged += new EventHandler(modoOscuro);
+            ObjConfiguracionForm.btnNuevaContrasena.Click += new EventHandler(cambiarContrasena);
         }
         #region Eventos iniciales al cargar el Formulario
         private void CargarDatosUsuario(object sender, EventArgs e)
@@ -81,42 +83,42 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
         #endregion
         #region Eventos de descarga PDF para manual técnico y manual de Usuario
         //Estos son los métodos comúnes para descargar archivos ya puestos dentro de la aplicación del programa
-        //private void DescargarPDFManualUsuario(object sender, EventArgs e)
-        //{
-        //    //Iniciamos poniendo la ruta actual del proyecto, y le decimos que busque el archivo respectivo (en este caso, el manual de usuario)
-        //    //Obtenemos el diretorio actual, junto con el nombre del archivo y la dirección (en este caso, la carpeta debug)
-        //    string RutaArchivoManualUsuario = Path.Combine(Directory.GetCurrentDirectory().ToString(), "");
+        private void DescargarPDFManualUsuario(object sender, EventArgs e)
+        {
+            //Iniciamos poniendo la ruta actual del proyecto, y le decimos que busque el archivo respectivo (en este caso, el manual de usuario)
+            //Obtenemos el diretorio actual, junto con el nombre del archivo y la dirección (en este caso, la carpeta debug)
+            string RutaArchivoManualUsuario = Path.Combine(Directory.GetCurrentDirectory().ToString(), "Manual_Usuario_ADNE.pdf");
 
-        //    //Si el archivo existe, procedemos a descargarlo
-        //    if (File.Exists(RutaArchivoManualUsuario))
-        //    {
-        //        //Indicamos el archivo que se descargará (en este caso, el PDF)
-        //        System.Diagnostics.Process.Start(RutaArchivoManualUsuario);
-        //    }
-        //    else
-        //    {
-        //        //Caso contrario, si el archivo no existe, mandamos un mensaje de error
-        //        MessageBox.Show("El archivo Manual de Usuario no existe dentro de los estándares de la aplicación, consulte con el soporte técnico", "Manual de Usuario", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        //    }
-        //}
-        //private void DescargarPDFManualTecnico(object sender, EventArgs e)
-        //{
-        //    //Iniciamos poniendo la ruta actual del proyecto, y le decimos que busque el archivo respectivo (en este caso, el manual técnico)
-        //    //Obtenemos el diretorio actual, junto con el nombre del archivo y la dirección (en este caso, la carpeta debug)
-        //    string RutaArchivoManualUsuario = Path.Combine(Directory.GetCurrentDirectory().ToString(), "Manual_Tecnico_ADNE.pdf");
+            //Si el archivo existe, procedemos a descargarlo
+            if (File.Exists(RutaArchivoManualUsuario))
+            {
+                //Indicamos el archivo que se descargará (en este caso, el PDF)
+                System.Diagnostics.Process.Start(RutaArchivoManualUsuario);
+            }
+            else
+            {
+                //Caso contrario, si el archivo no existe, mandamos un mensaje de error
+                MessageBox.Show("El archivo Manual de Usuario no existe dentro de los estándares de la aplicación, consulte con el soporte técnico", "Manual de Usuario", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        private void DescargarPDFManualTecnico(object sender, EventArgs e)
+        {
+            //Iniciamos poniendo la ruta actual del proyecto, y le decimos que busque el archivo respectivo (en este caso, el manual técnico)
+            //Obtenemos el diretorio actual, junto con el nombre del archivo y la dirección (en este caso, la carpeta debug)
+            string RutaArchivoManualUsuario = Path.Combine(Directory.GetCurrentDirectory().ToString(), "Manual_Tecnico_ADNE.pdf");
 
-        //    //Si el archivo existe, procedemos a descargarlo
-        //    if (File.Exists(RutaArchivoManualUsuario))
-        //    {
-        //        //Indicamos el archivo que se descargará (en este caso, el PDF)
-        //        System.Diagnostics.Process.Start(RutaArchivoManualUsuario);
-        //    }
-        //    else
-        //    {
-        //        //Caso contrario, si el archivo no existe, mandamos un mensaje de error
-        //        MessageBox.Show("El archivo Manual Técnico no existe dentro de los estándares de la aplicación, consulte con el soporte técnico", "Manual Técnico", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        //    }
-        //}
+            //Si el archivo existe, procedemos a descargarlo
+            if (File.Exists(RutaArchivoManualUsuario))
+            {
+                //Indicamos el archivo que se descargará (en este caso, el PDF)
+                System.Diagnostics.Process.Start(RutaArchivoManualUsuario);
+            }
+            else
+            {
+                //Caso contrario, si el archivo no existe, mandamos un mensaje de error
+                MessageBox.Show("El archivo Manual Técnico no existe dentro de los estándares de la aplicación, consulte con el soporte técnico", "Manual Técnico", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
         #endregion
         #region Método para cerrar sesión accionando el botón dentro de configuración
         private void CerrarSesionConfig(object sender, EventArgs e)
@@ -141,6 +143,11 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                 objConfig.EscribirIni("SECTION", "key", "light");
                 ObjConfiguracionForm.BackColor = Color.FromArgb(14, 143, 156);
             }
+        }
+
+        private void cambiarContrasena(object sender, EventArgs e)
+        {
+
         }
     }
 }
