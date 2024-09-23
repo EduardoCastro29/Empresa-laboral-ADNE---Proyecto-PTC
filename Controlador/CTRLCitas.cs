@@ -133,7 +133,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                     {
                         //Información del Sistema
                         pag = pag.Replace("@NOMBREEMPRESA", objCitasDAO.NombreEmpresa);
-                        pag = pag.Replace("@TELEFONOEMPRESA", objCitasDAO.NumeroTelefono + " / " + objCitasDAO.NumeroPBX);
+                        pag = pag.Replace("@TELEFONOEMPRESA", objCitasDAO.NumeroTelefono + objCitasDAO.NumeroPBX);
                         pag = pag.Replace("@UBICACION", objCitasDAO.DireccionEmpresa);
                         pag = pag.Replace("@CORREOEMPRESA", objCitasDAO.CorreoElectronicoE);
 
@@ -145,6 +145,13 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                                 PdfWriter writer = PdfWriter.GetInstance(pdfDoc, stream);
                                 pdfDoc.Open();
                                 pdfDoc.Add(new Phrase(""));
+
+                                byte[] imagenEmpresa = objCitasDAO.FotoEmpresa;  
+                                iTextSharp.text.Image img = iTextSharp.text.Image.GetInstance(imagenEmpresa);
+                                img.ScaleToFit(120, 100);
+                                img.Alignment = iTextSharp.text.Image.UNDERLYING;
+                                img.SetAbsolutePosition(pdfDoc.LeftMargin, pdfDoc.Top - 100);
+                                pdfDoc.Add(img);
 
                                 using (StringReader sr = new StringReader(pag))
                                 {

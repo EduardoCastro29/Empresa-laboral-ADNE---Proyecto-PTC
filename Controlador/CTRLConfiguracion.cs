@@ -18,6 +18,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
     {
         readonly ConfiguraciónForm ObjConfiguracionForm;
         ActualizarContraseñaForm ObjActualizarContrasena = new ActualizarContraseñaForm();
+        CTRLActualizarContrasena ObjCTRLActualizarContrasena;
         public CTRLConfiguracion(ConfiguraciónForm Vista)
         {
             ObjConfiguracionForm = Vista;
@@ -30,7 +31,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             ObjConfiguracionForm.btnCerrarSesion.Click += new EventHandler(CerrarSesionConfig);
             ObjConfiguracionForm.btnAgregarConfiguracion.Click += new EventHandler(AbrirConfiguracionServidor);
             ObjConfiguracionForm.switchModo.CheckedChanged += new EventHandler(modoOscuro);
-            ObjConfiguracionForm.btnNuevaContrasena.Click += new EventHandler(cambiarContrasena);
+            //ObjConfiguracionForm.btnNuevaContrasena.Click += new EventHandler(cambiarContrasena);
         }
         #region Eventos iniciales al cargar el Formulario
         private void CargarDatosUsuario(object sender, EventArgs e)
@@ -145,9 +146,13 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             }
         }
 
-        private void cambiarContrasena(object sender, EventArgs e)
-        {
+        //private void cambiarContrasena(object sender, EventArgs e)
+        //{
+        //    ObjActualizarContrasena.ShowDialog();
+        //    if (ObjCTRLActualizarContrasena.ActualizarContrasena)
+        //    {
 
-        }
+        //    }
+        //}
     }
 }
