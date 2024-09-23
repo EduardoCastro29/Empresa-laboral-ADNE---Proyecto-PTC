@@ -509,6 +509,12 @@
     <EmbeddedResource Include="Vista\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
+    <Content Include="Manual_Tecnico_ADNE.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Manual_Usuario_ADNE.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -87,37 +87,43 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
         private void DescargarPDFManualUsuario(object sender, EventArgs e)
         {
             //Iniciamos poniendo la ruta actual del proyecto, y le decimos que busque el archivo respectivo (en este caso, el manual de usuario)
-            //Obtenemos el diretorio actual, junto con el nombre del archivo y la dirección (en este caso, la carpeta debug)
-            string RutaArchivoManualUsuario = Path.Combine(Directory.GetCurrentDirectory().ToString(), "Manual_Usuario_ADNE.pdf");
+            // Obtenemos la ruta base del directorio donde se ejecuta la aplicación (release o debug)
+            string RutaArchivoManualUsuario = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Manual_Usuario_ADNE.pdf");
 
-            //Si el archivo existe, procedemos a descargarlo
+            // Si el archivo existe, procedemos a abrirlo
             if (File.Exists(RutaArchivoManualUsuario))
             {
-                //Indicamos el archivo que se descargará (en este caso, el PDF)
+                // Abre el archivo PDF usando el visor predeterminado
                 System.Diagnostics.Process.Start(RutaArchivoManualUsuario);
             }
             else
             {
-                //Caso contrario, si el archivo no existe, mandamos un mensaje de error
-                MessageBox.Show("El archivo Manual de Usuario no existe dentro de los estándares de la aplicación, consulte con el soporte técnico", "Manual de Usuario", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                // Si el archivo no existe, mostramos un mensaje de error
+                MessageBox.Show("El archivo Manual de Usuario no existe dentro de los estándares de la aplicación, consulte con el soporte técnico",
+                                "Manual de Usuario",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
             }
         }
         private void DescargarPDFManualTecnico(object sender, EventArgs e)
         {
             //Iniciamos poniendo la ruta actual del proyecto, y le decimos que busque el archivo respectivo (en este caso, el manual técnico)
-            //Obtenemos el diretorio actual, junto con el nombre del archivo y la dirección (en este caso, la carpeta debug)
-            string RutaArchivoManualUsuario = Path.Combine(Directory.GetCurrentDirectory().ToString(), "Manual_Tecnico_ADNE.pdf");
+            // Obtenemos la ruta base del directorio donde se ejecuta la aplicación (release o debug)
+            string RutaArchivoManualTecnico = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Manual_Tecnico_ADNE.pdf");
 
-            //Si el archivo existe, procedemos a descargarlo
-            if (File.Exists(RutaArchivoManualUsuario))
+            // Si el archivo existe, procedemos a abrirlo
+            if (File.Exists(RutaArchivoManualTecnico))
             {
-                //Indicamos el archivo que se descargará (en este caso, el PDF)
-                System.Diagnostics.Process.Start(RutaArchivoManualUsuario);
+                // Abre el archivo PDF usando el visor predeterminado
+                System.Diagnostics.Process.Start(RutaArchivoManualTecnico);
             }
             else
             {
-                //Caso contrario, si el archivo no existe, mandamos un mensaje de error
-                MessageBox.Show("El archivo Manual Técnico no existe dentro de los estándares de la aplicación, consulte con el soporte técnico", "Manual Técnico", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                // Si el archivo no existe, mostramos un mensaje de error
+                MessageBox.Show("El archivo Manual Técnico no existe dentro de los estándares de la aplicación, consulte con el soporte técnico",
+                                "Manual Técnico",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
             }
         }
         #endregion
