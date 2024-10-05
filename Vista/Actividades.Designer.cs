@@ -55,8 +55,8 @@
             this.lblCitasAtendidas = new Bunifu.UI.WinForms.BunifuLabel();
             this.pnlSombraPanelGrafico = new Bunifu.UI.WinForms.BunifuShadowPanel();
             this.pnlGrafico = new Bunifu.UI.WinForms.BunifuPanel();
-            this.bunifuLabel2 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.lblHasta = new Bunifu.UI.WinForms.BunifuLabel();
+            this.lblDesde = new Bunifu.UI.WinForms.BunifuLabel();
             this.dtFechaFinal = new Bunifu.UI.WinForms.BunifuDatePicker();
             this.dtFechaInicio = new Bunifu.UI.WinForms.BunifuDatePicker();
             this.btnVerEsteMes = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
@@ -394,8 +394,8 @@
             this.pnlGrafico.BorderColor = System.Drawing.Color.Transparent;
             this.pnlGrafico.BorderRadius = 14;
             this.pnlGrafico.BorderThickness = 1;
-            this.pnlGrafico.Controls.Add(this.bunifuLabel2);
-            this.pnlGrafico.Controls.Add(this.bunifuLabel1);
+            this.pnlGrafico.Controls.Add(this.lblHasta);
+            this.pnlGrafico.Controls.Add(this.lblDesde);
             this.pnlGrafico.Controls.Add(this.dtFechaFinal);
             this.pnlGrafico.Controls.Add(this.dtFechaInicio);
             this.pnlGrafico.Controls.Add(this.btnVerEsteMes);
@@ -412,35 +412,35 @@
             this.pnlGrafico.Size = new System.Drawing.Size(764, 301);
             this.pnlGrafico.TabIndex = 0;
             // 
-            // bunifuLabel2
+            // lblHasta
             // 
-            this.bunifuLabel2.AllowParentOverrides = false;
-            this.bunifuLabel2.AutoEllipsis = false;
-            this.bunifuLabel2.CursorType = null;
-            this.bunifuLabel2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuLabel2.Location = new System.Drawing.Point(224, 54);
-            this.bunifuLabel2.Name = "bunifuLabel2";
-            this.bunifuLabel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel2.Size = new System.Drawing.Size(53, 23);
-            this.bunifuLabel2.TabIndex = 5;
-            this.bunifuLabel2.Text = "Hasta";
-            this.bunifuLabel2.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel2.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.lblHasta.AllowParentOverrides = false;
+            this.lblHasta.AutoEllipsis = false;
+            this.lblHasta.CursorType = null;
+            this.lblHasta.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHasta.Location = new System.Drawing.Point(224, 54);
+            this.lblHasta.Name = "lblHasta";
+            this.lblHasta.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblHasta.Size = new System.Drawing.Size(53, 23);
+            this.lblHasta.TabIndex = 5;
+            this.lblHasta.Text = "Hasta";
+            this.lblHasta.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lblHasta.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
-            // bunifuLabel1
+            // lblDesde
             // 
-            this.bunifuLabel1.AllowParentOverrides = false;
-            this.bunifuLabel1.AutoEllipsis = false;
-            this.bunifuLabel1.CursorType = null;
-            this.bunifuLabel1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuLabel1.Location = new System.Drawing.Point(224, 20);
-            this.bunifuLabel1.Name = "bunifuLabel1";
-            this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel1.Size = new System.Drawing.Size(58, 23);
-            this.bunifuLabel1.TabIndex = 3;
-            this.bunifuLabel1.Text = "Desde";
-            this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.lblDesde.AllowParentOverrides = false;
+            this.lblDesde.AutoEllipsis = false;
+            this.lblDesde.CursorType = null;
+            this.lblDesde.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDesde.Location = new System.Drawing.Point(224, 20);
+            this.lblDesde.Name = "lblDesde";
+            this.lblDesde.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblDesde.Size = new System.Drawing.Size(58, 23);
+            this.lblDesde.TabIndex = 3;
+            this.lblDesde.Text = "Desde";
+            this.lblDesde.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lblDesde.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // dtFechaFinal
             // 
@@ -1544,8 +1544,8 @@
         public System.Windows.Forms.DataVisualization.Charting.Chart GraficoCitas;
         public Bunifu.UI.WinForms.BunifuDatePicker dtFechaFinal;
         public Bunifu.UI.WinForms.BunifuDatePicker dtFechaInicio;
-        public Bunifu.UI.WinForms.BunifuLabel bunifuLabel2;
-        public Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
+        public Bunifu.UI.WinForms.BunifuLabel lblHasta;
+        public Bunifu.UI.WinForms.BunifuLabel lblDesde;
         public Bunifu.UI.WinForms.BunifuLabel lblDefault;
         public System.Windows.Forms.Panel plSiguientePaciente;
     }

@@ -22,7 +22,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             ObjVerPaciente = Vista;
 
             ObjVerPaciente.Load += new EventHandler(CargarPacientesYPermisoUsuario);
-
             ObjVerPaciente.btnVerPacientesSinProfesional.Click += new EventHandler(CargarPacientesSinProfesional);
             ObjVerPaciente.txtBuscarPaciente.KeyPress += new KeyPressEventHandler(BuscarNombrePaciente);
         }

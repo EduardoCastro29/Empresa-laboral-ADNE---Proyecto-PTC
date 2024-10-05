@@ -15,12 +15,10 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
 {
     internal class CTRLCalendario
     {
-        //Cargamos las librearias necesarias para la creación del calendario
         readonly CalendarioForm ObjCalendario;
         readonly DateTime FechaActual = DateTime.Now;
         int Mes;
         int Año;
-
         public static int static_month, static_year;
         public CTRLCalendario(CalendarioForm Vista)
         {
@@ -40,13 +38,9 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
         {
             Mes = FechaActual.Month;
             Año = FechaActual.Year;
-
             string mesNombre = DateTimeFormatInfo.CurrentInfo.GetMonthName(Mes);
-
             mesNombre = FormatoPrimeraLetraMes(mesNombre);
-
             ObjCalendario.lblFecha.Text = mesNombre + " " + Año;
-
             static_month = Mes;
             static_year = Año;
 
@@ -73,11 +67,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                 CTRLUCDias ObjDias = new CTRLUCDias(ObjUCDias);
                 ObjDias.days(i);
 
-                //if (Año == DateTime.Now.Year && Mes == DateTime.Now.Month && i == DateTime.Now.Day)
-                //{
-                //    ObjUCDias.ModificarFondo(Color.FromArgb(176, 255, 242)); // Cambia el color de fondo
-                //}
-
                 ObjCalendario.daycontainer.Controls.Add(ObjUCDias);
             }
         }
@@ -94,7 +83,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
         {
             //Limpiamos el panel contenedor que contiene los días
             ObjCalendario.daycontainer.Controls.Clear();
-
             //cambia la cantidad para mes previos
             Mes++;
             //cambiar la cantidad de días del mes.
@@ -133,11 +121,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                 UCDias ObjUCDias = new UCDias();
                 CTRLUCDias ObjDias = new CTRLUCDias(ObjUCDias);
                 ObjDias.days(i);
-
-                //if (Año == DateTime.Now.Year && Mes == DateTime.Now.Month && i == DateTime.Now.Day)
-                //{
-                //    ObjUCDias.ModificarFondo(Color.FromArgb(176, 255, 242)); // Cambia el color de fondo
-                //}
 
                 ObjCalendario.daycontainer.Controls.Add(ObjUCDias);
             }
@@ -178,18 +161,11 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                 UCEspacio ObjEspacio = new UCEspacio();
                 ObjCalendario.daycontainer.Controls.Add(ObjEspacio);
             }
-
-            //user control de días.
             for (int i = 1; i <= dias; i++)
             {
                 UCDias ObjUCDias = new UCDias();
                 CTRLUCDias ObjDias = new CTRLUCDias(ObjUCDias);
                 ObjDias.days(i);
-
-                //if (Año == DateTime.Now.Year && Mes == DateTime.Now.Month && i == DateTime.Now.Day)
-                //{
-                //    ObjUCDias.ModificarFondo(Color.FromArgb(176, 255, 242)); // Cambia el color de fondo
-                //}
 
                 ObjCalendario.daycontainer.Controls.Add(ObjUCDias);
             }

@@ -492,7 +492,7 @@
             this.btnDescargarManualUsuario.IdleIconLeftImage = global::Empresa_laboral_ADNE___Proyecto_PTC.Properties.Resources.Descargar_documentos;
             this.btnDescargarManualUsuario.IdleIconRightImage = null;
             this.btnDescargarManualUsuario.IndicateFocus = false;
-            this.btnDescargarManualUsuario.Location = new System.Drawing.Point(421, 22);
+            this.btnDescargarManualUsuario.Location = new System.Drawing.Point(399, 22);
             this.btnDescargarManualUsuario.Name = "btnDescargarManualUsuario";
             this.btnDescargarManualUsuario.OnDisabledState.BorderColor = System.Drawing.Color.DarkCyan;
             this.btnDescargarManualUsuario.OnDisabledState.BorderRadius = 25;
@@ -526,7 +526,7 @@
             this.btnDescargarManualUsuario.OnPressedState.ForeColor = System.Drawing.Color.PaleTurquoise;
             this.btnDescargarManualUsuario.OnPressedState.IconLeftImage = null;
             this.btnDescargarManualUsuario.OnPressedState.IconRightImage = null;
-            this.btnDescargarManualUsuario.Size = new System.Drawing.Size(253, 48);
+            this.btnDescargarManualUsuario.Size = new System.Drawing.Size(262, 48);
             this.btnDescargarManualUsuario.TabIndex = 28;
             this.btnDescargarManualUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnDescargarManualUsuario.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -673,8 +673,7 @@
             this.btnActualizarPerfil.IdleIconLeftImage = global::Empresa_laboral_ADNE___Proyecto_PTC.Properties.Resources.UsuarioConfig;
             this.btnActualizarPerfil.IdleIconRightImage = null;
             this.btnActualizarPerfil.IndicateFocus = false;
-            this.btnActualizarPerfil.Location = new System.Drawing.Point(442, 310);
-            this.btnActualizarPerfil.MaximumSize = new System.Drawing.Size(232, 48);
+            this.btnActualizarPerfil.Location = new System.Drawing.Point(399, 310);
             this.btnActualizarPerfil.Name = "btnActualizarPerfil";
             this.btnActualizarPerfil.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(140)))), ((int)(((byte)(147)))), ((int)(((byte)(142)))));
             this.btnActualizarPerfil.OnDisabledState.BorderRadius = 25;
@@ -708,7 +707,7 @@
             this.btnActualizarPerfil.OnPressedState.ForeColor = System.Drawing.Color.SeaGreen;
             this.btnActualizarPerfil.OnPressedState.IconLeftImage = null;
             this.btnActualizarPerfil.OnPressedState.IconRightImage = null;
-            this.btnActualizarPerfil.Size = new System.Drawing.Size(232, 48);
+            this.btnActualizarPerfil.Size = new System.Drawing.Size(262, 48);
             this.btnActualizarPerfil.TabIndex = 26;
             this.btnActualizarPerfil.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnActualizarPerfil.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -783,7 +782,6 @@
             this.btnCerrarSesion.IdleIconRightImage = null;
             this.btnCerrarSesion.IndicateFocus = false;
             this.btnCerrarSesion.Location = new System.Drawing.Point(680, 310);
-            this.btnCerrarSesion.MaximumSize = new System.Drawing.Size(232, 48);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
             this.btnCerrarSesion.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(147)))), ((int)(((byte)(142)))));
             this.btnCerrarSesion.OnDisabledState.BorderRadius = 25;
@@ -832,7 +830,7 @@
             this.lblDocumentoTitulo.CursorType = null;
             this.lblDocumentoTitulo.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDocumentoTitulo.ForeColor = System.Drawing.Color.White;
-            this.lblDocumentoTitulo.Location = new System.Drawing.Point(349, 222);
+            this.lblDocumentoTitulo.Location = new System.Drawing.Point(349, 218);
             this.lblDocumentoTitulo.Name = "lblDocumentoTitulo";
             this.lblDocumentoTitulo.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblDocumentoTitulo.Size = new System.Drawing.Size(303, 25);
@@ -917,11 +915,10 @@
             this.lblRolUsuario.AutoSize = true;
             this.lblRolUsuario.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRolUsuario.ForeColor = System.Drawing.Color.White;
-            this.lblRolUsuario.Location = new System.Drawing.Point(345, 241);
+            this.lblRolUsuario.Location = new System.Drawing.Point(345, 258);
             this.lblRolUsuario.Margin = new System.Windows.Forms.Padding(3, 10, 3, 0);
             this.lblRolUsuario.Name = "lblRolUsuario";
-            this.lblRolUsuario.Padding = new System.Windows.Forms.Padding(0, 20, 10, 0);
-            this.lblRolUsuario.Size = new System.Drawing.Size(474, 44);
+            this.lblRolUsuario.Size = new System.Drawing.Size(464, 24);
             this.lblRolUsuario.TabIndex = 11;
             this.lblRolUsuario.Text = "Profesional, Psicólogo, Terapeuta, Educador";
             this.lblRolUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -967,7 +964,7 @@
             this.lblDUI.AutoSize = true;
             this.lblDUI.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDUI.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.lblDUI.Location = new System.Drawing.Point(657, 222);
+            this.lblDUI.Location = new System.Drawing.Point(657, 219);
             this.lblDUI.Margin = new System.Windows.Forms.Padding(20, 0, 3, 20);
             this.lblDUI.Name = "lblDUI";
             this.lblDUI.Size = new System.Drawing.Size(125, 24);

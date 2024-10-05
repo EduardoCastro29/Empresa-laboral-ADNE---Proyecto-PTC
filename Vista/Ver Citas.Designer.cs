@@ -44,14 +44,12 @@
             this.pnlFondo = new Bunifu.UI.WinForms.BunifuPanel();
             this.pnlSombraFondo = new Bunifu.UI.WinForms.BunifuShadowPanel();
             this.pnlForms = new Bunifu.UI.WinForms.BunifuGradientPanel();
-            this.pnlSombraBuscar = new Bunifu.UI.WinForms.BunifuPanel();
             this.txtBuscar = new Bunifu.UI.WinForms.BunifuTextBox();
             this.dgvCitasAgendadas = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.cmsOpciones.SuspendLayout();
             this.pnlFondo.SuspendLayout();
             this.pnlSombraFondo.SuspendLayout();
             this.pnlForms.SuspendLayout();
-            this.pnlSombraBuscar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCitasAgendadas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -131,7 +129,7 @@
             this.pnlForms.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlForms.BackgroundImage")));
             this.pnlForms.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pnlForms.BorderRadius = 60;
-            this.pnlForms.Controls.Add(this.pnlSombraBuscar);
+            this.pnlForms.Controls.Add(this.txtBuscar);
             this.pnlForms.Controls.Add(this.dgvCitasAgendadas);
             this.pnlForms.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlForms.GradientBottomLeft = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(225)))), ((int)(((byte)(226)))));
@@ -144,24 +142,6 @@
             this.pnlForms.Quality = 10;
             this.pnlForms.Size = new System.Drawing.Size(986, 697);
             this.pnlForms.TabIndex = 1;
-            // 
-            // pnlSombraBuscar
-            // 
-            this.pnlSombraBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlSombraBuscar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(197)))), ((int)(((byte)(197)))), ((int)(((byte)(197)))));
-            this.pnlSombraBuscar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlSombraBuscar.BackgroundImage")));
-            this.pnlSombraBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pnlSombraBuscar.BorderColor = System.Drawing.Color.Transparent;
-            this.pnlSombraBuscar.BorderRadius = 60;
-            this.pnlSombraBuscar.BorderThickness = 1;
-            this.pnlSombraBuscar.Controls.Add(this.txtBuscar);
-            this.pnlSombraBuscar.Location = new System.Drawing.Point(153, 54);
-            this.pnlSombraBuscar.Name = "pnlSombraBuscar";
-            this.pnlSombraBuscar.Padding = new System.Windows.Forms.Padding(5, 2, 1, 6);
-            this.pnlSombraBuscar.ShowBorders = true;
-            this.pnlSombraBuscar.Size = new System.Drawing.Size(687, 74);
-            this.pnlSombraBuscar.TabIndex = 102;
             // 
             // txtBuscar
             // 
@@ -176,15 +156,14 @@
             this.txtBuscar.BorderColorActive = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(234)))), ((int)(((byte)(176)))));
             this.txtBuscar.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.txtBuscar.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(234)))), ((int)(((byte)(176)))));
-            this.txtBuscar.BorderColorIdle = System.Drawing.Color.White;
+            this.txtBuscar.BorderColorIdle = System.Drawing.Color.LightGray;
             this.txtBuscar.BorderRadius = 60;
-            this.txtBuscar.BorderThickness = 0;
+            this.txtBuscar.BorderThickness = 1;
             this.txtBuscar.CharacterCase = Bunifu.UI.WinForms.BunifuTextBox.CharacterCases.Normal;
             this.txtBuscar.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtBuscar.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtBuscar.DefaultFont = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBuscar.DefaultText = "";
-            this.txtBuscar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtBuscar.FillColor = System.Drawing.Color.White;
             this.txtBuscar.HideSelection = true;
             this.txtBuscar.IconLeft = null;
@@ -193,7 +172,7 @@
             this.txtBuscar.IconRight = null;
             this.txtBuscar.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtBuscar.Lines = new string[0];
-            this.txtBuscar.Location = new System.Drawing.Point(5, 2);
+            this.txtBuscar.Location = new System.Drawing.Point(154, 49);
             this.txtBuscar.MaxLength = 32767;
             this.txtBuscar.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtBuscar.Modified = false;
@@ -214,7 +193,7 @@
             stateProperties3.ForeColor = System.Drawing.Color.Empty;
             stateProperties3.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txtBuscar.OnHoverState = stateProperties3;
-            stateProperties4.BorderColor = System.Drawing.Color.White;
+            stateProperties4.BorderColor = System.Drawing.Color.LightGray;
             stateProperties4.FillColor = System.Drawing.Color.White;
             stateProperties4.ForeColor = System.Drawing.Color.Empty;
             stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
@@ -325,7 +304,6 @@
             this.pnlFondo.ResumeLayout(false);
             this.pnlSombraFondo.ResumeLayout(false);
             this.pnlForms.ResumeLayout(false);
-            this.pnlSombraBuscar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCitasAgendadas)).EndInit();
             this.ResumeLayout(false);
 
@@ -340,7 +318,6 @@
         public Bunifu.UI.WinForms.BunifuShadowPanel pnlSombraFondo;
         public Bunifu.UI.WinForms.BunifuGradientPanel pnlForms;
         public Bunifu.UI.WinForms.BunifuDataGridView dgvCitasAgendadas;
-        public Bunifu.UI.WinForms.BunifuPanel pnlSombraBuscar;
         public Bunifu.UI.WinForms.BunifuTextBox txtBuscar;
     }
 }

@@ -78,8 +78,8 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Vista
                 this.lblCitasPendientes.ForeColor = Color.White;
                 this.lblPerdidas.ForeColor = Color.White;
                 this.lblCitasPerdidas.ForeColor = Color.White;
-                this.bunifuLabel1.ForeColor = Color.White;
-                this.bunifuLabel2.ForeColor = Color.White;
+                this.lblDesde.ForeColor = Color.White;
+                this.lblHasta.ForeColor = Color.White;
 
                 this.dtFechaInicio.BackColor = Color.FromArgb(50, 89, 108);
                 this.dtFechaInicio.ForeColor = Color.White;

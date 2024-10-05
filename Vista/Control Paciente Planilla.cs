@@ -63,12 +63,8 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Vista
 
             if (objConfig.objDTOConfig.modoOscuro == "dark")
             {
-                this.pnlFondoUC.GradientTopLeft = Color.FromArgb(38, 102, 119);
-                this.pnlFondoUC.GradientTopRight = Color.FromArgb(38, 102, 119);
-                this.pnlFondoUC.GradientBottomLeft = Color.FromArgb(39, 102, 119);
-                this.pnlFondoUC.GradientBottomRight = Color.FromArgb(39, 102, 119);
-
-                this.pnlSeparador.BackgroundColor = Color.WhiteSmoke;
+                this.pnlFondoUC.BackgroundColor = Color.FromArgb(26, 102, 122);
+                this.SeparadorPnl.BackgroundColor = Color.WhiteSmoke;
 
                 this.lblNombrePaciente.ForeColor = Color.White;
                 this.lblDUI.ForeColor = Color.White;

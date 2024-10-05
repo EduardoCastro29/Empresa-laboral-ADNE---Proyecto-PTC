@@ -16,14 +16,10 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
 {
     internal class CTRLDashboard
     {
-        //Creando el objeto del formulario Dashboard
         readonly DashboardForm ObjDashboard;
 
         //Creamos un objeto de un Formulario no específico, esto ya que a la hora de pasar el formulario a los paneles
-        //Se generaran de forma automática y acoplandose a las medidas
         Form FormActual;
-
-        //Empezamos la cadena del constructor
         public CTRLDashboard(DashboardForm View)
         {
             //Declaramos que el objeto Dashboard creado anteriormente será igual a la carpeta Vista para obtener los valores
@@ -35,8 +31,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             ObjDashboard.FormClosing += new FormClosingEventHandler(CerrarPrograma);
             ObjDashboard.btnCerrarS.Click += new EventHandler(CerrarSesion);
 
-            //Creamos los eventos click de los formularios, como referencia a qué formulario se tomara en cuenta
-            //Dentro del panel a la hora de ejecutarse
             ObjDashboard.btnMainPage.Click += new EventHandler(FormularioPaginaPrincipal);
             ObjDashboard.btnPacientes.Click += new EventHandler(FormularioPacientes);
             ObjDashboard.btnCitas.Click += new EventHandler(FormularioCitas);
@@ -122,7 +116,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             AbrirFormulario<ConfiguraciónForm>();
         }
         //Este método es común para abrir formularios dentro de los paneles
-        //El siguiente código podría leerse de la siguiente manera
         //El método AbrirFormulario llama por su nombre Formulario donde el Formulario hereda un Forms de Windows Forms, y lo crea
         private void AbrirFormulario<Formulario>() where Formulario : Form, new()
         {
@@ -138,7 +131,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                 //Especificamos que el formulario deberá abrirse como ventana
                 //Evitando los marcos de WindowsForms
                 nuevoFormulario.TopLevel = false;
-                //Se eliminan los bordes del formulario
                 nuevoFormulario.FormBorderStyle = FormBorderStyle.None;
                 //Declaramos que utilizará todo el espacio del Panel
                 nuevoFormulario.Dock = DockStyle.Fill;
@@ -155,9 +147,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                 //Se agregan los controles que fueron previamente puestos en el nuevoFormulario dentro del Panel
                 ObjDashboard.panelGeneralVistas.Controls.Add(nuevoFormulario);
                 ObjDashboard.panelGeneralVistas.Tag = nuevoFormulario;
-                //Se muestra el objeto nuevoFormulario creado
                 nuevoFormulario.Show();
-                //Se muestra al frente
                 nuevoFormulario.BringToFront();
             }
             else

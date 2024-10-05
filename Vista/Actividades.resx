@@ -668,10 +668,10 @@
         /wzezT7Oh46/0W9mZmZmZi9wxxP9uT4/9AEAgIrd7g+Ft/9m/EqoSQAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="bunifuLabel2.BaseStylesheet" xml:space="preserve">
+  <data name="lblHasta.BaseStylesheet" xml:space="preserve">
     <value>#bunifu-label { padding: 0px; font-family: 'Century Gothic'; font-size: 14.25pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(0, 0, 0); text-align: left; }</value>
   </data>
-  <data name="bunifuLabel1.BaseStylesheet" xml:space="preserve">
+  <data name="lblDesde.BaseStylesheet" xml:space="preserve">
     <value>#bunifu-label { padding: 0px; font-family: 'Century Gothic'; font-size: 14.25pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(0, 0, 0); text-align: left; }</value>
   </data>
   <data name="dtFechaFinal.Icon" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

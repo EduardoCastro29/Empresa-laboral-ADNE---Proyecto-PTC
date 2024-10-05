@@ -70,7 +70,7 @@
             this.lblSabado.AutoSize = true;
             this.lblSabado.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSabado.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblSabado.Location = new System.Drawing.Point(881, 73);
+            this.lblSabado.Location = new System.Drawing.Point(874, 73);
             this.lblSabado.Name = "lblSabado";
             this.lblSabado.Size = new System.Drawing.Size(83, 22);
             this.lblSabado.TabIndex = 19;

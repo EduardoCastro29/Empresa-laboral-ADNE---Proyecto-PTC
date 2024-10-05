@@ -118,48 +118,43 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="pnlFondoUC.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnDescargar.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAA7sAAAAzCAYAAABWkR/eAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJSSURBVHhe7d2rbhtBGIbhgYGFhYWFgb2EXEKhYWFg4dxF
-        YS8rMLDQkk/rw663M8nardpVQZHnz/NJj+XVrEICNq+cKOnPjeN4XyyKDAAAADducT6fP01J+/fqYfFU
-        bjQzMzMzMzNraqVnfxQPU+K+robudG5mZmZmZmbW8hYvoVve3A3D8FyCt5YwAAAANKv07bJ07vvLry/P
-        3gQAAACt6fv+cyovj3OHAAAA0KJhGHKqL3OHAAAA0CKxCwAAQDjX2C3qBQAAAEQgdgEAAAhH7AIAABCO
-        2AUAACAcsQsAAEA4OZ1Op9z3ff2nuwAAANC82rliFwAAgFDELgAAAOGIXQAAAMIRuwAAAIRzjd2iXgAA
-        AEAEYhcAAIBwxC4AAADhiF0AAADCEbsAAACEk9PhcMjH43EEAPiXmR8kuDFz3zeAt6h2rtgFAAAgFLEL
-        AABAOGIXAACAcMQuAAAA4YhdAHiDyrP/v8x9LQC4ReW59Rq7vz/IAAAAoHFiFwAAgHDELgAAAOGIXQAA
-        AMIRuwAAAISTU9d1eb/fjwAAABBB7VyxCwAAQChiFwAAgHDELgAAAOGIXQAAAMK5xm5RLwAAACACsQsA
-        AEA4YhcAAIBwxC4AAADhiF0AAADCyWm73ebdbjcCAABABLVz02az+Tp3CAAAAC26xO7D3CEAAAC0qMTu
-        l7RcLt+VN93cDQAAANCa1Wr1MdXV6p27AQAAABrz7SV0L6t/u1t0JXzrR74AAADQmu/jON5NmftrXdd9
-        WK/Xj+WGDAAAAC2YPry9n9K2LKWf+/QDDNC/kCkAAAAASUVORK5CYII=
+        iVBORw0KGgoAAAANSUhEUgAAAMIAAAAmCAYAAACWNESlAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFMSURBVHhe7d0vUsQwGIbxSCSSIyCRSI7ADfoHs3LlShxH
+        QHIM5BfHkIbhGCtXroT3KxELGy6QPJn5qaQuz7SpaENtDNmu52zjtNgj0Arf08O73ZRt/v/whXOKhznH
+        L6Bhxynbrmz732Na4mvlAqBZU4pvg9lFSUB3gsU2tYVA81J8Khn4I1E8ni0AOqFzw1Xww0NtEuiH3Ycp
+        2bY+CfTB3yjpkOyvleoLgB4QAiCEAAghAEIIgBACIIQACCEAQgiAEAIghAAIIQBCCIAQAiCEAAghAEII
+        gBACIIQACCEAQgiAEAIghAAIIQDyE0K2XW0S6MUawsNid7VJoB82Bv8sdn0S6IP/GGf9GvaY43NtAdA6
+        /y/IGoGPclfY/10ENC3Fw/pJ+NMxfNrl+BFfqhcAjfE7wVkEp2P9X8JiGz9JA81JttWZ4LZs9zJC+AaZ
+        fu9srEWgpwAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="pnlSeparador.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="lblNombrePaciente.BaseStylesheet" xml:space="preserve">
+    <value>#bunifu-label { padding: 0px; font-family: 'Century Gothic'; font-size: 11.25pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(0, 0, 0); text-align: left; }</value>
+  </data>
+  <data name="pnlFondoUC.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAAQAAAAjCAYAAACzWKvwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAA1SURBVChTY8AK6uvrI4A4AcoFCxgAcQCUCxZoAGEod1Rg
-        mAsEAHEGlAsWkABiDSgXGTAwAAC5OYFrSZf0LQAAAABJRU5ErkJggg==
+        iVBORw0KGgoAAAANSUhEUgAAA7kAAAAzCAYAAABSZM/jAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHHSURBVHhe7duxTcNAGIZhl4xCyQiUjJGSMiVlNmAcRmCf
+        3NmtOSsnWUQewPfp+aSnSPwv8MryZGZmZmZmZha5+/3+Wmu9zPN8AwAAgDPb+rV560n7f6WUaztaAQAA
+        YCTLsnz3tH1se4N7dAgAAAAjqLV+9MT1FhcAAIDh3XriTtP24+khAAAAjETkAgAAEEPkAgAAEEPkAgAA
+        EEPkAgAAEEPkAgAAEEPkAgAAEEPkAgAAEEPkAgAAEEPkAgAAEEPkAgAAEEPkAgAAEEPkAgAAEEPkAgAA
+        EEPkAgAAEEPkAgAAEEPkAgAAEEPkAgAAEEPkAgAAEEPkAgAAEEPkAgAAEEPkAgAAEEPkAgAAEEPkAgAA
+        EEPkAgAAEEPkAgAAEEPkAgAAEEPkAgAAEEPkAgAAEEPkAgAAEEPkAgAAEEPkAgAAEEPkAgAAEEPkAgAA
+        EEPkAgAAEEPkAgAAEEPkAgAAEEPkAgAAEEPkAgAAEEPkAgAAEEPkAgAAEGOP3Frr18EBAAAAjGKP3FLK
+        +8EBAAAADKHWeumJ+1j78+f5CAAAAM6ulPK7rutLz9t97eFns32fCwAAAKfXAvd6GLhmZmZmZmZmY2+a
+        /gDfgxOjMpuxNwAAAABJRU5ErkJggg==
 </value>
   </data>
   <data name="lblCitaId.BaseStylesheet" xml:space="preserve">
     <value>#bunifu-label { padding: 0px; font-family: 'Century Gothic'; font-size: 11.25pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(0, 0, 0); text-align: left; }</value>
   </data>
-  <data name="btnDescargar.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="SeparadorPnl.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAMIAAAAnCAYAAABdaJcAAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFOSURBVHhe7d0vUgMxGIbxSCSSIyCRSI7ADfYPprKyEscR
-        kBwD+cUxZMNwjMrKSni/JaLQcIHkycxPJevyzDYrmlAbQ7brOds4LfYItML39PBuN2Wb/z984ZziYc7x
-        C2jYccq2K9v+95iW+Fp5AGjWlOLbYHZREtCbYLFNbSHQvBSfSgb+kygezxYAndC54Sr44aE2CfTD7sOU
-        bFufBPrgX5R0SPbPSvUFQA8IARBCAIQQACEEQAgBEEIAhBAAIQRACAEQQgCEEAAhBEAIARBCAIQQACEE
-        QAgBEEIAhBAAIQRACAEQQgCEEAAhBEB+Qsi2q00CvVhDeFjsrjYJ9MPG4P8PX58E+uA3RK1/Cz/m+Fxb
-        ALTOL8hZI/BR3gr7v4uApqV4WO9GOB3Dp12OH/Gl+gDQGH8TnEVwOtaLQxbb+EkaaE6yrc4Et2W7lxHC
-        N8Z7Ji91QyJjAAAAAElFTkSuQmCC
+        iVBORw0KGgoAAAANSUhEUgAAAAQAAAAjCAYAAACzWKvwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAA1SURBVChTY8AK6uvrI4A4AcoFCxgAcQCUCxZoAGEod1Rg
+        mAsEAHEGlAsWkABiDSgXGTAwAAC5OYFrSZf0LQAAAABJRU5ErkJggg==
 </value>
-  </data>
-  <data name="lblDUI.BaseStylesheet" xml:space="preserve">
-    <value>#bunifu-label { padding: 0px; font-family: 'Century Gothic'; font-size: 11.25pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(0, 0, 0); text-align: left; }</value>
-  </data>
-  <data name="lblNombrePaciente.BaseStylesheet" xml:space="preserve">
-    <value>#bunifu-label { padding: 0px; font-family: 'Century Gothic'; font-size: 11.25pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(0, 0, 0); text-align: left; }</value>
   </data>
 </root>

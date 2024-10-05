@@ -36,17 +36,15 @@
             this.pnlFondo = new Bunifu.UI.WinForms.BunifuPanel();
             this.pnlSombraFondo = new Bunifu.UI.WinForms.BunifuShadowPanel();
             this.pnlForms = new Bunifu.UI.WinForms.BunifuGradientPanel();
-            this.pnlSombraBuscar = new Bunifu.UI.WinForms.BunifuPanel();
             this.txtBuscarCita = new Bunifu.UI.WinForms.BunifuTextBox();
             this.pnlEncabezadoPlanillasUC = new Bunifu.UI.WinForms.BunifuGradientPanel();
+            this.lblDUI = new Bunifu.UI.WinForms.BunifuLabel();
             this.lblExpedientesPlanillas = new Bunifu.UI.WinForms.BunifuLabel();
             this.lblPacientesPlanilla = new Bunifu.UI.WinForms.BunifuLabel();
             this.flpCitas = new System.Windows.Forms.FlowLayoutPanel();
-            this.lblDUI = new Bunifu.UI.WinForms.BunifuLabel();
             this.pnlFondo.SuspendLayout();
             this.pnlSombraFondo.SuspendLayout();
             this.pnlForms.SuspendLayout();
-            this.pnlSombraBuscar.SuspendLayout();
             this.pnlEncabezadoPlanillasUC.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -96,7 +94,7 @@
             this.pnlForms.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlForms.BackgroundImage")));
             this.pnlForms.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pnlForms.BorderRadius = 60;
-            this.pnlForms.Controls.Add(this.pnlSombraBuscar);
+            this.pnlForms.Controls.Add(this.txtBuscarCita);
             this.pnlForms.Controls.Add(this.pnlEncabezadoPlanillasUC);
             this.pnlForms.Controls.Add(this.flpCitas);
             this.pnlForms.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -110,24 +108,6 @@
             this.pnlForms.Quality = 10;
             this.pnlForms.Size = new System.Drawing.Size(970, 658);
             this.pnlForms.TabIndex = 1;
-            // 
-            // pnlSombraBuscar
-            // 
-            this.pnlSombraBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlSombraBuscar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(197)))), ((int)(((byte)(197)))), ((int)(((byte)(197)))));
-            this.pnlSombraBuscar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlSombraBuscar.BackgroundImage")));
-            this.pnlSombraBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pnlSombraBuscar.BorderColor = System.Drawing.Color.Transparent;
-            this.pnlSombraBuscar.BorderRadius = 60;
-            this.pnlSombraBuscar.BorderThickness = 1;
-            this.pnlSombraBuscar.Controls.Add(this.txtBuscarCita);
-            this.pnlSombraBuscar.Location = new System.Drawing.Point(146, 35);
-            this.pnlSombraBuscar.Name = "pnlSombraBuscar";
-            this.pnlSombraBuscar.Padding = new System.Windows.Forms.Padding(5, 2, 1, 6);
-            this.pnlSombraBuscar.ShowBorders = true;
-            this.pnlSombraBuscar.Size = new System.Drawing.Size(684, 72);
-            this.pnlSombraBuscar.TabIndex = 20;
             // 
             // txtBuscarCita
             // 
@@ -144,9 +124,9 @@
             this.txtBuscarCita.BorderColorActive = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(234)))), ((int)(((byte)(176)))));
             this.txtBuscarCita.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.txtBuscarCita.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(234)))), ((int)(((byte)(176)))));
-            this.txtBuscarCita.BorderColorIdle = System.Drawing.Color.White;
+            this.txtBuscarCita.BorderColorIdle = System.Drawing.Color.LightGray;
             this.txtBuscarCita.BorderRadius = 60;
-            this.txtBuscarCita.BorderThickness = 0;
+            this.txtBuscarCita.BorderThickness = 1;
             this.txtBuscarCita.CharacterCase = Bunifu.UI.WinForms.BunifuTextBox.CharacterCases.Normal;
             this.txtBuscarCita.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtBuscarCita.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -160,7 +140,7 @@
             this.txtBuscarCita.IconRight = null;
             this.txtBuscarCita.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtBuscarCita.Lines = new string[0];
-            this.txtBuscarCita.Location = new System.Drawing.Point(5, 2);
+            this.txtBuscarCita.Location = new System.Drawing.Point(140, 39);
             this.txtBuscarCita.MaxLength = 32767;
             this.txtBuscarCita.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtBuscarCita.Modified = false;
@@ -181,7 +161,7 @@
             stateProperties3.ForeColor = System.Drawing.Color.Empty;
             stateProperties3.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txtBuscarCita.OnHoverState = stateProperties3;
-            stateProperties4.BorderColor = System.Drawing.Color.White;
+            stateProperties4.BorderColor = System.Drawing.Color.LightGray;
             stateProperties4.FillColor = System.Drawing.Color.White;
             stateProperties4.ForeColor = System.Drawing.Color.Empty;
             stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
@@ -222,11 +202,27 @@
             this.pnlEncabezadoPlanillasUC.GradientBottomRight = System.Drawing.Color.DarkCyan;
             this.pnlEncabezadoPlanillasUC.GradientTopLeft = System.Drawing.Color.Teal;
             this.pnlEncabezadoPlanillasUC.GradientTopRight = System.Drawing.Color.Teal;
-            this.pnlEncabezadoPlanillasUC.Location = new System.Drawing.Point(7, 141);
+            this.pnlEncabezadoPlanillasUC.Location = new System.Drawing.Point(12, 141);
             this.pnlEncabezadoPlanillasUC.Name = "pnlEncabezadoPlanillasUC";
             this.pnlEncabezadoPlanillasUC.Quality = 10;
-            this.pnlEncabezadoPlanillasUC.Size = new System.Drawing.Size(955, 61);
+            this.pnlEncabezadoPlanillasUC.Size = new System.Drawing.Size(946, 61);
             this.pnlEncabezadoPlanillasUC.TabIndex = 19;
+            // 
+            // lblDUI
+            // 
+            this.lblDUI.AllowParentOverrides = false;
+            this.lblDUI.AutoEllipsis = false;
+            this.lblDUI.CursorType = null;
+            this.lblDUI.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.lblDUI.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblDUI.Location = new System.Drawing.Point(23, 22);
+            this.lblDUI.Name = "lblDUI";
+            this.lblDUI.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblDUI.Size = new System.Drawing.Size(91, 19);
+            this.lblDUI.TabIndex = 5;
+            this.lblDUI.Text = "Documento";
+            this.lblDUI.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lblDUI.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // lblExpedientesPlanillas
             // 
@@ -236,7 +232,7 @@
             this.lblExpedientesPlanillas.CursorType = null;
             this.lblExpedientesPlanillas.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.lblExpedientesPlanillas.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblExpedientesPlanillas.Location = new System.Drawing.Point(802, 22);
+            this.lblExpedientesPlanillas.Location = new System.Drawing.Point(792, 22);
             this.lblExpedientesPlanillas.Name = "lblExpedientesPlanillas";
             this.lblExpedientesPlanillas.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblExpedientesPlanillas.Size = new System.Drawing.Size(87, 19);
@@ -269,26 +265,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.flpCitas.AutoScroll = true;
             this.flpCitas.BackColor = System.Drawing.Color.Transparent;
-            this.flpCitas.Location = new System.Drawing.Point(7, 202);
+            this.flpCitas.Location = new System.Drawing.Point(12, 202);
             this.flpCitas.Name = "flpCitas";
-            this.flpCitas.Size = new System.Drawing.Size(956, 429);
+            this.flpCitas.Size = new System.Drawing.Size(947, 429);
             this.flpCitas.TabIndex = 18;
-            // 
-            // lblDUI
-            // 
-            this.lblDUI.AllowParentOverrides = false;
-            this.lblDUI.AutoEllipsis = false;
-            this.lblDUI.CursorType = null;
-            this.lblDUI.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
-            this.lblDUI.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblDUI.Location = new System.Drawing.Point(23, 22);
-            this.lblDUI.Name = "lblDUI";
-            this.lblDUI.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblDUI.Size = new System.Drawing.Size(91, 19);
-            this.lblDUI.TabIndex = 5;
-            this.lblDUI.Text = "Documento";
-            this.lblDUI.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.lblDUI.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // CitasForm
             // 
@@ -305,7 +285,6 @@
             this.pnlFondo.ResumeLayout(false);
             this.pnlSombraFondo.ResumeLayout(false);
             this.pnlForms.ResumeLayout(false);
-            this.pnlSombraBuscar.ResumeLayout(false);
             this.pnlEncabezadoPlanillasUC.ResumeLayout(false);
             this.pnlEncabezadoPlanillasUC.PerformLayout();
             this.ResumeLayout(false);
@@ -321,8 +300,7 @@
         public Bunifu.UI.WinForms.BunifuLabel lblExpedientesPlanillas;
         public Bunifu.UI.WinForms.BunifuLabel lblPacientesPlanilla;
         public System.Windows.Forms.FlowLayoutPanel flpCitas;
-        public Bunifu.UI.WinForms.BunifuPanel pnlSombraBuscar;
-        public Bunifu.UI.WinForms.BunifuTextBox txtBuscarCita;
         public Bunifu.UI.WinForms.BunifuLabel lblDUI;
+        public Bunifu.UI.WinForms.BunifuTextBox txtBuscarCita;
     }
 }

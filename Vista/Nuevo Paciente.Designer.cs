@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NuevoPacienteForm));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.panelElement = new System.Windows.Forms.Panel();
             this.BarraSeparadora = new Bunifu.UI.WinForms.BunifuGradientPanel();
             this.btnExpedienteGradient = new Bunifu.UI.WinForms.BunifuGradientPanel();
@@ -42,8 +42,6 @@
             this.lblRegistroPaciente = new System.Windows.Forms.Label();
             this.bunifuPictureBox1 = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.bunifuShadowPanel1 = new Bunifu.UI.WinForms.BunifuShadowPanel();
-            this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
-            this.bunifuPanel2 = new Bunifu.UI.WinForms.BunifuPanel();
             this.NotificacionNuevoPaciente = new Bunifu.UI.WinForms.BunifuSnackbar(this.components);
             this.btnExpedienteGradient.SuspendLayout();
             this.btnDatosIdentificacionGradient.SuspendLayout();
@@ -91,10 +89,10 @@
             this.btnExpedienteGradient.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(179)))), ((int)(((byte)(166)))));
             this.btnExpedienteGradient.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(199)))), ((int)(((byte)(187)))));
             this.btnExpedienteGradient.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(179)))), ((int)(((byte)(166)))));
-            this.btnExpedienteGradient.Location = new System.Drawing.Point(504, 96);
+            this.btnExpedienteGradient.Location = new System.Drawing.Point(511, 100);
             this.btnExpedienteGradient.Name = "btnExpedienteGradient";
             this.btnExpedienteGradient.Quality = 10;
-            this.btnExpedienteGradient.Size = new System.Drawing.Size(281, 63);
+            this.btnExpedienteGradient.Size = new System.Drawing.Size(281, 60);
             this.btnExpedienteGradient.TabIndex = 7;
             // 
             // btnExpediente
@@ -117,11 +115,11 @@
             this.btnExpediente.ColorContrastOnClick = 45;
             this.btnExpediente.ColorContrastOnHover = 45;
             this.btnExpediente.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges1.BottomLeft = true;
-            borderEdges1.BottomRight = true;
-            borderEdges1.TopLeft = true;
-            borderEdges1.TopRight = true;
-            this.btnExpediente.CustomizableEdges = borderEdges1;
+            borderEdges3.BottomLeft = true;
+            borderEdges3.BottomRight = true;
+            borderEdges3.TopLeft = true;
+            borderEdges3.TopRight = true;
+            this.btnExpediente.CustomizableEdges = borderEdges3;
             this.btnExpediente.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnExpediente.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnExpediente.DisabledFillColor = System.Drawing.Color.Empty;
@@ -147,7 +145,7 @@
             this.btnExpediente.IdleIconLeftImage = null;
             this.btnExpediente.IdleIconRightImage = null;
             this.btnExpediente.IndicateFocus = false;
-            this.btnExpediente.Location = new System.Drawing.Point(5, 0);
+            this.btnExpediente.Location = new System.Drawing.Point(5, -1);
             this.btnExpediente.Name = "btnExpediente";
             this.btnExpediente.OnDisabledState.BorderColor = System.Drawing.Color.Transparent;
             this.btnExpediente.OnDisabledState.BorderRadius = 1;
@@ -201,10 +199,10 @@
             this.btnDatosIdentificacionGradient.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(179)))), ((int)(((byte)(166)))));
             this.btnDatosIdentificacionGradient.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(199)))), ((int)(((byte)(187)))));
             this.btnDatosIdentificacionGradient.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(179)))), ((int)(((byte)(166)))));
-            this.btnDatosIdentificacionGradient.Location = new System.Drawing.Point(214, 96);
+            this.btnDatosIdentificacionGradient.Location = new System.Drawing.Point(223, 100);
             this.btnDatosIdentificacionGradient.Name = "btnDatosIdentificacionGradient";
             this.btnDatosIdentificacionGradient.Quality = 10;
-            this.btnDatosIdentificacionGradient.Size = new System.Drawing.Size(281, 63);
+            this.btnDatosIdentificacionGradient.Size = new System.Drawing.Size(281, 60);
             this.btnDatosIdentificacionGradient.TabIndex = 6;
             // 
             // btnDatosIdentificacion
@@ -226,11 +224,11 @@
             this.btnDatosIdentificacion.ColorContrastOnClick = 45;
             this.btnDatosIdentificacion.ColorContrastOnHover = 45;
             this.btnDatosIdentificacion.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges2.BottomLeft = true;
-            borderEdges2.BottomRight = true;
-            borderEdges2.TopLeft = true;
-            borderEdges2.TopRight = true;
-            this.btnDatosIdentificacion.CustomizableEdges = borderEdges2;
+            borderEdges4.BottomLeft = true;
+            borderEdges4.BottomRight = true;
+            borderEdges4.TopLeft = true;
+            borderEdges4.TopRight = true;
+            this.btnDatosIdentificacion.CustomizableEdges = borderEdges4;
             this.btnDatosIdentificacion.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnDatosIdentificacion.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnDatosIdentificacion.DisabledFillColor = System.Drawing.Color.Empty;
@@ -291,7 +289,7 @@
             this.btnDatosIdentificacion.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btnDatosIdentificacion.OnPressedState.IconLeftImage = null;
             this.btnDatosIdentificacion.OnPressedState.IconRightImage = null;
-            this.btnDatosIdentificacion.Size = new System.Drawing.Size(281, 63);
+            this.btnDatosIdentificacion.Size = new System.Drawing.Size(281, 60);
             this.btnDatosIdentificacion.TabIndex = 1;
             this.btnDatosIdentificacion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnDatosIdentificacion.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -367,36 +365,6 @@
             this.bunifuShadowPanel1.Size = new System.Drawing.Size(991, 93);
             this.bunifuShadowPanel1.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
             this.bunifuShadowPanel1.TabIndex = 9;
-            // 
-            // bunifuPanel1
-            // 
-            this.bunifuPanel1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.bunifuPanel1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.bunifuPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuPanel1.BackgroundImage")));
-            this.bunifuPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuPanel1.BorderColor = System.Drawing.Color.Transparent;
-            this.bunifuPanel1.BorderRadius = 15;
-            this.bunifuPanel1.BorderThickness = 0;
-            this.bunifuPanel1.Location = new System.Drawing.Point(507, 104);
-            this.bunifuPanel1.Name = "bunifuPanel1";
-            this.bunifuPanel1.ShowBorders = true;
-            this.bunifuPanel1.Size = new System.Drawing.Size(275, 58);
-            this.bunifuPanel1.TabIndex = 10;
-            // 
-            // bunifuPanel2
-            // 
-            this.bunifuPanel2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.bunifuPanel2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.bunifuPanel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuPanel2.BackgroundImage")));
-            this.bunifuPanel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuPanel2.BorderColor = System.Drawing.Color.Transparent;
-            this.bunifuPanel2.BorderRadius = 15;
-            this.bunifuPanel2.BorderThickness = 0;
-            this.bunifuPanel2.Location = new System.Drawing.Point(218, 104);
-            this.bunifuPanel2.Name = "bunifuPanel2";
-            this.bunifuPanel2.ShowBorders = true;
-            this.bunifuPanel2.Size = new System.Drawing.Size(273, 58);
-            this.bunifuPanel2.TabIndex = 11;
             // 
             // NotificacionNuevoPaciente
             // 
@@ -475,8 +443,6 @@
             this.ClientSize = new System.Drawing.Size(991, 731);
             this.Controls.Add(this.btnExpedienteGradient);
             this.Controls.Add(this.btnDatosIdentificacionGradient);
-            this.Controls.Add(this.bunifuPanel2);
-            this.Controls.Add(this.bunifuPanel1);
             this.Controls.Add(this.BarraSeparadora);
             this.Controls.Add(this.panelElement);
             this.Controls.Add(this.bunifuShadowPanel1);
@@ -499,17 +465,15 @@
 
         #endregion
         private Bunifu.UI.WinForms.BunifuGradientPanel BarraSeparadora;
-        private Bunifu.UI.WinForms.BunifuGradientPanel btnExpedienteGradient;
-        private Bunifu.UI.WinForms.BunifuGradientPanel btnDatosIdentificacionGradient;
         private Bunifu.UI.WinForms.BunifuGradientPanel bunifuGradientPanel1;
         private System.Windows.Forms.Label lblRegistroPaciente;
         private Bunifu.UI.WinForms.BunifuPictureBox bunifuPictureBox1;
         private Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel1;
-        private Bunifu.UI.WinForms.BunifuPanel bunifuPanel1;
-        private Bunifu.UI.WinForms.BunifuPanel bunifuPanel2;
         public Bunifu.UI.WinForms.BunifuButton.BunifuButton btnDatosIdentificacion;
         public Bunifu.UI.WinForms.BunifuButton.BunifuButton btnExpediente;
         public System.Windows.Forms.Panel panelElement;
         public Bunifu.UI.WinForms.BunifuSnackbar NotificacionNuevoPaciente;
+        public Bunifu.UI.WinForms.BunifuGradientPanel btnExpedienteGradient;
+        public Bunifu.UI.WinForms.BunifuGradientPanel btnDatosIdentificacionGradient;
     }
 }
