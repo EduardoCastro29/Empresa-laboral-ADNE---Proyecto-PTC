@@ -27,7 +27,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DTO
         //private int totalCitas;
 
         //DTO de Historial
-
         private string nombre;
         private TimeSpan horaInicio;
         private TimeSpan horaFin;
@@ -40,6 +39,11 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DTO
         private string Nombre;
         private string Apellido;
         private string Lugar;
+
+        //DTO de Recordatorios
+        private string enviarMail;
+        private TimeSpan horaCita; 
+        private int citaId;
 
         public DateTime FechaInicio1 { get => FechaInicio; set => FechaInicio = value; }
         public DateTime FechaFinal1 { get => FechaFinal; set => FechaFinal = value; }
@@ -63,7 +67,11 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DTO
         public TimeSpan HoraInicio2 { get => horaInicio; set => horaInicio = value; }
         public TimeSpan HoraFin { get => horaFin; set => horaFin = value; }
         public string DocumentoPresentado { get => documentoPresentado; set => documentoPresentado = value; }
-
         //public int TotalCitas { get => totalCitas; set => totalCitas = value; }
+
+        //Datos encapsulados de Recordatorios email
+        public string EnviarMail { get => enviarMail; set => enviarMail = value; }
+        public TimeSpan HoraCita { get => horaCita; set => horaCita = value; }
+        public int CitaId { get => citaId; set => citaId = value; }
     }
 }

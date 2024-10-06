@@ -67,7 +67,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                 return null;
             }
         }
-
         //Este método no lo descomentemos aún XD, es para desencriptar el documento XML de la conexión SQL Server
         //Las variables van a ser desencriptadas bv
         public string MetodoDesencriptacionAES(string textoEncriptado)
@@ -240,27 +239,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             }
             else return false;
         }
-
-        //public string EncriptarContraseña (string contraseñaEncriptar)
-        //{
-        //    //Se crea la instancia de la libreria SHA256 que posteriormente creará una cadena hexadecimal para el encriptado de contraseñas
-        //    SHA256 ObjEncriptacionSHA256 = SHA256.Create();
-
-        //    //Se convierte la variable contraseñaEncriptar en un arreglo de bytes de encriptacionSHA256
-        //    byte[] bytes = ObjEncriptacionSHA256.ComputeHash(Encoding.UTF8.GetBytes(contraseñaEncriptar));
-
-        //    //Se instancia la libreria stringbuilder para convertir la cadena a hexadecimal
-        //    StringBuilder ObjConstructor = new StringBuilder();
-
-        //    //Se recorre cada byte en el arreglo para que de esta forma construya la cadena de encriptación
-        //    for (int i = 0; i < bytes.Length; i++)
-        //    {
-        //        //Llamamos al constructor que posteriormente se convertira en una cadena hexadecimal en base 2 "x2"
-        //        //De esta manera, la cadena será mas grande y segura
-        //        ObjConstructor.Append(bytes[i].ToString("x2"));
-        //    }
-        //    //Retornamos el constructor como tipo string, de esta forma se devuelven los bytes encriptados en caracteres
-        //    return ObjConstructor.ToString();
-        //}
+        //Comentario en memoria de SHA256 - Aquí yacía el hijo de AES
     }
 }

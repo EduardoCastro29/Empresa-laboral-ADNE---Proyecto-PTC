@@ -18,7 +18,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
     {
         readonly SqlCommand Conexion = new SqlCommand();
         //Este es el método que se utilizara para eliminar una Cita y CONSULTA asociada
-        //Es importante saber que, si se elimina una cita, se eliminará la cunsulta para mantener un orden estático
+        //Es importante saber que, si se elimina una cita, se eliminará la consulta para mantener un orden estático
         //Para eso, usaremos una propiedad llamada ON DELETE CASCADE, la cuál nos permitirá eliminar la cita y la consulta asociada
         public bool EliminarCitaYConsulta()
         {

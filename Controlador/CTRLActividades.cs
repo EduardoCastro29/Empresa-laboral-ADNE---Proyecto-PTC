@@ -22,6 +22,8 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             ObjActividadesForm.btnVerEsteMes.Click += new EventHandler(CargarGraficoEsteMes);
             ObjActividadesForm.btnVerPersonalizadoDia.Click += new EventHandler(CargarGraficoPersonalizado);
             ObjActividadesForm.btnOk.Click += new EventHandler(CargarGraficoPersonalizadoOK);
+
+            ObjActividadesForm.btnEnviarRecordatorios.Click += new EventHandler(EnviarRecordatorios);
         }
         #region Abrir Historial desde el formulario de actividades
         private void AbrirHistorial(object sender, EventArgs e)
@@ -190,5 +192,11 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             }
         }
         #endregion
+        public void EnviarRecordatorios(object sender, EventArgs e)
+        {
+            DAOActividades objDAO = new DAOActividades();
+            objDAO.EnviarRecordatoriosCitasHoy();
+            MessageBox.Show("Proceso terminado");
+        }
     }
 }

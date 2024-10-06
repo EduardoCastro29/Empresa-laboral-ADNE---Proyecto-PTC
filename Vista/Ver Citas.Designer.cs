@@ -37,6 +37,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             this.cmsOpciones = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.cmsActualizar = new System.Windows.Forms.ToolStripMenuItem();
             this.cmsEliminarCita = new System.Windows.Forms.ToolStripMenuItem();
@@ -46,6 +47,7 @@
             this.pnlForms = new Bunifu.UI.WinForms.BunifuGradientPanel();
             this.txtBuscar = new Bunifu.UI.WinForms.BunifuTextBox();
             this.dgvCitasAgendadas = new Bunifu.UI.WinForms.BunifuDataGridView();
+            this.btnBuscar = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.cmsOpciones.SuspendLayout();
             this.pnlFondo.SuspendLayout();
             this.pnlSombraFondo.SuspendLayout();
@@ -129,6 +131,7 @@
             this.pnlForms.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlForms.BackgroundImage")));
             this.pnlForms.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pnlForms.BorderRadius = 60;
+            this.pnlForms.Controls.Add(this.btnBuscar);
             this.pnlForms.Controls.Add(this.txtBuscar);
             this.pnlForms.Controls.Add(this.dgvCitasAgendadas);
             this.pnlForms.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -287,6 +290,97 @@
             this.dgvCitasAgendadas.TabIndex = 100;
             this.dgvCitasAgendadas.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Teal;
             // 
+            // btnBuscar
+            // 
+            this.btnBuscar.AllowAnimations = true;
+            this.btnBuscar.AllowMouseEffects = true;
+            this.btnBuscar.AllowToggling = false;
+            this.btnBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnBuscar.AnimationSpeed = 200;
+            this.btnBuscar.AutoGenerateColors = false;
+            this.btnBuscar.AutoRoundBorders = false;
+            this.btnBuscar.AutoSizeLeftIcon = true;
+            this.btnBuscar.AutoSizeRightIcon = true;
+            this.btnBuscar.BackColor = System.Drawing.Color.Transparent;
+            this.btnBuscar.BackColor1 = System.Drawing.Color.DarkTurquoise;
+            this.btnBuscar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnBuscar.BackgroundImage")));
+            this.btnBuscar.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btnBuscar.ButtonText = "";
+            this.btnBuscar.ButtonTextMarginLeft = 0;
+            this.btnBuscar.ColorContrastOnClick = 45;
+            this.btnBuscar.ColorContrastOnHover = 45;
+            this.btnBuscar.Cursor = System.Windows.Forms.Cursors.Default;
+            borderEdges1.BottomLeft = false;
+            borderEdges1.BottomRight = true;
+            borderEdges1.TopLeft = false;
+            borderEdges1.TopRight = true;
+            this.btnBuscar.CustomizableEdges = borderEdges1;
+            this.btnBuscar.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnBuscar.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btnBuscar.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btnBuscar.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btnBuscar.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
+            this.btnBuscar.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.ForeColor = System.Drawing.Color.White;
+            this.btnBuscar.IconLeftAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnBuscar.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.btnBuscar.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
+            this.btnBuscar.IconMarginLeft = 11;
+            this.btnBuscar.IconPadding = 15;
+            this.btnBuscar.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnBuscar.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.btnBuscar.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
+            this.btnBuscar.IconSize = 25;
+            this.btnBuscar.IdleBorderColor = System.Drawing.Color.DarkTurquoise;
+            this.btnBuscar.IdleBorderRadius = 60;
+            this.btnBuscar.IdleBorderThickness = 1;
+            this.btnBuscar.IdleFillColor = System.Drawing.Color.DarkTurquoise;
+            this.btnBuscar.IdleIconLeftImage = null;
+            this.btnBuscar.IdleIconRightImage = null;
+            this.btnBuscar.IndicateFocus = false;
+            this.btnBuscar.Location = new System.Drawing.Point(705, 50);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(0);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btnBuscar.OnDisabledState.BorderRadius = 60;
+            this.btnBuscar.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btnBuscar.OnDisabledState.BorderThickness = 1;
+            this.btnBuscar.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btnBuscar.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btnBuscar.OnDisabledState.IconLeftImage = null;
+            this.btnBuscar.OnDisabledState.IconRightImage = null;
+            this.btnBuscar.onHoverState.BorderColor = System.Drawing.Color.MediumTurquoise;
+            this.btnBuscar.onHoverState.BorderRadius = 60;
+            this.btnBuscar.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btnBuscar.onHoverState.BorderThickness = 1;
+            this.btnBuscar.onHoverState.FillColor = System.Drawing.Color.MediumTurquoise;
+            this.btnBuscar.onHoverState.ForeColor = System.Drawing.Color.White;
+            this.btnBuscar.onHoverState.IconLeftImage = null;
+            this.btnBuscar.onHoverState.IconRightImage = null;
+            this.btnBuscar.OnIdleState.BorderColor = System.Drawing.Color.DarkTurquoise;
+            this.btnBuscar.OnIdleState.BorderRadius = 60;
+            this.btnBuscar.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btnBuscar.OnIdleState.BorderThickness = 1;
+            this.btnBuscar.OnIdleState.FillColor = System.Drawing.Color.DarkTurquoise;
+            this.btnBuscar.OnIdleState.ForeColor = System.Drawing.Color.White;
+            this.btnBuscar.OnIdleState.IconLeftImage = null;
+            this.btnBuscar.OnIdleState.IconRightImage = null;
+            this.btnBuscar.OnPressedState.BorderColor = System.Drawing.Color.LightSeaGreen;
+            this.btnBuscar.OnPressedState.BorderRadius = 60;
+            this.btnBuscar.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btnBuscar.OnPressedState.BorderThickness = 1;
+            this.btnBuscar.OnPressedState.FillColor = System.Drawing.Color.LightSeaGreen;
+            this.btnBuscar.OnPressedState.ForeColor = System.Drawing.Color.White;
+            this.btnBuscar.OnPressedState.IconLeftImage = null;
+            this.btnBuscar.OnPressedState.IconRightImage = null;
+            this.btnBuscar.Size = new System.Drawing.Size(130, 64);
+            this.btnBuscar.TabIndex = 101;
+            this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnBuscar.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnBuscar.TextMarginLeft = 0;
+            this.btnBuscar.TextPadding = new System.Windows.Forms.Padding(0);
+            this.btnBuscar.UseDefaultRadiusAndThickness = true;
+            // 
             // VerCitasForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -319,5 +413,6 @@
         public Bunifu.UI.WinForms.BunifuGradientPanel pnlForms;
         public Bunifu.UI.WinForms.BunifuDataGridView dgvCitasAgendadas;
         public Bunifu.UI.WinForms.BunifuTextBox txtBuscar;
+        public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnBuscar;
     }
 }

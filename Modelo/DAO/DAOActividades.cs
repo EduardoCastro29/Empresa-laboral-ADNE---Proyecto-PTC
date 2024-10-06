@@ -4,6 +4,10 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
+//Using para el envio de mails
+using System.Net.Mail;
+using System.Net;
+using System.Linq;
 
 namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
 {
@@ -198,6 +202,121 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
             finally
             {
                 Conexion.Connection.Close();
+            }
+        }
+        public SmtpClient ObjSMTPClient = new SmtpClient();
+
+        // Método para enviar correos
+        public void EnviarCorreo(string temaMail, string cuerpoMail, List<string> direccionesMail)
+        {
+            // Verificamos que la lista de direcciones no esté vacía
+            if (direccionesMail == null || !direccionesMail.Any())
+            {
+                MessageBox.Show("No hay direcciones de correo para enviar el mensaje.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            MailMessage MensajeMail = new MailMessage();
+            try
+            {
+                DAOSistemaSoporte ObjSistemaSoporte = new DAOSistemaSoporte();
+                string EnviarMail = ObjSistemaSoporte.ObtenerCorreoRemitente();
+                MensajeMail.From = new MailAddress(EnviarMail);
+
+                foreach (string correo in direccionesMail)
+                {
+                    MensajeMail.To.Add(correo);
+                }
+
+                MensajeMail.Subject = temaMail;
+                MensajeMail.Body = cuerpoMail;
+                MensajeMail.Priority = MailPriority.Normal;
+
+                ObjSistemaSoporte.ObjSMTPClient.Send(MensajeMail);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Ha ocurrido un error, ERR-012-1 - Error al conectarse con una red de Internet o el correo ha sido mal proporcionado, verifique su conexión a Internet. [Consulte el Manual Técnico]", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                MensajeMail.Dispose();
+                ObjSMTPClient.Dispose();
+            }
+        }
+        // Método para obtener las direcciones de correo con citas programadas para el día de hoy
+        public List<(string Correo, TimeSpan HoraCita)> ObtenerCitasHoy()
+        {
+            List<(string Correo, TimeSpan HoraCita)> citas = new List<(string Correo, TimeSpan HoraCita)>();
+            try
+            {
+                Conexion.Connection = Conectar();
+                string query = "SELECT * FROM vistaCitaCorreo WHERE fecha = CAST(CURRENT_TIMESTAMP AS DATE)"; //Verificar si existe una tabla con las citas y que incluya el correo o hacer otra vista
+                SqlCommand objComandoSQL = new SqlCommand(query, Conexion.Connection);
+
+                SqlDataReader ObjCitasEncontradas = objComandoSQL.ExecuteReader();
+
+                //Verifico si encontró filas
+                while (ObjCitasEncontradas.Read())
+                {
+                    //Captura el correo y lo convierte a string
+                    string correo = (string)ObjCitasEncontradas[3];
+                    TimeSpan Hora = (TimeSpan)ObjCitasEncontradas[5];
+
+                    //Agrega el correo encontrado a la lista de correos
+                    citas.Add((correo, Hora));
+                }
+
+                return citas;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Ha ocurrido un error, ERR- - (Pendiente) Error al obtener las citas de este día. [Consulte el Manual Técnico]", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return new List<(string, TimeSpan)>();
+            }
+            finally
+            {
+                Conexion.Connection.Close();
+            }
+        }
+        public void EnviarRecordatoriosCitasHoy()
+        {
+
+            List<(string Correo, TimeSpan HoraCita)> citas = ObtenerCitasHoy(); // Obtiene los correos de las citas de hoy
+            try
+            {
+                if (citas.Any()) // Verifica que haya correos para enviar
+                {
+                    foreach (var cita in citas)
+                    {
+                        string correo = cita.Correo;
+                        TimeSpan hora = cita.HoraCita;
+                        string Hora = hora.ToString(@"hh\:mm"); //Formato a la hora
+                        //Cuerpo del correo
+                        string asunto = "Tienes una cita!";
+                        string cuerpo = "Buen día! " +
+                        "\n" + "Te saludamos desde ADNE (Atención a la Diversidad y Necesidades Específicas). " +
+                        "\n\n" + "Queremos recordarte que hoy tienes una cita programada con nosotros. Aquí están los detalles: " +
+                        "\n" + "Hora de la Cita: " + Hora +
+                        "\n\n" + "Buenos diassss, ya es hora de despertar, " +
+                        "\n" + "Y miraa! lo logré!! 🦝" +
+                        "\n\n" + "Esperamos tengas un excelente día." +
+                        "\n" + "Atentamente, ADNE";
+
+                        // Envía el correo a todos los destinatarios
+                        EnviarCorreo(asunto, cuerpo, new List<string> { correo });
+                    }
+                    MessageBox.Show("Recordatorios enviados éxitosamente!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("No hay citas programadas para hoy.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Ha ocurrido un error, ERR- - (Pendiente) Error al enviar los recordatorios. [Consulte el Manual Técnico]", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
         }
     }

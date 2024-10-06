@@ -38,6 +38,7 @@
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges8 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges7 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             this.pnlFondoDashboard = new Bunifu.UI.WinForms.BunifuGradientPanel();
             this.pnlBienvenida = new Bunifu.UI.WinForms.BunifuGradientPanel();
@@ -83,6 +84,7 @@
             this.lblHistorial = new Bunifu.UI.WinForms.BunifuLabel();
             this.pnlFondoBase = new Bunifu.UI.WinForms.BunifuPanel();
             this.pnlSombraFormulario = new Bunifu.UI.WinForms.BunifuShadowPanel();
+            this.btnEnviarRecordatorios = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.pnlFondoDashboard.SuspendLayout();
             this.pnlBienvenida.SuspendLayout();
             this.pnlSombraCitas.SuspendLayout();
@@ -418,7 +420,7 @@
             this.lblHasta.AutoEllipsis = false;
             this.lblHasta.CursorType = null;
             this.lblHasta.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHasta.Location = new System.Drawing.Point(224, 54);
+            this.lblHasta.Location = new System.Drawing.Point(224, 55);
             this.lblHasta.Name = "lblHasta";
             this.lblHasta.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblHasta.Size = new System.Drawing.Size(53, 23);
@@ -433,7 +435,7 @@
             this.lblDesde.AutoEllipsis = false;
             this.lblDesde.CursorType = null;
             this.lblDesde.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDesde.Location = new System.Drawing.Point(224, 20);
+            this.lblDesde.Location = new System.Drawing.Point(224, 21);
             this.lblDesde.Name = "lblDesde";
             this.lblDesde.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblDesde.Size = new System.Drawing.Size(58, 23);
@@ -463,7 +465,7 @@
             this.dtFechaFinal.IconColor = System.Drawing.Color.LightSeaGreen;
             this.dtFechaFinal.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
             this.dtFechaFinal.LeftTextMargin = 5;
-            this.dtFechaFinal.Location = new System.Drawing.Point(289, 51);
+            this.dtFechaFinal.Location = new System.Drawing.Point(289, 52);
             this.dtFechaFinal.MinimumSize = new System.Drawing.Size(4, 32);
             this.dtFechaFinal.Name = "dtFechaFinal";
             this.dtFechaFinal.Size = new System.Drawing.Size(289, 32);
@@ -491,7 +493,7 @@
             this.dtFechaInicio.IconColor = System.Drawing.Color.LightSeaGreen;
             this.dtFechaInicio.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
             this.dtFechaInicio.LeftTextMargin = 5;
-            this.dtFechaInicio.Location = new System.Drawing.Point(289, 16);
+            this.dtFechaInicio.Location = new System.Drawing.Point(289, 17);
             this.dtFechaInicio.MinimumSize = new System.Drawing.Size(4, 32);
             this.dtFechaInicio.Name = "dtFechaInicio";
             this.dtFechaInicio.Size = new System.Drawing.Size(289, 32);
@@ -1312,6 +1314,7 @@
             this.pnlHistorial.BorderColor = System.Drawing.Color.White;
             this.pnlHistorial.BorderRadius = 12;
             this.pnlHistorial.BorderThickness = 1;
+            this.pnlHistorial.Controls.Add(this.btnEnviarRecordatorios);
             this.pnlHistorial.Controls.Add(this.btnHistorial);
             this.pnlHistorial.Controls.Add(this.lblHistorial);
             this.pnlHistorial.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -1341,11 +1344,11 @@
             this.btnHistorial.ColorContrastOnClick = 45;
             this.btnHistorial.ColorContrastOnHover = 45;
             this.btnHistorial.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges7.BottomLeft = true;
-            borderEdges7.BottomRight = true;
-            borderEdges7.TopLeft = true;
-            borderEdges7.TopRight = true;
-            this.btnHistorial.CustomizableEdges = borderEdges7;
+            borderEdges8.BottomLeft = true;
+            borderEdges8.BottomRight = true;
+            borderEdges8.TopLeft = true;
+            borderEdges8.TopRight = true;
+            this.btnHistorial.CustomizableEdges = borderEdges8;
             this.btnHistorial.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnHistorial.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnHistorial.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -1363,16 +1366,16 @@
             this.btnHistorial.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
             this.btnHistorial.IconSize = 25;
             this.btnHistorial.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(172)))), ((int)(((byte)(158)))));
-            this.btnHistorial.IdleBorderRadius = 37;
+            this.btnHistorial.IdleBorderRadius = 40;
             this.btnHistorial.IdleBorderThickness = 1;
             this.btnHistorial.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(172)))), ((int)(((byte)(158)))));
             this.btnHistorial.IdleIconLeftImage = null;
             this.btnHistorial.IdleIconRightImage = null;
             this.btnHistorial.IndicateFocus = false;
-            this.btnHistorial.Location = new System.Drawing.Point(352, 44);
+            this.btnHistorial.Location = new System.Drawing.Point(352, 23);
             this.btnHistorial.Name = "btnHistorial";
             this.btnHistorial.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.btnHistorial.OnDisabledState.BorderRadius = 37;
+            this.btnHistorial.OnDisabledState.BorderRadius = 40;
             this.btnHistorial.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.btnHistorial.OnDisabledState.BorderThickness = 1;
             this.btnHistorial.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -1380,7 +1383,7 @@
             this.btnHistorial.OnDisabledState.IconLeftImage = null;
             this.btnHistorial.OnDisabledState.IconRightImage = null;
             this.btnHistorial.onHoverState.BorderColor = System.Drawing.Color.Transparent;
-            this.btnHistorial.onHoverState.BorderRadius = 37;
+            this.btnHistorial.onHoverState.BorderRadius = 40;
             this.btnHistorial.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.btnHistorial.onHoverState.BorderThickness = 1;
             this.btnHistorial.onHoverState.FillColor = System.Drawing.Color.MediumTurquoise;
@@ -1388,7 +1391,7 @@
             this.btnHistorial.onHoverState.IconLeftImage = null;
             this.btnHistorial.onHoverState.IconRightImage = null;
             this.btnHistorial.OnIdleState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(172)))), ((int)(((byte)(158)))));
-            this.btnHistorial.OnIdleState.BorderRadius = 37;
+            this.btnHistorial.OnIdleState.BorderRadius = 40;
             this.btnHistorial.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.btnHistorial.OnIdleState.BorderThickness = 1;
             this.btnHistorial.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(172)))), ((int)(((byte)(158)))));
@@ -1396,7 +1399,7 @@
             this.btnHistorial.OnIdleState.IconLeftImage = null;
             this.btnHistorial.OnIdleState.IconRightImage = null;
             this.btnHistorial.OnPressedState.BorderColor = System.Drawing.Color.Transparent;
-            this.btnHistorial.OnPressedState.BorderRadius = 37;
+            this.btnHistorial.OnPressedState.BorderRadius = 40;
             this.btnHistorial.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.btnHistorial.OnPressedState.BorderThickness = 1;
             this.btnHistorial.OnPressedState.FillColor = System.Drawing.Color.Teal;
@@ -1417,7 +1420,7 @@
             this.lblHistorial.AutoEllipsis = false;
             this.lblHistorial.CursorType = null;
             this.lblHistorial.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHistorial.Location = new System.Drawing.Point(36, 51);
+            this.lblHistorial.Location = new System.Drawing.Point(36, 30);
             this.lblHistorial.Name = "lblHistorial";
             this.lblHistorial.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblHistorial.Size = new System.Drawing.Size(180, 28);
@@ -1466,6 +1469,96 @@
             this.pnlSombraFormulario.Size = new System.Drawing.Size(991, 707);
             this.pnlSombraFormulario.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Lowered;
             this.pnlSombraFormulario.TabIndex = 2;
+            // 
+            // btnEnviarRecordatorios
+            // 
+            this.btnEnviarRecordatorios.AllowAnimations = true;
+            this.btnEnviarRecordatorios.AllowMouseEffects = true;
+            this.btnEnviarRecordatorios.AllowToggling = false;
+            this.btnEnviarRecordatorios.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEnviarRecordatorios.AnimationSpeed = 200;
+            this.btnEnviarRecordatorios.AutoGenerateColors = false;
+            this.btnEnviarRecordatorios.AutoRoundBorders = false;
+            this.btnEnviarRecordatorios.AutoSizeLeftIcon = true;
+            this.btnEnviarRecordatorios.AutoSizeRightIcon = true;
+            this.btnEnviarRecordatorios.BackColor = System.Drawing.Color.Transparent;
+            this.btnEnviarRecordatorios.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(172)))), ((int)(((byte)(158)))));
+            this.btnEnviarRecordatorios.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnEnviarRecordatorios.BackgroundImage")));
+            this.btnEnviarRecordatorios.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btnEnviarRecordatorios.ButtonText = "Enviar Recordatorios";
+            this.btnEnviarRecordatorios.ButtonTextMarginLeft = 0;
+            this.btnEnviarRecordatorios.ColorContrastOnClick = 45;
+            this.btnEnviarRecordatorios.ColorContrastOnHover = 45;
+            this.btnEnviarRecordatorios.Cursor = System.Windows.Forms.Cursors.Hand;
+            borderEdges7.BottomLeft = true;
+            borderEdges7.BottomRight = true;
+            borderEdges7.TopLeft = true;
+            borderEdges7.TopRight = true;
+            this.btnEnviarRecordatorios.CustomizableEdges = borderEdges7;
+            this.btnEnviarRecordatorios.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnEnviarRecordatorios.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btnEnviarRecordatorios.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btnEnviarRecordatorios.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btnEnviarRecordatorios.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
+            this.btnEnviarRecordatorios.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Bold);
+            this.btnEnviarRecordatorios.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnEnviarRecordatorios.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEnviarRecordatorios.IconLeftCursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEnviarRecordatorios.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
+            this.btnEnviarRecordatorios.IconMarginLeft = 11;
+            this.btnEnviarRecordatorios.IconPadding = 10;
+            this.btnEnviarRecordatorios.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnEnviarRecordatorios.IconRightCursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEnviarRecordatorios.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
+            this.btnEnviarRecordatorios.IconSize = 25;
+            this.btnEnviarRecordatorios.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(172)))), ((int)(((byte)(158)))));
+            this.btnEnviarRecordatorios.IdleBorderRadius = 25;
+            this.btnEnviarRecordatorios.IdleBorderThickness = 1;
+            this.btnEnviarRecordatorios.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(172)))), ((int)(((byte)(158)))));
+            this.btnEnviarRecordatorios.IdleIconLeftImage = null;
+            this.btnEnviarRecordatorios.IdleIconRightImage = null;
+            this.btnEnviarRecordatorios.IndicateFocus = false;
+            this.btnEnviarRecordatorios.Location = new System.Drawing.Point(168, 75);
+            this.btnEnviarRecordatorios.Name = "btnEnviarRecordatorios";
+            this.btnEnviarRecordatorios.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btnEnviarRecordatorios.OnDisabledState.BorderRadius = 25;
+            this.btnEnviarRecordatorios.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btnEnviarRecordatorios.OnDisabledState.BorderThickness = 1;
+            this.btnEnviarRecordatorios.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btnEnviarRecordatorios.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btnEnviarRecordatorios.OnDisabledState.IconLeftImage = null;
+            this.btnEnviarRecordatorios.OnDisabledState.IconRightImage = null;
+            this.btnEnviarRecordatorios.onHoverState.BorderColor = System.Drawing.Color.Transparent;
+            this.btnEnviarRecordatorios.onHoverState.BorderRadius = 25;
+            this.btnEnviarRecordatorios.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btnEnviarRecordatorios.onHoverState.BorderThickness = 1;
+            this.btnEnviarRecordatorios.onHoverState.FillColor = System.Drawing.Color.MediumTurquoise;
+            this.btnEnviarRecordatorios.onHoverState.ForeColor = System.Drawing.Color.White;
+            this.btnEnviarRecordatorios.onHoverState.IconLeftImage = null;
+            this.btnEnviarRecordatorios.onHoverState.IconRightImage = null;
+            this.btnEnviarRecordatorios.OnIdleState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(172)))), ((int)(((byte)(158)))));
+            this.btnEnviarRecordatorios.OnIdleState.BorderRadius = 25;
+            this.btnEnviarRecordatorios.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btnEnviarRecordatorios.OnIdleState.BorderThickness = 1;
+            this.btnEnviarRecordatorios.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(172)))), ((int)(((byte)(158)))));
+            this.btnEnviarRecordatorios.OnIdleState.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnEnviarRecordatorios.OnIdleState.IconLeftImage = null;
+            this.btnEnviarRecordatorios.OnIdleState.IconRightImage = null;
+            this.btnEnviarRecordatorios.OnPressedState.BorderColor = System.Drawing.Color.Transparent;
+            this.btnEnviarRecordatorios.OnPressedState.BorderRadius = 25;
+            this.btnEnviarRecordatorios.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btnEnviarRecordatorios.OnPressedState.BorderThickness = 1;
+            this.btnEnviarRecordatorios.OnPressedState.FillColor = System.Drawing.Color.Teal;
+            this.btnEnviarRecordatorios.OnPressedState.ForeColor = System.Drawing.Color.White;
+            this.btnEnviarRecordatorios.OnPressedState.IconLeftImage = null;
+            this.btnEnviarRecordatorios.OnPressedState.IconRightImage = null;
+            this.btnEnviarRecordatorios.Size = new System.Drawing.Size(227, 44);
+            this.btnEnviarRecordatorios.TabIndex = 12;
+            this.btnEnviarRecordatorios.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnEnviarRecordatorios.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnEnviarRecordatorios.TextMarginLeft = 0;
+            this.btnEnviarRecordatorios.TextPadding = new System.Windows.Forms.Padding(0);
+            this.btnEnviarRecordatorios.UseDefaultRadiusAndThickness = true;
             // 
             // ActividadesForm
             // 
@@ -1548,5 +1641,6 @@
         public Bunifu.UI.WinForms.BunifuLabel lblDesde;
         public Bunifu.UI.WinForms.BunifuLabel lblDefault;
         public System.Windows.Forms.Panel plSiguientePaciente;
+        public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnEnviarRecordatorios;
     }
 }

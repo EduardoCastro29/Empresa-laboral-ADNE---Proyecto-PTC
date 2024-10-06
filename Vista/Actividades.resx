@@ -853,23 +853,42 @@
         +UfowyH0n3Pui3Po1Zk3T48BAHzcTte8PfPzmedXYwAA2+7u/gXEvDUMkba0hgAAAABJRU5ErkJggg==
 </value>
   </data>
+  <data name="btnEnviarRecordatorios.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAOMAAAAsCAYAAACXMA8tAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJmSURBVHhe7d0xjhMxFMZxl5Rb0kFH7BRLSckJ0JYcAdFR
+        InEAOjoKNB6LChHPkAqJComKkoICiYILAMoGBCuRAt5zvEWEg5Ilmbj4P+mXlWKPU32yx7Mam03Kds2J
+        7UIcd+075br2N4D1zrOiuRlNmttXQriU47R9HU/DkZ34h67zC9u1p6UfBLCRuY3+TML5xE3C5Ryxzco9
+        b25JCGc2NmeFgQFcgORpIbmaj/vmbo7av8v1/p7MhF9LgwH4f6Ne8tUHnyNXLg1i6lgYAMDu5FXnsxy9
+        1dKlKTMiMCQ/d5P2fo7gsvSmMjUULwCwN9F/kfxdz1E0Rnd5ljeXhc4A9shLINvXKYj6/EO3XcsdAeyb
+        7f33a9Nw1egDSfmCJSpwIPkZ5APjYniZpspCJwDD0P/WkTD6D6VGAEPyn41+lBsBDEnCWG4AMCzCCFSC
+        MAKVIIxAJQgjUAnCCFSCMAKVIIxAJQgjUAnCCFSCMAKVIIxAJQgjUAnCCFSCMAKVIIxAJQgjUAnCCFRC
+        wsjLi4EaGNv5T6UGAEPyc12mvnWRVzUCh6STorGxuWO79kepA4ABxGZhY/soHXpDGIHDsdHPRn24kc7b
+        0IM3eKs4cBhpiXpeeiSVfMG5/cDAZFV6arvmJEdxWaPYPpbZ8VvpAgD74H/J3xc5gqsly9U3sn7VDoUL
+        AezYez2SMcdvtbRBAzmKzc/ChQB2IE140X88noajHL315frgJZSz0kAALk7vESWIr9bOiKUax3BTz4zT
+        bVcJZnFgABuSyU13Tf/arNmm9PmH69PmDkfHAVtLuXmqk1uO1Joy5g+ddVLuoSNJdAAAAABJRU5ErkJg
+        gg==
+</value>
+  </data>
   <data name="btnHistorial.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         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
-        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
+        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
+        TkSuQmCC
 </value>
   </data>
   <data name="lblHistorial.BaseStylesheet" xml:space="preserve">
