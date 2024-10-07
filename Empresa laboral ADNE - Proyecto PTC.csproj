@@ -243,6 +243,12 @@
     <Compile Include="Vista\Configuración de Usuario.Designer.cs">
       <DependentUpon>Configuración de Usuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\Confirmar Contraseña.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Confirmar Contraseña.Designer.cs">
+      <DependentUpon>Confirmar Contraseña.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\Control Dias.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -339,6 +345,12 @@
     <Compile Include="Vista\Registro Especialidades.Designer.cs">
       <DependentUpon>Registro Especialidades.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\Restablecer contraseña.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Restablecer contraseña.Designer.cs">
+      <DependentUpon>Restablecer contraseña.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\Ver Citas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -432,6 +444,9 @@
     <EmbeddedResource Include="Vista\Configuración de Usuario.resx">
       <DependentUpon>Configuración de Usuario.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Confirmar Contraseña.resx">
+      <DependentUpon>Confirmar Contraseña.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vista\Control Dias.resx">
       <DependentUpon>Control Dias.cs</DependentUpon>
     </EmbeddedResource>
@@ -480,6 +495,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\Registro Especialidades.resx">
       <DependentUpon>Registro Especialidades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Restablecer contraseña.resx">
+      <DependentUpon>Restablecer contraseña.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\Ver Citas.resx">
       <DependentUpon>Ver Citas.cs</DependentUpon>
