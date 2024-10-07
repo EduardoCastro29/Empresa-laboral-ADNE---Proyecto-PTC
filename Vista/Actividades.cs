@@ -64,6 +64,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Vista
                 this.pnlHistorial.Refresh();
 
                 //LABELS:
+                this.lblRecordatorios.ForeColor = Color.White;
                 this.lblHistorial.ForeColor = Color.White;
                 this.lblSiguiente.ForeColor = Color.White;
                 this.lblHoraCita.ForeColor = Color.White;
@@ -134,6 +135,13 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Vista
                 this.btnHistorial.IdleBorderColor = Color.Transparent;
                 this.btnHistorial.OnPressedState.FillColor = Color.FromArgb(1, 94, 94);
                 this.btnHistorial.OnPressedState.BorderColor = Color.Transparent;
+
+                this.btnEnviarRecordatorios.onHoverState.FillColor = Color.FromArgb(2, 168, 168);
+                this.btnEnviarRecordatorios.onHoverState.BorderColor = Color.Transparent;
+                this.btnEnviarRecordatorios.IdleFillColor = Color.Teal;
+                this.btnEnviarRecordatorios.IdleBorderColor = Color.Transparent;
+                this.btnEnviarRecordatorios.OnPressedState.FillColor = Color.FromArgb(1, 94, 94);
+                this.btnEnviarRecordatorios.OnPressedState.BorderColor = Color.Transparent;
 
                 this.btnOk.onHoverState.FillColor = Color.DarkTurquoise;
                 this.btnOk.onHoverState.BorderColor = Color.Transparent;

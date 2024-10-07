@@ -31,6 +31,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             ObjConfiguracionForm.btnCerrarSesion.Click += new EventHandler(CerrarSesionConfig);
             ObjConfiguracionForm.btnAgregarConfiguracion.Click += new EventHandler(AbrirConfiguracionServidor);
             ObjConfiguracionForm.switchModo.CheckedChanged += new EventHandler(modoOscuro);
+            ObjConfiguracionForm.switchModo.Click += new EventHandler(cambioModo);
             //ObjConfiguracionForm.btnNuevaContrasena.Click += new EventHandler(cambiarContrasena);
         }
         #region Eventos iniciales al cargar el Formulario
@@ -149,6 +150,23 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             {
                 objConfig.EscribirIni("SECTION", "key", "light");
                 ObjConfiguracionForm.BackColor = Color.FromArgb(14, 143, 156);
+
+            }
+        }
+
+
+        private void cambioModo(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Se ha cambiado el tema. Por favor, reinicie la aplicación para guardar los cambios.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information) == DialogResult.OK)
+            {
+                // Obtener el path de la aplicación actual
+                string applicationPath = Application.ExecutablePath;
+
+                // Iniciar una nueva instancia de la aplicación
+                System.Diagnostics.Process.Start(applicationPath);
+
+                // Cerrar la aplicación actual
+                Application.Exit();
             }
         }
 

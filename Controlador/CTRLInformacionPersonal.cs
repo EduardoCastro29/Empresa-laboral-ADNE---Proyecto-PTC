@@ -187,9 +187,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             char ch = e.KeyChar;
 
             if ((ch >= '0' && ch <= '9') ||
-                (ch >= 'A' && ch <= 'Z') ||
-                (ch >= 'a' && ch <= 'z') ||
-                (ch == ' ') ||
                 (ch == '-'))
             {
                 return;

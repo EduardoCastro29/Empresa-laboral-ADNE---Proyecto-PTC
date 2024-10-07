@@ -204,46 +204,46 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                 Conexion.Connection.Close();
             }
         }
-        public SmtpClient ObjSMTPClient = new SmtpClient();
+        //public SmtpClient ObjSMTPClient = new SmtpClient();
 
-        // Método para enviar correos
-        public void EnviarCorreo(string temaMail, string cuerpoMail, List<string> direccionesMail)
-        {
-            // Verificamos que la lista de direcciones no esté vacía
-            if (direccionesMail == null || !direccionesMail.Any())
-            {
-                MessageBox.Show("No hay direcciones de correo para enviar el mensaje.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
+        //// Método para enviar correos
+        //public void EnviarCorreo(string temaMail, string cuerpoMail, List<string> direccionesMail)
+        //{
+        //    // Verificamos que la lista de direcciones no esté vacía
+        //    if (direccionesMail == null || !direccionesMail.Any())
+        //    {
+        //        MessageBox.Show("No hay direcciones de correo para enviar el mensaje.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        //        return;
+        //    }
 
-            MailMessage MensajeMail = new MailMessage();
-            try
-            {
-                DAOSistemaSoporte ObjSistemaSoporte = new DAOSistemaSoporte();
-                string EnviarMail = ObjSistemaSoporte.ObtenerCorreoRemitente();
-                MensajeMail.From = new MailAddress(EnviarMail);
+        //    MailMessage MensajeMail = new MailMessage();
+        //    try
+        //    {
+        //        DAOSistemaSoporte ObjSistemaSoporte = new DAOSistemaSoporte();
+        //        string EnviarMail = ObjSistemaSoporte.ObtenerCorreoRemitente();
+        //        MensajeMail.From = new MailAddress(EnviarMail);
 
-                foreach (string correo in direccionesMail)
-                {
-                    MensajeMail.To.Add(correo);
-                }
+        //        foreach (string correo in direccionesMail)
+        //        {
+        //            MensajeMail.To.Add(correo);
+        //        }
 
-                MensajeMail.Subject = temaMail;
-                MensajeMail.Body = cuerpoMail;
-                MensajeMail.Priority = MailPriority.Normal;
+        //        MensajeMail.Subject = temaMail;
+        //        MensajeMail.Body = cuerpoMail;
+        //        MensajeMail.Priority = MailPriority.Normal;
 
-                ObjSistemaSoporte.ObjSMTPClient.Send(MensajeMail);
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Ha ocurrido un error, ERR-012-1 - Error al conectarse con una red de Internet o el correo ha sido mal proporcionado, verifique su conexión a Internet. [Consulte el Manual Técnico]", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            finally
-            {
-                MensajeMail.Dispose();
-                ObjSMTPClient.Dispose();
-            }
-        }
+        //        ObjSistemaSoporte.ObjSMTPClient.Send(MensajeMail);
+        //    }
+        //    catch (Exception)
+        //    {
+        //        MessageBox.Show("Ha ocurrido un error, ERR-012-1 - Error al conectarse con una red de Internet o el correo ha sido mal proporcionado, verifique su conexión a Internet. [Consulte el Manual Técnico]", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //    }
+        //    finally
+        //    {
+        //        MensajeMail.Dispose();
+        //        ObjSMTPClient.Dispose();
+        //    }
+        //}
         // Método para obtener las direcciones de correo con citas programadas para el día de hoy
         public List<(string Correo, TimeSpan HoraCita)> ObtenerCitasHoy()
         {
@@ -281,7 +281,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
         }
         public void EnviarRecordatoriosCitasHoy()
         {
-
             List<(string Correo, TimeSpan HoraCita)> citas = ObtenerCitasHoy(); // Obtiene los correos de las citas de hoy
             try
             {
@@ -303,8 +302,9 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                         "\n\n" + "Esperamos tengas un excelente día." +
                         "\n" + "Atentamente, ADNE";
 
+                        DAOSistemaSoporte ObjDAOSM = new DAOSistemaSoporte();
                         // Envía el correo a todos los destinatarios
-                        EnviarCorreo(asunto, cuerpo, new List<string> { correo });
+                        ObjDAOSM.EnviarCorreo(asunto, cuerpo, new List<string> { correo });
                     }
                     MessageBox.Show("Recordatorios enviados éxitosamente!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
@@ -315,7 +315,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
             }
             catch (Exception)
             {
-                MessageBox.Show("Ha ocurrido un error, ERR- - (Pendiente) Error al enviar los recordatorios. [Consulte el Manual Técnico]", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Ha ocurrido un error, ERR-002-2 - Error al buscar un correo electrónico correspondiente, verifique si su correo electrónico posee una dirección de correo válida. [Consulte el Manual Técnico]", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
         }

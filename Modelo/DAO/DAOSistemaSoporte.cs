@@ -19,9 +19,9 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
             SistemSSL = true;
             InicializarSmtpClient();
         }
-        public string ObtenerCorreoRemitente()
-        {
-            return "adnekids2024@gmail.com";
-        }
+        //public string ObtenerCorreoRemitente()
+        //{
+        //    return "adnekids2024@gmail.com";
+        //}
     }
 }

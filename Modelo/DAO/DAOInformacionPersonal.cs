@@ -59,33 +59,40 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                         ObjConsultaSQL.Parameters.AddWithValue("@documentoPresentado", DocumentoPresentado);
                         ObjConsultaSQL.Parameters.AddWithValue("@DUI", InicioSesion.Dui);
 
-                        if (ObjConsultaSQL.ExecuteNonQuery() > 0)
+                        if (DAOInformacionEncargado.DocumentoEncargado != null)
                         {
-                            try
+                            if (ObjConsultaSQL.ExecuteNonQuery() > 0)
                             {
-                                //Inicializamos el comando
-                                string consultaSQLEncargado = "UPDATE EncargadoPaciente SET documentoPresentadoP = @documentoPresentadoP WHERE documentoPresentado = @documentoPresentado";
+                                try
+                                {
+                                    //Inicializamos el comando
+                                    string consultaSQLEncargado = "UPDATE EncargadoPaciente SET documentoPresentadoP = @documentoPresentadoP WHERE documentoPresentado = @documentoPresentado";
 
-                                //Declaramos el comando
-                                SqlCommand ObjConsultaSQEncargado = new SqlCommand(consultaSQLEncargado, Conexion.Connection);
+                                    //Declaramos el comando
+                                    SqlCommand ObjConsultaSQEncargado = new SqlCommand(consultaSQLEncargado, Conexion.Connection);
 
-                                //Insertamos los valores
-                                ObjConsultaSQEncargado.Parameters.AddWithValue("@documentoPresentadoP", DocumentoPresentado);
-                                ObjConsultaSQEncargado.Parameters.AddWithValue("@documentoPresentado", DAOInformacionEncargado.DocumentoEncargado);
+                                    //Insertamos los valores
+                                    ObjConsultaSQEncargado.Parameters.AddWithValue("@documentoPresentadoP", DocumentoPresentado);
+                                    ObjConsultaSQEncargado.Parameters.AddWithValue("@documentoPresentado", DAOInformacionEncargado.DocumentoEncargado);
 
-                                if (ObjConsultaSQEncargado.ExecuteNonQuery() > 0)
-                                    return true;
-                                else return false;
+                                    if (ObjConsultaSQEncargado.ExecuteNonQuery() > 0)
+                                        return true;
+                                    else return false;
+                                }
+                                catch (Exception)
+                                {
+                                    MessageBox.Show("Ha ocurrido un error, ERR-001-4 - Error al registrar el paciente, verifique si el paciente ya existe o existen valores repeditos (Documento o Correo). [Consulte el Manual Técnico]", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                    return false;
+                                }
                             }
-                            catch (Exception)
+                            else
                             {
-                                MessageBox.Show("Ha ocurrido un error, ERR-001-4 - Error al registrar el paciente, verifique si el paciente ya existe o existen valores repeditos (Documento o Correo). [Consulte el Manual Técnico]", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                 return false;
                             }
                         }
                         else
                         {
-                            return false;
+                            return true;
                         }
                     }
                     catch (Exception)

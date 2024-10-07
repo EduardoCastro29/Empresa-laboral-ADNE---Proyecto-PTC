@@ -973,6 +973,7 @@
             // 
             // pictureADNE
             // 
+            this.pictureADNE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(78)))), ((int)(((byte)(84)))));
             this.pictureADNE.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureADNE.Image = ((System.Drawing.Image)(resources.GetObject("pictureADNE.Image")));
             this.pictureADNE.Location = new System.Drawing.Point(0, 82);
@@ -984,7 +985,7 @@
             // 
             // flpTopTitulo
             // 
-            this.flpTopTitulo.BackColor = System.Drawing.Color.Transparent;
+            this.flpTopTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(63)))), ((int)(((byte)(69)))));
             this.flpTopTitulo.Controls.Add(this.lblConfiguracionTitulo);
             this.flpTopTitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.flpTopTitulo.Location = new System.Drawing.Point(0, 0);
@@ -1033,7 +1034,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(143)))), ((int)(((byte)(156)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(92)))), ((int)(((byte)(98)))));
             this.ClientSize = new System.Drawing.Size(1011, 894);
             this.Controls.Add(this.pnlFondo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
