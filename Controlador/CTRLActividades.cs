@@ -17,10 +17,10 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             // Al presionar el boton Ver este dia Se carga el metodo asignado
             ObjActividadesForm.btnHistorial.Click += new EventHandler(AbrirHistorial);
             ObjActividadesForm.btnVerEsteDia.Click += new EventHandler(CargarGraficoEsteDia);
-            ObjActividadesForm.btnVer7Dias.Click += new EventHandler(CargarGraficoUltimos7Dias);
+            ObjActividadesForm.btnVerPersonalizadoDia.Click += new EventHandler(CargarGraficoUltimos7Dias);
             ObjActividadesForm.btnVer30Dias.Click += new EventHandler(CargarGraficoUltimos30Dias);
             ObjActividadesForm.btnVerEsteMes.Click += new EventHandler(CargarGraficoEsteMes);
-            ObjActividadesForm.btnVerPersonalizadoDia.Click += new EventHandler(CargarGraficoPersonalizado);
+            ObjActividadesForm.btnVer7Dias.Click += new EventHandler(CargarGraficoPersonalizado);
             ObjActividadesForm.btnOk.Click += new EventHandler(CargarGraficoPersonalizadoOK);
 
             ObjActividadesForm.btnEnviarRecordatorios.Click += new EventHandler(EnviarRecordatorios);
@@ -99,7 +99,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             // Chart
             ObjActividadesForm.dtFechaInicio.Value = DateTime.Today.AddDays(-7);
             ObjActividadesForm.dtFechaFinal.Value = DateTime.Now;
-            ObjActividadesForm.btnVer7Dias.Select();
+            ObjActividadesForm.btnVerPersonalizadoDia.Select();
 
             CargarSiguientePaciente();
 

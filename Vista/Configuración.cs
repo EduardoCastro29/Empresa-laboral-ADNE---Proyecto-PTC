@@ -21,8 +21,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Vista
 
             CTRLConfiguracion ObjConfiguracionControlador = new CTRLConfiguracion(this);
         }
-
-
         private void leerIni()
         {
             Config objConfig = new Config();

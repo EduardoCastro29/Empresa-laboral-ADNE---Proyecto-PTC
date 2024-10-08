@@ -72,15 +72,8 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
         //Este es el método común cargando todas las variables de conexión dentro del fomulario de agregar conexión
         private void AbrirConfiguracionServidor(object sender, EventArgs e)
         {
-            //Instanciamos a al formulario de conexión
-            AgregarConexionForm ObjAbrirFMRConexion = new AgregarConexionForm();
-            ObjAbrirFMRConexion.txtServidorURL.Text = DTOAgregarConexion.Server;
-            ObjAbrirFMRConexion.txtBaseDeDatos.Text = DTOAgregarConexion.Database;
-            ObjAbrirFMRConexion.txtAutenticacion.Text = DTOAgregarConexion.User;
-            ObjAbrirFMRConexion.txtContrasena.Text = DTOAgregarConexion.Password;
-
-            //Abrimos el formulario
-            ObjAbrirFMRConexion.ShowDialog();
+            ConfirmarContraseñaForm ConfirmarContrasenaForm = new ConfirmarContraseñaForm();
+            ConfirmarContrasenaForm.ShowDialog();
         }
         #endregion
         #region Eventos de descarga PDF para manual técnico y manual de Usuario
@@ -153,30 +146,12 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
 
             }
         }
-
-
         private void cambioModo(object sender, EventArgs e)
         {
             if (MessageBox.Show("Se ha cambiado el tema. Por favor, reinicie la aplicación para guardar los cambios.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information) == DialogResult.OK)
             {
-                // Obtener el path de la aplicación actual
-                string applicationPath = Application.ExecutablePath;
-
-                // Iniciar una nueva instancia de la aplicación
-                System.Diagnostics.Process.Start(applicationPath);
-
-                // Cerrar la aplicación actual
-                Application.Exit();
+                Application.Restart();
             }
         }
-
-        //private void cambiarContrasena(object sender, EventArgs e)
-        //{
-        //    ObjActualizarContrasena.ShowDialog();
-        //    if (ObjCTRLActualizarContrasena.ActualizarContrasena)
-        //    {
-
-        //    }
-        //}
     }
 }

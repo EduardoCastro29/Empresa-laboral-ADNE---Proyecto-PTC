@@ -64,23 +64,24 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Vista
                 this.pnlHistorial.Refresh();
 
                 //LABELS:
-                this.lblRecordatorios.ForeColor = Color.White;
-                this.lblHistorial.ForeColor = Color.White;
-                this.lblSiguiente.ForeColor = Color.White;
-                this.lblHoraCita.ForeColor = Color.White;
-                this.lblHora.ForeColor = Color.White;
-                this.lblDiaCita.ForeColor = Color.White;
-                this.lblDia.ForeColor = Color.White;
-                this.lblLugarCita.ForeColor = Color.White;
-                this.lblLugar.ForeColor = Color.White;
-                this.lblAtendidos.ForeColor = Color.White;
-                this.lblCitasAtendidas.ForeColor = Color.White;
-                this.lblPendientes.ForeColor = Color.White;
-                this.lblCitasPendientes.ForeColor = Color.White;
-                this.lblPerdidas.ForeColor = Color.White;
-                this.lblCitasPerdidas.ForeColor = Color.White;
-                this.lblDesde.ForeColor = Color.White;
-                this.lblHasta.ForeColor = Color.White;
+                this.lblRecordatorios.ForeColor = Color.WhiteSmoke;
+                this.lblHistorial.ForeColor = Color.WhiteSmoke;
+                this.lblSiguiente.ForeColor = Color.WhiteSmoke;
+                this.lblHoraCita.ForeColor = Color.WhiteSmoke;
+                this.lblHora.ForeColor = Color.WhiteSmoke;
+                this.lblDiaCita.ForeColor = Color.WhiteSmoke;
+                this.lblDia.ForeColor = Color.WhiteSmoke;
+                this.lblLugarCita.ForeColor = Color.WhiteSmoke;
+                this.lblLugar.ForeColor = Color.WhiteSmoke;
+                this.lblAtendidos.ForeColor = Color.WhiteSmoke;
+                this.lblCitasAtendidas.ForeColor = Color.WhiteSmoke;
+                this.lblPendientes.ForeColor = Color.WhiteSmoke;
+                this.lblCitasPendientes.ForeColor = Color.WhiteSmoke;
+                this.lblPerdidas.ForeColor = Color.WhiteSmoke;
+                this.lblCitasPerdidas.ForeColor = Color.WhiteSmoke;
+                this.lblDesde.ForeColor = Color.WhiteSmoke;
+                this.lblHasta.ForeColor = Color.WhiteSmoke;
+                this.lblDefault.ForeColor = Color.FromArgb(98, 204, 192);
 
                 this.dtFechaInicio.BackColor = Color.FromArgb(50, 89, 108);
                 this.dtFechaInicio.ForeColor = Color.White;
@@ -89,17 +90,17 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Vista
                 this.dtFechaInicio.DisabledColor = Color.DarkGray;
 
                 this.dtFechaFinal.BackColor = Color.FromArgb(50, 89, 108);
-                this.dtFechaFinal.ForeColor = Color.White;
+                this.dtFechaFinal.ForeColor = Color.WhiteSmoke;
                 this.dtFechaFinal.IconColor = Color.FromArgb(6, 153, 141);
 
                 this.dtFechaFinal.DisabledColor = Color.DarkGray;
 
-                this.btnVerPersonalizadoDia.onHoverState.FillColor = Color.FromArgb(2, 168, 168);
-                this.btnVerPersonalizadoDia.onHoverState.BorderColor = Color.Transparent;
-                this.btnVerPersonalizadoDia.IdleFillColor = Color.FromArgb(2, 168, 168);
-                this.btnVerPersonalizadoDia.IdleBorderColor = Color.Transparent;
-                this.btnVerPersonalizadoDia.OnPressedState.FillColor = Color.Teal;
-                this.btnVerPersonalizadoDia.OnPressedState.BorderColor = Color.Transparent;
+                this.btnVer7Dias.onHoverState.FillColor = Color.FromArgb(2, 168, 168);
+                this.btnVer7Dias.onHoverState.BorderColor = Color.Transparent;
+                this.btnVer7Dias.IdleFillColor = Color.FromArgb(2, 168, 168);
+                this.btnVer7Dias.IdleBorderColor = Color.Transparent;
+                this.btnVer7Dias.OnPressedState.FillColor = Color.Teal;
+                this.btnVer7Dias.OnPressedState.BorderColor = Color.Transparent;
 
                 this.btnVerEsteMes.onHoverState.FillColor = Color.FromArgb(2, 168, 168);
                 this.btnVerEsteMes.onHoverState.BorderColor = Color.Transparent;
@@ -115,12 +116,12 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Vista
                 this.btnVer30Dias.OnPressedState.FillColor = Color.Teal;
                 this.btnVer30Dias.OnPressedState.BorderColor = Color.Transparent;
 
-                this.btnVer7Dias.onHoverState.FillColor = Color.FromArgb(2, 168, 168);
-                this.btnVer7Dias.onHoverState.BorderColor = Color.Transparent;
-                this.btnVer7Dias.IdleFillColor = Color.FromArgb(2, 168, 168);
-                this.btnVer7Dias.IdleBorderColor = Color.Transparent;
-                this.btnVer7Dias.OnPressedState.FillColor = Color.Teal;
-                this.btnVer7Dias.OnPressedState.BorderColor = Color.Transparent;
+                this.btnVerPersonalizadoDia.onHoverState.FillColor = Color.FromArgb(2, 168, 168);
+                this.btnVerPersonalizadoDia.onHoverState.BorderColor = Color.Transparent;
+                this.btnVerPersonalizadoDia.IdleFillColor = Color.FromArgb(2, 168, 168);
+                this.btnVerPersonalizadoDia.IdleBorderColor = Color.Transparent;
+                this.btnVerPersonalizadoDia.OnPressedState.FillColor = Color.Teal;
+                this.btnVerPersonalizadoDia.OnPressedState.BorderColor = Color.Transparent;
 
                 this.btnVerEsteDia.onHoverState.FillColor = Color.FromArgb(2, 168, 168);
                 this.btnVerEsteDia.onHoverState.BorderColor = Color.Transparent;
