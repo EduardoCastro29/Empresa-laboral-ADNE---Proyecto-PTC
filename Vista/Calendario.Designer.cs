@@ -30,9 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CalendarioForm));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges5 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges6 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             this.lblFecha = new System.Windows.Forms.Label();
             this.lblSabado = new System.Windows.Forms.Label();
             this.lblViernes = new System.Windows.Forms.Label();
@@ -57,7 +57,7 @@
             this.lblFecha.Cursor = System.Windows.Forms.Cursors.Default;
             this.lblFecha.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.lblFecha.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblFecha.Location = new System.Drawing.Point(377, 18);
+            this.lblFecha.Location = new System.Drawing.Point(378, 20);
             this.lblFecha.Name = "lblFecha";
             this.lblFecha.Size = new System.Drawing.Size(214, 33);
             this.lblFecha.TabIndex = 20;
@@ -70,7 +70,7 @@
             this.lblSabado.AutoSize = true;
             this.lblSabado.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSabado.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblSabado.Location = new System.Drawing.Point(874, 73);
+            this.lblSabado.Location = new System.Drawing.Point(864, 73);
             this.lblSabado.Name = "lblSabado";
             this.lblSabado.Size = new System.Drawing.Size(83, 22);
             this.lblSabado.TabIndex = 19;
@@ -82,7 +82,7 @@
             this.lblViernes.AutoSize = true;
             this.lblViernes.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblViernes.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblViernes.Location = new System.Drawing.Point(747, 73);
+            this.lblViernes.Location = new System.Drawing.Point(734, 73);
             this.lblViernes.Name = "lblViernes";
             this.lblViernes.Size = new System.Drawing.Size(77, 22);
             this.lblViernes.TabIndex = 18;
@@ -94,7 +94,7 @@
             this.lblJueves.AutoSize = true;
             this.lblJueves.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblJueves.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblJueves.Location = new System.Drawing.Point(608, 73);
+            this.lblJueves.Location = new System.Drawing.Point(601, 73);
             this.lblJueves.Name = "lblJueves";
             this.lblJueves.Size = new System.Drawing.Size(75, 22);
             this.lblJueves.TabIndex = 17;
@@ -106,7 +106,7 @@
             this.lblMiercoles.AutoSize = true;
             this.lblMiercoles.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMiercoles.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblMiercoles.Location = new System.Drawing.Point(460, 73);
+            this.lblMiercoles.Location = new System.Drawing.Point(458, 73);
             this.lblMiercoles.Name = "lblMiercoles";
             this.lblMiercoles.Size = new System.Drawing.Size(94, 22);
             this.lblMiercoles.TabIndex = 16;
@@ -118,7 +118,7 @@
             this.lblMartes.AutoSize = true;
             this.lblMartes.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMartes.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblMartes.Location = new System.Drawing.Point(337, 73);
+            this.lblMartes.Location = new System.Drawing.Point(334, 73);
             this.lblMartes.Name = "lblMartes";
             this.lblMartes.Size = new System.Drawing.Size(72, 22);
             this.lblMartes.TabIndex = 15;
@@ -130,7 +130,7 @@
             this.lblLunes.AutoSize = true;
             this.lblLunes.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLunes.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblLunes.Location = new System.Drawing.Point(206, 73);
+            this.lblLunes.Location = new System.Drawing.Point(204, 73);
             this.lblLunes.Name = "lblLunes";
             this.lblLunes.Size = new System.Drawing.Size(62, 22);
             this.lblLunes.TabIndex = 14;
@@ -142,7 +142,7 @@
             this.lblDomingo.AutoSize = true;
             this.lblDomingo.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDomingo.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblDomingo.Location = new System.Drawing.Point(47, 73);
+            this.lblDomingo.Location = new System.Drawing.Point(49, 73);
             this.lblDomingo.Name = "lblDomingo";
             this.lblDomingo.Size = new System.Drawing.Size(93, 22);
             this.lblDomingo.TabIndex = 10;
@@ -177,11 +177,11 @@
             this.btnSiguiente.ColorContrastOnClick = 45;
             this.btnSiguiente.ColorContrastOnHover = 45;
             this.btnSiguiente.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges1.BottomLeft = true;
-            borderEdges1.BottomRight = true;
-            borderEdges1.TopLeft = true;
-            borderEdges1.TopRight = true;
-            this.btnSiguiente.CustomizableEdges = borderEdges1;
+            borderEdges4.BottomLeft = true;
+            borderEdges4.BottomRight = true;
+            borderEdges4.TopLeft = true;
+            borderEdges4.TopRight = true;
+            this.btnSiguiente.CustomizableEdges = borderEdges4;
             this.btnSiguiente.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnSiguiente.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnSiguiente.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -205,7 +205,7 @@
             this.btnSiguiente.IdleIconLeftImage = null;
             this.btnSiguiente.IdleIconRightImage = null;
             this.btnSiguiente.IndicateFocus = false;
-            this.btnSiguiente.Location = new System.Drawing.Point(612, 18);
+            this.btnSiguiente.Location = new System.Drawing.Point(612, 16);
             this.btnSiguiente.Name = "btnSiguiente";
             this.btnSiguiente.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnSiguiente.OnDisabledState.BorderRadius = 5;
@@ -267,11 +267,11 @@
             this.btnAnterior.ColorContrastOnClick = 45;
             this.btnAnterior.ColorContrastOnHover = 45;
             this.btnAnterior.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges2.BottomLeft = true;
-            borderEdges2.BottomRight = true;
-            borderEdges2.TopLeft = true;
-            borderEdges2.TopRight = true;
-            this.btnAnterior.CustomizableEdges = borderEdges2;
+            borderEdges5.BottomLeft = true;
+            borderEdges5.BottomRight = true;
+            borderEdges5.TopLeft = true;
+            borderEdges5.TopRight = true;
+            this.btnAnterior.CustomizableEdges = borderEdges5;
             this.btnAnterior.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnAnterior.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnAnterior.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -295,7 +295,7 @@
             this.btnAnterior.IdleIconLeftImage = null;
             this.btnAnterior.IdleIconRightImage = null;
             this.btnAnterior.IndicateFocus = false;
-            this.btnAnterior.Location = new System.Drawing.Point(307, 18);
+            this.btnAnterior.Location = new System.Drawing.Point(307, 16);
             this.btnAnterior.Name = "btnAnterior";
             this.btnAnterior.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnAnterior.OnDisabledState.BorderRadius = 5;
@@ -356,11 +356,11 @@
             this.btnVerCitas.ColorContrastOnClick = 45;
             this.btnVerCitas.ColorContrastOnHover = 45;
             this.btnVerCitas.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges3.BottomLeft = true;
-            borderEdges3.BottomRight = true;
-            borderEdges3.TopLeft = true;
-            borderEdges3.TopRight = true;
-            this.btnVerCitas.CustomizableEdges = borderEdges3;
+            borderEdges6.BottomLeft = true;
+            borderEdges6.BottomRight = true;
+            borderEdges6.TopLeft = true;
+            borderEdges6.TopRight = true;
+            this.btnVerCitas.CustomizableEdges = borderEdges6;
             this.btnVerCitas.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnVerCitas.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnVerCitas.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));

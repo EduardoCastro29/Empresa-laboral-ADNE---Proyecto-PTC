@@ -127,7 +127,7 @@
     <Compile Include="Controlador\CTRLAdministrador.cs" />
     <Compile Include="Controlador\CTRLAgendarCita.cs" />
     <Compile Include="Controlador\CTRLCalendario.cs" />
-    <Compile Include="Controlador\CTRLCitas.cs" />
+    <Compile Include="Controlador\CTRLExpedientes.cs" />
     <Compile Include="Controlador\CTRLConexion.cs" />
     <Compile Include="Controlador\CTRLConfiguracion.cs" />
     <Compile Include="Controlador\CTRLDashboard.cs" />
@@ -179,7 +179,7 @@
     <Compile Include="Modelo\DTO\DTOAgendarCita.cs" />
     <Compile Include="Modelo\DTO\DTOAgregarConexion.cs" />
     <Compile Include="Modelo\DTO\DTOCalendario.cs" />
-    <Compile Include="Modelo\DTO\DTOCitas.cs" />
+    <Compile Include="Modelo\DTO\DTOExpedientes.cs" />
     <Compile Include="Modelo\DTO\DTOConfiguracion.cs" />
     <Compile Include="Modelo\DTO\DTOConfiguracionUsuario.cs" />
     <Compile Include="Modelo\DTO\DTODashboard.cs" />
@@ -226,11 +226,11 @@
     <Compile Include="Vista\Agregar Conexion.Designer.cs">
       <DependentUpon>Agregar Conexion.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vista\Citas.cs">
+    <Compile Include="Vista\Expendientes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vista\Citas.Designer.cs">
-      <DependentUpon>Citas.cs</DependentUpon>
+    <Compile Include="Vista\Expendientes.Designer.cs">
+      <DependentUpon>Expendientes.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\Configuración.cs">
       <SubType>Form</SubType>
@@ -412,6 +412,7 @@
     <Compile Include="Vista\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <None Include="Resources\lupa %281%29.png" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -435,8 +436,8 @@
     <EmbeddedResource Include="Vista\Agregar Conexion.resx">
       <DependentUpon>Agregar Conexion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vista\Citas.resx">
-      <DependentUpon>Citas.cs</DependentUpon>
+    <EmbeddedResource Include="Vista\Expendientes.resx">
+      <DependentUpon>Expendientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\Configuración.resx">
       <DependentUpon>Configuración.cs</DependentUpon>

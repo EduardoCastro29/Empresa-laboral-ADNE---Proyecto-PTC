@@ -16,18 +16,18 @@ using iTextSharp.tool.xml;
 
 namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
 {
-    internal class CTRLCitas
+    internal class CTRLExpedientes
     {
         readonly CitasForm objCitasForm;
         readonly ControlPacientePlanillaUC objUC;
-        public CTRLCitas(CitasForm Vista)
+        public CTRLExpedientes(CitasForm Vista)
         {
             objCitasForm = Vista;
 
             objCitasForm.Load += new EventHandler(CargarCitas);
-            objCitasForm.txtBuscarCita.KeyPress += new KeyPressEventHandler(BuscarCitas);
+            objCitasForm.btnBuscar.Click += new EventHandler(BuscarCitas);
         }
-        public CTRLCitas(ControlPacientePlanillaUC Vista)
+        public CTRLExpedientes(ControlPacientePlanillaUC Vista)
         {
             objUC = Vista;
 
@@ -43,20 +43,13 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                 objCitaUC.CitaId = (int)dr[0];
                 objCitaUC.DocumentoPaciente = (string)dr[1];
                 objCitaUC.Nombre = (string)dr[3];
-                //objCitaUC.CitaId = (int)dr[3];
                 objCitaUC.N_expediente = (int)dr[2];
-
-                //objCitaUC.DocumentoPaciente = (string)dr[0];
-                //objCitaUC.Nombre = (string)dr[1];
-                ////objCitaUC.Min_cita = (int)dr[2];
-                //objCitaUC.CitaId = (int)dr[3];
-                //objCitaUC.N_expediente = (int)dr[4];
 
                 ControlPacientePlanillaUC PanelPaciente = new ControlPacientePlanillaUC(objCitaUC);
                 objCitasForm.flpCitas.Controls.Add(PanelPaciente);
             }
         }
-        public void BuscarCitas(object sender, KeyPressEventArgs e)
+        public void BuscarCitas(object sender, EventArgs e)
         {
             DAODiagnosticos objCitas = new DAODiagnosticos();
             DataSet ds = objCitas.BuscarCita(objCitasForm.txtBuscarCita.Text.Trim());
@@ -68,7 +61,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                 objCitas.CitaId = (int)dr[0];
                 objCitas.DocumentoPaciente = (string)dr[1];
                 objCitas.Nombre = (string)dr[3];
-                //objCitaUC.CitaId = (int)dr[3];
                 objCitas.N_expediente = (int)dr[2];
 
                 ControlPacientePlanillaUC PanelPaciente = new ControlPacientePlanillaUC(objCitas);
@@ -130,7 +122,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                     pag = pag.Replace("@LUGAR", objCitasDAO.Lugar);
                     pag = pag.Replace("@DESCRIPCION", objCitasDAO.Desc_Cita);
                     #endregion
-
                     if (objCitasDAO.ObtenerDatosSistema() == true)
                     {
                         //Información del Sistema

@@ -148,9 +148,9 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
         }
         private void cambioModo(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Se ha cambiado el tema. Por favor, reinicie la aplicación para guardar los cambios.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information) == DialogResult.OK)
+            if (MessageBox.Show("Se ha cambiado el tema. Por favor, reinicie la aplicación para guardar los cambios.", "Apariencia", MessageBoxButtons.OK, MessageBoxIcon.Information) == DialogResult.OK)
             {
-                Application.Restart();
+                Environment.Exit(0);
             }
         }
     }

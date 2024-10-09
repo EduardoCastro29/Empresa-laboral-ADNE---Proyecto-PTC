@@ -19,7 +19,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Vista
             InitializeComponent();
             leerIni();
             this.ParentChanged += new EventHandler(OnParentChanged);
-            CTRLCitas objUCCitas = new CTRLCitas(this);
+            CTRLExpedientes objUCCitas = new CTRLExpedientes(this);
             try
             {
                 lblCitaId.Text = objDAOCitas.CitaId.ToString();

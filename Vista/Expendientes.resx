@@ -353,20 +353,17 @@
   </data>
   <data name="btnBuscar.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        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
+        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
 </value>
   </data>
   <data name="txtBuscarCita.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

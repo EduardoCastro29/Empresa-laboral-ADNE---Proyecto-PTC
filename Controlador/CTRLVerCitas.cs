@@ -25,7 +25,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             ObjVerCitasForm.cmsVerCita.Click += new EventHandler(VerCitaDetallada);
             ObjVerCitasForm.cmsActualizar.Click += new EventHandler(ActualizarCita);
             ObjVerCitasForm.cmsEliminarCita.Click += new EventHandler(EliminarCita);
-            ObjVerCitasForm.txtBuscar.KeyPress += new KeyPressEventHandler(BuscarCita);
+            ObjVerCitasForm.btnBuscar.Click += new EventHandler(BuscarCita);
         }
         #region Eventos Iniciales al cargar el Formulario
         private void CargarDGVCitas()
@@ -168,7 +168,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
         }
         #endregion
         #region Buscar una cita por sus denominaciones relevantes (SEARCH)
-        private void BuscarCita(object sender, KeyPressEventArgs e)
+        private void BuscarCita(object sender, EventArgs e)
         {
             DAOVerCitas ObjDAOBuscarCitas = new DAOVerCitas();
             DataTable ObjBuscar = ObjDAOBuscarCitas.BuscarCitaC(ObjVerCitasForm.txtBuscar.Text);

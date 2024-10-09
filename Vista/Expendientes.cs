@@ -17,7 +17,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Vista
         {
             InitializeComponent();
             leerIni();
-            CTRLCitas objCitas = new CTRLCitas(this);
+            CTRLExpedientes objCitas = new CTRLExpedientes(this);
         }
         private void leerIni()
         {

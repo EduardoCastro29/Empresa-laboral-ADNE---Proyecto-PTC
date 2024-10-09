@@ -13,7 +13,7 @@ using System.Windows.Forms;
 
 namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
 {
-    internal class DAODiagnosticos : DTOCitas
+    internal class DAODiagnosticos : DTOExpedientes
     {
         readonly SqlCommand Conexion = new SqlCommand();
 

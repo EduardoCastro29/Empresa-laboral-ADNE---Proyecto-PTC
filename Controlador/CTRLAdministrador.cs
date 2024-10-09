@@ -24,7 +24,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
         //El formulario Registro poseerá 2 constructores
         //Con lo cual, es necesario saber que constructor accionara cierta acción
         //Para eso usaremos un if dentro del InitialComponent del Formulario de registro
-
         readonly AdministradorForm ObjAdministradorForm;
         readonly RegistroForm ObjRegistroForm;
 
@@ -42,7 +41,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             ObjAdministradorForm.cmsRestablecerProfesional.Click += new EventHandler(RestablecerContrasenaProfesional);
             ObjAdministradorForm.cmsEliminarProfesional.Click += new EventHandler(EliminarProfesional);
             ObjAdministradorForm.cmsVerEspecialidades.Click += new EventHandler(AbrirEspecialidadesProfesional);
-            ObjAdministradorForm.txtBuscarEmpleado.KeyPress += new KeyPressEventHandler(BuscarProfesional);
+            ObjAdministradorForm.btnBuscar.Click += new EventHandler(BuscarProfesional);
         }
         #region Eventos Iniciales al cargar el Formulario
         private void RecargarDGVEmpleados()
@@ -235,7 +234,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
         }
         #endregion
         #region Buscar un profesional por sus denominaciones relevantes (SEARCH)
-        private void BuscarProfesional(object sender, KeyPressEventArgs e)
+        private void BuscarProfesional(object sender, EventArgs e)
         {
             DAOAdministrador ObjDAOBuscarEmpleado = new DAOAdministrador();
             DataTable ObjBuscar = ObjDAOBuscarEmpleado.BuscarProfesionalP(ObjAdministradorForm.txtBuscarEmpleado.Text);
@@ -247,7 +246,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
         public CTRLAdministrador(RegistroForm Vista)
         {
             ObjRegistroForm = Vista;
-
             //Cargamos los combobox
             ObjRegistroForm.Load += new EventHandler(AccionesIniciales);
 

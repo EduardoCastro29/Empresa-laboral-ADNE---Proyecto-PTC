@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DTO
 {
-    internal class DTOCitas : Conexion
+    internal class DTOExpedientes : Conexion
     {
         //Atributos para los UC
         private string nombre;
