@@ -19,9 +19,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC
         {
             Application.SetCompatibleTextRenderingDefault(false);
             Application.EnableVisualStyles();
-            ConfiguraciónForm objConfiguraciónForm = new ConfiguraciónForm();
             DashboardForm objDashboardForm = new DashboardForm();
-            LeerIni(objConfiguraciónForm);
             //Creamos las instancias de las clases respectivas para la verificación de formularios
             DAOLogin ObjVerificarUsuarios = new DAOLogin();
             DAOPrimerUsoSistema ObjVerificarEmpresa = new DAOPrimerUsoSistema();
@@ -46,20 +44,20 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC
                 Application.Run(new LoginForm());
             }
         }
-        static void LeerIni(ConfiguraciónForm ObjConfiguracionForm)
-        {
-            Config objConfig = new Config();
-            objConfig.LeerIni();
-            if (objConfig.objDTOConfig.modoOscuro == "dark")
-            {
-                ObjConfiguracionForm.switchModo.Checked = true;
-                ObjConfiguracionForm.BackColor = Color.FromArgb(30, 92, 98);
-            }
-            else
-            {
-                ObjConfiguracionForm.switchModo.Checked = false;
-                ObjConfiguracionForm.BackColor = Color.FromArgb(14, 143, 156);
-            }
-        }
+        //static void LeerIni(ConfiguraciónForm ObjConfiguracionForm)
+        //{
+        //    Config objConfig = new Config();
+        //    objConfig.LeerIni();
+        //    if (objConfig.objDTOConfig.modoOscuro == "dark")
+        //    {
+        //        ObjConfiguracionForm.switchModo.Checked = true;
+        //        ObjConfiguracionForm.BackColor = Color.FromArgb(30, 92, 98);
+        //    }
+        //    else
+        //    {
+        //        ObjConfiguracionForm.switchModo.Checked = false;
+        //        ObjConfiguracionForm.BackColor = Color.FromArgb(14, 143, 156);
+        //    }
+        //}
     }
 }

@@ -12,9 +12,8 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
 {
     internal class CTRLCambiarContraseña
     {
-
-        readonly Actualizar_contraseña ObjActualizarContraseña;
-        public CTRLCambiarContraseña(Actualizar_contraseña vista)
+        readonly RegistroNuevaContraseñaForm ObjActualizarContraseña;
+        public CTRLCambiarContraseña(RegistroNuevaContraseñaForm vista)
         {
             ObjActualizarContraseña = vista;
             ObjActualizarContraseña.btnGuardar.Click += new EventHandler(CambiarContraseña);
@@ -25,10 +24,13 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             try
             {
                 DAOActualizarContrasena ObjDAOActualizarContrasena = new DAOActualizarContrasena();
-                DAOLogin ObjLogin = new DAOLogin();
                 CommonMethods ObjMetodosComunes = new CommonMethods();
 
-                if (ObjActualizarContraseña.txtNuevaContra.Text != ObjActualizarContraseña.txtConfirmarContra.Text)
+                if (ObjMetodosComunes.MetodoEncriptacionAES(ObjActualizarContraseña.txtContrasenaActual.Text) != InicioSesion.Contraseña)
+                {
+                    MessageBox.Show("La contraseña actual no coincide, intentelo denuevo", "Actualización de contraseña", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else if (ObjActualizarContraseña.txtNuevaContra.Text != ObjActualizarContraseña.txtConfirmarContra.Text)
                 {
                     MessageBox.Show("Las credenciales no coinciden", "Actualización de contraseña", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
@@ -38,13 +40,10 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                 }
                 else
                 {
+                    ObjDAOActualizarContrasena.UsuarioSolicitantePS = InicioSesion.Usuario;
                     ObjDAOActualizarContrasena.Contrasena = ObjMetodosComunes.MetodoEncriptacionAES(ObjActualizarContraseña.txtConfirmarContra.Text.Trim());
 
-                    ObjDAOActualizarContrasena.NombreUsuario1 = ObjLogin.Usuario;
-                    ObjActualizarContraseña.txtUsuarioID.Text = ObjDAOActualizarContrasena.NombreUsuario1;
-                    //ObjDAOActualizarContrasena.NombreUsuario1 = ObjActualizarContraseña.txtUsuarioID.Text.Trim();
-
-                    if (ObjDAOActualizarContrasena.ActualizarContraseñaConfiguracion() == false)
+                    if (ObjDAOActualizarContrasena.ActualizarContrasenaCorreo() == false)
                     {
                         MessageBox.Show("Las contraseña no pudo ser actualizada, contacte con el soporte técnico o comuniquese con su administrador", "Actualización de contraseña", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
@@ -60,7 +59,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             {
                 MessageBox.Show(ex.Message);
             }
-        
-    }
+        }
     }
 }

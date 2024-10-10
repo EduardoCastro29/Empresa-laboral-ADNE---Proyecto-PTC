@@ -347,11 +347,11 @@
     <Compile Include="Vista\Registro Especialidades.Designer.cs">
       <DependentUpon>Registro Especialidades.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vista\Restablecer contraseña.cs">
+    <Compile Include="Vista\Registro Nueva Contraseña.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vista\Restablecer contraseña.Designer.cs">
-      <DependentUpon>Restablecer contraseña.cs</DependentUpon>
+    <Compile Include="Vista\Registro Nueva Contraseña.Designer.cs">
+      <DependentUpon>Registro Nueva Contraseña.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\Ver Citas.cs">
       <SubType>Form</SubType>
@@ -499,8 +499,8 @@
     <EmbeddedResource Include="Vista\Registro Especialidades.resx">
       <DependentUpon>Registro Especialidades.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vista\Restablecer contraseña.resx">
-      <DependentUpon>Restablecer contraseña.cs</DependentUpon>
+    <EmbeddedResource Include="Vista\Registro Nueva Contraseña.resx">
+      <DependentUpon>Registro Nueva Contraseña.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\Ver Citas.resx">
       <DependentUpon>Ver Citas.cs</DependentUpon>

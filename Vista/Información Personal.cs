@@ -14,7 +14,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Vista
 {
     public partial class InformaciónPersonalForm : Form
     {
-        readonly ConfiguraciónForm objConfigForm = new ConfiguraciónForm();
         public InformaciónPersonalForm()
         {
             InitializeComponent();
@@ -39,7 +38,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Vista
             if (objConfig.objDTOConfig.modoOscuro == "dark")
             {
                 // Modo oscuro (Labels)
-                objConfigForm.switchModo.Checked = true;
+                //objConfigForm.switchModo.Checked = true;
                 this.BackColor = Color.FromArgb(30, 92, 98);
                 this.lblNombres.ForeColor = Color.White;
                 this.lblApellidos.ForeColor = Color.White;

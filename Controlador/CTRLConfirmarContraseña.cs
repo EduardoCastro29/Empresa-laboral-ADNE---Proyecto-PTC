@@ -66,7 +66,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             else
             {
                 //Instanciamos a al formulario de cambiar contraseña
-                Actualizar_contraseña ObjActualizarContraseña = new Actualizar_contraseña();
+                ActualizarContraseñaForm ObjActualizarContraseña = new ActualizarContraseñaForm();
                 //Abrimos el formulario
                 ObjActualizarContraseña.ShowDialog();
                 ObjConfirmarContrasenaForm.Hide();

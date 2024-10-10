@@ -20,15 +20,22 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Vista
             leerIni();
 
             CTRLConfiguracion ObjConfiguracionControlador = new CTRLConfiguracion(this);
+            leerIni();
         }
         private void leerIni()
         {
             Config objConfig = new Config();
             objConfig.LeerIni();
 
-            if (objConfig.objDTOConfig.modoOscuro == "dark")
+            if (objConfig.objDTOConfig.modoOscuro == "darks")
             {
                 this.switchModo.Checked = true;
+                this.BackColor = Color.FromArgb(30, 92, 98);
+            }
+            else
+            {
+                this.switchModo.Checked = false;
+                this.BackColor = Color.FromArgb(14, 143, 156);
             }
         }
     }

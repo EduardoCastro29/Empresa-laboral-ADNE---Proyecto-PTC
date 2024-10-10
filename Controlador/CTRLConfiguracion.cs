@@ -78,6 +78,13 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             ConfirmarContrasenaForm.ShowDialog();
         }
         #endregion
+        #region Abrir el formulario de confirmación para la actualización de contraseña (UPDATE)
+        private void RestablecerContraseña(object sender, EventArgs e)
+        {
+            RegistroNuevaContraseñaForm ObjAbrirRestablecerConfig = new RegistroNuevaContraseñaForm();
+            ObjAbrirRestablecerConfig.ShowDialog();
+        }
+        #endregion
         #region Eventos de descarga PDF para manual técnico y manual de Usuario
         //Estos son los métodos comúnes para descargar archivos ya puestos dentro de la aplicación del programa
         private void DescargarPDFManualUsuario(object sender, EventArgs e)
@@ -132,14 +139,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             }
         }
         #endregion
-        
-        private void RestablecerContraseña( object sender, EventArgs e )
-        {
-            ConfirmarContraseñaForm ObjFormConfirmarContraseña = new ConfirmarContraseñaForm();
-            ObjFormConfirmarContraseña.btnConfirmar.Visible = false;
-            ObjFormConfirmarContraseña.ShowDialog();
-
-        }
         //Creamos el método para instanciar la lectura del archivo ini desde la clase Config.cs
         private void modoOscuro(object sender, EventArgs e)
         {
