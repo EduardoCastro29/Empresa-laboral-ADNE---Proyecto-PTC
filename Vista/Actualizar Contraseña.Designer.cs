@@ -39,6 +39,12 @@
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties8 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             this.bunifuGradientPanel1 = new Bunifu.UI.WinForms.BunifuGradientPanel();
+            this.bunifuLabel4 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.bunifuLabel3 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.bunifuLabel2 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.lblEspecificaciones = new Bunifu.UI.WinForms.BunifuLabel();
+            this.lblRequisitos = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuShadowPanel2 = new Bunifu.UI.WinForms.BunifuShadowPanel();
             this.txtConfirmarContrasena = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bunifuShadowPanel3 = new Bunifu.UI.WinForms.BunifuShadowPanel();
@@ -53,12 +59,6 @@
             this.lblRestablecer = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuShadowPanel1 = new Bunifu.UI.WinForms.BunifuShadowPanel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lblRequisitos = new Bunifu.UI.WinForms.BunifuLabel();
-            this.lblEspecificaciones = new Bunifu.UI.WinForms.BunifuLabel();
-            this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.bunifuLabel2 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.bunifuLabel3 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.bunifuLabel4 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuGradientPanel1.SuspendLayout();
             this.bunifuShadowPanel2.SuspendLayout();
             this.bunifuShadowPanel3.SuspendLayout();
@@ -97,6 +97,109 @@
             this.bunifuGradientPanel1.Quality = 10;
             this.bunifuGradientPanel1.Size = new System.Drawing.Size(995, 461);
             this.bunifuGradientPanel1.TabIndex = 0;
+            // 
+            // bunifuLabel4
+            // 
+            this.bunifuLabel4.AllowParentOverrides = false;
+            this.bunifuLabel4.AutoEllipsis = false;
+            this.bunifuLabel4.Cursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel4.CursorType = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel4.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(86)))), ((int)(((byte)(100)))));
+            this.bunifuLabel4.Location = new System.Drawing.Point(600, 298);
+            this.bunifuLabel4.Name = "bunifuLabel4";
+            this.bunifuLabel4.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel4.Size = new System.Drawing.Size(383, 22);
+            this.bunifuLabel4.TabIndex = 20;
+            this.bunifuLabel4.Text = "- Debe contener mayúsculas y minúsculas";
+            this.bunifuLabel4.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel4.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // bunifuLabel3
+            // 
+            this.bunifuLabel3.AllowParentOverrides = false;
+            this.bunifuLabel3.AutoEllipsis = false;
+            this.bunifuLabel3.Cursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel3.CursorType = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(86)))), ((int)(((byte)(100)))));
+            this.bunifuLabel3.Location = new System.Drawing.Point(600, 263);
+            this.bunifuLabel3.Name = "bunifuLabel3";
+            this.bunifuLabel3.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel3.Size = new System.Drawing.Size(207, 22);
+            this.bunifuLabel3.TabIndex = 19;
+            this.bunifuLabel3.Text = "- Mínimo 12 carácteres";
+            this.bunifuLabel3.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel3.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // bunifuLabel2
+            // 
+            this.bunifuLabel2.AllowParentOverrides = false;
+            this.bunifuLabel2.AutoEllipsis = false;
+            this.bunifuLabel2.Cursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel2.CursorType = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(86)))), ((int)(((byte)(100)))));
+            this.bunifuLabel2.Location = new System.Drawing.Point(600, 238);
+            this.bunifuLabel2.Name = "bunifuLabel2";
+            this.bunifuLabel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel2.Size = new System.Drawing.Size(340, 22);
+            this.bunifuLabel2.TabIndex = 18;
+            this.bunifuLabel2.Text = "- Debe contener un número (mínimo)";
+            this.bunifuLabel2.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel2.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // bunifuLabel1
+            // 
+            this.bunifuLabel1.AllowParentOverrides = false;
+            this.bunifuLabel1.AutoEllipsis = false;
+            this.bunifuLabel1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel1.CursorType = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuLabel1.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.bunifuLabel1.Location = new System.Drawing.Point(729, 208);
+            this.bunifuLabel1.Name = "bunifuLabel1";
+            this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel1.Size = new System.Drawing.Size(95, 22);
+            this.bunifuLabel1.TabIndex = 17;
+            this.bunifuLabel1.Text = "(@, $, #, _)";
+            this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // lblEspecificaciones
+            // 
+            this.lblEspecificaciones.AllowParentOverrides = false;
+            this.lblEspecificaciones.AutoEllipsis = false;
+            this.lblEspecificaciones.Cursor = System.Windows.Forms.Cursors.Default;
+            this.lblEspecificaciones.CursorType = System.Windows.Forms.Cursors.Default;
+            this.lblEspecificaciones.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEspecificaciones.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(86)))), ((int)(((byte)(100)))));
+            this.lblEspecificaciones.Location = new System.Drawing.Point(600, 180);
+            this.lblEspecificaciones.Name = "lblEspecificaciones";
+            this.lblEspecificaciones.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblEspecificaciones.Size = new System.Drawing.Size(356, 22);
+            this.lblEspecificaciones.TabIndex = 16;
+            this.lblEspecificaciones.Text = "- Debe contener carácteres especiales";
+            this.lblEspecificaciones.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lblEspecificaciones.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // lblRequisitos
+            // 
+            this.lblRequisitos.AllowParentOverrides = false;
+            this.lblRequisitos.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblRequisitos.AutoEllipsis = false;
+            this.lblRequisitos.Cursor = System.Windows.Forms.Cursors.Default;
+            this.lblRequisitos.CursorType = System.Windows.Forms.Cursors.Default;
+            this.lblRequisitos.Font = new System.Drawing.Font("Century Gothic", 20.25F);
+            this.lblRequisitos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(86)))), ((int)(((byte)(100)))));
+            this.lblRequisitos.Location = new System.Drawing.Point(717, 125);
+            this.lblRequisitos.Name = "lblRequisitos";
+            this.lblRequisitos.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblRequisitos.Size = new System.Drawing.Size(135, 33);
+            this.lblRequisitos.TabIndex = 14;
+            this.lblRequisitos.Text = "Requisitos:";
+            this.lblRequisitos.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lblRequisitos.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // bunifuShadowPanel2
             // 
@@ -467,7 +570,6 @@
             this.menuStrip1.Size = new System.Drawing.Size(995, 27);
             this.menuStrip1.TabIndex = 13;
             this.menuStrip1.Text = "menuStrip1";
-            this.menuStrip1.Visible = false;
             // 
             // txtUsuarioID
             // 
@@ -522,109 +624,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(995, 461);
             this.panel1.TabIndex = 3;
-            // 
-            // lblRequisitos
-            // 
-            this.lblRequisitos.AllowParentOverrides = false;
-            this.lblRequisitos.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblRequisitos.AutoEllipsis = false;
-            this.lblRequisitos.Cursor = System.Windows.Forms.Cursors.Default;
-            this.lblRequisitos.CursorType = System.Windows.Forms.Cursors.Default;
-            this.lblRequisitos.Font = new System.Drawing.Font("Century Gothic", 20.25F);
-            this.lblRequisitos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(86)))), ((int)(((byte)(100)))));
-            this.lblRequisitos.Location = new System.Drawing.Point(717, 125);
-            this.lblRequisitos.Name = "lblRequisitos";
-            this.lblRequisitos.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblRequisitos.Size = new System.Drawing.Size(135, 33);
-            this.lblRequisitos.TabIndex = 14;
-            this.lblRequisitos.Text = "Requisitos:";
-            this.lblRequisitos.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.lblRequisitos.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // lblEspecificaciones
-            // 
-            this.lblEspecificaciones.AllowParentOverrides = false;
-            this.lblEspecificaciones.AutoEllipsis = false;
-            this.lblEspecificaciones.Cursor = System.Windows.Forms.Cursors.Default;
-            this.lblEspecificaciones.CursorType = System.Windows.Forms.Cursors.Default;
-            this.lblEspecificaciones.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEspecificaciones.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(86)))), ((int)(((byte)(100)))));
-            this.lblEspecificaciones.Location = new System.Drawing.Point(600, 180);
-            this.lblEspecificaciones.Name = "lblEspecificaciones";
-            this.lblEspecificaciones.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblEspecificaciones.Size = new System.Drawing.Size(356, 22);
-            this.lblEspecificaciones.TabIndex = 16;
-            this.lblEspecificaciones.Text = "- Debe contener carácteres especiales";
-            this.lblEspecificaciones.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.lblEspecificaciones.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // bunifuLabel1
-            // 
-            this.bunifuLabel1.AllowParentOverrides = false;
-            this.bunifuLabel1.AutoEllipsis = false;
-            this.bunifuLabel1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel1.CursorType = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuLabel1.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.bunifuLabel1.Location = new System.Drawing.Point(729, 208);
-            this.bunifuLabel1.Name = "bunifuLabel1";
-            this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel1.Size = new System.Drawing.Size(95, 22);
-            this.bunifuLabel1.TabIndex = 17;
-            this.bunifuLabel1.Text = "(@, $, #, _)";
-            this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // bunifuLabel2
-            // 
-            this.bunifuLabel2.AllowParentOverrides = false;
-            this.bunifuLabel2.AutoEllipsis = false;
-            this.bunifuLabel2.Cursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel2.CursorType = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(86)))), ((int)(((byte)(100)))));
-            this.bunifuLabel2.Location = new System.Drawing.Point(600, 238);
-            this.bunifuLabel2.Name = "bunifuLabel2";
-            this.bunifuLabel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel2.Size = new System.Drawing.Size(340, 22);
-            this.bunifuLabel2.TabIndex = 18;
-            this.bunifuLabel2.Text = "- Debe contener un número (mínimo)";
-            this.bunifuLabel2.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel2.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // bunifuLabel3
-            // 
-            this.bunifuLabel3.AllowParentOverrides = false;
-            this.bunifuLabel3.AutoEllipsis = false;
-            this.bunifuLabel3.Cursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel3.CursorType = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(86)))), ((int)(((byte)(100)))));
-            this.bunifuLabel3.Location = new System.Drawing.Point(600, 263);
-            this.bunifuLabel3.Name = "bunifuLabel3";
-            this.bunifuLabel3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel3.Size = new System.Drawing.Size(207, 22);
-            this.bunifuLabel3.TabIndex = 19;
-            this.bunifuLabel3.Text = "- Mínimo 12 carácteres";
-            this.bunifuLabel3.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel3.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // bunifuLabel4
-            // 
-            this.bunifuLabel4.AllowParentOverrides = false;
-            this.bunifuLabel4.AutoEllipsis = false;
-            this.bunifuLabel4.Cursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel4.CursorType = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel4.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(86)))), ((int)(((byte)(100)))));
-            this.bunifuLabel4.Location = new System.Drawing.Point(600, 298);
-            this.bunifuLabel4.Name = "bunifuLabel4";
-            this.bunifuLabel4.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel4.Size = new System.Drawing.Size(383, 22);
-            this.bunifuLabel4.TabIndex = 20;
-            this.bunifuLabel4.Text = "- Debe contener mayúsculas y minúsculas";
-            this.bunifuLabel4.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel4.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // ActualizarContraseñaForm
             // 

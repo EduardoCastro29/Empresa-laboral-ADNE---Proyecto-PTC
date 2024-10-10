@@ -81,5 +81,35 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                 }
             }
         }
+
+        public bool ActualizarContraseñaConfiguracion()
+        {
+            try
+            {
+                Conexion.Connection = Conectar();
+
+                string comandoSQL = "UPDATE Usuario SET contraseña = @contraseña WHERE nombreUsuario = @nombreUsuario";
+
+                SqlCommand ObjComandoSQLServer = new SqlCommand(comandoSQL, Conexion.Connection);
+
+                ObjComandoSQLServer.Parameters.AddWithValue("@contraseña", Contrasena);
+                ObjComandoSQLServer.Parameters.AddWithValue("@nombreUsuario", NombreUsuario1);
+
+                ObjComandoSQLServer.ExecuteNonQuery();
+
+                if (ObjComandoSQLServer.ExecuteNonQuery() > 0)
+                    return true;
+                else return false;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Ha ocurrido un error, ERR-003-1 - Error al actualizar la contraseña. [Consulte el Manual Técnico]", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            finally
+            {
+                Conexion.Connection.Close();
+            }
+        }
     }
 }

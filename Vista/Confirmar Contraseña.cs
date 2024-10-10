@@ -17,6 +17,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Vista
         {
             InitializeComponent();
             CTRLConfirmarContraseña objConfirmarContrasena = new CTRLConfirmarContraseña(this);
+            
         }
     }
 }

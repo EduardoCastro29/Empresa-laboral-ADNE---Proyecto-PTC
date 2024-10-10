@@ -34,6 +34,10 @@
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties9 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties10 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties11 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties12 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties5 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties6 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties7 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
@@ -44,6 +48,7 @@
             this.txtConfirmarContra = new Bunifu.UI.WinForms.BunifuTextBox();
             this.lblNuevaContrasena = new Bunifu.UI.WinForms.BunifuLabel();
             this.txtNuevaContra = new Bunifu.UI.WinForms.BunifuTextBox();
+            this.txtUsuarioID = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bunifuPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,6 +64,7 @@
             this.bunifuPanel1.Controls.Add(this.bunifuLabel1);
             this.bunifuPanel1.Controls.Add(this.txtConfirmarContra);
             this.bunifuPanel1.Controls.Add(this.lblNuevaContrasena);
+            this.bunifuPanel1.Controls.Add(this.txtUsuarioID);
             this.bunifuPanel1.Controls.Add(this.txtNuevaContra);
             this.bunifuPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bunifuPanel1.Location = new System.Drawing.Point(10, 10);
@@ -310,26 +316,26 @@
             this.txtNuevaContra.Modified = false;
             this.txtNuevaContra.Multiline = false;
             this.txtNuevaContra.Name = "txtNuevaContra";
-            stateProperties5.BorderColor = System.Drawing.Color.LightSeaGreen;
-            stateProperties5.FillColor = System.Drawing.Color.Empty;
-            stateProperties5.ForeColor = System.Drawing.Color.Empty;
-            stateProperties5.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtNuevaContra.OnActiveState = stateProperties5;
-            stateProperties6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            stateProperties6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties6.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.txtNuevaContra.OnDisabledState = stateProperties6;
-            stateProperties7.BorderColor = System.Drawing.Color.MediumTurquoise;
-            stateProperties7.FillColor = System.Drawing.Color.Empty;
-            stateProperties7.ForeColor = System.Drawing.Color.Empty;
-            stateProperties7.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtNuevaContra.OnHoverState = stateProperties7;
-            stateProperties8.BorderColor = System.Drawing.Color.Silver;
-            stateProperties8.FillColor = System.Drawing.Color.White;
-            stateProperties8.ForeColor = System.Drawing.Color.Empty;
-            stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtNuevaContra.OnIdleState = stateProperties8;
+            stateProperties9.BorderColor = System.Drawing.Color.LightSeaGreen;
+            stateProperties9.FillColor = System.Drawing.Color.Empty;
+            stateProperties9.ForeColor = System.Drawing.Color.Empty;
+            stateProperties9.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtNuevaContra.OnActiveState = stateProperties9;
+            stateProperties10.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties10.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties10.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.txtNuevaContra.OnDisabledState = stateProperties10;
+            stateProperties11.BorderColor = System.Drawing.Color.MediumTurquoise;
+            stateProperties11.FillColor = System.Drawing.Color.Empty;
+            stateProperties11.ForeColor = System.Drawing.Color.Empty;
+            stateProperties11.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtNuevaContra.OnHoverState = stateProperties11;
+            stateProperties12.BorderColor = System.Drawing.Color.Silver;
+            stateProperties12.FillColor = System.Drawing.Color.White;
+            stateProperties12.ForeColor = System.Drawing.Color.Empty;
+            stateProperties12.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtNuevaContra.OnIdleState = stateProperties12;
             this.txtNuevaContra.Padding = new System.Windows.Forms.Padding(3);
             this.txtNuevaContra.PasswordChar = '\0';
             this.txtNuevaContra.PlaceholderForeColor = System.Drawing.Color.Gray;
@@ -350,6 +356,84 @@
             this.txtNuevaContra.TextPlaceholder = "";
             this.txtNuevaContra.UseSystemPasswordChar = false;
             this.txtNuevaContra.WordWrap = true;
+            // 
+            // txtUsuarioID
+            // 
+            this.txtUsuarioID.AcceptsReturn = false;
+            this.txtUsuarioID.AcceptsTab = false;
+            this.txtUsuarioID.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtUsuarioID.AnimationSpeed = 200;
+            this.txtUsuarioID.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.txtUsuarioID.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.txtUsuarioID.AutoSizeHeight = true;
+            this.txtUsuarioID.BackColor = System.Drawing.Color.Transparent;
+            this.txtUsuarioID.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txtUsuarioID.BackgroundImage")));
+            this.txtUsuarioID.BorderColorActive = System.Drawing.Color.LightSeaGreen;
+            this.txtUsuarioID.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.txtUsuarioID.BorderColorHover = System.Drawing.Color.MediumTurquoise;
+            this.txtUsuarioID.BorderColorIdle = System.Drawing.Color.Silver;
+            this.txtUsuarioID.BorderRadius = 7;
+            this.txtUsuarioID.BorderThickness = 1;
+            this.txtUsuarioID.CharacterCase = Bunifu.UI.WinForms.BunifuTextBox.CharacterCases.Normal;
+            this.txtUsuarioID.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.txtUsuarioID.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtUsuarioID.DefaultFont = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsuarioID.DefaultText = "";
+            this.txtUsuarioID.FillColor = System.Drawing.Color.White;
+            this.txtUsuarioID.HideSelection = true;
+            this.txtUsuarioID.IconLeft = null;
+            this.txtUsuarioID.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtUsuarioID.IconPadding = 10;
+            this.txtUsuarioID.IconRight = null;
+            this.txtUsuarioID.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtUsuarioID.Lines = new string[0];
+            this.txtUsuarioID.Location = new System.Drawing.Point(3, 0);
+            this.txtUsuarioID.MaxLength = 64;
+            this.txtUsuarioID.MinimumSize = new System.Drawing.Size(1, 1);
+            this.txtUsuarioID.Modified = false;
+            this.txtUsuarioID.Multiline = false;
+            this.txtUsuarioID.Name = "txtUsuarioID";
+            stateProperties5.BorderColor = System.Drawing.Color.LightSeaGreen;
+            stateProperties5.FillColor = System.Drawing.Color.Empty;
+            stateProperties5.ForeColor = System.Drawing.Color.Empty;
+            stateProperties5.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtUsuarioID.OnActiveState = stateProperties5;
+            stateProperties6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties6.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.txtUsuarioID.OnDisabledState = stateProperties6;
+            stateProperties7.BorderColor = System.Drawing.Color.MediumTurquoise;
+            stateProperties7.FillColor = System.Drawing.Color.Empty;
+            stateProperties7.ForeColor = System.Drawing.Color.Empty;
+            stateProperties7.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtUsuarioID.OnHoverState = stateProperties7;
+            stateProperties8.BorderColor = System.Drawing.Color.Silver;
+            stateProperties8.FillColor = System.Drawing.Color.White;
+            stateProperties8.ForeColor = System.Drawing.Color.Empty;
+            stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtUsuarioID.OnIdleState = stateProperties8;
+            this.txtUsuarioID.Padding = new System.Windows.Forms.Padding(3);
+            this.txtUsuarioID.PasswordChar = '\0';
+            this.txtUsuarioID.PlaceholderForeColor = System.Drawing.Color.Gray;
+            this.txtUsuarioID.PlaceholderText = "";
+            this.txtUsuarioID.ReadOnly = false;
+            this.txtUsuarioID.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtUsuarioID.SelectedText = "";
+            this.txtUsuarioID.SelectionLength = 0;
+            this.txtUsuarioID.SelectionStart = 0;
+            this.txtUsuarioID.ShortcutsEnabled = false;
+            this.txtUsuarioID.Size = new System.Drawing.Size(113, 41);
+            this.txtUsuarioID.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
+            this.txtUsuarioID.TabIndex = 0;
+            this.txtUsuarioID.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtUsuarioID.TextMarginBottom = 0;
+            this.txtUsuarioID.TextMarginLeft = 3;
+            this.txtUsuarioID.TextMarginTop = 1;
+            this.txtUsuarioID.TextPlaceholder = "";
+            this.txtUsuarioID.UseSystemPasswordChar = false;
+            this.txtUsuarioID.WordWrap = true;
             // 
             // Actualizar_contraseña
             // 
@@ -377,5 +461,6 @@
         public Bunifu.UI.WinForms.BunifuLabel lblNuevaContrasena;
         public Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
         public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnGuardar;
+        public Bunifu.UI.WinForms.BunifuTextBox txtUsuarioID;
     }
 }

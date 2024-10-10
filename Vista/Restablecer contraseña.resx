@@ -183,6 +183,17 @@
   <data name="lblNuevaContrasena.BaseStylesheet" xml:space="preserve">
     <value>#bunifu-label { padding: 0px; font-family: 'Century Gothic'; font-size: 14.25pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(245, 245, 245); text-align: left; }</value>
   </data>
+  <data name="txtUsuarioID.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAHEAAAApCAYAAAACo8ZKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAE0SURBVHhe7dw9SsVAFIbhKS0tXYJLchPuwJVYuw7zNyGl
+        RQojBCGYSgkhBgwYQpy5DsjFDWQ+3gdOk5nuhelODMQkSXJTluVTmqY7c8zxfbIsu3OtLkK2P+7wsa7r
+        aRzHHcfl+7Rtu7heL2ch8zy/bZrmM9xDBPq+/3YhH0JCY6y1r/M8h2PEYF3X3T2rXyGhMf6tRXx8t5CQ
+        iLEiogAiCiCiACIKIKIAIgogogAiCiCiACIKIKIAIgogogAiCiCiACIKIKIAIgogogAiCiCiACIKIKIA
+        IgogogAiCiCiACIKIKKAs4hFUXwsyxKOEINt2/x+4hoSnla977uuW8M5IuDXvv3+fkh4+uHCpfvwNgxD
+        uIIjm6Zpr6rq3XW7Dgl/uQ9XLmTl31nm2GOtff4XEDEz5gdJS2bNWBCyOgAAAABJRU5ErkJggg==
+</value>
+  </data>
   <data name="txtNuevaContra.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAARwAAAApCAYAAADnNJZKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8

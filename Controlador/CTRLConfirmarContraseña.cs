@@ -17,6 +17,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
         {
             ObjConfirmarContrasenaForm = Vista;
             ObjConfirmarContrasenaForm.btnConfirmar.Click += new EventHandler(ConfirmarContra);
+            ObjConfirmarContrasenaForm.btnConfirmarRestablecer.Click += new EventHandler(ConfirmarContraseña);
         }
         public void ConfirmarContra(object sender, EventArgs e)
         {
@@ -50,6 +51,25 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                     break;
                 default:
                     break;
+            }
+        }
+
+        public void ConfirmarContraseña(object sender, EventArgs e )
+        {
+            CommonMethods ObjMetodosComunes = new CommonMethods();
+            string ConfirmarContraseña = ObjMetodosComunes.MetodoEncriptacionAES(ObjConfirmarContrasenaForm.txtConfirmarContra.Text);
+
+            if (InicioSesion.Contraseña != ConfirmarContraseña)
+            {
+                MessageBox.Show("La contraseña no coincide, intentelo denuevo", "Confirmar Contraseña", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                //Instanciamos a al formulario de cambiar contraseña
+                Actualizar_contraseña ObjActualizarContraseña = new Actualizar_contraseña();
+                //Abrimos el formulario
+                ObjActualizarContraseña.ShowDialog();
+                ObjConfirmarContrasenaForm.Hide();
             }
         }
     }

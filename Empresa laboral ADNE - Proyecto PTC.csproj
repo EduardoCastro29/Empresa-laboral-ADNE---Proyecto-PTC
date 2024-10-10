@@ -117,6 +117,7 @@
     <Compile Include="Controlador\Controlador UC Calendario\CTRLUCDias.cs" />
     <Compile Include="Controlador\Controlador UC Pacientes\CTRLPacienteUC.cs" />
     <Compile Include="Controlador\CTRLAgregarConexion.cs" />
+    <Compile Include="Controlador\CTRLCambiarContraseña.cs" />
     <Compile Include="Controlador\CTRLConfiguracionUsuario.cs" />
     <Compile Include="Controlador\CTRLConfirmarContraseña.cs" />
     <Compile Include="Controlador\CTRLInformacionEncargado.cs" />

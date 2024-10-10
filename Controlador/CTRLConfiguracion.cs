@@ -32,6 +32,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             ObjConfiguracionForm.btnAgregarConfiguracion.Click += new EventHandler(AbrirConfiguracionServidor);
             ObjConfiguracionForm.switchModo.CheckedChanged += new EventHandler(modoOscuro);
             ObjConfiguracionForm.switchModo.Click += new EventHandler(cambioModo);
+            ObjConfiguracionForm.btnRestablecerContrasena.Click += new EventHandler(RestablecerContraseña);
             //ObjConfiguracionForm.btnNuevaContrasena.Click += new EventHandler(cambiarContrasena);
         }
         #region Eventos iniciales al cargar el Formulario
@@ -73,6 +74,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
         private void AbrirConfiguracionServidor(object sender, EventArgs e)
         {
             ConfirmarContraseñaForm ConfirmarContrasenaForm = new ConfirmarContraseñaForm();
+            ConfirmarContrasenaForm.btnConfirmarRestablecer.Visible = false;
             ConfirmarContrasenaForm.ShowDialog();
         }
         #endregion
@@ -130,6 +132,14 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             }
         }
         #endregion
+        
+        private void RestablecerContraseña( object sender, EventArgs e )
+        {
+            ConfirmarContraseñaForm ObjFormConfirmarContraseña = new ConfirmarContraseñaForm();
+            ObjFormConfirmarContraseña.btnConfirmar.Visible = false;
+            ObjFormConfirmarContraseña.ShowDialog();
+
+        }
         //Creamos el método para instanciar la lectura del archivo ini desde la clase Config.cs
         private void modoOscuro(object sender, EventArgs e)
         {

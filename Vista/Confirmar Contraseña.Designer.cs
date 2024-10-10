@@ -29,15 +29,17 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConfirmarContraseñaForm));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
             this.btnConfirmar = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.txtConfirmarContra = new Bunifu.UI.WinForms.BunifuTextBox();
+            this.btnConfirmarRestablecer = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.bunifuPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,6 +51,7 @@
             this.bunifuPanel1.BorderColor = System.Drawing.Color.Transparent;
             this.bunifuPanel1.BorderRadius = 5;
             this.bunifuPanel1.BorderThickness = 1;
+            this.bunifuPanel1.Controls.Add(this.btnConfirmarRestablecer);
             this.bunifuPanel1.Controls.Add(this.btnConfirmar);
             this.bunifuPanel1.Controls.Add(this.bunifuLabel1);
             this.bunifuPanel1.Controls.Add(this.txtConfirmarContra);
@@ -79,11 +82,11 @@
             this.btnConfirmar.ColorContrastOnClick = 45;
             this.btnConfirmar.ColorContrastOnHover = 45;
             this.btnConfirmar.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges1.BottomLeft = true;
-            borderEdges1.BottomRight = true;
-            borderEdges1.TopLeft = true;
-            borderEdges1.TopRight = true;
-            this.btnConfirmar.CustomizableEdges = borderEdges1;
+            borderEdges2.BottomLeft = true;
+            borderEdges2.BottomRight = true;
+            borderEdges2.TopLeft = true;
+            borderEdges2.TopRight = true;
+            this.btnConfirmar.CustomizableEdges = borderEdges2;
             this.btnConfirmar.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnConfirmar.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnConfirmar.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -245,6 +248,96 @@
             this.txtConfirmarContra.UseSystemPasswordChar = false;
             this.txtConfirmarContra.WordWrap = true;
             // 
+            // btnConfirmarRestablecer
+            // 
+            this.btnConfirmarRestablecer.AllowAnimations = true;
+            this.btnConfirmarRestablecer.AllowMouseEffects = true;
+            this.btnConfirmarRestablecer.AllowToggling = false;
+            this.btnConfirmarRestablecer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnConfirmarRestablecer.AnimationSpeed = 200;
+            this.btnConfirmarRestablecer.AutoGenerateColors = false;
+            this.btnConfirmarRestablecer.AutoRoundBorders = false;
+            this.btnConfirmarRestablecer.AutoSizeLeftIcon = true;
+            this.btnConfirmarRestablecer.AutoSizeRightIcon = true;
+            this.btnConfirmarRestablecer.BackColor = System.Drawing.Color.Transparent;
+            this.btnConfirmarRestablecer.BackColor1 = System.Drawing.Color.MediumTurquoise;
+            this.btnConfirmarRestablecer.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnConfirmarRestablecer.BackgroundImage")));
+            this.btnConfirmarRestablecer.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btnConfirmarRestablecer.ButtonText = "Confirmar";
+            this.btnConfirmarRestablecer.ButtonTextMarginLeft = 0;
+            this.btnConfirmarRestablecer.ColorContrastOnClick = 45;
+            this.btnConfirmarRestablecer.ColorContrastOnHover = 45;
+            this.btnConfirmarRestablecer.Cursor = System.Windows.Forms.Cursors.Hand;
+            borderEdges1.BottomLeft = true;
+            borderEdges1.BottomRight = true;
+            borderEdges1.TopLeft = true;
+            borderEdges1.TopRight = true;
+            this.btnConfirmarRestablecer.CustomizableEdges = borderEdges1;
+            this.btnConfirmarRestablecer.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnConfirmarRestablecer.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btnConfirmarRestablecer.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btnConfirmarRestablecer.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btnConfirmarRestablecer.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
+            this.btnConfirmarRestablecer.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConfirmarRestablecer.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnConfirmarRestablecer.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnConfirmarRestablecer.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.btnConfirmarRestablecer.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
+            this.btnConfirmarRestablecer.IconMarginLeft = 11;
+            this.btnConfirmarRestablecer.IconPadding = 10;
+            this.btnConfirmarRestablecer.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnConfirmarRestablecer.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.btnConfirmarRestablecer.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
+            this.btnConfirmarRestablecer.IconSize = 25;
+            this.btnConfirmarRestablecer.IdleBorderColor = System.Drawing.Color.DarkCyan;
+            this.btnConfirmarRestablecer.IdleBorderRadius = 15;
+            this.btnConfirmarRestablecer.IdleBorderThickness = 1;
+            this.btnConfirmarRestablecer.IdleFillColor = System.Drawing.Color.MediumTurquoise;
+            this.btnConfirmarRestablecer.IdleIconLeftImage = null;
+            this.btnConfirmarRestablecer.IdleIconRightImage = null;
+            this.btnConfirmarRestablecer.IndicateFocus = false;
+            this.btnConfirmarRestablecer.Location = new System.Drawing.Point(375, 193);
+            this.btnConfirmarRestablecer.Name = "btnConfirmarRestablecer";
+            this.btnConfirmarRestablecer.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btnConfirmarRestablecer.OnDisabledState.BorderRadius = 15;
+            this.btnConfirmarRestablecer.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btnConfirmarRestablecer.OnDisabledState.BorderThickness = 1;
+            this.btnConfirmarRestablecer.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btnConfirmarRestablecer.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btnConfirmarRestablecer.OnDisabledState.IconLeftImage = null;
+            this.btnConfirmarRestablecer.OnDisabledState.IconRightImage = null;
+            this.btnConfirmarRestablecer.onHoverState.BorderColor = System.Drawing.Color.Transparent;
+            this.btnConfirmarRestablecer.onHoverState.BorderRadius = 15;
+            this.btnConfirmarRestablecer.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btnConfirmarRestablecer.onHoverState.BorderThickness = 1;
+            this.btnConfirmarRestablecer.onHoverState.FillColor = System.Drawing.Color.Turquoise;
+            this.btnConfirmarRestablecer.onHoverState.ForeColor = System.Drawing.Color.White;
+            this.btnConfirmarRestablecer.onHoverState.IconLeftImage = null;
+            this.btnConfirmarRestablecer.onHoverState.IconRightImage = null;
+            this.btnConfirmarRestablecer.OnIdleState.BorderColor = System.Drawing.Color.DarkCyan;
+            this.btnConfirmarRestablecer.OnIdleState.BorderRadius = 15;
+            this.btnConfirmarRestablecer.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btnConfirmarRestablecer.OnIdleState.BorderThickness = 1;
+            this.btnConfirmarRestablecer.OnIdleState.FillColor = System.Drawing.Color.MediumTurquoise;
+            this.btnConfirmarRestablecer.OnIdleState.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnConfirmarRestablecer.OnIdleState.IconLeftImage = null;
+            this.btnConfirmarRestablecer.OnIdleState.IconRightImage = null;
+            this.btnConfirmarRestablecer.OnPressedState.BorderColor = System.Drawing.Color.Transparent;
+            this.btnConfirmarRestablecer.OnPressedState.BorderRadius = 15;
+            this.btnConfirmarRestablecer.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btnConfirmarRestablecer.OnPressedState.BorderThickness = 1;
+            this.btnConfirmarRestablecer.OnPressedState.FillColor = System.Drawing.Color.LightSeaGreen;
+            this.btnConfirmarRestablecer.OnPressedState.ForeColor = System.Drawing.Color.White;
+            this.btnConfirmarRestablecer.OnPressedState.IconLeftImage = null;
+            this.btnConfirmarRestablecer.OnPressedState.IconRightImage = null;
+            this.btnConfirmarRestablecer.Size = new System.Drawing.Size(160, 44);
+            this.btnConfirmarRestablecer.TabIndex = 7;
+            this.btnConfirmarRestablecer.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnConfirmarRestablecer.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnConfirmarRestablecer.TextMarginLeft = 0;
+            this.btnConfirmarRestablecer.TextPadding = new System.Windows.Forms.Padding(0);
+            this.btnConfirmarRestablecer.UseDefaultRadiusAndThickness = true;
+            // 
             // ConfirmarContraseñaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -269,5 +362,6 @@
         public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnConfirmar;
         public Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
         public Bunifu.UI.WinForms.BunifuTextBox txtConfirmarContra;
+        public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnConfirmarRestablecer;
     }
 }
