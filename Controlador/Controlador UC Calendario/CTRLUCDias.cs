@@ -44,7 +44,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador.Controlador_UC_Calenda
         {
             ObjUCDIAS.lblDias.Text = numDia + "";
         }
-        //Cambio de color cuando el cursor se encuentra sobre el User control
         public void HoverUC(object sender, EventArgs e)
         {
             ObjUCDIAS.lblDias.BackColor = Color.FromArgb(135, 224, 210);

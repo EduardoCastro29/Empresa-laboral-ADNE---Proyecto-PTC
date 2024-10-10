@@ -36,10 +36,5 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Vista
                 this.lblDias.BackColor = Color.FromArgb(2, 135, 135);
             }
         }
-
-        private void UCDias_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

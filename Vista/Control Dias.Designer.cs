@@ -148,7 +148,6 @@
             this.Name = "UCDias";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Size = new System.Drawing.Size(133, 85);
-            this.Load += new System.EventHandler(this.UCDias_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

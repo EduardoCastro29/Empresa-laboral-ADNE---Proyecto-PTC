@@ -1574,7 +1574,7 @@
             this.pnlSombraFormulario.PanelColor2 = System.Drawing.Color.Transparent;
             this.pnlSombraFormulario.ShadowColor = System.Drawing.Color.Black;
             this.pnlSombraFormulario.ShadowDept = 2;
-            this.pnlSombraFormulario.ShadowDepth = 250;
+            this.pnlSombraFormulario.ShadowDepth = 30;
             this.pnlSombraFormulario.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Surrounded;
             this.pnlSombraFormulario.ShadowTopLeftVisible = false;
             this.pnlSombraFormulario.Size = new System.Drawing.Size(991, 707);

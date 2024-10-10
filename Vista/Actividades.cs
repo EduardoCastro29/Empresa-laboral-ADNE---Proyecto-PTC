@@ -51,6 +51,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Vista
                 this.pnlCitas.BorderColor = Color.Transparent;
 
                 this.pnlGrafico.BackgroundColor = Color.FromArgb(30, 115, 120);
+                this.GraficoCitas.ChartAreas[0].BackColor = Color.FromArgb(30, 115, 120);
                 this.GraficoCitas.Legends[0].ForeColor = Color.White;
                 this.GraficoCitas.Legends[0].BackColor = Color.Transparent;
                 this.GraficoCitas.ChartAreas[0].AxisY.LabelStyle.ForeColor = Color.White;

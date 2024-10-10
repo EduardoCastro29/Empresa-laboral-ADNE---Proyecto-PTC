@@ -36,6 +36,7 @@
             this.pnlForms = new Bunifu.UI.WinForms.BunifuGradientPanel();
             this.pnlSombraPanelVerPaciente = new Bunifu.UI.WinForms.BunifuShadowPanel();
             this.bunifuPanel3 = new Bunifu.UI.WinForms.BunifuPanel();
+            this.bunifuPictureBox3 = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.bunifuPictureBox2 = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.bunifuShadowPanel3 = new Bunifu.UI.WinForms.BunifuShadowPanel();
             this.pnlGradienteBoton2 = new Bunifu.UI.WinForms.BunifuGradientPanel();
@@ -46,12 +47,12 @@
             this.pnlSombraPanelNuevoPaciente = new Bunifu.UI.WinForms.BunifuShadowPanel();
             this.bunifuPanel2 = new Bunifu.UI.WinForms.BunifuPanel();
             this.bunifuPictureBox1 = new Bunifu.UI.WinForms.BunifuPictureBox();
-            this.bunifuPictureBox3 = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.pnlFondo.SuspendLayout();
             this.pnlSombraFondo.SuspendLayout();
             this.pnlForms.SuspendLayout();
             this.pnlSombraPanelVerPaciente.SuspendLayout();
             this.bunifuPanel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox2)).BeginInit();
             this.bunifuShadowPanel3.SuspendLayout();
             this.pnlGradienteBoton2.SuspendLayout();
@@ -60,7 +61,6 @@
             this.pnlSombraPanelNuevoPaciente.SuspendLayout();
             this.bunifuPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlFondo
@@ -96,7 +96,7 @@
             this.pnlSombraFondo.PanelColor2 = System.Drawing.Color.Transparent;
             this.pnlSombraFondo.ShadowColor = System.Drawing.Color.Black;
             this.pnlSombraFondo.ShadowDept = 2;
-            this.pnlSombraFondo.ShadowDepth = 250;
+            this.pnlSombraFondo.ShadowDepth = 20;
             this.pnlSombraFondo.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Surrounded;
             this.pnlSombraFondo.ShadowTopLeftVisible = false;
             this.pnlSombraFondo.Size = new System.Drawing.Size(991, 707);
@@ -165,6 +165,22 @@
             this.bunifuPanel3.ShowBorders = true;
             this.bunifuPanel3.Size = new System.Drawing.Size(369, 455);
             this.bunifuPanel3.TabIndex = 1;
+            // 
+            // bunifuPictureBox3
+            // 
+            this.bunifuPictureBox3.AllowFocused = false;
+            this.bunifuPictureBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bunifuPictureBox3.AutoSizeHeight = true;
+            this.bunifuPictureBox3.BorderRadius = 0;
+            this.bunifuPictureBox3.Image = global::Empresa_laboral_ADNE___Proyecto_PTC.Properties.Resources.Ver_pacientes;
+            this.bunifuPictureBox3.IsCircle = true;
+            this.bunifuPictureBox3.Location = new System.Drawing.Point(19, 62);
+            this.bunifuPictureBox3.Name = "bunifuPictureBox3";
+            this.bunifuPictureBox3.Size = new System.Drawing.Size(330, 330);
+            this.bunifuPictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuPictureBox3.TabIndex = 2;
+            this.bunifuPictureBox3.TabStop = false;
+            this.bunifuPictureBox3.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Square;
             // 
             // bunifuPictureBox2
             // 
@@ -500,22 +516,6 @@
             this.bunifuPictureBox1.TabStop = false;
             this.bunifuPictureBox1.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Square;
             // 
-            // bunifuPictureBox3
-            // 
-            this.bunifuPictureBox3.AllowFocused = false;
-            this.bunifuPictureBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.bunifuPictureBox3.AutoSizeHeight = true;
-            this.bunifuPictureBox3.BorderRadius = 0;
-            this.bunifuPictureBox3.Image = global::Empresa_laboral_ADNE___Proyecto_PTC.Properties.Resources.Ver_pacientes;
-            this.bunifuPictureBox3.IsCircle = true;
-            this.bunifuPictureBox3.Location = new System.Drawing.Point(19, 62);
-            this.bunifuPictureBox3.Name = "bunifuPictureBox3";
-            this.bunifuPictureBox3.Size = new System.Drawing.Size(330, 330);
-            this.bunifuPictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bunifuPictureBox3.TabIndex = 2;
-            this.bunifuPictureBox3.TabStop = false;
-            this.bunifuPictureBox3.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Square;
-            // 
             // PacientesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -533,6 +533,7 @@
             this.pnlForms.ResumeLayout(false);
             this.pnlSombraPanelVerPaciente.ResumeLayout(false);
             this.bunifuPanel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox2)).EndInit();
             this.bunifuShadowPanel3.ResumeLayout(false);
             this.pnlGradienteBoton2.ResumeLayout(false);
@@ -541,7 +542,6 @@
             this.pnlSombraPanelNuevoPaciente.ResumeLayout(false);
             this.bunifuPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox3)).EndInit();
             this.ResumeLayout(false);
 
         }
