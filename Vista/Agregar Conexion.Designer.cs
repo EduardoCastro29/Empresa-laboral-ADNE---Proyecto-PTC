@@ -56,8 +56,8 @@
             this.bunifuLabel6 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel5 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel4 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.rbDesabilitar = new Bunifu.UI.WinForms.BunifuRadioButton();
             this.rbHabilitar = new Bunifu.UI.WinForms.BunifuRadioButton();
+            this.rbDesabilitar = new Bunifu.UI.WinForms.BunifuRadioButton();
             this.btnGuardar = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.pnlAutenticacion = new Bunifu.UI.WinForms.BunifuPanel();
             this.bunifuLabel3 = new Bunifu.UI.WinForms.BunifuLabel();
@@ -191,7 +191,7 @@
             this.lblBaseDeDatos.Location = new System.Drawing.Point(32, 132);
             this.lblBaseDeDatos.Name = "lblBaseDeDatos";
             this.lblBaseDeDatos.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblBaseDeDatos.Size = new System.Drawing.Size(231, 40);
+            this.lblBaseDeDatos.Size = new System.Drawing.Size(131, 22);
             this.lblBaseDeDatos.TabIndex = 2;
             this.lblBaseDeDatos.Text = "Base de Datos";
             this.lblBaseDeDatos.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -257,7 +257,7 @@
             this.txtServidorURL.Padding = new System.Windows.Forms.Padding(3);
             this.txtServidorURL.PasswordChar = '\0';
             this.txtServidorURL.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txtServidorURL.PlaceholderText = "Servidor ASP";
+            this.txtServidorURL.PlaceholderText = "Servidor Smarter.ASP";
             this.txtServidorURL.ReadOnly = false;
             this.txtServidorURL.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtServidorURL.SelectedText = "";
@@ -271,7 +271,7 @@
             this.txtServidorURL.TextMarginBottom = 0;
             this.txtServidorURL.TextMarginLeft = 3;
             this.txtServidorURL.TextMarginTop = 1;
-            this.txtServidorURL.TextPlaceholder = "Servidor ASP";
+            this.txtServidorURL.TextPlaceholder = "Servidor Smarter.ASP";
             this.txtServidorURL.UseSystemPasswordChar = false;
             this.txtServidorURL.WordWrap = true;
             // 
@@ -285,7 +285,7 @@
             this.lblServidorURL.Location = new System.Drawing.Point(32, 41);
             this.lblServidorURL.Name = "lblServidorURL";
             this.lblServidorURL.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblServidorURL.Size = new System.Drawing.Size(193, 40);
+            this.lblServidorURL.Size = new System.Drawing.Size(112, 22);
             this.lblServidorURL.TabIndex = 0;
             this.lblServidorURL.Text = "Servidor URL";
             this.lblServidorURL.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -304,8 +304,8 @@
             this.bunifuPanel2.Controls.Add(this.bunifuLabel6);
             this.bunifuPanel2.Controls.Add(this.bunifuLabel5);
             this.bunifuPanel2.Controls.Add(this.bunifuLabel4);
-            this.bunifuPanel2.Controls.Add(this.rbDesabilitar);
             this.bunifuPanel2.Controls.Add(this.rbHabilitar);
+            this.bunifuPanel2.Controls.Add(this.rbDesabilitar);
             this.bunifuPanel2.Location = new System.Drawing.Point(12, 262);
             this.bunifuPanel2.Name = "bunifuPanel2";
             this.bunifuPanel2.ShowBorders = true;
@@ -337,7 +337,7 @@
             this.bunifuLabel5.Location = new System.Drawing.Point(57, 84);
             this.bunifuLabel5.Name = "bunifuLabel5";
             this.bunifuLabel5.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel5.Size = new System.Drawing.Size(2168, 119);
+            this.bunifuLabel5.Size = new System.Drawing.Size(374, 21);
             this.bunifuLabel5.TabIndex = 7;
             this.bunifuLabel5.Text = "Desabilitar Seguridad Integrada de Windows";
             this.bunifuLabel5.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -352,11 +352,29 @@
             this.bunifuLabel4.Location = new System.Drawing.Point(57, 50);
             this.bunifuLabel4.Name = "bunifuLabel4";
             this.bunifuLabel4.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel4.Size = new System.Drawing.Size(2058, 119);
+            this.bunifuLabel4.Size = new System.Drawing.Size(355, 21);
             this.bunifuLabel4.TabIndex = 4;
             this.bunifuLabel4.Text = "Habilitar Seguridad Integrada de Windows";
             this.bunifuLabel4.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuLabel4.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // rbHabilitar
+            // 
+            this.rbHabilitar.AllowBindingControlLocation = false;
+            this.rbHabilitar.BackColor = System.Drawing.Color.Transparent;
+            this.rbHabilitar.BindingControlPosition = Bunifu.UI.WinForms.BunifuRadioButton.BindingControlPositions.Right;
+            this.rbHabilitar.BorderThickness = 1;
+            this.rbHabilitar.Checked = false;
+            this.rbHabilitar.Location = new System.Drawing.Point(32, 51);
+            this.rbHabilitar.Name = "rbHabilitar";
+            this.rbHabilitar.OutlineColor = System.Drawing.Color.DodgerBlue;
+            this.rbHabilitar.OutlineColorTabFocused = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.rbHabilitar.OutlineColorUnchecked = System.Drawing.Color.DimGray;
+            this.rbHabilitar.RadioColor = System.Drawing.Color.DodgerBlue;
+            this.rbHabilitar.RadioColorTabFocused = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.rbHabilitar.Size = new System.Drawing.Size(20, 20);
+            this.rbHabilitar.TabIndex = 5;
+            this.rbHabilitar.Text = null;
             // 
             // rbDesabilitar
             // 
@@ -364,7 +382,7 @@
             this.rbDesabilitar.BackColor = System.Drawing.Color.Transparent;
             this.rbDesabilitar.BindingControlPosition = Bunifu.UI.WinForms.BunifuRadioButton.BindingControlPositions.Right;
             this.rbDesabilitar.BorderThickness = 1;
-            this.rbDesabilitar.Checked = false;
+            this.rbDesabilitar.Checked = true;
             this.rbDesabilitar.Location = new System.Drawing.Point(31, 85);
             this.rbDesabilitar.Name = "rbDesabilitar";
             this.rbDesabilitar.OutlineColor = System.Drawing.Color.DodgerBlue;
@@ -373,26 +391,8 @@
             this.rbDesabilitar.RadioColor = System.Drawing.Color.DodgerBlue;
             this.rbDesabilitar.RadioColorTabFocused = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
             this.rbDesabilitar.Size = new System.Drawing.Size(20, 20);
-            this.rbDesabilitar.TabIndex = 5;
+            this.rbDesabilitar.TabIndex = 6;
             this.rbDesabilitar.Text = null;
-            // 
-            // rbHabilitar
-            // 
-            this.rbHabilitar.AllowBindingControlLocation = false;
-            this.rbHabilitar.BackColor = System.Drawing.Color.Transparent;
-            this.rbHabilitar.BindingControlPosition = Bunifu.UI.WinForms.BunifuRadioButton.BindingControlPositions.Right;
-            this.rbHabilitar.BorderThickness = 1;
-            this.rbHabilitar.Checked = true;
-            this.rbHabilitar.Location = new System.Drawing.Point(31, 51);
-            this.rbHabilitar.Name = "rbHabilitar";
-            this.rbHabilitar.OutlineColor = System.Drawing.Color.DodgerBlue;
-            this.rbHabilitar.OutlineColorTabFocused = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.rbHabilitar.OutlineColorUnchecked = System.Drawing.Color.DimGray;
-            this.rbHabilitar.RadioColor = System.Drawing.Color.DodgerBlue;
-            this.rbHabilitar.RadioColorTabFocused = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.rbHabilitar.Size = new System.Drawing.Size(20, 20);
-            this.rbHabilitar.TabIndex = 6;
-            this.rbHabilitar.Text = null;
             // 
             // btnGuardar
             // 
@@ -512,7 +512,7 @@
             this.bunifuLabel3.Location = new System.Drawing.Point(29, 132);
             this.bunifuLabel3.Name = "bunifuLabel3";
             this.bunifuLabel3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel3.Size = new System.Drawing.Size(258, 40);
+            this.bunifuLabel3.Size = new System.Drawing.Size(149, 22);
             this.bunifuLabel3.TabIndex = 6;
             this.bunifuLabel3.Text = "Contraseña SQL";
             this.bunifuLabel3.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -527,7 +527,7 @@
             this.bunifuLabel2.Location = new System.Drawing.Point(29, 41);
             this.bunifuLabel2.Name = "bunifuLabel2";
             this.bunifuLabel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel2.Size = new System.Drawing.Size(294, 40);
+            this.bunifuLabel2.Size = new System.Drawing.Size(172, 22);
             this.bunifuLabel2.TabIndex = 4;
             this.bunifuLabel2.Text = "Autenticación SQL";
             this.bunifuLabel2.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -728,8 +728,8 @@
         public Bunifu.UI.WinForms.BunifuTextBox txtContrasena;
         public Bunifu.UI.WinForms.BunifuLabel bunifuLabel3;
         public Bunifu.UI.WinForms.BunifuLabel bunifuLabel2;
-        public Bunifu.UI.WinForms.BunifuRadioButton rbHabilitar;
         public Bunifu.UI.WinForms.BunifuRadioButton rbDesabilitar;
+        public Bunifu.UI.WinForms.BunifuRadioButton rbHabilitar;
         public Bunifu.UI.WinForms.BunifuLabel bunifuLabel5;
         public Bunifu.UI.WinForms.BunifuLabel bunifuLabel4;
         public Bunifu.UI.WinForms.BunifuLabel bunifuLabel6;

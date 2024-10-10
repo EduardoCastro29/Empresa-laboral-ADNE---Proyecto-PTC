@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace Empresa_laboral_ADNE___Proyecto_PTC.Vista
 {
-    public partial class RegistroNuevaContraseñaForm : Form
+    public partial class Cambiar_Contraseña : Form
     {
-        public RegistroNuevaContraseñaForm()
+        public Cambiar_Contraseña()
         {
             InitializeComponent();
             CTRLCambiarContraseña ObjControladorCONFIGContra = new CTRLCambiarContraseña(this);

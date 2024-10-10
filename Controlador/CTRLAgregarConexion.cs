@@ -19,20 +19,20 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
         public CTRLAgregarConexion(AgregarConexionForm vista)
         {
             ObjAgregarConexion = vista;
-            ObjAgregarConexion.rbDesabilitar.CheckedChanged += new EventHandler(DesabilitarAutenticacionConexion);
-            ObjAgregarConexion.rbHabilitar.CheckedChanged += new EventHandler(ActivarAutenticacionConexion);
+            ObjAgregarConexion.rbHabilitar.CheckedChanged += new EventHandler(DesabilitarAutenticacionConexion);
+            ObjAgregarConexion.rbDesabilitar.CheckedChanged += new EventHandler(ActivarAutenticacionConexion);
             ObjAgregarConexion.btnGuardar.Click += new EventHandler(GuardarConfiguracionDBXML);
         }
         private void DesabilitarAutenticacionConexion(object Sender, EventArgs e)
         {
-            if(ObjAgregarConexion.rbDesabilitar.Checked == true)
+            if(ObjAgregarConexion.rbHabilitar.Checked == true)
             {
                 ObjAgregarConexion.pnlAutenticacion.Enabled = true;
             }
         }
         private void ActivarAutenticacionConexion(object Sender, EventArgs e)
         {
-            if (ObjAgregarConexion.rbHabilitar.Checked == true)
+            if (ObjAgregarConexion.rbDesabilitar.Checked == true)
             {
                 ObjAgregarConexion.pnlAutenticacion.Enabled = false;
                 ObjAgregarConexion.txtAutenticacion.Clear();
@@ -44,6 +44,9 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             CommonMethods ObjCommonMethods = new CommonMethods();
             try
             {
+                //Creamos una instancia de SQLConnection
+                SqlConnection ObjConexion;
+
                 //Creamos una instancia de XLMDocument que nos permitirá crear el archivo XML para el guardado de la conexión
                 XmlDocument ObjDocumentoXML = new XmlDocument();
 
@@ -93,6 +96,8 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                     //Fusionamos el servidor root junto con el código servidor a la etiqueta principal, RAÍZ
                     ObjROOTContrasena.InnerText = CodigoContrasena;
                     ObjROOTEtiquetaPrincipal.AppendChild(ObjROOTContrasena);
+
+                    ObjConexion = Conexion.ProbarConexionXMLOnline(ObjAgregarConexion.txtServidorURL.Text.Trim(), ObjAgregarConexion.txtBaseDeDatos.Text.Trim                                              (), ObjAgregarConexion.txtAutenticacion.Text.Trim(), ObjAgregarConexion.txtContrasena.Text.Trim());
                 }
                 else
                 {
@@ -103,11 +108,13 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                     XmlElement ObjROOTContrasena = ObjDocumentoXML.CreateElement("ContraseñaSQL");
                     ObjROOTContrasena.InnerText = string.Empty;
                     ObjROOTEtiquetaPrincipal.AppendChild(ObjROOTContrasena);
+
+                    ObjConexion = Conexion.ProbarConexionXMLLocal(ObjAgregarConexion.txtServidorURL.Text.Trim(), ObjAgregarConexion.txtBaseDeDatos.Text.Trim                                              ());
                 }
 
                 //Creamos una instancia de SQLConnection la cuál nos permitirá probar el archivo de conexión
-                SqlConnection ObjConexion = Conexion.ProbarConexionXML(ObjAgregarConexion.txtServidorURL.Text.Trim(), ObjAgregarConexion.txtBaseDeDatos.Text.Trim(),
-                                                                       ObjAgregarConexion.txtAutenticacion.Text.Trim(), ObjAgregarConexion.txtContrasena.Text.Trim());
+                //SqlConnection ObjConexion = Conexion.ProbarConexionXML(ObjAgregarConexion.txtServidorURL.Text.Trim(), ObjAgregarConexion.txtBaseDeDatos.Text.Trim(),
+                //                                                       ObjAgregarConexion.txtAutenticacion.Text.Trim(), ObjAgregarConexion.txtContrasena.Text.Trim());
 
                 //Si el testeo de la prueba de conexión fue inexistente (null), mandamos un mensaje de error al usuario
                 if (ObjConexion == null)

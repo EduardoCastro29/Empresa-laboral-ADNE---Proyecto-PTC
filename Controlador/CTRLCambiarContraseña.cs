@@ -12,8 +12,8 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
 {
     internal class CTRLCambiarContraseña
     {
-        readonly RegistroNuevaContraseñaForm ObjActualizarContraseña;
-        public CTRLCambiarContraseña(RegistroNuevaContraseñaForm vista)
+        readonly Cambiar_Contraseña ObjActualizarContraseña;
+        public CTRLCambiarContraseña(Cambiar_Contraseña vista)
         {
             ObjActualizarContraseña = vista;
             ObjActualizarContraseña.btnGuardar.Click += new EventHandler(CambiarContraseña);

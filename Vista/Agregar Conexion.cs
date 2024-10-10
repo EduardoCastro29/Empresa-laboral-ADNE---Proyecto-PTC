@@ -79,17 +79,17 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Vista
                 this.txtContrasena.OnDisabledState.BorderColor = Color.Transparent;
                 this.txtContrasena.BorderColorDisabled = Color.Transparent;
 
-                this.rbHabilitar.OutlineColorUnchecked = Color.Gainsboro;
-                this.rbHabilitar.RadioColor = Color.FromArgb(70, 199, 188);
-                this.rbHabilitar.OutlineColor = Color.FromArgb(70, 199, 188);
-                this.rbHabilitar.OutlineColorTabFocused = Color.FromArgb(65, 117, 113);
-                this.rbHabilitar.RadioColorTabFocused = Color.FromArgb(65, 117, 113);
-
                 this.rbDesabilitar.OutlineColorUnchecked = Color.Gainsboro;
                 this.rbDesabilitar.RadioColor = Color.FromArgb(70, 199, 188);
                 this.rbDesabilitar.OutlineColor = Color.FromArgb(70, 199, 188);
                 this.rbDesabilitar.OutlineColorTabFocused = Color.FromArgb(65, 117, 113);
                 this.rbDesabilitar.RadioColorTabFocused = Color.FromArgb(65, 117, 113);
+
+                this.rbHabilitar.OutlineColorUnchecked = Color.Gainsboro;
+                this.rbHabilitar.RadioColor = Color.FromArgb(70, 199, 188);
+                this.rbHabilitar.OutlineColor = Color.FromArgb(70, 199, 188);
+                this.rbHabilitar.OutlineColorTabFocused = Color.FromArgb(65, 117, 113);
+                this.rbHabilitar.RadioColorTabFocused = Color.FromArgb(65, 117, 113);
 
                 this.btnGuardar.onHoverState.BorderColor = Color.FromArgb(2, 166, 166);
                 this.btnGuardar.onHoverState.FillColor = Color.FromArgb(2, 166, 166);

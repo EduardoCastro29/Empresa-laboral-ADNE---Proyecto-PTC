@@ -227,14 +227,16 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
 
                 string CodigoServidor = ObjNODOServidor.Value;
                 string CodigoBaseDatos = ObjNODOBaseDatos.Value;
-                string CodigoAutenticacion = ObjNODOAutenticacion.Value;
-                string CodigoContrasena = ObjNODOContrasena.Value;
 
                 DTOAgregarConexion.Server = MetodoDesencriptacionAES(CodigoServidor);
                 DTOAgregarConexion.Database = MetodoDesencriptacionAES(CodigoBaseDatos);
-                DTOAgregarConexion.User = MetodoDesencriptacionAES(CodigoAutenticacion);
-                DTOAgregarConexion.Password = MetodoDesencriptacionAES(CodigoContrasena);
-
+                if (ObjNODOAutenticacion != null)
+                {
+                    string CodigoAutenticacion = ObjNODOAutenticacion.Value;
+                    string CodigoContrasena = ObjNODOContrasena.Value;
+                    DTOAgregarConexion.User = MetodoDesencriptacionAES(CodigoAutenticacion);
+                    DTOAgregarConexion.Password = MetodoDesencriptacionAES(CodigoContrasena);
+                }
                 return true;
             }
             else return false;

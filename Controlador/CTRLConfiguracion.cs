@@ -81,7 +81,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
         #region Abrir el formulario de confirmación para la actualización de contraseña (UPDATE)
         private void RestablecerContraseña(object sender, EventArgs e)
         {
-            RegistroNuevaContraseñaForm ObjAbrirRestablecerConfig = new RegistroNuevaContraseñaForm();
+            Cambiar_Contraseña ObjAbrirRestablecerConfig = new Cambiar_Contraseña();
             ObjAbrirRestablecerConfig.ShowDialog();
         }
         #endregion

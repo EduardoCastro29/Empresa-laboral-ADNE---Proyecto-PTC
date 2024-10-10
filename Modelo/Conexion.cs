@@ -32,8 +32,26 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo
                 string IDUsuario = DTOAgregarConexion.User; //Este es el nombre del usuario el cuál maneja todo el funcionamiento por ASP.NET (Es el propietario de la DB)
                 string Contraseña = DTOAgregarConexion.Password; //Esta es la contraseña del usuario proporcionado por la misma persona (La que creo la DB y su respectivo usuario)
                 
-                SqlConnection ObjConexionOnline = new SqlConnection($"Server = {nombreServidor}; Database = {DBNombre}; User Id = {IDUsuario}; Password = {Contraseña}");
+                if (string.IsNullOrWhiteSpace(DTOAgregarConexion.User))
+                {
+                    SqlConnection ObjConexionOnline = new SqlConnection($"Server = {nombreServidor}; Database = {DBNombre}; Integrated Security = True");
 
+                    //Abrimos la conexión
+                    ObjConexionOnline.Open();
+
+                    //Retornamos la conexión
+                    return ObjConexionOnline;
+                }
+                else
+                {
+                    SqlConnection ObjConexionOnline = new SqlConnection($"Server = {nombreServidor}; Database = {DBNombre}; User Id = {IDUsuario}; Password = {Contraseña}");
+
+                    //Abrimos la conexión
+                    ObjConexionOnline.Open();
+
+                    //Retornamos la conexión
+                    return ObjConexionOnline;
+                }
                 //Definiendo las variables de conexión
                 /*
                 string nombreServidor = "\\SQLEXPRESS"; //Pongan su dirección de SQL Server, en mi caso es esa bv
@@ -42,11 +60,11 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo
                 //Creando objeto ObjConexion de tipo SqlConnection con los datos de la conexión hacia la base de datos
                 SqlConnection ObjConexion = new SqlConnection($"Server = {nombreServidor}; Database = {DBNombre}; Integrated Security = True");
                 */
-                //Abrimos la conexión
-                ObjConexionOnline.Open();
+                ////Abrimos la conexión
+                //ObjConexionOnline.Open();
 
-                //Retornamos la conexión
-                return ObjConexionOnline;
+                ////Retornamos la conexión
+                //return ObjConexionOnline;
             }
             catch (Exception ex)
             {
@@ -55,11 +73,25 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo
                 return null;
             }
         }
-        public static SqlConnection ProbarConexionXML(string Servidor, string BaseDatos, string IDUsuario, string Contrasena)
+        public static SqlConnection ProbarConexionXMLOnline(string Servidor, string BaseDatos, string IDUsuario, string Contrasena)
         {
             try
             {
                 SqlConnection ObjConexion = new SqlConnection($"Server = {Servidor}; DataBase = {BaseDatos}; User Id = {IDUsuario}; Password = {Contrasena}");
+                ObjConexion.Open();
+                return ObjConexion;
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show($"{ex.Message} Código de error: EC-001 \nNo fue posible conectarse a la base de datos, verifique las credenciales, consulte el manual de usuario.", "Error crítico", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+        }
+        public static SqlConnection ProbarConexionXMLLocal(string Servidor, string BaseDatos)
+        {
+            try
+            {
+                SqlConnection ObjConexion = new SqlConnection($"Server = {Servidor}; DataBase = {BaseDatos}; Integrated Security = True");
                 ObjConexion.Open();
                 return ObjConexion;
             }
