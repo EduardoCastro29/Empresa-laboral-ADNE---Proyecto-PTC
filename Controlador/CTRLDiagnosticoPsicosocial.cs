@@ -43,6 +43,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             ObjExpediente.txtSomatizacion.KeyPress += new KeyPressEventHandler(ValidarCampoTextBox);
             ObjExpediente.txtVidaInterpersonal.KeyPress += new KeyPressEventHandler(ValidarCampoTextBox);
             ObjExpediente.txtDocumentoPaciente.KeyPress += new KeyPressEventHandler(ValidarCampoDocumento);
+            ObjExpediente.txtDocumentoPaciente.KeyPress += new KeyPressEventHandler(EnmascararCampoDocumento);
         }
         #region Validaciones de Campos
 
@@ -58,13 +59,37 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             char ch = e.KeyChar;
 
             if ((ch >= '0' && ch <= '9') ||
-                (ch == ' ') ||
-                (ch == '+') ||
                 (ch == '-'))
             {
                 return;
             }
             e.Handled = true;
+        }
+        private void EnmascararCampoDocumento(object sender, EventArgs e)
+        {
+            //Obtenemos la longitud actual del textbox para evaluar si es necesario el remplazo por guión (en este caso el DUI) o número
+            string EnmascararDUI = ObjExpediente.txtDocumentoPaciente.Text.Replace("-", "");
+
+            //Limitamos el textbox para que solo obtenga 9 caracteres
+            if (EnmascararDUI.Length > 9)
+            {
+                EnmascararDUI = EnmascararDUI.Substring(0, 9);
+            }
+
+            //Una vez llegada a la longitud deseada, en este caso 8 pone un guión automáticamente para enmascarar el DUI
+            if (EnmascararDUI.Length > 8)
+            {
+                //Indicamos en qué posición se pondrá el guión y que símbolo tomará
+                ObjExpediente.txtDocumentoPaciente.Text = EnmascararDUI.Insert(8, "-");
+            }
+            else
+            {
+                //Caso contrario, no realizamos ningun cambio (no se inserta el guión)
+                ObjExpediente.txtDocumentoPaciente.Text = EnmascararDUI;
+            }
+
+            //Indicamos que la posición inicial del cursor, será al inicio del textbox
+            ObjExpediente.txtDocumentoPaciente.SelectionStart = ObjExpediente.txtDocumentoPaciente.Text.Length;
         }
         private void ValidarCampoTextBox(object sender, KeyPressEventArgs e)
         {
