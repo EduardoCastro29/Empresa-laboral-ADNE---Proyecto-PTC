@@ -195,7 +195,7 @@
             this.btnPreguntasAutenticacion.OnPressedState.IconLeftImage = null;
             this.btnPreguntasAutenticacion.OnPressedState.IconRightImage = null;
             this.btnPreguntasAutenticacion.Size = new System.Drawing.Size(667, 57);
-            this.btnPreguntasAutenticacion.TabIndex = 0;
+            this.btnPreguntasAutenticacion.TabIndex = 1;
             this.btnPreguntasAutenticacion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnPreguntasAutenticacion.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnPreguntasAutenticacion.TextMarginLeft = 0;
@@ -216,6 +216,7 @@
             this.lblOlvidasteContrasena.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblOlvidasteContrasena.Size = new System.Drawing.Size(376, 36);
             this.lblOlvidasteContrasena.TabIndex = 1;
+            this.lblOlvidasteContrasena.TabStop = false;
             this.lblOlvidasteContrasena.Text = "¿Olvidaste tu contraseña?";
             this.lblOlvidasteContrasena.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lblOlvidasteContrasena.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
@@ -234,6 +235,7 @@
             this.lblOpciones.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblOpciones.Size = new System.Drawing.Size(417, 23);
             this.lblOpciones.TabIndex = 5;
+            this.lblOpciones.TabStop = false;
             this.lblOpciones.Text = "Selecciona una de las siguientes opciones:";
             this.lblOpciones.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lblOpciones.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;

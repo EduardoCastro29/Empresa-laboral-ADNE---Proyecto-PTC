@@ -90,6 +90,7 @@
             this.lblContrasenaActual.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblContrasenaActual.Size = new System.Drawing.Size(277, 23);
             this.lblContrasenaActual.TabIndex = 9;
+            this.lblContrasenaActual.TabStop = false;
             this.lblContrasenaActual.Text = "Ingrese su antigua contraseña";
             this.lblContrasenaActual.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lblContrasenaActual.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
@@ -163,7 +164,7 @@
             this.txtContrasenaActual.ShortcutsEnabled = false;
             this.txtContrasenaActual.Size = new System.Drawing.Size(325, 41);
             this.txtContrasenaActual.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.txtContrasenaActual.TabIndex = 8;
+            this.txtContrasenaActual.TabIndex = 1;
             this.txtContrasenaActual.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtContrasenaActual.TextMarginBottom = 0;
             this.txtContrasenaActual.TextMarginLeft = 3;
@@ -255,7 +256,7 @@
             this.btnGuardar.OnPressedState.IconLeftImage = null;
             this.btnGuardar.OnPressedState.IconRightImage = null;
             this.btnGuardar.Size = new System.Drawing.Size(160, 44);
-            this.btnGuardar.TabIndex = 7;
+            this.btnGuardar.TabIndex = 4;
             this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnGuardar.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnGuardar.TextMarginLeft = 0;
@@ -276,6 +277,7 @@
             this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel1.Size = new System.Drawing.Size(280, 23);
             this.bunifuLabel1.TabIndex = 3;
+            this.bunifuLabel1.TabStop = false;
             this.bunifuLabel1.Text = "Confirme su nueva contraseña";
             this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
@@ -349,7 +351,7 @@
             this.txtConfirmarContra.ShortcutsEnabled = false;
             this.txtConfirmarContra.Size = new System.Drawing.Size(321, 41);
             this.txtConfirmarContra.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.txtConfirmarContra.TabIndex = 2;
+            this.txtConfirmarContra.TabIndex = 3;
             this.txtConfirmarContra.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtConfirmarContra.TextMarginBottom = 0;
             this.txtConfirmarContra.TextMarginLeft = 3;
@@ -373,6 +375,7 @@
             this.lblNuevaContrasena.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblNuevaContrasena.Size = new System.Drawing.Size(263, 23);
             this.lblNuevaContrasena.TabIndex = 1;
+            this.lblNuevaContrasena.TabStop = false;
             this.lblNuevaContrasena.Text = "Ingrese su nueva contraseña";
             this.lblNuevaContrasena.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lblNuevaContrasena.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
@@ -446,7 +449,7 @@
             this.txtNuevaContra.ShortcutsEnabled = false;
             this.txtNuevaContra.Size = new System.Drawing.Size(321, 41);
             this.txtNuevaContra.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.txtNuevaContra.TabIndex = 0;
+            this.txtNuevaContra.TabIndex = 2;
             this.txtNuevaContra.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtNuevaContra.TextMarginBottom = 0;
             this.txtNuevaContra.TextMarginLeft = 3;

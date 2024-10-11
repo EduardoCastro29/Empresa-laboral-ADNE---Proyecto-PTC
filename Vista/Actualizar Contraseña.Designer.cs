@@ -111,6 +111,7 @@
             this.bunifuLabel4.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel4.Size = new System.Drawing.Size(383, 22);
             this.bunifuLabel4.TabIndex = 20;
+            this.bunifuLabel4.TabStop = false;
             this.bunifuLabel4.Text = "- Debe contener mayúsculas y minúsculas";
             this.bunifuLabel4.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuLabel4.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
@@ -128,6 +129,7 @@
             this.bunifuLabel3.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel3.Size = new System.Drawing.Size(207, 22);
             this.bunifuLabel3.TabIndex = 19;
+            this.bunifuLabel3.TabStop = false;
             this.bunifuLabel3.Text = "- Mínimo 12 carácteres";
             this.bunifuLabel3.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuLabel3.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
@@ -145,6 +147,7 @@
             this.bunifuLabel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel2.Size = new System.Drawing.Size(340, 22);
             this.bunifuLabel2.TabIndex = 18;
+            this.bunifuLabel2.TabStop = false;
             this.bunifuLabel2.Text = "- Debe contener un número (mínimo)";
             this.bunifuLabel2.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuLabel2.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
@@ -162,6 +165,7 @@
             this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel1.Size = new System.Drawing.Size(95, 22);
             this.bunifuLabel1.TabIndex = 17;
+            this.bunifuLabel1.TabStop = false;
             this.bunifuLabel1.Text = "(@, $, #, _)";
             this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
@@ -179,6 +183,7 @@
             this.lblEspecificaciones.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblEspecificaciones.Size = new System.Drawing.Size(356, 22);
             this.lblEspecificaciones.TabIndex = 16;
+            this.lblEspecificaciones.TabStop = false;
             this.lblEspecificaciones.Text = "- Debe contener carácteres especiales";
             this.lblEspecificaciones.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lblEspecificaciones.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
@@ -197,6 +202,7 @@
             this.lblRequisitos.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblRequisitos.Size = new System.Drawing.Size(135, 33);
             this.lblRequisitos.TabIndex = 14;
+            this.lblRequisitos.TabStop = false;
             this.lblRequisitos.Text = "Requisitos:";
             this.lblRequisitos.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lblRequisitos.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
@@ -292,8 +298,7 @@
             this.txtConfirmarContrasena.ShortcutsEnabled = false;
             this.txtConfirmarContrasena.Size = new System.Drawing.Size(513, 50);
             this.txtConfirmarContrasena.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.txtConfirmarContrasena.TabIndex = 1;
-            this.txtConfirmarContrasena.TabStop = false;
+            this.txtConfirmarContrasena.TabIndex = 2;
             this.txtConfirmarContrasena.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtConfirmarContrasena.TextMarginBottom = 0;
             this.txtConfirmarContrasena.TextMarginLeft = 3;
@@ -394,7 +399,6 @@
             this.txtNuevaContrasena.Size = new System.Drawing.Size(513, 50);
             this.txtNuevaContrasena.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtNuevaContrasena.TabIndex = 1;
-            this.txtNuevaContrasena.TabStop = false;
             this.txtNuevaContrasena.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtNuevaContrasena.TextMarginBottom = 0;
             this.txtNuevaContrasena.TextMarginLeft = 3;
@@ -503,7 +507,7 @@
             this.btnActualizarContrasena.OnPressedState.IconLeftImage = null;
             this.btnActualizarContrasena.OnPressedState.IconRightImage = null;
             this.btnActualizarContrasena.Size = new System.Drawing.Size(286, 60);
-            this.btnActualizarContrasena.TabIndex = 0;
+            this.btnActualizarContrasena.TabIndex = 3;
             this.btnActualizarContrasena.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnActualizarContrasena.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnActualizarContrasena.TextMarginLeft = 0;
@@ -537,6 +541,7 @@
             this.lblNuevaContrasena.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblNuevaContrasena.Size = new System.Drawing.Size(274, 22);
             this.lblNuevaContrasena.TabIndex = 6;
+            this.lblNuevaContrasena.TabStop = false;
             this.lblNuevaContrasena.Text = "Ingrese su nueva contraseña:";
             this.lblNuevaContrasena.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lblNuevaContrasena.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
@@ -591,6 +596,7 @@
             this.lblRestablecer.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblRestablecer.Size = new System.Drawing.Size(313, 33);
             this.lblRestablecer.TabIndex = 1;
+            this.lblRestablecer.TabStop = false;
             this.lblRestablecer.Text = "Restablecer contraseña";
             this.lblRestablecer.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lblRestablecer.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;

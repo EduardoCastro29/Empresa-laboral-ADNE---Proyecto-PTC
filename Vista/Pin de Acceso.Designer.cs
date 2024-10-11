@@ -177,7 +177,7 @@
             this.btnSiguiente.OnPressedState.IconLeftImage = null;
             this.btnSiguiente.OnPressedState.IconRightImage = null;
             this.btnSiguiente.Size = new System.Drawing.Size(176, 48);
-            this.btnSiguiente.TabIndex = 3;
+            this.btnSiguiente.TabIndex = 1;
             this.btnSiguiente.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnSiguiente.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnSiguiente.TextMarginLeft = 0;
@@ -198,6 +198,7 @@
             this.lblPinAcceso.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblPinAcceso.Size = new System.Drawing.Size(248, 23);
             this.lblPinAcceso.TabIndex = 999;
+            this.lblPinAcceso.TabStop = false;
             this.lblPinAcceso.Text = "Ingresa el pin de acceso:";
             this.lblPinAcceso.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lblPinAcceso.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
@@ -294,7 +295,7 @@
             this.txtIngresarPin.ShortcutsEnabled = false;
             this.txtIngresarPin.Size = new System.Drawing.Size(678, 59);
             this.txtIngresarPin.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.txtIngresarPin.TabIndex = 1;
+            this.txtIngresarPin.TabIndex = 0;
             this.txtIngresarPin.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtIngresarPin.TextMarginBottom = 0;
             this.txtIngresarPin.TextMarginLeft = 15;
@@ -317,6 +318,7 @@
             this.lblOlvidasteContrasena.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblOlvidasteContrasena.Size = new System.Drawing.Size(376, 36);
             this.lblOlvidasteContrasena.TabIndex = 999;
+            this.lblOlvidasteContrasena.TabStop = false;
             this.lblOlvidasteContrasena.Text = "¿Olvidaste tu contraseña?";
             this.lblOlvidasteContrasena.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lblOlvidasteContrasena.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
@@ -404,7 +406,7 @@
             this.btnAtras.OnPressedState.IconLeftImage = null;
             this.btnAtras.OnPressedState.IconRightImage = null;
             this.btnAtras.Size = new System.Drawing.Size(176, 48);
-            this.btnAtras.TabIndex = 4;
+            this.btnAtras.TabIndex = 2;
             this.btnAtras.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnAtras.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnAtras.TextMarginLeft = 0;
