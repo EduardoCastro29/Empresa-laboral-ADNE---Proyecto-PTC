@@ -821,7 +821,7 @@
             this.txtDUIPaciente.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtDUIPaciente.Lines = new string[0];
             this.txtDUIPaciente.Location = new System.Drawing.Point(32, 148);
-            this.txtDUIPaciente.MaxLength = 11;
+            this.txtDUIPaciente.MaxLength = 10;
             this.txtDUIPaciente.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtDUIPaciente.Modified = false;
             this.txtDUIPaciente.Multiline = true;
@@ -849,7 +849,7 @@
             this.txtDUIPaciente.Padding = new System.Windows.Forms.Padding(3);
             this.txtDUIPaciente.PasswordChar = '\0';
             this.txtDUIPaciente.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txtDUIPaciente.PlaceholderText = "Documuento";
+            this.txtDUIPaciente.PlaceholderText = "Documento";
             this.txtDUIPaciente.ReadOnly = false;
             this.txtDUIPaciente.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtDUIPaciente.SelectedText = "";
@@ -863,7 +863,7 @@
             this.txtDUIPaciente.TextMarginBottom = 0;
             this.txtDUIPaciente.TextMarginLeft = 3;
             this.txtDUIPaciente.TextMarginTop = 1;
-            this.txtDUIPaciente.TextPlaceholder = "Documuento";
+            this.txtDUIPaciente.TextPlaceholder = "Documento";
             this.txtDUIPaciente.UseSystemPasswordChar = false;
             this.txtDUIPaciente.WordWrap = true;
             // 

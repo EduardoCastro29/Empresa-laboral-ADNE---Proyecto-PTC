@@ -28,7 +28,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             //Se generara un formulario en específico dentro del panel
             ObjDashboard.Load += new EventHandler(FormularioPredeterminado);
             ObjDashboard.Load += new EventHandler(DatosUsuarioLogin);
-            ObjDashboard.FormClosing += new FormClosingEventHandler(CerrarPrograma);
+            //ObjDashboard.FormClosing += new FormClosingEventHandler(CerrarPrograma);
             ObjDashboard.btnCerrarS.Click += new EventHandler(CerrarSesion);
 
             ObjDashboard.btnMainPage.Click += new EventHandler(FormularioPaginaPrincipal);
@@ -48,13 +48,13 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             MemoryStream ObjArchivoMemoriaIMG = new MemoryStream(InicioSesion.Imagen);
             ObjDashboard.picUsuario.Image = Image.FromStream(ObjArchivoMemoriaIMG);
         }
-        private void CerrarPrograma(object sender, FormClosingEventArgs e)
-        {
-            if (MessageBox.Show("Desea cerrar el programa de forma autmática? Al cerrarse, cerrará la sesión de forma automática", "Cerrar el Programa", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-                Environment.Exit(0);
-            }
-        }
+        //private void CerrarPrograma(object sender, FormClosingEventArgs e)
+        //{
+        //    if (MessageBox.Show("Desea cerrar el programa de forma autmática? Al cerrarse, cerrará la sesión de forma automática", "Cerrar el Programa", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+        //    {
+        //        Environment.Exit(0);
+        //    }
+        //}
         private void CerrarSesion(object sender, EventArgs e)
         {
             if (MessageBox.Show("¿Desea cerrar sesión?", "Cerrar Sesión", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)

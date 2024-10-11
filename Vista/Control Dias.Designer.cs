@@ -135,6 +135,7 @@
             this.btnCalendar.TextMarginLeft = 0;
             this.btnCalendar.TextPadding = new System.Windows.Forms.Padding(0);
             this.btnCalendar.UseDefaultRadiusAndThickness = true;
+            this.btnCalendar.Click += new System.EventHandler(this.btnCalendar_Click);
             // 
             // UCDias
             // 

@@ -46,7 +46,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             ObjExpediente.txtDocumentoPaciente.KeyPress += new KeyPressEventHandler(EnmascararCampoDocumento);
         }
         #region Validaciones de Campos
-
         private void ValidarCampoDocumento(object sender, KeyPressEventArgs e)
         {
             //La propiedad char.IsControl permite controles como BackSpace, Inicio, Fin, etc.
