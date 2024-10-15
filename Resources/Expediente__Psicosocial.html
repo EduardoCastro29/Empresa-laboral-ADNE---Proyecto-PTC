@@ -16,13 +16,6 @@
         table {
             width: 100%;
         }
-
-        .seguimiento {
-            display: flex;
-            align-items: center;
-            flex-direction: column;
-        }
-
         h1 {
             font-size: 25px;
             font-family: sans-serif;
@@ -32,6 +25,13 @@
 
         h2 {
             font-size: 20px;
+        }
+        .SeccionSeguimiento {
+            border: 2px solid white;
+        }
+
+        .SeccionSeguimiento td {
+            border: 0px solid white;
         }
     </style>
 </head>
@@ -53,7 +53,7 @@
         <h1>FICHA PARA EXPEDIENTE PSICOSOCIAL</h1>
         <div>
             <h2>I. DATOS DE IDENTIFICACIÓN</h2>
-            <table style="border: 0px solid black; margin-top: 25px; margin-bottom: 10px;">
+            <table style="border: 0px solid black; margin-top: 25px; margin-bottom: 20px;">
                 <tr>
                     <td style="width: 50%; border: 0px solid black;">Fecha: @FECHA</td>
                     <td style="width: 50%; border: 0px solid black;">N° de expediente: @EXPEDIENTEID</td>
@@ -106,7 +106,7 @@
         
         <div>
             <h2>II. IMPACTO PSICOSOCIAL</h2>
-            <table>
+            <table style="margin-bottom: 20px;">
                 <tr>
                     <td style="height: 24px; width: 20%;">Afectividad sintomatología del estado de ánimo</td>
                     <td style="height: 24px; width: 80%;">@ESTADOANIMO</td>
@@ -144,7 +144,7 @@
         
         <div>
             <h2>III. OBSERVACIONES GENERALES</h2>
-            <table>
+            <table style="margin-bottom: 15px;">
                 <tr>
                     <td style="height: 24px;">@OBSERVACION</td>
                 </tr>
@@ -153,7 +153,7 @@
         
         <div>
             <h2>IV. APROXIMACIONES DIAGNÓSTICAS</h2>
-            <table>
+            <table style="margin-bottom: 15px;">
                 <tr>
                     <td style="height: 24px;">@APROXIMACIONDIAG</td>
                 </tr>
@@ -162,43 +162,34 @@
         
         <div>
             <h2>V. ATENCIÓN BRINDADA</h2>
-            <table>
+            <table style="margin-bottom: 15px;">
                 <tr>
                     <td style="height: 24px;">@ATENCIONBRINDADA</td>
                 </tr>
             </table>
         </div>
         
-        <hr />
         <div>
-            <div class="seguimiento">
-                <h2 style="margin-top: 30px;">SESIONES DE SEGUIMIENTO</h2>
-                
-                <h3>Fecha: @FECHA</h3>
-                <h3>Hora: @HORAINICIO</h3>
-                <h3>Lugar: @LUGAR</h3>
-                
-
-            </div>
-            <table>
+            <table class="SeccionSeguimiento" style="margin-top: 15px;">
                 <tr>
-                    <td style="background-color: #EAF1DD;">Descripción de la situación presentada</td>
+                    <td style="height: 24px; width: 30%;"></td>
+                    <td style="height: 24px; width: 30%;" align="center"><h2>SESIONES DE SEGUIMIENTO</h2></td>
+                    <td style="height: 24px; width: 30%;"></td>
                 </tr>
                 <tr>
-                    <td style="height: 24px;">@DESCRIPCION</td>
+                    <td style="height: 24px; width: 30%;"></td>
+                    <td style="height: 24px; width: 30%;" align="center"><h3>Fecha: @FECHA</h3></td>
+                    <td style="height: 24px; width: 30%;"></td>
                 </tr>
                 <tr>
-                    <td style="background-color: #EAF1DD;">Estrategias utilizadas</td>
+                    <td style="height: 24px; width: 30%;"></td>
+                    <td style="height: 24px; width: 30%;" align="center"><h3>Lugar: @LUGAR</h3></td>
+                    <td style="height: 24px; width: 30%;"></td>
                 </tr>
-                <tr>
-                    <td style="height: 48px;"></td>
-                </tr>
-                <tr>
-                    <td style="background-color: #EAF1DD;">Resultados/Observaciones/tareas</td>
-                </tr>
-                <tr>
-                    <td style="height: 24px;"></td>
-                </tr>
+            </table>
+            <table style="margin-top: 20px; margin-bottom: 10px;">
+                <tr><td style="background-color: #EAF1DD; height: 38px; padding-left: 10px;"><b>Descripción de la situación presentada</b></td></tr>
+                <tr><td style="height: 26px; padding-top: 5px; padding-bottom: 5px;">@DESCRIPCION</td></tr>
             </table>
         </div>
     </main>
