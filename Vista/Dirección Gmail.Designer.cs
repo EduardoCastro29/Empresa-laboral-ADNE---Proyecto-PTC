@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DirecciónGmailForm));
             Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
@@ -37,6 +38,7 @@
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             this.bunifuGradientPanel2 = new Bunifu.UI.WinForms.BunifuGradientPanel();
+            this.btnSalir = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.bunifuGradientPanel1 = new Bunifu.UI.WinForms.BunifuGradientPanel();
             this.lblConfirmacion = new System.Windows.Forms.Label();
             this.btnAceptarGmail = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
@@ -49,12 +51,12 @@
             this.Titulo_Registrar = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuShadowPanel1 = new Bunifu.UI.WinForms.BunifuShadowPanel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnSalir = new Bunifu.UI.WinForms.BunifuPictureBox();
+            this.NotificacionEmail = new Bunifu.UI.WinForms.BunifuSnackbar(this.components);
             this.bunifuGradientPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).BeginInit();
             this.bunifuGradientPanel1.SuspendLayout();
             this.bunifuShadowPanel2.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuGradientPanel2
@@ -76,6 +78,24 @@
             this.bunifuGradientPanel2.Quality = 10;
             this.bunifuGradientPanel2.Size = new System.Drawing.Size(1064, 496);
             this.bunifuGradientPanel2.TabIndex = 2;
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.AllowFocused = false;
+            this.btnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSalir.AutoSizeHeight = true;
+            this.btnSalir.BorderRadius = 0;
+            this.btnSalir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSalir.Image = global::Empresa_laboral_ADNE___Proyecto_PTC.Properties.Resources.Cerrar_Login;
+            this.btnSalir.IsCircle = true;
+            this.btnSalir.Location = new System.Drawing.Point(1022, 15);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(27, 27);
+            this.btnSalir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnSalir.TabIndex = 5;
+            this.btnSalir.TabStop = false;
+            this.btnSalir.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Square;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // bunifuGradientPanel1
             // 
@@ -108,9 +128,9 @@
             this.lblConfirmacion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(86)))), ((int)(((byte)(100)))));
             this.lblConfirmacion.Location = new System.Drawing.Point(34, 237);
             this.lblConfirmacion.Name = "lblConfirmacion";
-            this.lblConfirmacion.Size = new System.Drawing.Size(153, 21);
+            this.lblConfirmacion.Size = new System.Drawing.Size(211, 21);
             this.lblConfirmacion.TabIndex = 16;
-            this.lblConfirmacion.Text = "Confirmar correo...";
+            this.lblConfirmacion.Text = "Esperando confirmación...";
             // 
             // btnAceptarGmail
             // 
@@ -127,7 +147,7 @@
             this.btnAceptarGmail.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(168)))), ((int)(((byte)(161)))));
             this.btnAceptarGmail.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAceptarGmail.BackgroundImage")));
             this.btnAceptarGmail.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.btnAceptarGmail.ButtonText = "Aceptar";
+            this.btnAceptarGmail.ButtonText = "Enviar";
             this.btnAceptarGmail.ButtonTextMarginLeft = 0;
             this.btnAceptarGmail.ColorContrastOnClick = 45;
             this.btnAceptarGmail.ColorContrastOnHover = 45;
@@ -569,23 +589,75 @@
             this.panel1.Size = new System.Drawing.Size(1064, 496);
             this.panel1.TabIndex = 4;
             // 
-            // btnSalir
+            // NotificacionEmail
             // 
-            this.btnSalir.AllowFocused = false;
-            this.btnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSalir.AutoSizeHeight = true;
-            this.btnSalir.BorderRadius = 0;
-            this.btnSalir.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSalir.Image = global::Empresa_laboral_ADNE___Proyecto_PTC.Properties.Resources.Cerrar_Login;
-            this.btnSalir.IsCircle = true;
-            this.btnSalir.Location = new System.Drawing.Point(1022, 15);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(27, 27);
-            this.btnSalir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnSalir.TabIndex = 5;
-            this.btnSalir.TabStop = false;
-            this.btnSalir.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Square;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            this.NotificacionEmail.AllowDragging = false;
+            this.NotificacionEmail.AllowMultipleViews = true;
+            this.NotificacionEmail.ClickToClose = true;
+            this.NotificacionEmail.DoubleClickToClose = true;
+            this.NotificacionEmail.DurationAfterIdle = 3000;
+            this.NotificacionEmail.ErrorOptions.ActionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.NotificacionEmail.ErrorOptions.ActionBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.NotificacionEmail.ErrorOptions.ActionBorderRadius = 1;
+            this.NotificacionEmail.ErrorOptions.ActionFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.NotificacionEmail.ErrorOptions.ActionForeColor = System.Drawing.Color.Black;
+            this.NotificacionEmail.ErrorOptions.BackColor = System.Drawing.Color.White;
+            this.NotificacionEmail.ErrorOptions.BorderColor = System.Drawing.Color.White;
+            this.NotificacionEmail.ErrorOptions.CloseIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(199)))));
+            this.NotificacionEmail.ErrorOptions.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NotificacionEmail.ErrorOptions.ForeColor = System.Drawing.Color.Black;
+            this.NotificacionEmail.ErrorOptions.Icon = ((System.Drawing.Image)(resources.GetObject("resource.Icon")));
+            this.NotificacionEmail.ErrorOptions.IconLeftMargin = 12;
+            this.NotificacionEmail.FadeCloseIcon = false;
+            this.NotificacionEmail.Host = Bunifu.UI.WinForms.BunifuSnackbar.Hosts.FormOwner;
+            this.NotificacionEmail.InformationOptions.ActionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.NotificacionEmail.InformationOptions.ActionBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.NotificacionEmail.InformationOptions.ActionBorderRadius = 1;
+            this.NotificacionEmail.InformationOptions.ActionFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.NotificacionEmail.InformationOptions.ActionForeColor = System.Drawing.Color.Black;
+            this.NotificacionEmail.InformationOptions.BackColor = System.Drawing.Color.White;
+            this.NotificacionEmail.InformationOptions.BorderColor = System.Drawing.Color.White;
+            this.NotificacionEmail.InformationOptions.CloseIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(213)))), ((int)(((byte)(255)))));
+            this.NotificacionEmail.InformationOptions.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.NotificacionEmail.InformationOptions.ForeColor = System.Drawing.Color.Black;
+            this.NotificacionEmail.InformationOptions.Icon = ((System.Drawing.Image)(resources.GetObject("resource.Icon1")));
+            this.NotificacionEmail.InformationOptions.IconLeftMargin = 12;
+            this.NotificacionEmail.Margin = 10;
+            this.NotificacionEmail.MaximumSize = new System.Drawing.Size(0, 0);
+            this.NotificacionEmail.MaximumViews = 7;
+            this.NotificacionEmail.MessageRightMargin = 15;
+            this.NotificacionEmail.MessageTopMargin = 0;
+            this.NotificacionEmail.MinimumSize = new System.Drawing.Size(0, 0);
+            this.NotificacionEmail.ShowBorders = false;
+            this.NotificacionEmail.ShowCloseIcon = false;
+            this.NotificacionEmail.ShowIcon = true;
+            this.NotificacionEmail.ShowShadows = true;
+            this.NotificacionEmail.SuccessOptions.ActionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.NotificacionEmail.SuccessOptions.ActionBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.NotificacionEmail.SuccessOptions.ActionBorderRadius = 1;
+            this.NotificacionEmail.SuccessOptions.ActionFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.NotificacionEmail.SuccessOptions.ActionForeColor = System.Drawing.Color.Black;
+            this.NotificacionEmail.SuccessOptions.BackColor = System.Drawing.Color.White;
+            this.NotificacionEmail.SuccessOptions.BorderColor = System.Drawing.Color.White;
+            this.NotificacionEmail.SuccessOptions.CloseIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(255)))), ((int)(((byte)(237)))));
+            this.NotificacionEmail.SuccessOptions.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.NotificacionEmail.SuccessOptions.ForeColor = System.Drawing.Color.Black;
+            this.NotificacionEmail.SuccessOptions.Icon = ((System.Drawing.Image)(resources.GetObject("resource.Icon2")));
+            this.NotificacionEmail.SuccessOptions.IconLeftMargin = 12;
+            this.NotificacionEmail.ViewsMargin = 7;
+            this.NotificacionEmail.WarningOptions.ActionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.NotificacionEmail.WarningOptions.ActionBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.NotificacionEmail.WarningOptions.ActionBorderRadius = 1;
+            this.NotificacionEmail.WarningOptions.ActionFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.NotificacionEmail.WarningOptions.ActionForeColor = System.Drawing.Color.Black;
+            this.NotificacionEmail.WarningOptions.BackColor = System.Drawing.Color.White;
+            this.NotificacionEmail.WarningOptions.BorderColor = System.Drawing.Color.White;
+            this.NotificacionEmail.WarningOptions.CloseIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(229)))), ((int)(((byte)(143)))));
+            this.NotificacionEmail.WarningOptions.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.NotificacionEmail.WarningOptions.ForeColor = System.Drawing.Color.Black;
+            this.NotificacionEmail.WarningOptions.Icon = ((System.Drawing.Image)(resources.GetObject("resource.Icon3")));
+            this.NotificacionEmail.WarningOptions.IconLeftMargin = 12;
+            this.NotificacionEmail.ZoomCloseIcon = true;
             // 
             // DirecciónGmailForm
             // 
@@ -599,11 +671,11 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dirección Gmail";
             this.bunifuGradientPanel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).EndInit();
             this.bunifuGradientPanel1.ResumeLayout(false);
             this.bunifuGradientPanel1.PerformLayout();
             this.bunifuShadowPanel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -623,5 +695,6 @@
         public Bunifu.UI.WinForms.BunifuGradientPanel bunifuGradientPanel2;
         public Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel2;
         public Bunifu.UI.WinForms.BunifuPictureBox btnSalir;
+        public Bunifu.UI.WinForms.BunifuSnackbar NotificacionEmail;
     }
 }

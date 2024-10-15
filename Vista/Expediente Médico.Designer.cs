@@ -121,7 +121,7 @@
             this.lblDUI.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblDUI.AutoSize = true;
             this.lblDUI.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDUI.Location = new System.Drawing.Point(583, 12);
+            this.lblDUI.Location = new System.Drawing.Point(566, 12);
             this.lblDUI.Name = "lblDUI";
             this.lblDUI.Size = new System.Drawing.Size(43, 23);
             this.lblDUI.TabIndex = 192;
@@ -157,7 +157,7 @@
             this.txtDocumentoPaciente.IconRight = null;
             this.txtDocumentoPaciente.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtDocumentoPaciente.Lines = new string[0];
-            this.txtDocumentoPaciente.Location = new System.Drawing.Point(632, 4);
+            this.txtDocumentoPaciente.Location = new System.Drawing.Point(615, 4);
             this.txtDocumentoPaciente.MaxLength = 10;
             this.txtDocumentoPaciente.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtDocumentoPaciente.Modified = false;
@@ -456,7 +456,7 @@
             this.txtObservacion.SelectionLength = 0;
             this.txtObservacion.SelectionStart = 0;
             this.txtObservacion.ShortcutsEnabled = false;
-            this.txtObservacion.Size = new System.Drawing.Size(861, 60);
+            this.txtObservacion.Size = new System.Drawing.Size(844, 60);
             this.txtObservacion.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtObservacion.TabIndex = 8;
             this.txtObservacion.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -544,7 +544,7 @@
             this.txtVidaInterpersonal.SelectionLength = 0;
             this.txtVidaInterpersonal.SelectionStart = 0;
             this.txtVidaInterpersonal.ShortcutsEnabled = false;
-            this.txtVidaInterpersonal.Size = new System.Drawing.Size(861, 60);
+            this.txtVidaInterpersonal.Size = new System.Drawing.Size(844, 60);
             this.txtVidaInterpersonal.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtVidaInterpersonal.TabIndex = 3;
             this.txtVidaInterpersonal.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -622,7 +622,7 @@
             this.txtAtencionBrindada.SelectionLength = 0;
             this.txtAtencionBrindada.SelectionStart = 0;
             this.txtAtencionBrindada.ShortcutsEnabled = false;
-            this.txtAtencionBrindada.Size = new System.Drawing.Size(861, 60);
+            this.txtAtencionBrindada.Size = new System.Drawing.Size(844, 60);
             this.txtAtencionBrindada.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtAtencionBrindada.TabIndex = 10;
             this.txtAtencionBrindada.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -700,7 +700,7 @@
             this.txtAproximacionDiag.SelectionLength = 0;
             this.txtAproximacionDiag.SelectionStart = 0;
             this.txtAproximacionDiag.ShortcutsEnabled = false;
-            this.txtAproximacionDiag.Size = new System.Drawing.Size(861, 60);
+            this.txtAproximacionDiag.Size = new System.Drawing.Size(844, 60);
             this.txtAproximacionDiag.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtAproximacionDiag.TabIndex = 9;
             this.txtAproximacionDiag.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -828,7 +828,7 @@
             this.txtRiesgoValorado.SelectionLength = 0;
             this.txtRiesgoValorado.SelectionStart = 0;
             this.txtRiesgoValorado.ShortcutsEnabled = false;
-            this.txtRiesgoValorado.Size = new System.Drawing.Size(861, 60);
+            this.txtRiesgoValorado.Size = new System.Drawing.Size(844, 60);
             this.txtRiesgoValorado.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtRiesgoValorado.TabIndex = 7;
             this.txtRiesgoValorado.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -950,7 +950,7 @@
             this.txtPauta.SelectionLength = 0;
             this.txtPauta.SelectionStart = 0;
             this.txtPauta.ShortcutsEnabled = false;
-            this.txtPauta.Size = new System.Drawing.Size(861, 60);
+            this.txtPauta.Size = new System.Drawing.Size(844, 60);
             this.txtPauta.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtPauta.TabIndex = 6;
             this.txtPauta.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -1038,7 +1038,7 @@
             this.txtRedSocial.SelectionLength = 0;
             this.txtRedSocial.SelectionStart = 0;
             this.txtRedSocial.ShortcutsEnabled = false;
-            this.txtRedSocial.Size = new System.Drawing.Size(861, 60);
+            this.txtRedSocial.Size = new System.Drawing.Size(844, 60);
             this.txtRedSocial.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtRedSocial.TabIndex = 5;
             this.txtRedSocial.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -1146,7 +1146,7 @@
             this.txtCognicion.SelectionLength = 0;
             this.txtCognicion.SelectionStart = 0;
             this.txtCognicion.ShortcutsEnabled = false;
-            this.txtCognicion.Size = new System.Drawing.Size(861, 60);
+            this.txtCognicion.Size = new System.Drawing.Size(844, 60);
             this.txtCognicion.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtCognicion.TabIndex = 4;
             this.txtCognicion.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -1234,7 +1234,7 @@
             this.txtSomatizacion.SelectionLength = 0;
             this.txtSomatizacion.SelectionStart = 0;
             this.txtSomatizacion.ShortcutsEnabled = false;
-            this.txtSomatizacion.Size = new System.Drawing.Size(861, 60);
+            this.txtSomatizacion.Size = new System.Drawing.Size(844, 60);
             this.txtSomatizacion.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtSomatizacion.TabIndex = 2;
             this.txtSomatizacion.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -1322,7 +1322,7 @@
             this.txtEstadoConductual.SelectionLength = 0;
             this.txtEstadoConductual.SelectionStart = 0;
             this.txtEstadoConductual.ShortcutsEnabled = false;
-            this.txtEstadoConductual.Size = new System.Drawing.Size(861, 60);
+            this.txtEstadoConductual.Size = new System.Drawing.Size(844, 60);
             this.txtEstadoConductual.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtEstadoConductual.TabIndex = 1;
             this.txtEstadoConductual.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -1410,7 +1410,7 @@
             this.txtEstadoAnimo.SelectionLength = 0;
             this.txtEstadoAnimo.SelectionStart = 0;
             this.txtEstadoAnimo.ShortcutsEnabled = false;
-            this.txtEstadoAnimo.Size = new System.Drawing.Size(861, 60);
+            this.txtEstadoAnimo.Size = new System.Drawing.Size(844, 60);
             this.txtEstadoAnimo.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtEstadoAnimo.TabIndex = 0;
             this.txtEstadoAnimo.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;

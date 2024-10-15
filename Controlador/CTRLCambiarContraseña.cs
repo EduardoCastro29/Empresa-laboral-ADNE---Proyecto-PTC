@@ -29,6 +29,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                 if (ObjMetodosComunes.MetodoEncriptacionAES(ObjActualizarContraseña.txtContrasenaActual.Text) != InicioSesion.Contraseña)
                 {
                     MessageBox.Show("La contraseña actual no coincide, intentelo denuevo", "Actualización de contraseña", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    ObjActualizarContraseña.
                 }
                 else if (ObjActualizarContraseña.txtNuevaContra.Text != ObjActualizarContraseña.txtConfirmarContra.Text)
                 {

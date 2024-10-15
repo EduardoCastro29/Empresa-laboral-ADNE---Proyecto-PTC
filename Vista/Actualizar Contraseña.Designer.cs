@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ActualizarContraseñaForm));
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
@@ -60,6 +61,7 @@
             this.lblRestablecer = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuShadowPanel1 = new Bunifu.UI.WinForms.BunifuShadowPanel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.NotificacionContrasena = new Bunifu.UI.WinForms.BunifuSnackbar(this.components);
             this.bunifuGradientPanel1.SuspendLayout();
             this.bunifuShadowPanel2.SuspendLayout();
             this.bunifuShadowPanel3.SuspendLayout();
@@ -652,6 +654,76 @@
             this.panel1.Size = new System.Drawing.Size(995, 461);
             this.panel1.TabIndex = 3;
             // 
+            // NotificacionContrasena
+            // 
+            this.NotificacionContrasena.AllowDragging = false;
+            this.NotificacionContrasena.AllowMultipleViews = true;
+            this.NotificacionContrasena.ClickToClose = true;
+            this.NotificacionContrasena.DoubleClickToClose = true;
+            this.NotificacionContrasena.DurationAfterIdle = 3000;
+            this.NotificacionContrasena.ErrorOptions.ActionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.NotificacionContrasena.ErrorOptions.ActionBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.NotificacionContrasena.ErrorOptions.ActionBorderRadius = 1;
+            this.NotificacionContrasena.ErrorOptions.ActionFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.NotificacionContrasena.ErrorOptions.ActionForeColor = System.Drawing.Color.Black;
+            this.NotificacionContrasena.ErrorOptions.BackColor = System.Drawing.Color.White;
+            this.NotificacionContrasena.ErrorOptions.BorderColor = System.Drawing.Color.White;
+            this.NotificacionContrasena.ErrorOptions.CloseIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(199)))));
+            this.NotificacionContrasena.ErrorOptions.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NotificacionContrasena.ErrorOptions.ForeColor = System.Drawing.Color.Black;
+            this.NotificacionContrasena.ErrorOptions.Icon = ((System.Drawing.Image)(resources.GetObject("resource.Icon")));
+            this.NotificacionContrasena.ErrorOptions.IconLeftMargin = 12;
+            this.NotificacionContrasena.FadeCloseIcon = false;
+            this.NotificacionContrasena.Host = Bunifu.UI.WinForms.BunifuSnackbar.Hosts.FormOwner;
+            this.NotificacionContrasena.InformationOptions.ActionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.NotificacionContrasena.InformationOptions.ActionBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.NotificacionContrasena.InformationOptions.ActionBorderRadius = 1;
+            this.NotificacionContrasena.InformationOptions.ActionFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.NotificacionContrasena.InformationOptions.ActionForeColor = System.Drawing.Color.Black;
+            this.NotificacionContrasena.InformationOptions.BackColor = System.Drawing.Color.White;
+            this.NotificacionContrasena.InformationOptions.BorderColor = System.Drawing.Color.White;
+            this.NotificacionContrasena.InformationOptions.CloseIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(213)))), ((int)(((byte)(255)))));
+            this.NotificacionContrasena.InformationOptions.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NotificacionContrasena.InformationOptions.ForeColor = System.Drawing.Color.Black;
+            this.NotificacionContrasena.InformationOptions.Icon = ((System.Drawing.Image)(resources.GetObject("resource.Icon1")));
+            this.NotificacionContrasena.InformationOptions.IconLeftMargin = 12;
+            this.NotificacionContrasena.Margin = 10;
+            this.NotificacionContrasena.MaximumSize = new System.Drawing.Size(0, 0);
+            this.NotificacionContrasena.MaximumViews = 7;
+            this.NotificacionContrasena.MessageRightMargin = 15;
+            this.NotificacionContrasena.MessageTopMargin = 0;
+            this.NotificacionContrasena.MinimumSize = new System.Drawing.Size(0, 0);
+            this.NotificacionContrasena.ShowBorders = false;
+            this.NotificacionContrasena.ShowCloseIcon = false;
+            this.NotificacionContrasena.ShowIcon = true;
+            this.NotificacionContrasena.ShowShadows = true;
+            this.NotificacionContrasena.SuccessOptions.ActionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.NotificacionContrasena.SuccessOptions.ActionBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.NotificacionContrasena.SuccessOptions.ActionBorderRadius = 1;
+            this.NotificacionContrasena.SuccessOptions.ActionFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.NotificacionContrasena.SuccessOptions.ActionForeColor = System.Drawing.Color.Black;
+            this.NotificacionContrasena.SuccessOptions.BackColor = System.Drawing.Color.White;
+            this.NotificacionContrasena.SuccessOptions.BorderColor = System.Drawing.Color.White;
+            this.NotificacionContrasena.SuccessOptions.CloseIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(255)))), ((int)(((byte)(237)))));
+            this.NotificacionContrasena.SuccessOptions.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NotificacionContrasena.SuccessOptions.ForeColor = System.Drawing.Color.Black;
+            this.NotificacionContrasena.SuccessOptions.Icon = ((System.Drawing.Image)(resources.GetObject("resource.Icon2")));
+            this.NotificacionContrasena.SuccessOptions.IconLeftMargin = 12;
+            this.NotificacionContrasena.ViewsMargin = 7;
+            this.NotificacionContrasena.WarningOptions.ActionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.NotificacionContrasena.WarningOptions.ActionBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.NotificacionContrasena.WarningOptions.ActionBorderRadius = 1;
+            this.NotificacionContrasena.WarningOptions.ActionFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.NotificacionContrasena.WarningOptions.ActionForeColor = System.Drawing.Color.Black;
+            this.NotificacionContrasena.WarningOptions.BackColor = System.Drawing.Color.White;
+            this.NotificacionContrasena.WarningOptions.BorderColor = System.Drawing.Color.White;
+            this.NotificacionContrasena.WarningOptions.CloseIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(229)))), ((int)(((byte)(143)))));
+            this.NotificacionContrasena.WarningOptions.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NotificacionContrasena.WarningOptions.ForeColor = System.Drawing.Color.Black;
+            this.NotificacionContrasena.WarningOptions.Icon = ((System.Drawing.Image)(resources.GetObject("resource.Icon3")));
+            this.NotificacionContrasena.WarningOptions.IconLeftMargin = 12;
+            this.NotificacionContrasena.ZoomCloseIcon = true;
+            // 
             // ActualizarContraseñaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -704,5 +776,6 @@
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel3;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel2;
         public Bunifu.UI.WinForms.BunifuPictureBox btnSalir;
+        public Bunifu.UI.WinForms.BunifuSnackbar NotificacionContrasena;
     }
 }

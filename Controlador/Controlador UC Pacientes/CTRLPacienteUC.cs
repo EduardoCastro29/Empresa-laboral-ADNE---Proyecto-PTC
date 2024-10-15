@@ -420,7 +420,8 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador.ControladorUserControl
                     ObjInformacionPersonal.txtAspectosPreocupantes.Text.Length < 5)
                 {
                     //Si los datos no fueron ingresados correctamente, mostramos un mensaje de error
-                    MessageBox.Show("Error al modificar datos de  paciente, verifique si todos los datos han sido ingresados correctamente o cumple con la cantidad mínima de caracteres", "Actualizar Paciente", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    //MessageBox.Show("Error al modificar datos de paciente, verifique si todos los datos han sido ingresados correctamente o cumple con la cantidad mínima de caracteres", "Actualizar Paciente", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    ObjInformacionPersonal.NotificacionPaciente.Show(ObjInformacionPersonal, "Error al modificar datos de paciente, verifique si todos los datos han sido ingresados correctamente o cumple con la cantidad mínima de caracteres", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error);
                 }
                 else
                 {
@@ -451,22 +452,20 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador.ControladorUserControl
                         bool comprobar = ObjDAOActualizarInformacionPersonal.ActualizarInformacionPaciente();
                         if (comprobar == true)
                         {
-                            MessageBox.Show("Los datos han sido actualizados exitosamente",
-                                       "Proceso completado",
-                                       MessageBoxButtons.OK,
-                                       MessageBoxIcon.Information);
+                            //MessageBox.Show("Los datos han sido actualizados exitosamente","Proceso completado",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                            ObjInformacionPersonal.NotificacionPaciente.Show(ObjInformacionPersonal, "Los datos han sido actualizados exitosamente", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Success);
+
                         }
                         else
                         {
-                            MessageBox.Show("Los datos no pudieron ser actualizados",
-                                    "Proceso interrumpido",
-                                    MessageBoxButtons.OK,
-                                    MessageBoxIcon.Error);
+                            //MessageBox.Show("Los datos no pudieron ser actualizados","Proceso interrumpido",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                            ObjInformacionPersonal.NotificacionPaciente.Show(ObjInformacionPersonal, "Los datos no pudieron ser actualizados", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error);
                         }
                     }
                     else
                     {
-                        MessageBox.Show("El correo electrónico ingresado no posee una dirección de correo válida, verifique si contiene @ o dominio correcto", "Registro de Paciente", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        //MessageBox.Show("El correo electrónico ingresado no posee una dirección de correo válida, verifique si contiene @ o dominio correcto", "Registro de Paciente", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        ObjInformacionPersonal.NotificacionPaciente.Show(ObjInformacionPersonal, "El correo electrónico ingresado no posee una dirección de correo válida, verifique si contiene @ o dominio correcto", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error);
                     }
                 }
             }

@@ -85,7 +85,8 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             if (string.IsNullOrWhiteSpace(ObjDireccionGmailForm.txtIngresarEmail.Text.Trim()) ||
                 ObjVerificarCorreoUsuario.VerificarCorreoUsuario(ObjDireccionGmailForm.txtIngresarEmail.Text.Trim()) == null)
             {
-                MessageBox.Show("Por favor, ingrese un nombre de usuario/dirección de correo válida antes de seguir", "Recuperación de Contraseña", MessageBoxButtons.OK, MessageBoxIcon.Error);
+               //MessageBox.Show("Por favor, ingrese un nombre de usuario/dirección de correo válida antes de seguir", "Recuperación de Contraseña", MessageBoxButtons.OK, MessageBoxIcon.Error);
+               ObjDireccionGmailForm.NotificacionEmail.Show(ObjDireccionGmailForm, "Por favor, ingrese un nombre de usuario/dirección de correo válida antes de seguir", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error);
             }
             else
             {

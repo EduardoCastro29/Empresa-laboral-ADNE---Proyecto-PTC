@@ -17,10 +17,10 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             // Al presionar el boton Ver este dia Se carga el metodo asignado
             ObjActividadesForm.btnHistorial.Click += new EventHandler(AbrirHistorial);
             ObjActividadesForm.btnVerEsteDia.Click += new EventHandler(CargarGraficoEsteDia);
-            ObjActividadesForm.btnVerPersonalizadoDia.Click += new EventHandler(CargarGraficoUltimos7Dias);
+            ObjActividadesForm.btnVerPersonalizadoDia.Click += new EventHandler(CargarGraficoPersonalizado);
             ObjActividadesForm.btnVer30Dias.Click += new EventHandler(CargarGraficoUltimos30Dias);
             ObjActividadesForm.btnVerEsteMes.Click += new EventHandler(CargarGraficoEsteMes);
-            ObjActividadesForm.btnVer7Dias.Click += new EventHandler(CargarGraficoPersonalizado);
+            ObjActividadesForm.btnVer7Dias.Click += new EventHandler(CargarGraficoUltimos7Dias);
             ObjActividadesForm.btnOk.Click += new EventHandler(CargarGraficoPersonalizadoOK);
 
             ObjActividadesForm.btnEnviarRecordatorios.Click += new EventHandler(EnviarRecordatorios);
@@ -101,8 +101,8 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             ObjActividadesForm.dtFechaFinal.Value = DateTime.Now;
             ObjActividadesForm.btnVerPersonalizadoDia.Select();
 
-            CTRLActualizarCitasPerdidas();
             CargarSiguientePaciente();
+
             CargarIntervaloCitas();
         }
         private void CargarSiguientePaciente()
@@ -192,15 +192,11 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             }
         }
         #endregion
-        private void EnviarRecordatorios(object sender, EventArgs e)
+        public void EnviarRecordatorios(object sender, EventArgs e)
         {
             DAOActividades objDAO = new DAOActividades();
             objDAO.EnviarRecordatoriosCitasHoy();
-        }
-        private void CTRLActualizarCitasPerdidas()
-        {
-            DAOActividades objDao = new DAOActividades();
-            objDao.ActualizarCitasPerdidas();
+            ObjActividadesForm.Notificacion1.Show(ObjActividadesForm, "Los recordatorios han sido enviados correctamente", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Success);
         }
     }
 }

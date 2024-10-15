@@ -99,7 +99,8 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             if (ObjPrimerUsoSistema.dpCreacionEmpresa.Value.Date > DateTime.Today || ObjPrimerUsoSistema.dpCreacionEmpresa.Value.Date < DateTime.Today)
             {
                 // Mostrar un mensaje de advertencia
-                MessageBox.Show("La fecha de la creación de la empresa no puede ser una fecha futura o pasada", "Registro de Empresa", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                //MessageBox.Show("La fecha de la creación de la empresa no puede ser una fecha futura o pasada", "Registro de Empresa", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                ObjPrimerUsoSistema.NotificacionEmpresa.Show(ObjPrimerUsoSistema, "La fecha de la creación de la empresa no puede ser una fecha futura o pasada", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Warning);
 
                 // Restablecer la fecha al valor anterior o a la fecha actual
                 ObjPrimerUsoSistema.dpCreacionEmpresa.Value = DateTime.Today;
@@ -187,7 +188,8 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                     ObjPrimerUsoSistema.txtTelefono.Text.Length < 9 ||
                     ObjPrimerUsoSistema.txtPBX.Text.Length < 9)
                 {
-                    MessageBox.Show("Verifique si tiene campos vacios, la empresa no puede ser registrada sin datos faltantes o campos requeridos mínimos", "Regtistro de Empresa", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    //MessageBox.Show("Verifique si tiene campos vacios, la empresa no puede ser registrada sin datos faltantes o campos requeridos mínimos", "Regtistro de Empresa", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    ObjPrimerUsoSistema.NotificacionEmpresa.Show(ObjPrimerUsoSistema, "Verifique si tiene campos vacios, la empresa no puede ser registrada sin datos faltantes o campos requeridos mínimos", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Warning);
                 }
                 else
                 {
@@ -207,7 +209,8 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                     //Si la imagen escogida por el profesional es igual a null, mandamos un mensaje de error
                     if (ObjImagenEmpresa == null)
                     {
-                        MessageBox.Show("Verifique si tiene campos vacios, la empresa no puede ser registrada sin datos faltantes o campos requeridos mínimos", "Regtistro de Empresa", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        //MessageBox.Show("Verifique si tiene campos vacios, la empresa no puede ser registrada sin datos faltantes o campos requeridos mínimos", "Regtistro de Empresa", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        ObjPrimerUsoSistema.NotificacionEmpresa.Show(ObjPrimerUsoSistema, "Verifique si tiene campos vacios, la empresa no puede ser registrada sin datos faltantes o campos requeridos mínimos", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Warning);
                     }
                     else
                     {
@@ -226,26 +229,33 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                             ObjRegistrarEmpresa.CorreoElectronicoE = ObjPrimerUsoSistema.txtCorreoElectronico.Text.Trim();
                             if (ObjRegistrarEmpresa.RegistrarEmpresa() == true)
                             {
-                                MessageBox.Show("El registro de la empresa ha sido existoso, ahora procederemos a crear el primer usuario", "Regtistro de Empresa", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                //MessageBox.Show("El registro de la empresa ha sido existoso, ahora procederemos a crear el primer usuario", "Regtistro de Empresa", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                ObjPrimerUsoSistema.NotificacionEmpresa.Show(ObjPrimerUsoSistema, "El registro de la empresa ha sido existoso", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Success);
                                 RegistroForm ObjRegistrarPrimerUsuario = new RegistroForm();
                                 ObjPrimerUsoSistema.Hide();
                                 ObjRegistrarPrimerUsuario.Show();
                             }
                             else
                             {
-                                MessageBox.Show("No se pudo registrar la empresa, verifique si todos los campos han sido ingresados correctamente", "Regtistro de Empresa", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                //MessageBox.Show("No se pudo registrar la empresa, verifique si todos los campos han sido ingresados correctamente", "Regtistro de Empresa", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                ObjPrimerUsoSistema.NotificacionEmpresa.Show(ObjPrimerUsoSistema, "No se pudo registrar la empresa, verifique si todos los campos han sido ingresados correctamente", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error);
+
                             }
                         }
                         else
                         {
-                            MessageBox.Show("El correo electrónico ingresado no posee una dirección de correo válida, verifique si contiene @ o dominio correcto", "Primer Usuario", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            //MessageBox.Show("El correo electrónico ingresado no posee una dirección de correo válida, verifique si contiene @ o dominio correcto", "Primer Usuario", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            ObjPrimerUsoSistema.NotificacionEmpresa.Show(ObjPrimerUsoSistema, "El correo electrónico ingresado no posee una dirección de correo válida, verifique si contiene @ o dominio correcto", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error);
+
                         }
                     }
                 }
             }
             catch (Exception)
             {
-                MessageBox.Show("Verifique si tiene campos vacios, la empresa no puede ser registrada sin datos faltantes o campos requeridos mínimos", "Regtistro de Empresa", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                //MessageBox.Show("Verifique si tiene campos vacios, la empresa no puede ser registrada sin datos faltantes o campos requeridos mínimos", "Regtistro de Empresa", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                ObjPrimerUsoSistema.NotificacionEmpresa.Show(ObjPrimerUsoSistema, "Verifique si tiene campos vacios, la empresa no puede ser registrada sin datos faltantes o campos requeridos mínimos", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Warning);
+
             }
         }
         #endregion

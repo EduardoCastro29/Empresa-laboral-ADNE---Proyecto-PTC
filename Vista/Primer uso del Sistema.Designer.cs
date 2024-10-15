@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PrimerUsoSistemaForm));
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
@@ -70,6 +71,7 @@
             this.txtDireccion = new Bunifu.UI.WinForms.BunifuTextBox();
             this.txtNombreEmpresa = new Bunifu.UI.WinForms.BunifuTextBox();
             this.ofdImagen = new System.Windows.Forms.OpenFileDialog();
+            this.NotificacionEmpresa = new Bunifu.UI.WinForms.BunifuSnackbar(this.components);
             this.pnlFondo.SuspendLayout();
             this.pnlFormularioPrimerUso.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).BeginInit();
@@ -855,6 +857,76 @@
             // 
             this.ofdImagen.FileName = "ofdImagen";
             // 
+            // NotificacionEmpresa
+            // 
+            this.NotificacionEmpresa.AllowDragging = false;
+            this.NotificacionEmpresa.AllowMultipleViews = true;
+            this.NotificacionEmpresa.ClickToClose = true;
+            this.NotificacionEmpresa.DoubleClickToClose = true;
+            this.NotificacionEmpresa.DurationAfterIdle = 3000;
+            this.NotificacionEmpresa.ErrorOptions.ActionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.NotificacionEmpresa.ErrorOptions.ActionBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.NotificacionEmpresa.ErrorOptions.ActionBorderRadius = 1;
+            this.NotificacionEmpresa.ErrorOptions.ActionFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.NotificacionEmpresa.ErrorOptions.ActionForeColor = System.Drawing.Color.Black;
+            this.NotificacionEmpresa.ErrorOptions.BackColor = System.Drawing.Color.White;
+            this.NotificacionEmpresa.ErrorOptions.BorderColor = System.Drawing.Color.White;
+            this.NotificacionEmpresa.ErrorOptions.CloseIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(199)))));
+            this.NotificacionEmpresa.ErrorOptions.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NotificacionEmpresa.ErrorOptions.ForeColor = System.Drawing.Color.Black;
+            this.NotificacionEmpresa.ErrorOptions.Icon = ((System.Drawing.Image)(resources.GetObject("resource.Icon")));
+            this.NotificacionEmpresa.ErrorOptions.IconLeftMargin = 12;
+            this.NotificacionEmpresa.FadeCloseIcon = false;
+            this.NotificacionEmpresa.Host = Bunifu.UI.WinForms.BunifuSnackbar.Hosts.FormOwner;
+            this.NotificacionEmpresa.InformationOptions.ActionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.NotificacionEmpresa.InformationOptions.ActionBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.NotificacionEmpresa.InformationOptions.ActionBorderRadius = 1;
+            this.NotificacionEmpresa.InformationOptions.ActionFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.NotificacionEmpresa.InformationOptions.ActionForeColor = System.Drawing.Color.Black;
+            this.NotificacionEmpresa.InformationOptions.BackColor = System.Drawing.Color.White;
+            this.NotificacionEmpresa.InformationOptions.BorderColor = System.Drawing.Color.White;
+            this.NotificacionEmpresa.InformationOptions.CloseIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(213)))), ((int)(((byte)(255)))));
+            this.NotificacionEmpresa.InformationOptions.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NotificacionEmpresa.InformationOptions.ForeColor = System.Drawing.Color.Black;
+            this.NotificacionEmpresa.InformationOptions.Icon = ((System.Drawing.Image)(resources.GetObject("resource.Icon1")));
+            this.NotificacionEmpresa.InformationOptions.IconLeftMargin = 12;
+            this.NotificacionEmpresa.Margin = 10;
+            this.NotificacionEmpresa.MaximumSize = new System.Drawing.Size(0, 0);
+            this.NotificacionEmpresa.MaximumViews = 7;
+            this.NotificacionEmpresa.MessageRightMargin = 15;
+            this.NotificacionEmpresa.MessageTopMargin = 0;
+            this.NotificacionEmpresa.MinimumSize = new System.Drawing.Size(0, 0);
+            this.NotificacionEmpresa.ShowBorders = false;
+            this.NotificacionEmpresa.ShowCloseIcon = false;
+            this.NotificacionEmpresa.ShowIcon = true;
+            this.NotificacionEmpresa.ShowShadows = true;
+            this.NotificacionEmpresa.SuccessOptions.ActionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.NotificacionEmpresa.SuccessOptions.ActionBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.NotificacionEmpresa.SuccessOptions.ActionBorderRadius = 1;
+            this.NotificacionEmpresa.SuccessOptions.ActionFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.NotificacionEmpresa.SuccessOptions.ActionForeColor = System.Drawing.Color.Black;
+            this.NotificacionEmpresa.SuccessOptions.BackColor = System.Drawing.Color.White;
+            this.NotificacionEmpresa.SuccessOptions.BorderColor = System.Drawing.Color.White;
+            this.NotificacionEmpresa.SuccessOptions.CloseIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(255)))), ((int)(((byte)(237)))));
+            this.NotificacionEmpresa.SuccessOptions.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NotificacionEmpresa.SuccessOptions.ForeColor = System.Drawing.Color.Black;
+            this.NotificacionEmpresa.SuccessOptions.Icon = ((System.Drawing.Image)(resources.GetObject("resource.Icon2")));
+            this.NotificacionEmpresa.SuccessOptions.IconLeftMargin = 12;
+            this.NotificacionEmpresa.ViewsMargin = 7;
+            this.NotificacionEmpresa.WarningOptions.ActionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.NotificacionEmpresa.WarningOptions.ActionBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.NotificacionEmpresa.WarningOptions.ActionBorderRadius = 1;
+            this.NotificacionEmpresa.WarningOptions.ActionFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.NotificacionEmpresa.WarningOptions.ActionForeColor = System.Drawing.Color.Black;
+            this.NotificacionEmpresa.WarningOptions.BackColor = System.Drawing.Color.White;
+            this.NotificacionEmpresa.WarningOptions.BorderColor = System.Drawing.Color.White;
+            this.NotificacionEmpresa.WarningOptions.CloseIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(229)))), ((int)(((byte)(143)))));
+            this.NotificacionEmpresa.WarningOptions.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NotificacionEmpresa.WarningOptions.ForeColor = System.Drawing.Color.Black;
+            this.NotificacionEmpresa.WarningOptions.Icon = ((System.Drawing.Image)(resources.GetObject("resource.Icon3")));
+            this.NotificacionEmpresa.WarningOptions.IconLeftMargin = 12;
+            this.NotificacionEmpresa.ZoomCloseIcon = true;
+            // 
             // PrimerUsoSistemaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -897,5 +969,6 @@
         public Bunifu.UI.WinForms.BunifuTextBox txtNombreEmpresa;
         public Bunifu.UI.WinForms.BunifuGradientPanel pnlFondo;
         public System.Windows.Forms.OpenFileDialog ofdImagen;
+        public Bunifu.UI.WinForms.BunifuSnackbar NotificacionEmpresa;
     }
 }

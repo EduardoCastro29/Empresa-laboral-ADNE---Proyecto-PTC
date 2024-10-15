@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PindeAccesoForm));
             Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
@@ -36,6 +37,7 @@
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             this.bunifuGradientPanel2 = new Bunifu.UI.WinForms.BunifuGradientPanel();
+            this.btnSalir = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.bunifuGradientPanel1 = new Bunifu.UI.WinForms.BunifuGradientPanel();
             this.btnSiguiente = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.lblPinAcceso = new Bunifu.UI.WinForms.BunifuLabel();
@@ -46,12 +48,12 @@
             this.Titulo_Registrar = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuShadowPanel1 = new Bunifu.UI.WinForms.BunifuShadowPanel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnSalir = new Bunifu.UI.WinForms.BunifuPictureBox();
+            this.NotificacionPin = new Bunifu.UI.WinForms.BunifuSnackbar(this.components);
             this.bunifuGradientPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).BeginInit();
             this.bunifuGradientPanel1.SuspendLayout();
             this.bunifuShadowPanel3.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuGradientPanel2
@@ -73,6 +75,24 @@
             this.bunifuGradientPanel2.Quality = 10;
             this.bunifuGradientPanel2.Size = new System.Drawing.Size(1080, 500);
             this.bunifuGradientPanel2.TabIndex = 999;
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.AllowFocused = false;
+            this.btnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSalir.AutoSizeHeight = true;
+            this.btnSalir.BorderRadius = 0;
+            this.btnSalir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSalir.Image = global::Empresa_laboral_ADNE___Proyecto_PTC.Properties.Resources.Cerrar_Login;
+            this.btnSalir.IsCircle = true;
+            this.btnSalir.Location = new System.Drawing.Point(1037, 16);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(27, 27);
+            this.btnSalir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnSalir.TabIndex = 1000;
+            this.btnSalir.TabStop = false;
+            this.btnSalir.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Square;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // bunifuGradientPanel1
             // 
@@ -464,23 +484,75 @@
             this.panel1.Size = new System.Drawing.Size(1080, 500);
             this.panel1.TabIndex = 5;
             // 
-            // btnSalir
+            // NotificacionPin
             // 
-            this.btnSalir.AllowFocused = false;
-            this.btnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSalir.AutoSizeHeight = true;
-            this.btnSalir.BorderRadius = 0;
-            this.btnSalir.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSalir.Image = global::Empresa_laboral_ADNE___Proyecto_PTC.Properties.Resources.Cerrar_Login;
-            this.btnSalir.IsCircle = true;
-            this.btnSalir.Location = new System.Drawing.Point(1037, 16);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(27, 27);
-            this.btnSalir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnSalir.TabIndex = 1000;
-            this.btnSalir.TabStop = false;
-            this.btnSalir.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Square;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            this.NotificacionPin.AllowDragging = false;
+            this.NotificacionPin.AllowMultipleViews = true;
+            this.NotificacionPin.ClickToClose = true;
+            this.NotificacionPin.DoubleClickToClose = true;
+            this.NotificacionPin.DurationAfterIdle = 3000;
+            this.NotificacionPin.ErrorOptions.ActionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.NotificacionPin.ErrorOptions.ActionBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.NotificacionPin.ErrorOptions.ActionBorderRadius = 1;
+            this.NotificacionPin.ErrorOptions.ActionFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.NotificacionPin.ErrorOptions.ActionForeColor = System.Drawing.Color.Black;
+            this.NotificacionPin.ErrorOptions.BackColor = System.Drawing.Color.White;
+            this.NotificacionPin.ErrorOptions.BorderColor = System.Drawing.Color.White;
+            this.NotificacionPin.ErrorOptions.CloseIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(199)))));
+            this.NotificacionPin.ErrorOptions.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NotificacionPin.ErrorOptions.ForeColor = System.Drawing.Color.Black;
+            this.NotificacionPin.ErrorOptions.Icon = ((System.Drawing.Image)(resources.GetObject("resource.Icon")));
+            this.NotificacionPin.ErrorOptions.IconLeftMargin = 12;
+            this.NotificacionPin.FadeCloseIcon = false;
+            this.NotificacionPin.Host = Bunifu.UI.WinForms.BunifuSnackbar.Hosts.FormOwner;
+            this.NotificacionPin.InformationOptions.ActionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.NotificacionPin.InformationOptions.ActionBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.NotificacionPin.InformationOptions.ActionBorderRadius = 1;
+            this.NotificacionPin.InformationOptions.ActionFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.NotificacionPin.InformationOptions.ActionForeColor = System.Drawing.Color.Black;
+            this.NotificacionPin.InformationOptions.BackColor = System.Drawing.Color.White;
+            this.NotificacionPin.InformationOptions.BorderColor = System.Drawing.Color.White;
+            this.NotificacionPin.InformationOptions.CloseIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(213)))), ((int)(((byte)(255)))));
+            this.NotificacionPin.InformationOptions.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.NotificacionPin.InformationOptions.ForeColor = System.Drawing.Color.Black;
+            this.NotificacionPin.InformationOptions.Icon = ((System.Drawing.Image)(resources.GetObject("resource.Icon1")));
+            this.NotificacionPin.InformationOptions.IconLeftMargin = 12;
+            this.NotificacionPin.Margin = 10;
+            this.NotificacionPin.MaximumSize = new System.Drawing.Size(0, 0);
+            this.NotificacionPin.MaximumViews = 7;
+            this.NotificacionPin.MessageRightMargin = 15;
+            this.NotificacionPin.MessageTopMargin = 0;
+            this.NotificacionPin.MinimumSize = new System.Drawing.Size(0, 0);
+            this.NotificacionPin.ShowBorders = false;
+            this.NotificacionPin.ShowCloseIcon = false;
+            this.NotificacionPin.ShowIcon = true;
+            this.NotificacionPin.ShowShadows = true;
+            this.NotificacionPin.SuccessOptions.ActionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.NotificacionPin.SuccessOptions.ActionBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.NotificacionPin.SuccessOptions.ActionBorderRadius = 1;
+            this.NotificacionPin.SuccessOptions.ActionFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.NotificacionPin.SuccessOptions.ActionForeColor = System.Drawing.Color.Black;
+            this.NotificacionPin.SuccessOptions.BackColor = System.Drawing.Color.White;
+            this.NotificacionPin.SuccessOptions.BorderColor = System.Drawing.Color.White;
+            this.NotificacionPin.SuccessOptions.CloseIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(255)))), ((int)(((byte)(237)))));
+            this.NotificacionPin.SuccessOptions.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.NotificacionPin.SuccessOptions.ForeColor = System.Drawing.Color.Black;
+            this.NotificacionPin.SuccessOptions.Icon = ((System.Drawing.Image)(resources.GetObject("resource.Icon2")));
+            this.NotificacionPin.SuccessOptions.IconLeftMargin = 12;
+            this.NotificacionPin.ViewsMargin = 7;
+            this.NotificacionPin.WarningOptions.ActionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.NotificacionPin.WarningOptions.ActionBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.NotificacionPin.WarningOptions.ActionBorderRadius = 1;
+            this.NotificacionPin.WarningOptions.ActionFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.NotificacionPin.WarningOptions.ActionForeColor = System.Drawing.Color.Black;
+            this.NotificacionPin.WarningOptions.BackColor = System.Drawing.Color.White;
+            this.NotificacionPin.WarningOptions.BorderColor = System.Drawing.Color.White;
+            this.NotificacionPin.WarningOptions.CloseIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(229)))), ((int)(((byte)(143)))));
+            this.NotificacionPin.WarningOptions.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.NotificacionPin.WarningOptions.ForeColor = System.Drawing.Color.Black;
+            this.NotificacionPin.WarningOptions.Icon = ((System.Drawing.Image)(resources.GetObject("resource.Icon3")));
+            this.NotificacionPin.WarningOptions.IconLeftMargin = 12;
+            this.NotificacionPin.ZoomCloseIcon = true;
             // 
             // PindeAccesoForm
             // 
@@ -496,11 +568,11 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pin de Acceso";
             this.bunifuGradientPanel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).EndInit();
             this.bunifuGradientPanel1.ResumeLayout(false);
             this.bunifuGradientPanel1.PerformLayout();
             this.bunifuShadowPanel3.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -518,5 +590,6 @@
         public Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel1;
         public Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel3;
         public Bunifu.UI.WinForms.BunifuPictureBox btnSalir;
+        public Bunifu.UI.WinForms.BunifuSnackbar NotificacionPin;
     }
 }

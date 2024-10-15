@@ -25,14 +25,14 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
         }
         private void DesabilitarAutenticacionConexion(object Sender, EventArgs e)
         {
-            if(ObjAgregarConexion.rbHabilitar.Checked == true)
+            if (ObjAgregarConexion.rbDesabilitar.Checked == true)
             {
                 ObjAgregarConexion.pnlAutenticacion.Enabled = true;
             }
         }
         private void ActivarAutenticacionConexion(object Sender, EventArgs e)
         {
-            if (ObjAgregarConexion.rbDesabilitar.Checked == true)
+            if (ObjAgregarConexion.rbHabilitar.Checked == true)
             {
                 ObjAgregarConexion.pnlAutenticacion.Enabled = false;
                 ObjAgregarConexion.txtAutenticacion.Clear();
@@ -97,7 +97,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                     ObjROOTContrasena.InnerText = CodigoContrasena;
                     ObjROOTEtiquetaPrincipal.AppendChild(ObjROOTContrasena);
 
-                    ObjConexion = Conexion.ProbarConexionXMLOnline(ObjAgregarConexion.txtServidorURL.Text.Trim(), ObjAgregarConexion.txtBaseDeDatos.Text.Trim                                              (), ObjAgregarConexion.txtAutenticacion.Text.Trim(), ObjAgregarConexion.txtContrasena.Text.Trim());
+                    ObjConexion = Conexion.ProbarConexionXMLOnline(ObjAgregarConexion.txtServidorURL.Text.Trim(), ObjAgregarConexion.txtBaseDeDatos.Text.Trim(), ObjAgregarConexion.txtAutenticacion.Text.Trim(), ObjAgregarConexion.txtContrasena.Text.Trim());
                 }
                 else
                 {
@@ -109,7 +109,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                     ObjROOTContrasena.InnerText = string.Empty;
                     ObjROOTEtiquetaPrincipal.AppendChild(ObjROOTContrasena);
 
-                    ObjConexion = Conexion.ProbarConexionXMLLocal(ObjAgregarConexion.txtServidorURL.Text.Trim(), ObjAgregarConexion.txtBaseDeDatos.Text.Trim                                              ());
+                    ObjConexion = Conexion.ProbarConexionXMLLocal(ObjAgregarConexion.txtServidorURL.Text.Trim(), ObjAgregarConexion.txtBaseDeDatos.Text.Trim());
                 }
 
                 //Creamos una instancia de SQLConnection la cuál nos permitirá probar el archivo de conexión

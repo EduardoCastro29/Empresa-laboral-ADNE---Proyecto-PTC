@@ -57,11 +57,14 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
 
                 if (ObjActualizarForm.txtNuevaContrasena.Text != ObjActualizarForm.txtConfirmarContrasena.Text)
                 {
-                    MessageBox.Show("Las credenciales no coinciden", "Actualización de contraseña", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    //MessageBox.Show("Las credenciales no coinciden", "Actualización de contraseña", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    ObjActualizarForm.NotificacionContrasena.Show(ObjActualizarForm, "Las credenciales no coinciden", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Warning);
                 }
                 else if (ObjMetodosComunes.ValidarContrasena(ObjActualizarForm.txtConfirmarContrasena.Text) == false)
                 {
-                    MessageBox.Show("La contraseña ingresada no cumple con los requisitos de seguridad", "Actualización de contraseña", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    //MessageBox.Show("La contraseña ingresada no cumple con los requisitos de seguridad", "Actualización de contraseña", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    ObjActualizarForm.NotificacionContrasena.Show(ObjActualizarForm, "La contraseña ingresada no cumple con los requisitos de seguridad", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error);
+
                 }
                 else
                 {

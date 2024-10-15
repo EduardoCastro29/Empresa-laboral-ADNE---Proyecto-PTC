@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InformaciónPersonalForm));
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
@@ -126,6 +127,7 @@
             this.lblDocumento = new System.Windows.Forms.Label();
             this.txtDocumentoPresentado = new Bunifu.UI.WinForms.BunifuTextBox();
             this.btnVerEncargado = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
+            this.NotificacionPaciente = new Bunifu.UI.WinForms.BunifuSnackbar(this.components);
             this.bunifuGradientPanel2.SuspendLayout();
             this.bunifuGradientPanel3.SuspendLayout();
             this.SuspendLayout();
@@ -180,7 +182,7 @@
             this.txtDomicilio.IconRight = null;
             this.txtDomicilio.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtDomicilio.Lines = new string[0];
-            this.txtDomicilio.Location = new System.Drawing.Point(44, 378);
+            this.txtDomicilio.Location = new System.Drawing.Point(36, 378);
             this.txtDomicilio.MaxLength = 300;
             this.txtDomicilio.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtDomicilio.Modified = false;
@@ -287,7 +289,7 @@
             this.txtEdad.IconRight = null;
             this.txtEdad.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtEdad.Lines = new string[0];
-            this.txtEdad.Location = new System.Drawing.Point(541, 299);
+            this.txtEdad.Location = new System.Drawing.Point(533, 299);
             this.txtEdad.MaxLength = 3;
             this.txtEdad.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtEdad.Modified = false;
@@ -395,7 +397,7 @@
             this.txtComposicionFamiliar.IconRight = null;
             this.txtComposicionFamiliar.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtComposicionFamiliar.Lines = new string[0];
-            this.txtComposicionFamiliar.Location = new System.Drawing.Point(44, 453);
+            this.txtComposicionFamiliar.Location = new System.Drawing.Point(36, 453);
             this.txtComposicionFamiliar.MaxLength = 125;
             this.txtComposicionFamiliar.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtComposicionFamiliar.Modified = false;
@@ -482,7 +484,7 @@
             this.txtMotivoIntervencion.IconRight = null;
             this.txtMotivoIntervencion.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtMotivoIntervencion.Lines = new string[0];
-            this.txtMotivoIntervencion.Location = new System.Drawing.Point(46, 534);
+            this.txtMotivoIntervencion.Location = new System.Drawing.Point(38, 534);
             this.txtMotivoIntervencion.MaxLength = 300;
             this.txtMotivoIntervencion.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtMotivoIntervencion.Modified = false;
@@ -569,7 +571,7 @@
             this.txtAntecedentes.IconRight = null;
             this.txtAntecedentes.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtAntecedentes.Lines = new string[0];
-            this.txtAntecedentes.Location = new System.Drawing.Point(44, 662);
+            this.txtAntecedentes.Location = new System.Drawing.Point(36, 662);
             this.txtAntecedentes.MaxLength = 300;
             this.txtAntecedentes.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtAntecedentes.Modified = false;
@@ -656,7 +658,7 @@
             this.txtDescripcion.IconRight = null;
             this.txtDescripcion.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtDescripcion.Lines = new string[0];
-            this.txtDescripcion.Location = new System.Drawing.Point(44, 788);
+            this.txtDescripcion.Location = new System.Drawing.Point(36, 788);
             this.txtDescripcion.MaxLength = 300;
             this.txtDescripcion.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtDescripcion.Modified = false;
@@ -743,7 +745,7 @@
             this.txtAspectosPreocupantes.IconRight = null;
             this.txtAspectosPreocupantes.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtAspectosPreocupantes.Lines = new string[0];
-            this.txtAspectosPreocupantes.Location = new System.Drawing.Point(44, 912);
+            this.txtAspectosPreocupantes.Location = new System.Drawing.Point(36, 912);
             this.txtAspectosPreocupantes.MaxLength = 300;
             this.txtAspectosPreocupantes.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtAspectosPreocupantes.Modified = false;
@@ -1040,7 +1042,7 @@
             this.txtProfesion.IconRight = null;
             this.txtProfesion.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtProfesion.Lines = new string[0];
-            this.txtProfesion.Location = new System.Drawing.Point(578, 147);
+            this.txtProfesion.Location = new System.Drawing.Point(570, 147);
             this.txtProfesion.MaxLength = 100;
             this.txtProfesion.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtProfesion.Modified = false;
@@ -1109,7 +1111,7 @@
             this.dtFechaNacimiento.IconColor = System.Drawing.Color.Teal;
             this.dtFechaNacimiento.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
             this.dtFechaNacimiento.LeftTextMargin = 5;
-            this.dtFechaNacimiento.Location = new System.Drawing.Point(44, 309);
+            this.dtFechaNacimiento.Location = new System.Drawing.Point(36, 309);
             this.dtFechaNacimiento.MinimumSize = new System.Drawing.Size(4, 32);
             this.dtFechaNacimiento.Name = "dtFechaNacimiento";
             this.dtFechaNacimiento.Size = new System.Drawing.Size(401, 32);
@@ -1175,7 +1177,7 @@
             this.txtApellidoPaciente.IconRight = null;
             this.txtApellidoPaciente.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtApellidoPaciente.Lines = new string[0];
-            this.txtApellidoPaciente.Location = new System.Drawing.Point(472, 45);
+            this.txtApellidoPaciente.Location = new System.Drawing.Point(464, 45);
             this.txtApellidoPaciente.MaxLength = 65;
             this.txtApellidoPaciente.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtApellidoPaciente.Modified = false;
@@ -1252,7 +1254,7 @@
             this.txtNacionalidad.IconRight = null;
             this.txtNacionalidad.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtNacionalidad.Lines = new string[0];
-            this.txtNacionalidad.Location = new System.Drawing.Point(192, 96);
+            this.txtNacionalidad.Location = new System.Drawing.Point(184, 96);
             this.txtNacionalidad.MaxLength = 125;
             this.txtNacionalidad.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtNacionalidad.Modified = false;
@@ -1339,7 +1341,7 @@
             this.txtCorreoElectronico.IconRight = null;
             this.txtCorreoElectronico.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtCorreoElectronico.Lines = new string[0];
-            this.txtCorreoElectronico.Location = new System.Drawing.Point(472, 229);
+            this.txtCorreoElectronico.Location = new System.Drawing.Point(464, 229);
             this.txtCorreoElectronico.MaxLength = 125;
             this.txtCorreoElectronico.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtCorreoElectronico.Modified = false;
@@ -1416,7 +1418,7 @@
             this.txtNombrePaciente.IconRight = null;
             this.txtNombrePaciente.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtNombrePaciente.Lines = new string[0];
-            this.txtNombrePaciente.Location = new System.Drawing.Point(44, 45);
+            this.txtNombrePaciente.Location = new System.Drawing.Point(36, 45);
             this.txtNombrePaciente.MaxLength = 65;
             this.txtNombrePaciente.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtNombrePaciente.Modified = false;
@@ -1500,7 +1502,7 @@
             this.cmbGeneroId.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
             this.cmbGeneroId.ItemHighLightForeColor = System.Drawing.Color.White;
             this.cmbGeneroId.ItemTopMargin = 3;
-            this.cmbGeneroId.Location = new System.Drawing.Point(150, 153);
+            this.cmbGeneroId.Location = new System.Drawing.Point(142, 153);
             this.cmbGeneroId.Name = "cmbGeneroId";
             this.cmbGeneroId.Size = new System.Drawing.Size(295, 32);
             this.cmbGeneroId.TabIndex = 4;
@@ -1538,7 +1540,7 @@
             this.txtTelefono1.IconRight = null;
             this.txtTelefono1.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtTelefono1.Lines = new string[0];
-            this.txtTelefono1.Location = new System.Drawing.Point(44, 229);
+            this.txtTelefono1.Location = new System.Drawing.Point(36, 229);
             this.txtTelefono1.MaxLength = 12;
             this.txtTelefono1.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtTelefono1.Modified = false;
@@ -1625,7 +1627,7 @@
             this.txtDocumentoPresentado.IconRight = null;
             this.txtDocumentoPresentado.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtDocumentoPresentado.Lines = new string[0];
-            this.txtDocumentoPresentado.Location = new System.Drawing.Point(609, 96);
+            this.txtDocumentoPresentado.Location = new System.Drawing.Point(601, 96);
             this.txtDocumentoPresentado.MaxLength = 11;
             this.txtDocumentoPresentado.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtDocumentoPresentado.Modified = false;
@@ -1761,6 +1763,76 @@
             this.btnVerEncargado.TextPadding = new System.Windows.Forms.Padding(0);
             this.btnVerEncargado.UseDefaultRadiusAndThickness = true;
             // 
+            // NotificacionPaciente
+            // 
+            this.NotificacionPaciente.AllowDragging = false;
+            this.NotificacionPaciente.AllowMultipleViews = true;
+            this.NotificacionPaciente.ClickToClose = true;
+            this.NotificacionPaciente.DoubleClickToClose = true;
+            this.NotificacionPaciente.DurationAfterIdle = 3000;
+            this.NotificacionPaciente.ErrorOptions.ActionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.NotificacionPaciente.ErrorOptions.ActionBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.NotificacionPaciente.ErrorOptions.ActionBorderRadius = 1;
+            this.NotificacionPaciente.ErrorOptions.ActionFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.NotificacionPaciente.ErrorOptions.ActionForeColor = System.Drawing.Color.Black;
+            this.NotificacionPaciente.ErrorOptions.BackColor = System.Drawing.Color.White;
+            this.NotificacionPaciente.ErrorOptions.BorderColor = System.Drawing.Color.White;
+            this.NotificacionPaciente.ErrorOptions.CloseIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(199)))));
+            this.NotificacionPaciente.ErrorOptions.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NotificacionPaciente.ErrorOptions.ForeColor = System.Drawing.Color.Black;
+            this.NotificacionPaciente.ErrorOptions.Icon = ((System.Drawing.Image)(resources.GetObject("resource.Icon")));
+            this.NotificacionPaciente.ErrorOptions.IconLeftMargin = 12;
+            this.NotificacionPaciente.FadeCloseIcon = false;
+            this.NotificacionPaciente.Host = Bunifu.UI.WinForms.BunifuSnackbar.Hosts.FormOwner;
+            this.NotificacionPaciente.InformationOptions.ActionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.NotificacionPaciente.InformationOptions.ActionBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.NotificacionPaciente.InformationOptions.ActionBorderRadius = 1;
+            this.NotificacionPaciente.InformationOptions.ActionFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.NotificacionPaciente.InformationOptions.ActionForeColor = System.Drawing.Color.Black;
+            this.NotificacionPaciente.InformationOptions.BackColor = System.Drawing.Color.White;
+            this.NotificacionPaciente.InformationOptions.BorderColor = System.Drawing.Color.White;
+            this.NotificacionPaciente.InformationOptions.CloseIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(213)))), ((int)(((byte)(255)))));
+            this.NotificacionPaciente.InformationOptions.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NotificacionPaciente.InformationOptions.ForeColor = System.Drawing.Color.Black;
+            this.NotificacionPaciente.InformationOptions.Icon = ((System.Drawing.Image)(resources.GetObject("resource.Icon1")));
+            this.NotificacionPaciente.InformationOptions.IconLeftMargin = 12;
+            this.NotificacionPaciente.Margin = 10;
+            this.NotificacionPaciente.MaximumSize = new System.Drawing.Size(0, 0);
+            this.NotificacionPaciente.MaximumViews = 7;
+            this.NotificacionPaciente.MessageRightMargin = 15;
+            this.NotificacionPaciente.MessageTopMargin = 0;
+            this.NotificacionPaciente.MinimumSize = new System.Drawing.Size(0, 0);
+            this.NotificacionPaciente.ShowBorders = false;
+            this.NotificacionPaciente.ShowCloseIcon = false;
+            this.NotificacionPaciente.ShowIcon = true;
+            this.NotificacionPaciente.ShowShadows = true;
+            this.NotificacionPaciente.SuccessOptions.ActionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.NotificacionPaciente.SuccessOptions.ActionBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.NotificacionPaciente.SuccessOptions.ActionBorderRadius = 1;
+            this.NotificacionPaciente.SuccessOptions.ActionFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.NotificacionPaciente.SuccessOptions.ActionForeColor = System.Drawing.Color.Black;
+            this.NotificacionPaciente.SuccessOptions.BackColor = System.Drawing.Color.White;
+            this.NotificacionPaciente.SuccessOptions.BorderColor = System.Drawing.Color.White;
+            this.NotificacionPaciente.SuccessOptions.CloseIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(255)))), ((int)(((byte)(237)))));
+            this.NotificacionPaciente.SuccessOptions.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NotificacionPaciente.SuccessOptions.ForeColor = System.Drawing.Color.Black;
+            this.NotificacionPaciente.SuccessOptions.Icon = ((System.Drawing.Image)(resources.GetObject("resource.Icon2")));
+            this.NotificacionPaciente.SuccessOptions.IconLeftMargin = 12;
+            this.NotificacionPaciente.ViewsMargin = 7;
+            this.NotificacionPaciente.WarningOptions.ActionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.NotificacionPaciente.WarningOptions.ActionBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.NotificacionPaciente.WarningOptions.ActionBorderRadius = 1;
+            this.NotificacionPaciente.WarningOptions.ActionFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.NotificacionPaciente.WarningOptions.ActionForeColor = System.Drawing.Color.Black;
+            this.NotificacionPaciente.WarningOptions.BackColor = System.Drawing.Color.White;
+            this.NotificacionPaciente.WarningOptions.BorderColor = System.Drawing.Color.White;
+            this.NotificacionPaciente.WarningOptions.CloseIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(229)))), ((int)(((byte)(143)))));
+            this.NotificacionPaciente.WarningOptions.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NotificacionPaciente.WarningOptions.ForeColor = System.Drawing.Color.Black;
+            this.NotificacionPaciente.WarningOptions.Icon = ((System.Drawing.Image)(resources.GetObject("resource.Icon3")));
+            this.NotificacionPaciente.WarningOptions.IconLeftMargin = 12;
+            this.NotificacionPaciente.ZoomCloseIcon = true;
+            // 
             // InformaciónPersonalForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1854,5 +1926,6 @@
         public System.Windows.Forms.Label lblDocumento;
         public Bunifu.UI.WinForms.BunifuTextBox txtDocumentoPresentado;
         public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnVerEncargado;
+        public Bunifu.UI.WinForms.BunifuSnackbar NotificacionPaciente;
     }
 }

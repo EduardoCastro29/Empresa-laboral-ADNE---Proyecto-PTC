@@ -50,7 +50,8 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                 //Mandamos la variable estática GuardarCódigoRandom que posteriormente se insertará en el textbox
                 if (ObjPinAccesoForm.txtIngresarPin.Text.Length < 7 || DAODireccionGmail.GuardarCodigoRandom != ObjPinAccesoForm.txtIngresarPin.Text)
                 {
-                    MessageBox.Show("Por favor, ingrese un pin de acceso válido antes de seguir", "Pin de Acceso", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    //MessageBox.Show("Por favor, ingrese un pin de acceso válido antes de seguir", "Pin de Acceso", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    ObjPinAccesoForm.NotificacionPin.Show(ObjPinAccesoForm, "Por favor, ingrese un pin de acceso válido antes de seguir", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error);
                 }
                 else
                 {
