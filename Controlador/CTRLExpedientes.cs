@@ -40,9 +40,9 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
 
             foreach (DataRow dr in dt.Rows)
             {
-                //objCitaUC.CitaId = (int)dr[0];
-                objCitaUC.DocumentoPaciente = (string)dr[0];
-                objCitaUC.Nombre = (string)dr[1];
+                objCitaUC.CitaId = (int)dr[0];
+                objCitaUC.DocumentoPaciente = (string)dr[1];
+                objCitaUC.Nombre = (string)dr[3];
                 objCitaUC.N_expediente = (int)dr[2];
 
                 ControlPacientePlanillaUC PanelPaciente = new ControlPacientePlanillaUC(objCitaUC);
@@ -58,9 +58,9 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
 
             foreach (DataRow dr in ds.Tables[0].Rows)
             {
-                //objCitas.CitaId = (int)dr[0];
-                objCitas.DocumentoPaciente = (string)dr[0];
-                objCitas.Nombre = (string)dr[1];
+                objCitas.CitaId = (int)dr[0];
+                objCitas.DocumentoPaciente = (string)dr[1];
+                objCitas.Nombre = (string)dr[3];
                 objCitas.N_expediente = (int)dr[2];
 
                 ControlPacientePlanillaUC PanelPaciente = new ControlPacientePlanillaUC(objCitas);
