@@ -26,7 +26,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Vista
             Config objConfig = new Config();
             objConfig.LeerIni();
 
-            if (objConfig.objDTOConfig.modoOscuro == "darks")
+            if (objConfig.objDTOConfig.modoOscuro == "dark")
             {
                 this.switchModo.Checked = true;
                 this.BackColor = Color.FromArgb(30, 92, 98);

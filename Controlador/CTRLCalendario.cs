@@ -46,10 +46,8 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
 
             //tener el primer día del mes.
             DateTime startofthemonth = new DateTime(Año, Mes, 1);
-
             //tener la cantidad de días del mes.
             int dias = DateTime.DaysInMonth(Año, Mes);
-
             //Convertir los días en tipo entero
             int diadelasemana = Convert.ToInt32(startofthemonth.DayOfWeek.ToString("D")) + 1;
 
@@ -76,7 +74,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             {
                 return input;
             }
-
             return char.ToUpper(input[0]) + input.Substring(1);
         }
         private void SiguienteMes(object sender, EventArgs e)
@@ -91,7 +88,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                 Mes = 1;
                 Año++;
             }
-
             string mesNombre = DateTimeFormatInfo.CurrentInfo.GetMonthName(Mes);
             mesNombre = FormatoPrimeraLetraMes(mesNombre);
             ObjCalendario.lblFecha.Text = mesNombre + "  " + Año;
@@ -138,7 +134,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                 Mes = 12;
                 Año--;
             }
-
             string mesNombre = DateTimeFormatInfo.CurrentInfo.GetMonthName(Mes);
             mesNombre = FormatoPrimeraLetraMes(mesNombre);
             ObjCalendario.lblFecha.Text = mesNombre + "  " + Año;

@@ -973,7 +973,7 @@
             this.MinimumSize = new System.Drawing.Size(654, 721);
             this.Name = "AgendarCitaForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "AgendarCita";
+            this.Text = "Registrar_Cita";
             this.pnlSombraGuardar.ResumeLayout(false);
             this.bgpModificar.ResumeLayout(false);
             this.pnlSombraModificar.ResumeLayout(false);

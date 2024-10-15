@@ -23,11 +23,9 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Vista
         {
             Config objConfig = new Config();
             objConfig.LeerIni();
-
             if (objConfig.objDTOConfig.modoOscuro == "dark")
             {
                 this.BackColor = Color.FromArgb(28, 104, 108);
-
                 this.btnVerCitas.IdleFillColor = Color.FromArgb(33, 150, 137);
                 this.btnVerCitas.IdleBorderColor = Color.FromArgb(33, 150, 137);
                 this.btnVerCitas.onHoverState.BorderColor = Color.FromArgb(31, 161, 147);

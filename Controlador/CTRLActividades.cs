@@ -101,8 +101,8 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             ObjActividadesForm.dtFechaFinal.Value = DateTime.Now;
             ObjActividadesForm.btnVerPersonalizadoDia.Select();
 
+            CTRLActualizarCitasPerdidas();
             CargarSiguientePaciente();
-
             CargarIntervaloCitas();
         }
         private void CargarSiguientePaciente()
@@ -192,11 +192,15 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             }
         }
         #endregion
-        public void EnviarRecordatorios(object sender, EventArgs e)
+        private void EnviarRecordatorios(object sender, EventArgs e)
         {
             DAOActividades objDAO = new DAOActividades();
             objDAO.EnviarRecordatoriosCitasHoy();
-            MessageBox.Show("Proceso terminado");
+        }
+        private void CTRLActualizarCitasPerdidas()
+        {
+            DAOActividades objDao = new DAOActividades();
+            objDao.ActualizarCitasPerdidas();
         }
     }
 }

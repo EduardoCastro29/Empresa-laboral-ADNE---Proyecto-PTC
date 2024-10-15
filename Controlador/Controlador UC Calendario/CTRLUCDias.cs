@@ -46,8 +46,8 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador.Controlador_UC_Calenda
         }
         public void HoverUC(object sender, EventArgs e)
         {
-            ObjUCDIAS.lblDias.BackColor = Color.FromArgb(135, 224, 210);
-            ObjUCDIAS.btnCalendar.BackColor = Color.FromArgb(135, 224, 210);
+                ObjUCDIAS.lblDias.BackColor = Color.FromArgb(176, 255, 242);
+                ObjUCDIAS.btnCalendar.BackColor = Color.FromArgb(135, 224, 210);
         }
         public void Normal(object sender, EventArgs e)
         {

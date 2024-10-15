@@ -26,6 +26,9 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             ObjVerCitasForm.cmsActualizar.Click += new EventHandler(ActualizarCita);
             ObjVerCitasForm.cmsEliminarCita.Click += new EventHandler(EliminarCita);
             ObjVerCitasForm.btnBuscar.Click += new EventHandler(BuscarCita);
+            ObjVerCitasForm.btnPendientes.Click += new EventHandler(MostrarCitasPendientes);
+            ObjVerCitasForm.btnAtendidas.Click += new EventHandler(MostrarCitasAtendidas);
+            ObjVerCitasForm.btnTodas.Click += new EventHandler(MostrarCitas);
         }
         #region Eventos Iniciales al cargar el Formulario
         private void CargarDGVCitas()
@@ -175,5 +178,21 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             ObjVerCitasForm.dgvCitasAgendadas.DataSource = ObjBuscar;
         }
         #endregion
+        private void MostrarCitasPendientes(object sender, EventArgs e)
+        {
+            DAOVerCitas ObjDAO = new DAOVerCitas();
+            DataTable CitasPendientes = ObjDAO.CargarDataGridCitasPendientes();
+            ObjVerCitasForm.dgvCitasAgendadas.DataSource = CitasPendientes;
+        }
+        private void MostrarCitasAtendidas(object sender, EventArgs e)
+        {
+            DAOVerCitas ObjDAO = new DAOVerCitas();
+            DataTable CitasAtendidas = ObjDAO.CargarDataGridCitasAtendidas();
+            ObjVerCitasForm.dgvCitasAgendadas.DataSource = CitasAtendidas;
+        }
+        private void MostrarCitas(object sender, EventArgs e)
+        {
+            CargarDGVCitas();
+        }
     }
 }

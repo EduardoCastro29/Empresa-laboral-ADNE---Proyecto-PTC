@@ -163,9 +163,6 @@
   <data name="Frame 34 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Frame 34 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="userPLUS__" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\userPLUS__.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Pagina principal" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Pagina principal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -229,6 +226,9 @@
   <data name="Personal" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Personal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="lupa (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\lupa (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Equipo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Equipo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -268,11 +268,14 @@
   <data name="fluent_minimize-12-filled" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fluent_minimize-12-filled1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Ver pacientes" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Ver pacientes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="userPLUS__" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\userPLUS__.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="picture_12236752" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\picture_12236752.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Ver pacientes" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Ver pacientes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="UsuarioConfig" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\UsuarioConfig.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -295,6 +298,9 @@
   <data name="Imagen usuario" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Imagen usuario.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Group 20" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Group 20.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Calendario" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Calendario.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -304,7 +310,7 @@
   <data name="userPLUS_.SSpng" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\userPLUS_.SSpng.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="lupa (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\lupa (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="WhatsApp Image 2024-07-16 at 7.50.17 PM" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WhatsApp Image 2024-07-16 at 7.50.17 PM.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

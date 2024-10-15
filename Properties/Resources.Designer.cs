@@ -424,6 +424,16 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Group_20 {
+            get {
+                object obj = ResourceManager.GetObject("Group 20", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap IconUSER {
             get {
                 object obj = ResourceManager.GetObject("IconUSER", resourceCulture);
@@ -707,6 +717,16 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Properties {
         internal static System.Drawing.Bitmap VerCitaCMS {
             get {
                 object obj = ResourceManager.GetObject("VerCitaCMS", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WhatsApp_Image_2024_07_16_at_7_50_17_PM {
+            get {
+                object obj = ResourceManager.GetObject("WhatsApp Image 2024-07-16 at 7.50.17 PM", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

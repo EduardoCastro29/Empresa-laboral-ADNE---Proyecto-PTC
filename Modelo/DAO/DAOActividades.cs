@@ -204,46 +204,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                 Conexion.Connection.Close();
             }
         }
-        //public SmtpClient ObjSMTPClient = new SmtpClient();
-
-        //// Método para enviar correos
-        //public void EnviarCorreo(string temaMail, string cuerpoMail, List<string> direccionesMail)
-        //{
-        //    // Verificamos que la lista de direcciones no esté vacía
-        //    if (direccionesMail == null || !direccionesMail.Any())
-        //    {
-        //        MessageBox.Show("No hay direcciones de correo para enviar el mensaje.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-        //        return;
-        //    }
-
-        //    MailMessage MensajeMail = new MailMessage();
-        //    try
-        //    {
-        //        DAOSistemaSoporte ObjSistemaSoporte = new DAOSistemaSoporte();
-        //        string EnviarMail = ObjSistemaSoporte.ObtenerCorreoRemitente();
-        //        MensajeMail.From = new MailAddress(EnviarMail);
-
-        //        foreach (string correo in direccionesMail)
-        //        {
-        //            MensajeMail.To.Add(correo);
-        //        }
-
-        //        MensajeMail.Subject = temaMail;
-        //        MensajeMail.Body = cuerpoMail;
-        //        MensajeMail.Priority = MailPriority.Normal;
-
-        //        ObjSistemaSoporte.ObjSMTPClient.Send(MensajeMail);
-        //    }
-        //    catch (Exception)
-        //    {
-        //        MessageBox.Show("Ha ocurrido un error, ERR-012-1 - Error al conectarse con una red de Internet o el correo ha sido mal proporcionado, verifique su conexión a Internet. [Consulte el Manual Técnico]", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        //    }
-        //    finally
-        //    {
-        //        MensajeMail.Dispose();
-        //        ObjSMTPClient.Dispose();
-        //    }
-        //}
         // Método para obtener las direcciones de correo con citas programadas para el día de hoy
         public List<(string Correo, TimeSpan HoraCita)> ObtenerCitasHoy()
         {
@@ -251,9 +211,9 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
             try
             {
                 Conexion.Connection = Conectar();
-                string query = "SELECT * FROM vistaCitaCorreo WHERE fecha = CAST(CURRENT_TIMESTAMP AS DATE)"; //Verificar si existe una tabla con las citas y que incluya el correo o hacer otra vista
+                string query = "SELECT * FROM vistaCitaCorreo WHERE [ID del Profesional] = @DUI AND fecha = CAST(CURRENT_TIMESTAMP AS DATE)";
                 SqlCommand objComandoSQL = new SqlCommand(query, Conexion.Connection);
-
+                objComandoSQL.Parameters.AddWithValue("@DUI", InicioSesion.Dui);
                 SqlDataReader ObjCitasEncontradas = objComandoSQL.ExecuteReader();
 
                 //Verifico si encontró filas
@@ -293,12 +253,10 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                         string Hora = hora.ToString(@"hh\:mm"); //Formato a la hora
                         //Cuerpo del correo
                         string asunto = "Tienes una cita!";
-                        string cuerpo = "Buen día! " +
+                        string cuerpo = "Buen día! 🌞" +
                         "\n" + "Te saludamos desde ADNE (Atención a la Diversidad y Necesidades Específicas). " +
                         "\n\n" + "Queremos recordarte que hoy tienes una cita programada con nosotros. Aquí están los detalles: " +
                         "\n" + "Hora de la Cita: " + Hora +
-                        "\n\n" + "Buenos diassss, ya es hora de despertar, " +
-                        "\n" + "Y miraa! lo logré!! 🦝" +
                         "\n\n" + "Esperamos tengas un excelente día." +
                         "\n" + "Atentamente, ADNE";
 
@@ -317,6 +275,30 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
             {
                 MessageBox.Show("Ha ocurrido un error, ERR-002-2 - Error al buscar un correo electrónico correspondiente, verifique si su correo electrónico posee una dirección de correo válida. [Consulte el Manual Técnico]", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
+            }
+        }
+        public int ActualizarCitasPerdidas()
+        {
+            try
+            {
+                Conexion.Connection = Conectar();
+
+                //En esta sentencia todas aquellas citas que no fueron atendidas pasan a perdidas
+                string queryCita = "UPDATE Cita SET estadoId = '3' WHERE estadoId = '2' AND CAST(fecha AS DATE) < CAST(GETDATE() AS DATE);"; 
+
+                SqlCommand objCitasPerdidas = new SqlCommand(queryCita, Conexion.Connection);
+
+                int filasAfectadas = objCitasPerdidas.ExecuteNonQuery();
+                return filasAfectadas;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Ha ocurrido un error, ERR-00- - Error al cargar la siguiente cita. [Consulte el Manual Técnico]", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return -1;
+            }
+            finally
+            {
+                Conexion.Connection.Close();
             }
         }
     }
