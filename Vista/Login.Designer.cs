@@ -363,12 +363,12 @@
             this.btnIniciarSesion.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIniciarSesion.ForeColor = System.Drawing.Color.White;
             this.btnIniciarSesion.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnIniciarSesion.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.btnIniciarSesion.IconLeftCursor = System.Windows.Forms.Cursors.Hand;
             this.btnIniciarSesion.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
             this.btnIniciarSesion.IconMarginLeft = 11;
             this.btnIniciarSesion.IconPadding = 10;
             this.btnIniciarSesion.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnIniciarSesion.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.btnIniciarSesion.IconRightCursor = System.Windows.Forms.Cursors.Hand;
             this.btnIniciarSesion.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
             this.btnIniciarSesion.IconSize = 25;
             this.btnIniciarSesion.IdleBorderColor = System.Drawing.Color.Transparent;
@@ -646,7 +646,7 @@
             this.lblBienvenido.Cursor = System.Windows.Forms.Cursors.Default;
             this.lblBienvenido.CursorType = System.Windows.Forms.Cursors.Default;
             this.lblBienvenido.Font = new System.Drawing.Font("Century Gothic", 32.25F);
-            this.lblBienvenido.Location = new System.Drawing.Point(269, 123);
+            this.lblBienvenido.Location = new System.Drawing.Point(245, 102);
             this.lblBienvenido.Name = "lblBienvenido";
             this.lblBienvenido.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblBienvenido.Size = new System.Drawing.Size(234, 52);
@@ -751,7 +751,8 @@
             this.Controls.Add(this.bunifuGradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MinimumSize = new System.Drawing.Size(1220, 650);
+            this.MaximumSize = new System.Drawing.Size(1230, 729);
+            this.MinimumSize = new System.Drawing.Size(1230, 729);
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";

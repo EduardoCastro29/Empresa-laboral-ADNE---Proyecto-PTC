@@ -76,7 +76,7 @@
             this.btnEliminarEspecialidad.ButtonTextMarginLeft = 0;
             this.btnEliminarEspecialidad.ColorContrastOnClick = 45;
             this.btnEliminarEspecialidad.ColorContrastOnHover = 45;
-            this.btnEliminarEspecialidad.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnEliminarEspecialidad.Cursor = System.Windows.Forms.Cursors.Hand;
             borderEdges1.BottomLeft = false;
             borderEdges1.BottomRight = true;
             borderEdges1.TopLeft = false;
@@ -165,7 +165,7 @@
             this.btnAnadirEspecialidad.ButtonTextMarginLeft = 0;
             this.btnAnadirEspecialidad.ColorContrastOnClick = 45;
             this.btnAnadirEspecialidad.ColorContrastOnHover = 45;
-            this.btnAnadirEspecialidad.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnAnadirEspecialidad.Cursor = System.Windows.Forms.Cursors.Hand;
             borderEdges2.BottomLeft = true;
             borderEdges2.BottomRight = false;
             borderEdges2.TopLeft = true;
@@ -440,6 +440,7 @@
             this.cmbEspecialidades.BorderColor = System.Drawing.Color.Silver;
             this.cmbEspecialidades.BorderRadius = 5;
             this.cmbEspecialidades.Color = System.Drawing.Color.Silver;
+            this.cmbEspecialidades.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmbEspecialidades.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
             this.cmbEspecialidades.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.cmbEspecialidades.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -466,7 +467,7 @@
             this.cmbEspecialidades.ItemBorderColor = System.Drawing.Color.White;
             this.cmbEspecialidades.ItemForeColor = System.Drawing.Color.Black;
             this.cmbEspecialidades.ItemHeight = 26;
-            this.cmbEspecialidades.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
+            this.cmbEspecialidades.ItemHighLightColor = System.Drawing.Color.LightSeaGreen;
             this.cmbEspecialidades.ItemHighLightForeColor = System.Drawing.Color.White;
             this.cmbEspecialidades.ItemTopMargin = 3;
             this.cmbEspecialidades.Location = new System.Drawing.Point(402, 197);
@@ -495,7 +496,7 @@
             this.btnSiguiente.ButtonTextMarginLeft = 0;
             this.btnSiguiente.ColorContrastOnClick = 45;
             this.btnSiguiente.ColorContrastOnHover = 45;
-            this.btnSiguiente.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnSiguiente.Cursor = System.Windows.Forms.Cursors.Hand;
             borderEdges3.BottomLeft = true;
             borderEdges3.BottomRight = true;
             borderEdges3.TopLeft = true;

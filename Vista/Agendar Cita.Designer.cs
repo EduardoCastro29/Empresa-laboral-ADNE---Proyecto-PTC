@@ -402,6 +402,7 @@
             this.cmbEstado.BorderColor = System.Drawing.Color.Silver;
             this.cmbEstado.BorderRadius = 5;
             this.cmbEstado.Color = System.Drawing.Color.Silver;
+            this.cmbEstado.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmbEstado.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
             this.cmbEstado.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.cmbEstado.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));

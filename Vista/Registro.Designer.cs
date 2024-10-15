@@ -76,10 +76,10 @@
             this.lblNombres = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuGradientPanel3 = new Bunifu.UI.WinForms.BunifuGradientPanel();
             this.btnSalir = new Bunifu.UI.WinForms.BunifuPictureBox();
+            this.Titulo_Registrar = new Bunifu.UI.WinForms.BunifuLabel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.txtIDUsuario = new System.Windows.Forms.ToolStripTextBox();
             this.txtIDProfesional = new System.Windows.Forms.ToolStripTextBox();
-            this.Titulo_Registrar = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuShadowPanel2 = new Bunifu.UI.WinForms.BunifuShadowPanel();
             this.bunifuPanel3 = new Bunifu.UI.WinForms.BunifuPanel();
             this.btnEliminar = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
@@ -690,6 +690,28 @@
             this.btnSalir.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Square;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click_1);
             // 
+            // Titulo_Registrar
+            // 
+            this.Titulo_Registrar.AllowParentOverrides = false;
+            this.Titulo_Registrar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Titulo_Registrar.AutoEllipsis = false;
+            this.Titulo_Registrar.Cursor = System.Windows.Forms.Cursors.Default;
+            this.Titulo_Registrar.CursorType = System.Windows.Forms.Cursors.Default;
+            this.Titulo_Registrar.Font = new System.Drawing.Font("Century Gothic", 21.75F);
+            this.Titulo_Registrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(86)))), ((int)(((byte)(100)))));
+            this.Titulo_Registrar.Location = new System.Drawing.Point(51, 32);
+            this.Titulo_Registrar.Name = "Titulo_Registrar";
+            this.Titulo_Registrar.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.Titulo_Registrar.Size = new System.Drawing.Size(387, 36);
+            this.Titulo_Registrar.TabIndex = 0;
+            this.Titulo_Registrar.TabStop = false;
+            this.Titulo_Registrar.Text = "Registrar Nuevo Profesional";
+            this.Titulo_Registrar.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.Titulo_Registrar.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.TTContraseña.SetToolTip(this.Titulo_Registrar, "");
+            this.TTContraseña.SetToolTipIcon(this.Titulo_Registrar, null);
+            this.TTContraseña.SetToolTipTitle(this.Titulo_Registrar, "");
+            // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -717,28 +739,6 @@
             this.txtIDProfesional.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtIDProfesional.Name = "txtIDProfesional";
             this.txtIDProfesional.Size = new System.Drawing.Size(116, 23);
-            // 
-            // Titulo_Registrar
-            // 
-            this.Titulo_Registrar.AllowParentOverrides = false;
-            this.Titulo_Registrar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Titulo_Registrar.AutoEllipsis = false;
-            this.Titulo_Registrar.Cursor = System.Windows.Forms.Cursors.Default;
-            this.Titulo_Registrar.CursorType = System.Windows.Forms.Cursors.Default;
-            this.Titulo_Registrar.Font = new System.Drawing.Font("Century Gothic", 21.75F);
-            this.Titulo_Registrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(86)))), ((int)(((byte)(100)))));
-            this.Titulo_Registrar.Location = new System.Drawing.Point(51, 32);
-            this.Titulo_Registrar.Name = "Titulo_Registrar";
-            this.Titulo_Registrar.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.Titulo_Registrar.Size = new System.Drawing.Size(387, 36);
-            this.Titulo_Registrar.TabIndex = 0;
-            this.Titulo_Registrar.TabStop = false;
-            this.Titulo_Registrar.Text = "Registrar Nuevo Profesional";
-            this.Titulo_Registrar.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.Titulo_Registrar.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            this.TTContraseña.SetToolTip(this.Titulo_Registrar, "");
-            this.TTContraseña.SetToolTipIcon(this.Titulo_Registrar, null);
-            this.TTContraseña.SetToolTipTitle(this.Titulo_Registrar, "");
             // 
             // bunifuShadowPanel2
             // 
@@ -804,7 +804,7 @@
             this.btnEliminar.ButtonTextMarginLeft = 0;
             this.btnEliminar.ColorContrastOnClick = 45;
             this.btnEliminar.ColorContrastOnHover = 45;
-            this.btnEliminar.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
             borderEdges1.BottomLeft = true;
             borderEdges1.BottomRight = true;
             borderEdges1.TopLeft = true;
@@ -896,7 +896,7 @@
             this.btnRegistrar.ButtonTextMarginLeft = 0;
             this.btnRegistrar.ColorContrastOnClick = 45;
             this.btnRegistrar.ColorContrastOnHover = 45;
-            this.btnRegistrar.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnRegistrar.Cursor = System.Windows.Forms.Cursors.Hand;
             borderEdges2.BottomLeft = true;
             borderEdges2.BottomRight = true;
             borderEdges2.TopLeft = true;
@@ -1038,6 +1038,7 @@
             this.cmbDesempeno.BorderColor = System.Drawing.Color.Silver;
             this.cmbDesempeno.BorderRadius = 5;
             this.cmbDesempeno.Color = System.Drawing.Color.Silver;
+            this.cmbDesempeno.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmbDesempeno.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
             this.cmbDesempeno.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.cmbDesempeno.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -1116,7 +1117,7 @@
             this.btnCargarImagen.ButtonTextMarginLeft = 0;
             this.btnCargarImagen.ColorContrastOnClick = 45;
             this.btnCargarImagen.ColorContrastOnHover = 45;
-            this.btnCargarImagen.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnCargarImagen.Cursor = System.Windows.Forms.Cursors.Hand;
             borderEdges3.BottomLeft = true;
             borderEdges3.BottomRight = true;
             borderEdges3.TopLeft = true;

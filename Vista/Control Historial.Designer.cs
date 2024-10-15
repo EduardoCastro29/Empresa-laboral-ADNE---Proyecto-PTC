@@ -59,7 +59,7 @@
             this.btnExpediente.ButtonTextMarginLeft = 0;
             this.btnExpediente.ColorContrastOnClick = 45;
             this.btnExpediente.ColorContrastOnHover = 45;
-            this.btnExpediente.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnExpediente.Cursor = System.Windows.Forms.Cursors.Hand;
             borderEdges1.BottomLeft = true;
             borderEdges1.BottomRight = true;
             borderEdges1.TopLeft = true;

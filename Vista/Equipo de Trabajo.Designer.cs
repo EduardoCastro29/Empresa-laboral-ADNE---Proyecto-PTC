@@ -130,7 +130,7 @@
             this.btnAdministrarEmpleado.ButtonTextMarginLeft = 0;
             this.btnAdministrarEmpleado.ColorContrastOnClick = 45;
             this.btnAdministrarEmpleado.ColorContrastOnHover = 45;
-            this.btnAdministrarEmpleado.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnAdministrarEmpleado.Cursor = System.Windows.Forms.Cursors.Hand;
             borderEdges1.BottomLeft = true;
             borderEdges1.BottomRight = true;
             borderEdges1.TopLeft = true;
@@ -144,12 +144,12 @@
             this.btnAdministrarEmpleado.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdministrarEmpleado.ForeColor = System.Drawing.Color.White;
             this.btnAdministrarEmpleado.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAdministrarEmpleado.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.btnAdministrarEmpleado.IconLeftCursor = System.Windows.Forms.Cursors.Hand;
             this.btnAdministrarEmpleado.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
             this.btnAdministrarEmpleado.IconMarginLeft = 11;
             this.btnAdministrarEmpleado.IconPadding = 10;
             this.btnAdministrarEmpleado.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAdministrarEmpleado.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.btnAdministrarEmpleado.IconRightCursor = System.Windows.Forms.Cursors.Hand;
             this.btnAdministrarEmpleado.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
             this.btnAdministrarEmpleado.IconSize = 25;
             this.btnAdministrarEmpleado.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(199)))), ((int)(((byte)(187)))));

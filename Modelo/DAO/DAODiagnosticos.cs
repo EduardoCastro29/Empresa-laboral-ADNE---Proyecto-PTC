@@ -23,9 +23,10 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
             {
                 Conexion.Connection = Conectar();
 
-                string consulta = "SELECT * FROM vistaCita";
+                string consulta = "SELECT * FROM vistaExpedientes WHERE [DUI del Profesional] = @DUI";
 
                 SqlCommand objComando = new SqlCommand(consulta, Conexion.Connection);
+                objComando.Parameters.AddWithValue("@DUI", InicioSesion.Dui);
                 SqlDataAdapter objAdaptador = new SqlDataAdapter(objComando);
 
                 DataTable dt = new DataTable();
@@ -50,7 +51,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
             {
                 Conexion.Connection = Conectar();
 
-                string consulta = "SELECT * FROM vistaCita WHERE [Nombre del Paciente] LIKE @NombrePaciente";
+                string consulta = "SELECT * FROM vistaExpedientes WHERE [Nombre del Paciente] LIKE @NombrePaciente";
 
                 SqlCommand objComando = new SqlCommand(consulta, Conexion.Connection);
 
@@ -61,7 +62,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                 SqlDataAdapter adapter = new SqlDataAdapter(objComando);
                 DataSet dt = new DataSet();
 
-                adapter.Fill(dt, "vistaCita");
+                adapter.Fill(dt, "vistaExpedientes");
                 return dt;
             }
             catch (Exception)

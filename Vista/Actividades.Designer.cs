@@ -421,7 +421,7 @@
             this.lblHasta.AutoEllipsis = false;
             this.lblHasta.CursorType = null;
             this.lblHasta.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHasta.Location = new System.Drawing.Point(224, 55);
+            this.lblHasta.Location = new System.Drawing.Point(223, 55);
             this.lblHasta.Name = "lblHasta";
             this.lblHasta.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblHasta.Size = new System.Drawing.Size(53, 23);
@@ -437,7 +437,7 @@
             this.lblDesde.AutoEllipsis = false;
             this.lblDesde.CursorType = null;
             this.lblDesde.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDesde.Location = new System.Drawing.Point(224, 21);
+            this.lblDesde.Location = new System.Drawing.Point(223, 21);
             this.lblDesde.Name = "lblDesde";
             this.lblDesde.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblDesde.Size = new System.Drawing.Size(58, 23);
@@ -468,7 +468,7 @@
             this.dtFechaFinal.IconColor = System.Drawing.Color.LightSeaGreen;
             this.dtFechaFinal.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
             this.dtFechaFinal.LeftTextMargin = 5;
-            this.dtFechaFinal.Location = new System.Drawing.Point(289, 52);
+            this.dtFechaFinal.Location = new System.Drawing.Point(288, 52);
             this.dtFechaFinal.MinimumSize = new System.Drawing.Size(4, 32);
             this.dtFechaFinal.Name = "dtFechaFinal";
             this.dtFechaFinal.Size = new System.Drawing.Size(289, 32);
@@ -496,7 +496,7 @@
             this.dtFechaInicio.IconColor = System.Drawing.Color.LightSeaGreen;
             this.dtFechaInicio.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
             this.dtFechaInicio.LeftTextMargin = 5;
-            this.dtFechaInicio.Location = new System.Drawing.Point(289, 17);
+            this.dtFechaInicio.Location = new System.Drawing.Point(288, 17);
             this.dtFechaInicio.MinimumSize = new System.Drawing.Size(4, 32);
             this.dtFechaInicio.Name = "dtFechaInicio";
             this.dtFechaInicio.Size = new System.Drawing.Size(289, 32);
@@ -731,7 +731,7 @@
             this.btnOk.IdleIconLeftImage = null;
             this.btnOk.IdleIconRightImage = null;
             this.btnOk.IndicateFocus = false;
-            this.btnOk.Location = new System.Drawing.Point(609, 51);
+            this.btnOk.Location = new System.Drawing.Point(615, 46);
             this.btnOk.Name = "btnOk";
             this.btnOk.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnOk.OnDisabledState.BorderRadius = 15;
@@ -765,7 +765,7 @@
             this.btnOk.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btnOk.OnPressedState.IconLeftImage = null;
             this.btnOk.OnPressedState.IconRightImage = null;
-            this.btnOk.Size = new System.Drawing.Size(137, 32);
+            this.btnOk.Size = new System.Drawing.Size(125, 34);
             this.btnOk.TabIndex = 5;
             this.btnOk.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnOk.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;

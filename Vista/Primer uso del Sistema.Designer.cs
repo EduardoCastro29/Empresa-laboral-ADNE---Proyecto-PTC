@@ -175,6 +175,7 @@
             this.dpCreacionEmpresa.CalendarTitleBackColor = System.Drawing.SystemColors.ControlText;
             this.dpCreacionEmpresa.CalendarTitleForeColor = System.Drawing.Color.White;
             this.dpCreacionEmpresa.Color = System.Drawing.Color.Transparent;
+            this.dpCreacionEmpresa.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dpCreacionEmpresa.DateBorderThickness = Bunifu.UI.WinForms.BunifuDatePicker.BorderThickness.Thin;
             this.dpCreacionEmpresa.DateTextAlign = Bunifu.UI.WinForms.BunifuDatePicker.TextAlign.Left;
             this.dpCreacionEmpresa.DisabledColor = System.Drawing.Color.Gray;
@@ -416,7 +417,7 @@
             this.btnAgregarLogo.ButtonTextMarginLeft = 0;
             this.btnAgregarLogo.ColorContrastOnClick = 45;
             this.btnAgregarLogo.ColorContrastOnHover = 45;
-            this.btnAgregarLogo.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnAgregarLogo.Cursor = System.Windows.Forms.Cursors.Hand;
             borderEdges1.BottomLeft = true;
             borderEdges1.BottomRight = true;
             borderEdges1.TopLeft = true;
@@ -551,7 +552,7 @@
             this.btnRegistrar.ButtonTextMarginLeft = 0;
             this.btnRegistrar.ColorContrastOnClick = 45;
             this.btnRegistrar.ColorContrastOnHover = 45;
-            this.btnRegistrar.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnRegistrar.Cursor = System.Windows.Forms.Cursors.Hand;
             borderEdges2.BottomLeft = true;
             borderEdges2.BottomRight = true;
             borderEdges2.TopLeft = true;

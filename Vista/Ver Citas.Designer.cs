@@ -130,7 +130,7 @@
             this.btnAtendidas.ButtonTextMarginLeft = 0;
             this.btnAtendidas.ColorContrastOnClick = 45;
             this.btnAtendidas.ColorContrastOnHover = 45;
-            this.btnAtendidas.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnAtendidas.Cursor = System.Windows.Forms.Cursors.Hand;
             borderEdges1.BottomLeft = false;
             borderEdges1.BottomRight = false;
             borderEdges1.TopLeft = false;
@@ -239,7 +239,7 @@
             this.btnBuscar.ButtonTextMarginLeft = 0;
             this.btnBuscar.ColorContrastOnClick = 45;
             this.btnBuscar.ColorContrastOnHover = 45;
-            this.btnBuscar.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
             borderEdges2.BottomLeft = false;
             borderEdges2.BottomRight = true;
             borderEdges2.TopLeft = false;
@@ -253,12 +253,12 @@
             this.btnBuscar.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.ForeColor = System.Drawing.Color.White;
             this.btnBuscar.IconLeftAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnBuscar.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.btnBuscar.IconLeftCursor = System.Windows.Forms.Cursors.Hand;
             this.btnBuscar.IconLeftPadding = new System.Windows.Forms.Padding(15);
             this.btnBuscar.IconMarginLeft = 11;
             this.btnBuscar.IconPadding = 15;
             this.btnBuscar.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnBuscar.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.btnBuscar.IconRightCursor = System.Windows.Forms.Cursors.Hand;
             this.btnBuscar.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
             this.btnBuscar.IconSize = 25;
             this.btnBuscar.IdleBorderColor = System.Drawing.Color.Transparent;
@@ -407,7 +407,7 @@
             this.btnTodas.ButtonTextMarginLeft = 0;
             this.btnTodas.ColorContrastOnClick = 45;
             this.btnTodas.ColorContrastOnHover = 45;
-            this.btnTodas.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnTodas.Cursor = System.Windows.Forms.Cursors.Hand;
             borderEdges3.BottomLeft = false;
             borderEdges3.BottomRight = true;
             borderEdges3.TopLeft = false;
@@ -497,7 +497,7 @@
             this.btnPendientes.ButtonTextMarginLeft = 0;
             this.btnPendientes.ColorContrastOnClick = 45;
             this.btnPendientes.ColorContrastOnHover = 45;
-            this.btnPendientes.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnPendientes.Cursor = System.Windows.Forms.Cursors.Hand;
             borderEdges4.BottomLeft = true;
             borderEdges4.BottomRight = false;
             borderEdges4.TopLeft = true;

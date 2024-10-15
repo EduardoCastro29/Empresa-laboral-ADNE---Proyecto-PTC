@@ -797,6 +797,7 @@
             this.cmbCuartaPregunta.BorderColor = System.Drawing.Color.Silver;
             this.cmbCuartaPregunta.BorderRadius = 5;
             this.cmbCuartaPregunta.Color = System.Drawing.Color.Silver;
+            this.cmbCuartaPregunta.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmbCuartaPregunta.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
             this.cmbCuartaPregunta.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.cmbCuartaPregunta.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -841,6 +842,7 @@
             this.cmbTerceraPregunta.BorderColor = System.Drawing.Color.Silver;
             this.cmbTerceraPregunta.BorderRadius = 5;
             this.cmbTerceraPregunta.Color = System.Drawing.Color.Silver;
+            this.cmbTerceraPregunta.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmbTerceraPregunta.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
             this.cmbTerceraPregunta.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.cmbTerceraPregunta.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -885,6 +887,7 @@
             this.cmbSegundaPregunta.BorderColor = System.Drawing.Color.Silver;
             this.cmbSegundaPregunta.BorderRadius = 5;
             this.cmbSegundaPregunta.Color = System.Drawing.Color.Silver;
+            this.cmbSegundaPregunta.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmbSegundaPregunta.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
             this.cmbSegundaPregunta.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.cmbSegundaPregunta.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -929,6 +932,7 @@
             this.cmbPrimeraPregunta.BorderColor = System.Drawing.Color.Silver;
             this.cmbPrimeraPregunta.BorderRadius = 5;
             this.cmbPrimeraPregunta.Color = System.Drawing.Color.Silver;
+            this.cmbPrimeraPregunta.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmbPrimeraPregunta.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
             this.cmbPrimeraPregunta.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.cmbPrimeraPregunta.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));

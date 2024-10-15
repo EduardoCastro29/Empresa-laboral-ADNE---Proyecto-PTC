@@ -444,7 +444,7 @@
             this.btnActualizarContrasena.ButtonTextMarginLeft = 0;
             this.btnActualizarContrasena.ColorContrastOnClick = 45;
             this.btnActualizarContrasena.ColorContrastOnHover = 45;
-            this.btnActualizarContrasena.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnActualizarContrasena.Cursor = System.Windows.Forms.Cursors.Hand;
             borderEdges1.BottomLeft = true;
             borderEdges1.BottomRight = true;
             borderEdges1.TopLeft = true;

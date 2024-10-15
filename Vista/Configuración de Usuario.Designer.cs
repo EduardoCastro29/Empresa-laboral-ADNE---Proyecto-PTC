@@ -304,7 +304,7 @@
             this.btnGuardar.ButtonTextMarginLeft = 0;
             this.btnGuardar.ColorContrastOnClick = 45;
             this.btnGuardar.ColorContrastOnHover = 45;
-            this.btnGuardar.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnGuardar.Cursor = System.Windows.Forms.Cursors.Hand;
             borderEdges1.BottomLeft = true;
             borderEdges1.BottomRight = true;
             borderEdges1.TopLeft = true;
@@ -427,7 +427,7 @@
             this.btnEliminar.ButtonTextMarginLeft = 0;
             this.btnEliminar.ColorContrastOnClick = 45;
             this.btnEliminar.ColorContrastOnHover = 45;
-            this.btnEliminar.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
             borderEdges2.BottomLeft = true;
             borderEdges2.BottomRight = true;
             borderEdges2.TopLeft = true;
@@ -533,7 +533,7 @@
             this.btnCargarImagen.ButtonTextMarginLeft = 0;
             this.btnCargarImagen.ColorContrastOnClick = 45;
             this.btnCargarImagen.ColorContrastOnHover = 45;
-            this.btnCargarImagen.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnCargarImagen.Cursor = System.Windows.Forms.Cursors.Hand;
             borderEdges3.BottomLeft = true;
             borderEdges3.BottomRight = true;
             borderEdges3.TopLeft = true;

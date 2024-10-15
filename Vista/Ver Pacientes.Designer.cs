@@ -153,6 +153,7 @@
             this.btnVerPacientesSinProfesional.TextMarginLeft = 0;
             this.btnVerPacientesSinProfesional.TextPadding = new System.Windows.Forms.Padding(0);
             this.btnVerPacientesSinProfesional.UseDefaultRadiusAndThickness = true;
+            this.btnVerPacientesSinProfesional.Visible = false;
             // 
             // flpVerPacientes
             // 
@@ -204,7 +205,7 @@
             this.btnBuscar.ButtonTextMarginLeft = 0;
             this.btnBuscar.ColorContrastOnClick = 45;
             this.btnBuscar.ColorContrastOnHover = 45;
-            this.btnBuscar.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
             borderEdges2.BottomLeft = false;
             borderEdges2.BottomRight = true;
             borderEdges2.TopLeft = false;
@@ -218,12 +219,12 @@
             this.btnBuscar.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.ForeColor = System.Drawing.Color.White;
             this.btnBuscar.IconLeftAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnBuscar.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.btnBuscar.IconLeftCursor = System.Windows.Forms.Cursors.Hand;
             this.btnBuscar.IconLeftPadding = new System.Windows.Forms.Padding(15);
             this.btnBuscar.IconMarginLeft = 11;
             this.btnBuscar.IconPadding = 15;
             this.btnBuscar.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnBuscar.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.btnBuscar.IconRightCursor = System.Windows.Forms.Cursors.Hand;
             this.btnBuscar.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
             this.btnBuscar.IconSize = 25;
             this.btnBuscar.IdleBorderColor = System.Drawing.Color.Transparent;
