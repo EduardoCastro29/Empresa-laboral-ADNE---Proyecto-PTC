@@ -536,6 +536,8 @@
             // 
             this.dgvAdministrarProfesional.AllowCustomTheming = false;
             this.dgvAdministrarProfesional.AllowUserToDeleteRows = false;
+            this.dgvAdministrarProfesional.AllowUserToResizeColumns = false;
+            this.dgvAdministrarProfesional.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(223)))), ((int)(((byte)(223)))));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
             this.dgvAdministrarProfesional.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
@@ -606,6 +608,7 @@
             this.ClientSize = new System.Drawing.Size(992, 653);
             this.Controls.Add(this.bunifuGradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(1008, 692);
             this.MinimumSize = new System.Drawing.Size(1008, 692);
             this.Name = "AdministradorForm";

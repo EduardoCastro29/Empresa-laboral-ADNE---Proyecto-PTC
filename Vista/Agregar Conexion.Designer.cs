@@ -700,6 +700,7 @@
             this.Controls.Add(this.bunifuPanel2);
             this.Controls.Add(this.btnGuardar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(917, 451);
             this.Name = "AgregarConexionForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

@@ -34,7 +34,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Vista
             //El propio objeto se instancia con su propia clase y como parámetro this, de esta forma hace referencia al mismo formulario
             CTRLLogin ObjCTRLLogin = new CTRLLogin(this);
         }
-
         private void btnSalir_Click(object sender, EventArgs e)
         {
             Application.Exit();

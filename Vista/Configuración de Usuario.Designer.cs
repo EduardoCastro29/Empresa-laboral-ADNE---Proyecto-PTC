@@ -262,7 +262,7 @@
             this.lblCorreo.Location = new System.Drawing.Point(782, 151);
             this.lblCorreo.Name = "lblCorreo";
             this.lblCorreo.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblCorreo.Size = new System.Drawing.Size(120, 39);
+            this.lblCorreo.Size = new System.Drawing.Size(68, 23);
             this.lblCorreo.TabIndex = 68;
             this.lblCorreo.TabStop = false;
             this.lblCorreo.Text = "Correo:";
@@ -730,7 +730,7 @@
             this.lblTelefono.Location = new System.Drawing.Point(67, 154);
             this.lblTelefono.Name = "lblTelefono";
             this.lblTelefono.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblTelefono.Size = new System.Drawing.Size(144, 39);
+            this.lblTelefono.Size = new System.Drawing.Size(82, 23);
             this.lblTelefono.TabIndex = 68;
             this.lblTelefono.TabStop = false;
             this.lblTelefono.Text = "Teléfono:";
@@ -847,7 +847,7 @@
             this.lblUsuario.Location = new System.Drawing.Point(420, 155);
             this.lblUsuario.Name = "lblUsuario";
             this.lblUsuario.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblUsuario.Size = new System.Drawing.Size(127, 39);
+            this.lblUsuario.Size = new System.Drawing.Size(73, 23);
             this.lblUsuario.TabIndex = 66;
             this.lblUsuario.TabStop = false;
             this.lblUsuario.Text = "Usuario:";
@@ -964,7 +964,7 @@
             this.lblDocumento.Location = new System.Drawing.Point(66, 42);
             this.lblDocumento.Name = "lblDocumento";
             this.lblDocumento.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblDocumento.Size = new System.Drawing.Size(188, 39);
+            this.lblDocumento.Size = new System.Drawing.Size(107, 23);
             this.lblDocumento.TabIndex = 65;
             this.lblDocumento.TabStop = false;
             this.lblDocumento.Text = "Documento";
@@ -1181,7 +1181,7 @@
             this.lblApellidos.Location = new System.Drawing.Point(783, 41);
             this.lblApellidos.Name = "lblApellidos";
             this.lblApellidos.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblApellidos.Size = new System.Drawing.Size(158, 39);
+            this.lblApellidos.Size = new System.Drawing.Size(92, 23);
             this.lblApellidos.TabIndex = 63;
             this.lblApellidos.TabStop = false;
             this.lblApellidos.Text = "Apellidos:";
@@ -1199,7 +1199,7 @@
             this.lblNombres.Location = new System.Drawing.Point(425, 41);
             this.lblNombres.Name = "lblNombres";
             this.lblNombres.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblNombres.Size = new System.Drawing.Size(154, 39);
+            this.lblNombres.Size = new System.Drawing.Size(88, 23);
             this.lblNombres.TabIndex = 64;
             this.lblNombres.TabStop = false;
             this.lblNombres.Text = "Nombres:";
@@ -1218,7 +1218,7 @@
             this.Titulo_Registrar.Location = new System.Drawing.Point(60, 33);
             this.Titulo_Registrar.Name = "Titulo_Registrar";
             this.Titulo_Registrar.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.Titulo_Registrar.Size = new System.Drawing.Size(1233, 119);
+            this.Titulo_Registrar.Size = new System.Drawing.Size(366, 36);
             this.Titulo_Registrar.TabIndex = 0;
             this.Titulo_Registrar.TabStop = false;
             this.Titulo_Registrar.Text = "Configuración de Usuario";
@@ -1307,6 +1307,7 @@
             this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.bunifuGradientPanel3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(1280, 720);
             this.MinimumSize = new System.Drawing.Size(1280, 720);
             this.Name = "ConfiguraciónDeUsuarioForm";

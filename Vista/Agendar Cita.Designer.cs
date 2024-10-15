@@ -969,6 +969,7 @@
             this.Controls.Add(this.pnlEncabezado);
             this.Controls.Add(this.pnlSombraEncabezado);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(654, 721);
             this.MinimumSize = new System.Drawing.Size(654, 721);
             this.Name = "AgendarCitaForm";

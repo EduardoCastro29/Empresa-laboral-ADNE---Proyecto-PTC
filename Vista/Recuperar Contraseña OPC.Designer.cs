@@ -32,6 +32,7 @@
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.pnlGradienteFondo = new Bunifu.UI.WinForms.BunifuGradientPanel();
+            this.btnSalir = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.bunifuGradientPanel1 = new Bunifu.UI.WinForms.BunifuGradientPanel();
             this.bunifuShadowPanel4 = new Bunifu.UI.WinForms.BunifuShadowPanel();
             this.btnPreguntasAutenticacion = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
@@ -42,6 +43,7 @@
             this.bunifuShadowPanel1 = new Bunifu.UI.WinForms.BunifuShadowPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnlGradienteFondo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).BeginInit();
             this.bunifuGradientPanel1.SuspendLayout();
             this.bunifuShadowPanel4.SuspendLayout();
             this.bunifuShadowPanel2.SuspendLayout();
@@ -53,6 +55,7 @@
             this.pnlGradienteFondo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlGradienteFondo.BackgroundImage")));
             this.pnlGradienteFondo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pnlGradienteFondo.BorderRadius = 1;
+            this.pnlGradienteFondo.Controls.Add(this.btnSalir);
             this.pnlGradienteFondo.Controls.Add(this.bunifuGradientPanel1);
             this.pnlGradienteFondo.Controls.Add(this.bunifuShadowPanel1);
             this.pnlGradienteFondo.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -65,6 +68,24 @@
             this.pnlGradienteFondo.Quality = 10;
             this.pnlGradienteFondo.Size = new System.Drawing.Size(1080, 500);
             this.pnlGradienteFondo.TabIndex = 7;
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.AllowFocused = false;
+            this.btnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSalir.AutoSizeHeight = true;
+            this.btnSalir.BorderRadius = 0;
+            this.btnSalir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSalir.Image = global::Empresa_laboral_ADNE___Proyecto_PTC.Properties.Resources.Cerrar_Login;
+            this.btnSalir.IsCircle = true;
+            this.btnSalir.Location = new System.Drawing.Point(1038, 16);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(27, 27);
+            this.btnSalir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnSalir.TabIndex = 5;
+            this.btnSalir.TabStop = false;
+            this.btnSalir.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Square;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // bunifuGradientPanel1
             // 
@@ -80,15 +101,16 @@
             this.bunifuGradientPanel1.GradientBottomRight = System.Drawing.Color.Gainsboro;
             this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.White;
             this.bunifuGradientPanel1.GradientTopRight = System.Drawing.Color.White;
-            this.bunifuGradientPanel1.Location = new System.Drawing.Point(159, 33);
+            this.bunifuGradientPanel1.Location = new System.Drawing.Point(159, 53);
             this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
             this.bunifuGradientPanel1.Quality = 10;
-            this.bunifuGradientPanel1.Size = new System.Drawing.Size(769, 424);
+            this.bunifuGradientPanel1.Size = new System.Drawing.Size(769, 379);
             this.bunifuGradientPanel1.TabIndex = 0;
             // 
             // bunifuShadowPanel4
             // 
-            this.bunifuShadowPanel4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bunifuShadowPanel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.bunifuShadowPanel4.BackColor = System.Drawing.Color.Transparent;
             this.bunifuShadowPanel4.BorderColor = System.Drawing.Color.WhiteSmoke;
             this.bunifuShadowPanel4.BorderRadius = 12;
@@ -96,7 +118,7 @@
             this.bunifuShadowPanel4.Controls.Add(this.btnPreguntasAutenticacion);
             this.bunifuShadowPanel4.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
             this.bunifuShadowPanel4.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
-            this.bunifuShadowPanel4.Location = new System.Drawing.Point(54, 253);
+            this.bunifuShadowPanel4.Location = new System.Drawing.Point(53, 261);
             this.bunifuShadowPanel4.Name = "bunifuShadowPanel4";
             this.bunifuShadowPanel4.PanelColor = System.Drawing.Color.White;
             this.bunifuShadowPanel4.PanelColor2 = System.Drawing.Color.White;
@@ -114,7 +136,8 @@
             this.btnPreguntasAutenticacion.AllowAnimations = true;
             this.btnPreguntasAutenticacion.AllowMouseEffects = true;
             this.btnPreguntasAutenticacion.AllowToggling = false;
-            this.btnPreguntasAutenticacion.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnPreguntasAutenticacion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnPreguntasAutenticacion.AnimationSpeed = 200;
             this.btnPreguntasAutenticacion.AutoGenerateColors = false;
             this.btnPreguntasAutenticacion.AutoRoundBorders = false;
@@ -205,13 +228,12 @@
             // lblOlvidasteContrasena
             // 
             this.lblOlvidasteContrasena.AllowParentOverrides = false;
-            this.lblOlvidasteContrasena.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblOlvidasteContrasena.AutoEllipsis = false;
             this.lblOlvidasteContrasena.Cursor = System.Windows.Forms.Cursors.Default;
             this.lblOlvidasteContrasena.CursorType = System.Windows.Forms.Cursors.Default;
             this.lblOlvidasteContrasena.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblOlvidasteContrasena.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(86)))), ((int)(((byte)(100)))));
-            this.lblOlvidasteContrasena.Location = new System.Drawing.Point(37, 38);
+            this.lblOlvidasteContrasena.Location = new System.Drawing.Point(35, 37);
             this.lblOlvidasteContrasena.Name = "lblOlvidasteContrasena";
             this.lblOlvidasteContrasena.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblOlvidasteContrasena.Size = new System.Drawing.Size(376, 36);
@@ -224,13 +246,12 @@
             // lblOpciones
             // 
             this.lblOpciones.AllowParentOverrides = false;
-            this.lblOpciones.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblOpciones.AutoEllipsis = false;
             this.lblOpciones.Cursor = System.Windows.Forms.Cursors.Default;
             this.lblOpciones.CursorType = System.Windows.Forms.Cursors.Default;
             this.lblOpciones.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblOpciones.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(86)))), ((int)(((byte)(100)))));
-            this.lblOpciones.Location = new System.Drawing.Point(46, 126);
+            this.lblOpciones.Location = new System.Drawing.Point(46, 123);
             this.lblOpciones.Name = "lblOpciones";
             this.lblOpciones.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblOpciones.Size = new System.Drawing.Size(417, 23);
@@ -242,7 +263,8 @@
             // 
             // bunifuShadowPanel2
             // 
-            this.bunifuShadowPanel2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bunifuShadowPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.bunifuShadowPanel2.BackColor = System.Drawing.Color.Transparent;
             this.bunifuShadowPanel2.BorderColor = System.Drawing.Color.WhiteSmoke;
             this.bunifuShadowPanel2.BorderRadius = 12;
@@ -250,7 +272,7 @@
             this.bunifuShadowPanel2.Controls.Add(this.btnCorreoElectronico);
             this.bunifuShadowPanel2.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
             this.bunifuShadowPanel2.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
-            this.bunifuShadowPanel2.Location = new System.Drawing.Point(54, 176);
+            this.bunifuShadowPanel2.Location = new System.Drawing.Point(53, 190);
             this.bunifuShadowPanel2.Name = "bunifuShadowPanel2";
             this.bunifuShadowPanel2.PanelColor = System.Drawing.Color.White;
             this.bunifuShadowPanel2.PanelColor2 = System.Drawing.Color.White;
@@ -268,6 +290,8 @@
             this.btnCorreoElectronico.AllowAnimations = true;
             this.btnCorreoElectronico.AllowMouseEffects = true;
             this.btnCorreoElectronico.AllowToggling = false;
+            this.btnCorreoElectronico.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCorreoElectronico.AnimationSpeed = 200;
             this.btnCorreoElectronico.AutoGenerateColors = false;
             this.btnCorreoElectronico.AutoRoundBorders = false;
@@ -362,7 +386,7 @@
             this.bunifuShadowPanel1.BorderThickness = 0;
             this.bunifuShadowPanel1.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Gradient;
             this.bunifuShadowPanel1.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
-            this.bunifuShadowPanel1.Location = new System.Drawing.Point(159, 25);
+            this.bunifuShadowPanel1.Location = new System.Drawing.Point(159, 45);
             this.bunifuShadowPanel1.Name = "bunifuShadowPanel1";
             this.bunifuShadowPanel1.PanelColor = System.Drawing.Color.Transparent;
             this.bunifuShadowPanel1.PanelColor2 = System.Drawing.Color.Transparent;
@@ -371,7 +395,7 @@
             this.bunifuShadowPanel1.ShadowDepth = 3;
             this.bunifuShadowPanel1.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Surrounded;
             this.bunifuShadowPanel1.ShadowTopLeftVisible = false;
-            this.bunifuShadowPanel1.Size = new System.Drawing.Size(769, 443);
+            this.bunifuShadowPanel1.Size = new System.Drawing.Size(769, 398);
             this.bunifuShadowPanel1.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
             this.bunifuShadowPanel1.TabIndex = 3;
             // 
@@ -399,6 +423,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Recuperar Contraseña OPC";
             this.pnlGradienteFondo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).EndInit();
             this.bunifuGradientPanel1.ResumeLayout(false);
             this.bunifuGradientPanel1.PerformLayout();
             this.bunifuShadowPanel4.ResumeLayout(false);
@@ -418,5 +443,6 @@
         public Bunifu.UI.WinForms.BunifuGradientPanel bunifuGradientPanel1;
         private Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel4;
         public Bunifu.UI.WinForms.BunifuButton.BunifuButton btnPreguntasAutenticacion;
+        public Bunifu.UI.WinForms.BunifuPictureBox btnSalir;
     }
 }

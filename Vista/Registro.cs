@@ -47,20 +47,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Vista
                 CTRLAdministrador ObjRegistroControlador = new CTRLAdministrador(this);
             }
         }
-        private void btnSalir_Click(object sender, EventArgs e)
-        {
-            DAOLogin ObjVerificarEmpleadosUsuario = new DAOLogin();
-            if (ObjVerificarEmpleadosUsuario.VerificarUsuario() == false)
-            {
-                //Si no hay empleados dentro del formuarlio de registro, la X funcionará para cerrar la ventana y el programa
-                Environment.Exit(0);
-            }
-            else
-            {
-                //Caso contrario, solo se cerrará, dando a entender que ya hay un administrador ingresado
-                this.Close();
-            }
-        }
         private void leerIni()
         {
             Config objConfig = new Config();
@@ -185,6 +171,21 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Vista
                 this.btnRegistrar.OnPressedState.FillColor = Color.FromArgb(29, 86, 89);
                 this.btnRegistrar.OnDisabledState.BorderColor = Color.FromArgb(63, 76, 77);
                 this.btnRegistrar.OnDisabledState.FillColor = Color.FromArgb(63, 76, 77);
+            }
+        }
+
+        private void btnSalir_Click_1(object sender, EventArgs e)
+        {
+            DAOLogin ObjVerificarEmpleadosUsuario = new DAOLogin();
+            if (ObjVerificarEmpleadosUsuario.VerificarUsuario() == false)
+            {
+                //Si no hay empleados dentro del formuarlio de registro, la X funcionará para cerrar la ventana y el programa
+                Environment.Exit(0);
+            }
+            else
+            {
+                //Caso contrario, solo se cerrará, dando a entender que ya hay un administrador ingresado
+                this.Close();
             }
         }
     }

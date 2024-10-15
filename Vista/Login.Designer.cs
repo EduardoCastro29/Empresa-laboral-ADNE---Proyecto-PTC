@@ -112,7 +112,7 @@
             this.pnlFondoFormulario.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlFondoFormulario.BackgroundImage")));
             this.pnlFondoFormulario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pnlFondoFormulario.BorderColor = System.Drawing.Color.Transparent;
-            this.pnlFondoFormulario.BorderRadius = 55;
+            this.pnlFondoFormulario.BorderRadius = 50;
             this.pnlFondoFormulario.BorderThickness = 1;
             this.pnlFondoFormulario.Controls.Add(this.lblRecuerdame);
             this.pnlFondoFormulario.Controls.Add(this.cbRecuerdame);
@@ -529,7 +529,7 @@
             this.btnSalir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSalir.Image = global::Empresa_laboral_ADNE___Proyecto_PTC.Properties.Resources.Cerrar_Login;
             this.btnSalir.IsCircle = true;
-            this.btnSalir.Location = new System.Drawing.Point(655, 31);
+            this.btnSalir.Location = new System.Drawing.Point(657, 28);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(27, 27);
             this.btnSalir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;

@@ -117,7 +117,7 @@
             this.btnVerExpediente.IdleIconLeftImage = null;
             this.btnVerExpediente.IdleIconRightImage = null;
             this.btnVerExpediente.IndicateFocus = false;
-            this.btnVerExpediente.Location = new System.Drawing.Point(711, 28);
+            this.btnVerExpediente.Location = new System.Drawing.Point(720, 27);
             this.btnVerExpediente.Name = "btnVerExpediente";
             this.btnVerExpediente.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnVerExpediente.OnDisabledState.BorderRadius = 35;
@@ -207,7 +207,7 @@
             this.btnVerInformacion.IdleIconLeftImage = null;
             this.btnVerInformacion.IdleIconRightImage = null;
             this.btnVerInformacion.IndicateFocus = false;
-            this.btnVerInformacion.Location = new System.Drawing.Point(522, 28);
+            this.btnVerInformacion.Location = new System.Drawing.Point(535, 27);
             this.btnVerInformacion.Name = "btnVerInformacion";
             this.btnVerInformacion.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnVerInformacion.OnDisabledState.BorderRadius = 35;
@@ -271,11 +271,12 @@
             this.lblNombrePaciente.AllowParentOverrides = false;
             this.lblNombrePaciente.AutoEllipsis = false;
             this.lblNombrePaciente.CursorType = null;
-            this.lblNombrePaciente.Font = new System.Drawing.Font("Century Gothic", 18F);
-            this.lblNombrePaciente.Location = new System.Drawing.Point(111, 36);
+            this.lblNombrePaciente.Font = new System.Drawing.Font("Century Gothic", 15.5F);
+            this.lblNombrePaciente.Location = new System.Drawing.Point(92, 22);
+            this.lblNombrePaciente.MaximumSize = new System.Drawing.Size(390, 0);
             this.lblNombrePaciente.Name = "lblNombrePaciente";
             this.lblNombrePaciente.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblNombrePaciente.Size = new System.Drawing.Size(128, 30);
+            this.lblNombrePaciente.Size = new System.Drawing.Size(106, 24);
             this.lblNombrePaciente.TabIndex = 1;
             this.lblNombrePaciente.Text = "Paciente...";
             this.lblNombrePaciente.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -289,7 +290,7 @@
             this.pbPaciente.BorderRadius = 33;
             this.pbPaciente.Image = global::Empresa_laboral_ADNE___Proyecto_PTC.Properties.Resources.Foto_Ver_Paciente;
             this.pbPaciente.IsCircle = true;
-            this.pbPaciente.Location = new System.Drawing.Point(32, 19);
+            this.pbPaciente.Location = new System.Drawing.Point(20, 16);
             this.pbPaciente.Name = "pbPaciente";
             this.pbPaciente.Size = new System.Drawing.Size(66, 66);
             this.pbPaciente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

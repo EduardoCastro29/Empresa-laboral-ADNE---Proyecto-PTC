@@ -29,18 +29,18 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VerPacientesForm));
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             this.bunifuGradientPanel1 = new Bunifu.UI.WinForms.BunifuGradientPanel();
+            this.btnVerPacientesSinProfesional = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
+            this.flpVerPacientes = new System.Windows.Forms.FlowLayoutPanel();
             this.pnlSombraBuscar = new Bunifu.UI.WinForms.BunifuPanel();
             this.btnBuscar = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.txtBuscarPaciente = new Bunifu.UI.WinForms.BunifuTextBox();
-            this.flpVerPacientes = new System.Windows.Forms.FlowLayoutPanel();
-            this.btnVerPacientesSinProfesional = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.bunifuGradientPanel1.SuspendLayout();
             this.pnlSombraBuscar.SuspendLayout();
             this.SuspendLayout();
@@ -64,6 +64,107 @@
             this.bunifuGradientPanel1.Quality = 10;
             this.bunifuGradientPanel1.Size = new System.Drawing.Size(992, 653);
             this.bunifuGradientPanel1.TabIndex = 2;
+            // 
+            // btnVerPacientesSinProfesional
+            // 
+            this.btnVerPacientesSinProfesional.AllowAnimations = true;
+            this.btnVerPacientesSinProfesional.AllowMouseEffects = true;
+            this.btnVerPacientesSinProfesional.AllowToggling = false;
+            this.btnVerPacientesSinProfesional.AnimationSpeed = 200;
+            this.btnVerPacientesSinProfesional.AutoGenerateColors = false;
+            this.btnVerPacientesSinProfesional.AutoRoundBorders = false;
+            this.btnVerPacientesSinProfesional.AutoSizeLeftIcon = true;
+            this.btnVerPacientesSinProfesional.AutoSizeRightIcon = true;
+            this.btnVerPacientesSinProfesional.BackColor = System.Drawing.Color.Transparent;
+            this.btnVerPacientesSinProfesional.BackColor1 = System.Drawing.Color.LightSeaGreen;
+            this.btnVerPacientesSinProfesional.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnVerPacientesSinProfesional.BackgroundImage")));
+            this.btnVerPacientesSinProfesional.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btnVerPacientesSinProfesional.ButtonText = "Pacientes sin profesional";
+            this.btnVerPacientesSinProfesional.ButtonTextMarginLeft = 0;
+            this.btnVerPacientesSinProfesional.ColorContrastOnClick = 45;
+            this.btnVerPacientesSinProfesional.ColorContrastOnHover = 45;
+            this.btnVerPacientesSinProfesional.Cursor = System.Windows.Forms.Cursors.Hand;
+            borderEdges1.BottomLeft = true;
+            borderEdges1.BottomRight = true;
+            borderEdges1.TopLeft = true;
+            borderEdges1.TopRight = true;
+            this.btnVerPacientesSinProfesional.CustomizableEdges = borderEdges1;
+            this.btnVerPacientesSinProfesional.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnVerPacientesSinProfesional.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btnVerPacientesSinProfesional.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btnVerPacientesSinProfesional.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btnVerPacientesSinProfesional.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
+            this.btnVerPacientesSinProfesional.Font = new System.Drawing.Font("Century Gothic", 13.5F, System.Drawing.FontStyle.Bold);
+            this.btnVerPacientesSinProfesional.ForeColor = System.Drawing.Color.White;
+            this.btnVerPacientesSinProfesional.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnVerPacientesSinProfesional.IconLeftCursor = System.Windows.Forms.Cursors.Hand;
+            this.btnVerPacientesSinProfesional.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
+            this.btnVerPacientesSinProfesional.IconMarginLeft = 11;
+            this.btnVerPacientesSinProfesional.IconPadding = 10;
+            this.btnVerPacientesSinProfesional.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnVerPacientesSinProfesional.IconRightCursor = System.Windows.Forms.Cursors.Hand;
+            this.btnVerPacientesSinProfesional.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
+            this.btnVerPacientesSinProfesional.IconSize = 25;
+            this.btnVerPacientesSinProfesional.IdleBorderColor = System.Drawing.Color.Transparent;
+            this.btnVerPacientesSinProfesional.IdleBorderRadius = 15;
+            this.btnVerPacientesSinProfesional.IdleBorderThickness = 1;
+            this.btnVerPacientesSinProfesional.IdleFillColor = System.Drawing.Color.LightSeaGreen;
+            this.btnVerPacientesSinProfesional.IdleIconLeftImage = null;
+            this.btnVerPacientesSinProfesional.IdleIconRightImage = null;
+            this.btnVerPacientesSinProfesional.IndicateFocus = false;
+            this.btnVerPacientesSinProfesional.Location = new System.Drawing.Point(665, 51);
+            this.btnVerPacientesSinProfesional.Name = "btnVerPacientesSinProfesional";
+            this.btnVerPacientesSinProfesional.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btnVerPacientesSinProfesional.OnDisabledState.BorderRadius = 15;
+            this.btnVerPacientesSinProfesional.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btnVerPacientesSinProfesional.OnDisabledState.BorderThickness = 1;
+            this.btnVerPacientesSinProfesional.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btnVerPacientesSinProfesional.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btnVerPacientesSinProfesional.OnDisabledState.IconLeftImage = null;
+            this.btnVerPacientesSinProfesional.OnDisabledState.IconRightImage = null;
+            this.btnVerPacientesSinProfesional.onHoverState.BorderColor = System.Drawing.Color.Transparent;
+            this.btnVerPacientesSinProfesional.onHoverState.BorderRadius = 15;
+            this.btnVerPacientesSinProfesional.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btnVerPacientesSinProfesional.onHoverState.BorderThickness = 1;
+            this.btnVerPacientesSinProfesional.onHoverState.FillColor = System.Drawing.Color.MediumTurquoise;
+            this.btnVerPacientesSinProfesional.onHoverState.ForeColor = System.Drawing.Color.White;
+            this.btnVerPacientesSinProfesional.onHoverState.IconLeftImage = null;
+            this.btnVerPacientesSinProfesional.onHoverState.IconRightImage = null;
+            this.btnVerPacientesSinProfesional.OnIdleState.BorderColor = System.Drawing.Color.Transparent;
+            this.btnVerPacientesSinProfesional.OnIdleState.BorderRadius = 15;
+            this.btnVerPacientesSinProfesional.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btnVerPacientesSinProfesional.OnIdleState.BorderThickness = 1;
+            this.btnVerPacientesSinProfesional.OnIdleState.FillColor = System.Drawing.Color.LightSeaGreen;
+            this.btnVerPacientesSinProfesional.OnIdleState.ForeColor = System.Drawing.Color.White;
+            this.btnVerPacientesSinProfesional.OnIdleState.IconLeftImage = null;
+            this.btnVerPacientesSinProfesional.OnIdleState.IconRightImage = null;
+            this.btnVerPacientesSinProfesional.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(166)))), ((int)(((byte)(158)))));
+            this.btnVerPacientesSinProfesional.OnPressedState.BorderRadius = 15;
+            this.btnVerPacientesSinProfesional.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btnVerPacientesSinProfesional.OnPressedState.BorderThickness = 1;
+            this.btnVerPacientesSinProfesional.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(166)))), ((int)(((byte)(158)))));
+            this.btnVerPacientesSinProfesional.OnPressedState.ForeColor = System.Drawing.Color.White;
+            this.btnVerPacientesSinProfesional.OnPressedState.IconLeftImage = null;
+            this.btnVerPacientesSinProfesional.OnPressedState.IconRightImage = null;
+            this.btnVerPacientesSinProfesional.Size = new System.Drawing.Size(290, 53);
+            this.btnVerPacientesSinProfesional.TabIndex = 105;
+            this.btnVerPacientesSinProfesional.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnVerPacientesSinProfesional.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnVerPacientesSinProfesional.TextMarginLeft = 0;
+            this.btnVerPacientesSinProfesional.TextPadding = new System.Windows.Forms.Padding(0);
+            this.btnVerPacientesSinProfesional.UseDefaultRadiusAndThickness = true;
+            // 
+            // flpVerPacientes
+            // 
+            this.flpVerPacientes.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.flpVerPacientes.AutoScroll = true;
+            this.flpVerPacientes.Location = new System.Drawing.Point(40, 147);
+            this.flpVerPacientes.Name = "flpVerPacientes";
+            this.flpVerPacientes.Size = new System.Drawing.Size(915, 462);
+            this.flpVerPacientes.TabIndex = 104;
+            this.flpVerPacientes.TabStop = true;
             // 
             // pnlSombraBuscar
             // 
@@ -252,107 +353,6 @@
             this.txtBuscarPaciente.UseSystemPasswordChar = false;
             this.txtBuscarPaciente.WordWrap = true;
             // 
-            // flpVerPacientes
-            // 
-            this.flpVerPacientes.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.flpVerPacientes.AutoScroll = true;
-            this.flpVerPacientes.Location = new System.Drawing.Point(40, 147);
-            this.flpVerPacientes.Name = "flpVerPacientes";
-            this.flpVerPacientes.Size = new System.Drawing.Size(915, 462);
-            this.flpVerPacientes.TabIndex = 104;
-            this.flpVerPacientes.TabStop = true;
-            // 
-            // btnVerPacientesSinProfesional
-            // 
-            this.btnVerPacientesSinProfesional.AllowAnimations = true;
-            this.btnVerPacientesSinProfesional.AllowMouseEffects = true;
-            this.btnVerPacientesSinProfesional.AllowToggling = false;
-            this.btnVerPacientesSinProfesional.AnimationSpeed = 200;
-            this.btnVerPacientesSinProfesional.AutoGenerateColors = false;
-            this.btnVerPacientesSinProfesional.AutoRoundBorders = false;
-            this.btnVerPacientesSinProfesional.AutoSizeLeftIcon = true;
-            this.btnVerPacientesSinProfesional.AutoSizeRightIcon = true;
-            this.btnVerPacientesSinProfesional.BackColor = System.Drawing.Color.Transparent;
-            this.btnVerPacientesSinProfesional.BackColor1 = System.Drawing.Color.LightSeaGreen;
-            this.btnVerPacientesSinProfesional.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnVerPacientesSinProfesional.BackgroundImage")));
-            this.btnVerPacientesSinProfesional.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.btnVerPacientesSinProfesional.ButtonText = "Pacientes sin profesional";
-            this.btnVerPacientesSinProfesional.ButtonTextMarginLeft = 0;
-            this.btnVerPacientesSinProfesional.ColorContrastOnClick = 45;
-            this.btnVerPacientesSinProfesional.ColorContrastOnHover = 45;
-            this.btnVerPacientesSinProfesional.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges1.BottomLeft = true;
-            borderEdges1.BottomRight = true;
-            borderEdges1.TopLeft = true;
-            borderEdges1.TopRight = true;
-            this.btnVerPacientesSinProfesional.CustomizableEdges = borderEdges1;
-            this.btnVerPacientesSinProfesional.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnVerPacientesSinProfesional.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.btnVerPacientesSinProfesional.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.btnVerPacientesSinProfesional.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.btnVerPacientesSinProfesional.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
-            this.btnVerPacientesSinProfesional.Font = new System.Drawing.Font("Century Gothic", 13.5F, System.Drawing.FontStyle.Bold);
-            this.btnVerPacientesSinProfesional.ForeColor = System.Drawing.Color.White;
-            this.btnVerPacientesSinProfesional.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVerPacientesSinProfesional.IconLeftCursor = System.Windows.Forms.Cursors.Hand;
-            this.btnVerPacientesSinProfesional.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
-            this.btnVerPacientesSinProfesional.IconMarginLeft = 11;
-            this.btnVerPacientesSinProfesional.IconPadding = 10;
-            this.btnVerPacientesSinProfesional.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnVerPacientesSinProfesional.IconRightCursor = System.Windows.Forms.Cursors.Hand;
-            this.btnVerPacientesSinProfesional.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
-            this.btnVerPacientesSinProfesional.IconSize = 25;
-            this.btnVerPacientesSinProfesional.IdleBorderColor = System.Drawing.Color.Transparent;
-            this.btnVerPacientesSinProfesional.IdleBorderRadius = 15;
-            this.btnVerPacientesSinProfesional.IdleBorderThickness = 1;
-            this.btnVerPacientesSinProfesional.IdleFillColor = System.Drawing.Color.LightSeaGreen;
-            this.btnVerPacientesSinProfesional.IdleIconLeftImage = null;
-            this.btnVerPacientesSinProfesional.IdleIconRightImage = null;
-            this.btnVerPacientesSinProfesional.IndicateFocus = false;
-            this.btnVerPacientesSinProfesional.Location = new System.Drawing.Point(665, 51);
-            this.btnVerPacientesSinProfesional.Name = "btnVerPacientesSinProfesional";
-            this.btnVerPacientesSinProfesional.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.btnVerPacientesSinProfesional.OnDisabledState.BorderRadius = 15;
-            this.btnVerPacientesSinProfesional.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.btnVerPacientesSinProfesional.OnDisabledState.BorderThickness = 1;
-            this.btnVerPacientesSinProfesional.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.btnVerPacientesSinProfesional.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.btnVerPacientesSinProfesional.OnDisabledState.IconLeftImage = null;
-            this.btnVerPacientesSinProfesional.OnDisabledState.IconRightImage = null;
-            this.btnVerPacientesSinProfesional.onHoverState.BorderColor = System.Drawing.Color.Transparent;
-            this.btnVerPacientesSinProfesional.onHoverState.BorderRadius = 15;
-            this.btnVerPacientesSinProfesional.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.btnVerPacientesSinProfesional.onHoverState.BorderThickness = 1;
-            this.btnVerPacientesSinProfesional.onHoverState.FillColor = System.Drawing.Color.MediumTurquoise;
-            this.btnVerPacientesSinProfesional.onHoverState.ForeColor = System.Drawing.Color.White;
-            this.btnVerPacientesSinProfesional.onHoverState.IconLeftImage = null;
-            this.btnVerPacientesSinProfesional.onHoverState.IconRightImage = null;
-            this.btnVerPacientesSinProfesional.OnIdleState.BorderColor = System.Drawing.Color.Transparent;
-            this.btnVerPacientesSinProfesional.OnIdleState.BorderRadius = 15;
-            this.btnVerPacientesSinProfesional.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.btnVerPacientesSinProfesional.OnIdleState.BorderThickness = 1;
-            this.btnVerPacientesSinProfesional.OnIdleState.FillColor = System.Drawing.Color.LightSeaGreen;
-            this.btnVerPacientesSinProfesional.OnIdleState.ForeColor = System.Drawing.Color.White;
-            this.btnVerPacientesSinProfesional.OnIdleState.IconLeftImage = null;
-            this.btnVerPacientesSinProfesional.OnIdleState.IconRightImage = null;
-            this.btnVerPacientesSinProfesional.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(166)))), ((int)(((byte)(158)))));
-            this.btnVerPacientesSinProfesional.OnPressedState.BorderRadius = 15;
-            this.btnVerPacientesSinProfesional.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.btnVerPacientesSinProfesional.OnPressedState.BorderThickness = 1;
-            this.btnVerPacientesSinProfesional.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(166)))), ((int)(((byte)(158)))));
-            this.btnVerPacientesSinProfesional.OnPressedState.ForeColor = System.Drawing.Color.White;
-            this.btnVerPacientesSinProfesional.OnPressedState.IconLeftImage = null;
-            this.btnVerPacientesSinProfesional.OnPressedState.IconRightImage = null;
-            this.btnVerPacientesSinProfesional.Size = new System.Drawing.Size(290, 53);
-            this.btnVerPacientesSinProfesional.TabIndex = 105;
-            this.btnVerPacientesSinProfesional.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnVerPacientesSinProfesional.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btnVerPacientesSinProfesional.TextMarginLeft = 0;
-            this.btnVerPacientesSinProfesional.TextPadding = new System.Windows.Forms.Padding(0);
-            this.btnVerPacientesSinProfesional.UseDefaultRadiusAndThickness = true;
-            // 
             // VerPacientesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -361,6 +361,7 @@
             this.ClientSize = new System.Drawing.Size(992, 653);
             this.Controls.Add(this.bunifuGradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(1018, 692);
             this.Name = "VerPacientesForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

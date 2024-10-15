@@ -34,7 +34,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Vista
                 MessageBox.Show(ex.Message);
             }
         }
-
         internal ControlVerPacientesUC(DAOActividades daoActividades)
         {
             InitializeComponent();

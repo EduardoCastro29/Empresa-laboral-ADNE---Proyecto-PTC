@@ -75,10 +75,10 @@
             this.lblApellidos = new Bunifu.UI.WinForms.BunifuLabel();
             this.lblNombres = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuGradientPanel3 = new Bunifu.UI.WinForms.BunifuGradientPanel();
+            this.btnSalir = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.txtIDUsuario = new System.Windows.Forms.ToolStripTextBox();
             this.txtIDProfesional = new System.Windows.Forms.ToolStripTextBox();
-            this.btnSalir = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.Titulo_Registrar = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuShadowPanel2 = new Bunifu.UI.WinForms.BunifuShadowPanel();
             this.bunifuPanel3 = new Bunifu.UI.WinForms.BunifuPanel();
@@ -108,8 +108,8 @@
             this.bunifuShadowPanel3.SuspendLayout();
             this.bunifuShadowPanel1.SuspendLayout();
             this.bunifuGradientPanel3.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.bunifuShadowPanel2.SuspendLayout();
             this.bunifuPanel3.SuspendLayout();
             this.bunifuGradientPanel1.SuspendLayout();
@@ -652,9 +652,9 @@
             this.bunifuGradientPanel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel3.BackgroundImage")));
             this.bunifuGradientPanel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuGradientPanel3.BorderRadius = 15;
-            this.bunifuGradientPanel3.Controls.Add(this.menuStrip1);
             this.bunifuGradientPanel3.Controls.Add(this.btnSalir);
             this.bunifuGradientPanel3.Controls.Add(this.Titulo_Registrar);
+            this.bunifuGradientPanel3.Controls.Add(this.menuStrip1);
             this.bunifuGradientPanel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.bunifuGradientPanel3.GradientBottomLeft = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(163)))), ((int)(((byte)(170)))));
             this.bunifuGradientPanel3.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(181)))), ((int)(((byte)(166)))));
@@ -668,6 +668,27 @@
             this.TTContraseña.SetToolTip(this.bunifuGradientPanel3, "");
             this.TTContraseña.SetToolTipIcon(this.bunifuGradientPanel3, null);
             this.TTContraseña.SetToolTipTitle(this.bunifuGradientPanel3, "");
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.AllowFocused = false;
+            this.btnSalir.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnSalir.AutoSizeHeight = true;
+            this.btnSalir.BorderRadius = 0;
+            this.btnSalir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSalir.Image = global::Empresa_laboral_ADNE___Proyecto_PTC.Properties.Resources.Cerrar_Login;
+            this.btnSalir.IsCircle = false;
+            this.btnSalir.Location = new System.Drawing.Point(1238, 15);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(27, 27);
+            this.btnSalir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnSalir.TabIndex = 15;
+            this.btnSalir.TabStop = false;
+            this.TTContraseña.SetToolTip(this.btnSalir, "");
+            this.TTContraseña.SetToolTipIcon(this.btnSalir, null);
+            this.TTContraseña.SetToolTipTitle(this.btnSalir, "");
+            this.btnSalir.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Square;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click_1);
             // 
             // menuStrip1
             // 
@@ -696,26 +717,6 @@
             this.txtIDProfesional.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtIDProfesional.Name = "txtIDProfesional";
             this.txtIDProfesional.Size = new System.Drawing.Size(116, 23);
-            // 
-            // btnSalir
-            // 
-            this.btnSalir.AllowFocused = false;
-            this.btnSalir.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnSalir.AutoSizeHeight = true;
-            this.btnSalir.BorderRadius = 0;
-            this.btnSalir.Image = global::Empresa_laboral_ADNE___Proyecto_PTC.Properties.Resources.Cerrar_Login;
-            this.btnSalir.IsCircle = true;
-            this.btnSalir.Location = new System.Drawing.Point(1237, 19);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(20, 20);
-            this.btnSalir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnSalir.TabIndex = 1;
-            this.btnSalir.TabStop = false;
-            this.TTContraseña.SetToolTip(this.btnSalir, "");
-            this.TTContraseña.SetToolTipIcon(this.btnSalir, null);
-            this.TTContraseña.SetToolTipTitle(this.btnSalir, "");
-            this.btnSalir.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Square;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // Titulo_Registrar
             // 
@@ -1784,9 +1785,9 @@
             this.bunifuShadowPanel1.ResumeLayout(false);
             this.bunifuGradientPanel3.ResumeLayout(false);
             this.bunifuGradientPanel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).EndInit();
             this.bunifuShadowPanel2.ResumeLayout(false);
             this.bunifuPanel3.ResumeLayout(false);
             this.bunifuGradientPanel1.ResumeLayout(false);
@@ -1807,7 +1808,6 @@
         public Bunifu.UI.WinForms.BunifuLabel lblApellidos;
         public Bunifu.UI.WinForms.BunifuLabel lblNombres;
         public Bunifu.UI.WinForms.BunifuGradientPanel bunifuGradientPanel3;
-        public Bunifu.UI.WinForms.BunifuPictureBox btnSalir;
         public Bunifu.UI.WinForms.BunifuLabel Titulo_Registrar;
         public Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel2;
         public Bunifu.UI.WinForms.BunifuPanel bunifuPanel3;
@@ -1844,5 +1844,6 @@
         private Bunifu.UI.WinForms.BunifuToolTip TTContraseña;
         public Bunifu.UI.WinForms.BunifuTextBox txtDui;
         public Bunifu.UI.WinForms.BunifuTextBox txtTelefono;
+        public Bunifu.UI.WinForms.BunifuPictureBox btnSalir;
     }
 }

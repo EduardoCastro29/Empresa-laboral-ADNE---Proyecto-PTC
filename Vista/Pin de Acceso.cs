@@ -32,5 +32,10 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Vista
 
             CTRLPinAcceso ObjControladorPinAcceso = new CTRLPinAcceso(this);
         }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
