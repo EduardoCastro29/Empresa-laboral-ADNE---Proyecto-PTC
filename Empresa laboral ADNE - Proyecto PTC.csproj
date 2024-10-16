@@ -413,6 +413,12 @@
     <Compile Include="Vista\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Content Include="Manual_Tecnico_ADNE.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Manual_Usuario_ADNE.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="Resources\WhatsApp Image 2024-07-16 at 7.50.17 PM.jpeg" />
     <None Include="Resources\Group 20.png" />
     <None Include="Resources\lupa %281%29.png" />
@@ -535,12 +541,6 @@
       <DependentUpon>Login.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <Content Include="Manual_Tecnico_ADNE.pdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Manual_Usuario_ADNE.pdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
