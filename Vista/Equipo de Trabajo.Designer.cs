@@ -275,6 +275,7 @@
             this.ClientSize = new System.Drawing.Size(1011, 720);
             this.Controls.Add(this.pnlSombraFondo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "EquipodeTrabajoForm";
             this.Padding = new System.Windows.Forms.Padding(15, 10, 5, 3);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

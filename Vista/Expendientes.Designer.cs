@@ -372,6 +372,7 @@
             this.ClientSize = new System.Drawing.Size(995, 681);
             this.Controls.Add(this.pnlFondo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "CitasForm";
             this.Padding = new System.Windows.Forms.Padding(15, 10, 5, 3);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

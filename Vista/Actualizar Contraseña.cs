@@ -34,7 +34,9 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Vista
         }
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Close();
+            LoginForm ObjLogin = new LoginForm();
+            ObjLogin.Show();
         }
     }
 }

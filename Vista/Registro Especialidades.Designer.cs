@@ -654,6 +654,7 @@
             this.Controls.Add(this.bunifuGradientPanel3);
             this.Controls.Add(this.bunifuShadowPanel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(1080, 600);
             this.MinimumSize = new System.Drawing.Size(1080, 600);
             this.Name = "RegistroEspecialidadesForm";
