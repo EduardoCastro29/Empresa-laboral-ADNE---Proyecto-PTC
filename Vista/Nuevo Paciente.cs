@@ -46,7 +46,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Vista
 
         private void NuevoPacienteForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            DAOInformacionEncargado.DocumentoEncargado = null;
             CTRLPacienteUC.VerificarTextBox = null;
         }
     }

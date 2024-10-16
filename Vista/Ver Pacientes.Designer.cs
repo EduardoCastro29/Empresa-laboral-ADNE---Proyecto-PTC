@@ -112,7 +112,7 @@
             this.btnVerPacientesSinProfesional.IdleIconLeftImage = null;
             this.btnVerPacientesSinProfesional.IdleIconRightImage = null;
             this.btnVerPacientesSinProfesional.IndicateFocus = false;
-            this.btnVerPacientesSinProfesional.Location = new System.Drawing.Point(665, 51);
+            this.btnVerPacientesSinProfesional.Location = new System.Drawing.Point(702, 0);
             this.btnVerPacientesSinProfesional.Name = "btnVerPacientesSinProfesional";
             this.btnVerPacientesSinProfesional.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnVerPacientesSinProfesional.OnDisabledState.BorderRadius = 15;
@@ -179,7 +179,7 @@
             this.pnlSombraBuscar.BorderThickness = 1;
             this.pnlSombraBuscar.Controls.Add(this.btnBuscar);
             this.pnlSombraBuscar.Controls.Add(this.txtBuscarPaciente);
-            this.pnlSombraBuscar.Location = new System.Drawing.Point(40, 44);
+            this.pnlSombraBuscar.Location = new System.Drawing.Point(192, 50);
             this.pnlSombraBuscar.Name = "pnlSombraBuscar";
             this.pnlSombraBuscar.Padding = new System.Windows.Forms.Padding(4, 2, 1, 4);
             this.pnlSombraBuscar.ShowBorders = true;

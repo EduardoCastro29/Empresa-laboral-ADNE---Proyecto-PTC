@@ -182,7 +182,7 @@
             this.txtDomicilio.IconRight = null;
             this.txtDomicilio.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtDomicilio.Lines = new string[0];
-            this.txtDomicilio.Location = new System.Drawing.Point(36, 378);
+            this.txtDomicilio.Location = new System.Drawing.Point(44, 375);
             this.txtDomicilio.MaxLength = 300;
             this.txtDomicilio.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtDomicilio.Modified = false;
@@ -289,7 +289,7 @@
             this.txtEdad.IconRight = null;
             this.txtEdad.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtEdad.Lines = new string[0];
-            this.txtEdad.Location = new System.Drawing.Point(533, 299);
+            this.txtEdad.Location = new System.Drawing.Point(541, 299);
             this.txtEdad.MaxLength = 3;
             this.txtEdad.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtEdad.Modified = false;
@@ -397,7 +397,7 @@
             this.txtComposicionFamiliar.IconRight = null;
             this.txtComposicionFamiliar.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtComposicionFamiliar.Lines = new string[0];
-            this.txtComposicionFamiliar.Location = new System.Drawing.Point(36, 453);
+            this.txtComposicionFamiliar.Location = new System.Drawing.Point(44, 453);
             this.txtComposicionFamiliar.MaxLength = 125;
             this.txtComposicionFamiliar.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtComposicionFamiliar.Modified = false;
@@ -484,7 +484,7 @@
             this.txtMotivoIntervencion.IconRight = null;
             this.txtMotivoIntervencion.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtMotivoIntervencion.Lines = new string[0];
-            this.txtMotivoIntervencion.Location = new System.Drawing.Point(38, 534);
+            this.txtMotivoIntervencion.Location = new System.Drawing.Point(46, 534);
             this.txtMotivoIntervencion.MaxLength = 300;
             this.txtMotivoIntervencion.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtMotivoIntervencion.Modified = false;
@@ -571,7 +571,7 @@
             this.txtAntecedentes.IconRight = null;
             this.txtAntecedentes.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtAntecedentes.Lines = new string[0];
-            this.txtAntecedentes.Location = new System.Drawing.Point(36, 662);
+            this.txtAntecedentes.Location = new System.Drawing.Point(44, 662);
             this.txtAntecedentes.MaxLength = 300;
             this.txtAntecedentes.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtAntecedentes.Modified = false;
@@ -658,7 +658,7 @@
             this.txtDescripcion.IconRight = null;
             this.txtDescripcion.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtDescripcion.Lines = new string[0];
-            this.txtDescripcion.Location = new System.Drawing.Point(36, 788);
+            this.txtDescripcion.Location = new System.Drawing.Point(44, 788);
             this.txtDescripcion.MaxLength = 300;
             this.txtDescripcion.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtDescripcion.Modified = false;
@@ -745,7 +745,7 @@
             this.txtAspectosPreocupantes.IconRight = null;
             this.txtAspectosPreocupantes.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtAspectosPreocupantes.Lines = new string[0];
-            this.txtAspectosPreocupantes.Location = new System.Drawing.Point(36, 912);
+            this.txtAspectosPreocupantes.Location = new System.Drawing.Point(44, 912);
             this.txtAspectosPreocupantes.MaxLength = 300;
             this.txtAspectosPreocupantes.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtAspectosPreocupantes.Modified = false;
@@ -1042,7 +1042,7 @@
             this.txtProfesion.IconRight = null;
             this.txtProfesion.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtProfesion.Lines = new string[0];
-            this.txtProfesion.Location = new System.Drawing.Point(570, 147);
+            this.txtProfesion.Location = new System.Drawing.Point(578, 153);
             this.txtProfesion.MaxLength = 100;
             this.txtProfesion.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtProfesion.Modified = false;
@@ -1111,7 +1111,7 @@
             this.dtFechaNacimiento.IconColor = System.Drawing.Color.Teal;
             this.dtFechaNacimiento.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
             this.dtFechaNacimiento.LeftTextMargin = 5;
-            this.dtFechaNacimiento.Location = new System.Drawing.Point(36, 309);
+            this.dtFechaNacimiento.Location = new System.Drawing.Point(44, 309);
             this.dtFechaNacimiento.MinimumSize = new System.Drawing.Size(4, 32);
             this.dtFechaNacimiento.Name = "dtFechaNacimiento";
             this.dtFechaNacimiento.Size = new System.Drawing.Size(401, 32);
@@ -1177,7 +1177,7 @@
             this.txtApellidoPaciente.IconRight = null;
             this.txtApellidoPaciente.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtApellidoPaciente.Lines = new string[0];
-            this.txtApellidoPaciente.Location = new System.Drawing.Point(464, 45);
+            this.txtApellidoPaciente.Location = new System.Drawing.Point(472, 42);
             this.txtApellidoPaciente.MaxLength = 65;
             this.txtApellidoPaciente.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtApellidoPaciente.Modified = false;
@@ -1254,7 +1254,7 @@
             this.txtNacionalidad.IconRight = null;
             this.txtNacionalidad.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtNacionalidad.Lines = new string[0];
-            this.txtNacionalidad.Location = new System.Drawing.Point(184, 96);
+            this.txtNacionalidad.Location = new System.Drawing.Point(192, 96);
             this.txtNacionalidad.MaxLength = 125;
             this.txtNacionalidad.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtNacionalidad.Modified = false;
@@ -1341,7 +1341,7 @@
             this.txtCorreoElectronico.IconRight = null;
             this.txtCorreoElectronico.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtCorreoElectronico.Lines = new string[0];
-            this.txtCorreoElectronico.Location = new System.Drawing.Point(464, 229);
+            this.txtCorreoElectronico.Location = new System.Drawing.Point(472, 229);
             this.txtCorreoElectronico.MaxLength = 125;
             this.txtCorreoElectronico.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtCorreoElectronico.Modified = false;
@@ -1418,7 +1418,7 @@
             this.txtNombrePaciente.IconRight = null;
             this.txtNombrePaciente.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtNombrePaciente.Lines = new string[0];
-            this.txtNombrePaciente.Location = new System.Drawing.Point(36, 45);
+            this.txtNombrePaciente.Location = new System.Drawing.Point(44, 42);
             this.txtNombrePaciente.MaxLength = 65;
             this.txtNombrePaciente.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtNombrePaciente.Modified = false;
@@ -1502,7 +1502,7 @@
             this.cmbGeneroId.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
             this.cmbGeneroId.ItemHighLightForeColor = System.Drawing.Color.White;
             this.cmbGeneroId.ItemTopMargin = 3;
-            this.cmbGeneroId.Location = new System.Drawing.Point(142, 153);
+            this.cmbGeneroId.Location = new System.Drawing.Point(126, 153);
             this.cmbGeneroId.Name = "cmbGeneroId";
             this.cmbGeneroId.Size = new System.Drawing.Size(295, 32);
             this.cmbGeneroId.TabIndex = 4;
@@ -1540,7 +1540,7 @@
             this.txtTelefono1.IconRight = null;
             this.txtTelefono1.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtTelefono1.Lines = new string[0];
-            this.txtTelefono1.Location = new System.Drawing.Point(36, 229);
+            this.txtTelefono1.Location = new System.Drawing.Point(44, 231);
             this.txtTelefono1.MaxLength = 12;
             this.txtTelefono1.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtTelefono1.Modified = false;
@@ -1627,7 +1627,7 @@
             this.txtDocumentoPresentado.IconRight = null;
             this.txtDocumentoPresentado.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtDocumentoPresentado.Lines = new string[0];
-            this.txtDocumentoPresentado.Location = new System.Drawing.Point(601, 96);
+            this.txtDocumentoPresentado.Location = new System.Drawing.Point(609, 96);
             this.txtDocumentoPresentado.MaxLength = 11;
             this.txtDocumentoPresentado.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtDocumentoPresentado.Modified = false;
@@ -1762,6 +1762,7 @@
             this.btnVerEncargado.TextMarginLeft = 0;
             this.btnVerEncargado.TextPadding = new System.Windows.Forms.Padding(0);
             this.btnVerEncargado.UseDefaultRadiusAndThickness = true;
+            this.btnVerEncargado.Visible = false;
             // 
             // NotificacionPaciente
             // 

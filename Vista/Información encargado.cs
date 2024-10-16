@@ -31,7 +31,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Vista
             this.FormBorderStyle = FormBorderStyle.None;
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
 
-            CTRLInformacionEncargado ObjControladorInformacionENC = new CTRLInformacionEncargado(this);
+            //CTRLInformacionEncargado ObjControladorInformacionENC = new CTRLInformacionEncargado(this);
         }
         private void leerIni()
         {

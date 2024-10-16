@@ -200,7 +200,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador.ControladorUserControl
             ObjInformacionPersonal.Load += new EventHandler(DesactivarAgregarPaciente);
             // Metodo para actualizar la Informacion del Paciente presionando el boton de Modificar 
             ObjInformacionPersonal.btnModificarPaciente.Click += new EventHandler(ActualizarInformacionPaciente);
-            ObjInformacionPersonal.btnVerEncargado.Click += new EventHandler(VerEncargadoPaciente);
+            //ObjInformacionPersonal.btnVerEncargado.Click += new EventHandler(VerEncargadoPaciente);
             ObjInformacionPersonal.Load += new EventHandler(CargarCMB);
 
             //Validaciones de Campos
@@ -476,37 +476,37 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador.ControladorUserControl
         }
         #endregion
         #region Ver encargado relacionado con el Paciente (READ)
-        private void VerEncargadoPaciente(object sender, EventArgs e)
-        {
-            //Instanciamos a la clase DAOEncargado
-            DAOInformacionEncargado ObjMostrarDatosEncargado = new DAOInformacionEncargado();
+        //private void VerEncargadoPaciente(object sender, EventArgs e)
+        //{
+        //    //Instanciamos a la clase DAOEncargado
+        //    DAOInformacionEncargado ObjMostrarDatosEncargado = new DAOInformacionEncargado();
 
-            //Cargamos el valor del DTO
-            ObjMostrarDatosEncargado.DocumentoPresentadoP = ObjInformacionPersonal.txtDocumentoPresentado.Text;
+        //    //Cargamos el valor del DTO
+        //    ObjMostrarDatosEncargado.DocumentoPresentadoP = ObjInformacionPersonal.txtDocumentoPresentado.Text;
 
-            //Cargamos el método junto a su valor
-            if (ObjMostrarDatosEncargado.VerEncargado() == true)
-            {
-                //Instanciamos al formulario Encargado junto con sus valores
-                InformaciónEncargadoForm ObjMostrarEncargado = new InformaciónEncargadoForm();
+        //    //Cargamos el método junto a su valor
+        //    if (ObjMostrarDatosEncargado.VerEncargado() == true)
+        //    {
+        //        //Instanciamos al formulario Encargado junto con sus valores
+        //        InformaciónEncargadoForm ObjMostrarEncargado = new InformaciónEncargadoForm();
 
-                ObjMostrarEncargado.txtDocumentoEncargado.Text = ObjMostrarDatosEncargado.DocumentoPresentado;
-                ObjMostrarEncargado.txtNombresEncargado.Text = ObjMostrarDatosEncargado.Nombre;
-                ObjMostrarEncargado.txtApellidosEncargado.Text = ObjMostrarDatosEncargado.Apellido;
-                ObjMostrarEncargado.dtFechaNacimiento.Value = ObjMostrarDatosEncargado.FechaNacimiento;
-                ObjMostrarEncargado.txtEdadEncargado.Text = ObjMostrarDatosEncargado.Edad.ToString();
-                ObjMostrarEncargado.txtTelefono.Text = ObjMostrarDatosEncargado.Telefono;
-                ObjMostrarEncargado.txtCorreoEncargado.Text = ObjMostrarDatosEncargado.CorreoElectronico;
-                ObjMostrarEncargado.txtDomicilio.Text = ObjMostrarDatosEncargado.Domicilio;
+        //        ObjMostrarEncargado.txtDocumentoEncargado.Text = ObjMostrarDatosEncargado.DocumentoPresentado;
+        //        ObjMostrarEncargado.txtNombresEncargado.Text = ObjMostrarDatosEncargado.Nombre;
+        //        ObjMostrarEncargado.txtApellidosEncargado.Text = ObjMostrarDatosEncargado.Apellido;
+        //        ObjMostrarEncargado.dtFechaNacimiento.Value = ObjMostrarDatosEncargado.FechaNacimiento;
+        //        ObjMostrarEncargado.txtEdadEncargado.Text = ObjMostrarDatosEncargado.Edad.ToString();
+        //        ObjMostrarEncargado.txtTelefono.Text = ObjMostrarDatosEncargado.Telefono;
+        //        ObjMostrarEncargado.txtCorreoEncargado.Text = ObjMostrarDatosEncargado.CorreoElectronico;
+        //        ObjMostrarEncargado.txtDomicilio.Text = ObjMostrarDatosEncargado.Domicilio;
 
-                ObjMostrarEncargado.btnRegistrarEncargado.Enabled = false;
-                ObjMostrarEncargado.ShowDialog();
-            }
-            else
-            {
-                MessageBox.Show("El paciente relacionado no posee un encargado", "Encargado del Paciente", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-        }
+        //        ObjMostrarEncargado.btnRegistrarEncargado.Enabled = false;
+        //        ObjMostrarEncargado.ShowDialog();
+        //    }
+        //    else
+        //    {
+        //        MessageBox.Show("El paciente relacionado no posee un encargado", "Encargado del Paciente", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        //    }
+        //}
         #endregion
         #region Validar el campo de Correo Electrónico
         //Creamos un método de tipo booleano, de esta forma nos permitirá retornar un valor (ya sea verdadero o falso)

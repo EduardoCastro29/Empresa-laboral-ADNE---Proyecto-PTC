@@ -81,22 +81,9 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                     //Restablecemos la fecha al valor anterior o a una fecha válida (hace 2 años)
                     ObjInformacionPersonal.dtFechaNacimiento.Value = DateTime.Today.AddYears(-2);
                 }
-                if (CalcularEdad < 18 && DAOInformacionEncargado.DocumentoEncargado == null)
-                {
-                    //En el caso de que la persona sea menor a 18 años, mostramos un mensaje especificando si desea establecer un ecargado al paciente registrado
-                    if (MessageBox.Show("La edad de la persona ingresada es menor a 18 años, desea agregarle un encargado al paciente registrado?", "Agregar Encargado", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                    {
-                        InformaciónEncargadoForm ObjAbrirInformacionEncargado = new InformaciónEncargadoForm();
-                        string CapturarDUIPaciente = ObjInformacionPersonal.txtDocumentoPresentado.Text.Trim();
-                        ObjAbrirInformacionEncargado.txtDocumentoPaciente.Text = CapturarDUIPaciente;
-                        ObjAbrirInformacionEncargado.ShowDialog();
-                    }
-                    else
-                    {
-                        //Si la respuesta al DialogueResult fuese que no, restablecemos la fecha a 18 años
-                        ObjInformacionPersonal.dtFechaNacimiento.Value = DateTime.Today.AddYears(-18);
-                    }
-                }
+
+                //Aquí yacía el método del encargado, pipipi :"v
+
                 //Verificamos si la edad es mayor a 120 años, por políticas de seguridad, la persona registrada no puede ser mayor a 120 años
                 else if (CalcularEdad > 120)
                 {
@@ -334,7 +321,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
         private void LimpiarCampos()
         {
             ObjInformacionPersonal.dtFechaNacimiento.Value = DateTime.Today.AddYears(-18);
-            DAOInformacionEncargado.DocumentoEncargado = null;
+            //DAOInformacionEncargado.DocumentoEncargado = null;
             ObjInformacionPersonal.txtNacionalidad.Clear();
             ObjInformacionPersonal.txtDocumentoPresentado.Clear();
             ObjInformacionPersonal.txtEdad.Clear();
@@ -434,5 +421,21 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             return true;
         }
         #endregion
+        //if (CalcularEdad < 18 && DAOInformacionEncargado.DocumentoEncargado == null)
+        //{
+        //    //En el caso de que la persona sea menor a 18 años, mostramos un mensaje especificando si desea establecer un ecargado al paciente registrado
+        //    if (MessageBox.Show("La edad de la persona ingresada es menor a 18 años, desea agregarle un encargado al paciente registrado?", "Agregar Encargado", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+        //    {
+        //        InformaciónEncargadoForm ObjAbrirInformacionEncargado = new InformaciónEncargadoForm();
+        //        string CapturarDUIPaciente = ObjInformacionPersonal.txtDocumentoPresentado.Text.Trim();
+        //        ObjAbrirInformacionEncargado.txtDocumentoPaciente.Text = CapturarDUIPaciente;
+        //        ObjAbrirInformacionEncargado.ShowDialog();
+        //    }
+        //    else
+        //    {
+        //        //Si la respuesta al DialogueResult fuese que no, restablecemos la fecha a 18 años
+        //        ObjInformacionPersonal.dtFechaNacimiento.Value = DateTime.Today.AddYears(-18);
+        //    }
+        //}
     }
 }

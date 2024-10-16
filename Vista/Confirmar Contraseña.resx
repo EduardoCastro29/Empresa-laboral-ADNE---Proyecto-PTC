@@ -179,19 +179,19 @@
 </value>
   </data>
   <data name="bunifuLabel1.BaseStylesheet" xml:space="preserve">
-    <value>#bunifu-label { padding: 0px; font-family: 'Century Gothic'; font-size: 15.25pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(245, 245, 245); text-align: left; }</value>
+    <value>#bunifu-label { padding: 0px; font-family: 'Century Gothic'; font-size: 15,25pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(245, 245, 245); text-align: left; }</value>
   </data>
   <data name="txtConfirmarContra.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAcAAAAArCAYAAADv0ViGAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGHSURBVHhe7dgxahtBGIbhKV2mzBF8pFwiN8hJXPscWY20
-        i0oXKiyDCIioShDLWhCBF7GZJQPG5Ab7Pw98zcz0L0wCgPCapvnSdd3TarWazMzMlrK5bTnnb6VzdzV5
-        78rl991uN/R9PwHAksxtOxwO19K6lw8RXK/XX/f7/Wt9BwCLdDqd3koEH2v+Umrb9sflcqnXALBM4zhO
-        Oec/NX8pzf+jABDB3LyaPwEEIA4BBCAkAQQgJAEEICQBBCAkAQQgJAEEICQBBCAkAQQgJAEEICQBBCAk
-        AQQgJAEEICQBBCAkAQQgJAEEICQBBCAkAQQgJAEEICQBBCAkAQQgJAEEICQBBCAkAQQgJAEEICQBBCAk
-        AQQgJAEEICQBBCAkAQQgJAEEICQBBCCkDwHcbDa/r9drvQKAZbrdblPOeaz5S6nruofj8TjWewBYpL7v
-        p9K8p5q/lJqm+VQOfp7P5/oEAJZlGIZpu93+Ks27r/n7pxx8LhHczn+jZmZmS1vbts//xQ8AYknpL7nO
-        u7gZKUjAAAAAAElFTkSuQmCC
+        iVBORw0KGgoAAAANSUhEUgAAAeoAAAArCAYAAAC3rsufAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGTSURBVHhe7dgxahtBGIbhKV269BFyJF/CN8hJXOccWY20
+        i0oVKqKACAirShCLIoggi9jMkgFj0nv/wPPA18xM/8IkAOA/0TTNY9d1m8ViMZqZmdn7bmpwzvlj6fFd
+        TfOrcvl5u92e+74fAYD3NzV4v99fS5O/von1crl82u12P+s7AGBGx+Pxd4n1p5rplNq2/Xa5XOo1ADCn
+        YRjGnPOvmumUpn9xACCOqc0100INANEINQAEJtQAEJhQA0BgQg0AgQk1AAQm1AAQmFADQGBCDQCBCTUA
+        BCbUABCYUANAYEINAIEJNQAEJtQAEJhQA0BgQg0AgQk1AAQm1AAQmFADQGBCDQCBCTUABCbUABCYUANA
+        YEINAIEJNQAEJtQAEJhQA0BgQg0AgQk1AAQm1AAQmFADQGBvQr1arX5cr9d6BQDM6Xa7jTnnoWY6pa7r
+        ng+Hw1DvAYAZ9X0/ljZvaqZTaprmvhy8nE6n+gQAmMP5fB7X6/X30uYPNdN/lYOHEuv19CduZmZm86xt
+        2y//RBoAiCilP6YqTGGligo0AAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

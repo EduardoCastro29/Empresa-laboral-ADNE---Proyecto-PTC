@@ -182,6 +182,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                     ObjAgendarCitaForm.dtHoraInicio.Value.TimeOfDay < horaInicioMinima ||
                     ObjAgendarCitaForm.dtHoraFinal.Value.TimeOfDay > horaFinalMaxima ||
                     ObjAgendarCitaForm.dtHoraInicio.Value.TimeOfDay >= ObjAgendarCitaForm.dtHoraFinal.Value.TimeOfDay ||
+                    ObjAgendarCitaForm.dtFecha.Value < DateTime.Today ||
                     ObjAgendarCitaForm.txtMotivoConsulta.Text.Length < 5)
                 {
                     ObjAgendarCitaForm.NotificacionCita.Show(ObjAgendarCitaForm, "Existen campos vacíos o los campos son demasiado cortos en el listado, verifique si existe algún campo faltante", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error);
