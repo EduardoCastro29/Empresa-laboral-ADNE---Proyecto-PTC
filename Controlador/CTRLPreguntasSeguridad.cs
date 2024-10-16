@@ -91,6 +91,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                 {
                     if (int.TryParse(ObjPreguntasSForm.cmbSegundaPregunta.SelectedValue.ToString(), out _))
                     {
+                        ObjDAOCargarCMB.PreguntaNotIn1 = int.Parse(ObjPreguntasSForm.cmbPrimeraPregunta.SelectedValue.ToString());
                         ObjDAOCargarCMB.PreguntaNotIn2 = int.Parse(ObjPreguntasSForm.cmbSegundaPregunta.SelectedValue.ToString());
                         ObjPreguntasSForm.cmbTerceraPregunta.DataSource = ObjDAOCargarCMB.CargarPregunta3();
                         ObjPreguntasSForm.cmbTerceraPregunta.ValueMember = "preguntasId";
@@ -122,6 +123,8 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                 {
                     if (int.TryParse(ObjPreguntasSForm.cmbTerceraPregunta.SelectedValue.ToString(), out _))
                     {
+                        ObjDAOCargarCMB.PreguntaNotIn1 = int.Parse(ObjPreguntasSForm.cmbPrimeraPregunta.SelectedValue.ToString());
+                        ObjDAOCargarCMB.PreguntaNotIn2 = int.Parse(ObjPreguntasSForm.cmbSegundaPregunta.SelectedValue.ToString());
                         ObjDAOCargarCMB.PreguntaNotIn3 = int.Parse(ObjPreguntasSForm.cmbTerceraPregunta.SelectedValue.ToString());
                         ObjPreguntasSForm.cmbCuartaPregunta.DataSource = ObjDAOCargarCMB.CargarPregunta4();
                         ObjPreguntasSForm.cmbCuartaPregunta.ValueMember = "preguntasId";
