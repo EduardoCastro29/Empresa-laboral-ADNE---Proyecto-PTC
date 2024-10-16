@@ -41,6 +41,13 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                         ObjAbrirFMRConexion.txtAutenticacion.Text = DTOAgregarConexion.User;
                         ObjAbrirFMRConexion.txtContrasena.Text = DTOAgregarConexion.Password;
 
+                        ObjAbrirFMRConexion.txtServidorURL.Enabled = false;
+                        ObjAbrirFMRConexion.txtBaseDeDatos.Enabled = false;
+                        ObjAbrirFMRConexion.txtAutenticacion.Enabled = false;
+                        ObjAbrirFMRConexion.txtContrasena.Enabled = false;
+
+                        ObjAbrirFMRConexion.btnGuardar.Enabled = false;
+
                         //Abrimos el formulario
                         ObjAbrirFMRConexion.ShowDialog();
                         ObjConfirmarContrasenaForm.Hide();
