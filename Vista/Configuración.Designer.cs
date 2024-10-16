@@ -165,7 +165,7 @@
             this.bunifuLabel1.Location = new System.Drawing.Point(473, 162);
             this.bunifuLabel1.Name = "bunifuLabel1";
             this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel1.Size = new System.Drawing.Size(435, 24);
+            this.bunifuLabel1.Size = new System.Drawing.Size(2044, 119);
             this.bunifuLabel1.TabIndex = 1;
             this.bunifuLabel1.TabStop = false;
             this.bunifuLabel1.Text = "Desarrollado por ADNE Dev Team - © 2024";
@@ -183,7 +183,7 @@
             this.bunifuLabel2.Location = new System.Drawing.Point(60, 89);
             this.bunifuLabel2.Name = "bunifuLabel2";
             this.bunifuLabel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel2.Size = new System.Drawing.Size(297, 33);
+            this.bunifuLabel2.Size = new System.Drawing.Size(364, 40);
             this.bunifuLabel2.TabIndex = 12;
             this.bunifuLabel2.TabStop = false;
             this.bunifuLabel2.Text = "Cambia tu contraseña";
@@ -201,7 +201,7 @@
             this.bunifuLabel3.Location = new System.Drawing.Point(28, 22);
             this.bunifuLabel3.Name = "bunifuLabel3";
             this.bunifuLabel3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel3.Size = new System.Drawing.Size(164, 36);
+            this.bunifuLabel3.Size = new System.Drawing.Size(564, 117);
             this.bunifuLabel3.TabIndex = 9;
             this.bunifuLabel3.TabStop = false;
             this.bunifuLabel3.Text = "Contraseña";
@@ -332,10 +332,10 @@
             this.lblConfiguraTuDB.Location = new System.Drawing.Point(60, 89);
             this.lblConfiguraTuDB.Name = "lblConfiguraTuDB";
             this.lblConfiguraTuDB.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblConfiguraTuDB.Size = new System.Drawing.Size(358, 33);
+            this.lblConfiguraTuDB.Size = new System.Drawing.Size(564, 40);
             this.lblConfiguraTuDB.TabIndex = 12;
             this.lblConfiguraTuDB.TabStop = false;
-            this.lblConfiguraTuDB.Text = "Configura la base de datos";
+            this.lblConfiguraTuDB.Text = "Configuración de la base de datos";
             this.lblConfiguraTuDB.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lblConfiguraTuDB.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
@@ -350,10 +350,10 @@
             this.lblTituloAgregarConexion.Location = new System.Drawing.Point(28, 22);
             this.lblTituloAgregarConexion.Name = "lblTituloAgregarConexion";
             this.lblTituloAgregarConexion.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblTituloAgregarConexion.Size = new System.Drawing.Size(260, 36);
+            this.lblTituloAgregarConexion.Size = new System.Drawing.Size(664, 117);
             this.lblTituloAgregarConexion.TabIndex = 9;
             this.lblTituloAgregarConexion.TabStop = false;
-            this.lblTituloAgregarConexion.Text = "Agregar Conexión";
+            this.lblTituloAgregarConexion.Text = "Ver Conexión";
             this.lblTituloAgregarConexion.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lblTituloAgregarConexion.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
@@ -501,7 +501,7 @@
             this.lblTituloApariencia.Location = new System.Drawing.Point(28, 27);
             this.lblTituloApariencia.Name = "lblTituloApariencia";
             this.lblTituloApariencia.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblTituloApariencia.Size = new System.Drawing.Size(156, 36);
+            this.lblTituloApariencia.Size = new System.Drawing.Size(540, 117);
             this.lblTituloApariencia.TabIndex = 9;
             this.lblTituloApariencia.TabStop = false;
             this.lblTituloApariencia.Text = "Apariencia";
@@ -519,7 +519,7 @@
             this.lblPerosnalizacionModo.Location = new System.Drawing.Point(60, 93);
             this.lblPerosnalizacionModo.Name = "lblPerosnalizacionModo";
             this.lblPerosnalizacionModo.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblPerosnalizacionModo.Size = new System.Drawing.Size(402, 33);
+            this.lblPerosnalizacionModo.Size = new System.Drawing.Size(491, 40);
             this.lblPerosnalizacionModo.TabIndex = 12;
             this.lblPerosnalizacionModo.TabStop = false;
             this.lblPerosnalizacionModo.Text = "Cambiar tema a modo oscuro";
@@ -947,7 +947,7 @@
             this.lblDocumentoTitulo.Location = new System.Drawing.Point(349, 218);
             this.lblDocumentoTitulo.Name = "lblDocumentoTitulo";
             this.lblDocumentoTitulo.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblDocumentoTitulo.Size = new System.Drawing.Size(303, 25);
+            this.lblDocumentoTitulo.Size = new System.Drawing.Size(1450, 117);
             this.lblDocumentoTitulo.TabIndex = 25;
             this.lblDocumentoTitulo.TabStop = false;
             this.lblDocumentoTitulo.Text = "Documento de Identificación:";
@@ -965,7 +965,7 @@
             this.lblCuenta.Location = new System.Drawing.Point(28, 22);
             this.lblCuenta.Name = "lblCuenta";
             this.lblCuenta.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblCuenta.Size = new System.Drawing.Size(145, 36);
+            this.lblCuenta.Size = new System.Drawing.Size(500, 117);
             this.lblCuenta.TabIndex = 9;
             this.lblCuenta.TabStop = false;
             this.lblCuenta.Text = "Mi Cuenta";
@@ -982,7 +982,7 @@
             this.lblCorreoUsuario.Location = new System.Drawing.Point(349, 177);
             this.lblCorreoUsuario.Name = "lblCorreoUsuario";
             this.lblCorreoUsuario.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblCorreoUsuario.Size = new System.Drawing.Size(193, 25);
+            this.lblCorreoUsuario.Size = new System.Drawing.Size(932, 117);
             this.lblCorreoUsuario.TabIndex = 24;
             this.lblCorreoUsuario.TabStop = false;
             this.lblCorreoUsuario.Text = "Correo Electrónico:";
@@ -1000,7 +1000,7 @@
             this.lblProfesional.Location = new System.Drawing.Point(349, 89);
             this.lblProfesional.Name = "lblProfesional";
             this.lblProfesional.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblProfesional.Size = new System.Drawing.Size(243, 25);
+            this.lblProfesional.Size = new System.Drawing.Size(1158, 117);
             this.lblProfesional.TabIndex = 22;
             this.lblProfesional.TabStop = false;
             this.lblProfesional.Text = "Nombre del Profesional:";
@@ -1017,7 +1017,7 @@
             this.lblUsuarioo.Location = new System.Drawing.Point(349, 133);
             this.lblUsuarioo.Name = "lblUsuarioo";
             this.lblUsuarioo.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblUsuarioo.Size = new System.Drawing.Size(81, 25);
+            this.lblUsuarioo.Size = new System.Drawing.Size(382, 117);
             this.lblUsuarioo.TabIndex = 23;
             this.lblUsuarioo.TabStop = false;
             this.lblUsuarioo.Text = "Usuario:";
