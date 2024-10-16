@@ -238,6 +238,8 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                         ObjImagenProfesional.Save(ObjArchivoMemoria, ImageFormat.Bmp);
                         //Convertimos la imagen en archivo de bytes
                         ImagenProfesional = ObjArchivoMemoria.ToArray();
+                        //Guardamos la imagen correspondiente
+                        ObjDAOActualizarProfesional.Imagen = ImagenProfesional;
                     }
                     else
                     {

@@ -88,7 +88,7 @@
             this.lblContrasenaActual.Location = new System.Drawing.Point(64, 54);
             this.lblContrasenaActual.Name = "lblContrasenaActual";
             this.lblContrasenaActual.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblContrasenaActual.Size = new System.Drawing.Size(277, 23);
+            this.lblContrasenaActual.Size = new System.Drawing.Size(488, 39);
             this.lblContrasenaActual.TabIndex = 9;
             this.lblContrasenaActual.TabStop = false;
             this.lblContrasenaActual.Text = "Ingrese su antigua contraseña";
@@ -275,7 +275,7 @@
             this.bunifuLabel1.Location = new System.Drawing.Point(64, 264);
             this.bunifuLabel1.Name = "bunifuLabel1";
             this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel1.Size = new System.Drawing.Size(280, 23);
+            this.bunifuLabel1.Size = new System.Drawing.Size(493, 39);
             this.bunifuLabel1.TabIndex = 3;
             this.bunifuLabel1.TabStop = false;
             this.bunifuLabel1.Text = "Confirme su nueva contraseña";
@@ -373,7 +373,7 @@
             this.lblNuevaContrasena.Location = new System.Drawing.Point(64, 155);
             this.lblNuevaContrasena.Name = "lblNuevaContrasena";
             this.lblNuevaContrasena.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblNuevaContrasena.Size = new System.Drawing.Size(263, 23);
+            this.lblNuevaContrasena.Size = new System.Drawing.Size(465, 39);
             this.lblNuevaContrasena.TabIndex = 1;
             this.lblNuevaContrasena.TabStop = false;
             this.lblNuevaContrasena.Text = "Ingrese su nueva contraseña";
@@ -465,6 +465,7 @@
             this.BackColor = System.Drawing.Color.Teal;
             this.ClientSize = new System.Drawing.Size(460, 489);
             this.Controls.Add(this.bunifuPanel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Cambiar_Contraseña";
             this.Padding = new System.Windows.Forms.Padding(10);

@@ -17,8 +17,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
     internal class CTRLConfiguracion
     {
         readonly ConfiguraciónForm ObjConfiguracionForm;
-        ActualizarContraseñaForm ObjActualizarContrasena = new ActualizarContraseñaForm();
-        CTRLActualizarContrasena ObjCTRLActualizarContrasena;
         public CTRLConfiguracion(ConfiguraciónForm Vista)
         {
             ObjConfiguracionForm = Vista;

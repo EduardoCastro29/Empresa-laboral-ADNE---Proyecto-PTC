@@ -197,7 +197,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
 
                     //Insertamos los valores que conllevan al registro de la Primera Empresa
                     ObjRegistrarEmpresa.NombreEmpresa = ObjPrimerUsoSistema.txtNombreEmpresa.Text.Trim();
-                    ObjRegistrarEmpresa.DireccionEmpresa = ObjPrimerUsoSistema.txtCorreoElectronico.Text.Trim();
+                    ObjRegistrarEmpresa.DireccionEmpresa = ObjPrimerUsoSistema.txtDireccion.Text.Trim();
                     ObjRegistrarEmpresa.NumeroTelefono = ObjPrimerUsoSistema.txtTelefono.Text.Trim();
                     ObjRegistrarEmpresa.NumeroPBX = ObjPrimerUsoSistema.txtPBX.Text.Trim();
                     ObjRegistrarEmpresa.FeghaCreacionE = ObjPrimerUsoSistema.dpCreacionEmpresa.Value;
