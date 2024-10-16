@@ -226,7 +226,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                     ObjDAOActualizarProfesional.Apellidos = ObjConfiguracionUsuario.txtApellido.Text.Trim();
                     ObjDAOActualizarProfesional.Telefono = ObjConfiguracionUsuario.txtTelefono.Text;
 
-                    if (ObjConfiguracionUsuario.ofdImagen.ShowDialog() == DialogResult.OK)
+                    if (ObjConfiguracionUsuario.picProfesional.Image != null)
                     {
                         //Declaramos un objeto del tipo Imagen
                         Image ObjImagenProfesional = ObjConfiguracionUsuario.picProfesional.Image;
@@ -243,8 +243,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                     }
                     else
                     {
-                        MemoryStream ObjArchivoMemoria = new MemoryStream(InicioSesion.Imagen);
-                        ObjDAOActualizarProfesional.Imagen = ObjArchivoMemoria.ToArray();
+                        ObjConfiguracionUsuario.Notificacion1.Show(ObjConfiguracionUsuario, "Error al actualizar el profesional, verifique si la imagen ha sido ingresada correctamente", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error);
                     }
 
                     if (VerificarCorreoUsuario(ObjConfiguracionUsuario.txtCorreo.Text.Trim()) == true)
