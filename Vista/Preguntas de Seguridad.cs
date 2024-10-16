@@ -32,5 +32,11 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Vista
 
             CTRLPreguntasSeguridad ControladorPreguntasS = new CTRLPreguntasSeguridad(this);
         }
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            LoginForm ObjLogin = new LoginForm();
+            ObjLogin.Show();
+        }
     }
 }

@@ -79,11 +79,13 @@
             this.btnRegistrar = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.lblTitulo = new Bunifu.UI.WinForms.BunifuLabel();
             this.NotificacionPreguntas = new Bunifu.UI.WinForms.BunifuSnackbar(this.components);
+            this.btnSalir = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.pnlGradiente.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.pnlSombraFondo.SuspendLayout();
             this.pnlSombraBtn.SuspendLayout();
             this.pnlSombraBoton.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlGradiente
@@ -130,6 +132,7 @@
             this.pnlSombraFondo.BorderColor = System.Drawing.Color.WhiteSmoke;
             this.pnlSombraFondo.BorderRadius = 25;
             this.pnlSombraFondo.BorderThickness = 1;
+            this.pnlSombraFondo.Controls.Add(this.btnSalir);
             this.pnlSombraFondo.Controls.Add(this.lblIngreseCredenciales);
             this.pnlSombraFondo.Controls.Add(this.lblIndicacion);
             this.pnlSombraFondo.Controls.Add(this.pnlLineaDivisora);
@@ -1172,6 +1175,24 @@
             this.NotificacionPreguntas.WarningOptions.IconLeftMargin = 12;
             this.NotificacionPreguntas.ZoomCloseIcon = true;
             // 
+            // btnSalir
+            // 
+            this.btnSalir.AllowFocused = false;
+            this.btnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSalir.AutoSizeHeight = true;
+            this.btnSalir.BorderRadius = 0;
+            this.btnSalir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSalir.Image = global::Empresa_laboral_ADNE___Proyecto_PTC.Properties.Resources.Cerrar_Login;
+            this.btnSalir.IsCircle = true;
+            this.btnSalir.Location = new System.Drawing.Point(610, 28);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(27, 27);
+            this.btnSalir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnSalir.TabIndex = 20;
+            this.btnSalir.TabStop = false;
+            this.btnSalir.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Square;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
             // PreguntasdeSeguridadForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1193,6 +1214,7 @@
             this.pnlSombraFondo.PerformLayout();
             this.pnlSombraBtn.ResumeLayout(false);
             this.pnlSombraBoton.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1222,5 +1244,6 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         public System.Windows.Forms.ToolStripTextBox txtDUIProfesional;
         public Bunifu.UI.WinForms.BunifuSnackbar NotificacionPreguntas;
+        public Bunifu.UI.WinForms.BunifuPictureBox btnSalir;
     }
 }

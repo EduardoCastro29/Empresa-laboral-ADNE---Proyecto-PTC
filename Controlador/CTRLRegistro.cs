@@ -316,6 +316,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                                 //De esta forma, el primer usuario ya tendrá preguntas asignadas y poder recuperar su contraseña de forma segura al ingresarse
                                 ObjAbrirPreguntasS.txtDUIProfesional.Text = ObjRegistro.txtDui.Text.Trim();
                                 ObjAbrirPreguntasS.btnVerificarPregunta.Enabled = false;
+                                ObjAbrirPreguntasS.btnSalir.Visible = false;
                                 ObjAbrirPreguntasS.lblIngreseCredenciales.Visible = false;
                                 ObjAbrirPreguntasS.txtUsuario.Visible = false;
                                 ObjAbrirPreguntasS.txtDocumento.Visible = false;
