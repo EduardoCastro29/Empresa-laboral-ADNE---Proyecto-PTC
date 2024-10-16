@@ -46,6 +46,8 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                         ObjAbrirFMRConexion.txtAutenticacion.Enabled = false;
                         ObjAbrirFMRConexion.txtContrasena.Enabled = false;
 
+                        ObjAbrirFMRConexion.rbHabilitar.Enabled = false;
+                        ObjAbrirFMRConexion.rbDesabilitar.Enabled = false;
                         ObjAbrirFMRConexion.btnGuardar.Enabled = false;
 
                         //Abrimos el formulario
