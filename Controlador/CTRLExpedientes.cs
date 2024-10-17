@@ -126,7 +126,8 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                     {
                         //Información del Sistema
                         pag = pag.Replace("@NOMBREEMPRESA", objCitasDAO.NombreEmpresa);
-                        pag = pag.Replace("@TELEFONOEMPRESA", objCitasDAO.NumeroTelefono + objCitasDAO.NumeroPBX);
+                        pag = pag.Replace("@TELEFONO", objCitasDAO.NumeroTelefono);
+                        pag = pag.Replace("@PBX", objCitasDAO.NumeroPBX);
                         pag = pag.Replace("@UBICACION", objCitasDAO.DireccionEmpresa);
                         pag = pag.Replace("@CORREOEMPRESA", objCitasDAO.CorreoElectronicoE);
 
