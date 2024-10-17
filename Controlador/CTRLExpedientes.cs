@@ -122,11 +122,11 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                     pag = pag.Replace("@LUGAR", objCitasDAO.Lugar);
                     pag = pag.Replace("@DESCRIPCION", objCitasDAO.Desc_Cita);
                     #endregion
-                    if (objCitasDAO.ObtenerDatosSistema() == true)
+                    if (objCitasDAO.ObtenerDatosSistema() == true)  
                     {
                         //Información del Sistema
                         pag = pag.Replace("@NOMBREEMPRESA", objCitasDAO.NombreEmpresa);
-                        pag = pag.Replace("@TELEFONO", objCitasDAO.NumeroTelefono);
+                        pag = pag.Replace("@CONTACTO", objCitasDAO.NumeroTelefono);
                         pag = pag.Replace("@PBX", objCitasDAO.NumeroPBX);
                         pag = pag.Replace("@UBICACION", objCitasDAO.DireccionEmpresa);
                         pag = pag.Replace("@CORREOEMPRESA", objCitasDAO.CorreoElectronicoE);

@@ -285,7 +285,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             {
                 //Dado el objeto del DaoInformacionPersonal, evaluamos si los datos fueron ingresados correctamente dados sus métodos
                 if (ObjInformacionPersonal.txtNacionalidad.Text.Length < 3 ||
-                    ObjInformacionPersonal.txtDocumentoPresentado.Text.Length < 9 ||
+                    //ObjInformacionPersonal.txtDocumentoPresentado.Text.Length < 9 ||
                     string.IsNullOrWhiteSpace(ObjInformacionPersonal.txtEdad.Text.Trim()) ||
                     ObjInformacionPersonal.txtTelefono1.Text.Length < 9 ||
                     ObjInformacionPersonal.txtProfesion.Text.Length < 3 ||
