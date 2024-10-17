@@ -42,7 +42,7 @@
             this.bunifuGradientPanel1 = new Bunifu.UI.WinForms.BunifuGradientPanel();
             this.lblConfirmacion = new System.Windows.Forms.Label();
             this.btnAceptarGmail = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
-            this.lblOlvidasteContraseña = new Bunifu.UI.WinForms.BunifuLabel();
+            this.lblSoporteAdministrativo = new Bunifu.UI.WinForms.BunifuLabel();
             this.btnSiguiente = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.btnCancelar = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.lblIngresarCorreo = new Bunifu.UI.WinForms.BunifuLabel();
@@ -105,7 +105,7 @@
             this.bunifuGradientPanel1.BorderRadius = 15;
             this.bunifuGradientPanel1.Controls.Add(this.lblConfirmacion);
             this.bunifuGradientPanel1.Controls.Add(this.btnAceptarGmail);
-            this.bunifuGradientPanel1.Controls.Add(this.lblOlvidasteContraseña);
+            this.bunifuGradientPanel1.Controls.Add(this.lblSoporteAdministrativo);
             this.bunifuGradientPanel1.Controls.Add(this.btnSiguiente);
             this.bunifuGradientPanel1.Controls.Add(this.btnCancelar);
             this.bunifuGradientPanel1.Controls.Add(this.lblIngresarCorreo);
@@ -222,23 +222,23 @@
             this.btnAceptarGmail.TextPadding = new System.Windows.Forms.Padding(0);
             this.btnAceptarGmail.UseDefaultRadiusAndThickness = true;
             // 
-            // lblOlvidasteContraseña
+            // lblSoporteAdministrativo
             // 
-            this.lblOlvidasteContraseña.AllowParentOverrides = false;
-            this.lblOlvidasteContraseña.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblOlvidasteContraseña.AutoEllipsis = false;
-            this.lblOlvidasteContraseña.Cursor = System.Windows.Forms.Cursors.Default;
-            this.lblOlvidasteContraseña.CursorType = System.Windows.Forms.Cursors.Default;
-            this.lblOlvidasteContraseña.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblOlvidasteContraseña.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(86)))), ((int)(((byte)(100)))));
-            this.lblOlvidasteContraseña.Location = new System.Drawing.Point(33, 44);
-            this.lblOlvidasteContraseña.Name = "lblOlvidasteContraseña";
-            this.lblOlvidasteContraseña.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblOlvidasteContraseña.Size = new System.Drawing.Size(376, 36);
-            this.lblOlvidasteContraseña.TabIndex = 14;
-            this.lblOlvidasteContraseña.Text = "¿Olvidaste tu contraseña?";
-            this.lblOlvidasteContraseña.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.lblOlvidasteContraseña.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.lblSoporteAdministrativo.AllowParentOverrides = false;
+            this.lblSoporteAdministrativo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblSoporteAdministrativo.AutoEllipsis = false;
+            this.lblSoporteAdministrativo.Cursor = System.Windows.Forms.Cursors.Default;
+            this.lblSoporteAdministrativo.CursorType = System.Windows.Forms.Cursors.Default;
+            this.lblSoporteAdministrativo.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSoporteAdministrativo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(86)))), ((int)(((byte)(100)))));
+            this.lblSoporteAdministrativo.Location = new System.Drawing.Point(33, 44);
+            this.lblSoporteAdministrativo.Name = "lblSoporteAdministrativo";
+            this.lblSoporteAdministrativo.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblSoporteAdministrativo.Size = new System.Drawing.Size(1077, 119);
+            this.lblSoporteAdministrativo.TabIndex = 14;
+            this.lblSoporteAdministrativo.Text = "Soporte administrativo";
+            this.lblSoporteAdministrativo.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lblSoporteAdministrativo.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // btnSiguiente
             // 
@@ -685,7 +685,7 @@
         private Bunifu.UI.WinForms.BunifuGradientPanel bunifuGradientPanel1;
         public System.Windows.Forms.Label lblConfirmacion;
         public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnAceptarGmail;
-        private Bunifu.UI.WinForms.BunifuLabel lblOlvidasteContraseña;
+        private Bunifu.UI.WinForms.BunifuLabel lblSoporteAdministrativo;
         public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnSiguiente;
         public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnCancelar;
         private Bunifu.UI.WinForms.BunifuLabel lblIngresarCorreo;

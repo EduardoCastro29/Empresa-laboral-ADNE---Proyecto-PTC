@@ -723,8 +723,8 @@
         We/mj/az9QCu6XFpv+f+Hta/THqIfS3CUGuApZwAU6H/JSHIISkAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="lblOlvidasteContraseña.BaseStylesheet" xml:space="preserve">
-    <value>#bunifu-label { padding: 0px; font-family: 'Century Gothic'; font-size: 21.75pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(42, 86, 100); text-align: left; }</value>
+  <data name="lblSoporteAdministrativo.BaseStylesheet" xml:space="preserve">
+    <value>#bunifu-label { padding: 0px; font-family: 'Century Gothic'; font-size: 21,75pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(42, 86, 100); text-align: left; }</value>
   </data>
   <data name="btnSiguiente.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -769,7 +769,7 @@
 </value>
   </data>
   <data name="Titulo_Registrar.BaseStylesheet" xml:space="preserve">
-    <value>#bunifu-label { padding: 0px; font-family: 'Century Gothic'; font-size: 21.75pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(42, 86, 100); text-align: left; }</value>
+    <value>#bunifu-label { padding: 0px; font-family: 'Century Gothic'; font-size: 21,75pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(42, 86, 100); text-align: left; }</value>
   </data>
   <metadata name="NotificacionEmail.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>

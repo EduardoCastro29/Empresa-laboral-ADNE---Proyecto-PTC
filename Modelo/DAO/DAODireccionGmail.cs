@@ -62,7 +62,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                     );
                     return ("Hola, " + nombreUsuario +
                            "\n" + "Haz solicitado recuperar tu contraseña" +
-                           "\n" + "Revisa tu dirección Gmail correspondiente " +
+                           "\n" + "Revisa tu dirección de correo correspondiente" +
                            "\n" + "Una vez ingresado el pin de acceso" +
                            "\n" + "Podrás actualizar tu contraseña de forma segura");
                 }
