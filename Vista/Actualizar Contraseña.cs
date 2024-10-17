@@ -35,8 +35,8 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Vista
         private void btnSalir_Click(object sender, EventArgs e)
         {
             this.Close();
-            DirecciónGmailForm ObjAbrirDireccionGM = new DirecciónGmailForm();
-            ObjAbrirDireccionGM.Show();
+            LoginForm ObjAbrirLogin = new LoginForm();
+            ObjAbrirLogin.Show();
         }
     }
 }

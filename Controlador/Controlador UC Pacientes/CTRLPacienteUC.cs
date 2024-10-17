@@ -127,13 +127,13 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador.ControladorUserControl
                     }
                     else
                     {
-                        MessageBox.Show("No se encontraron datos para el expediente seleccionado.",
-                                        "Proceso interrumpido",
-                                        MessageBoxButtons.OK,
-                                        MessageBoxIcon.Error);
-                        objExpedienteMedico.txtDocumentoPaciente.Text  = objDAOExpedienteMedico.DocumentoPresentado;
-                        objExpedienteMedico.txtDocumentoPaciente.Enabled = false;
-                        AbrirFormulario(objExpedienteMedico);
+                        if (MessageBox.Show("El paciente seleccionado no posee un expediente, desea agregarle un expediente?",
+                                        "Diagnóstico Psicosocial", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                        {
+                            objExpedienteMedico.txtDocumentoPaciente.Text = objDAOExpedienteMedico.DocumentoPresentado;
+                            objExpedienteMedico.txtDocumentoPaciente.Enabled = false;
+                            AbrirFormulario(objExpedienteMedico);
+                        }
                     }
                 }
                 catch (Exception ex)

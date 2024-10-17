@@ -31,23 +31,10 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             ObjConfiguracionForm.switchModo.CheckedChanged += new EventHandler(modoOscuro);
             ObjConfiguracionForm.switchModo.Click += new EventHandler(cambioModo);
             ObjConfiguracionForm.btnRestablecerContrasena.Click += new EventHandler(RestablecerContraseña);
-            //ObjConfiguracionForm.btnNuevaContrasena.Click += new EventHandler(cambiarContrasena);
         }
         #region Eventos iniciales al cargar el Formulario
         private void CargarDatosUsuario(object sender, EventArgs e)
         {
-            //Indicamos dado la variable de Inicio de Sesión qué botones son los que se accionarán dado el nivel de Usuario
-            switch (InicioSesion.DesempenoId)
-            {
-                case "Administrador":
-                    break;
-                case "Empleado":
-                    ObjConfiguracionForm.btnAgregarConfiguracion.Enabled = false;
-                    break;
-                default:
-                    break;
-            }
-
             ObjConfiguracionForm.lblRolUsuario.Text = InicioSesion.Especialidad;
             ObjConfiguracionForm.lblNomprePersona.Text = InicioSesion.Nombres + " " + InicioSesion.Apellidos;
             ObjConfiguracionForm.lblCorreo.Text = InicioSesion.Correo;
@@ -71,9 +58,21 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
         //Este es el método común cargando todas las variables de conexión dentro del fomulario de agregar conexión
         private void AbrirConfiguracionServidor(object sender, EventArgs e)
         {
-            ConfirmarContraseñaForm ConfirmarContrasenaForm = new ConfirmarContraseñaForm();
-            ConfirmarContrasenaForm.btnConfirmarRestablecer.Visible = false;
-            ConfirmarContrasenaForm.ShowDialog();
+            //Indicamos dado la variable de Inicio de Sesión qué botones son los que se accionarán dado el nivel de Usuario
+            switch (InicioSesion.DesempenoId)
+            {
+                case "Administrador":
+                    ConfirmarContraseñaForm ConfirmarContrasenaForm = new ConfirmarContraseñaForm();
+                    ConfirmarContrasenaForm.btnConfirmarRestablecer.Visible = false;
+                    ConfirmarContrasenaForm.ShowDialog();
+                    break;
+                case "Empleado":
+                    MessageBox.Show("El usuario asociado corresponde a un Empleado, no posee los niveles de acceso necesarios",
+                                    "Configuración de Servidor", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    break;
+                default:
+                    break;
+            }
         }
         #endregion
         #region Abrir el formulario de confirmación para la actualización de contraseña (UPDATE)
@@ -131,10 +130,10 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
         #region Método para cerrar sesión accionando el botón dentro de configuración
         private void CerrarSesionConfig(object sender, EventArgs e)
         {
-            if (MessageBox.Show("¿Desea cerrar sesión automáticamente? Considere que al accionase, el programa cerrará consecuentemente", "Cerrar Sesión", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
+            //if (MessageBox.Show("¿Desea cerrar sesión automáticamente? Considere que al accionase, el programa cerrará consecuentemente", "Cerrar Sesión", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            //{
                 Environment.Exit(0);
-            }
+            //}
         }
         #endregion
         //Creamos el método para instanciar la lectura del archivo ini desde la clase Config.cs
