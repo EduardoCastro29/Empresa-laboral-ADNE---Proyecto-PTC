@@ -13,6 +13,7 @@ using Aspose.Email;
 using System.Net.Sockets;
 using System.Net;
 using System.Text.RegularExpressions;
+using System.Windows.Automation;
 
 namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
 {
@@ -28,6 +29,8 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             ObjInformacionPersonal = vista;
             ObjInformacionPersonal.Load += new EventHandler(Modificar);
             ObjInformacionPersonal.btnGuardarPaciente.Click += new EventHandler(GuardarInformacionPersonal);
+            ObjInformacionPersonal.rbDUI.CheckedChanged += new EventHandler(ValidarRBDui);
+            ObjInformacionPersonal.rbPasaporte.CheckedChanged += new EventHandler(ValidarRBPasaporte);
 
             //Validaciones de Campos
             ObjInformacionPersonal.dtFechaNacimiento.ValueChanged += new EventHandler(ComprobarFechaActual);
@@ -41,6 +44,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             ObjInformacionPersonal.txtDescripcion.KeyPress += new KeyPressEventHandler(ValidarCampoTextBox);
             ObjInformacionPersonal.txtAspectosPreocupantes.KeyPress += new KeyPressEventHandler(ValidarCampoTextBox);
             ObjInformacionPersonal.txtDocumentoPresentado.KeyPress += new KeyPressEventHandler(ValidarCampoDocumento);
+            ObjInformacionPersonal.txtPasaporte.KeyPress += new KeyPressEventHandler(ValidarCampoPasaporte);
             ObjInformacionPersonal.txtDocumentoPresentado.TextChange += new EventHandler(EnmascararCampoDocumento);
             ObjInformacionPersonal.txtTelefono1.KeyPress += new KeyPressEventHandler(ValidarCampoNumero);
             ObjInformacionPersonal.txtCorreoElectronico.KeyPress += new KeyPressEventHandler(ValidarCampoCorreo);
@@ -180,6 +184,27 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             }
             e.Handled = true;
         }
+        private void ValidarCampoPasaporte(object sender, KeyPressEventArgs e)
+        {
+            //La propiedad char.IsControl permite controles como BackSpace, Inicio, Fin, etc.
+            if (char.IsControl(e.KeyChar))
+            {
+                //Retornamos los valores e.KeyChar
+                return;
+            }
+            //Declaramos la variable de tipo char que recibirá los parámetros de las letras registradas por las variables e.KeyChar creadas anteriormente
+            char ch = e.KeyChar;
+
+            //Declaramos lo valores que únicamente permitirá el textbox
+            if ((ch >= '0' && ch <= '9') ||
+                (ch >= 'A' && ch <= 'Z'))
+            {
+                //Retornamos los valores e.KeyChar
+                return;
+            }
+            //Indicamos que se creará el evento e.Char con todos los valores antes proporcionados, como un EventHandler
+            e.Handled = true;
+        }
         private void EnmascararCampoDocumento(object sender, EventArgs e)
         {
             //Obtenemos la longitud actual del textbox para evaluar si es necesario el remplazo por guión (en este caso el DUI) o número
@@ -232,6 +257,26 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             }
             e.Handled = true;
         }
+        private void ValidarRBDui(object sender, EventArgs e)
+        {
+            if (ObjInformacionPersonal.rbDUI.Checked)
+            {
+                //Si el RadioButton de DUI se selecciona por preferencia, validamos el campo respectivo
+                ObjInformacionPersonal.txtPasaporte.Visible = false;
+                ObjInformacionPersonal.txtPasaporte.Clear();
+                ObjInformacionPersonal.txtDocumentoPresentado.Visible = true;
+            }
+        }
+        private void ValidarRBPasaporte(object sender, EventArgs e)
+        {
+            if (ObjInformacionPersonal.rbPasaporte.Checked)
+            {
+                //Si el RadioButton de Pasaporte se selecciona por preferencia, validamos el campo respectivo
+                ObjInformacionPersonal.txtPasaporte.Visible = true;
+                ObjInformacionPersonal.txtDocumentoPresentado.Visible = false;
+                ObjInformacionPersonal.txtDocumentoPresentado.Clear();
+            }
+        }
         #endregion
         #region Inserción en el Formulario de Información Personal (INSERT)
         private void GuardarInformacionPersonal(object sender, EventArgs e)
@@ -258,16 +303,29 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                     objNuevoPaciente.NotificacionNuevoPaciente.Show(objNuevoPaciente, "Verifique si todos los datos han sido ingresados correctamente o cumplen con la regla mínima de carácteres", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error);
                     //MessageBox.Show("Error al registrar paciente, verifique si todos los datos han sido ingresados correctamente o cumplen con la regla mínima de carácteres", "Registrar paciente", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+                //if (ObjInformacionPersonal.rbDUI.Checked == true)
+                //{
+                //    if (ObjInformacionPersonal.txtDocumentoPresentado.Text.Length < 9)
+                //    {
+                //        objNuevoPaciente.NotificacionNuevoPaciente.Show(objNuevoPaciente, "Verifique si todos los datos han sido ingresados correctamente o cumplen con la regla mínima de carácteres", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error);
+                //    }
+                //}
+                //else if (ObjInformacionPersonal.rbPasaporte.Checked == true)
+                //{
+                //    if (ObjInformacionPersonal.txtPasaporte.Text.Length < 7)
+                //    {
+                //        objNuevoPaciente.NotificacionNuevoPaciente.Show(objNuevoPaciente, "Verifique si todos los datos han sido ingresados correctamente o cumplen con la regla mínima de carácteres", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error);
+                //    }
+                //}
                 else
                 {
-                    //En caso contrario, realizamos el proceso de inserción de los datos
+                    //Caso contrario, realizamos el proceso de inserción de los datos
 
                     //Realizamos el proceso para capturar los datos ingresados por el usuario dado el DaoInformacionPersonal
                     DAOInformacionPersonal ObjDAOInformacionPersonal = new DAOInformacionPersonal();
                     ObjDAOInformacionPersonal.FechaNacimiento = ObjInformacionPersonal.dtFechaNacimiento.Value.Date;
 
                     ObjDAOInformacionPersonal.Nacionalidad = ObjInformacionPersonal.txtNacionalidad.Text.Trim();
-                    ObjDAOInformacionPersonal.DocumentoPresentado = ObjInformacionPersonal.txtDocumentoPresentado.Text.Trim();
                     ObjDAOInformacionPersonal.GeneroId1 = int.Parse(ObjInformacionPersonal.cmbGeneroId.SelectedValue.ToString());
                     ObjDAOInformacionPersonal.Edad = int.Parse(ObjInformacionPersonal.txtEdad.Text.Trim());
                     ObjDAOInformacionPersonal.Telefono = (ObjInformacionPersonal.txtTelefono1.Text.Trim());
@@ -280,6 +338,15 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                     ObjDAOInformacionPersonal.Antecedente = ObjInformacionPersonal.txtAntecedentes.Text.Trim();
                     ObjDAOInformacionPersonal.Descripcion = ObjInformacionPersonal.txtDescripcion.Text.Trim();
                     ObjDAOInformacionPersonal.AspectosPreocupantes = ObjInformacionPersonal.txtAspectosPreocupantes.Text.Trim();
+
+                    if (ObjInformacionPersonal.rbDUI.Checked == true)
+                    {
+                        ObjDAOInformacionPersonal.DocumentoPresentado = ObjInformacionPersonal.txtDocumentoPresentado.Text.Trim();
+                    }
+                    else
+                    {
+                        ObjDAOInformacionPersonal.DocumentoPresentado = ObjInformacionPersonal.txtPasaporte.Text.Trim();
+                    }
 
                     if (VerificarCorreoUsuario(ObjInformacionPersonal.txtCorreoElectronico.Text) == true)
                     {
@@ -344,9 +411,20 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             ObjInformacionPersonal.cmbGeneroId.DataSource = ObjDaoCargarCMB.AgregarCMBGenero();
             ObjInformacionPersonal.cmbGeneroId.ValueMember = "generoId";
             ObjInformacionPersonal.cmbGeneroId.DisplayMember = "genero";
-
             ObjInformacionPersonal.txtEdad.Enabled = false;
-            if (string.IsNullOrWhiteSpace(ObjInformacionPersonal.txtDocumentoPresentado.Text))
+
+            if (ObjInformacionPersonal.rbDUI.Checked == true)
+            {
+                ObjInformacionPersonal.txtPasaporte.Visible = false;
+                ObjInformacionPersonal.txtDocumentoPresentado.Visible = true;
+            }
+            else
+            {
+                ObjInformacionPersonal.txtPasaporte.Visible = true;
+                ObjInformacionPersonal.txtDocumentoPresentado.Visible = false;
+            }
+
+            if (string.IsNullOrWhiteSpace(ObjInformacionPersonal.txtDocumentoPresentado.Text) && string.IsNullOrWhiteSpace(ObjInformacionPersonal.txtPasaporte.Text))
             {
                 ObjInformacionPersonal.btnGuardarPaciente.Enabled = true;
                 ObjInformacionPersonal.btnModificarPaciente.Enabled = false;

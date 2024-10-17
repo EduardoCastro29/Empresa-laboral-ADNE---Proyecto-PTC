@@ -65,6 +65,13 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador.ControladorUserControl
                         ObjVerInformacion.txtAspectosPreocupantes.Text = ObjDaoInformacionPersonal.AspectosPreocupantes;
                         ObjVerInformacion.cmbGeneroId.SelectedValue = ObjDaoInformacionPersonal.GeneroId1;
 
+                        ObjVerInformacion.rbDUI.Checked = false;
+                        ObjVerInformacion.rbPasaporte.Checked = false;
+                        ObjVerInformacion.rbDUI.Enabled = false;
+                        ObjVerInformacion.rbPasaporte.Enabled = false;
+                        ObjVerInformacion.txtPasaporte.Visible = false;
+                        ObjVerInformacion.txtDocumentoPresentado.Enabled = false;
+
                         AbrirFormulario(ObjVerInformacion);
                     }
                     else
@@ -214,8 +221,8 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador.ControladorUserControl
             ObjInformacionPersonal.txtAntecedentes.KeyPress += new KeyPressEventHandler(ValidarCampoTextBox);
             ObjInformacionPersonal.txtDescripcion.KeyPress += new KeyPressEventHandler(ValidarCampoTextBox);
             ObjInformacionPersonal.txtAspectosPreocupantes.KeyPress += new KeyPressEventHandler(ValidarCampoTextBox);
-            ObjInformacionPersonal.txtDocumentoPresentado.KeyPress += new KeyPressEventHandler(ValidarCampoDocumento);
-            ObjInformacionPersonal.txtDocumentoPresentado.TextChange += new EventHandler(EnmascararCampoDocumento);
+            //ObjInformacionPersonal.txtDocumentoPresentado.KeyPress += new KeyPressEventHandler(ValidarCampoDocumento);
+            //ObjInformacionPersonal.txtDocumentoPresentado.TextChange += new EventHandler(EnmascararCampoDocumento);
             ObjInformacionPersonal.txtTelefono1.KeyPress += new KeyPressEventHandler(ValidarCampoNumero);
             ObjInformacionPersonal.txtCorreoElectronico.KeyPress += new KeyPressEventHandler(ValidarCampoCorreo);
         }
@@ -405,7 +412,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador.ControladorUserControl
             try
             {
                 if (ObjInformacionPersonal.txtNacionalidad.Text.Length < 5 ||
-                    ObjInformacionPersonal.txtDocumentoPresentado.Text.Length < 9 ||
+                    string.IsNullOrWhiteSpace(ObjInformacionPersonal.txtDocumentoPresentado.Text) ||
                     string.IsNullOrEmpty(ObjInformacionPersonal.txtEdad.Text) ||
                     ObjInformacionPersonal.txtTelefono1.Text.Length < 9 ||
                     ObjInformacionPersonal.txtProfesion.Text.Length < 3 ||

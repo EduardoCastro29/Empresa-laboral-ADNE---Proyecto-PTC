@@ -217,8 +217,8 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             else
             {
                 if (MessageBox.Show($"Hola, Administrador, estas seguro de eliminar a:\n" +
-                    $" {ObjAdministradorForm.dgvAdministrarProfesional[3, PosicionFila].Value} {ObjAdministradorForm.dgvAdministrarProfesional[4, PosicionFila]}\n" +
-                    $", El Usuario y Profesional asociados serán eliminados de forma permanente, se eliminaran todos los datos asociados.", "Eliminar Profesional", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    $"{ObjAdministradorForm.dgvAdministrarProfesional[3, PosicionFila].Value} {ObjAdministradorForm.dgvAdministrarProfesional[4, PosicionFila].Value}\n" +
+                    $"El Usuario y Profesional asociados serán eliminados de forma permanente, se eliminaran todos los datos asociados.", "Eliminar Profesional", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     //Instanciamos a la clase DAOAdministrador para obtener los valores
                     DAOAdministrador ObjDAOEliminarUsuario = new DAOAdministrador();

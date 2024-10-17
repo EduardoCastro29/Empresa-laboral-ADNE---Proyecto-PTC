@@ -30,7 +30,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Vista
                 this.BackColor = Color.FromArgb(30, 92, 98);
                 this.lblAfectividad.ForeColor = Color.White;
                 this.lblAfectividad2.ForeColor = Color.White;
-                this.lblDUI.ForeColor = Color.White;
+                this.lblDocumento.ForeColor = Color.White;
                 this.lblEstado.ForeColor = Color.White;
                 this.lblSomatizacion.ForeColor = Color.White;
                 this.lblSomatizacion2.ForeColor = Color.White;

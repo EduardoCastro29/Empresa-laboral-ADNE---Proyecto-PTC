@@ -113,7 +113,7 @@
             this.bunifuLabel4.Location = new System.Drawing.Point(600, 298);
             this.bunifuLabel4.Name = "bunifuLabel4";
             this.bunifuLabel4.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel4.Size = new System.Drawing.Size(383, 22);
+            this.bunifuLabel4.Size = new System.Drawing.Size(667, 40);
             this.bunifuLabel4.TabIndex = 20;
             this.bunifuLabel4.TabStop = false;
             this.bunifuLabel4.Text = "- Debe contener mayúsculas y minúsculas";
@@ -131,7 +131,7 @@
             this.bunifuLabel3.Location = new System.Drawing.Point(600, 263);
             this.bunifuLabel3.Name = "bunifuLabel3";
             this.bunifuLabel3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel3.Size = new System.Drawing.Size(207, 22);
+            this.bunifuLabel3.Size = new System.Drawing.Size(363, 40);
             this.bunifuLabel3.TabIndex = 19;
             this.bunifuLabel3.TabStop = false;
             this.bunifuLabel3.Text = "- Mínimo 12 carácteres";
@@ -149,7 +149,7 @@
             this.bunifuLabel2.Location = new System.Drawing.Point(600, 238);
             this.bunifuLabel2.Name = "bunifuLabel2";
             this.bunifuLabel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel2.Size = new System.Drawing.Size(340, 22);
+            this.bunifuLabel2.Size = new System.Drawing.Size(592, 40);
             this.bunifuLabel2.TabIndex = 18;
             this.bunifuLabel2.TabStop = false;
             this.bunifuLabel2.Text = "- Debe contener un número (mínimo)";
@@ -167,7 +167,7 @@
             this.bunifuLabel1.Location = new System.Drawing.Point(729, 208);
             this.bunifuLabel1.Name = "bunifuLabel1";
             this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel1.Size = new System.Drawing.Size(95, 22);
+            this.bunifuLabel1.Size = new System.Drawing.Size(165, 40);
             this.bunifuLabel1.TabIndex = 17;
             this.bunifuLabel1.TabStop = false;
             this.bunifuLabel1.Text = "(@, $, #, _)";
@@ -185,7 +185,7 @@
             this.lblEspecificaciones.Location = new System.Drawing.Point(600, 180);
             this.lblEspecificaciones.Name = "lblEspecificaciones";
             this.lblEspecificaciones.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblEspecificaciones.Size = new System.Drawing.Size(356, 22);
+            this.lblEspecificaciones.Size = new System.Drawing.Size(624, 40);
             this.lblEspecificaciones.TabIndex = 16;
             this.lblEspecificaciones.TabStop = false;
             this.lblEspecificaciones.Text = "- Debe contener carácteres especiales";
@@ -204,7 +204,7 @@
             this.lblRequisitos.Location = new System.Drawing.Point(717, 125);
             this.lblRequisitos.Name = "lblRequisitos";
             this.lblRequisitos.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblRequisitos.Size = new System.Drawing.Size(135, 33);
+            this.lblRequisitos.Size = new System.Drawing.Size(165, 40);
             this.lblRequisitos.TabIndex = 14;
             this.lblRequisitos.TabStop = false;
             this.lblRequisitos.Text = "Requisitos:";
@@ -527,7 +527,7 @@
             this.lblConfirmarContrasena.Location = new System.Drawing.Point(51, 255);
             this.lblConfirmarContrasena.Name = "lblConfirmarContrasena";
             this.lblConfirmarContrasena.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblConfirmarContrasena.Size = new System.Drawing.Size(223, 22);
+            this.lblConfirmarContrasena.Size = new System.Drawing.Size(390, 40);
             this.lblConfirmarContrasena.TabIndex = 7;
             this.lblConfirmarContrasena.Text = "Confirme su contraseña:";
             this.lblConfirmarContrasena.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -543,7 +543,7 @@
             this.lblNuevaContrasena.Location = new System.Drawing.Point(51, 136);
             this.lblNuevaContrasena.Name = "lblNuevaContrasena";
             this.lblNuevaContrasena.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblNuevaContrasena.Size = new System.Drawing.Size(274, 22);
+            this.lblNuevaContrasena.Size = new System.Drawing.Size(470, 40);
             this.lblNuevaContrasena.TabIndex = 6;
             this.lblNuevaContrasena.TabStop = false;
             this.lblNuevaContrasena.Text = "Ingrese su nueva contraseña:";
@@ -598,12 +598,14 @@
             this.menuStrip1.Size = new System.Drawing.Size(995, 27);
             this.menuStrip1.TabIndex = 13;
             this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.Visible = false;
             // 
             // txtUsuarioID
             // 
             this.txtUsuarioID.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtUsuarioID.Name = "txtUsuarioID";
             this.txtUsuarioID.Size = new System.Drawing.Size(116, 23);
+            this.txtUsuarioID.Visible = false;
             // 
             // lblRestablecer
             // 
@@ -617,7 +619,7 @@
             this.lblRestablecer.Location = new System.Drawing.Point(31, 31);
             this.lblRestablecer.Name = "lblRestablecer";
             this.lblRestablecer.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblRestablecer.Size = new System.Drawing.Size(313, 33);
+            this.lblRestablecer.Size = new System.Drawing.Size(381, 40);
             this.lblRestablecer.TabIndex = 1;
             this.lblRestablecer.TabStop = false;
             this.lblRestablecer.Text = "Restablecer contraseña";

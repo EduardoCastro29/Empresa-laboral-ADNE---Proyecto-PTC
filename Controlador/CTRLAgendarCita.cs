@@ -27,7 +27,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             //Validaciones de campos
             ObjAgendarCitaForm.txtMotivoConsulta.KeyPress += new KeyPressEventHandler(ValidarCampoTextBox);
             ObjAgendarCitaForm.txtDUIPaciente.KeyPress += new KeyPressEventHandler(ValidarCampoDocumento);
-            ObjAgendarCitaForm.txtDUIPaciente.KeyPress += new KeyPressEventHandler(EnmascararCampoDocumento);
+            //ObjAgendarCitaForm.txtDUIPaciente.KeyPress += new KeyPressEventHandler(EnmascararCampoDocumento);
         }
         #region Validaciones de Campos
         private void ValidarCampoDocumento(object sender, KeyPressEventArgs e)
@@ -41,39 +41,43 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             //Declaramos la variable de tipo char que recibirá los parámetros de las letras registradas por las variables e.KeyChar creadas anteriormente
             char ch = e.KeyChar;
 
+            //Declaramos lo valores que únicamente permitirá el textbox
             if ((ch >= '0' && ch <= '9') ||
+                (ch >= 'A' && ch <= 'Z') ||
                 (ch == '-'))
             {
+                //Retornamos los valores e.KeyChar
                 return;
             }
+            //Indicamos que se creará el evento e.Char con todos los valores antes proporcionados, como un EventHandler
             e.Handled = true;
         }
-        private void EnmascararCampoDocumento(object sender, EventArgs e)
-        {
-            //Obtenemos la longitud actual del textbox para evaluar si es necesario el remplazo por guión (en este caso el DUI) o número
-            string EnmascararDUI = ObjAgendarCitaForm.txtDUIPaciente.Text.Replace("-", "");
+        //private void EnmascararCampoDocumento(object sender, EventArgs e)
+        //{
+        //    //Obtenemos la longitud actual del textbox para evaluar si es necesario el remplazo por guión (en este caso el DUI) o número
+        //    string EnmascararDUI = ObjAgendarCitaForm.txtDUIPaciente.Text.Replace("-", "");
 
-            //Limitamos el textbox para que solo obtenga 9 caracteres
-            if (EnmascararDUI.Length > 9)
-            {
-                EnmascararDUI = EnmascararDUI.Substring(0, 9);
-            }
+        //    //Limitamos el textbox para que solo obtenga 9 caracteres
+        //    if (EnmascararDUI.Length > 9)
+        //    {
+        //        EnmascararDUI = EnmascararDUI.Substring(0, 9);
+        //    }
 
-            //Una vez llegada a la longitud deseada, en este caso 8 pone un guión automáticamente para enmascarar el DUI
-            if (EnmascararDUI.Length > 8)
-            {
-                //Indicamos en qué posición se pondrá el guión y que símbolo tomará
-                ObjAgendarCitaForm.txtDUIPaciente.Text = EnmascararDUI.Insert(8, "-");
-            }
-            else
-            {
-                //Caso contrario, no realizamos ningun cambio (no se inserta el guión)
-                ObjAgendarCitaForm.txtDUIPaciente.Text = EnmascararDUI;
-            }
+        //    //Una vez llegada a la longitud deseada, en este caso 8 pone un guión automáticamente para enmascarar el DUI
+        //    if (EnmascararDUI.Length > 8)
+        //    {
+        //        //Indicamos en qué posición se pondrá el guión y que símbolo tomará
+        //        ObjAgendarCitaForm.txtDUIPaciente.Text = EnmascararDUI.Insert(8, "-");
+        //    }
+        //    else
+        //    {
+        //        //Caso contrario, no realizamos ningun cambio (no se inserta el guión)
+        //        ObjAgendarCitaForm.txtDUIPaciente.Text = EnmascararDUI;
+        //    }
 
-            //Indicamos que la posición inicial del cursor, será al inicio del textbox
-            ObjAgendarCitaForm.txtDUIPaciente.SelectionStart = ObjAgendarCitaForm.txtDUIPaciente.Text.Length;
-        }
+        //    //Indicamos que la posición inicial del cursor, será al inicio del textbox
+        //    ObjAgendarCitaForm.txtDUIPaciente.SelectionStart = ObjAgendarCitaForm.txtDUIPaciente.Text.Length;
+        //}
         private void ValidarCampoTextBox(object sender, KeyPressEventArgs e)
         {
             //La propiedad char.IsControl permite controles como BackSpace, Inicio, Fin, etc.
@@ -127,7 +131,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                 TimeSpan horaFinalMaxima = new TimeSpan(18, 0, 0);
 
                 if (ObjAgendarCitaForm.txtDUIProfesional.Text.Length < 10   ||
-                    ObjAgendarCitaForm.txtDUIPaciente.Text.Length < 10      ||
+                    ObjAgendarCitaForm.txtDUIPaciente.Text.Length < 8      ||
                     ObjAgendarCitaForm.dtHoraInicio.Value.TimeOfDay < horaInicioMinima || 
                     ObjAgendarCitaForm.dtHoraFinal.Value.TimeOfDay > horaFinalMaxima ||
                     ObjAgendarCitaForm.dtHoraInicio.Value.TimeOfDay >= ObjAgendarCitaForm.dtHoraFinal.Value.TimeOfDay ||
@@ -178,7 +182,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                 TimeSpan horaFinalMaxima = new TimeSpan(18, 0, 0);
 
                 if (ObjAgendarCitaForm.txtDUIProfesional.Text.Length < 10 ||
-                    ObjAgendarCitaForm.txtDUIPaciente.Text.Length < 10 ||
+                    ObjAgendarCitaForm.txtDUIPaciente.Text.Length < 8 ||
                     ObjAgendarCitaForm.dtHoraInicio.Value.TimeOfDay < horaInicioMinima ||
                     ObjAgendarCitaForm.dtHoraFinal.Value.TimeOfDay > horaFinalMaxima ||
                     ObjAgendarCitaForm.dtHoraInicio.Value.TimeOfDay >= ObjAgendarCitaForm.dtHoraFinal.Value.TimeOfDay ||
