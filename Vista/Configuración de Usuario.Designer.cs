@@ -206,7 +206,7 @@
             this.txtCorreo.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtCorreo.Lines = new string[0];
             this.txtCorreo.Location = new System.Drawing.Point(4, 1);
-            this.txtCorreo.MaxLength = 30;
+            this.txtCorreo.MaxLength = 125;
             this.txtCorreo.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtCorreo.Modified = false;
             this.txtCorreo.Multiline = false;
@@ -1025,7 +1025,7 @@
             this.txtApellido.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtApellido.Lines = new string[0];
             this.txtApellido.Location = new System.Drawing.Point(6, 2);
-            this.txtApellido.MaxLength = 65;
+            this.txtApellido.MaxLength = 45;
             this.txtApellido.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtApellido.Modified = false;
             this.txtApellido.Multiline = false;
@@ -1125,7 +1125,7 @@
             this.txtNombre.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtNombre.Lines = new string[0];
             this.txtNombre.Location = new System.Drawing.Point(5, 2);
-            this.txtNombre.MaxLength = 65;
+            this.txtNombre.MaxLength = 45;
             this.txtNombre.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtNombre.Modified = false;
             this.txtNombre.Multiline = false;

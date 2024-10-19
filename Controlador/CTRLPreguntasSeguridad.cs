@@ -24,7 +24,57 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             ObjPreguntasSForm.txtTerceraPregunta.Leave += new EventHandler(PreguntaCuatro);
             ObjPreguntasSForm.btnRegistrar.Click += new EventHandler(RegistrarPreguntasS);
             ObjPreguntasSForm.btnVerificarPregunta.Click += new EventHandler(VerificarPreguntasS);
+
+            //Validaciones de campos
+            ObjPreguntasSForm.txtDocumento.KeyPress += new KeyPressEventHandler(ValidarCampoDocumento);
+            ObjPreguntasSForm.txtDocumento.TextChanged += new EventHandler(EnmascararCampoDocumento);
         }
+        #region Validaciones de Campos
+        private void ValidarCampoDocumento(object sender, KeyPressEventArgs e)
+        {
+            //La propiedad char.IsControl permite controles como BackSpace, Inicio, Fin, etc.
+            if (char.IsControl(e.KeyChar))
+            {
+                //Retornamos los valores e.KeyChar
+                return;
+            }
+            //Declaramos la variable de tipo char que recibirá los parámetros de las letras registradas por las variables e.KeyChar creadas anteriormente
+            char ch = e.KeyChar;
+
+            if ((ch >= '0' && ch <= '9') ||
+                (ch == '-'))
+            {
+                return;
+            }
+            e.Handled = true;
+        }
+        private void EnmascararCampoDocumento(object sender, EventArgs e)
+        {
+            //Obtenemos la longitud actual del textbox para evaluar si es necesario el remplazo por guión (en este caso el DUI) o número
+            string EnmascararDUI = ObjPreguntasSForm.txtDocumento.Text.Replace("-", "");
+
+            //Limitamos el textbox para que solo obtenga 9 caracteres
+            if (EnmascararDUI.Length > 9)
+            {
+                EnmascararDUI = EnmascararDUI.Substring(0, 9);
+            }
+
+            //Una vez llegada a la longitud deseada, en este caso 8 pone un guión automáticamente para enmascarar el DUI
+            if (EnmascararDUI.Length > 8)
+            {
+                //Indicamos en qué posición se pondrá el guión y que símbolo tomará
+                ObjPreguntasSForm.txtDocumento.Text = EnmascararDUI.Insert(8, "-");
+            }
+            else
+            {
+                //Caso contrario, no realizamos ningun cambio (no se inserta el guión)
+                ObjPreguntasSForm.txtDocumento.Text = EnmascararDUI;
+            }
+
+            //Indicamos que la posición inicial del cursor, será al inicio del textbox
+            ObjPreguntasSForm.txtDocumento.SelectionStart = ObjPreguntasSForm.txtDocumento.Text.Length;
+        }
+        #endregion
         #region Eventos Iniciales al cargar el Formulario
         private void CargarCombosPreguntasYBTN(object sender, EventArgs e)
         {
