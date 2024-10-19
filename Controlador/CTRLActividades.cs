@@ -64,7 +64,8 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
         private void CargarGraficoEsteMes(object Sender, EventArgs e)
         {
             ObjActividadesForm.dtFechaInicio.Value = new DateTime(DateTime.Today.Year, DateTime.Today.Month, 1);
-            ObjActividadesForm.dtFechaFinal.Value = DateTime.Now;
+            int UltimoDiaMes = DateTime.DaysInMonth(DateTime.Today.Year, DateTime.Today.Month);
+            ObjActividadesForm.dtFechaFinal.Value = new DateTime(DateTime.Today.Year, DateTime.Today.Month, UltimoDiaMes);
             CargarIntervaloCitas();
             DesabilitarBotones();
         }

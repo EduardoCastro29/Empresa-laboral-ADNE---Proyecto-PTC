@@ -229,17 +229,27 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                             ObjRegistrarEmpresa.CorreoElectronicoE = ObjPrimerUsoSistema.txtCorreoElectronico.Text.Trim();
                             if (ObjRegistrarEmpresa.RegistrarEmpresa() == true)
                             {
+                                DAOLogin ObjVerificarUsuario = new DAOLogin();
                                 //MessageBox.Show("El registro de la empresa ha sido existoso, ahora procederemos a crear el primer usuario", "Regtistro de Empresa", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 ObjPrimerUsoSistema.NotificacionEmpresa.Show(ObjPrimerUsoSistema, "El registro de la empresa ha sido existoso", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Success);
-                                RegistroForm ObjRegistrarPrimerUsuario = new RegistroForm();
-                                ObjPrimerUsoSistema.Hide();
-                                ObjRegistrarPrimerUsuario.Show();
+
+                                if (ObjVerificarUsuario.VerificarUsuario() == true)
+                                {
+                                    LoginForm ObjAbrirLogin = new LoginForm();
+                                    ObjAbrirLogin.Show();
+                                    ObjPrimerUsoSistema.Hide();
+                                }
+                                else
+                                {
+                                    RegistroForm ObjRegistrarPrimerUsuario = new RegistroForm();
+                                    ObjRegistrarPrimerUsuario.Show();
+                                    ObjPrimerUsoSistema.Hide();
+                                }
                             }
                             else
                             {
                                 //MessageBox.Show("No se pudo registrar la empresa, verifique si todos los campos han sido ingresados correctamente", "Regtistro de Empresa", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                 ObjPrimerUsoSistema.NotificacionEmpresa.Show(ObjPrimerUsoSistema, "No se pudo registrar la empresa, verifique si todos los campos han sido ingresados correctamente", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error);
-
                             }
                         }
                         else
