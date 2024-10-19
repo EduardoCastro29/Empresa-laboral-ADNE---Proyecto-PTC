@@ -114,6 +114,35 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                 Conexion.Connection.Close();
             }
         }
+        //Este es el método común para deshabilitar el usuario asociado Y EMPLEADO (Evitando el perder los datos dentro del sistema)
+        public bool InhabilitarProfesionalPR()
+        {
+            try
+            {
+                //Inicializamos la conexión
+                Conexion.Connection = Conectar();
+
+                //Inicializamos la consulta
+                string consultaSQLUsuario = "UPDATE Usuario SET contraseña = '123' WHERE usuarioId = @usuarioId";
+
+                SqlCommand ObjComandoSQLServerUsuario = new SqlCommand(consultaSQLUsuario, Conexion.Connection);
+
+                ObjComandoSQLServerUsuario.Parameters.AddWithValue("@usuarioId", UsuarioId);
+
+                if (ObjComandoSQLServerUsuario.ExecuteNonQuery() > 0)
+                    return true;
+                else return false;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Ha ocurrido un error, ERR-003-2 - Error al restablecer la contraseña del profesional. [Consulte el Manual Técnico]", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            finally
+            {
+                Conexion.Connection.Close();
+            }
+        }
         //Este es el método común para eliminar los datos del usuario asociado Y EMPLEADO
         //Es importante saber que, si se elimina el usuario, se elimina el empleado asociado
         //Para eso, usaremos una propiedad llamada ON DELETE CASCADE, la cuál nos permitirá eliminar el usuario y empleado relacionados

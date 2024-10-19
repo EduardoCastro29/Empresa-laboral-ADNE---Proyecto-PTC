@@ -40,6 +40,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             ObjAdministradorForm.cmsVerProfesional.Click += new EventHandler(AbrirVerProfesional);
             ObjAdministradorForm.cmsRestablecerProfesional.Click += new EventHandler(RestablecerContrasenaProfesional);
             ObjAdministradorForm.cmsEliminarProfesional.Click += new EventHandler(EliminarProfesional);
+            ObjAdministradorForm.cmsDeshabilitarProfesional.Click += new EventHandler(InhabilitarProfesional);
             ObjAdministradorForm.cmsVerEspecialidades.Click += new EventHandler(AbrirEspecialidadesProfesional);
             ObjAdministradorForm.btnBuscar.Click += new EventHandler(BuscarProfesional);
         }
@@ -144,24 +145,32 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             int PosicionFila = ObjAdministradorForm.dgvAdministrarProfesional.CurrentRow.Index;
 
             //Obtenemos datos del objeto ObjDAOActualizarProfesional
-            ObjDAOActualizarProfesional.UsuarioId = int.Parse(ObjAdministradorForm.dgvAdministrarProfesional[0, PosicionFila].Value.ToString());
+            int UsuarioID = int.Parse(ObjAdministradorForm.dgvAdministrarProfesional[0, PosicionFila].Value.ToString());
             //Mandamos a llamar el método MetodoEncriptacionAES para encriptarla y enviarla a la base de datos
             //De igual forma, al actualizar el Usuario del Profesional, se actualizará la contraseña del mismo
             //De esta forma, el reseteo de contraseña vía administrador se hace presente
             ObjDAOActualizarProfesional.Contraseña = ObjMetodosComunes.MetodoEncriptacionAES(ObjAdministradorForm.dgvAdministrarProfesional[8, PosicionFila].Value.ToString().Trim() + "ADNE2024");
 
-            if (MessageBox.Show("Bienvenido, administrador, estás seguro que desas restablecer la contraseña al usuario seleccionado? El profesional obtendra una contraseña por defecto", "Restablecer Profesional", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (UsuarioID == InicioSesion.UsuarioId)
             {
-                //Finalmente, evaluamos si la restauración se hizo correctamente
-                if (ObjDAOActualizarProfesional.ActualizarRestablecerContra() == false)
+                MessageBox.Show("El profesional seleccionado corresponde al usuario conectado, no puede ser restablecido", "Restablecer Profesional", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                if (MessageBox.Show("Bienvenido, administrador, estás seguro que deseas restablecer el usuario seleccionado?", "Restablecer Profesional", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    ObjAdministradorForm.Notificacion1.Show(ObjRegistroForm, "Error al restablecer la contraseña del profesional, verifique si ha sido seleccionado correctamente o consulte al soporte técnico", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error);
-                    //MessageBox.Show("Error al actualizar el profesional, verifique si todos los datos han sido ingresados correctamente", "Actualizar Profesional", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                else
-                {
-                    ObjAdministradorForm.Notificacion1.Show(ObjRegistroForm, "La contraseña ha sido restablecida correctamente", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Success);
-                    //MessageBox.Show("El profesional ha sido actualizado correctamente", "Actualizar Profesional", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    ObjDAOActualizarProfesional.UsuarioId = UsuarioID;
+                    //Finalmente, evaluamos si la restauración se hizo correctamente
+                    if (ObjDAOActualizarProfesional.ActualizarRestablecerContra() == false)
+                    {
+                        ObjAdministradorForm.Notificacion1.Show(ObjRegistroForm, "Error al restablecer el profesional, verifique si ha sido seleccionado correctamente o consulte al soporte técnico", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error);
+                        //MessageBox.Show("Error al actualizar el profesional, verifique si todos los datos han sido ingresados correctamente", "Actualizar Profesional", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        ObjAdministradorForm.Notificacion1.Show(ObjRegistroForm, "El profesional ha sido restablecido correctamente", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Success);
+                        //MessageBox.Show("El profesional ha sido actualizado correctamente", "Actualizar Profesional", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
                 }
             }
         }
@@ -203,6 +212,9 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
         #region Eliminar un Profesional desde el DataGridView (DELETE)
         private void EliminarProfesional(object sender, EventArgs e)
         {
+            //Instanciamos a la clase DAOAdministrador para obtener los valores
+            DAOAdministrador ObjDAOEliminarUsuario = new DAOAdministrador();
+
             //Indicamos en que posición nos encontramos dentro del DataGridView
             int PosicionFila = ObjAdministradorForm.dgvAdministrarProfesional.CurrentRow.Index;
 
@@ -220,14 +232,51 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                     $"{ObjAdministradorForm.dgvAdministrarProfesional[3, PosicionFila].Value} {ObjAdministradorForm.dgvAdministrarProfesional[4, PosicionFila].Value}\n" +
                     $"El Usuario y Profesional asociados serán eliminados de forma permanente, se eliminaran todos los datos asociados.", "Eliminar Profesional", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    //Instanciamos a la clase DAOAdministrador para obtener los valores
-                    DAOAdministrador ObjDAOEliminarUsuario = new DAOAdministrador();
-
                     ObjDAOEliminarUsuario.UsuarioId = IDUsuario;
 
                     if (ObjDAOEliminarUsuario.EliminarUsuarioEmpleado() == true)
                     {
                         MessageBox.Show("El Profesional se ha eliminado correctamente", "Eliminar Profesional", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("El Profesional no ha podido ser eliminado, verifique si ha sido seleccionado correctamente o consulte al soporte técnico", "Eliminar Profesional", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+        }
+        #endregion
+        #region Inhabilitar un profesional desde el DGV (UPDATE)
+        private void InhabilitarProfesional(object sender, EventArgs e)
+        {
+            //Creamos las clases que usaremos para la actualización del PROFESIONAL y USUARIO
+            DAOAdministrador ObjDAOActualizarProfesional = new DAOAdministrador();
+
+            //Capturamos las filas del DatGridView al cuál queremos mostrar los valores
+            int PosicionFila = ObjAdministradorForm.dgvAdministrarProfesional.CurrentRow.Index;
+
+            //Obtenemos el ID del usuario dentro de una variable
+            int UsuarioID = int.Parse(ObjAdministradorForm.dgvAdministrarProfesional[0, PosicionFila].Value.ToString());
+
+            if (UsuarioID == InicioSesion.UsuarioId)
+            {
+                MessageBox.Show("El profesional seleccionado corresponde al usuario conectado, no puede ser inhabilitado", "Inhabilitar Profesional", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                if (MessageBox.Show("Bienvenido, administrador, estás seguro que desas inhabilitar al usuario seleccionado?", "Inhabilitar Profesional", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    ObjDAOActualizarProfesional.UsuarioId = UsuarioID;
+                    //Finalmente, evaluamos si la restauración se hizo correctamente
+                    if (ObjDAOActualizarProfesional.InhabilitarProfesionalPR() == false)
+                    {
+                        ObjAdministradorForm.Notificacion1.Show(ObjRegistroForm, "Error al inhabilitar el profesional, verifique si ha sido seleccionado correctamente o consulte al soporte técnico", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error);
+                        //MessageBox.Show("Error al actualizar el profesional, verifique si todos los datos han sido ingresados correctamente", "Actualizar Profesional", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        ObjAdministradorForm.Notificacion1.Show(ObjRegistroForm, "El profesional ha sido inhabilitado correctamente", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Success);
+                        //MessageBox.Show("El profesional ha sido actualizado correctamente", "Actualizar Profesional", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
             }

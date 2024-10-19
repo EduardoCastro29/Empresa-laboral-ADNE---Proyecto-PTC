@@ -52,6 +52,7 @@
             this.btnBuscar = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.txtBuscarEmpleado = new Bunifu.UI.WinForms.BunifuTextBox();
             this.dgvAdministrarProfesional = new Bunifu.UI.WinForms.BunifuDataGridView();
+            this.cmsDeshabilitarProfesional = new System.Windows.Forms.ToolStripMenuItem();
             this.cmsOpciones.SuspendLayout();
             this.bunifuGradientPanel1.SuspendLayout();
             this.pnlSombraBuscar.SuspendLayout();
@@ -64,9 +65,10 @@
             this.cmsVerProfesional,
             this.cmsRestablecerProfesional,
             this.cmsEliminarProfesional,
+            this.cmsDeshabilitarProfesional,
             this.cmsVerEspecialidades});
             this.cmsOpciones.Name = "cmsOpciones";
-            this.cmsOpciones.Size = new System.Drawing.Size(197, 92);
+            this.cmsOpciones.Size = new System.Drawing.Size(197, 114);
             // 
             // cmsVerProfesional
             // 
@@ -601,6 +603,13 @@
             this.dgvAdministrarProfesional.TabIndex = 0;
             this.dgvAdministrarProfesional.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Teal;
             // 
+            // cmsDeshabilitarProfesional
+            // 
+            this.cmsDeshabilitarProfesional.Image = global::Empresa_laboral_ADNE___Proyecto_PTC.Properties.Resources.EliminarCMS;
+            this.cmsDeshabilitarProfesional.Name = "cmsDeshabilitarProfesional";
+            this.cmsDeshabilitarProfesional.Size = new System.Drawing.Size(196, 22);
+            this.cmsDeshabilitarProfesional.Text = "Inhabilitar Profesional";
+            // 
             // AdministradorForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -637,5 +646,6 @@
         public Bunifu.UI.WinForms.BunifuTextBox txtBuscarEmpleado;
         public Bunifu.UI.WinForms.BunifuDataGridView dgvAdministrarProfesional;
         public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnAñadirProfesional;
+        public System.Windows.Forms.ToolStripMenuItem cmsDeshabilitarProfesional;
     }
 }
