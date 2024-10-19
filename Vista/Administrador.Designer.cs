@@ -66,7 +66,7 @@
             this.cmsEliminarProfesional,
             this.cmsVerEspecialidades});
             this.cmsOpciones.Name = "cmsOpciones";
-            this.cmsOpciones.Size = new System.Drawing.Size(197, 114);
+            this.cmsOpciones.Size = new System.Drawing.Size(197, 92);
             // 
             // cmsVerProfesional
             // 
@@ -535,6 +535,7 @@
             // dgvAdministrarProfesional
             // 
             this.dgvAdministrarProfesional.AllowCustomTheming = false;
+            this.dgvAdministrarProfesional.AllowUserToAddRows = false;
             this.dgvAdministrarProfesional.AllowUserToDeleteRows = false;
             this.dgvAdministrarProfesional.AllowUserToResizeColumns = false;
             this.dgvAdministrarProfesional.AllowUserToResizeRows = false;

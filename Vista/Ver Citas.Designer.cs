@@ -571,6 +571,7 @@
             // dgvCitasAgendadas
             // 
             this.dgvCitasAgendadas.AllowCustomTheming = false;
+            this.dgvCitasAgendadas.AllowUserToAddRows = false;
             this.dgvCitasAgendadas.AllowUserToDeleteRows = false;
             this.dgvCitasAgendadas.AllowUserToResizeColumns = false;
             this.dgvCitasAgendadas.AllowUserToResizeRows = false;
