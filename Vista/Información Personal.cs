@@ -97,6 +97,24 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Vista
                 this.txtDescripcion.ForeColor = Color.White;
                 this.txtAspectosPreocupantes.FillColor = Color.FromArgb(19, 63, 76);
                 this.txtAspectosPreocupantes.ForeColor = Color.White;
+
+                this.lblDUI.ForeColor = Color.White;
+                this.lblPasaporte.ForeColor = Color.White;
+                this.txtPasaporte.FillColor = Color.FromArgb(19, 63, 76);
+                this.txtPasaporte.ForeColor = Color.White;
+     
+
+                this.rbDUI.OutlineColorUnchecked = Color.Gainsboro;
+                this.rbDUI.RadioColor = Color.FromArgb(70, 199, 188);
+                this.rbDUI.OutlineColor = Color.FromArgb(70, 199, 188);
+                this.rbDUI.OutlineColorTabFocused = Color.FromArgb(65, 117, 113);
+                this.rbDUI.RadioColorTabFocused = Color.FromArgb(65, 117, 113);
+
+                this.rbPasaporte.OutlineColorUnchecked = Color.Gainsboro;
+                this.rbPasaporte.RadioColor = Color.FromArgb(70, 199, 188);
+                this.rbPasaporte.OutlineColor = Color.FromArgb(70, 199, 188);
+                this.rbPasaporte.OutlineColorTabFocused = Color.FromArgb(65, 117, 113);
+                this.rbPasaporte.RadioColorTabFocused = Color.FromArgb(65, 117, 113);
             }
         }
     }
