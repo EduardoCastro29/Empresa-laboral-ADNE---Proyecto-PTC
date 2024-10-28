@@ -67,11 +67,12 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
             {
                 Conexion.Connection = Conectar();
 
-                string consulta = "SELECT * FROM vistaPaciente WHERE [Nombre de Paciente] LIKE @nombrePaciente";
+                string consulta = "SELECT * FROM vistaPaciente WHERE [Nombre de Paciente] LIKE @nombrePaciente AND DUI = @DUI";
 
                 SqlCommand objComando = new SqlCommand(consulta, Conexion.Connection);
 
                 objComando.Parameters.AddWithValue("@nombrePaciente", "%" + BuscarPacienteP + "%");
+                objComando.Parameters.AddWithValue("@DUI", InicioSesion.Dui);
 
                 SqlDataAdapter adapter = new SqlDataAdapter(objComando);
                 DataSet dt = new DataSet();

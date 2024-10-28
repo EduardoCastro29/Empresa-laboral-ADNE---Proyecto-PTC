@@ -135,7 +135,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                 Conexion.Connection = Conectar();
 
                 //Declaramos la consulta
-                string consultaSQL = "SELECT * FROM vistaCitasAgendadas WHERE [Fecha de la Cita] LIKE @FechaCita OR [Nombre del Paciente] LIKE @NombrePaciente OR [Apellido del Paciente] LIKE @ApellidoPaciente";
+                string consultaSQL = "SELECT * FROM vistaCitasAgendadas WHERE [Fecha de la Cita] LIKE @FechaCita OR [Nombre del Paciente] LIKE @NombrePaciente OR [Apellido del Paciente] LIKE @ApellidoPaciente AND [ID del Profesional] = @DUIProfesional";
 
                 //Ejecutamos el comando
                 SqlCommand ObjCommandSQL = new SqlCommand(consultaSQL, Conexion.Connection);
@@ -143,6 +143,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                 ObjCommandSQL.Parameters.AddWithValue("@FechaCita", "%" + BuscarCita + "%");
                 ObjCommandSQL.Parameters.AddWithValue("@NombrePaciente", "%" + BuscarCita + "%");
                 ObjCommandSQL.Parameters.AddWithValue("@ApellidoPaciente", "%" + BuscarCita + "%");
+                ObjCommandSQL.Parameters.AddWithValue("@DUIProfesional", InicioSesion.Dui);
 
                 //Declaramos el adaptador SQL
                 SqlDataAdapter ObjAdaptador = new SqlDataAdapter(ObjCommandSQL);

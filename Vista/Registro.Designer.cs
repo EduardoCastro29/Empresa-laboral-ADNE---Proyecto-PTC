@@ -1540,7 +1540,7 @@
             this.txtTelefono.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtTelefono.Lines = new string[0];
             this.txtTelefono.Location = new System.Drawing.Point(5, 2);
-            this.txtTelefono.MaxLength = 10;
+            this.txtTelefono.MaxLength = 9;
             this.txtTelefono.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtTelefono.Modified = false;
             this.txtTelefono.Multiline = false;
