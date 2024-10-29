@@ -62,7 +62,7 @@
             this.bunifuGradientPanel1.Location = new System.Drawing.Point(0, 0);
             this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
             this.bunifuGradientPanel1.Quality = 10;
-            this.bunifuGradientPanel1.Size = new System.Drawing.Size(992, 653);
+            this.bunifuGradientPanel1.Size = new System.Drawing.Size(1002, 653);
             this.bunifuGradientPanel1.TabIndex = 2;
             // 
             // btnVerPacientesSinProfesional
@@ -163,7 +163,7 @@
             this.flpVerPacientes.AutoScroll = true;
             this.flpVerPacientes.Location = new System.Drawing.Point(40, 147);
             this.flpVerPacientes.Name = "flpVerPacientes";
-            this.flpVerPacientes.Size = new System.Drawing.Size(915, 462);
+            this.flpVerPacientes.Size = new System.Drawing.Size(925, 462);
             this.flpVerPacientes.TabIndex = 104;
             this.flpVerPacientes.TabStop = true;
             // 
@@ -183,7 +183,7 @@
             this.pnlSombraBuscar.Name = "pnlSombraBuscar";
             this.pnlSombraBuscar.Padding = new System.Windows.Forms.Padding(4, 2, 1, 4);
             this.pnlSombraBuscar.ShowBorders = true;
-            this.pnlSombraBuscar.Size = new System.Drawing.Size(607, 67);
+            this.pnlSombraBuscar.Size = new System.Drawing.Size(617, 67);
             this.pnlSombraBuscar.TabIndex = 103;
             // 
             // btnBuscar
@@ -234,7 +234,7 @@
             this.btnBuscar.IdleIconLeftImage = global::Empresa_laboral_ADNE___Proyecto_PTC.Properties.Resources.lupa__1_;
             this.btnBuscar.IdleIconRightImage = null;
             this.btnBuscar.IndicateFocus = false;
-            this.btnBuscar.Location = new System.Drawing.Point(486, 1);
+            this.btnBuscar.Location = new System.Drawing.Point(496, 1);
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(0);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
@@ -343,7 +343,7 @@
             this.txtBuscarPaciente.SelectionLength = 0;
             this.txtBuscarPaciente.SelectionStart = 0;
             this.txtBuscarPaciente.ShortcutsEnabled = false;
-            this.txtBuscarPaciente.Size = new System.Drawing.Size(602, 61);
+            this.txtBuscarPaciente.Size = new System.Drawing.Size(612, 61);
             this.txtBuscarPaciente.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtBuscarPaciente.TabIndex = 7;
             this.txtBuscarPaciente.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -359,11 +359,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(143)))), ((int)(((byte)(156)))));
-            this.ClientSize = new System.Drawing.Size(992, 653);
+            this.ClientSize = new System.Drawing.Size(1002, 653);
             this.Controls.Add(this.bunifuGradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(1018, 692);
+            this.MinimumSize = new System.Drawing.Size(1018, 692);
             this.Name = "VerPacientesForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pacientes";

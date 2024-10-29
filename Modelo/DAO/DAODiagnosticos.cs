@@ -51,7 +51,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
             {
                 Conexion.Connection = Conectar();
 
-                string consulta = "SELECT * FROM vistaExpedientes WHERE [Nombre del Paciente] LIKE @NombrePaciente AND [DUI del Profesional] = @DUIProfesional";
+                string consulta = "SELECT * FROM vistaExpedientes WHERE ([Nombre del Paciente] LIKE @NombrePaciente) AND [DUI del Profesional] = @DUIProfesional";
 
                 SqlCommand objComando = new SqlCommand(consulta, Conexion.Connection);
 
@@ -145,7 +145,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                 string queryVerificarEmpresa = "SELECT * FROM DatosDelSistema";
 
                 SqlCommand ObjComandoVerificarEmpresa = new SqlCommand(queryVerificarEmpresa, Conexion.Connection);
-
                 SqlDataReader lectura = ObjComandoVerificarEmpresa.ExecuteReader();
                 while (lectura.Read())
                 {

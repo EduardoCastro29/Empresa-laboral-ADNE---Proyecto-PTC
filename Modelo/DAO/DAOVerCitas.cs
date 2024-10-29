@@ -135,7 +135,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                 Conexion.Connection = Conectar();
 
                 //Declaramos la consulta
-                string consultaSQL = "SELECT * FROM vistaCitasAgendadas WHERE [Fecha de la Cita] LIKE @FechaCita OR [Nombre del Paciente] LIKE @NombrePaciente OR [Apellido del Paciente] LIKE @ApellidoPaciente AND [ID del Profesional] = @DUIProfesional";
+                string consultaSQL = "SELECT * FROM vistaCitasAgendadas WHERE ([Fecha de la Cita] LIKE @FechaCita OR [Nombre del Paciente] LIKE @NombrePaciente OR [Apellido del Paciente] LIKE @ApellidoPaciente) AND [ID del Profesional] = @DUIProfesional";
 
                 //Ejecutamos el comando
                 SqlCommand ObjCommandSQL = new SqlCommand(consultaSQL, Conexion.Connection);

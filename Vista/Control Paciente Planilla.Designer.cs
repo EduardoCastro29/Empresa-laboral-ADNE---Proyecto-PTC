@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ControlPacientePlanillaUC));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges9 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             this.lblExpedienteId = new System.Windows.Forms.Label();
             this.btnDescargar = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.lblNombrePaciente = new Bunifu.UI.WinForms.BunifuLabel();
@@ -72,11 +72,11 @@
             this.btnDescargar.ColorContrastOnClick = 45;
             this.btnDescargar.ColorContrastOnHover = 45;
             this.btnDescargar.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges9.BottomLeft = true;
-            borderEdges9.BottomRight = true;
-            borderEdges9.TopLeft = true;
-            borderEdges9.TopRight = true;
-            this.btnDescargar.CustomizableEdges = borderEdges9;
+            borderEdges2.BottomLeft = true;
+            borderEdges2.BottomRight = true;
+            borderEdges2.TopLeft = true;
+            borderEdges2.TopRight = true;
+            this.btnDescargar.CustomizableEdges = borderEdges2;
             this.btnDescargar.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnDescargar.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnDescargar.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -100,7 +100,7 @@
             this.btnDescargar.IdleIconLeftImage = null;
             this.btnDescargar.IdleIconRightImage = null;
             this.btnDescargar.IndicateFocus = false;
-            this.btnDescargar.Location = new System.Drawing.Point(747, 7);
+            this.btnDescargar.Location = new System.Drawing.Point(750, 7);
             this.btnDescargar.Name = "btnDescargar";
             this.btnDescargar.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnDescargar.OnDisabledState.BorderRadius = 12;
@@ -178,7 +178,7 @@
             this.pnlFondoUC.Margin = new System.Windows.Forms.Padding(0);
             this.pnlFondoUC.Name = "pnlFondoUC";
             this.pnlFondoUC.ShowBorders = true;
-            this.pnlFondoUC.Size = new System.Drawing.Size(953, 51);
+            this.pnlFondoUC.Size = new System.Drawing.Size(955, 51);
             this.pnlFondoUC.TabIndex = 23;
             // 
             // lblCitaId

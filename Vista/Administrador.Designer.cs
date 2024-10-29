@@ -43,6 +43,7 @@
             this.cmsVerProfesional = new System.Windows.Forms.ToolStripMenuItem();
             this.cmsRestablecerProfesional = new System.Windows.Forms.ToolStripMenuItem();
             this.cmsEliminarProfesional = new System.Windows.Forms.ToolStripMenuItem();
+            this.cmsDeshabilitarProfesional = new System.Windows.Forms.ToolStripMenuItem();
             this.cmsVerEspecialidades = new System.Windows.Forms.ToolStripMenuItem();
             this.NotificacionAdmin = new Bunifu.UI.WinForms.BunifuSnackbar(this.components);
             this.Notificacion1 = new Bunifu.UI.WinForms.BunifuSnackbar(this.components);
@@ -52,7 +53,6 @@
             this.btnBuscar = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.txtBuscarEmpleado = new Bunifu.UI.WinForms.BunifuTextBox();
             this.dgvAdministrarProfesional = new Bunifu.UI.WinForms.BunifuDataGridView();
-            this.cmsDeshabilitarProfesional = new System.Windows.Forms.ToolStripMenuItem();
             this.cmsOpciones.SuspendLayout();
             this.bunifuGradientPanel1.SuspendLayout();
             this.pnlSombraBuscar.SuspendLayout();
@@ -90,6 +90,14 @@
             this.cmsEliminarProfesional.Name = "cmsEliminarProfesional";
             this.cmsEliminarProfesional.Size = new System.Drawing.Size(196, 22);
             this.cmsEliminarProfesional.Text = "Eliminar Profesional";
+            this.cmsEliminarProfesional.Visible = false;
+            // 
+            // cmsDeshabilitarProfesional
+            // 
+            this.cmsDeshabilitarProfesional.Image = global::Empresa_laboral_ADNE___Proyecto_PTC.Properties.Resources.EliminarCMS;
+            this.cmsDeshabilitarProfesional.Name = "cmsDeshabilitarProfesional";
+            this.cmsDeshabilitarProfesional.Size = new System.Drawing.Size(196, 22);
+            this.cmsDeshabilitarProfesional.Text = "Inhabilitar Profesional";
             // 
             // cmsVerEspecialidades
             // 
@@ -602,13 +610,6 @@
             this.dgvAdministrarProfesional.Size = new System.Drawing.Size(910, 468);
             this.dgvAdministrarProfesional.TabIndex = 0;
             this.dgvAdministrarProfesional.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Teal;
-            // 
-            // cmsDeshabilitarProfesional
-            // 
-            this.cmsDeshabilitarProfesional.Image = global::Empresa_laboral_ADNE___Proyecto_PTC.Properties.Resources.EliminarCMS;
-            this.cmsDeshabilitarProfesional.Name = "cmsDeshabilitarProfesional";
-            this.cmsDeshabilitarProfesional.Size = new System.Drawing.Size(196, 22);
-            this.cmsDeshabilitarProfesional.Text = "Inhabilitar Profesional";
             // 
             // AdministradorForm
             // 

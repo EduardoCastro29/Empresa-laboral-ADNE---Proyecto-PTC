@@ -33,34 +33,60 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Vista
             {
                 MessageBox.Show(ex.Message);
             }
+            OnParentChanged(this, EventArgs.Empty);
         }
+        //private void OnParentChanged(object sender, EventArgs e)
+        //{
+        //    if (this.Parent != null && this.Parent is FlowLayoutPanel)
+        //    {
+        //        FlowLayoutPanel flpEmpleadosControl = this.Parent as FlowLayoutPanel;
+        //        flpEmpleadosControl.Resize += new EventHandler(DResponsive);
+        //    }
+        //}
+        //private void DResponsive(object sender, EventArgs e)
+        //{
+        //    FlowLayoutPanel flp = sender as FlowLayoutPanel;
+
+        //    if (flp != null)
+        //    {
+        //        int anchoflp = flp.Width;
+        //        this.Size = new Size(anchoflp, this.Height); // Ajusta solo el ancho
+
+        //        flp.PerformLayout(); // Asegura que el layout se actualice
+        //        flp.Invalidate();    // Fuerza un redibujado
+        //        flp.Update();
+        //    }
+        //}
+
         private void OnParentChanged(object sender, EventArgs e)
         {
             if (this.Parent != null && this.Parent is FlowLayoutPanel)
             {
                 FlowLayoutPanel flpEmpleadosControl = this.Parent as FlowLayoutPanel;
-                flpEmpleadosControl.Resize += new EventHandler(DResponsive);
+                flpEmpleadosControl.Resize += new EventHandler(DResponsive); // Subscribirse al evento Resize
+
+                // Llama a DResponsive para asegurar ajuste inicial
+                DResponsive(flpEmpleadosControl, EventArgs.Empty);
             }
         }
+
         private void DResponsive(object sender, EventArgs e)
         {
-            FlowLayoutPanel flp = sender as FlowLayoutPanel;
-
-            if (flp != null)
+            if (sender is FlowLayoutPanel flp)
             {
-                int anchoflp = flp.Width;
-                this.Size = new Size(anchoflp, this.Height); // Ajusta solo el ancho
+                int anchoflp = flp.ClientSize.Width;
+                this.Width = anchoflp - flp.Margin.Horizontal; // Ajusta solo el ancho
 
                 flp.PerformLayout(); // Asegura que el layout se actualice
                 flp.Invalidate();    // Fuerza un redibujado
                 flp.Update();
             }
         }
+
         private void leerIni()
         {
             Config objConfig = new Config();
             objConfig.LeerIni();
-
             if (objConfig.objDTOConfig.modoOscuro == "dark")
             {
                 this.pnlFondoUC.BackgroundColor = Color.FromArgb(26, 102, 122);

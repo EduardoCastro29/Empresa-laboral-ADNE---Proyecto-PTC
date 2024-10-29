@@ -23,14 +23,12 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
         public CTRLExpedientes(CitasForm Vista)
         {
             objCitasForm = Vista;
-
             objCitasForm.Load += new EventHandler(CargarExpedientes);
             objCitasForm.btnBuscar.Click += new EventHandler(BuscarExpedientes);
         }
         public CTRLExpedientes(ControlPacientePlanillaUC Vista)
         {
             objUC = Vista;
-
             objUC.btnDescargar.Click += new EventHandler(Cargar_info_Paciente);
         }
         public void CargarExpedientes(object sender, EventArgs e)
@@ -53,9 +51,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
         {
             DAODiagnosticos objCitas = new DAODiagnosticos();
             DataSet ds = objCitas.BuscarCita(objCitasForm.txtBuscarCita.Text.Trim());
-
             objCitasForm.flpCitas.Controls.Clear();
-
             foreach (DataRow dr in ds.Tables[0].Rows)
             {
                 objCitas.CitaId = (int)dr[0];
@@ -84,7 +80,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                 if (objCitasDAO.Obtener_expediente_Informacion() == true)
                 {
                     string pag = Properties.Resources.Expediente__Psicosocial.ToString();
-
                     #region Variables remplazadas para la impresión del reporte
                     pag = pag.Replace("@FECHA", DateTime.Now.ToString("dd/MM/yyyy"));
                     pag = pag.Replace("@EXPEDIENTEID", objCitasDAO.N_expediente.ToString());
@@ -130,7 +125,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                         pag = pag.Replace("@PBX", objCitasDAO.NumeroPBX);
                         pag = pag.Replace("@UBICACION", objCitasDAO.DireccionEmpresa);
                         pag = pag.Replace("@CORREOEMPRESA", objCitasDAO.CorreoElectronicoE);
-
                         if (guardar.ShowDialog() == DialogResult.OK)
                         {
                             using (FileStream stream = new FileStream(guardar.FileName, FileMode.Create))
@@ -146,12 +140,10 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
                                 img.Alignment = iTextSharp.text.Image.UNDERLYING;
                                 img.SetAbsolutePosition(pdfDoc.LeftMargin, pdfDoc.Top - 100);
                                 pdfDoc.Add(img);
-
                                 using (StringReader sr = new StringReader(pag))
                                 {
                                     XMLWorkerHelper.GetInstance().ParseXHtml(writer, pdfDoc, sr);
                                 }
-
                                 pdfDoc.Close();
                                 stream.Close();
                             }

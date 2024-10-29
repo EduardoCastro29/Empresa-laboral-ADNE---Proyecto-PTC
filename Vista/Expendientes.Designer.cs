@@ -299,7 +299,7 @@
             this.pnlEncabezadoPlanillasUC.Location = new System.Drawing.Point(12, 141);
             this.pnlEncabezadoPlanillasUC.Name = "pnlEncabezadoPlanillasUC";
             this.pnlEncabezadoPlanillasUC.Quality = 10;
-            this.pnlEncabezadoPlanillasUC.Size = new System.Drawing.Size(946, 61);
+            this.pnlEncabezadoPlanillasUC.Size = new System.Drawing.Size(942, 61);
             this.pnlEncabezadoPlanillasUC.TabIndex = 19;
             // 
             // lblDUI
@@ -326,7 +326,7 @@
             this.lblExpedientesPlanillas.CursorType = null;
             this.lblExpedientesPlanillas.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.lblExpedientesPlanillas.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblExpedientesPlanillas.Location = new System.Drawing.Point(792, 22);
+            this.lblExpedientesPlanillas.Location = new System.Drawing.Point(790, 22);
             this.lblExpedientesPlanillas.Name = "lblExpedientesPlanillas";
             this.lblExpedientesPlanillas.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblExpedientesPlanillas.Size = new System.Drawing.Size(87, 19);
