@@ -26,6 +26,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
             objCitasForm.Load += new EventHandler(CargarExpedientes);
             objCitasForm.btnBuscar.Click += new EventHandler(BuscarExpedientes);
         }
+
         public CTRLExpedientes(ControlPacientePlanillaUC Vista)
         {
             objUC = Vista;

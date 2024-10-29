@@ -19,6 +19,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Vista
             leerIni();
             CTRLExpedientes objCitas = new CTRLExpedientes(this);
         }
+
         private void leerIni()
         {
             Config objConfig = new Config();
