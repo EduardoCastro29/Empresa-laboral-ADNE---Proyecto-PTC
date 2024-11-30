@@ -1,4 +1,5 @@
-﻿using Empresa_laboral_ADNE___Proyecto_PTC.Controlador.Controlador_UC_Calendario;
+﻿using Empresa_laboral_ADNE___Proyecto_PTC.Controlador;
+using Empresa_laboral_ADNE___Proyecto_PTC.Controlador.Controlador_UC_Calendario;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,7 +15,8 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Vista
     public partial class UCDias : UserControl
     {
         readonly CalendarioForm objCalendario = new CalendarioForm();
-        public static int static_day;
+        public static DateTime static_date;
+        //public static int static_day;
         public UCDias()
         {
             InitializeComponent();
@@ -36,8 +38,10 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Vista
         }
         private void btnCalendar_Click(object sender, EventArgs e)
         {
-            static_day = int.Parse(this.lblDias.Text);
-            if (static_day < DateTime.Now.Day)
+            //Fecha completa en lugar de solo el día, así el programa no confunde el dia con el mes
+            static_date = new DateTime(CTRLCalendario.static_year, CTRLCalendario.static_month, int.Parse(this.lblDias.Text));
+
+            if (static_date < DateTime.Now.Date)
             {
                 objCalendario.NotificacionCalendario.Show(objCalendario, "No se puede elegir una fecha pasada a la fecha actual al agendar una cita", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error);
             }
@@ -51,6 +55,22 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Vista
                 ObjAgendarCita.cmbEstado.SelectedIndex = 1;
                 ObjAgendarCita.cmbEstado.Enabled = false;
             }
+
+            //static_day = int.Parse(this.lblDias.Text);
+            //if (static_day < DateTime.Now.Day)
+            //{
+            //    objCalendario.NotificacionCalendario.Show(objCalendario, "No se puede elegir una fecha pasada a la fecha actual al agendar una cita", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error);
+            //}
+            //else
+            //{
+            //    AgendarCitaForm ObjAgendarCita = new AgendarCitaForm();
+            //    ObjAgendarCita.btnModificar.Enabled = false;
+            //    ObjAgendarCita.dtFecha.Enabled = false;
+            //    ObjAgendarCita.Show();
+            //    //Dejamos un valor por defecto en el combobox
+            //    ObjAgendarCita.cmbEstado.SelectedIndex = 1;
+            //    ObjAgendarCita.cmbEstado.Enabled = false;
+            //}
         }
     }
 }

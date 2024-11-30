@@ -196,8 +196,11 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
         public void EnviarRecordatorios(object sender, EventArgs e)
         {
             DAOActividades objDAO = new DAOActividades();
-            objDAO.EnviarRecordatoriosCitasHoy();
-            ObjActividadesForm.Notificacion1.Show(ObjActividadesForm, "Los recordatorios han sido enviados correctamente", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Success);
+            bool recordatoriosEnviados = objDAO.EnviarRecordatoriosCitasHoy();
+            if (recordatoriosEnviados)
+            {
+                ObjActividadesForm.Notificacion1.Show(ObjActividadesForm, "Los recordatorios han sido enviados correctamente", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Success);
+            }
         }
     }
 }

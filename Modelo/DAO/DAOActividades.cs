@@ -231,7 +231,6 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
             }
             catch (Exception)
             {
-                MessageBox.Show("Ha ocurrido un error, ERR- - (Pendiente) Error al obtener las citas de este día. [Consulte el Manual Técnico]", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return new List<(string, TimeSpan)>();
             }
             finally
@@ -239,7 +238,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                 Conexion.Connection.Close();
             }
         }
-        public void EnviarRecordatoriosCitasHoy()
+        public bool EnviarRecordatoriosCitasHoy()
         {
             List<(string Correo, TimeSpan HoraCita)> citas = ObtenerCitasHoy(); // Obtiene los correos de las citas de hoy
             try
@@ -265,16 +264,18 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Modelo.DAO
                         ObjDAOSM.EnviarCorreo(asunto, cuerpo, new List<string> { correo });
                     }
                     MessageBox.Show("Recordatorios enviados éxitosamente!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return true;
                 }
                 else
                 {
                     MessageBox.Show("No hay citas programadas para hoy.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return false;
                 }
             }
             catch (Exception)
             {
                 MessageBox.Show("Ha ocurrido un error, ERR-002-2 - Error al buscar un correo electrónico correspondiente, verifique si su correo electrónico posee una dirección de correo válida. [Consulte el Manual Técnico]", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
+                return false;
             }
         }
         public int ActualizarCitasPerdidas()

@@ -20,6 +20,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
         int Mes;
         int Año;
         public static int static_month, static_year;
+
         public CTRLCalendario(CalendarioForm Vista)
         {
             ObjCalendario = Vista;
@@ -38,6 +39,7 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
         {
             Mes = FechaActual.Month;
             Año = FechaActual.Year;
+
             string mesNombre = DateTimeFormatInfo.CurrentInfo.GetMonthName(Mes);
             mesNombre = FormatoPrimeraLetraMes(mesNombre);
             ObjCalendario.lblFecha.Text = mesNombre + " " + Año;

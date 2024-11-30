@@ -118,7 +118,8 @@ namespace Empresa_laboral_ADNE___Proyecto_PTC.Controlador
 
             if (string.IsNullOrEmpty(ObjAgendarCitaForm.txtMotivoConsulta.Text))
             {
-                ObjAgendarCitaForm.dtFecha.Value = DateTime.Parse(CTRLCalendario.static_year + "-" + CTRLCalendario.static_month + "-" + UCDias.static_day);
+                //ObjAgendarCitaForm.dtFecha.Value = DateTime.Parse(CTRLCalendario.static_year + "-" + CTRLCalendario.static_month + "-" + UCDias.static_day);
+                ObjAgendarCitaForm.dtFecha.Value = UCDias.static_date;
             }
         }
         #endregion
